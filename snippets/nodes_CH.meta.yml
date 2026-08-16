@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -44,43 +44,17 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇨🇭_CH_瑞士 #2'
-  port: 443
-  reality-opts:
-    public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ
-    short-id: '!!str f04729f65b9ea261'
-  server: nl1.samovargate.com
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  uuid: 82b5b465-3307-4a25-acef-abd1649bbedf
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
-  password: 1Telegram_MojiVPN
-  port: 1080
-  server: ch-zur.pvdata.host
-  type: socks5
-  username: N9cyF6jvgy3ZEmCNKe04zBIR
 - cipher: aes-256-cfb
-  name: '🇨🇭_CH_瑞士 #3'
+  name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163
   type: ss
-- name: 🇨🇭CH_2
-  network: tcp
-  password: y3b03zx3tznhyo538p4c
-  port: 53261
-  server: 86.106.84.195
-  skip-cert-verify: true
-  sni: 86.106.84.195
-  type: trojan
 - alpn:
   - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpnـ
   client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_3
+  name: 🇨🇭CH_1
   network: tcp
   port: 443
   reality-opts:
@@ -90,3 +64,16 @@ proxies:
   tls: true
   type: vless
   uuid: 2a77a470-315c-493d-b690-59b814a804cb
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_5
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: HYvULWO1KqHge0lNcpejfOI6zI_aqOIPZxB-QlYLyW4
+    short-id: '!!str bd86'
+  server: 95.85.239.230
+  servername: rasputin.linus-qanary.lol
+  tls: true
+  type: vless
+  uuid: c32ef0e3-6f3b-4c5e-a560-16b8c85ec404

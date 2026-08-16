@@ -1,11 +1,16 @@
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: '🇨🇦 加拿大 魁北克省蒙特利尔市OVH数据中心 #2'
-  password: ytw2awn
+- name: 法国_4
+  password: humanity
   port: 443
-  server: 142.4.216.225
-  type: ss
-- name: '🇨🇦CA加拿大丨yoyapai.com_1 #2'
+  server: 104.18.152.219
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- name: 🏳️_未知_268
   password: humanity
   port: 443
   server: 104.18.152.140
@@ -15,13 +20,11 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
-- name: 美国_108
+- name: 美国_71
   password: humanity
   port: 443
-  server: 104.18.152.204
+  server: 104.16.73.213
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -29,58 +32,7 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
-- alterId: 0
-  name: 🇫🇷FR法国
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- alterId: 0
-  name: 法国_4
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 美国_55
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 美国_51
-  password: humanity
-  port: 443
-  server: 104.18.152.225
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: '🇨🇦CA加拿大丨yoyapai.com_7 #2'
+- name: '🇨🇦CA加拿大丨yoyapai.com_3 #2'
   password: humanity
   port: 443
   server: 104.18.152.208
@@ -101,39 +53,13 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.ignitelimit.com
     path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: CA加拿大(v2clash.blog 2026-8.13更新...
+- name: 美国_55
   password: humanity
   port: 443
-  server: 172.67.221.242
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 🇨🇦CA加拿大
-  password: humanity
-  port: 443
-  server: 104.16.174.14
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 🇺🇸US美国4
-  password: humanity
-  port: 443
-  server: 104.16.174.12
+  server: 104.16.174.44
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -143,7 +69,90 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: 🇫🇷FR_249
+- name: 美国_108
+  password: humanity
+  port: 443
+  server: 104.18.152.204
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- alterId: 0
+  name: 美国_51
+  password: humanity
+  port: 443
+  server: 104.18.152.225
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 🇺🇸US美国5
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- name: '🇺🇸 美国(yudou789.top 玉豆免费节点) 18 #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.111.8
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_32
+  password: ytw2awn
+  port: 443
+  server: 142.4.216.225
+  type: ss
+  udp: true
+- name: '🇨🇦 加拿大(yudou789.top 玉豆免费节点) 5 #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.12
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: '🇫🇷 #7'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.73
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: '🇫🇷 #5'
   network: ws
   password: humanity
   port: 443
@@ -189,28 +198,82 @@ proxies:
     headers:
       HOST: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA_30
-  password: ytw2awn
-  port: 443
-  server: ca225.vpnbook.com
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 加拿大/多伦多/Canada/Toronto
-  port: 18000
-  server: 23.162.200.198
+  name: '加拿大 001 #1'
+  network: ws
+  port: 80
+  server: 51.79.102.253
+  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+  skip-cert-verify: true
   type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  ws-opts:
+    headers:
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+- alterId: 0
+  cipher: auto
+  name: '加拿大 002 #1'
+  network: ws
+  port: 443
+  server: hohm.microsoft.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: hohm.microsoft.com
+    path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: '加拿大 003 #1'
+  network: ws
+  port: 80
+  server: 165.154.246.71
+  skip-cert-verify: true
+  type: vmess
+  uuid: 13581ae8-65c9-4fbe-9c78-77fac9ca503a
+  ws-opts:
+    headers:
+      Host: 165.154.246.71
+    path: ?ed=2048
+- alterId: 0
+  cipher: auto
+  name: '加拿大 004 #1'
+  network: ws
+  port: 443
+  server: tw-1.qwqjsq.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: b0543a3b-d690-3ed9-9a81-f24f852e74f7
+  ws-opts:
+    headers:
+      Host: tw-1.qwqjsq.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '加拿大 005 #1'
+  network: ws
+  port: 80
+  server: 165.154.246.107
+  skip-cert-verify: true
+  type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
+  ws-opts:
+    headers:
+      Host: tms.dingtalk.com
+    path: /
 - cipher: rc4-md5
-  name: 🇨🇦CA-137.184.174.93-0053 | 67....
+  name: 加拿大/多伦多/Canada/Toronto
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 137.184.174.93
   type: ss
 - alterId: 0
   cipher: auto
-  name: 未知97
+  name: 未知29
   network: ws
   port: 443
   server: 158.51.121.63
@@ -223,24 +286,6 @@ proxies:
     headers:
       host: seribus.org
     path: linkvws
-- cipher: chacha20-ietf-poly1305
-  name: 未知 SS-66
-  password: FD3rCuOsxOay
-  port: 8388
-  server: 15.235.75.71
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 未知86 47.8MB/s
-  network: ws
-  port: 28809
-  server: 216.128.176.166
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ebca559c-a4a1-4062-9453-6412d8ff5255
-  ws-opts:
-    path: /ebca559c-a4a1-4062-9453-6412d8ff5255
 - alterId: 0
   cipher: auto
   name: 🇨🇦_CA_加拿大
@@ -255,8 +300,14 @@ proxies:
     headers:
       host: teams.microsoft.com
     path: /
+- cipher: aes-128-gcm
+  name: 🇨🇦CA_18
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
+  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇺🇸US_433
+  name: 🇺🇸US_248
   password: G5p6ww4o67HB
   port: 8388
   server: 108.181.118.10
@@ -279,50 +330,14 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.17.111.8
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- cipher: aes-128-gcm
-  name: 🇨🇦CA_2
-  password: shadowsocks
-  port: 443
-  server: 149.22.95.183
-  type: ss
-- name: 🇨🇦
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: '🇨🇦 #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.77
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- cipher: aes-256-gcm
-  name: 🇨🇦CA_1
-  password: KixLvKzwjekG00rm
-  port: 8080
-  server: 185.196.61.82
-  type: ss
 - cipher: rc4-md5
-  name: 🇨🇦CA_28
+  name: 🇨🇦CA_29
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 138.197.141.58
@@ -331,7 +346,7 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: 104.16.174.12
+  server: 104.16.174.71
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
@@ -343,17 +358,23 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: 104.16.174.14
+  server: 104.18.22.63
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: '%2Fassignment'
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_31
+  password: ytw2awn
+  port: 443
+  server: ca225.vpnbook.com
+  type: ss
 - name: 'CA加拿大 #3'
   network: ws
   password: humanity
   port: 443
-  server: 104.16.174.72
+  server: 104.16.174.12
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
@@ -361,53 +382,7 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
-- name: 'CA加拿大 #4'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: 'CA加拿大 #5'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.17.111.8
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 'CA加拿大 #6'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.34
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 'CA加拿大 #7'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.67.221.242
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: '🇨🇦 #6'
+- name: '🇨🇦 #9'
   network: ws
   password: humanity
   port: 443
@@ -419,19 +394,41 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: '🇨🇦 #7'
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 'CA加拿大 #4'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.225
+  server: 172.67.221.242
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: '🇨🇦 #10'
+    path: '%2Fassignment'
+- name: 'CA加拿大 #5'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.34
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 'CA加拿大 #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.73
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 'CA加拿大 #7'
   network: ws
   password: humanity
   port: 443
@@ -442,14 +439,16 @@ proxies:
   ws-opts:
     headers:
       Host: www.ignitelimit.com
-    path: /assignment
-- name: 'CA加拿大 #9'
+    path: '%2Fassignment'
+- name: 'CA加拿大 #8'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.16.174.72
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
+    headers:
+      Host: www.ignitelimit.com
     path: '%2Fassignment'
