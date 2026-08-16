@@ -1,0 +1,66 @@
+# .github/workflows/crawler.yml
+name: Crawler Scheduled Task
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'          # 每 8 小时运行一次
+  workflow_dispatch:               # 支持手动触发
+
+jobs:
+  run-crawler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write              # 授予写入仓库的权限
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0            # 获取完整历史，用于分支信息
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 pyyaml
+
+      - name: Run crawler
+        run: python crawler_pro.py
+
+      - name: Commit and push output files
+        run: |
+          # 配置 Git 用户
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 获取远程默认分支（main 或 master）
+          DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+          echo "默认分支: $DEFAULT_BRANCH"
+
+          # 1. 添加所有变更（包括新生成的文件）
+          git add -A
+
+          # 2. 如果有变更，则提交（确保工作区干净，以便后续 rebase）
+          if ! git diff --staged --quiet; then
+            COMMIT_MSG="Update node configs $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git commit -m "$COMMIT_MSG"
+            echo "✅ 本地提交成功"
+          else
+            echo "✅ 没有文件变更，跳过提交"
+          fi
+
+          # 3. 拉取远程最新变更（使用 rebase 保持线性历史）
+          # 此时工作区干净（已提交或没有变更），pull 不会报错
+          if ! git pull --rebase origin "$DEFAULT_BRANCH"; then
+            echo "❌ pull 失败，可能远程有冲突，终止流程"
+            exit 1
+          fi
+
+          # 4. 推送当前分支到远程同名分支
+          # 如果本地没有新提交，此命令会提示 "Everything up-to-date"，不会报错
+          git push origin HEAD:"$DEFAULT_BRANCH"
+          echo "✅ 推送完成"
