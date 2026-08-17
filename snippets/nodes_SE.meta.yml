@@ -1,18 +1,4 @@
 proxies:
-- name: 'Node #46'
-  network: ws
-  port: 80
-  server: 151.101.84.151
-  servername: max-gb1.global.ssl.fastly.net
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  ws-opts:
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-    path: /
 - client-fingerprint: chrome
   name: 美国_96
   network: ws
@@ -70,11 +56,35 @@ proxies:
   type: vless
   udp: true
   uuid: 670decfe-68cc-499e-8cb1-22b39c20acbb
+- client-fingerprint: edge
+  name: 🇸🇮
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: 8R416wHsKA_fipQLIw2gceCaTTBJIZRMwGjNTURAx3I
+    short-id: '!!str ad55857184e91aad'
+  server: 2.27.56.109
+  servername: stacks.vk-portal.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+- name: 🇸🇪 126  | ⬇️ 4MB/s
+  password: Zg0z_Mdkhj_NNZBvZZ4TmwAyQgJlTUev
+  port: 43327
+  server: 2.27.23.44
+  skip-cert-verify: false
+  sni: gate-v1.not-a-projects.xyz
+  tfo: false
+  type: hysteria2
+  udp: true
 - client-fingerprint: firefox
   grpc-opts:
     grpc-mode: gun
     grpc-service-name: streaming
-  name: 🇸🇪 039  | ⬇️ 3MB/s
+  name: 🇸🇪 172  | ⬇️ 4MB/s
   network: grpc
   port: 43439
   reality-opts:
@@ -87,15 +97,19 @@ proxies:
   tls: true
   type: vless
   uuid: 428e923f-e608-412b-9e51-3b09ffab551f
-- name: 🇸🇪 175  | ⬇️ 4MB/s
-  password: Zg0z_Mdkhj_NNZBvZZ4TmwAyQgJlTUev
-  port: 43327
-  server: 2.27.23.44
-  skip-cert-verify: false
-  sni: gate-v1.not-a-projects.xyz
-  tfo: false
-  type: hysteria2
-  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_12
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: -nB-tCeZ4Zr72ArHUKnbUphbs4PlBS6iId6PkrPQQTE
+    short-id: '!!str 84f9881951050a30'
+  server: gb1.murhost.network
+  servername: gb1.murhost.network
+  tls: true
+  type: vless
+  uuid: a6f6d9c9-9d43-4d0e-bf95-4b87cc5bbaac
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: rpc.v1.SyncService
@@ -118,19 +132,6 @@ proxies:
   tls: true
   type: vless
   uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪SE_14
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -nB-tCeZ4Zr72ArHUKnbUphbs4PlBS6iId6PkrPQQTE
-    short-id: '!!str 84f9881951050a30'
-  server: uk2.levikogjgfdd.ir
-  servername: gb1.murhost.network
-  tls: true
-  type: vless
-  uuid: a6f6d9c9-9d43-4d0e-bf95-4b87cc5bbaac
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇸🇪SE_2

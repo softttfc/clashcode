@@ -1,27 +1,18 @@
 proxies:
-- name: 英国+V2CROSS.COM
-  password: dbab9df7-5c0a-4726-8574-11e34972b67d
-  port: 33015
-  server: 86.53.105.117
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 'Node #10'
-  network: ws
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇬🇧 英国 starcorenode.com #2'
+  network: tcp
   port: 8443
-  server: 91.110.174.210
-  servername: rubifen.adaspoloandco.com
+  server: id.tutdesignstudio.site
+  servername: id.tutdesignstudio.site
   skip-cert-verify: false
+  tfo: false
   tls: true
   type: vless
-  udp: true
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  ws-opts:
-    headers:
-      Host: rubifen.adaspoloandco.com
-    path: /GOrbEh
+  uuid: 6244f068-12df-469f-a80d-6abfb8e4bd86
 - client-fingerprint: chrome
   name: 'Node #54'
   network: ws
@@ -37,6 +28,21 @@ proxies:
     headers:
       Host: ad-010.pixel9xdmq.info
     path: /
+- client-fingerprint: chrome
+  name: 'Node #10'
+  network: ws
+  port: 8443
+  server: 91.110.174.210
+  servername: rubifen.adaspoloandco.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  ws-opts:
+    headers:
+      Host: rubifen.adaspoloandco.com
+    path: /GOrbEh
 - client-fingerprint: edge
   flow: xtls-rprx-vision
   name: '🇬🇧_GB_英国->🇬🇪_GE_格鲁吉亚 #4'
@@ -214,7 +220,7 @@ proxies:
   type: http
 - alterId: 2
   cipher: auto
-  name: 🇮🇩_ID_印度尼西亚->🇬🇧_GB_英国 - 308ms
+  name: 🇮🇩_ID_印度尼西亚->🇬🇧_GB_英国 - 862ms
   network: tcp
   port: 30836
   server: v36.hdacd.com
@@ -307,14 +313,30 @@ proxies:
   tls: true
   type: vmess
   uuid: 11ae0edd-2f63-4495-8683-037abbda9986
-- name: 🇬🇧GB_1|1.7MB/s
-  password: None
+- name: 🇬🇧GB_1|1.1MB/s
   port: 9443
   server: 37.120.233.34
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇬🇧GB_2|1.2MB/s
+  network: grpc
+  packet-encoding: xudp
+  port: 2087
+  reality-opts:
+    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
+    short-id: '!!str c226283c4de5b1ad'
+  server: 31.76.91.138
+  servername: ads.x5.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+  xudp: true
 - name: 'GB_speednode_0003 #1'
   password: a4c9b7cc-a816-11ed-9f65-f23c9164ca5d
   port: 443
@@ -450,19 +472,40 @@ proxies:
   type: vless
   udp: true
   uuid: d8b42cd5-a149-4356-9e61-111111111111
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_138
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.49
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_129
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.186
+  type: ss
 - client-fingerprint: chrome
-  name: 🇸🇬SG_44
-  network: ws
-  port: 2096
-  server: 91.193.58.140
-  servername: free-server.techsonic.dev
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_14
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: -nB-tCeZ4Zr72ArHUKnbUphbs4PlBS6iId6PkrPQQTE
+    short-id: '!!str 84f9881951050a30'
+  server: uk2.levikogjgfdd.ir
+  servername: gb1.murhost.network
   tls: true
   type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+  uuid: a6f6d9c9-9d43-4d0e-bf95-4b87cc5bbaac
+- client-fingerprint: firefox
+  name: 🇦🇪AE_25
+  network: tcp
+  port: 8443
+  server: 89.125.124.178
+  servername: gb.wlrus.cfd
+  tls: true
+  type: vless
+  uuid: d71aecee-ef16-418e-baf5-2b2458122d5a
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇬🇧GB_2
@@ -478,120 +521,23 @@ proxies:
   uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇻🇬VG_1
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: lQ8pnlOU0kqS77TA7Fftl8nSzktXLzFpOLGqCZEAhjg
-    short-id: '!!str aaec521b22bbe6cb'
-  server: fin1.panel11.ru
-  servername: fin1.panel11.ru
-  tls: true
-  type: vless
-  uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_23
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.200
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_56
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ABNRlkjlonYV9TOFYgjWwz0wn1s6sg_yCErsLYkU_Sg
-    short-id: '!!str d6ff9019a77e354a'
-  server: 144.31.213.225
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 9e3de7f7-a595-4117-b1b6-dc41eb870ab1
-- client-fingerprint: chrome
-  name: 🇬🇧GB_24
-  network: raw
+  name: '🇬🇧_GB_英国 #1'
   port: 2053
   reality-opts:
-    public-key: cevjPz2GmTrXDFXQbGizdN6t4c6m11kclJEf5nOHOTE
-    short-id: '!!str 52dfc493bb6b6c16'
-  server: 46.250.240.80
-  servername: www.cloudflare.com
+    public-key: RwtMzZtTCmy9WRq3_27xeGF8-1l_qPXRVG3yIFp-6Go
+    short-id: '!!str c0d1d1776fed0f6d'
+  server: 31.76.39.217
+  servername: uk-t2.vinnypuxtomoon.today
+  skip-cert-verify: true
   tls: true
   type: vless
-  uuid: 5c53b9e9-fbe8-4c50-a623-73cdafa3886b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇪SE_12
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -nB-tCeZ4Zr72ArHUKnbUphbs4PlBS6iId6PkrPQQTE
-    short-id: '!!str 84f9881951050a30'
-  server: gb1.murhost.network
-  servername: gb1.murhost.network
-  tls: true
-  type: vless
-  uuid: a6f6d9c9-9d43-4d0e-bf95-4b87cc5bbaac
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_26
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.218
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_30
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.155
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_62
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.35
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_44
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.36
-  type: ss
+  udp: true
+  uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱NL_25
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.184
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_113
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.202
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_145
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.194
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_112
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.199
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_110
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.34
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_111
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.149
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱NL_1
@@ -600,16 +546,10 @@ proxies:
   server: 82.38.31.210
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_129
+  name: 🇳🇱NL_145
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
-  server: 82.38.31.186
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_138
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.49
+  server: 82.38.31.194
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇳🇱NL_127
@@ -617,11 +557,41 @@ proxies:
   port: 8080
   server: 82.38.31.187
   type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_29
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_110
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.34
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_62
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.35
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_111
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.149
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_44
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 443
+  server: 82.38.31.36
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_113
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.202
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱NL_30
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.155
   type: ss
 - cipher: aes-128-gcm
   name: 🇬🇧GB_28
@@ -633,7 +603,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧 149  | ⬇️ 50KB/s
+  name: 🇬🇧 099  | ⬇️ 50KB/s
   network: ws
   packet-encoding: xudp
   port: 443
@@ -728,6 +698,18 @@ proxies:
   tls: true
   type: vless
   uuid: 33c150b7-c0ca-4133-9a52-6f1207da9b8b
+- client-fingerprint: chrome
+  name: 🇬🇧GB_24
+  network: raw
+  port: 2053
+  reality-opts:
+    public-key: cevjPz2GmTrXDFXQbGizdN6t4c6m11kclJEf5nOHOTE
+    short-id: '!!str 52dfc493bb6b6c16'
+  server: 46.250.240.80
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 5c53b9e9-fbe8-4c50-a623-73cdafa3886b
 - name: 🇬🇧GB_105
   password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
   port: 9443
@@ -1037,6 +1019,12 @@ proxies:
     headers:
       Host: focalin.adaspoloandco.com
     path: /RizZrAcK
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_29
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  type: ss
 - client-fingerprint: firefox
   name: 🇬🇧GB_93
   network: tcp
@@ -1113,6 +1101,19 @@ proxies:
   port: 8080
   server: 146.70.61.37
   type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_56
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ABNRlkjlonYV9TOFYgjWwz0wn1s6sg_yCErsLYkU_Sg
+    short-id: '!!str d6ff9019a77e354a'
+  server: 144.31.213.225
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 9e3de7f7-a595-4117-b1b6-dc41eb870ab1
 - alpn:
   - http/1.1
   - h2
@@ -1145,18 +1146,6 @@ proxies:
   sni: onecloudstream.com
   tls: false
   type: hysteria2
-- alpn:
-  - http/1.1
-  name: GB英国
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.23.63
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
 - alpn:
   - h3
   - h2
