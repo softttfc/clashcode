@@ -4,7 +4,7 @@ name: Fetchspeed
 on:
   workflow_dispatch:                          # 允许手动触发
   schedule:
-    # 每 6 小时执行一次（UTC 时间 0,6,12,18 点）
+    # Runs at 02:00
     - cron: '0 2 * * *'
   push:
     # 仅当以下文件被修改时才触发
