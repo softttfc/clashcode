@@ -4,130 +4,1293 @@ log-level: info
 mode: Rule
 port: 7890
 proxies:
-- name: Trojan-151.101.193.242 - 18ms
-  password: MITIVPN
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 66ms
+  network: ws
   port: 443
-  server: 151.101.193.242
+  server: 3.162.103.26
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国 - 74ms
+  network: tcp
+  port: 993
+  server: 88.218.44.4
+  tls: true
+  type: vless
+  uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 74ms
+  network: grpc
+  port: 8443
+  server: 88.218.44.4
+  tls: true
+  type: vless
+  uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+- name: 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门 - 86ms
+  password: 41c406e2-12b5-41f2-a329-d0621052d675
+  port: 20068
+  server: oplosgru-c.catcat321.com
   skip-cert-verify: true
-  sni: mitivpn.lifestyle
+  sni: hk.catxstar.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2 - 25ms
+  network: tcp
+  port: 443
+  server: guanwang.awsno.com
+  tls: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+- name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 10ms
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20004
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 105ms
+  password: 41c406e2-12b5-41f2-a329-d0621052d675
+  port: 20129
+  server: hkdcrtc-e.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 107ms
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20041
+  server: hkdcrtc-e.catcat321.com
+  skip-cert-verify: true
+  sni: de.catxstar.com
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_3 - 57ms
+  network: tcp
+  port: 10000
+  server: 180.178.60.253
+  tls: false
+  type: vless
+  uuid: caec0d8d-ab2f-4247-b97d-7fb1a34ab195
+- encryption: none
+  flow: ''
+  name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其 - 164ms
+  network: grpc
+  port: 8443
+  server: 170.168.97.5
+  tls: true
+  type: vless
+  uuid: c6f220ed-41f2-21ba-438c-80f05ebbf92a
+- encryption: none
+  flow: ''
+  name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2 - 163ms
+  network: grpc
+  port: 8443
+  server: 170.168.97.3
+  tls: true
+  type: vless
+  uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1 - 163ms
+  network: tcp
+  port: 993
+  server: 170.168.97.3
+  tls: true
+  type: vless
+  uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 184ms
+  network: tcp
+  port: 443
+  server: 45.155.52.231
+  tls: true
+  type: vless
+  uuid: 219f9fec-8983-4f6f-af8c-31bd0c6dbf19
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港 - 190ms
+  network: tcp
+  port: 30807
+  server: v10.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 201ms
+  network: ws
+  port: 443
+  server: www.true.th
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- name: 🇭🇰_HK_中国香港 - 12ms
+  password: 41c406e2-12b5-41f2-a329-d0621052d675
+  port: 20034
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇨🇳_CN_中国 - 216ms
+  network: tcp
+  port: 12528
+  server: 120.227.1.43
+  tls: false
+  type: vless
+  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
+- encryption: none
+  flow: ''
+  name: 🇸🇬_SG_新加坡 - 182ms
+  network: ws
+  port: 443
+  server: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇯🇵_JP_日本 - 211ms
+  network: tcp
+  port: 30806
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰 - 143ms
+  network: tcp
+  port: 42538
+  server: 31.15.18.92
+  tls: false
+  type: vless
+  uuid: 888193f6-6818-42f4-b223-64c9fd323b76
+- name: 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 11ms
+  password: 41c406e2-12b5-41f2-a329-d0621052d675
+  port: 20088
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇮🇷_IR_伊朗->🇩🇪_DE_德国 - 159ms
+  network: tcp
+  port: 443
+  server: ddc-akn.astralweb.tech
+  tls: true
+  type: vless
+  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰 - 218ms
+  network: tcp
+  port: 30804
+  server: v4.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 10ms
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20041
+  server: Hkdcrtc-e.catcat321.com
+  skip-cert-verify: true
+  sni: de.catxstar.com
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 10ms
+  network: tcp
+  port: 59216
+  server: 70.39.197.9
+  tls: false
+  type: vless
+  uuid: 0bcec952-a452-43ed-9468-4547b9f5dfc4
+- alterId: 2
+  cipher: none
+  name: 🇨🇳_CN_中国->🇩🇪_DE_德国 - 317ms
+  network: tcp
+  port: 30833
+  server: v33.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇭🇰_HK_中国香港 - 249ms
+  network: tcp
+  port: 30809
+  server: v9.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇫🇷_FR_法国 - 238ms
+  network: tcp
+  port: 30835
+  server: v35.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国 - 351ms
+  network: tcp
+  port: 30824
+  server: v24.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 63ms
+  network: ws
+  port: 443
+  server: 3.162.103.97
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 68ms
+  network: ws
+  port: 443
+  server: 3.162.103.19
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 1ms
+  network: ws
+  port: 443
+  server: 172.67.169.143
+  tls: true
+  type: vless
+  uuid: e35a5ad5-0175-4cd6-b654-1eb220ff28f0
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰_1 - 156ms
+  network: tcp
+  port: 443
+  server: ddc-chr.astralweb.tech
+  tls: true
+  type: vless
+  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 180ms
+  network: ws
+  port: 4100
+  server: 201.24.120.68
+  tls: false
+  type: vless
+  uuid: 59525c39-e731-4c27-bc9e-6d8cef67572c
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺_RU_俄罗斯 - 147ms
+  network: tcp
+  port: 443
+  server: 45.131.212.45
+  tls: true
+  type: vless
+  uuid: 8fdf6dde-a1ca-456d-9b18-86b74d5768e6
+- encryption: none
+  flow: ''
+  name: 🇸🇪_SE_瑞典 - 172ms
+  network: tcp
+  port: 443
+  server: sw1-chr.astralweb.tech
+  tls: true
+  type: vless
+  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺_RU_俄罗斯_1 - 142ms
+  network: tcp
+  port: 443
+  server: 45.131.212.44
+  tls: true
+  type: vless
+  uuid: 8fdf6dde-a1ca-456d-9b18-86b74d5768e6
+- encryption: none
+  flow: ''
+  name: 🇹🇭_TH_泰国 - 195ms
+  network: ws
+  port: 80
+  server: 18.239.134.69
+  tls: false
+  type: vless
+  uuid: de27291c-15a9-4256-9ba7-ad517569877e
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国 - 202ms
+  network: tcp
+  port: 30829
+  server: v29.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪_EE_爱沙尼亚_1 - 159ms
+  network: tcp
+  port: 443
+  server: 46.22.216.31
+  tls: true
+  type: vless
+  uuid: 4612258c-15e8-4459-a3b6-8b6571699c5f
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇹🇷_TR_土耳其 - 1235ms
+  network: tcp
+  port: 443
+  server: 201.50.115.23
+  tls: true
+  type: vless
+  uuid: fc1b3bda-b226-452a-8c5c-b0e36a1f8f88
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 370ms
+  network: tcp
+  port: 45647
+  server: 182.16.61.4
+  tls: false
+  type: vless
+  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪_EE_爱沙尼亚_2 - 165ms
+  network: tcp
+  port: 443
+  server: 217.9.12.14
+  tls: true
+  type: vless
+  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 1ms
+  network: ws
+  port: 80
+  server: 18.244.214.27
+  tls: false
+  type: vless
+  uuid: 63ae5b68-f6f8-432e-b440-d975053cfbc2
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_4 - 49ms
+  network: ws
+  port: 443
+  server: 3.170.185.91
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇩🇪_DE_德国_1 - 149ms
+  network: tcp
+  port: 443
+  server: 185.238.191.171
+  tls: true
+  type: vless
+  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪_SE_瑞典_1 - 174ms
+  network: tcp
+  port: 443
+  server: 132.243.231.93
+  tls: true
+  type: vless
+  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_2 - 180ms
+  network: ws
+  port: 2200
+  server: 77.95.201.235
+  tls: false
+  type: vless
+  uuid: 9b4ba157-f60b-4a5b-b326-4d561eb826d4
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇸🇬_SG_新加坡 - 1ms
+  network: ws
+  port: 443
+  server: 172.66.44.97
+  tls: true
+  type: vless
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国->🇫🇷_FR_法国 - 10ms
+  network: tcp
+  port: 39395
+  server: 155.117.199.12
+  tls: true
+  type: vless
+  uuid: 53b59cb5-c741-3399-9065-93dc34685f5b
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 112ms
+  network: tcp
+  port: 10000
+  server: 180.178.60.253
+  tls: false
+  type: vless
+  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国->🇲🇾_MY_马来西亚 - 9ms
+  network: tcp
+  port: 29709
+  server: 155.117.199.12
+  tls: true
+  type: vless
+  uuid: 53b59cb5-c741-3399-9065-93dc34685f5b
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_1 - 12ms
+  network: tcp
+  port: 31877
+  server: 155.117.199.12
+  tls: true
+  type: vless
+  uuid: 53b59cb5-c741-3399-9065-93dc34685f5b
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国->🇭🇰_HK_中国香港 - 9ms
+  network: tcp
+  port: 9713
+  server: 155.117.199.12
+  tls: true
+  type: vless
+  uuid: 53b59cb5-c741-3399-9065-93dc34685f5b
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡 - 252ms
+  network: tcp
+  port: 30845
+  server: v45.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 🇫🇷_FR_法国 - 353ms
+  password: QV31589740
+  port: 443
+  server: great-krill.rooster465.autos
+  skip-cert-verify: true
   type: trojan
 - encryption: none
   flow: xtls-rprx-vision
-  name: VLESS-192.220.56.72 - 36ms
+  name: 🇫🇮_FI_芬兰 - 177ms
+  network: raw
+  port: 443
+  server: 163.5.153.153
+  tls: true
+  type: vless
+  uuid: 0a76a766-d141-44b8-944e-dff757d7116f
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧_GB_英国 - 141ms
   network: tcp
   port: 443
-  server: 192.220.56.72
-  sni: www.microsoft.com
-  tls: false
-  type: vless
-  uuid: 83d9cf74-4642-4f8b-8e9f-21185e2b9e7a
-- encryption: none
-  flow: ''
-  name: VLESS-32362877.xyz - 64ms
-  network: ws
-  port: 443
-  server: 32362877.xyz
-  sni: 32362877.xyz
+  server: 164.37.105.38
   tls: true
   type: vless
-  uuid: 29cd734a-0cdd-42d9-8b37-2b7b0e00c489
-- name: 🇯🇵JP_5|5.6MB/s - 140ms
-  password: FH72359861
-  port: 443
-  server: lasting-jaguar.rooster465.autos
-  skip-cert-verify: true
-  sni: lasting-jaguar.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_7|3.2MB/s - 141ms
-  password: FH72359861
-  port: 443
-  server: grateful-leech.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇯🇵JP_9|4.5MB/s - 141ms
-  password: FH72359861
-  port: 443
-  server: living-hagfish.rooster465.autos
-  skip-cert-verify: true
-  sni: living-hagfish.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_4|3.2MB/s - 142ms
-  password: FH72359861
-  port: 443
-  server: driven-bulldog.rooster465.autos
-  skip-cert-verify: true
-  sni: driven-bulldog.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_8|3.9MB/s - 142ms
-  password: FH72359861
-  port: 443
-  server: engaged-lionfish.rooster465.autos
-  skip-cert-verify: true
-  sni: engaged-lionfish.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_3|5.8MB/s - 146ms
-  password: FH72359861
-  port: 443
-  server: bright-quagga.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: 🇯🇵JP_1|4.9MB/s - 148ms
-  password: FH72359861
-  port: 443
-  server: welcome-owl.rooster465.autos
-  skip-cert-verify: true
-  sni: welcome-owl.rooster465.autos
-  type: trojan
+  uuid: f4dbc770-016d-4a0f-82f0-d83ee6f45da3
 - encryption: none
   flow: ''
-  name: 🇺🇸US_3|1.6MB/s - 18ms
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms
   network: ws
-  port: 80
-  server: 91.206.71.8
+  port: 2086
+  server: 104.25.194.196
   tls: false
   type: vless
-  uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+  uuid: e3c7c198-2b02-42c2-b78f-22dfc078219c
 - encryption: none
   flow: ''
-  name: 🇭🇰HK_1|2.5MB/s - 164ms
-  network: grpc
-  port: 10126
-  server: 95.40.100.129
-  tls: true
-  type: vless
-  uuid: B1BF44DF-BADD-44EE-826A-12C27206993D
-- encryption: none
-  flow: ''
-  name: 🇺🇸US_4|1.2MB/s - 18ms
+  name: 🇺🇸_US_美国_1 - 1ms
   network: ws
   port: 8880
-  server: 50.62.195.50
+  server: 172.67.209.127
   tls: false
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- name: 🇯🇵JP_2|1.9MB/s - 168ms
-  password: FH72359861
+  uuid: 942bdcfc-e522-44f1-b899-3bd8db7c5ae2
+- encryption: none
+  flow: ''
+  name: 🇩🇪_DE_德国_1 - 146ms
+  network: tcp
   port: 443
-  server: equal-labrador.rooster465.autos
+  server: 150.241.70.0
+  tls: true
+  type: vless
+  uuid: 5d577f62-28a8-4b7e-9441-9307b6132065
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 1ms_1
+  network: ws
+  port: 8080
+  server: 104.26.1.195
+  tls: false
+  type: vless
+  uuid: 59eefc04-b831-45cf-8d68-63ca23381171
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 15ms
+  network: ws
+  port: 443
+  server: 18.238.109.17
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰 - 190ms
+  network: ws
+  port: 2053
+  server: 159.194.226.13
+  tls: false
+  type: vless
+  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 178ms
+  network: ws
+  port: 4100
+  server: 104.171.137.141
+  tls: false
+  type: vless
+  uuid: d5d72f0a-42b0-4f43-b568-9cf7fbff073d
+- encryption: none
+  flow: ''
+  name: 🇩🇪_DE_德国->🇧🇷_BR_巴西 - 148ms
+  network: ws
+  port: 443
+  server: 18.198.227.161
+  tls: true
+  type: vless
+  uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇫🇷_FR_法国 - 163ms
+  network: tcp
+  port: 443
+  server: fr199.mechvpn.online
+  tls: true
+  type: vless
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼_TW_中国台湾->🇺🇸_US_美国 - 211ms
+  network: tcp
+  port: 51360
+  server: lt.badns.help
+  tls: false
+  type: vmess
+  uuid: 85ad21e1-c2cd-3407-aa90-815f3f3ea636
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪_DE_德国 - 156ms
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  tls: false
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 180ms
+  network: ws
+  port: 2200
+  server: 201.51.5.253
+  tls: false
+  type: vless
+  uuid: ed1cd50f-ead9-4e01-b5ae-b7d2dfb532fc
+- name: 🇭🇰_HK_中国香港_1 - 313ms
+  password: t3re5bgbot4z4z3t
+  port: 30101
+  server: xiweini.dpdns.org
   skip-cert-verify: true
-  sni: equal-labrador.rooster465.autos
+  sni: xiweini.dpdns.org
   type: trojan
-- name: 🇯🇵JP_6|5.0MB/s - 177ms
-  password: FH72359861
+- cipher: 2022-blake3-aes-256-gcm
+  name: 🇳🇱_NL_荷兰 - 157ms
+  password: mkKfxndCZ9c3YIkAAmANrtfI/mlGJwwV9/GdVTYgW3M=:JazxiYc3Mc5tLn/Te3T59W6Zw4Z/BPuepQ0VlVD/cZ8=
   port: 443
-  server: communal-troll.rooster465.autos
+  server: 193.124.203.144
+  type: ss
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 182ms
+  network: ws
+  port: 2200
+  server: 104.171.137.141
+  tls: false
+  type: vless
+  uuid: d5d72f0a-42b0-4f43-b568-9cf7fbff073d
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇮_FI_芬兰 - 675ms
+  password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS
+  port: 42982
+  server: autodiscover.fuzzyaytor.cyou
+  type: ss
+- name: 🇯🇵_JP_日本 - 110ms
+  password: AE62539071
+  port: 443
+  server: supreme-lobster.rooster465.autos
   skip-cert-verify: true
-  sni: communal-troll.rooster465.autos
+  sni: supreme-lobster.rooster465.autos
   type: trojan
-- name: 🇸🇬SG_1|4.6MB/s - 202ms
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_2 - 181ms
+  network: ws
+  port: 4100
+  server: 201.51.5.253
+  tls: false
+  type: vless
+  uuid: ed1cd50f-ead9-4e01-b5ae-b7d2dfb532fc
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国 - 194ms
+  network: grpc
+  port: 443
+  server: 46.8.220.182
+  tls: true
+  type: vless
+  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+- name: 🇮🇪_IE_爱尔兰 - 145ms
+  password: AE62539071
+  port: 443
+  server: kind-stork.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵_JP_日本_1 - 111ms
+  password: AE62539071
+  port: 443
+  server: premium-weevil.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇮🇪_IE_爱尔兰_1 - 145ms
+  password: AE62539071
+  port: 443
+  server: unbiased-garfish.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇦🇺_AU_澳大利亚 - 142ms
+  password: AE62539071
+  port: 443
+  server: together-dingo.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵_JP_日本_2 - 112ms
+  password: AE62539071
+  port: 443
+  server: polished-imp.rooster465.autos
+  skip-cert-verify: true
+  sni: polished-imp.rooster465.autos
+  type: trojan
+- name: 🇸🇬_SG_新加坡 - 179ms
+  password: AE62539071
+  port: 443
+  server: integral-quetzal.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵_JP_日本_3 - 113ms
+  password: AE62539071
+  port: 443
+  server: literate-cow.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇫🇷_FR_法国 - 154ms
+  password: AE62539071
+  port: 443
+  server: distinct-quail.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇦🇺_AU_澳大利亚_1 - 144ms
+  password: AE62539071
+  port: 443
+  server: darling-mutt.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇳🇱_NL_荷兰 - 145ms
+  password: AE62539071
+  port: 443
+  server: thorough-falcon.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇵🇱_PL_波兰 - 168ms
+  password: U9YAoqBgg5VyGBc6vQv1sN
+  port: 7538
+  server: 194.61.121.93
+  type: ss
+- name: 🇯🇵_JP_日本_4 - 121ms
+  password: AE62539071
+  port: 443
+  server: main-impala.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 50ms
+  network: ws
+  port: 443
+  server: 3.170.185.121
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- name: 🇩🇪_DE_德国_1 - 160ms
+  password: AE62539071
+  port: 443
+  server: moved-bluegill.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇵🇱_PL_波兰_1 - 170ms
+  password: AE62539071
+  port: 443
+  server: tolerant-mosquito.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇰🇷_KR_韩国 - 241ms
+  password: AE62539071
+  port: 443
+  server: sacred-hound.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇵🇱_PL_波兰_2 - 167ms
+  password: AE62539071
+  port: 443
+  server: relative-locust.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇭_CH_瑞士 - 1247ms
+  network: tcp
+  port: 443
+  server: 178.83.226.19
+  tls: true
+  type: vless
+  uuid: 1995a4e0-fd85-4de2-94f1-f86829e44308
+- name: 🇭🇰_HK_中国香港 - 205ms
+  password: AE62539071
+  port: 443
+  server: upright-bedbug.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 7ms
+  network: ws
+  port: 443
+  server: 18.154.132.94
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- name: 🇦🇺_AU_澳大利亚 - 142ms_1
+  password: AE62539071
+  port: 443
+  server: humorous-llama.rooster465.autos
+  skip-cert-verify: true
+  sni: humorous-llama.rooster465.autos
+  type: trojan
+- name: 🇩🇪_DE_德国 - 315ms
+  password: AE62539071
+  port: 443
+  server: sterling-macaw.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇩🇪_DE_德国 - 145ms
+  network: tcp
+  port: 443
+  server: 176.96.138.122
+  tls: true
+  type: vless
+  uuid: 518a99df-54f6-4f42-819d-b60abd880edf
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 15ms
+  network: ws
+  port: 443
+  server: 18.238.109.28
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 43ms
+  network: grpc
+  port: 443
+  server: 193.233.205.117
+  tls: true
+  type: vless
+  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_3 - 40ms
+  network: ws
+  port: 443
+  server: 52.84.199.57
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_4
+  network: ws
+  port: 443
+  server: 18.244.214.27
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇦_UA_乌克兰 - 175ms
+  network: tcp
+  port: 443
+  server: 193.238.153.15
+  tls: true
+  type: vless
+  uuid: 40cfbd0a-f133-4174-8e03-ab0e587e1099
+- name: 🇭🇰_HK_中国香港 - 186ms
+  password: AE62539071
+  port: 443
+  server: strong-haddock.rooster465.autos
+  skip-cert-verify: true
+  sni: strong-haddock.rooster465.autos
+  type: trojan
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪_SE_瑞典 - 159ms
+  network: tcp
+  port: 443
+  server: 84.32.49.223
+  tls: true
+  type: vless
+  uuid: 463a26c2-eba8-40ea-89c4-ee5c1373ccbe
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 15ms
+  network: ws
+  port: 443
+  server: 18.238.109.26
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 2ms
+  network: ws
+  port: 8880
+  server: 104.16.107.139
+  tls: false
+  type: vless
+  uuid: ff7390de-ce93-4d7d-b08b-bef8f71a85cf
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms_1
+  network: ws
+  port: 80
+  server: 199.232.78.150
+  tls: false
+  type: vless
+  uuid: 16569657-116c-46ed-8920-758ab8abaac4
+- encryption: none
+  flow: ''
+  name: 🇦🇫_AF_阿富汗->🇦🇹_AT_奥地利 - 296ms
+  network: ws
+  port: 443
+  server: 103.161.237.54
+  tls: true
+  type: vless
+  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+- name: 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 223ms
+  password: 0010996f-3eab-4804-9b3a-3a889d6767fc
+  port: 20088
+  server: a8zbx9xj.catcat321.com
+  skip-cert-verify: true
+  sni: iepl.krz3.cat.bilibili.com
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_4 - 8ms
+  network: ws
+  port: 443
+  server: 18.154.132.111
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇱🇻_LV_拉脱维亚 - 173ms
+  network: tcp
+  port: 2053
+  server: 89.36.161.222
+  tls: true
+  type: vless
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 183ms
+  network: ws
+  port: 4100
+  server: 194.26.229.222
+  tls: false
+  type: vless
+  uuid: b3d66abd-ea82-4616-92f0-1dec8d1e4cfc
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_2 - 75ms
+  network: ws
+  port: 8080
+  server: 40.160.69.214
+  tls: false
+  type: vless
+  uuid: 11af1c47-865a-47c6-92ff-118013655d78
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺_RU_俄罗斯 - 176ms
+  network: tcp
+  port: 443
+  server: vruaz.mostserv.xyz
+  tls: true
+  type: vless
+  uuid: 463a26c2-eba8-0031-89c4-ee5c1373ccbe
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国_5 - 79ms
+  network: tcp
+  port: 47822
+  server: pg-usa-bot.gigatapbot.top
+  tls: true
+  type: vless
+  uuid: 3b9eb177-6f0c-4d49-be4a-7e5168569f45
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰_HK_中国香港_1 - 376ms
+  network: tcp
+  port: 29053
+  server: 366-1095.rabbitpro-in-3.com
+  tls: false
+  type: vmess
+  uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+  network: ws
+  port: 443
+  server: 199.232.78.159
+  tls: true
+  type: vless
+  uuid: be42674a-296a-43d8-bf04-b8314d65ff63
+- encryption: none
+  flow: ''
+  name: 🇩🇪_DE_德国 - 149ms
+  network: ws
+  port: 443
+  server: 108.138.26.70
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 189ms
+  network: ws
+  port: 4100
+  server: 168.222.140.236
+  tls: false
+  type: vless
+  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 6ms
+  network: ws
+  port: 2053
+  server: www.wto.org
+  tls: true
+  type: vless
+  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰 - 231ms
+  network: tcp
+  port: 8443
+  server: neth.lckdwn.ru
+  tls: true
+  type: vless
+  uuid: 0db4a87c-c280-4a5f-ae97-903768c5ef4c
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇫🇮_FI_芬兰 - 197ms
+  network: tcp
+  port: 443
+  server: pg-sw-443-vless-tcp.gigatapbot.top
+  tls: true
+  type: vless
+  uuid: 3b9eb177-6f0c-4d49-be4a-7e5168569f45
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰_HK_中国香港_2 - 1370ms
+  network: ws
+  port: 443
+  server: n1761296892.4u9ma.icu
+  tls: true
+  type: vmess
+  uuid: d6db128f-42b9-40b1-b979-5e0095fa593c
+  ws-opts:
+    headers:
+      Host: n1761296892.4u9ma.icu
+    path: /
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇸_ES_西班牙 - 208ms
+  network: tcp
+  port: 443
+  server: pg-sp-443-vless-tcp.gigatapbot.top
+  tls: true
+  type: vless
+  uuid: 3b9eb177-6f0c-4d49-be4a-7e5168569f45
+- name: 🇰🇷_KR_韩国 - 143ms
   password: FH72359861
   port: 443
-  server: select-chipmunk.rooster465.autos
+  server: massive-ocelot.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇮🇪_IE_爱尔兰 - 148ms
+  password: FH72359861
+  port: 443
+  server: darling-mongrel.rooster465.autos
+  skip-cert-verify: true
+  sni: darling-mongrel.rooster465.autos
+  type: trojan
+- name: 🇸🇬_SG_新加坡 - 175ms
+  password: FH72359861
+  port: 443
+  server: master-possum.rooster465.autos
+  skip-cert-verify: true
+  sni: master-possum.rooster465.autos
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇵🇱_PL_波兰 - 332ms
+  network: ws
+  port: 443
+  server: pl4.lckdwn.ru
+  tls: false
+  type: vless
+  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇳🇱_NL_荷兰 - 145ms_1
+  network: tcp
+  port: 443
+  server: 85.155.226.27
+  tls: true
+  type: vless
+  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+- name: 🇩🇪_DE_德国_2 - 155ms
+  password: FH72359861
+  port: 443
+  server: summary-lemming.rooster465.autos
+  skip-cert-verify: true
+  sni: summary-lemming.rooster465.autos
+  type: trojan
+- name: 🇭🇰_HK_中国香港_1 - 181ms
+  password: FH72359861
+  port: 443
+  server: modern-bedbug.rooster465.autos
+  skip-cert-verify: true
+  sni: modern-bedbug.rooster465.autos
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 180ms_1
+  network: ws
+  port: 4100
+  server: 193.188.23.170
+  tls: false
+  type: vless
+  uuid: 1f9ac5fe-ce9c-40ff-b52f-6f96b1285ba6
+- name: 🇸🇬_SG_新加坡_1 - 181ms
+  password: FH72359861
+  port: 443
+  server: loved-shark.rooster465.autos
+  skip-cert-verify: true
+  sni: loved-shark.rooster465.autos
+  type: trojan
+- name: 🇸🇬_SG_新加坡_2 - 173ms
+  password: FH72359861
+  port: 443
+  server: calm-honeybee.rooster465.autos
+  skip-cert-verify: true
+  sni: calm-honeybee.rooster465.autos
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 38ms
+  network: ws
+  port: 443
+  server: 52.84.199.28
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇮🇹_IT_意大利 - 158ms
+  network: tcp
+  port: 443
+  server: 46.28.68.63
+  tls: true
+  type: vless
+  uuid: 44927d9f-1a75-4c03-ab8c-79898adaaece
+- name: 🇵🇱_PL_波兰_1 - 176ms
+  password: FH72359861
+  port: 443
+  server: magnetic-caiman.rooster465.autos
+  skip-cert-verify: true
+  sni: magnetic-caiman.rooster465.autos
+  type: trojan
+- name: 🇸🇬_SG_新加坡_3 - 175ms
+  password: FH72359861
+  port: 443
+  server: fond-chipmunk.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰->🇦🇹_AT_奥地利 - 141ms
+  network: ws
+  port: 443
+  server: 212.23.221.62
+  tls: true
+  type: vless
+  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+- name: 🇵🇱_PL_波兰_2 - 175ms
+  password: FH72359861
+  port: 443
+  server: primary-leech.rooster465.autos
+  skip-cert-verify: true
+  sni: primary-leech.rooster465.autos
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 170ms
+  network: ws
+  port: 2200
+  server: 87.228.122.100
+  tls: false
+  type: vless
+  uuid: 099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc
+- name: 🇯🇵_JP_日本_1 - 110ms
+  password: FH72359861
+  port: 443
+  server: endless-kiwi.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵_JP_日本 - 189ms
+  password: FH72359861
+  port: 443
+  server: champion-panther.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇭🇰_HK_中国香港 - 185ms
+  password: FH72359861
+  port: 443
+  server: natural-swan.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇭🇰_HK_中国香港_1 - 194ms
+  password: 6ec301428255a78a1d826988d86cc87e
+  port: 50887
+  server: 2c.fast9988.com
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇰🇷_KR_韩国 - 157ms
+  password: FH72359861
+  port: 443
+  server: one-dove.rooster465.autos
   skip-cert-verify: true
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US_1|2.7MB/s - 64ms
+  name: 🇭🇰_HK_中国香港_2 - 151ms
+  network: ws
+  port: 35043
+  server: 156.245.232.239
+  tls: false
+  type: vmess
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  ws-opts:
+    headers:
+      Host: 156.245.232.239
+    path: /
+- name: 🇰🇷_KR_韩国_1 - 140ms
+  password: FH72359861
+  port: 443
+  server: complete-narwhal.rooster465.autos
+  skip-cert-verify: true
+  sni: complete-narwhal.rooster465.autos
+  type: trojan
+- name: 🇯🇵_JP_日本_2 - 116ms
+  password: FH72359861
+  port: 443
+  server: helping-shark.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇹🇭_TH_泰国 - 9ms
+  network: ws
+  port: 443
+  server: 18.154.132.116
+  tls: true
+  type: vless
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
+- name: 🇸🇬_SG_新加坡 - 173ms
+  password: FH72359861
+  port: 443
+  server: worthy-perch.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇯🇵_JP_日本_3 - 111ms
+  password: FH72359861
+  port: 443
+  server: many-pangolin.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- name: 🇰🇷_KR_韩国_2 - 137ms
+  password: FH72359861
+  port: 443
+  server: loyal-molly.rooster465.autos
+  skip-cert-verify: true
+  sni: loyal-molly.rooster465.autos
+  type: trojan
+- name: 🇰🇷_KR_韩国_3 - 132ms
+  password: FH72359861
+  port: 443
+  server: 43.202.61.210
+  skip-cert-verify: true
+  sni: loyal-molly.rooster465.autos
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2 - 17ms
   network: ws
   port: 443
   server: rush-6it6b.teeopp.quest
@@ -138,973 +1301,320 @@ proxies:
     headers:
       Host: rush-6it6b.teeopp.quest
     path: /
-- name: 🇸🇬SG_2|1.7MB/s - 206ms
-  password: FH72359861
-  port: 443
-  server: master-possum.rooster465.autos
-  skip-cert-verify: true
-  sni: master-possum.rooster465.autos
-  type: trojan
-- name: 🇸🇬SG_3|4.0MB/s - 207ms
-  password: FH72359861
-  port: 443
-  server: square-guinea.rooster465.autos
-  skip-cert-verify: true
-  sni: square-guinea.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: VLESS-free77-sg3.node2.top - 280ms
-  network: ws
-  port: 443
-  server: free77-sg3.node2.top
-  sni: sie704.pages.dev
-  tls: true
-  type: vless
-  uuid: 30235bbe-f791-4e53-89f9-5d9363af9b0a
-- name: 🇸🇬SG_4|5.6MB/s - 217ms
-  password: FH72359861
-  port: 443
-  server: certain-egret.rooster465.autos
-  skip-cert-verify: true
-  sni: certain-egret.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇺🇸US_2|1.4MB/s - 160ms
-  network: xhttp
-  port: 443
-  server: api.ferrin.uk
-  tls: true
-  type: vless
-  uuid: e7e90e6b-8069-4cb8-bad9-a3b364dd5d71
-- encryption: none
-  flow: ''
-  name: 🇳🇱NL_1|1.1MB/s - 185ms
-  network: grpc
-  port: 443
-  server: 195.63.141.201
-  tls: true
-  type: vless
-  uuid: 4e7eb9d5-022a-4b0a-ba37-2d1be458947b
-- name: 🇸🇬SG_5|1.3MB/s - 204ms
-  password: FH72359861
-  port: 443
-  server: charming-ox.rooster465.autos
-  skip-cert-verify: true
-  sni: charming-ox.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇺🇸US_10|2.6MB/s - 49ms
-  password: amazonskr05
-  port: 443
-  server: 18.189.171.163
-  type: ss
-- encryption: none
-  flow: ''
-  name: 🇺🇸US_22|2.3MB/s - 18ms
-  network: ws
-  port: 8880
-  server: 45.80.111.175
-  tls: false
-  type: vless
-  uuid: 6ed59a5b-efef-4ddf-99f2-57d200caed47
-- name: 🇯🇵JP_10|4.8MB/s - 120ms
-  password: FH72359861
-  port: 443
-  server: 13.231.180.231
-  sni: set-gazelle.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_11|4.8MB/s - 126ms
-  password: FH72359861
-  port: 443
-  server: 13.231.237.228
-  sni: classic-pug.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_12|2.8MB/s - 119ms
-  password: FH72359861
-  port: 443
-  server: 18.183.226.106
-  sni: living-hagfish.rooster465.autos
-  type: trojan
-- name: 🇸🇬SG_7|5.8MB/s - 183ms
-  password: FH72359861
-  port: 443
-  server: 13.212.116.190
-  sni: musical-terrier.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_13|4.7MB/s - 120ms
-  password: FH72359861
-  port: 443
-  server: 18.183.245.11
-  sni: bright-buffalo.rooster465.autos
-  type: trojan
-- name: 🇮🇪IE_1|2.3MB/s - 105ms
-  password: FH72359861
-  port: 443
-  server: 3.253.78.205
-  sni: balanced-heron.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_14|5.7MB/s - 120ms
-  password: FH72359861
-  port: 443
-  server: 3.112.250.103
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_2|4.2MB/s - 131ms
-  password: FH72359861
-  port: 443
-  server: 35.159.21.7
-  sni: summary-lemming.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_15|4.2MB/s - 119ms
-  password: FH72359861
-  port: 443
-  server: 52.196.34.5
-  sni: welcome-owl.rooster465.autos
-  type: trojan
-- name: 🇸🇬SG_8|3.9MB/s - 183ms
-  password: FH72359861
-  port: 443
-  server: 3.0.133.8
-  sni: social-cod.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_16|3.5MB/s - 120ms
-  password: FH72359861
-  port: 443
-  server: 54.238.194.119
-  sni: relaxing-marten.rooster465.autos
-  type: trojan
-- name: 🇰🇷KR_2|5.5MB/s - 145ms
-  password: FH72359861
-  port: 443
-  server: 43.202.61.210
-  sni: loyal-molly.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_17|2.1MB/s - 123ms
-  password: FH72359861
-  port: 443
-  server: 54.64.38.110
-  sni: equal-labrador.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇬🇧GB_2|1.6MB/s - 19ms
-  network: ws
-  port: 443
-  server: 199.232.78.159
-  tls: true
-  type: vless
-  uuid: c4b5eaa0-c6e0-400c-bcaf-2bf30b50a0df
-- name: 🇰🇷KR_3|5.0MB/s - 153ms
-  password: FH72359861
-  port: 443
-  server: 54.180.158.231
-  sni: precise-locust.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_18|5.5MB/s - 119ms
-  password: FH72359861
-  port: 443
-  server: 57.180.23.141
-  sni: engaged-lionfish.rooster465.autos
-  type: trojan
-- name: 🇸🇬SG_9|1.1MB/s - 182ms
-  password: FH72359861
-  port: 443
-  server: 54.254.235.88
-  sni: charming-ox.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇨🇿CZ_1|3.7MB/s - 158ms
-  network: xhttp
-  port: 443
-  server: 194.87.151.151
-  tls: true
-  type: vless
-  uuid: 33c150b7-c0ca-4133-9a52-6f1207da9b8b
-- name: 🇸🇬SG_10|4.0MB/s - 183ms
-  password: FH72359861
-  port: 443
-  server: 56.10.68.149
-  sni: square-guinea.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇷🇺RU_1|1.6MB/s - 164ms
-  network: grpc
-  port: 2096
-  server: 5.188.140.5
-  tls: true
-  type: vless
-  uuid: 4a334454-22f7-491b-9bec-583e1e8a2773
-- name: Trojan-cloudflare.com - 38ms
-  password: demo-password
-  port: 443
-  server: cloudflare.com
-  sni: cloudflare.com
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇧🇷BR_1|2.4MB/s - 163ms
-  network: grpc
-  port: 16923
-  server: 201.51.1.84
-  tls: true
-  type: vless
-  uuid: ba222add-6ac1-45f1-9a18-f91cb38e324f
-- encryption: none
-  flow: ''
-  name: 🇺🇸US_23|1.3MB/s - 300ms
-  network: ws
-  port: 443
-  server: xn--b6gac.eu.org
-  tls: true
-  type: vless
-  uuid: 092b1abd-0c6f-450c-a164-c1996e2dc65c
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-78.159.247.253 - 138ms
-  network: tcp
-  port: 2027
-  server: 78.159.247.253
-  sni: storage.yandex.net
-  tls: false
-  type: vless
-  uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
-- name: Trojan-musical-terrier.rooster465.autos - 205ms
-  password: FH72359861
-  port: 443
-  server: musical-terrier.rooster465.autos
-  sni: musical-terrier.rooster465.autos
-  type: trojan
-- name: Trojan-leading-eel.rooster465.autos - 223ms
-  password: FH72359861
-  port: 443
-  server: leading-eel.rooster465.autos
-  sni: leading-eel.rooster465.autos
-  type: trojan
-- name: Trojan-welcome-monitor.rooster465.autos - 203ms
-  password: FH72359861
-  port: 443
-  server: welcome-monitor.rooster465.autos
-  sni: welcome-monitor.rooster465.autos
-  type: trojan
-- name: Trojan-relevant-oryx.rooster465.autos - 226ms
-  password: FH72359861
-  port: 443
-  server: relevant-oryx.rooster465.autos
-  sni: relevant-oryx.rooster465.autos
-  type: trojan
-- name: Trojan-immune-grackle.rooster465.autos - 204ms
-  password: FH72359861
-  port: 443
-  server: immune-grackle.rooster465.autos
-  sni: immune-grackle.rooster465.autos
-  type: trojan
-- name: Trojan-social-cod.rooster465.autos - 205ms
-  password: FH72359861
-  port: 443
-  server: social-cod.rooster465.autos
-  sni: social-cod.rooster465.autos
-  type: trojan
-- name: Trojan-complete-cockatoo.rooster465.autos - 202ms
-  password: FH72359861
-  port: 443
-  server: complete-cockatoo.rooster465.autos
-  sni: complete-cockatoo.rooster465.autos
-  type: trojan
-- name: Trojan-worthy-perch.rooster465.autos - 212ms
-  password: FH72359861
-  port: 443
-  server: worthy-perch.rooster465.autos
-  sni: worthy-perch.rooster465.autos
-  type: trojan
-- name: Trojan-intimate-adder.rooster465.autos - 203ms
-  password: FH72359861
-  port: 443
-  server: intimate-adder.rooster465.autos
-  sni: intimate-adder.rooster465.autos
-  type: trojan
-- name: Trojan-national-dingo.rooster465.autos - 206ms
-  password: FH72359861
-  port: 443
-  server: national-dingo.rooster465.autos
-  sni: national-dingo.rooster465.autos
-  type: trojan
-- name: Trojan-proven-stud.rooster465.autos - 203ms
-  password: FH72359861
-  port: 443
-  server: proven-stud.rooster465.autos
-  sni: proven-stud.rooster465.autos
-  type: trojan
-- name: Trojan-simple-sunbeam.rooster465.autos - 205ms
-  password: FH72359861
-  port: 443
-  server: simple-sunbeam.rooster465.autos
-  sni: simple-sunbeam.rooster465.autos
-  type: trojan
-- name: Trojan-hot-tapir.rooster465.autos - 204ms
-  password: FH72359861
-  port: 443
-  server: hot-tapir.rooster465.autos
-  sni: hot-tapir.rooster465.autos
-  type: trojan
-- name: Trojan-united-sculpin.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: united-sculpin.rooster465.autos
-  sni: united-sculpin.rooster465.autos
-  type: trojan
-- name: Trojan-settled-camel.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: settled-camel.rooster465.autos
-  sni: settled-camel.rooster465.autos
-  type: trojan
-- name: Trojan-flexible-pony.rooster465.autos - 141ms
-  password: FH72359861
-  port: 443
-  server: flexible-pony.rooster465.autos
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-- name: Trojan-touching-ostrich.rooster465.autos - 120ms
-  password: FH72359861
-  port: 443
-  server: touching-ostrich.rooster465.autos
-  sni: touching-ostrich.rooster465.autos
-  type: trojan
-- name: Trojan-stable-python.rooster465.autos - 204ms
-  password: FH72359861
-  port: 443
-  server: stable-python.rooster465.autos
-  sni: stable-python.rooster465.autos
-  type: trojan
-- name: Trojan-upward-squid.rooster465.autos - 206ms
-  password: FH72359861
-  port: 443
-  server: upward-squid.rooster465.autos
-  sni: upward-squid.rooster465.autos
-  type: trojan
-- name: Trojan-champion-panther.rooster465.autos - 142ms
-  password: FH72359861
-  port: 443
-  server: champion-panther.rooster465.autos
-  sni: champion-panther.rooster465.autos
-  type: trojan
-- name: Trojan-flying-swift.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: flying-swift.rooster465.autos
-  sni: flying-swift.rooster465.autos
-  type: trojan
-- name: Trojan-assuring-skink.rooster465.autos - 205ms
-  password: FH72359861
-  port: 443
-  server: assuring-skink.rooster465.autos
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-- name: Trojan-funny-squid.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: funny-squid.rooster465.autos
-  sni: funny-squid.rooster465.autos
-  type: trojan
-- name: Trojan-lucky-primate.rooster465.autos - 141ms
-  password: FH72359861
-  port: 443
-  server: lucky-primate.rooster465.autos
-  sni: lucky-primate.rooster465.autos
-  type: trojan
-- name: Trojan-adapting-giraffe.rooster465.autos - 145ms
-  password: FH72359861
-  port: 443
-  server: adapting-giraffe.rooster465.autos
-  sni: adapting-giraffe.rooster465.autos
-  type: trojan
-- name: Trojan-emerging-porpoise.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: emerging-porpoise.rooster465.autos
-  sni: emerging-porpoise.rooster465.autos
-  type: trojan
-- name: Trojan-brief-hare.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: brief-hare.rooster465.autos
-  sni: brief-hare.rooster465.autos
-  type: trojan
-- name: Trojan-loyal-killdeer.rooster465.autos - 145ms
-  password: FH72359861
-  port: 443
-  server: loyal-killdeer.rooster465.autos
-  sni: loyal-killdeer.rooster465.autos
-  type: trojan
-- name: Trojan-star-cheetah.rooster465.autos - 147ms
-  password: FH72359861
-  port: 443
-  server: star-cheetah.rooster465.autos
-  sni: star-cheetah.rooster465.autos
-  type: trojan
-- name: Trojan-relaxing-marten.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: relaxing-marten.rooster465.autos
-  sni: relaxing-marten.rooster465.autos
-  type: trojan
-- name: Trojan-steady-prawn.rooster465.autos - 139ms
-  password: FH72359861
-  port: 443
-  server: steady-prawn.rooster465.autos
-  sni: steady-prawn.rooster465.autos
-  type: trojan
-- name: Trojan-noted-cougar.rooster465.autos - 141ms
-  password: FH72359861
-  port: 443
-  server: noted-cougar.rooster465.autos
-  sni: noted-cougar.rooster465.autos
-  type: trojan
-- name: Trojan-internal-peacock.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: internal-peacock.rooster465.autos
-  sni: internal-peacock.rooster465.autos
-  type: trojan
-- name: Trojan-needed-gelding.rooster465.autos - 144ms
-  password: FH72359861
-  port: 443
-  server: needed-gelding.rooster465.autos
-  sni: needed-gelding.rooster465.autos
-  type: trojan
-- name: Trojan-bright-buffalo.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: bright-buffalo.rooster465.autos
-  sni: bright-buffalo.rooster465.autos
-  type: trojan
-- name: Trojan-sterling-fowl.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: sterling-fowl.rooster465.autos
-  sni: sterling-fowl.rooster465.autos
-  type: trojan
-- name: Trojan-classic-pug.rooster465.autos - 145ms
-  password: FH72359861
-  port: 443
-  server: classic-pug.rooster465.autos
-  sni: classic-pug.rooster465.autos
-  type: trojan
-- name: Trojan-many-pangolin.rooster465.autos - 139ms
-  password: FH72359861
-  port: 443
-  server: many-pangolin.rooster465.autos
-  sni: many-pangolin.rooster465.autos
-  type: trojan
-- name: Trojan-light-filly.rooster465.autos - 141ms
-  password: FH72359861
-  port: 443
-  server: light-filly.rooster465.autos
-  sni: light-filly.rooster465.autos
-  type: trojan
-- name: Trojan-magical-airedale.rooster465.autos - 141ms
-  password: FH72359861
-  port: 443
-  server: magical-airedale.rooster465.autos
-  sni: magical-airedale.rooster465.autos
-  type: trojan
-- name: Trojan-casual-stallion.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: casual-stallion.rooster465.autos
-  sni: casual-stallion.rooster465.autos
-  type: trojan
-- name: Trojan-devoted-zebra.rooster465.autos - 140ms
-  password: FH72359861
-  port: 443
-  server: devoted-zebra.rooster465.autos
-  sni: devoted-zebra.rooster465.autos
-  type: trojan
-- name: Trojan-wise-gibbon.rooster465.autos - 144ms
-  password: FH72359861
-  port: 443
-  server: wise-gibbon.rooster465.autos
-  sni: wise-gibbon.rooster465.autos
-  type: trojan
-- name: Trojan-pretty-adder.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: pretty-adder.rooster465.autos
-  sni: pretty-adder.rooster465.autos
-  type: trojan
-- name: Trojan-helping-shark.rooster465.autos - 143ms
-  password: FH72359861
-  port: 443
-  server: helping-shark.rooster465.autos
-  sni: helping-shark.rooster465.autos
-  type: trojan
-- name: Trojan-adapted-quetzal.rooster465.autos - 148ms
-  password: FH72359861
-  port: 443
-  server: adapted-quetzal.rooster465.autos
-  sni: adapted-quetzal.rooster465.autos
-  type: trojan
-- name: Trojan-star-bluejay.rooster465.autos - 166ms
-  password: FH72359861
-  port: 443
-  server: star-bluejay.rooster465.autos
-  sni: star-bluejay.rooster465.autos
-  type: trojan
-- name: Trojan-complete-narwhal.rooster465.autos - 166ms
-  password: FH72359861
-  port: 443
-  server: complete-narwhal.rooster465.autos
-  sni: complete-narwhal.rooster465.autos
-  type: trojan
-- name: Trojan-magical-prawn.rooster465.autos - 165ms
-  password: FH72359861
-  port: 443
-  server: magical-prawn.rooster465.autos
-  sni: magical-prawn.rooster465.autos
-  type: trojan
-- name: Trojan-one-dove.rooster465.autos - 169ms
-  password: FH72359861
-  port: 443
-  server: one-dove.rooster465.autos
-  sni: one-dove.rooster465.autos
-  type: trojan
-- name: Trojan-balanced-stag.rooster465.autos - 183ms
-  password: FH72359861
-  port: 443
-  server: balanced-stag.rooster465.autos
-  sni: balanced-stag.rooster465.autos
-  type: trojan
-- name: Trojan-loyal-molly.rooster465.autos - 186ms
-  password: FH72359861
-  port: 443
-  server: loyal-molly.rooster465.autos
-  sni: loyal-molly.rooster465.autos
-  type: trojan
-- name: Trojan-gentle-platypus.rooster465.autos - 169ms
-  password: FH72359861
-  port: 443
-  server: gentle-platypus.rooster465.autos
-  sni: gentle-platypus.rooster465.autos
-  type: trojan
-- name: Trojan-endless-kiwi.rooster465.autos - 147ms
-  password: FH72359861
-  port: 443
-  server: endless-kiwi.rooster465.autos
-  sni: endless-kiwi.rooster465.autos
-  type: trojan
-- name: Trojan-cunning-grub.rooster465.autos - 131ms
-  password: FH72359861
-  port: 443
-  server: cunning-grub.rooster465.autos
-  sni: cunning-grub.rooster465.autos
-  type: trojan
-- name: Trojan-renewed-chigger.rooster465.autos - 136ms
-  password: FH72359861
-  port: 443
-  server: renewed-chigger.rooster465.autos
-  sni: renewed-chigger.rooster465.autos
-  type: trojan
-- name: Trojan-summary-firefly.rooster465.autos - 124ms
+- name: 🇮🇪_IE_爱尔兰 - 138ms
   password: FH72359861
   port: 443
   server: summary-firefly.rooster465.autos
-  sni: summary-firefly.rooster465.autos
+  skip-cert-verify: true
   type: trojan
-- name: Trojan-destined-skylark.rooster465.autos - 167ms
+- cipher: 2022-blake3-aes-128-gcm
+  name: 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦 - 1ms
+  password: YTE1ZWU4ZTEyZjc3YmEzZA==:ZGYzOWJkMjMtMjk0YS00Ng==
+  port: 80
+  server: 172.67.129.226
+  type: ss
+- name: 🇯🇵_JP_日本 - 109ms
   password: FH72359861
   port: 443
-  server: destined-skylark.rooster465.autos
-  sni: destined-skylark.rooster465.autos
+  server: internal-mongoose.rooster465.autos
+  skip-cert-verify: true
+  sni: internal-mongoose.rooster465.autos
   type: trojan
-- name: Trojan-balanced-heron.rooster465.autos - 135ms
+- name: 🇦🇺_AU_澳大利亚 - 152ms
   password: FH72359861
   port: 443
-  server: balanced-heron.rooster465.autos
-  sni: balanced-heron.rooster465.autos
+  server: national-stingray.rooster465.autos
+  skip-cert-verify: true
+  sni: national-stingray.rooster465.autos
   type: trojan
-- name: Trojan-aware-coyote.rooster465.autos - 168ms
-  password: FH72359861
-  port: 443
-  server: aware-coyote.rooster465.autos
-  sni: aware-coyote.rooster465.autos
-  type: trojan
-- name: Trojan-precise-locust.rooster465.autos - 181ms
-  password: FH72359861
-  port: 443
-  server: precise-locust.rooster465.autos
-  sni: precise-locust.rooster465.autos
-  type: trojan
-- name: Trojan-nearby-cod.rooster465.autos - 154ms
-  password: FH72359861
-  port: 443
-  server: nearby-cod.rooster465.autos
-  sni: nearby-cod.rooster465.autos
-  type: trojan
-- name: Trojan-tough-tuna.rooster465.autos - 63ms
-  password: FH72359861
-  port: 443
-  server: tough-tuna.rooster465.autos
-  sni: tough-tuna.rooster465.autos
-  type: trojan
-- name: Trojan-alive-snapper.rooster465.autos - 147ms
-  password: FH72359861
-  port: 443
-  server: alive-snapper.rooster465.autos
-  sni: alive-snapper.rooster465.autos
-  type: trojan
-- name: Trojan-warm-aardvark.rooster465.autos - 64ms
-  password: FH72359861
-  port: 443
-  server: warm-aardvark.rooster465.autos
-  sni: warm-aardvark.rooster465.autos
-  type: trojan
-- name: Trojan-neutral-quail.rooster465.autos - 72ms
-  password: FH72359861
-  port: 443
-  server: neutral-quail.rooster465.autos
-  sni: neutral-quail.rooster465.autos
-  type: trojan
-- name: Trojan-summary-lemming.rooster465.autos - 150ms
-  password: FH72359861
-  port: 443
-  server: summary-lemming.rooster465.autos
-  sni: summary-lemming.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-89.125.168.45 - 127ms
-  network: tcp
-  port: 5000
-  server: 89.125.168.45
-  sni: yandex.ru
-  tls: false
-  type: vless
-  uuid: 526c4eb2-9b4e-563a-b9e4-7fd6d0f28733
-- name: Trojan-comic-poodle.rooster465.autos - 58ms
-  password: FH72359861
-  port: 443
-  server: comic-poodle.rooster465.autos
-  sni: comic-poodle.rooster465.autos
-  type: trojan
-- name: Trojan-touching-turtle.rooster465.autos - 132ms
-  password: FH72359861
-  port: 443
-  server: touching-turtle.rooster465.autos
-  sni: touching-turtle.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-132.243.207.38 - 111ms
-  network: tcp
-  port: 5000
-  server: 132.243.207.38
-  sni: www.vk.com
-  tls: false
-  type: vless
-  uuid: 6a0a3a97-f063-5599-b5fa-2b5ad599a683
-- name: Trojan-communal-squid.rooster465.autos - 60ms
-  password: FH72359861
-  port: 443
-  server: communal-squid.rooster465.autos
-  sni: communal-squid.rooster465.autos
-  type: trojan
-- name: Trojan-pro-crane.rooster465.autos - 148ms
-  password: FH72359861
-  port: 443
-  server: pro-crane.rooster465.autos
-  sni: pro-crane.rooster465.autos
-  type: trojan
-- name: Trojan-modern-bedbug.rooster465.autos - 219ms
-  password: FH72359861
-  port: 443
-  server: modern-bedbug.rooster465.autos
-  sni: modern-bedbug.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: ''
-  name: 🇩🇪DE_3|4.2MB/s - 1198ms
-  network: grpc
-  port: 9878
-  server: 134.0.116.208
-  tls: true
-  type: vless
-  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-- name: Trojan-natural-swan.rooster465.autos - 229ms
-  password: FH72359861
-  port: 443
-  server: natural-swan.rooster465.autos
-  sni: natural-swan.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-185.28.47.111 - 141ms
-  network: tcp
-  port: 443
-  server: 185.28.47.111
-  sni: lat.o4ka-internet.com
-  tls: false
-  type: vless
-  uuid: 2cb6b4d9-0c74-45e2-a4fb-645bb8ac532a
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-163.5.153.153 - 144ms
-  network: tcp
-  port: 443
-  server: 163.5.153.153
-  sni: www.samsung.com
-  tls: false
-  type: vless
-  uuid: 0a76a766-d141-44b8-944e-dff757d7116f
-- name: Trojan-growing-oyster.rooster465.autos - 227ms
-  password: FH72359861
-  port: 443
-  server: growing-oyster.rooster465.autos
-  sni: growing-oyster.rooster465.autos
-  type: trojan
-- name: Trojan-choice-worm.rooster465.autos - 223ms
-  password: FH72359861
-  port: 443
-  server: choice-worm.rooster465.autos
-  sni: choice-worm.rooster465.autos
-  type: trojan
-- name: Trojan-square-pheasant.rooster465.autos - 180ms
-  password: FH72359861
-  port: 443
-  server: square-pheasant.rooster465.autos
-  sni: square-pheasant.rooster465.autos
-  type: trojan
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-fin3.o4ka-internet.com - 216ms
-  network: tcp
-  port: 443
-  server: fin3.o4ka-internet.com
-  sni: fin3.o4ka-internet.com
-  tls: false
-  type: vless
-  uuid: 2cb6b4d9-0c74-45e2-a4fb-645bb8ac532a
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-95.85.254.114 - 181ms
-  network: tcp
-  port: 443
-  server: 95.85.254.114
-  sni: pol4.o4ka-internet.com
-  tls: false
-  type: vless
-  uuid: 2cb6b4d9-0c74-45e2-a4fb-645bb8ac532a
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-nl6.o4ka-internet.com - 197ms
-  network: tcp
-  port: 443
-  server: nl6.o4ka-internet.com
-  sni: nl6.o4ka-internet.com
-  tls: false
-  type: vless
-  uuid: 2cb6b4d9-0c74-45e2-a4fb-645bb8ac532a
-- encryption: none
-  flow: ''
-  name: VLESS-5.75.197.25 - 136ms
-  network: tcp
-  port: 1000
-  server: 5.75.197.25
-  tls: false
-  type: vless
-  uuid: 97ee39cc-cb22-42fd-9476-0c1a5f5a9621
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_136 - 233ms
-  network: tcp
-  port: 30829
-  server: v29.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- encryption: none
-  flow: ''
-  name: VLESS-89.167.12.115 - 150ms
-  network: tcp
-  port: 22579
-  server: 89.167.12.115
-  tls: false
-  type: vless
-  uuid: 39ad12ba-914a-4aa1-a825-3ee4db7c0a52
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-31.76.77.213 - 148ms
-  network: tcp
-  port: 443
-  server: 31.76.77.213
-  sni: valenciatobcn.life
-  tls: true
-  type: vless
-  uuid: baeb4e35-ab91-4f9c-89be-15d4076adf68
-- encryption: none
-  flow: ''
-  name: VLESS-85.198.103.253 - 170ms
-  network: tcp
-  port: 21018
-  server: 85.198.103.253
-  tls: false
-  type: vless
-  uuid: f5a0d1e9-a6da-49dc-86ed-afefa39ce3ed
 - alterId: 0
   cipher: auto
-  name: 🇺🇸_美国_158 - 94ms
-  network: tcp
-  port: 443
-  server: guanwang.awsno.com
-  tls: true
-  type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-- encryption: none
-  flow: ''
-  name: VLESS-104.18.37.228 - 18ms
+  name: 🇳🇱_NL_荷兰_1 - 140ms
   network: ws
   port: 443
-  server: 104.18.37.228
-  sni: josni.hoyes.cloudns.ch
+  server: 185.246.152.159
   tls: true
-  type: vless
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_141 - 302ms
-  network: tcp
-  port: 30809
-  server: v9.hdacd.com
+  type: vmess
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
+  ws-opts:
+    headers:
+      Host: 185.246.152.159
+    path: /
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰 - 295ms
+  network: ws
+  port: 35974
+  server: france3.spaidan.ir
   tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  type: vless
+  uuid: c7333a4e-b8c9-44d4-aee6-f73bfe203902
+- name: 🇰🇷_KR_韩国 - 144ms
+  password: HC04361579
+  port: 443
+  server: enough-lamb.rooster465.autos
+  skip-cert-verify: true
+  sni: enough-lamb.rooster465.autos
+  type: trojan
 - encryption: none
   flow: ''
-  name: VLESS-172.66.44.97 - 18ms
+  name: 🇺🇸_US_美国_1 - 1ms_2
   network: ws
-  port: 443
-  server: 172.66.44.97
-  sni: josni.hoyes.cloudns.ch
-  tls: true
-  type: vless
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-- encryption: none
-  flow: ''
-  name: VLESS-199.232.78.159 - 17ms
-  network: ws
-  port: 443
-  server: 199.232.78.159
-  sni: ssl.fastly.com
-  tls: true
-  type: vless
-  uuid: be42674a-296a-43d8-bf04-b8314d65ff63
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_139 - 316ms
-  network: tcp
-  port: 30806
-  server: v6.hdacd.com
+  port: 8880
+  server: 104.17.178.154
   tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  type: vless
+  uuid: c3f4ee0c-3c64-466d-ae14-9bcf685e1efd
 - encryption: none
   flow: ''
-  name: VLESS-www.wto.org - 18ms
+  name: 🇺🇸_US_美国_2 - 1ms
+  network: ws
+  port: 2095
+  server: 8.47.69.0
+  tls: false
+  type: vless
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+- encryption: none
+  flow: ''
+  name: 🇪🇪_EE_爱沙尼亚 - 185ms
+  network: tcp
+  port: 443
+  server: ee2.mehab.me
+  tls: true
+  type: vless
+  uuid: 278412f2-ef42-48e2-a4c0-243b173e612b
+- encryption: none
+  flow: ''
+  name: 🇩🇪_DE_德国 - 169ms
+  network: tcp
+  port: 443
+  server: de2.mehab.me
+  tls: true
+  type: vless
+  uuid: 58a38ebd-30e6-48bd-a1ab-d0babb1da37f
+- encryption: none
+  flow: ''
+  name: 🇳🇱_NL_荷兰->🇫🇮_FI_芬兰 - 144ms
   network: ws
   port: 2053
-  server: www.wto.org
-  sni: usa.105794.xyz
+  server: 185.109.48.13
   tls: true
   type: vless
-  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-124.156.182.132 - 160ms
-  network: tcp
-  port: 443
-  server: 124.156.182.132
-  sni: www.apple.com
-  tls: true
-  type: vless
-  uuid: 1b6de5d8-3285-422c-b6fe-2989918f528b
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
 - encryption: none
   flow: ''
-  name: VLESS-120.227.1.43 - 234ms
-  network: tcp
-  port: 12528
-  server: 120.227.1.43
-  tls: false
-  type: vless
-  uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
-- encryption: none
-  flow: ''
-  name: VLESS-support.zoom.us - 44ms
+  name: 🇺🇸_US_美国_4 - 1ms
   network: ws
-  port: 80
-  server: support.zoom.us
-  sni: support.zoom.us
+  port: 8880
+  server: 172.64.88.251
   tls: false
   type: vless
-  uuid: 4093e0fe-939d-41a8-95c1-395728cbbd93
-- encryption: none
-  flow: xtls-rprx-vision
-  name: VLESS-46.28.68.63 - 142ms
-  network: tcp
-  port: 443
-  server: 46.28.68.63
-  sni: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 44927d9f-1a75-4c03-ab8c-79898adaaece
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_香港_144 - 324ms
-  network: tcp
-  port: 30807
-  server: v10.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: 87a5d3eb-afd4-4193-9787-c54ef7c26c8c
 - encryption: none
   flow: ''
-  name: VLESS-200.165.228.47 - 160ms
+  name: 🇺🇸_US_美国_5 - 17ms
+  network: ws
+  port: 443
+  server: vpn.renshengxuanze.ccwu.cc
+  tls: true
+  type: vless
+  uuid: 9a3de3e0-2a6e-4bb2-81bd-1a4e51dfa110
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇯🇵_JP_日本 - 1ms
+  network: ws
+  port: 8880
+  server: 104.26.13.40
+  tls: false
+  type: vless
+  uuid: 875d3876-ab9a-4dd6-8a8d-bf57f03403aa
+- cipher: chacha20-ietf-poly1305
+  name: 🇵🇱_PL_波兰 - 169ms
+  password: ytw2awn
+  port: 443
+  server: 54.36.174.140
+  type: ss
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇰🇿_KZ_哈萨克斯坦 - 624ms
+  network: tcp
+  port: 8443
+  server: magazinetut.online
+  tls: true
+  type: vless
+  uuid: 7d641c2e-6897-4b9f-8a82-3f0cc8980db1
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国_2 - 64ms
+  network: tcp
+  port: 11094
+  server: 51.81.223.225
+  tls: true
+  type: vless
+  uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 194ms
+  network: ws
+  port: 2200
+  server: 104.171.137.185
+  tls: false
+  type: vless
+  uuid: 3b037295-b93f-4ed1-b3ee-0efb8bc2f093
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇿_CZ_捷克->🇩🇪_DE_德国 - 1206ms
+  network: raw
+  port: 2027
+  server: 78.159.247.253
+  tls: true
+  type: vless
+  uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧_GB_英国 - 140ms
+  network: tcp
+  port: 2053
+  server: 31.76.39.217
+  tls: true
+  type: vless
+  uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯_1 - 186ms
   network: ws
   port: 4100
-  server: 200.165.228.47
-  sni: live.ok.ru
+  server: 168.222.140.233
   tls: false
   type: vless
-  uuid: 6620ef58-9c62-43fe-9596-ff862b200958
-- name: Trojan-216.24.57.1 - 18ms
+  uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_3 - 1ms
+  network: ws
+  port: 8880
+  server: 104.21.15.212
+  tls: false
+  type: vless
+  uuid: 902fd911-ca5d-49a6-99ad-47372a266804
+- encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 1241ms
+  network: ws
+  port: 2200
+  server: 77.222.32.201
+  tls: false
+  type: vless
+  uuid: c366f788-ea31-4a3a-897e-794c9f935896
+- encryption: none
+  flow: ''
+  name: VLESS-195.63.141.201 - 143ms
+  network: grpc
+  port: 443
+  server: 195.63.141.201
+  sni: hartfordmedia.online
+  tls: false
+  type: vless
+  uuid: 4e7eb9d5-022a-4b0a-ba37-2d1be458947b
+- encryption: none
+  flow: ''
+  name: VLESS-202.144.192.76 - 108ms
+  network: tcp
+  port: 13779
+  server: 202.144.192.76
+  sni: tesla.com
+  tls: false
+  type: vless
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_5|1.5MB/s|YT-CN|15% - 234ms
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 6d27fe18-4e19-4b4e-8f47-e05a85414f0d
+  ws-opts:
+    headers:
+      Host: a7fbf12df555e5e8a99fc901525aaa76.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_6|1.5MB/s|YT-CN|15% - 187ms
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 97c638c6-86d5-4cf6-b70b-114c6809b637
+  ws-opts:
+    headers:
+      Host: 407a2bc6d452ff93e6d7b73078539d9e.mobgslb.tbcache.com
+    path: /
+- encryption: none
+  flow: ''
+  name: VLESS-176.109.108.196 - 181ms
+  network: grpc
+  port: 9892
+  server: 176.109.108.196
+  sni: dl.google.com
+  tls: false
+  type: vless
+  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
+- encryption: none
+  flow: ''
+  name: VLESS-50.62.194.30 - 2ms
+  network: ws
+  port: 8880
+  server: 50.62.194.30
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_7|2.9MB/s|YT-CN|15% - 158ms
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 0c657913-e593-4893-9555-f88478c33a4b
+  ws-opts:
+    headers:
+      Host: f784fdb75e4fc8a478c10d9acff513d3.mobgslb.tbcache.com
+    path: /
+- name: Trojan-172.67.221.242 - 2ms
+  password: humanity
+  port: 443
+  server: 172.67.221.242
+  sni: www.ignitelimit.com
+  type: trojan
+- name: Trojan-216.24.57.1 - 5ms
   password: humanity
   port: 443
   server: 216.24.57.1
   sni: www.ignitelimit.com
   type: trojan
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_138 - 440ms
-  network: tcp
-  port: 30804
-  server: v4.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_146 - 344ms
-  network: tcp
-  port: 30824
-  server: v24.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: Trojan-104.17.111.4 - 1ms
+  password: humanity
+  port: 443
+  server: 104.17.111.4
+  sni: www.ignitelimit.com
+  type: trojan
 - encryption: none
   flow: ''
-  name: VLESS-199.232.78.159 - 17ms_1
+  name: VLESS-95.40.100.129 - 150ms
+  network: grpc
+  port: 10126
+  server: 95.40.100.129
+  sni: s0.awsstatic.com
+  tls: false
+  type: vless
+  uuid: B1BF44DF-BADD-44EE-826A-12C27206993D
+- encryption: none
+  flow: ''
+  name: VLESS-199.232.78.159 - 1ms
   network: ws
   port: 443
   server: 199.232.78.159
@@ -1112,15 +1622,9 @@ proxies:
   tls: true
   type: vless
   uuid: fe4ca690-6fd9-4471-9a9f-94528084d180
-- name: Trojan-216.24.57.7 - 20ms
-  password: humanity
-  port: 443
-  server: 216.24.57.7
-  sni: www.ignitelimit.com
-  type: trojan
 - encryption: none
   flow: ''
-  name: VLESS-199.232.78.159 - 17ms_2
+  name: VLESS-199.232.78.159
   network: ws
   port: 443
   server: 199.232.78.159
@@ -1128,1383 +1632,707 @@ proxies:
   tls: true
   type: vless
   uuid: e0454af2-6fe9-4983-a55d-05e1da202602
-- encryption: none
-  flow: ''
-  name: VLESS-150.230.146.170 - 143ms
-  network: ws
-  port: 2053
-  server: 150.230.146.170
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-163.5.187.118 - 131ms
-  network: ws
-  port: 2053
-  server: 163.5.187.118
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-31.133.0.240 - 146ms
-  network: ws
-  port: 2053
-  server: 31.133.0.240
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-5.187.6.30 - 133ms
-  network: ws
-  port: 2053
-  server: 5.187.6.30
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-213.183.61.100 - 119ms
-  network: ws
-  port: 2053
-  server: 213.183.61.100
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- name: Trojan-8.6.112.6 - 18ms
+- name: Trojan-www.ignitelimit.com - 20ms
   password: humanity
   port: 443
-  server: 8.6.112.6
+  server: www.ignitelimit.com
   sni: www.ignitelimit.com
   type: trojan
 - encryption: none
   flow: ''
-  name: VLESS-31.133.0.70 - 151ms
-  network: ws
-  port: 2053
-  server: 31.133.0.70
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- name: Trojan-165.215.250.14 - 17ms
-  password: humanity
-  port: 443
-  server: 165.215.250.14
-  sni: www.ignitelimit.com
-  type: trojan
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_151 - 427ms
-  network: tcp
-  port: 30845
-  server: v45.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- encryption: none
-  flow: ''
-  name: VLESS-54.229.164.147 - 110ms
-  network: ws
-  port: 2053
-  server: 54.229.164.147
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- name: Trojan-172.67.149.60 - 17ms
-  password: humanity
-  port: 443
-  server: 172.67.149.60
-  sni: www.ignitelimit.com
-  type: trojan
-- encryption: none
-  flow: ''
-  name: VLESS-188.241.241.37 - 132ms
-  network: ws
-  port: 2053
-  server: 188.241.241.37
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸_美国_164 - 253ms
-  network: ws
-  port: 80
-  server: www.true.th
-  tls: false
-  type: vmess
-  uuid: a150d554-e962-4632-829f-ee583ada3f95
-  ws-opts:
-    headers:
-      Host: d7pu5mzr9c4b0.cloudfront.net
-    path: /htun
-- name: Trojan-130.250.137.171 - 17ms
-  password: humanity
-  port: 443
-  server: 130.250.137.171
-  sni: www.ignitelimit.com
-  type: trojan
-- encryption: none
-  flow: ''
-  name: VLESS-65.109.12.58 - 151ms
-  network: ws
-  port: 2053
-  server: 65.109.12.58
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-158.160.57.2 - 166ms
-  network: ws
-  port: 443
-  server: 158.160.57.2
-  sni: cloudflare.vhub.pro
-  tls: true
-  type: vless
-  uuid: 52b202f9-493d-4b52-a656-64637f36afa7
-- encryption: none
-  flow: ''
-  name: VLESS-84.201.136.20 - 167ms
-  network: ws
-  port: 8443
-  server: 84.201.136.20
-  sni: cloudflare.vhub.pro
-  tls: true
-  type: vless
-  uuid: 52b202f9-493d-4b52-a656-64637f36afa7
-- encryption: none
-  flow: ''
-  name: VLESS-129.151.198.3 - 141ms
-  network: ws
-  port: 2053
-  server: 129.151.198.3
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- name: Trojan-render.com - 155ms
-  password: humanity
-  port: 443
-  server: render.com
-  sni: www.ignitelimit.com
-  type: trojan
-- name: Trojan-8.6.112.0 - 18ms
-  password: humanity
-  port: 443
-  server: 8.6.112.0
-  sni: www.ignitelimit.com
-  type: trojan
-- encryption: none
-  flow: ''
-  name: VLESS-cm1.jean01.dpdns.org - 43ms
-  network: ws
-  port: 443
-  server: cm1.jean01.dpdns.org
-  sni: cm1.jean01.dpdns.org
-  tls: true
-  type: vless
-  uuid: 191ab0f2-8b19-4b78-a11b-c6107a866978
-- encryption: none
-  flow: ''
-  name: VLESS-185.237.185.182 - 147ms
-  network: ws
-  port: 2053
-  server: 185.237.185.182
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_香港_196 - 161ms
-  network: ws
-  port: 32913
-  server: 47.243.39.251
-  tls: false
-  type: vmess
-  uuid: 47506713-508e-441a-bb02-56eb679b4dc9
-  ws-opts:
-    headers:
-      Host: 47.243.39.251
-    path: /
-- encryption: none
-  flow: ''
-  name: VLESS-104.171.132.128 - 167ms
-  network: ws
-  port: 2200
-  server: 104.171.132.128
+  name: VLESS-78.17.17.85 - 169ms
+  network: grpc
+  port: 2054
+  server: 78.17.17.85
+  sni: www.ibm.com
   tls: false
   type: vless
-  uuid: 6c0ced37-dd9c-43f2-b474-6dafe036c44b
-- encryption: none
+  uuid: baadeb43-ab3d-40f2-b1e6-5e3d4104f06c
+- encryption: mlkem768x25519plus.native.0rtt.fifrfSw33WQdkPjmBmNvrLDaYE_6hmHOH-dcI_rRblA
   flow: ''
-  name: VLESS-185.109.48.13 - 123ms
+  name: 🇹🇷_TR_土耳其 - 1248ms
   network: ws
-  port: 2053
-  server: 185.109.48.13
-  sni: forfreeuse.rtqa.ru
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-- encryption: none
-  flow: ''
-  name: VLESS-94.183.209.43 - 138ms
-  network: ws
-  port: 443
-  server: 94.183.209.43
-  tls: false
-  type: vless
-  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
-- encryption: none
-  flow: ''
-  name: VLESS-pl4.lckdwn.ru - 212ms
-  network: ws
-  port: 443
-  server: pl4.lckdwn.ru
-  tls: false
-  type: vless
-  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
-- encryption: none
-  flow: ''
-  name: VLESS-104.171.132.128 - 156ms
-  network: ws
-  port: 4100
-  server: 104.171.132.128
-  tls: false
-  type: vless
-  uuid: 6c0ced37-dd9c-43f2-b474-6dafe036c44b
-- encryption: none
-  flow: ''
-  name: VLESS-185.247.16.49 - 154ms
-  network: ws
-  port: 2200
-  server: 185.247.16.49
-  tls: false
-  type: vless
-  uuid: 5383fb97-1178-4709-9a25-b767b743e911
-- encryption: none
-  flow: ''
-  name: VLESS-87.228.122.100 - 150ms
-  network: ws
-  port: 2200
-  server: 87.228.122.100
-  tls: false
-  type: vless
-  uuid: 099c6e3f-e8d3-41d4-95f2-ef2eafb51cdc
-- encryption: none
-  flow: ''
-  name: VLESS-168.222.140.236 - 167ms
-  network: ws
-  port: 4100
-  server: 168.222.140.236
-  tls: false
-  type: vless
-  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
-- name: Trojan-fr1us9.stableq.top - 161ms
-  password: add16b4e-e8f3-4483-99b3-475ea34e6c1f
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 219ms
-  password: add16b4e-e8f3-4483-99b3-475ea34e6c1f
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 207ms
-  password: add16b4e-e8f3-4483-99b3-475ea34e6c1f
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms
-  password: cb4187f3-5298-444f-9774-8424edae6eed
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms
-  password: cb4187f3-5298-444f-9774-8424edae6eed
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 128ms
-  password: cb4187f3-5298-444f-9774-8424edae6eed
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 431ms
-  password: add16b4e-e8f3-4483-99b3-475ea34e6c1f
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 425ms
-  password: add16b4e-e8f3-4483-99b3-475ea34e6c1f
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 296ms
-  password: cb4187f3-5298-444f-9774-8424edae6eed
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 218ms
-  password: cb4187f3-5298-444f-9774-8424edae6eed
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 122ms
-  password: afdc0ede-2d7c-4cfe-9956-8875055dd938
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_1
-  password: afdc0ede-2d7c-4cfe-9956-8875055dd938
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms
-  password: afdc0ede-2d7c-4cfe-9956-8875055dd938
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms
-  password: afdc0ede-2d7c-4cfe-9956-8875055dd938
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 221ms
-  password: afdc0ede-2d7c-4cfe-9956-8875055dd938
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_2
-  password: 093ccf92-48ae-47c5-9459-3973a1ca4472
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_3
-  password: 093ccf92-48ae-47c5-9459-3973a1ca4472
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_4
-  password: 093ccf92-48ae-47c5-9459-3973a1ca4472
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- alterId: 2
-  cipher: auto
-  name: 🇸🇬_新加坡_156 - 1295ms
-  network: tcp
-  port: 30835
-  server: v35.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: Trojan-v1in2.stableq.top - 216ms
-  password: 093ccf92-48ae-47c5-9459-3973a1ca4472
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_1
-  password: 093ccf92-48ae-47c5-9459-3973a1ca4472
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_5
-  password: 5bdebf0b-cb5c-48c1-9ad2-54c7cccb442b
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 128ms_1
-  password: 5bdebf0b-cb5c-48c1-9ad2-54c7cccb442b
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_6
-  password: 5bdebf0b-cb5c-48c1-9ad2-54c7cccb442b
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms
-  password: 5bdebf0b-cb5c-48c1-9ad2-54c7cccb442b
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 226ms
-  password: 5bdebf0b-cb5c-48c1-9ad2-54c7cccb442b
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_7
-  password: 60bdea94-3184-4b23-974f-d4ab74a7b2a7
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_1
-  password: 60bdea94-3184-4b23-974f-d4ab74a7b2a7
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇹🇷_土耳其_211 - 1167ms
-  network: ws
-  port: 58304
+  port: 61134
   server: 193.111.78.106
   tls: false
-  type: vmess
-  uuid: 26b6fd32-04e6-43ff-a065-bea36f748655
-  ws-opts:
-    headers:
-      Host: 193.111.78.106
-    path: /
-- name: Trojan-v1in2.stableq.top - 229ms
-  password: 60bdea94-3184-4b23-974f-d4ab74a7b2a7
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
+  type: vless
+  uuid: bd73cb46-5d86-42ca-ac4e-e702825a221a
+- encryption: none
+  flow: ''
+  name: VLESS-155.46.167.30 - 1ms
+  network: ws
+  port: 8880
+  server: 155.46.167.30
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-169.40.42.89 - 67ms
+  network: tcp
+  port: 443
+  server: 169.40.42.89
+  sni: yahoo.com
+  tls: false
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+- encryption: none
+  flow: ''
+  name: VLESS-172.67.161.109 - 5ms
+  network: ws
+  port: 443
+  server: 172.67.161.109
+  sni: 1-m14.aYUTTHAYa-1.KdNs.Fr
+  tls: true
+  type: vless
+  uuid: 13da3f61-36bc-4f4f-9b49-4152de570bd3
+- encryption: none
+  flow: ''
+  name: VLESS-194.147.115.148 - 143ms
+  network: ws
+  port: 443
+  server: 194.147.115.148
+  sni: web-socket.tgdaosheng.ggff.net
+  tls: true
+  type: vless
+  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
+- encryption: none
+  flow: ''
+  name: VLESS-23.254.225.38 - 141ms
+  network: ws
+  port: 443
+  server: 23.254.225.38
+  sni: web-socket.tgdaosheng.ggff.net
+  tls: true
+  type: vless
+  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
+- encryption: none
+  flow: ''
+  name: VLESS-176.108.252.108 - 189ms
+  network: grpc
+  port: 9880
+  server: 176.108.252.108
+  sni: dl.google.com
+  tls: false
+  type: vless
+  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
+- encryption: none
+  flow: ''
+  name: VLESS-167.104.223.42 - 143ms
+  network: grpc
+  port: 443
+  server: 167.104.223.42
+  sni: gbr15.tcpnet.fun
+  tls: false
+  type: vless
+  uuid: f8c5b018-f51a-4137-be8a-50a451630589
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-45.196.215.241 - 153ms
+  network: tcp
+  port: 8443
+  server: 45.196.215.241
+  sni: www.cloudflare.com
+  tls: false
+  type: vless
+  uuid: 601e4ca5-df0a-43a1-97c2-0b1f5c0ae413
+- encryption: none
+  flow: ''
+  name: VLESS-estproxy4.lockdwn.com - 186ms
+  network: tcp
+  port: 8443
+  server: estproxy4.lockdwn.com
+  sni: estproxy4.lockdwn.com
+  tls: true
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-nl.gsupport.support - 328ms
+  network: tcp
+  port: 443
+  server: nl.gsupport.support
+  sni: video.intfreed.ru
+  tls: false
+  type: vless
+  uuid: 348b1b7d-fe7b-43f9-84b5-a2917925c8a8
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-family.bucket.9.kfc-520.com - 115ms
+  network: tcp
+  port: 10037
+  server: family.bucket.9.kfc-520.com
+  sni: www.adobe.com
+  tls: false
+  type: vless
+  uuid: 2a88deea-221d-3f06-9846-4067c6f725ee
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-94.241.174.157 - 144ms
+  network: tcp
+  port: 40443
+  server: 94.241.174.157
+  sni: deepl.com
+  tls: false
+  type: vless
+  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
+- name: Trojan-precious-stag.rooster465.autos - 140ms
+  password: PQ05174892
+  port: 443
+  server: precious-stag.rooster465.autos
+  skip-cert-verify: true
+  sni: precious-stag.rooster465.autos
   type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_1
-  password: 60bdea94-3184-4b23-974f-d4ab74a7b2a7
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_2
-  password: 60bdea94-3184-4b23-974f-d4ab74a7b2a7
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_8
-  password: b0f36d43-e9a8-4bf3-89dc-cf0c2abfb26d
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_9
-  password: b0f36d43-e9a8-4bf3-89dc-cf0c2abfb26d
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_2
-  password: b0f36d43-e9a8-4bf3-89dc-cf0c2abfb26d
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_3
-  password: b0f36d43-e9a8-4bf3-89dc-cf0c2abfb26d
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_1
-  password: b0f36d43-e9a8-4bf3-89dc-cf0c2abfb26d
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_2
-  password: e2a97a22-eb10-40a1-be2d-bcb2c179ce75
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms
-  password: e2a97a22-eb10-40a1-be2d-bcb2c179ce75
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_2
-  password: e2a97a22-eb10-40a1-be2d-bcb2c179ce75
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 220ms
-  password: e2a97a22-eb10-40a1-be2d-bcb2c179ce75
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms_1
-  password: e2a97a22-eb10-40a1-be2d-bcb2c179ce75
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 129ms
-  password: 37a04bef-212e-49f3-9563-883c6bf558bc
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_3
-  password: 37a04bef-212e-49f3-9563-883c6bf558bc
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 229ms_1
-  password: 37a04bef-212e-49f3-9563-883c6bf558bc
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_10
-  password: 37a04bef-212e-49f3-9563-883c6bf558bc
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 128ms_2
-  password: 37a04bef-212e-49f3-9563-883c6bf558bc
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 134ms
-  password: a7f3c2c6-163c-4784-8e95-a578563a7805
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 129ms_1
-  password: a7f3c2c6-163c-4784-8e95-a578563a7805
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_3
-  password: a7f3c2c6-163c-4784-8e95-a578563a7805
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_4
-  password: a7f3c2c6-163c-4784-8e95-a578563a7805
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_5
-  password: a7f3c2c6-163c-4784-8e95-a578563a7805
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms_2
-  password: f22ea3fd-a388-4f41-8700-f3193abeb68c
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_4
-  password: f22ea3fd-a388-4f41-8700-f3193abeb68c
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_4
-  password: f22ea3fd-a388-4f41-8700-f3193abeb68c
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_3
-  password: f22ea3fd-a388-4f41-8700-f3193abeb68c
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_6
-  password: f22ea3fd-a388-4f41-8700-f3193abeb68c
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 130ms
-  password: a418808c-d0cf-419b-a7b9-314c875a3b87
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_11
-  password: a418808c-d0cf-419b-a7b9-314c875a3b87
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_12
-  password: a418808c-d0cf-419b-a7b9-314c875a3b87
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_5
-  password: a418808c-d0cf-419b-a7b9-314c875a3b87
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_6
-  password: a418808c-d0cf-419b-a7b9-314c875a3b87
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 123ms
-  password: 836c4935-d942-48e3-9ea2-d19f1f0baa4f
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_13
-  password: 836c4935-d942-48e3-9ea2-d19f1f0baa4f
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 128ms_3
-  password: 836c4935-d942-48e3-9ea2-d19f1f0baa4f
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 225ms
-  password: 836c4935-d942-48e3-9ea2-d19f1f0baa4f
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_7
-  password: 836c4935-d942-48e3-9ea2-d19f1f0baa4f
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_14
-  password: 90924324-53ca-4e6a-9f01-412ab56aa42b
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms_3
-  password: 90924324-53ca-4e6a-9f01-412ab56aa42b
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_4
-  password: 90924324-53ca-4e6a-9f01-412ab56aa42b
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_8
-  password: 90924324-53ca-4e6a-9f01-412ab56aa42b
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_9
-  password: 90924324-53ca-4e6a-9f01-412ab56aa42b
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms_4
-  password: 8e794437-5aae-4def-9fe5-c0a895acb167
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_5
-  password: 8e794437-5aae-4def-9fe5-c0a895acb167
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_5
-  password: 8e794437-5aae-4def-9fe5-c0a895acb167
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 226ms_1
-  password: 8e794437-5aae-4def-9fe5-c0a895acb167
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_10
-  password: 8e794437-5aae-4def-9fe5-c0a895acb167
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 125ms_6
-  password: 11542c0a-edaa-4c60-a9fe-4c74cf44c0b2
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_15
-  password: 11542c0a-edaa-4c60-a9fe-4c74cf44c0b2
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 126ms_16
-  password: 11542c0a-edaa-4c60-a9fe-4c74cf44c0b2
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_7
-  password: 11542c0a-edaa-4c60-a9fe-4c74cf44c0b2
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 227ms_11
-  password: 11542c0a-edaa-4c60-a9fe-4c74cf44c0b2
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_6
-  password: 9b754091-44b8-45f6-816c-da2b51dc3c8e
-  port: 24421
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 124ms_5
-  password: 9b754091-44b8-45f6-816c-da2b51dc3c8e
-  port: 24413
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-fr1us9.stableq.top - 127ms_7
-  password: 9b754091-44b8-45f6-816c-da2b51dc3c8e
-  port: 24422
-  server: fr1us9.stableq.top
-  sni: fr1us9.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 221ms_1
-  password: 9b754091-44b8-45f6-816c-da2b51dc3c8e
-  port: 24408
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
-- name: Trojan-v1in2.stableq.top - 228ms_8
-  password: 9b754091-44b8-45f6-816c-da2b51dc3c8e
-  port: 24407
-  server: v1in2.stableq.top
-  sni: v1in2.stableq.top
-  type: trojan
+- encryption: none
+  flow: ''
+  name: VLESS-us2-r.link-t7.com - 79ms
+  network: grpc
+  port: 10239
+  server: us2-r.link-t7.com
+  sni: s0.awsstatic.com
+  tls: false
+  type: vless
+  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
+- encryption: none
+  flow: ''
+  name: VLESS-sg4-r.link-t7.com - 186ms
+  network: grpc
+  port: 10039
+  server: sg4-r.link-t7.com
+  sni: d1.awsstatic.com
+  tls: false
+  type: vless
+  uuid: 88DA9CA6-5E68-4687-A748-961B612DCED5
+- encryption: none
+  flow: ''
+  name: VLESS-104.21.87.238 - 1ms
+  network: ws
+  port: 8080
+  server: 104.21.87.238
+  tls: false
+  type: vless
+  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
+- encryption: none
+  flow: ''
+  name: VLESS-a2.arshia-nova.ir - 159ms
+  network: ws
+  port: 443
+  server: a2.arshia-nova.ir
+  sni: ssl.fastly.com
+  tls: true
+  type: vless
+  uuid: 65f5f17f-fa6a-44a8-9d23-271c61da2963
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-192.220.56.72 - 10ms
+  network: tcp
+  port: 443
+  server: 192.220.56.72
+  sni: www.microsoft.com
+  tls: false
+  type: vless
+  uuid: 83d9cf74-4642-4f8b-8e9f-21185e2b9e7a
+- encryption: none
+  flow: ''
+  name: VLESS-32362877.xyz - 18ms
+  network: ws
+  port: 443
+  server: 32362877.xyz
+  sni: 32362877.xyz
+  tls: true
+  type: vless
+  uuid: 29cd734a-0cdd-42d9-8b37-2b7b0e00c489
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-family.bucket.8.kfc-520.com - 312ms
+  network: tcp
+  port: 10032
+  server: family.bucket.8.kfc-520.com
+  sni: www.hp.com
+  tls: false
+  type: vless
+  uuid: 2a88deea-221d-3f06-9846-4067c6f725ee
+- encryption: none
+  flow: xtls-rprx-vision
+  name: VLESS-family.bucket.8.kfc-520.com - 356ms
+  network: tcp
+  port: 10031
+  server: family.bucket.8.kfc-520.com
+  sni: www.hp.com
+  tls: false
+  type: vless
+  uuid: 2a88deea-221d-3f06-9846-4067c6f725ee
+- encryption: none
+  flow: ''
+  name: VLESS-213.178.155.239 - 170ms
+  network: grpc
+  port: 443
+  server: 213.178.155.239
+  sni: max.ru
+  tls: false
+  type: vless
+  uuid: abc4c4d2-3760-4003-8cb7-322f8ec1a9c5
+- encryption: none
+  flow: ''
+  name: VLESS-213.178.155.239 - 178ms
+  network: grpc
+  port: 443
+  server: 213.178.155.239
+  sni: max.ru
+  tls: false
+  type: vless
+  uuid: 87b320fe-2329-498d-997b-7b956a99eecb
 proxy-groups:
 - interval: 300
   name: Auto Select
   proxies:
-  - Trojan-151.101.193.242 - 18ms
-  - VLESS-192.220.56.72 - 36ms
-  - VLESS-32362877.xyz - 64ms
-  - 🇯🇵JP_5|5.6MB/s - 140ms
-  - 🇯🇵JP_7|3.2MB/s - 141ms
-  - 🇯🇵JP_9|4.5MB/s - 141ms
-  - 🇯🇵JP_4|3.2MB/s - 142ms
-  - 🇯🇵JP_8|3.9MB/s - 142ms
-  - 🇯🇵JP_3|5.8MB/s - 146ms
-  - 🇯🇵JP_1|4.9MB/s - 148ms
-  - 🇺🇸US_3|1.6MB/s - 18ms
-  - 🇭🇰HK_1|2.5MB/s - 164ms
-  - 🇺🇸US_4|1.2MB/s - 18ms
-  - 🇯🇵JP_2|1.9MB/s - 168ms
-  - 🇯🇵JP_6|5.0MB/s - 177ms
-  - 🇸🇬SG_1|4.6MB/s - 202ms
-  - 🇺🇸US_1|2.7MB/s - 64ms
-  - 🇸🇬SG_2|1.7MB/s - 206ms
-  - 🇸🇬SG_3|4.0MB/s - 207ms
-  - VLESS-free77-sg3.node2.top - 280ms
-  - 🇸🇬SG_4|5.6MB/s - 217ms
-  - 🇺🇸US_2|1.4MB/s - 160ms
-  - 🇳🇱NL_1|1.1MB/s - 185ms
-  - 🇸🇬SG_5|1.3MB/s - 204ms
-  - 🇺🇸US_10|2.6MB/s - 49ms
-  - 🇺🇸US_22|2.3MB/s - 18ms
-  - 🇯🇵JP_10|4.8MB/s - 120ms
-  - 🇯🇵JP_11|4.8MB/s - 126ms
-  - 🇯🇵JP_12|2.8MB/s - 119ms
-  - 🇸🇬SG_7|5.8MB/s - 183ms
-  - 🇯🇵JP_13|4.7MB/s - 120ms
-  - 🇮🇪IE_1|2.3MB/s - 105ms
-  - 🇯🇵JP_14|5.7MB/s - 120ms
-  - 🇩🇪DE_2|4.2MB/s - 131ms
-  - 🇯🇵JP_15|4.2MB/s - 119ms
-  - 🇸🇬SG_8|3.9MB/s - 183ms
-  - 🇯🇵JP_16|3.5MB/s - 120ms
-  - 🇰🇷KR_2|5.5MB/s - 145ms
-  - 🇯🇵JP_17|2.1MB/s - 123ms
-  - 🇬🇧GB_2|1.6MB/s - 19ms
-  - 🇰🇷KR_3|5.0MB/s - 153ms
-  - 🇯🇵JP_18|5.5MB/s - 119ms
-  - 🇸🇬SG_9|1.1MB/s - 182ms
-  - 🇨🇿CZ_1|3.7MB/s - 158ms
-  - 🇸🇬SG_10|4.0MB/s - 183ms
-  - 🇷🇺RU_1|1.6MB/s - 164ms
-  - Trojan-cloudflare.com - 38ms
-  - 🇧🇷BR_1|2.4MB/s - 163ms
-  - 🇺🇸US_23|1.3MB/s - 300ms
-  - VLESS-78.159.247.253 - 138ms
-  - Trojan-musical-terrier.rooster465.autos - 205ms
-  - Trojan-leading-eel.rooster465.autos - 223ms
-  - Trojan-welcome-monitor.rooster465.autos - 203ms
-  - Trojan-relevant-oryx.rooster465.autos - 226ms
-  - Trojan-immune-grackle.rooster465.autos - 204ms
-  - Trojan-social-cod.rooster465.autos - 205ms
-  - Trojan-complete-cockatoo.rooster465.autos - 202ms
-  - Trojan-worthy-perch.rooster465.autos - 212ms
-  - Trojan-intimate-adder.rooster465.autos - 203ms
-  - Trojan-national-dingo.rooster465.autos - 206ms
-  - Trojan-proven-stud.rooster465.autos - 203ms
-  - Trojan-simple-sunbeam.rooster465.autos - 205ms
-  - Trojan-hot-tapir.rooster465.autos - 204ms
-  - Trojan-united-sculpin.rooster465.autos - 143ms
-  - Trojan-settled-camel.rooster465.autos - 140ms
-  - Trojan-flexible-pony.rooster465.autos - 141ms
-  - Trojan-touching-ostrich.rooster465.autos - 120ms
-  - Trojan-stable-python.rooster465.autos - 204ms
-  - Trojan-upward-squid.rooster465.autos - 206ms
-  - Trojan-champion-panther.rooster465.autos - 142ms
-  - Trojan-flying-swift.rooster465.autos - 140ms
-  - Trojan-assuring-skink.rooster465.autos - 205ms
-  - Trojan-funny-squid.rooster465.autos - 143ms
-  - Trojan-lucky-primate.rooster465.autos - 141ms
-  - Trojan-adapting-giraffe.rooster465.autos - 145ms
-  - Trojan-emerging-porpoise.rooster465.autos - 140ms
-  - Trojan-brief-hare.rooster465.autos - 140ms
-  - Trojan-loyal-killdeer.rooster465.autos - 145ms
-  - Trojan-star-cheetah.rooster465.autos - 147ms
-  - Trojan-relaxing-marten.rooster465.autos - 143ms
-  - Trojan-steady-prawn.rooster465.autos - 139ms
-  - Trojan-noted-cougar.rooster465.autos - 141ms
-  - Trojan-internal-peacock.rooster465.autos - 140ms
-  - Trojan-needed-gelding.rooster465.autos - 144ms
-  - Trojan-bright-buffalo.rooster465.autos - 143ms
-  - Trojan-sterling-fowl.rooster465.autos - 140ms
-  - Trojan-classic-pug.rooster465.autos - 145ms
-  - Trojan-many-pangolin.rooster465.autos - 139ms
-  - Trojan-light-filly.rooster465.autos - 141ms
-  - Trojan-magical-airedale.rooster465.autos - 141ms
-  - Trojan-casual-stallion.rooster465.autos - 143ms
-  - Trojan-devoted-zebra.rooster465.autos - 140ms
-  - Trojan-wise-gibbon.rooster465.autos - 144ms
-  - Trojan-pretty-adder.rooster465.autos - 143ms
-  - Trojan-helping-shark.rooster465.autos - 143ms
-  - Trojan-adapted-quetzal.rooster465.autos - 148ms
-  - Trojan-star-bluejay.rooster465.autos - 166ms
-  - Trojan-complete-narwhal.rooster465.autos - 166ms
-  - Trojan-magical-prawn.rooster465.autos - 165ms
-  - Trojan-one-dove.rooster465.autos - 169ms
-  - Trojan-balanced-stag.rooster465.autos - 183ms
-  - Trojan-loyal-molly.rooster465.autos - 186ms
-  - Trojan-gentle-platypus.rooster465.autos - 169ms
-  - Trojan-endless-kiwi.rooster465.autos - 147ms
-  - Trojan-cunning-grub.rooster465.autos - 131ms
-  - Trojan-renewed-chigger.rooster465.autos - 136ms
-  - Trojan-summary-firefly.rooster465.autos - 124ms
-  - Trojan-destined-skylark.rooster465.autos - 167ms
-  - Trojan-balanced-heron.rooster465.autos - 135ms
-  - Trojan-aware-coyote.rooster465.autos - 168ms
-  - Trojan-precise-locust.rooster465.autos - 181ms
-  - Trojan-nearby-cod.rooster465.autos - 154ms
-  - Trojan-tough-tuna.rooster465.autos - 63ms
-  - Trojan-alive-snapper.rooster465.autos - 147ms
-  - Trojan-warm-aardvark.rooster465.autos - 64ms
-  - Trojan-neutral-quail.rooster465.autos - 72ms
-  - Trojan-summary-lemming.rooster465.autos - 150ms
-  - VLESS-89.125.168.45 - 127ms
-  - Trojan-comic-poodle.rooster465.autos - 58ms
-  - Trojan-touching-turtle.rooster465.autos - 132ms
-  - VLESS-132.243.207.38 - 111ms
-  - Trojan-communal-squid.rooster465.autos - 60ms
-  - Trojan-pro-crane.rooster465.autos - 148ms
-  - Trojan-modern-bedbug.rooster465.autos - 219ms
-  - 🇩🇪DE_3|4.2MB/s - 1198ms
-  - Trojan-natural-swan.rooster465.autos - 229ms
-  - VLESS-185.28.47.111 - 141ms
-  - VLESS-163.5.153.153 - 144ms
-  - Trojan-growing-oyster.rooster465.autos - 227ms
-  - Trojan-choice-worm.rooster465.autos - 223ms
-  - Trojan-square-pheasant.rooster465.autos - 180ms
-  - VLESS-fin3.o4ka-internet.com - 216ms
-  - VLESS-95.85.254.114 - 181ms
-  - VLESS-nl6.o4ka-internet.com - 197ms
-  - VLESS-5.75.197.25 - 136ms
-  - 🇸🇬_新加坡_136 - 233ms
-  - VLESS-89.167.12.115 - 150ms
-  - VLESS-31.76.77.213 - 148ms
-  - VLESS-85.198.103.253 - 170ms
-  - 🇺🇸_美国_158 - 94ms
-  - VLESS-104.18.37.228 - 18ms
-  - 🇸🇬_新加坡_141 - 302ms
-  - VLESS-172.66.44.97 - 18ms
-  - VLESS-199.232.78.159 - 17ms
-  - 🇸🇬_新加坡_139 - 316ms
-  - VLESS-www.wto.org - 18ms
-  - VLESS-124.156.182.132 - 160ms
-  - VLESS-120.227.1.43 - 234ms
-  - VLESS-support.zoom.us - 44ms
-  - VLESS-46.28.68.63 - 142ms
-  - 🇭🇰_香港_144 - 324ms
-  - VLESS-200.165.228.47 - 160ms
-  - Trojan-216.24.57.1 - 18ms
-  - 🇸🇬_新加坡_138 - 440ms
-  - 🇸🇬_新加坡_146 - 344ms
-  - VLESS-199.232.78.159 - 17ms_1
-  - Trojan-216.24.57.7 - 20ms
-  - VLESS-199.232.78.159 - 17ms_2
-  - VLESS-150.230.146.170 - 143ms
-  - VLESS-163.5.187.118 - 131ms
-  - VLESS-31.133.0.240 - 146ms
-  - VLESS-5.187.6.30 - 133ms
-  - VLESS-213.183.61.100 - 119ms
-  - Trojan-8.6.112.6 - 18ms
-  - VLESS-31.133.0.70 - 151ms
-  - Trojan-165.215.250.14 - 17ms
-  - 🇸🇬_新加坡_151 - 427ms
-  - VLESS-54.229.164.147 - 110ms
-  - Trojan-172.67.149.60 - 17ms
-  - VLESS-188.241.241.37 - 132ms
-  - 🇺🇸_美国_164 - 253ms
-  - Trojan-130.250.137.171 - 17ms
-  - VLESS-65.109.12.58 - 151ms
-  - VLESS-158.160.57.2 - 166ms
-  - VLESS-84.201.136.20 - 167ms
-  - VLESS-129.151.198.3 - 141ms
-  - Trojan-render.com - 155ms
-  - Trojan-8.6.112.0 - 18ms
-  - VLESS-cm1.jean01.dpdns.org - 43ms
-  - VLESS-185.237.185.182 - 147ms
-  - 🇭🇰_香港_196 - 161ms
-  - VLESS-104.171.132.128 - 167ms
-  - VLESS-185.109.48.13 - 123ms
-  - VLESS-94.183.209.43 - 138ms
-  - VLESS-pl4.lckdwn.ru - 212ms
-  - VLESS-104.171.132.128 - 156ms
-  - VLESS-185.247.16.49 - 154ms
-  - VLESS-87.228.122.100 - 150ms
-  - VLESS-168.222.140.236 - 167ms
-  - Trojan-fr1us9.stableq.top - 161ms
-  - Trojan-fr1us9.stableq.top - 219ms
-  - Trojan-fr1us9.stableq.top - 207ms
-  - Trojan-fr1us9.stableq.top - 126ms
-  - Trojan-fr1us9.stableq.top - 125ms
-  - Trojan-fr1us9.stableq.top - 128ms
-  - Trojan-v1in2.stableq.top - 431ms
-  - Trojan-v1in2.stableq.top - 425ms
-  - Trojan-v1in2.stableq.top - 296ms
-  - Trojan-v1in2.stableq.top - 218ms
-  - Trojan-fr1us9.stableq.top - 122ms
-  - Trojan-fr1us9.stableq.top - 126ms_1
-  - Trojan-fr1us9.stableq.top - 127ms
-  - Trojan-v1in2.stableq.top - 227ms
-  - Trojan-v1in2.stableq.top - 221ms
-  - Trojan-fr1us9.stableq.top - 126ms_2
-  - Trojan-fr1us9.stableq.top - 126ms_3
-  - Trojan-fr1us9.stableq.top - 126ms_4
-  - 🇸🇬_新加坡_156 - 1295ms
-  - Trojan-v1in2.stableq.top - 216ms
-  - Trojan-v1in2.stableq.top - 227ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_5
-  - Trojan-fr1us9.stableq.top - 128ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_6
-  - Trojan-v1in2.stableq.top - 228ms
-  - Trojan-v1in2.stableq.top - 226ms
-  - Trojan-fr1us9.stableq.top - 126ms_7
-  - Trojan-fr1us9.stableq.top - 125ms_1
-  - 🇹🇷_土耳其_211 - 1167ms
-  - Trojan-v1in2.stableq.top - 229ms
-  - Trojan-v1in2.stableq.top - 228ms_1
-  - Trojan-fr1us9.stableq.top - 125ms_2
-  - Trojan-fr1us9.stableq.top - 126ms_8
-  - Trojan-fr1us9.stableq.top - 126ms_9
-  - Trojan-v1in2.stableq.top - 227ms_2
-  - Trojan-v1in2.stableq.top - 227ms_3
-  - Trojan-fr1us9.stableq.top - 127ms_1
-  - Trojan-fr1us9.stableq.top - 127ms_2
-  - Trojan-fr1us9.stableq.top - 124ms
-  - Trojan-v1in2.stableq.top - 228ms_2
-  - Trojan-v1in2.stableq.top - 220ms
-  - Trojan-fr1us9.stableq.top - 124ms_1
-  - Trojan-fr1us9.stableq.top - 129ms
-  - Trojan-v1in2.stableq.top - 228ms_3
-  - Trojan-v1in2.stableq.top - 229ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_10
-  - Trojan-fr1us9.stableq.top - 128ms_2
-  - Trojan-fr1us9.stableq.top - 134ms
-  - Trojan-fr1us9.stableq.top - 129ms_1
-  - Trojan-fr1us9.stableq.top - 125ms_3
-  - Trojan-v1in2.stableq.top - 227ms_4
-  - Trojan-v1in2.stableq.top - 227ms_5
-  - Trojan-fr1us9.stableq.top - 124ms_2
-  - Trojan-fr1us9.stableq.top - 125ms_4
-  - Trojan-v1in2.stableq.top - 228ms_4
-  - Trojan-fr1us9.stableq.top - 127ms_3
-  - Trojan-v1in2.stableq.top - 227ms_6
-  - Trojan-fr1us9.stableq.top - 130ms
-  - Trojan-fr1us9.stableq.top - 126ms_11
-  - Trojan-fr1us9.stableq.top - 126ms_12
-  - Trojan-v1in2.stableq.top - 228ms_5
-  - Trojan-v1in2.stableq.top - 228ms_6
-  - Trojan-fr1us9.stableq.top - 123ms
-  - Trojan-fr1us9.stableq.top - 126ms_13
-  - Trojan-fr1us9.stableq.top - 128ms_3
-  - Trojan-v1in2.stableq.top - 225ms
-  - Trojan-v1in2.stableq.top - 227ms_7
-  - Trojan-fr1us9.stableq.top - 126ms_14
-  - Trojan-fr1us9.stableq.top - 124ms_3
-  - Trojan-fr1us9.stableq.top - 127ms_4
-  - Trojan-v1in2.stableq.top - 227ms_8
-  - Trojan-v1in2.stableq.top - 227ms_9
-  - Trojan-fr1us9.stableq.top - 124ms_4
-  - Trojan-fr1us9.stableq.top - 125ms_5
-  - Trojan-fr1us9.stableq.top - 127ms_5
-  - Trojan-v1in2.stableq.top - 226ms_1
-  - Trojan-v1in2.stableq.top - 227ms_10
-  - Trojan-fr1us9.stableq.top - 125ms_6
-  - Trojan-fr1us9.stableq.top - 126ms_15
-  - Trojan-fr1us9.stableq.top - 126ms_16
-  - Trojan-v1in2.stableq.top - 228ms_7
-  - Trojan-v1in2.stableq.top - 227ms_11
-  - Trojan-fr1us9.stableq.top - 127ms_6
-  - Trojan-fr1us9.stableq.top - 124ms_5
-  - Trojan-fr1us9.stableq.top - 127ms_7
-  - Trojan-v1in2.stableq.top - 221ms_1
-  - Trojan-v1in2.stableq.top - 228ms_8
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 66ms
+  - 🇺🇸_US_美国 - 74ms
+  - 🇺🇸_US_美国_1 - 74ms
+  - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门 - 86ms
+  - 🇺🇸_US_美国_2 - 25ms
+  - 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 10ms
+  - 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 105ms
+  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 107ms
+  - 🇺🇸_US_美国_3 - 57ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其 - 164ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2 - 163ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1 - 163ms
+  - 🇷🇺_RU_俄罗斯 - 184ms
+  - 🇭🇰_HK_中国香港 - 190ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 201ms
+  - 🇭🇰_HK_中国香港 - 12ms
+  - 🇨🇳_CN_中国 - 216ms
+  - 🇸🇬_SG_新加坡 - 182ms
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本 - 211ms
+  - 🇳🇱_NL_荷兰 - 143ms
+  - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 11ms
+  - 🇮🇷_IR_伊朗->🇩🇪_DE_德国 - 159ms
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰 - 218ms
+  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 10ms
+  - 🇺🇸_US_美国 - 10ms
+  - 🇨🇳_CN_中国->🇩🇪_DE_德国 - 317ms
+  - 🇨🇳_CN_中国->🇭🇰_HK_中国香港 - 249ms
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国 - 238ms
+  - 🇨🇳_CN_中国->🇺🇸_US_美国 - 351ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 63ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 68ms
+  - 🇺🇸_US_美国 - 1ms
+  - 🇳🇱_NL_荷兰_1 - 156ms
+  - 🇷🇺_RU_俄罗斯_1 - 180ms
+  - 🇷🇺_RU_俄罗斯 - 147ms
+  - 🇸🇪_SE_瑞典 - 172ms
+  - 🇷🇺_RU_俄罗斯_1 - 142ms
+  - 🇹🇭_TH_泰国 - 195ms
+  - 🇨🇳_CN_中国->🇺🇸_US_美国 - 202ms
+  - 🇪🇪_EE_爱沙尼亚_1 - 159ms
+  - 🇹🇷_TR_土耳其 - 1235ms
+  - 🇺🇸_US_美国 - 370ms
+  - 🇪🇪_EE_爱沙尼亚_2 - 165ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 1ms
+  - 🇺🇸_US_美国_4 - 49ms
+  - 🇩🇪_DE_德国_1 - 149ms
+  - 🇸🇪_SE_瑞典_1 - 174ms
+  - 🇷🇺_RU_俄罗斯_2 - 180ms
+  - 🇺🇸_US_美国->🇸🇬_SG_新加坡 - 1ms
+  - 🇺🇸_US_美国->🇫🇷_FR_法国 - 10ms
+  - 🇺🇸_US_美国_1 - 112ms
+  - 🇺🇸_US_美国->🇲🇾_MY_马来西亚 - 9ms
+  - 🇺🇸_US_美国->🇸🇬_SG_新加坡_1 - 12ms
+  - 🇺🇸_US_美国->🇭🇰_HK_中国香港 - 9ms
+  - 🇨🇳_CN_中国->🇸🇬_SG_新加坡 - 252ms
+  - 🇫🇷_FR_法国 - 353ms
+  - 🇫🇮_FI_芬兰 - 177ms
+  - 🇬🇧_GB_英国 - 141ms
+  - 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms
+  - 🇺🇸_US_美国_1 - 1ms
+  - 🇩🇪_DE_德国_1 - 146ms
+  - 🇺🇸_US_美国_1 - 1ms_1
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 15ms
+  - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰 - 190ms
+  - 🇷🇺_RU_俄罗斯_1 - 178ms
+  - 🇩🇪_DE_德国->🇧🇷_BR_巴西 - 148ms
+  - 🇫🇷_FR_法国 - 163ms
+  - 🇹🇼_TW_中国台湾->🇺🇸_US_美国 - 211ms
+  - 🇩🇪_DE_德国 - 156ms
+  - 🇷🇺_RU_俄罗斯 - 180ms
+  - 🇭🇰_HK_中国香港_1 - 313ms
+  - 🇳🇱_NL_荷兰 - 157ms
+  - 🇷🇺_RU_俄罗斯_1 - 182ms
+  - 🇫🇮_FI_芬兰 - 675ms
+  - 🇯🇵_JP_日本 - 110ms
+  - 🇷🇺_RU_俄罗斯_2 - 181ms
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国 - 194ms
+  - 🇮🇪_IE_爱尔兰 - 145ms
+  - 🇯🇵_JP_日本_1 - 111ms
+  - 🇮🇪_IE_爱尔兰_1 - 145ms
+  - 🇦🇺_AU_澳大利亚 - 142ms
+  - 🇯🇵_JP_日本_2 - 112ms
+  - 🇸🇬_SG_新加坡 - 179ms
+  - 🇯🇵_JP_日本_3 - 113ms
+  - 🇫🇷_FR_法国 - 154ms
+  - 🇦🇺_AU_澳大利亚_1 - 144ms
+  - 🇳🇱_NL_荷兰 - 145ms
+  - 🇵🇱_PL_波兰 - 168ms
+  - 🇯🇵_JP_日本_4 - 121ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 50ms
+  - 🇩🇪_DE_德国_1 - 160ms
+  - 🇵🇱_PL_波兰_1 - 170ms
+  - 🇰🇷_KR_韩国 - 241ms
+  - 🇵🇱_PL_波兰_2 - 167ms
+  - 🇨🇭_CH_瑞士 - 1247ms
+  - 🇭🇰_HK_中国香港 - 205ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 7ms
+  - 🇦🇺_AU_澳大利亚 - 142ms_1
+  - 🇩🇪_DE_德国 - 315ms
+  - 🇩🇪_DE_德国 - 145ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 15ms
+  - 🇺🇸_US_美国 - 43ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_3 - 40ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_4
+  - 🇺🇦_UA_乌克兰 - 175ms
+  - 🇭🇰_HK_中国香港 - 186ms
+  - 🇸🇪_SE_瑞典 - 159ms
+  - 🇺🇸_US_美国 - 15ms
+  - 🇺🇸_US_美国_1 - 2ms
+  - 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms_1
+  - 🇦🇫_AF_阿富汗->🇦🇹_AT_奥地利 - 296ms
+  - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 223ms
+  - 🇺🇸_US_美国_4 - 8ms
+  - 🇱🇻_LV_拉脱维亚 - 173ms
+  - 🇷🇺_RU_俄罗斯 - 183ms
+  - 🇺🇸_US_美国_2 - 75ms
+  - 🇷🇺_RU_俄罗斯 - 176ms
+  - 🇺🇸_US_美国_5 - 79ms
+  - 🇭🇰_HK_中国香港_1 - 376ms
+  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+  - 🇩🇪_DE_德国 - 149ms
+  - 🇷🇺_RU_俄罗斯_1 - 189ms
+  - 🇺🇸_US_美国 - 6ms
+  - 🇳🇱_NL_荷兰 - 231ms
+  - 🇫🇮_FI_芬兰 - 197ms
+  - 🇭🇰_HK_中国香港_2 - 1370ms
+  - 🇪🇸_ES_西班牙 - 208ms
+  - 🇰🇷_KR_韩国 - 143ms
+  - 🇮🇪_IE_爱尔兰 - 148ms
+  - 🇸🇬_SG_新加坡 - 175ms
+  - 🇵🇱_PL_波兰 - 332ms
+  - 🇳🇱_NL_荷兰 - 145ms_1
+  - 🇩🇪_DE_德国_2 - 155ms
+  - 🇭🇰_HK_中国香港_1 - 181ms
+  - 🇷🇺_RU_俄罗斯 - 180ms_1
+  - 🇸🇬_SG_新加坡_1 - 181ms
+  - 🇸🇬_SG_新加坡_2 - 173ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 38ms
+  - 🇮🇹_IT_意大利 - 158ms
+  - 🇵🇱_PL_波兰_1 - 176ms
+  - 🇸🇬_SG_新加坡_3 - 175ms
+  - 🇳🇱_NL_荷兰->🇦🇹_AT_奥地利 - 141ms
+  - 🇵🇱_PL_波兰_2 - 175ms
+  - 🇷🇺_RU_俄罗斯_1 - 170ms
+  - 🇯🇵_JP_日本_1 - 110ms
+  - 🇯🇵_JP_日本 - 189ms
+  - 🇭🇰_HK_中国香港 - 185ms
+  - 🇭🇰_HK_中国香港_1 - 194ms
+  - 🇰🇷_KR_韩国 - 157ms
+  - 🇭🇰_HK_中国香港_2 - 151ms
+  - 🇰🇷_KR_韩国_1 - 140ms
+  - 🇯🇵_JP_日本_2 - 116ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 9ms
+  - 🇸🇬_SG_新加坡 - 173ms
+  - 🇯🇵_JP_日本_3 - 111ms
+  - 🇰🇷_KR_韩国_2 - 137ms
+  - 🇰🇷_KR_韩国_3 - 132ms
+  - 🇺🇸_US_美国_2 - 17ms
+  - 🇮🇪_IE_爱尔兰 - 138ms
+  - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦 - 1ms
+  - 🇯🇵_JP_日本 - 109ms
+  - 🇦🇺_AU_澳大利亚 - 152ms
+  - 🇳🇱_NL_荷兰_1 - 140ms
+  - 🇳🇱_NL_荷兰 - 295ms
+  - 🇰🇷_KR_韩国 - 144ms
+  - 🇺🇸_US_美国_1 - 1ms_2
+  - 🇺🇸_US_美国_2 - 1ms
+  - 🇪🇪_EE_爱沙尼亚 - 185ms
+  - 🇩🇪_DE_德国 - 169ms
+  - 🇳🇱_NL_荷兰->🇫🇮_FI_芬兰 - 144ms
+  - 🇺🇸_US_美国_4 - 1ms
+  - 🇺🇸_US_美国_5 - 17ms
+  - 🇺🇸_US_美国->🇯🇵_JP_日本 - 1ms
+  - 🇵🇱_PL_波兰 - 169ms
+  - 🇰🇿_KZ_哈萨克斯坦 - 624ms
+  - 🇺🇸_US_美国_2 - 64ms
+  - 🇷🇺_RU_俄罗斯 - 194ms
+  - 🇨🇿_CZ_捷克->🇩🇪_DE_德国 - 1206ms
+  - 🇬🇧_GB_英国 - 140ms
+  - 🇷🇺_RU_俄罗斯_1 - 186ms
+  - 🇺🇸_US_美国_3 - 1ms
+  - 🇷🇺_RU_俄罗斯 - 1241ms
+  - VLESS-195.63.141.201 - 143ms
+  - VLESS-202.144.192.76 - 108ms
+  - 🇭🇰HK_5|1.5MB/s|YT-CN|15% - 234ms
+  - 🇭🇰HK_6|1.5MB/s|YT-CN|15% - 187ms
+  - VLESS-176.109.108.196 - 181ms
+  - VLESS-50.62.194.30 - 2ms
+  - 🇭🇰HK_7|2.9MB/s|YT-CN|15% - 158ms
+  - Trojan-172.67.221.242 - 2ms
+  - Trojan-216.24.57.1 - 5ms
+  - Trojan-104.17.111.4 - 1ms
+  - VLESS-95.40.100.129 - 150ms
+  - VLESS-199.232.78.159 - 1ms
+  - VLESS-199.232.78.159
+  - Trojan-www.ignitelimit.com - 20ms
+  - VLESS-78.17.17.85 - 169ms
+  - 🇹🇷_TR_土耳其 - 1248ms
+  - VLESS-155.46.167.30 - 1ms
+  - VLESS-169.40.42.89 - 67ms
+  - VLESS-172.67.161.109 - 5ms
+  - VLESS-194.147.115.148 - 143ms
+  - VLESS-23.254.225.38 - 141ms
+  - VLESS-176.108.252.108 - 189ms
+  - VLESS-167.104.223.42 - 143ms
+  - VLESS-45.196.215.241 - 153ms
+  - VLESS-estproxy4.lockdwn.com - 186ms
+  - VLESS-nl.gsupport.support - 328ms
+  - VLESS-family.bucket.9.kfc-520.com - 115ms
+  - VLESS-94.241.174.157 - 144ms
+  - Trojan-precious-stag.rooster465.autos - 140ms
+  - VLESS-us2-r.link-t7.com - 79ms
+  - VLESS-sg4-r.link-t7.com - 186ms
+  - VLESS-104.21.87.238 - 1ms
+  - VLESS-a2.arshia-nova.ir - 159ms
+  - VLESS-192.220.56.72 - 10ms
+  - VLESS-32362877.xyz - 18ms
+  - VLESS-family.bucket.8.kfc-520.com - 312ms
+  - VLESS-family.bucket.8.kfc-520.com - 356ms
+  - VLESS-213.178.155.239 - 170ms
+  - VLESS-213.178.155.239 - 178ms
   type: url-test
   url: http://www.gstatic.com/generate_204
 - name: Proxy
   proxies:
   - Auto Select
-  - Trojan-151.101.193.242 - 18ms
-  - VLESS-192.220.56.72 - 36ms
-  - VLESS-32362877.xyz - 64ms
-  - 🇯🇵JP_5|5.6MB/s - 140ms
-  - 🇯🇵JP_7|3.2MB/s - 141ms
-  - 🇯🇵JP_9|4.5MB/s - 141ms
-  - 🇯🇵JP_4|3.2MB/s - 142ms
-  - 🇯🇵JP_8|3.9MB/s - 142ms
-  - 🇯🇵JP_3|5.8MB/s - 146ms
-  - 🇯🇵JP_1|4.9MB/s - 148ms
-  - 🇺🇸US_3|1.6MB/s - 18ms
-  - 🇭🇰HK_1|2.5MB/s - 164ms
-  - 🇺🇸US_4|1.2MB/s - 18ms
-  - 🇯🇵JP_2|1.9MB/s - 168ms
-  - 🇯🇵JP_6|5.0MB/s - 177ms
-  - 🇸🇬SG_1|4.6MB/s - 202ms
-  - 🇺🇸US_1|2.7MB/s - 64ms
-  - 🇸🇬SG_2|1.7MB/s - 206ms
-  - 🇸🇬SG_3|4.0MB/s - 207ms
-  - VLESS-free77-sg3.node2.top - 280ms
-  - 🇸🇬SG_4|5.6MB/s - 217ms
-  - 🇺🇸US_2|1.4MB/s - 160ms
-  - 🇳🇱NL_1|1.1MB/s - 185ms
-  - 🇸🇬SG_5|1.3MB/s - 204ms
-  - 🇺🇸US_10|2.6MB/s - 49ms
-  - 🇺🇸US_22|2.3MB/s - 18ms
-  - 🇯🇵JP_10|4.8MB/s - 120ms
-  - 🇯🇵JP_11|4.8MB/s - 126ms
-  - 🇯🇵JP_12|2.8MB/s - 119ms
-  - 🇸🇬SG_7|5.8MB/s - 183ms
-  - 🇯🇵JP_13|4.7MB/s - 120ms
-  - 🇮🇪IE_1|2.3MB/s - 105ms
-  - 🇯🇵JP_14|5.7MB/s - 120ms
-  - 🇩🇪DE_2|4.2MB/s - 131ms
-  - 🇯🇵JP_15|4.2MB/s - 119ms
-  - 🇸🇬SG_8|3.9MB/s - 183ms
-  - 🇯🇵JP_16|3.5MB/s - 120ms
-  - 🇰🇷KR_2|5.5MB/s - 145ms
-  - 🇯🇵JP_17|2.1MB/s - 123ms
-  - 🇬🇧GB_2|1.6MB/s - 19ms
-  - 🇰🇷KR_3|5.0MB/s - 153ms
-  - 🇯🇵JP_18|5.5MB/s - 119ms
-  - 🇸🇬SG_9|1.1MB/s - 182ms
-  - 🇨🇿CZ_1|3.7MB/s - 158ms
-  - 🇸🇬SG_10|4.0MB/s - 183ms
-  - 🇷🇺RU_1|1.6MB/s - 164ms
-  - Trojan-cloudflare.com - 38ms
-  - 🇧🇷BR_1|2.4MB/s - 163ms
-  - 🇺🇸US_23|1.3MB/s - 300ms
-  - VLESS-78.159.247.253 - 138ms
-  - Trojan-musical-terrier.rooster465.autos - 205ms
-  - Trojan-leading-eel.rooster465.autos - 223ms
-  - Trojan-welcome-monitor.rooster465.autos - 203ms
-  - Trojan-relevant-oryx.rooster465.autos - 226ms
-  - Trojan-immune-grackle.rooster465.autos - 204ms
-  - Trojan-social-cod.rooster465.autos - 205ms
-  - Trojan-complete-cockatoo.rooster465.autos - 202ms
-  - Trojan-worthy-perch.rooster465.autos - 212ms
-  - Trojan-intimate-adder.rooster465.autos - 203ms
-  - Trojan-national-dingo.rooster465.autos - 206ms
-  - Trojan-proven-stud.rooster465.autos - 203ms
-  - Trojan-simple-sunbeam.rooster465.autos - 205ms
-  - Trojan-hot-tapir.rooster465.autos - 204ms
-  - Trojan-united-sculpin.rooster465.autos - 143ms
-  - Trojan-settled-camel.rooster465.autos - 140ms
-  - Trojan-flexible-pony.rooster465.autos - 141ms
-  - Trojan-touching-ostrich.rooster465.autos - 120ms
-  - Trojan-stable-python.rooster465.autos - 204ms
-  - Trojan-upward-squid.rooster465.autos - 206ms
-  - Trojan-champion-panther.rooster465.autos - 142ms
-  - Trojan-flying-swift.rooster465.autos - 140ms
-  - Trojan-assuring-skink.rooster465.autos - 205ms
-  - Trojan-funny-squid.rooster465.autos - 143ms
-  - Trojan-lucky-primate.rooster465.autos - 141ms
-  - Trojan-adapting-giraffe.rooster465.autos - 145ms
-  - Trojan-emerging-porpoise.rooster465.autos - 140ms
-  - Trojan-brief-hare.rooster465.autos - 140ms
-  - Trojan-loyal-killdeer.rooster465.autos - 145ms
-  - Trojan-star-cheetah.rooster465.autos - 147ms
-  - Trojan-relaxing-marten.rooster465.autos - 143ms
-  - Trojan-steady-prawn.rooster465.autos - 139ms
-  - Trojan-noted-cougar.rooster465.autos - 141ms
-  - Trojan-internal-peacock.rooster465.autos - 140ms
-  - Trojan-needed-gelding.rooster465.autos - 144ms
-  - Trojan-bright-buffalo.rooster465.autos - 143ms
-  - Trojan-sterling-fowl.rooster465.autos - 140ms
-  - Trojan-classic-pug.rooster465.autos - 145ms
-  - Trojan-many-pangolin.rooster465.autos - 139ms
-  - Trojan-light-filly.rooster465.autos - 141ms
-  - Trojan-magical-airedale.rooster465.autos - 141ms
-  - Trojan-casual-stallion.rooster465.autos - 143ms
-  - Trojan-devoted-zebra.rooster465.autos - 140ms
-  - Trojan-wise-gibbon.rooster465.autos - 144ms
-  - Trojan-pretty-adder.rooster465.autos - 143ms
-  - Trojan-helping-shark.rooster465.autos - 143ms
-  - Trojan-adapted-quetzal.rooster465.autos - 148ms
-  - Trojan-star-bluejay.rooster465.autos - 166ms
-  - Trojan-complete-narwhal.rooster465.autos - 166ms
-  - Trojan-magical-prawn.rooster465.autos - 165ms
-  - Trojan-one-dove.rooster465.autos - 169ms
-  - Trojan-balanced-stag.rooster465.autos - 183ms
-  - Trojan-loyal-molly.rooster465.autos - 186ms
-  - Trojan-gentle-platypus.rooster465.autos - 169ms
-  - Trojan-endless-kiwi.rooster465.autos - 147ms
-  - Trojan-cunning-grub.rooster465.autos - 131ms
-  - Trojan-renewed-chigger.rooster465.autos - 136ms
-  - Trojan-summary-firefly.rooster465.autos - 124ms
-  - Trojan-destined-skylark.rooster465.autos - 167ms
-  - Trojan-balanced-heron.rooster465.autos - 135ms
-  - Trojan-aware-coyote.rooster465.autos - 168ms
-  - Trojan-precise-locust.rooster465.autos - 181ms
-  - Trojan-nearby-cod.rooster465.autos - 154ms
-  - Trojan-tough-tuna.rooster465.autos - 63ms
-  - Trojan-alive-snapper.rooster465.autos - 147ms
-  - Trojan-warm-aardvark.rooster465.autos - 64ms
-  - Trojan-neutral-quail.rooster465.autos - 72ms
-  - Trojan-summary-lemming.rooster465.autos - 150ms
-  - VLESS-89.125.168.45 - 127ms
-  - Trojan-comic-poodle.rooster465.autos - 58ms
-  - Trojan-touching-turtle.rooster465.autos - 132ms
-  - VLESS-132.243.207.38 - 111ms
-  - Trojan-communal-squid.rooster465.autos - 60ms
-  - Trojan-pro-crane.rooster465.autos - 148ms
-  - Trojan-modern-bedbug.rooster465.autos - 219ms
-  - 🇩🇪DE_3|4.2MB/s - 1198ms
-  - Trojan-natural-swan.rooster465.autos - 229ms
-  - VLESS-185.28.47.111 - 141ms
-  - VLESS-163.5.153.153 - 144ms
-  - Trojan-growing-oyster.rooster465.autos - 227ms
-  - Trojan-choice-worm.rooster465.autos - 223ms
-  - Trojan-square-pheasant.rooster465.autos - 180ms
-  - VLESS-fin3.o4ka-internet.com - 216ms
-  - VLESS-95.85.254.114 - 181ms
-  - VLESS-nl6.o4ka-internet.com - 197ms
-  - VLESS-5.75.197.25 - 136ms
-  - 🇸🇬_新加坡_136 - 233ms
-  - VLESS-89.167.12.115 - 150ms
-  - VLESS-31.76.77.213 - 148ms
-  - VLESS-85.198.103.253 - 170ms
-  - 🇺🇸_美国_158 - 94ms
-  - VLESS-104.18.37.228 - 18ms
-  - 🇸🇬_新加坡_141 - 302ms
-  - VLESS-172.66.44.97 - 18ms
-  - VLESS-199.232.78.159 - 17ms
-  - 🇸🇬_新加坡_139 - 316ms
-  - VLESS-www.wto.org - 18ms
-  - VLESS-124.156.182.132 - 160ms
-  - VLESS-120.227.1.43 - 234ms
-  - VLESS-support.zoom.us - 44ms
-  - VLESS-46.28.68.63 - 142ms
-  - 🇭🇰_香港_144 - 324ms
-  - VLESS-200.165.228.47 - 160ms
-  - Trojan-216.24.57.1 - 18ms
-  - 🇸🇬_新加坡_138 - 440ms
-  - 🇸🇬_新加坡_146 - 344ms
-  - VLESS-199.232.78.159 - 17ms_1
-  - Trojan-216.24.57.7 - 20ms
-  - VLESS-199.232.78.159 - 17ms_2
-  - VLESS-150.230.146.170 - 143ms
-  - VLESS-163.5.187.118 - 131ms
-  - VLESS-31.133.0.240 - 146ms
-  - VLESS-5.187.6.30 - 133ms
-  - VLESS-213.183.61.100 - 119ms
-  - Trojan-8.6.112.6 - 18ms
-  - VLESS-31.133.0.70 - 151ms
-  - Trojan-165.215.250.14 - 17ms
-  - 🇸🇬_新加坡_151 - 427ms
-  - VLESS-54.229.164.147 - 110ms
-  - Trojan-172.67.149.60 - 17ms
-  - VLESS-188.241.241.37 - 132ms
-  - 🇺🇸_美国_164 - 253ms
-  - Trojan-130.250.137.171 - 17ms
-  - VLESS-65.109.12.58 - 151ms
-  - VLESS-158.160.57.2 - 166ms
-  - VLESS-84.201.136.20 - 167ms
-  - VLESS-129.151.198.3 - 141ms
-  - Trojan-render.com - 155ms
-  - Trojan-8.6.112.0 - 18ms
-  - VLESS-cm1.jean01.dpdns.org - 43ms
-  - VLESS-185.237.185.182 - 147ms
-  - 🇭🇰_香港_196 - 161ms
-  - VLESS-104.171.132.128 - 167ms
-  - VLESS-185.109.48.13 - 123ms
-  - VLESS-94.183.209.43 - 138ms
-  - VLESS-pl4.lckdwn.ru - 212ms
-  - VLESS-104.171.132.128 - 156ms
-  - VLESS-185.247.16.49 - 154ms
-  - VLESS-87.228.122.100 - 150ms
-  - VLESS-168.222.140.236 - 167ms
-  - Trojan-fr1us9.stableq.top - 161ms
-  - Trojan-fr1us9.stableq.top - 219ms
-  - Trojan-fr1us9.stableq.top - 207ms
-  - Trojan-fr1us9.stableq.top - 126ms
-  - Trojan-fr1us9.stableq.top - 125ms
-  - Trojan-fr1us9.stableq.top - 128ms
-  - Trojan-v1in2.stableq.top - 431ms
-  - Trojan-v1in2.stableq.top - 425ms
-  - Trojan-v1in2.stableq.top - 296ms
-  - Trojan-v1in2.stableq.top - 218ms
-  - Trojan-fr1us9.stableq.top - 122ms
-  - Trojan-fr1us9.stableq.top - 126ms_1
-  - Trojan-fr1us9.stableq.top - 127ms
-  - Trojan-v1in2.stableq.top - 227ms
-  - Trojan-v1in2.stableq.top - 221ms
-  - Trojan-fr1us9.stableq.top - 126ms_2
-  - Trojan-fr1us9.stableq.top - 126ms_3
-  - Trojan-fr1us9.stableq.top - 126ms_4
-  - 🇸🇬_新加坡_156 - 1295ms
-  - Trojan-v1in2.stableq.top - 216ms
-  - Trojan-v1in2.stableq.top - 227ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_5
-  - Trojan-fr1us9.stableq.top - 128ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_6
-  - Trojan-v1in2.stableq.top - 228ms
-  - Trojan-v1in2.stableq.top - 226ms
-  - Trojan-fr1us9.stableq.top - 126ms_7
-  - Trojan-fr1us9.stableq.top - 125ms_1
-  - 🇹🇷_土耳其_211 - 1167ms
-  - Trojan-v1in2.stableq.top - 229ms
-  - Trojan-v1in2.stableq.top - 228ms_1
-  - Trojan-fr1us9.stableq.top - 125ms_2
-  - Trojan-fr1us9.stableq.top - 126ms_8
-  - Trojan-fr1us9.stableq.top - 126ms_9
-  - Trojan-v1in2.stableq.top - 227ms_2
-  - Trojan-v1in2.stableq.top - 227ms_3
-  - Trojan-fr1us9.stableq.top - 127ms_1
-  - Trojan-fr1us9.stableq.top - 127ms_2
-  - Trojan-fr1us9.stableq.top - 124ms
-  - Trojan-v1in2.stableq.top - 228ms_2
-  - Trojan-v1in2.stableq.top - 220ms
-  - Trojan-fr1us9.stableq.top - 124ms_1
-  - Trojan-fr1us9.stableq.top - 129ms
-  - Trojan-v1in2.stableq.top - 228ms_3
-  - Trojan-v1in2.stableq.top - 229ms_1
-  - Trojan-fr1us9.stableq.top - 126ms_10
-  - Trojan-fr1us9.stableq.top - 128ms_2
-  - Trojan-fr1us9.stableq.top - 134ms
-  - Trojan-fr1us9.stableq.top - 129ms_1
-  - Trojan-fr1us9.stableq.top - 125ms_3
-  - Trojan-v1in2.stableq.top - 227ms_4
-  - Trojan-v1in2.stableq.top - 227ms_5
-  - Trojan-fr1us9.stableq.top - 124ms_2
-  - Trojan-fr1us9.stableq.top - 125ms_4
-  - Trojan-v1in2.stableq.top - 228ms_4
-  - Trojan-fr1us9.stableq.top - 127ms_3
-  - Trojan-v1in2.stableq.top - 227ms_6
-  - Trojan-fr1us9.stableq.top - 130ms
-  - Trojan-fr1us9.stableq.top - 126ms_11
-  - Trojan-fr1us9.stableq.top - 126ms_12
-  - Trojan-v1in2.stableq.top - 228ms_5
-  - Trojan-v1in2.stableq.top - 228ms_6
-  - Trojan-fr1us9.stableq.top - 123ms
-  - Trojan-fr1us9.stableq.top - 126ms_13
-  - Trojan-fr1us9.stableq.top - 128ms_3
-  - Trojan-v1in2.stableq.top - 225ms
-  - Trojan-v1in2.stableq.top - 227ms_7
-  - Trojan-fr1us9.stableq.top - 126ms_14
-  - Trojan-fr1us9.stableq.top - 124ms_3
-  - Trojan-fr1us9.stableq.top - 127ms_4
-  - Trojan-v1in2.stableq.top - 227ms_8
-  - Trojan-v1in2.stableq.top - 227ms_9
-  - Trojan-fr1us9.stableq.top - 124ms_4
-  - Trojan-fr1us9.stableq.top - 125ms_5
-  - Trojan-fr1us9.stableq.top - 127ms_5
-  - Trojan-v1in2.stableq.top - 226ms_1
-  - Trojan-v1in2.stableq.top - 227ms_10
-  - Trojan-fr1us9.stableq.top - 125ms_6
-  - Trojan-fr1us9.stableq.top - 126ms_15
-  - Trojan-fr1us9.stableq.top - 126ms_16
-  - Trojan-v1in2.stableq.top - 228ms_7
-  - Trojan-v1in2.stableq.top - 227ms_11
-  - Trojan-fr1us9.stableq.top - 127ms_6
-  - Trojan-fr1us9.stableq.top - 124ms_5
-  - Trojan-fr1us9.stableq.top - 127ms_7
-  - Trojan-v1in2.stableq.top - 221ms_1
-  - Trojan-v1in2.stableq.top - 228ms_8
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 66ms
+  - 🇺🇸_US_美国 - 74ms
+  - 🇺🇸_US_美国_1 - 74ms
+  - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门 - 86ms
+  - 🇺🇸_US_美国_2 - 25ms
+  - 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 10ms
+  - 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 105ms
+  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 107ms
+  - 🇺🇸_US_美国_3 - 57ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其 - 164ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2 - 163ms
+  - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1 - 163ms
+  - 🇷🇺_RU_俄罗斯 - 184ms
+  - 🇭🇰_HK_中国香港 - 190ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 201ms
+  - 🇭🇰_HK_中国香港 - 12ms
+  - 🇨🇳_CN_中国 - 216ms
+  - 🇸🇬_SG_新加坡 - 182ms
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本 - 211ms
+  - 🇳🇱_NL_荷兰 - 143ms
+  - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 11ms
+  - 🇮🇷_IR_伊朗->🇩🇪_DE_德国 - 159ms
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰 - 218ms
+  - 🇭🇰_HK_中国香港->🇩🇪_DE_德国 - 10ms
+  - 🇺🇸_US_美国 - 10ms
+  - 🇨🇳_CN_中国->🇩🇪_DE_德国 - 317ms
+  - 🇨🇳_CN_中国->🇭🇰_HK_中国香港 - 249ms
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国 - 238ms
+  - 🇨🇳_CN_中国->🇺🇸_US_美国 - 351ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 63ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 68ms
+  - 🇺🇸_US_美国 - 1ms
+  - 🇳🇱_NL_荷兰_1 - 156ms
+  - 🇷🇺_RU_俄罗斯_1 - 180ms
+  - 🇷🇺_RU_俄罗斯 - 147ms
+  - 🇸🇪_SE_瑞典 - 172ms
+  - 🇷🇺_RU_俄罗斯_1 - 142ms
+  - 🇹🇭_TH_泰国 - 195ms
+  - 🇨🇳_CN_中国->🇺🇸_US_美国 - 202ms
+  - 🇪🇪_EE_爱沙尼亚_1 - 159ms
+  - 🇹🇷_TR_土耳其 - 1235ms
+  - 🇺🇸_US_美国 - 370ms
+  - 🇪🇪_EE_爱沙尼亚_2 - 165ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 1ms
+  - 🇺🇸_US_美国_4 - 49ms
+  - 🇩🇪_DE_德国_1 - 149ms
+  - 🇸🇪_SE_瑞典_1 - 174ms
+  - 🇷🇺_RU_俄罗斯_2 - 180ms
+  - 🇺🇸_US_美国->🇸🇬_SG_新加坡 - 1ms
+  - 🇺🇸_US_美国->🇫🇷_FR_法国 - 10ms
+  - 🇺🇸_US_美国_1 - 112ms
+  - 🇺🇸_US_美国->🇲🇾_MY_马来西亚 - 9ms
+  - 🇺🇸_US_美国->🇸🇬_SG_新加坡_1 - 12ms
+  - 🇺🇸_US_美国->🇭🇰_HK_中国香港 - 9ms
+  - 🇨🇳_CN_中国->🇸🇬_SG_新加坡 - 252ms
+  - 🇫🇷_FR_法国 - 353ms
+  - 🇫🇮_FI_芬兰 - 177ms
+  - 🇬🇧_GB_英国 - 141ms
+  - 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms
+  - 🇺🇸_US_美国_1 - 1ms
+  - 🇩🇪_DE_德国_1 - 146ms
+  - 🇺🇸_US_美国_1 - 1ms_1
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 15ms
+  - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰 - 190ms
+  - 🇷🇺_RU_俄罗斯_1 - 178ms
+  - 🇩🇪_DE_德国->🇧🇷_BR_巴西 - 148ms
+  - 🇫🇷_FR_法国 - 163ms
+  - 🇹🇼_TW_中国台湾->🇺🇸_US_美国 - 211ms
+  - 🇩🇪_DE_德国 - 156ms
+  - 🇷🇺_RU_俄罗斯 - 180ms
+  - 🇭🇰_HK_中国香港_1 - 313ms
+  - 🇳🇱_NL_荷兰 - 157ms
+  - 🇷🇺_RU_俄罗斯_1 - 182ms
+  - 🇫🇮_FI_芬兰 - 675ms
+  - 🇯🇵_JP_日本 - 110ms
+  - 🇷🇺_RU_俄罗斯_2 - 181ms
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国 - 194ms
+  - 🇮🇪_IE_爱尔兰 - 145ms
+  - 🇯🇵_JP_日本_1 - 111ms
+  - 🇮🇪_IE_爱尔兰_1 - 145ms
+  - 🇦🇺_AU_澳大利亚 - 142ms
+  - 🇯🇵_JP_日本_2 - 112ms
+  - 🇸🇬_SG_新加坡 - 179ms
+  - 🇯🇵_JP_日本_3 - 113ms
+  - 🇫🇷_FR_法国 - 154ms
+  - 🇦🇺_AU_澳大利亚_1 - 144ms
+  - 🇳🇱_NL_荷兰 - 145ms
+  - 🇵🇱_PL_波兰 - 168ms
+  - 🇯🇵_JP_日本_4 - 121ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 50ms
+  - 🇩🇪_DE_德国_1 - 160ms
+  - 🇵🇱_PL_波兰_1 - 170ms
+  - 🇰🇷_KR_韩国 - 241ms
+  - 🇵🇱_PL_波兰_2 - 167ms
+  - 🇨🇭_CH_瑞士 - 1247ms
+  - 🇭🇰_HK_中国香港 - 205ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_1 - 7ms
+  - 🇦🇺_AU_澳大利亚 - 142ms_1
+  - 🇩🇪_DE_德国 - 315ms
+  - 🇩🇪_DE_德国 - 145ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 15ms
+  - 🇺🇸_US_美国 - 43ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_3 - 40ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_4
+  - 🇺🇦_UA_乌克兰 - 175ms
+  - 🇭🇰_HK_中国香港 - 186ms
+  - 🇸🇪_SE_瑞典 - 159ms
+  - 🇺🇸_US_美国 - 15ms
+  - 🇺🇸_US_美国_1 - 2ms
+  - 🇺🇸_US_美国->🇩🇪_DE_德国 - 1ms_1
+  - 🇦🇫_AF_阿富汗->🇦🇹_AT_奥地利 - 296ms
+  - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国 - 223ms
+  - 🇺🇸_US_美国_4 - 8ms
+  - 🇱🇻_LV_拉脱维亚 - 173ms
+  - 🇷🇺_RU_俄罗斯 - 183ms
+  - 🇺🇸_US_美国_2 - 75ms
+  - 🇷🇺_RU_俄罗斯 - 176ms
+  - 🇺🇸_US_美国_5 - 79ms
+  - 🇭🇰_HK_中国香港_1 - 376ms
+  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+  - 🇩🇪_DE_德国 - 149ms
+  - 🇷🇺_RU_俄罗斯_1 - 189ms
+  - 🇺🇸_US_美国 - 6ms
+  - 🇳🇱_NL_荷兰 - 231ms
+  - 🇫🇮_FI_芬兰 - 197ms
+  - 🇭🇰_HK_中国香港_2 - 1370ms
+  - 🇪🇸_ES_西班牙 - 208ms
+  - 🇰🇷_KR_韩国 - 143ms
+  - 🇮🇪_IE_爱尔兰 - 148ms
+  - 🇸🇬_SG_新加坡 - 175ms
+  - 🇵🇱_PL_波兰 - 332ms
+  - 🇳🇱_NL_荷兰 - 145ms_1
+  - 🇩🇪_DE_德国_2 - 155ms
+  - 🇭🇰_HK_中国香港_1 - 181ms
+  - 🇷🇺_RU_俄罗斯 - 180ms_1
+  - 🇸🇬_SG_新加坡_1 - 181ms
+  - 🇸🇬_SG_新加坡_2 - 173ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国_2 - 38ms
+  - 🇮🇹_IT_意大利 - 158ms
+  - 🇵🇱_PL_波兰_1 - 176ms
+  - 🇸🇬_SG_新加坡_3 - 175ms
+  - 🇳🇱_NL_荷兰->🇦🇹_AT_奥地利 - 141ms
+  - 🇵🇱_PL_波兰_2 - 175ms
+  - 🇷🇺_RU_俄罗斯_1 - 170ms
+  - 🇯🇵_JP_日本_1 - 110ms
+  - 🇯🇵_JP_日本 - 189ms
+  - 🇭🇰_HK_中国香港 - 185ms
+  - 🇭🇰_HK_中国香港_1 - 194ms
+  - 🇰🇷_KR_韩国 - 157ms
+  - 🇭🇰_HK_中国香港_2 - 151ms
+  - 🇰🇷_KR_韩国_1 - 140ms
+  - 🇯🇵_JP_日本_2 - 116ms
+  - 🇺🇸_US_美国->🇹🇭_TH_泰国 - 9ms
+  - 🇸🇬_SG_新加坡 - 173ms
+  - 🇯🇵_JP_日本_3 - 111ms
+  - 🇰🇷_KR_韩国_2 - 137ms
+  - 🇰🇷_KR_韩国_3 - 132ms
+  - 🇺🇸_US_美国_2 - 17ms
+  - 🇮🇪_IE_爱尔兰 - 138ms
+  - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦 - 1ms
+  - 🇯🇵_JP_日本 - 109ms
+  - 🇦🇺_AU_澳大利亚 - 152ms
+  - 🇳🇱_NL_荷兰_1 - 140ms
+  - 🇳🇱_NL_荷兰 - 295ms
+  - 🇰🇷_KR_韩国 - 144ms
+  - 🇺🇸_US_美国_1 - 1ms_2
+  - 🇺🇸_US_美国_2 - 1ms
+  - 🇪🇪_EE_爱沙尼亚 - 185ms
+  - 🇩🇪_DE_德国 - 169ms
+  - 🇳🇱_NL_荷兰->🇫🇮_FI_芬兰 - 144ms
+  - 🇺🇸_US_美国_4 - 1ms
+  - 🇺🇸_US_美国_5 - 17ms
+  - 🇺🇸_US_美国->🇯🇵_JP_日本 - 1ms
+  - 🇵🇱_PL_波兰 - 169ms
+  - 🇰🇿_KZ_哈萨克斯坦 - 624ms
+  - 🇺🇸_US_美国_2 - 64ms
+  - 🇷🇺_RU_俄罗斯 - 194ms
+  - 🇨🇿_CZ_捷克->🇩🇪_DE_德国 - 1206ms
+  - 🇬🇧_GB_英国 - 140ms
+  - 🇷🇺_RU_俄罗斯_1 - 186ms
+  - 🇺🇸_US_美国_3 - 1ms
+  - 🇷🇺_RU_俄罗斯 - 1241ms
+  - VLESS-195.63.141.201 - 143ms
+  - VLESS-202.144.192.76 - 108ms
+  - 🇭🇰HK_5|1.5MB/s|YT-CN|15% - 234ms
+  - 🇭🇰HK_6|1.5MB/s|YT-CN|15% - 187ms
+  - VLESS-176.109.108.196 - 181ms
+  - VLESS-50.62.194.30 - 2ms
+  - 🇭🇰HK_7|2.9MB/s|YT-CN|15% - 158ms
+  - Trojan-172.67.221.242 - 2ms
+  - Trojan-216.24.57.1 - 5ms
+  - Trojan-104.17.111.4 - 1ms
+  - VLESS-95.40.100.129 - 150ms
+  - VLESS-199.232.78.159 - 1ms
+  - VLESS-199.232.78.159
+  - Trojan-www.ignitelimit.com - 20ms
+  - VLESS-78.17.17.85 - 169ms
+  - 🇹🇷_TR_土耳其 - 1248ms
+  - VLESS-155.46.167.30 - 1ms
+  - VLESS-169.40.42.89 - 67ms
+  - VLESS-172.67.161.109 - 5ms
+  - VLESS-194.147.115.148 - 143ms
+  - VLESS-23.254.225.38 - 141ms
+  - VLESS-176.108.252.108 - 189ms
+  - VLESS-167.104.223.42 - 143ms
+  - VLESS-45.196.215.241 - 153ms
+  - VLESS-estproxy4.lockdwn.com - 186ms
+  - VLESS-nl.gsupport.support - 328ms
+  - VLESS-family.bucket.9.kfc-520.com - 115ms
+  - VLESS-94.241.174.157 - 144ms
+  - Trojan-precious-stag.rooster465.autos - 140ms
+  - VLESS-us2-r.link-t7.com - 79ms
+  - VLESS-sg4-r.link-t7.com - 186ms
+  - VLESS-104.21.87.238 - 1ms
+  - VLESS-a2.arshia-nova.ir - 159ms
+  - VLESS-192.220.56.72 - 10ms
+  - VLESS-32362877.xyz - 18ms
+  - VLESS-family.bucket.8.kfc-520.com - 312ms
+  - VLESS-family.bucket.8.kfc-520.com - 356ms
+  - VLESS-213.178.155.239 - 170ms
+  - VLESS-213.178.155.239 - 178ms
   type: select
 rules:
 - MATCH,Proxy
