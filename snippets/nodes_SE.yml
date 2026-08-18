@@ -13,9 +13,16 @@ proxies:
     headers:
       Host: obdii.cfd
     path: /linkws
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪SE_16
-  password: YjM0M
-  port: 8388
-  server: 45.138.103.4
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: '瑞典 002 #1'
+  network: ws
+  port: 80
+  server: us1.grpc.stream
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6031b5c3-d8ba-5756-b708-f61084a2b678
+  ws-opts:
+    headers:
+      Host: us1.grpc.stream
+    path: /us1

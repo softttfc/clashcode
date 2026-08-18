@@ -1,8 +1,44 @@
 proxies:
-- name: 美国_65
+- name: '🇨🇦 加拿大 starcorenode.com #2'
+  network: ws
   password: humanity
   port: 443
-  server: 104.18.152.229
+  server: 130.250.137.171
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: 美国_108
+  password: humanity
+  port: 443
+  server: 104.18.152.204
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 🇨🇦CA加拿大5
+  password: humanity
+  port: 443
+  server: 104.18.152.208
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 美国_55
+  password: humanity
+  port: 443
+  server: 104.16.174.44
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -12,11 +48,51 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: 🇺🇸 美国 CloudFlare节点 8
+- alterId: 0
+  name: 美国_65
   password: humanity
   port: 443
-  server: 104.18.152.187
-  skip-cert-verify: false
+  server: 104.18.152.229
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 美国_51
+  password: humanity
+  port: 443
+  server: 104.18.152.225
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: 美国_89
+  password: humanity
+  port: 443
+  server: 104.18.152.77
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- alterId: 0
+  name: 🇨🇦CA加拿大6
+  password: humanity
+  port: 443
+  server: 104.18.152.140
+  skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
   type: trojan
@@ -35,91 +111,8 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
-- name: '🇨🇦CA加拿大丨yoyapai.com_4 #2'
-  password: humanity
-  port: 443
-  server: 104.18.152.208
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 法国_4
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 美国_55
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 🏳️_未知_182
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 美国_51
-  password: humanity
-  port: 443
-  server: 104.18.152.225
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 🇨🇦CA加拿大
-  password: humanity
-  port: 443
-  server: 104.18.152.140
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 美国_108
-  password: humanity
-  port: 443
-  server: 104.18.152.204
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
 - client-fingerprint: chrome
-  name: 'Node #33'
+  name: 'Node #2'
   network: ws
   port: 443
   server: 162.159.8.42
@@ -134,7 +127,7 @@ proxies:
       Host: t1s1.rittbo.kdns.fr
     path: /
 - client-fingerprint: chrome
-  name: 'Node #49'
+  name: 'Node #18'
   network: ws
   port: 8443
   server: ad-013.pixel9xdmq.info
@@ -149,7 +142,7 @@ proxies:
       Host: ad-013.pixel9xdmq.info
     path: /
 - client-fingerprint: chrome
-  name: 'Node #42'
+  name: '🇨🇦 #11'
   network: ws
   port: 443
   server: 104.26.2.173
@@ -188,7 +181,7 @@ proxies:
       - svn-panel-team.lorqino.ir
     path:
     - /mmd
-  name: '🇨🇦 #11'
+  name: '🇨🇦 #5'
   network: httpupgrade
   port: 8880
   server: 104.17.121.110
@@ -207,7 +200,7 @@ proxies:
       - nexo.xelviro.ir
     path:
     - /wss
-  name: '🇨🇦 #5'
+  name: '🇨🇦 #7'
   network: httpupgrade
   port: 2052
   server: 104.21.88.174
@@ -235,7 +228,7 @@ proxies:
   type: vless
   udp: true
   uuid: c0a7e427-1034-485a-b5c7-4449bd04b28d
-- name: '🇨🇦 #12'
+- name: '🇨🇦 #14'
   network: ws
   port: 8880
   server: 155.46.167.30
@@ -247,7 +240,7 @@ proxies:
   ws-opts:
     headers:
       Host: vms.lifetime50.workers.dev
-- name: '🇨🇦 #3'
+- name: '🇨🇦 #8'
   network: ws
   port: 8880
   server: 104.21.23.72
@@ -260,7 +253,7 @@ proxies:
     headers:
       Host: calm-haze-d105.21-7cd.workers.dev
     path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: '🇨🇦CA加拿大丨yoyapai.com_14 #2'
+- name: '🇨🇦CA加拿大丨yoyapai.com_11 #2'
   network: ws
   port: 8880
   server: 104.21.23.72
@@ -273,34 +266,35 @@ proxies:
     headers:
       Host: rapid-lab-95ef.173-74c.workers.dev
     path: /
-- name: 美国_87
+- alterId: 0
+  name: 美国_60
   password: humanity
   port: 443
-  server: 104.16.174.34
+  server: 104.16.174.72
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
 - alterId: 0
-  name: 美国_98
+  name: 🇨🇦CA加拿大3
   password: humanity
   port: 443
-  server: 104.16.174.71
+  server: 104.16.174.117
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
-- name: 🏳️_未知_299
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 'HK香港(mibei77.com 米贝节点分享)_22 #2'
   password: humanity
   port: 443
   server: 172.67.221.242
@@ -313,7 +307,7 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: '🇫🇷 #5'
+- name: 🇫🇷FR_295
   network: ws
   password: humanity
   port: 443
@@ -359,20 +353,12 @@ proxies:
     headers:
       HOST: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA_32
-  password: ytw2awn
-  port: 443
-  server: 142.4.216.225
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
   name: '加拿大 001 #1'
   network: ws
   port: 80
   server: 51.79.102.253
-  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
   skip-cert-verify: true
   type: vmess
   uuid: 58fe1542-5290-40ad-815a-77707a81afe5
@@ -433,43 +419,102 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /
-- auth: IJMFOXhvbQ
-  name: 🇨🇦CA_1|1.6MB/s
-  obfs: salamander
-  obfs-password: t-me-V2RayyNGvpn
-  password: IJMFOXhvbQ
-  port: 38871
-  server: 51.79.91.52
+- alterId: 0
+  cipher: auto
+  name: '加拿大 006 #1'
+  network: tcp
+  port: 443
+  server: 142.132.189.247
   skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
+  type: vmess
+  uuid: b1211a37-ac2b-4cd0-9f3d-732028caa184
+- alterId: 0
+  cipher: auto
+  name: '加拿大 007 #1'
+  network: tcp
+  port: 35034
+  server: 165.154.195.38
+  skip-cert-verify: true
+  type: vmess
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- name: '加拿大 008 #1'
+  network: xhttp
+  port: 443
+  server: 104.234.135.88
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
+  uuid: 0aec6598-7fb5-44e6-bff7-a4d550117830
+- name: 🇨🇦CA_49
+  network: tcp
+  port: 1161
+  server: 167.99.178.229
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 3775ad6e-d281-8bc5-36e9-9c5324a69393
+  ws-opts:
+    headers:
+      Host: cdn-apple.com
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '加拿大 010 #1'
+  network: tcp
+  port: 443
+  server: 130.12.242.157
+  servername: nl24.fast-connect-service.site
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b
+- name: '加拿大 011 #1'
+  network: tcp
+  port: 443
+  server: 51.79.89.68
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 900ca7c5-6c69-4536-b0f8-efa4e3976016
+- cipher: aes-128-gcm
+  name: 🇨🇦CA_12
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 未知 SS-76
+  password: FD3rCuOsxOay
+  port: 8388
+  server: 15.235.75.71
+  type: ss
 - cipher: rc4-md5
-  name: 加拿大/多伦多/Canada/Toronto
+  name: 🇨🇦CA_19
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 137.184.174.93
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 加拿大/蒙特利尔/Canada/Montreal
-  network: ws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_1
+  network: tcp
   port: 443
-  server: 158.51.121.63
-  servername: seribus.org
-  skip-cert-verify: true
+  reality-opts:
+    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
+    short-id: '!!str 3d3c1e645f763ee3'
+  server: 158.69.112.254
+  servername: www.speedtest.net
   tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    path: linkvws
-- name: 加拿大/Canada-2
-  password: IJMFOXhvbQ
-  port: 38871
-  server: 51.79.91.52
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
+  type: vless
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
 - alterId: 0
   cipher: auto
   name: 🇨🇦_CA_加拿大
@@ -485,18 +530,32 @@ proxies:
       host: teams.microsoft.com
     path: /
 - cipher: chacha20-ietf-poly1305
-  name: 🇺🇸US_248
+  name: 🇺🇸US_22
   password: G5p6ww4o67HB
   port: 8388
   server: 108.181.118.10
   type: ss
-- cipher: aes-128-gcm
-  name: 🇨🇦CA_18
-  password: shadowsocks
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦CA-158.51.121.63-0964 | 24.3...
+  network: ws
   port: 443
-  server: 149.22.95.183
+  server: 158.51.121.63
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: seribus.org
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_34
+  password: ytw2awn
+  port: 443
+  server: 142.4.216.225
   type: ss
-- name: 🇨🇦 007  | ⬇️ 317KB/s
+- name: 🇨🇦 117  | ⬇️ 317KB/s
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 99.79.128.48
@@ -518,26 +577,60 @@ proxies:
   server: free.2weradf.xyz
   type: ss
   udp: true
-- client-fingerprint: firefox
-  name: 🇨🇦CA_26
+- alterId: 0
+  name: 🇨🇦CA加拿大4
+  network: ws
+  password: humanity
+  port: 443
+  server: 130.250.137.171
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+- name: CA加拿大
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.73
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇨🇦
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.140
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_46
   network: tcp
-  port: 2053
+  port: 8039
   reality-opts:
-    public-key: 0KeXfLKnfTgIL7U-hSEn284rsECLiru0s0Rd11XzyzQ
-    short-id: '!!str d823e50b944daee4'
-  server: 66.70.179.198
-  servername: www.apple.com
+    public-key: ZrdPHtBvi7yMRj17SohKaGQEXuDptmCJWCi8gk5HlD8
+    short-id: '!!str 35938c4e546cd459'
+  server: 167.99.178.229
+  servername: amp-api-edge.apps.apple.com
   tls: true
   type: vless
-  uuid: 339db138-41ff-44e9-a323-46da89fbf1a7
+  uuid: 3775ad6e-d281-8bc5-36e9-9c5324a69393
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇨🇦CA_9
+  name: 🇨🇦CA_25
   network: ws
   port: 2087
-  server: 188.114.97.6
+  server: 104.26.0.7
   servername: amphetamine.adaspoloandco.com
   tls: true
   type: vless
@@ -546,71 +639,6 @@ proxies:
     headers:
       Host: amphetamine.adaspoloandco.com
     path: /download.php
-- name: 🇨🇦CA_16
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-ca-001.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-ca-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇨🇦CA_3
-  network: ws
-  port: 2087
-  server: 104.18.1.1
-  servername: Amphetamine.aDaspoloandco.com
-  tls: true
-  type: vless
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  ws-opts:
-    headers:
-      Host: Amphetamine.aDaspoloandco.com
-    path: /download.php
-- name: CA加拿大
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.17.111.8
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: '🇨🇦 #4'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- cipher: rc4-md5
-  name: 🇨🇦CA_29
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.197.141.58
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦CA_22
-  network: ws
-  port: 8443
-  server: 188.114.99.160
-  servername: maple.adaspoloandco.com
-  tls: true
-  type: vless
-  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
-  ws-opts:
-    headers:
-      Host: maple.adaspoloandco.com
-    path: /uploader.php
 - name: 'CA加拿大 #1'
   network: ws
   password: humanity
@@ -623,262 +651,37 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
-- name: '🇨🇦 #6'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.225
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 'CA加拿大 #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.22.63
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
 - alpn:
   - h2
   - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦CA_14
+  client-fingerprint: firefox
+  name: 🇨🇦CA_15
   network: ws
   port: 2087
-  server: 104.27.66.214
-  servername: amphetamine.adaspoloandco.com
-  tls: true
-  type: vless
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  ws-opts:
-    headers:
-      Host: amphetamine.adaspoloandco.com
-    path: /download.php
-- name: '🇨🇦 #7'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.77
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_37
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
-    short-id: '!!str d15c17cef9b2e456'
-  server: 51.161.204.242
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA_31
-  password: ytw2awn
-  port: 443
-  server: ca225.vpnbook.com
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦CA_6
-  network: ws
-  port: 2087
-  server: 172.67.74.10
-  servername: amphetamine.adaspoloandco.com
-  tls: true
-  type: vless
-  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
-  ws-opts:
-    headers:
-      Host: amphetamine.adaspoloandco.com
-    path: /download.php
-- name: 'CA加拿大 #3'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.12
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- name: '🇨🇦 #9'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.140
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: '🇨🇦 #10'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_20
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
-    short-id: '!!str 3d3c1e645f763ee3'
-  server: 158.69.112.254
-  servername: www.speedtest.net
-  tls: true
-  type: vless
-  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 'CA加拿大 #4'
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.67.221.242
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦CA_5
-  network: ws
-  port: 8443
-  server: 172.64.155.209
-  servername: maple.adaspoloandco.com
-  tls: true
-  type: vless
-  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
-  ws-opts:
-    headers:
-      Host: maple.adaspoloandco.com
-    path: /uploader.php
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇨🇦CA_13
-  network: ws
-  port: 8443
   server: 188.114.97.6
-  servername: maple.adaspoloandco.com
+  servername: amphetamine.adaspoloandco.com
   tls: true
   type: vless
-  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
   ws-opts:
     headers:
-      Host: maple.adaspoloandco.com
-    path: /uploader.php
-- name: 'CA加拿大 #6'
+      Host: amphetamine.adaspoloandco.com
+    path: /download.php
+- name: '🇨🇦 #2'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.73
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_8
-  network: tcp
-  port: 41373
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: '!!str 0e'
-  server: 130.107.73.148
-  servername: google.com
-  tls: true
-  type: vless
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-- name: 'CA加拿大 #7'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.117
+  server: 104.16.174.44
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     headers:
       Host: www.ignitelimit.com
-    path: '%2Fassignment'
+    path: /assignment
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇦CA_10
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
-    short-id: '!!str b9f8d3f8'
-  server: 216.152.147.28
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
-- name: 'CA加拿大 #8'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.72
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: '%2Fassignment'
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_33
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 6clD-wWfOGRFlh91SRgnfvtO6BjZP7LM2-B4u7x3gh0
-    short-id: '!!str 03c7c40feb004001'
-  server: 209.200.246.143
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 6ca50712-c5cd-4e32-97c5-bfa6485b848a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_25
+  name: 🇨🇦CA_27
   network: tcp
   port: 443
   reality-opts:
@@ -890,3 +693,297 @@ proxies:
   tls: true
   type: vless
   uuid: f9c6ae5c-a537-4ce1-8ad5-d1e579e0275f
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_33
+  password: ytw2awn
+  port: 443
+  server: ca225.vpnbook.com
+  type: ss
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_21
+  network: ws
+  port: 8443
+  server: 104.26.14.85
+  servername: maple.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  ws-opts:
+    headers:
+      Host: maple.adaspoloandco.com
+    path: /uploader.php
+- name: 🇫🇷FR_303
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.208
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_11
+  network: ws
+  port: 8443
+  server: 162.159.253.41
+  servername: maple.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  ws-opts:
+    headers:
+      Host: maple.adaspoloandco.com
+    path: /uploader.php
+- cipher: aes-256-gcm
+  name: 🇨🇦CA_44
+  password: fbcec76953a2d173
+  port: 30331
+  server: 166.88.130.218
+  type: ss
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_16
+  network: ws
+  port: 8443
+  server: 188.114.99.160
+  servername: maple.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  ws-opts:
+    headers:
+      Host: maple.adaspoloandco.com
+    path: /uploader.php
+- client-fingerprint: chrome
+  name: 🇨🇦CA_14
+  network: ws
+  port: 2087
+  server: 104.18.1.1
+  servername: Amphetamine.aDaspoloandco.com
+  tls: true
+  type: vless
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
+  ws-opts:
+    headers:
+      Host: Amphetamine.aDaspoloandco.com
+    path: /download.php
+- cipher: rc4-md5
+  name: 🇨🇦CA_31
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.197.141.58
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_5
+  network: tcp
+  port: 41373
+  reality-opts:
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: '!!str 0e'
+  server: 130.107.73.148
+  servername: google.com
+  tls: true
+  type: vless
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_10
+  network: ws
+  port: 2087
+  server: 104.27.66.214
+  servername: amphetamine.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
+  ws-opts:
+    headers:
+      Host: amphetamine.adaspoloandco.com
+    path: /download.php
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_36
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 6clD-wWfOGRFlh91SRgnfvtO6BjZP7LM2-B4u7x3gh0
+    short-id: '!!str 03c7c40feb004001'
+  server: 209.200.246.143
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 6ca50712-c5cd-4e32-97c5-bfa6485b848a
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_20
+  network: ws
+  port: 8443
+  server: 172.64.155.209
+  servername: maple.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  ws-opts:
+    headers:
+      Host: maple.adaspoloandco.com
+    path: /uploader.php
+- client-fingerprint: firefox
+  name: 🇨🇦CA_52
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+  server: 23.95.76.164
+  servername: ca.monkora.org
+  tls: true
+  type: vless
+  uuid: 921db318-1694-4408-9cc7-c93df39f7f8e
+- name: 'CA加拿大 #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: 'CA加拿大 #4'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.22.63
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 'CA加拿大 #5'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.72
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: '🇨🇦 #9'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_9
+  network: ws
+  port: 2087
+  server: 172.67.74.10
+  servername: amphetamine.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96
+  ws-opts:
+    headers:
+      Host: amphetamine.adaspoloandco.com
+    path: /download.php
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_40
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
+    short-id: '!!str d15c17cef9b2e456'
+  server: 51.161.204.242
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+- client-fingerprint: firefox
+  name: 🇨🇦CA_28
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: 0KeXfLKnfTgIL7U-hSEn284rsECLiru0s0Rd11XzyzQ
+    short-id: '!!str d823e50b944daee4'
+  server: 66.70.179.198
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 339db138-41ff-44e9-a323-46da89fbf1a7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_17
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss
+    short-id: '!!str b9f8d3f8'
+  server: 216.152.147.28
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d9e4721d-cdac-44c7-bc91-117367eac194
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇨🇦CA_2
+  network: ws
+  port: 8443
+  server: 188.114.97.6
+  servername: maple.adaspoloandco.com
+  tls: true
+  type: vless
+  uuid: db3f09ae-23f2-42b8-abee-7b89fb392c5e
+  ws-opts:
+    headers:
+      Host: maple.adaspoloandco.com
+    path: /uploader.php
+- name: 🇨🇦CA_18
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-ca-001.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-ca-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: '🇨🇦 #15'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.225
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment
