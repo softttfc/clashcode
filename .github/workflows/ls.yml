@@ -80,6 +80,7 @@ jobs:
           # 添加所有需要跟踪的文件
           git add list*
           git add snippets/
+          git add *.yaml
 
           # 检查是否有变更需要提交
           if git diff --staged --quiet; then
