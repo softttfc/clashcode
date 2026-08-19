@@ -1,1 +1,117 @@
-1
+# .github/workflows/fetch.yml
+name: Fetchspeed
+
+on:
+  workflow_dispatch:                          # 允许手动触发
+  schedule:
+    # Runs at 02:00
+    - cron: '0 2 * * *'
+  push:
+    # 仅当以下文件被修改时才触发
+    paths:
+      - 'sources1.list'
+      - 'config1.yml'
+      - 'abpwhite1.txt'
+      - '.github/workflows/fetch.yml'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # ---------- 代码检出 ----------
+      - name: 迁出代码
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # ---------- 设置时区 ----------
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      # ---------- 安装 Python ----------
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      # ---------- 安装依赖 ----------
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      # ---------- 拉取远端最新代码（确保工作区干净） ----------
+      - name: 拉取远端最新代码
+        run: |
+          DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+          echo "远程默认分支: $DEFAULT_BRANCH"
+          git pull --rebase origin "$DEFAULT_BRANCH"
+
+      # ---------- 执行主抓取脚本 ----------
+      # - name: 执行任务
+      #   run: python ./fetch_pro2.py
+
+      # ---------- 测速（可选，失败不中断） ----------
+      # - name: 测试节点连通性延迟性
+      #   run: python ./speed_pro.py --delay list.meta.yml list.metaspeed.yml
+      #   continue-on-error: true
+
+      # ---------- 修复配置文件格式（可选） ----------
+      - name: 修复可预见错误1
+        run: python ./rebuilder.py list.metaspeed.yml  list.metaspeedrbd1.yml 
+        continue-on-error: true
+     # ---------- 修复可预见错误（可选） ----------
+      - name: 修复可预见错误2
+        run: python ./rebuilder.py list.metaspeedrp.yml  list.metaspeedrbd.yml 
+        continue-on-error: true
+
+      # ---------- 提交并推送变更（不再拉取） ----------
+      - name: 提交并推送变更
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+          # 动态获取远程默认分支
+          DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+          echo "远程默认分支: $DEFAULT_BRANCH"
+
+          # 添加所有需要跟踪的文件
+          git add list*
+          git add snippets/
+
+          # 检查是否有变更需要提交
+          if git diff --staged --quiet; then
+            echo "✅ 没有文件变更，跳过提交"
+          else
+            COMMIT_MSG="$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+            git commit -m "$COMMIT_MSG"
+            echo "✅ 提交成功: $COMMIT_MSG"
+
+            # 推送到远程同名分支
+            git push origin HEAD:"$DEFAULT_BRANCH"
+            echo "✅ 推送完成"
+          fi
+
+      # ---------- 清除 CDN 缓存 ----------
+      - name: 计算要清除缓存的文件
+        id: purge_urls
+        run: |
+          sleep 5
+          # 注意：如果你的默认分支是 main，请将 @master 改为 @main
+          baseUrl="https://cdn.jsdelivr.net/gh/${{ github.repository }}@main"
+          urls=""
+          for f in `find snippets -name "*.yml" -type f`; do
+            urls+="${baseUrl}/${f},"
+          done
+          for f in `find . -maxdepth 1 -name "list*" -type f`; do
+            urls+="${baseUrl}/${f},"
+          done
+          echo "urls=${urls%,*}" >> $GITHUB_OUTPUT
+
+      - name: 清除 JsDelivr CDN 缓存
+        uses: egad13/purge-jsdelivr-cache@v1
+        with:
+          url: ${{ steps.purge_urls.outputs.urls }}
+        continue-on-error: true
