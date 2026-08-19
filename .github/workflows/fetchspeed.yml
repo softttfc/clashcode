@@ -62,6 +62,10 @@ jobs:
       - name: 生成标准格式文件
         run: python ./repair.py list.metaspeed.yml list.metaspeedrp.yml
         continue-on-error: true
+     # ---------- 修复可预见错误（可选） ----------
+      - name: 修复可预见错误
+        run: python ./rebuilder.py list.metaspeedrp.yml  list.metaspeedrbd.yml 
+        continue-on-error: true
 
       # ---------- 提交并推送变更（不再拉取） ----------
       - name: 提交并推送变更
