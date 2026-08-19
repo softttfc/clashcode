@@ -30,6 +30,10 @@ jobs:
 
       - name: Run crawler
         run: python crawler_pro.py
+      # ---------- 修复配置文件格式（可选） ----------
+      - name: 修复可预见错误1
+        run: python ./rebuilder.py crawclash.yaml  crawclashrbd.yaml
+        continue-on-error: true
 
       - name: Commit and push output files
         run: |
