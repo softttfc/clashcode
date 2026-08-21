@@ -1,6 +1,17 @@
 proxies:
-- alterId: 0
-  name: 🇨🇦CA加拿大4
+- name: 'US美国 #106'
+  network: ws
+  password: humanity
+  port: 443
+  server: 130.250.137.171
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: 'US美国(mibei77.com 米贝节点分享)_121 #2'
   password: humanity
   port: 443
   server: 104.18.152.140
@@ -10,8 +21,6 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
 - name: 美国_71
   password: humanity
@@ -23,6 +32,8 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.ignitelimit.com
     path: /assignment
 - alterId: 0
   name: 加拿大_1
@@ -35,12 +46,14 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.ignitelimit.com
     path: /assignment
 - alterId: 0
-  name: 美国_35
+  name: 🇨🇦CA加拿大
   password: humanity
   port: 443
-  server: 104.17.111.8
+  server: 104.18.152.73
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -48,30 +61,11 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
-- name: 🏳️_未知_230
-  password: humanity
-  port: 443
-  server: 104.16.174.117
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 美国_60
-  password: humanity
-  port: 443
-  server: 104.16.174.72
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- alterId: 0
-  name: 🇺🇸US美国24
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 'US美国(mibei77.com 米贝节点分享)_107 #2'
   password: humanity
   port: 443
   server: 172.67.221.242
@@ -83,31 +77,6 @@ proxies:
   ws-opts:
     headers:
       Host: www.ignitelimit.com
-    path: /assignment
-- alterId: 0
-  name: 美国_87
-  password: humanity
-  port: 443
-  server: 104.16.174.34
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- name: 🇫🇷FR_13
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.22.63
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
     path: /assignment
 - cipher: chacha20-ietf-poly1305
   name: SS-阿塞拜疆-NF解锁加拿大地区非自制剧-ChatGPT-...
@@ -144,7 +113,34 @@ proxies:
     headers:
       HOST: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- name: 加拿大 001
+- alterId: 0
+  cipher: auto
+  name: 加拿大 001
+  network: ws
+  port: 8080
+  server: 108.181.23.161
+  tls: false
+  type: vmess
+  uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
+  ws-opts:
+    headers:
+      Host: internet.life.com.by
+    path: /1IKYjV0r/
+- alterId: 0
+  cipher: auto
+  name: 加拿大 002
+  network: ws
+  port: 80
+  server: 51.79.102.253
+  servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+  skip-cert-verify: true
+  type: vmess
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  ws-opts:
+    headers:
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+- name: 加拿大 003
   network: tcp
   password: telegram-id-directvpn
   port: 22222
@@ -154,7 +150,7 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: 加拿大 002
+  name: 加拿大 004
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -165,7 +161,7 @@ proxies:
     headers:
       Host: hhcm.hhxaf.cc.cd
     path: /
-- name: 加拿大 003
+- name: 加拿大 005
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -181,16 +177,30 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: ''
-  name: 加拿大 004
+  name: 加拿大 006
   network: tcp
   port: 35034
   server: 165.154.195.38
   tls: false
   type: vmess
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- alterId: 0
+  cipher: auto
+  name: 加拿大 008
+  network: ws
+  port: 443
+  server: 142.132.178.99
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
+  ws-opts:
+    headers:
+      Host: apjhdggyx.com
+    path: /5f72f180-b21b-4b7a-8484-240759096785
 - alterId: 64
   cipher: auto
-  name: 加拿大 006
+  name: 加拿大 013
   network: ws
   port: 443
   server: 142.171.79.10
@@ -204,7 +214,7 @@ proxies:
     path: /path/1704276466760
 - alterId: 64
   cipher: auto
-  name: 加拿大 007
+  name: 加拿大 014
   network: ws
   port: 443
   server: 142.171.215.99
@@ -218,7 +228,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 加拿大 008
+  name: 加拿大 015
   network: ws
   port: 443
   server: 142.171.61.106
@@ -232,7 +242,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 加拿大 009
+  name: 加拿大 016
   network: ws
   port: 443
   server: 142.171.238.19
@@ -246,7 +256,7 @@ proxies:
     path: /path/1703493333049
 - alterId: 64
   cipher: auto
-  name: 加拿大 010
+  name: 加拿大 017
   network: ws
   port: 443
   server: 142.171.237.242
@@ -260,7 +270,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 加拿大 011
+  name: 加拿大 018
   network: ws
   port: 443
   server: 142.171.141.211
@@ -274,7 +284,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: 加拿大 012
+  name: 加拿大 019
   network: ws
   port: 443
   server: 142.171.215.52
@@ -288,7 +298,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 加拿大 013
+  name: 加拿大 020
   network: ws
   port: 443
   server: 142.171.187.178
@@ -302,7 +312,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 加拿大 014
+  name: 加拿大 021
   network: ws
   port: 443
   server: 142.171.149.75
@@ -316,38 +326,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: 加拿大 015
-  network: tcp
-  port: 22324
-  server: 198.57.27.212
-  skip-cert-verify: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: 加拿大 016
-  network: tcp
-  port: 14812
-  server: 38.111.114.153
-  skip-cert-verify: true
-  type: vmess
-  uuid: 0146fc40-5962-4e9a-b36a-2b606d001467
-- alterId: 0
-  cipher: auto
-  name: 加拿大 017
-  network: ws
-  port: 80
-  server: 51.79.102.253
-  skip-cert-verify: true
-  type: vmess
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-- alterId: 0
-  cipher: aes-128-gcm
-  name: 加拿大 018
+  name: 加拿大 022
   network: ws
   port: 80
   server: 51.79.103.76
@@ -360,7 +339,7 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
 - alterId: 0
   cipher: auto
-  name: 加拿大 019
+  name: 加拿大 023
   network: ws
   port: 443
   server: 68.168.31.196
@@ -372,18 +351,9 @@ proxies:
     headers:
       Host: vk.com
     path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: 加拿大 020
-  network: tcp
-  port: 26924
-  server: 68.168.31.184
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9f8b16a8-369d-4b79-af82-201c089dadd2
 - alterId: 64
   cipher: auto
-  name: 加拿大 026
+  name: 加拿大 024
   network: ws
   port: 30005
   server: 74.48.6.211
@@ -397,7 +367,7 @@ proxies:
     path: /path/191019072927
 - alterId: 64
   cipher: auto
-  name: 加拿大 027
+  name: 加拿大 025
   network: ws
   port: 443
   server: 71.19.248.160
@@ -409,15 +379,98 @@ proxies:
     headers:
       Host: www.57024853.xyz
     path: /path/191019072927
+- alterId: 0
+  cipher: auto
+  name: 加拿大 026
+  network: ws
+  port: 443
+  server: hohm.microsoft.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: hohm.microsoft.com
+    path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: 加拿大 027
+  network: ws
+  port: 80
+  server: 165.154.246.71
+  skip-cert-verify: true
+  type: vmess
+  uuid: 13581ae8-65c9-4fbe-9c78-77fac9ca503a
+  ws-opts:
+    headers:
+      Host: 165.154.246.71
+    path: ?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 加拿大 028
+  network: ws
+  port: 443
+  server: tw-1.qwqjsq.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: b0543a3b-d690-3ed9-9a81-f24f852e74f7
+  ws-opts:
+    headers:
+      Host: tw-1.qwqjsq.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 加拿大 029
+  network: ws
+  port: 80
+  server: 165.154.246.107
+  skip-cert-verify: true
+  type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
+  ws-opts:
+    headers:
+      Host: tms.dingtalk.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 加拿大 030
+  network: tcp
+  port: 22324
+  server: 198.57.27.212
+  skip-cert-verify: true
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - cipher: chacha20-ietf-poly1305
-  name: 加拿大/Canada
+  name: 🇨🇦CA_25
   password: FD3rCuOsxOay
   port: 8388
-  server: ca4.levikogjgfdd.ir
+  server: 15.235.75.71
   type: ss
 - alterId: 0
   cipher: auto
-  name: 加拿大/多伦多/Canada/Toronto
+  name: 加拿大/蒙特利尔/Canada/Montreal
+  network: ws
+  port: 443
+  server: 134.195.198.147
+  servername: vk.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: vk.com
+    path: /linkvws
+- cipher: rc4-md5
+  name: 🇨🇦CA_1
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 137.184.174.93
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 加拿大/多伦多/Canada/Toronto-2
   network: ws
   port: 28809
   server: 216.128.176.166
@@ -429,7 +482,7 @@ proxies:
     path: /ebca559c-a4a1-4062-9453-6412d8ff5255
 - alterId: 0
   cipher: auto
-  name: 加拿大/蒙特利尔/Canada/Montreal-2
+  name: 加拿大/蒙特利尔/Canada/Montreal-3
   network: ws
   port: 443
   server: 158.51.121.63
@@ -442,12 +495,6 @@ proxies:
     headers:
       Host: seribus.org
     path: linkvws
-- cipher: aes-256-gcm
-  name: 加拿大/多伦多/Canada/Toronto-3
-  password: sZSZi7tGs9wodT7k
-  port: 80
-  server: 155.138.136.240
-  type: ss
 - alterId: 0
   cipher: auto
   name: 🇨🇦_CA_加拿大
@@ -462,40 +509,11 @@ proxies:
     headers:
       host: teams.microsoft.com
     path: /
-- alterId: 0
-  name: 🇨🇦CA加拿大
-  network: ws
-  password: humanity
+- cipher: aes-128-gcm
+  name: 🇨🇦CA_16
+  password: shadowsocks
   port: 443
-  server: 130.250.137.171
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-- cipher: aes-256-gcm
-  name: 未知 SS-310
-  password: fbcec76953a2d173
-  port: 50118
-  server: 166.88.130.218
-  type: ss
-- cipher: rc4-md5
-  name: 🇨🇦CA_1
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 137.184.174.93
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA_21
-  password: FD3rCuOsxOay
-  port: 8388
-  server: 15.235.75.71
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦CA_31
-  password: zDNVedRFPQexG9v
-  port: 445
-  server: 51.222.12.127
+  server: 149.22.95.183
   type: ss
 - name: CA加拿大
   network: ws
@@ -509,23 +527,7 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
-- cipher: aes-128-gcm
-  name: 🇨🇦CA_17
-  password: shadowsocks
-  port: 443
-  server: 149.22.95.183
-  type: ss
 - name: 'CA加拿大 #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.73
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 'CA加拿大 #2'
   network: ws
   password: humanity
   port: 443
@@ -535,51 +537,45 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇨🇦 #3'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.140
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
 - cipher: chacha20-ietf-poly1305
-  name: 🇨🇦CA_27
+  name: 🇨🇦CA_32
   password: ytw2awn
   port: 443
   server: ca225.vpnbook.com
   type: ss
-- name: 'CA加拿大 #3'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.22.63
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
+- name: 🇨🇦CA_56
+  network: tcp
+  password: fg20mtCFHy
+  port: 1921
+  server: 137.184.172.41
+  skip-cert-verify: true
+  sni: sfecv.southbyte.xyz
   type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 'CA加拿大 #4'
-  network: ws
-  password: humanity
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_33
+  password: ytw2awn
   port: 443
-  server: 104.17.111.8
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
+  server: 142.4.216.225
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇦CA_49
+  password: FD3rCuOsxOay
+  port: 8388
+  server: ca4.levikogjgfdd.ir
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇨🇦CA_37
+  password: zDNVedRFPQexG9v
+  port: 445
+  server: 51.222.12.127
+  type: ss
 - cipher: rc4-md5
-  name: 🇨🇦CA_26
+  name: 🇨🇦CA_30
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 138.197.141.58
   type: ss
-- name: 'CA加拿大 #6'
+- name: 'CA加拿大 #3'
   network: ws
   password: humanity
   port: 443
@@ -591,3 +587,49 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
+- name: 'CA加拿大 #4'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.22.63
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 'CA加拿大 #5'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.221.242
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 'CA加拿大 #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.73
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: '🇨🇦 #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.140
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: /assignment

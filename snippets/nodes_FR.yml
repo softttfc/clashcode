@@ -1,15 +1,6 @@
 proxies:
-- name: 'US美国 #21'
-  network: ws
-  password: humanity
-  port: 443
-  server: 141.101.90.101
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 美国_63
+- alterId: 0
+  name: 美国_63
   password: humanity
   port: 443
   server: www.speedtest.org
@@ -21,18 +12,16 @@ proxies:
   ws-opts:
     path: /assignment
 - alterId: 0
-  name: 🇫🇷FR法国6
+  name: 未知84
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
 - alterId: 0
   name: 美国_62
@@ -46,33 +35,6 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
-- name: 美国_69
-  password: humanity
-  port: 443
-  server: 104.16.174.36
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- alterId: 0
-  name: 美国_100
-  password: humanity
-  port: 443
-  server: 104.18.152.133
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
 - alterId: 0
   name: 美国_93
   password: humanity
@@ -85,18 +47,26 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: 'FR法国(mibei77.com 米贝节点分享)_1 #2'
-  password: YwkJ1ViArbK6AZBCyjEC2p
-  port: 5223
-  server: creativeboxvpnf.zanity.net
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷_法国_141
+  network: ws
+  port: 23388
+  server: 2001:bc8:32d7:1a9::2
   skip-cert-verify: true
-  type: ss
+  tls: false
+  type: vmess
   udp: true
-- name: 🇺🇸_美国_94
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    headers:
+      Host: 2001:bc8:32d7:1a9::2
+    path: /github.com/Alvin9999-newpac/fanqiang
+- alterId: 0
+  name: 美国_35
   password: humanity
   port: 443
-  server: 216.24.57.1
+  server: 104.17.111.8
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -105,11 +75,56 @@ proxies:
   ws-opts:
     path: /assignment
 - alterId: 0
-  name: 美国_70
+  name: 美国_60
   password: humanity
   port: 443
-  server: 104.21.46.3
+  server: 104.16.174.72
   skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 美国_100
+  password: humanity
+  port: 443
+  server: 104.18.152.133
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- name: 美国_89
+  password: humanity
+  port: 443
+  server: 104.18.152.77
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- name: '🇺🇸 美国 CloudFlare节点 2 #3'
+  password: humanity
+  port: 443
+  server: 104.18.152.208
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- name: '🇺🇸 美国 CloudFlare节点 3 #3'
+  password: humanity
+  port: 443
+  server: 104.16.174.12
+  skip-cert-verify: false
   sni: www.ignitelimit.com
   tls: true
   type: trojan
@@ -119,10 +134,34 @@ proxies:
       Host: www.ignitelimit.com
     path: /assignment
 - alterId: 0
-  name: 🇺🇸US美国12
+  name: 🇺🇸 美国 CloudFlare节点 5
   password: humanity
   port: 443
-  server: 104.16.174.6
+  server: 104.18.152.233
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 法国_6
+  password: humanity
+  port: 443
+  server: 86.38.214.205
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- alterId: 0
+  name: 美国_104
+  password: humanity
+  port: 443
+  server: 8.6.112.0
   skip-cert-verify: true
   sni: www.ignitelimit.com
   tls: true
@@ -142,50 +181,6 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 美国(免费节点)_36
-  network: ws
-  password: humanity
-  port: 443
-  server: 216.24.57.7
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_3
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_166
-  network: ws
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_42
-  network: ws
-  password: humanity
-  port: 443
-  server: 86.38.214.205
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
 - client-fingerprint: chrome
   name: 🇫🇷 机场推荐:dafei.de 法国 01
   network: ws
@@ -202,7 +197,19 @@ proxies:
         Gecko) Chrome/41.0.2272.101 Safari/537.36
     path: /assignment
 - client-fingerprint: chrome
-  name: 🇫🇷 机场推荐:dafei.de 法国 05
+  name: 🇫🇷FR_147
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.149.60
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: 🇫🇷FR_1408
   network: ws
   password: humanity
   port: 443
@@ -212,12 +219,33 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G570M Build/NRD90M) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
     path: /assignment
 - client-fingerprint: chrome
-  name: 🇫🇷FR_19
+  name: 🇫🇷FR_3
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.111.8
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: 🇫🇷FR_64
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.0
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: 🇫🇷FR_28
   network: ws
   password: humanity
   port: 443
@@ -229,7 +257,7 @@ proxies:
   ws-opts:
     path: /assignment
 - client-fingerprint: chrome
-  name: 🇫🇷FR_28
+  name: 🇫🇷FR_34
   network: ws
   password: humanity
   port: 443
@@ -248,7 +276,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: 🇮🇩_ID_印度尼西亚->🇫🇷_FR_法国 - 358ms
+  name: 🇮🇩_ID_印度尼西亚->🇫🇷_FR_法国 - 377ms
   network: tcp
   port: 30835
   server: v35.hdacd.com
@@ -262,40 +290,94 @@ proxies:
   server: switcher-nick-croquet.freesocks.work
   type: ss
   udp: true
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇫🇷FR_126
+- client-fingerprint: chrome
+  name: 🇫🇷FR_119
   network: ws
   password: humanity
   port: 443
-  server: 172.67.221.242
+  server: 104.18.152.246
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   udp: true
   ws-opts:
     path: /assignment
-- alterId: 0
+- cipher: aes-256-cfb
+  name: France_Paris_ss_1127
+  password: amazonskr05
+  port: 443
+  server: 13.38.46.203
+  type: ss
+- alterId: '0'
   cipher: auto
-  name: 🇫🇷_法国_68
+  name: France_None_vmess_1129
   network: ws
-  port: 23388
-  server: 2001:bc8:32d7:1a9::2
-  skip-cert-verify: true
+  port: '16622'
+  server: planb.mojcn.com.linuxlh.xin
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  uuid: b312c029-18bb-43c8-bc5a-b4f8d193853c
   ws-opts:
     headers:
-      Host: 2001:bc8:32d7:1a9::2
-    path: /github.com/Alvin9999-newpac/fanqiang
+      Host: 09a25e0678d5f69a5bb882d9f6441ad2.mobgslb.tbcache.com
+    path: /
+  xudp: true
+- cipher: aes-256-cfb
+  name: France_Paris_ss_1133
+  password: amazonskr05
+  port: 443
+  server: 51.44.167.151
+  type: ss
+- cipher: aes-256-cfb
+  name: France_Paris_ss_1134
+  password: amazonskr05
+  port: 443
+  server: 13.38.78.128
+  type: ss
+- cipher: aes-256-cfb
+  name: France_Paris_ss_1136
+  password: amazonskr05
+  port: 443
+  server: 51.44.170.194
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 法国 014
+  name: 法国 001
+  network: ws
+  port: 8880
+  server: 94.140.0.110
+  tls: false
+  type: vmess
+  uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
+  ws-opts:
+    headers:
+      Host: food.zhaal.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 未知73
+  network: tcp
+  port: 26126
+  server: 188.165.61.68
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: b09b111e-f41c-4145-83c9-029027a5a745
+- alterId: 0
+  cipher: auto
+  name: 未知86
+  network: tcp
+  port: 919
+  server: 212.47.250.77
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: a3aabbed-7636-41a6-8263-c6aadd723d29
+- alterId: 0
+  cipher: auto
+  name: 法国 033
   network: ws
   port: 443
   server: 163.5.159.231
@@ -309,7 +391,7 @@ proxies:
     path: /linkws?ed=
 - alterId: 0
   cipher: auto
-  name: 法国 015
+  name: 法国 034
   network: ws
   port: 443
   server: 146.19.168.161
@@ -323,7 +405,7 @@ proxies:
     path: /link
 - alterId: 0
   cipher: auto
-  name: 法国 016
+  name: 法国 035
   network: ws
   port: 443
   server: 51.77.20.137
@@ -337,7 +419,7 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 017
+  name: 法国 036
   network: ws
   port: 443
   server: 51.77.20.140
@@ -351,7 +433,7 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 018
+  name: 法国 037
   network: ws
   port: 2082
   server: 5.196.29.123
@@ -364,16 +446,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 法国 019
-  network: tcp
-  port: 22324
-  server: 51.77.20.131
-  skip-cert-verify: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: 法国 020
+  name: 法国 038
   network: ws
   port: 443
   server: 146.59.55.50
@@ -387,7 +460,7 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 106
+  name: 法国 039
   network: ws
   port: 443
   server: 91.134.8.88
@@ -401,7 +474,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 107
+  name: 法国 040
   network: ws
   port: 443
   server: 91.134.8.92
@@ -415,7 +488,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 108
+  name: 法国 041
   network: ws
   port: 443
   server: 91.134.8.93
@@ -429,7 +502,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 109
+  name: 法国 042
   network: ws
   port: 443
   server: 91.134.8.100
@@ -443,7 +516,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 110
+  name: 法国 043
   network: ws
   port: 443
   server: 91.134.8.102
@@ -457,7 +530,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 111
+  name: 法国 044
   network: ws
   port: 443
   server: 146.59.118.250
@@ -471,7 +544,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 112
+  name: 法国 045
   network: ws
   port: 443
   server: 146.59.70.146
@@ -485,7 +558,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 法国 113
+  name: 法国 046
   network: ws
   port: 443
   server: 146.59.85.226
@@ -498,32 +571,56 @@ proxies:
       Host: pelang.org
     path: linkvws
 - cipher: chacha20-ietf-poly1305
-  name: 法国/France
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB_81
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR_908
+  name: 🇫🇷FR_1628
   password: ytw2awn
   port: 443
   server: 54.36.174.140
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_1403
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
+- name: 🇫🇷FR_203
+  network: tcp
+  password: QV31589740
+  port: 443
+  server: great-krill.rooster465.autos
+  sni: great-krill.rooster465.autos
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB_86
+  password: zRZNBszYyWo5
+  port: 8388
+  server: 51.77.225.200
+  type: ss
+- name: 🇫🇷FR_1695
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 15.237.214.103
+  skip-cert-verify: true
+  sni: tough-hermit.rooster465.autos
+  tls: false
+  type: trojan
+  udp: true
+- name: 🇫🇷_FR_法国_1
+  password: AE62539071
+  port: 443
+  server: one-quail.rooster465.autos
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
 - cipher: aes-256-cfb
-  name: '🇫🇷_FR_法国 #3'
+  name: '🇫🇷_FR_法国 #4'
   password: asdKkaskJKfnsa
   port: 443
   server: 51.158.54.209
   type: ss
 - alterId: 0
-  name: 🇫🇷FR法国3
-  network: ws
+  name: 🇫🇷FR法国8
   password: humanity
   port: 443
   server: 141.101.90.101
@@ -532,259 +629,55 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- name: 🇫🇷FR_25
+- name: 🇫🇷FR_80
   network: ws
   password: humanity
   port: 443
-  server: 165.215.250.14
+  server: 104.18.152.210
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1382
+  network: ws
+  password: 0b5fa773-6f37-4134-87d4-0c349742b6f6
+  port: 443
+  server: 104.21.43.90
   skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR_916
-  password: BqnqToih0PbU
-  port: 8388
-  server: fr3.levikogjgfdd.ir
-  type: ss
-- name: 🇫🇷FR_864
-  network: ws
-  password: humanity
-  port: 443
-  server: 84.21.172.81
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_37
-  network: ws
-  password: humanity
-  port: 443
-  server: ip.myip2.qzz.io
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: FR法国
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.207
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 🇫🇷FR_572
-  network: ws
-  password: 19877587-ed94-4033-88cd-4ac50a5e8718
-  port: 443
-  server: 104.16.148.5
-  sni: dimskiee.biz.id
-  type: trojan
-  ws-opts:
-    path: /WangCai-8
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_718
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 172.67.218.38
-  sni: 1v95V6tjywCyTBAhl7f7lX8B27G.l4495eycQmSE9he0YVoemJfc4IBYf-4.wORkerS.dEV
-  type: trojan
-  ws-opts:
-    path: /tr/dxyX388XOtyAjF3A?ed=2560
-- name: 🇫🇷FR_716
-  network: ws
-  password: f18d6149-e214-8554-e737-f7523c8b2eea
-  port: 443
-  server: 89.116.180.49
-  sni: 0403.infinityconfig4.workers.dev
-  type: trojan
-  ws-opts:
-    path: /sync
-- name: 🇫🇷FR_854
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: distinct-quail.rooster465.autos
-  sni: distinct-quail.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_1005
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: 15.237.250.154
-  sni: chief-cricket.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_153
-  network: tcp
-  password: QV31589740
-  port: 443
-  server: 51.44.160.58
-  sni: great-krill.rooster465.autos
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_649
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 104.21.4.124
-  sni: vRE6r9qrbQi0T25tg.SRtB0M3HDbWr2cjZ8fJuR.WoRKerS.DEv
-  type: trojan
-  ws-opts:
-    path: /tr/W3Ei3SdcW9sRVMLIbEd8sB1lm?ed=2560
-- name: 🇫🇷FR_736
-  network: ws
-  password: humanity
-  port: 443
-  server: 193.239.160.134
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_921
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: 15.237.112.48
-  sni: smiling-fowl.rooster465.autos
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_763
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 172.67.170.155
-  sni: JfW5fIi30I7-SC560AvFnfnH613.i6JSQ7mr66E-E14trd.WoRKErs.deV
-  type: trojan
-  ws-opts:
-    path: /tr/BvZonkQYnXRYanP3KUCRjO?ed=2560
-- name: 🇫🇷FR_861
-  network: ws
-  password: bpb-trojan
-  port: 443
-  server: 172.67.135.88
-  sni: vless.herogoing.top
-  type: trojan
-  ws-opts:
-    path: /tr?ed=2560
-- name: 🇫🇷FR_862
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: chief-cricket.rooster465.autos
-  sni: chief-cricket.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇫🇷FR_943
-  password: amazonskr05
-  port: 443
-  server: 15.237.189.197
-  type: ss
-- name: 🇫🇷FR_159
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_132
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.140
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 'FR法国 #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.6
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 🇫🇷FR_54
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.144
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_48
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.155
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 法国_5
-  password: humanity
-  port: 443
-  server: 8.6.112.6
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇫🇷FR_113
-  network: ws
-  password: humanity
-  port: 40443
-  server: 2.144.21.112
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_969
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: musical-shrew.rooster465.autos
-  sni: musical-shrew.rooster465.autos
-  type: trojan
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_912
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 104.18.6.178
-  skip-cert-verify: true
-  sni: g-o-MiTiVPN---MiTiVPNj.Maqror.ir
-  type: trojan
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/nl
-- name: 🇫🇷FR_38
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.130.125.160
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_330
-  network: ws
-  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
-  port: 443
-  server: join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz
-  sni: _acme-challenge.sb.cloudns.biz
+  sni: app-538961.user-y0o4gm.workers.dev
   type: trojan
   ws-opts:
     path: /
-- name: 🇫🇷FR_121
+- name: 🇫🇷FR_1350
+  network: ws
+  password: Aimer
+  port: 2053
+  server: 167.68.4.199
+  sni: epge.muarua.filegear-sg.me
+  type: trojan
+  ws-opts:
+    path: /?proxyip=ts.hpc.tw
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇫🇷FR_1726
+  network: ws
+  password: humanity
+  port: 443
+  server: join-telegram-channel-tirexnet.trex.kdns.fr
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1670
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: nearby-cod.rooster465.autos
+  sni: nearby-cod.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1128
   network: tcp
   password: ND91608427
   port: 443
@@ -793,7 +686,204 @@ proxies:
   type: trojan
 - alpn:
   - http/1.1
-  name: 🇫🇷FR_12
+  name: 🇫🇷FR_1390
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 172.67.176.194
+  sni: 30f67sBQ8JjwmT7gYtfc14.0M68-QZ3HQYFnLAr6N3IQ.wOrkerS.deV
+  type: trojan
+  ws-opts:
+    path: /tr/VKQiUREJ9PL5qHi1r4bkL9Rm8?ed=2560
+- name: 🇫🇷FR_511
+  network: ws
+  password: 257d8622-6701-4c98-a432-67a9696f58ae
+  port: 443
+  server: 172.67.218.196
+  sni: shazira.app
+  type: trojan
+  ws-opts:
+    path: /Novan-ID9
+- name: 🇫🇷FR_200
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.111.4
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1643
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 15.237.112.48
+  sni: smiling-fowl.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_101
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.22.63
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1135
+  network: ws
+  password: 19877587-ed94-4033-88cd-4ac50a5e8718
+  port: 443
+  server: 104.16.148.5
+  sni: dimskiee.biz.id
+  type: trojan
+  ws-opts:
+    path: /WangCai-8
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_1554
+  password: ytw2awn
+  port: 443
+  server: pl134.vpnbook.com
+  type: ss
+- name: 🇫🇷FR_1736
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: one-quail.rooster465.autos
+  sni: one-quail.rooster465.autos
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1097
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 6m1rgyieclmrx9hef1.z6-0hlnubjibwzpa85.workers.dev
+  sni: 6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV
+  type: trojan
+  ws-opts:
+    path: /tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_599
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 172.67.218.38
+  sni: 1v95V6tjywCyTBAhl7f7lX8B27G.l4495eycQmSE9he0YVoemJfc4IBYf-4.wORkerS.dEV
+  type: trojan
+  ws-opts:
+    path: /tr/dxyX388XOtyAjF3A?ed=2560
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇫🇷FR_503
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.221.242
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1805
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 13.39.249.40
+  sni: one-quail.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_633
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.87.41.18
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1587
+  network: ws
+  password: humanity
+  port: 8443
+  server: 77.221.138.199
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_56
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.72
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- cipher: aes-256-cfb
+  name: 🇫🇷FR_1807
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 95.170.13.47
+  type: ss
+- name: 'FR法国 #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.133
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇫🇷FR_1338
+  network: ws
+  password: humanity
+  port: 443
+  server: ip.myip2.qzz.io
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.97
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_594
+  network: ws
+  password: f18d6149-e214-8554-e737-f7523c8b2eea
+  port: 443
+  server: 89.116.180.49
+  sni: 0403.infinityconfig4.workers.dev
+  type: trojan
+  ws-opts:
+    path: /sync
+- name: 🇫🇷FR_72
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.155
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_2
+  network: ws
+  password: humanity
+  port: 443
+  server: www.ignitelimit.com
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_18
   network: ws
   password: humanity
   port: 443
@@ -803,70 +893,231 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_628
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 188.114.96.3
-  sni: 6M1RGYiecLMrX9HEf1.z6-0hLNuBjIBWzPa85.wOrkers.DEv
-  type: trojan
-  ws-opts:
-    path: /tr/N61UxT346epoPVmA9xFM6H00?ed=2560
-- name: 🇫🇷FR_858
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: tough-hermit.rooster465.autos
-  sni: tough-hermit.rooster465.autos
-  type: trojan
-- name: 'FR法国 #5'
+- name: 🇫🇷FR_104
   network: ws
   password: humanity
   port: 443
-  server: 130.250.137.171
+  server: 104.16.174.36
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 'FR法国 #9'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.72
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: 🇫🇷FR_30
+- name: 🇫🇷FR_1689
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: smiling-fowl.rooster465.autos
+  sni: smiling-fowl.rooster465.autos
+  type: trojan
+- name: 'FR法国 #10'
   network: ws
   password: humanity
   port: 443
-  server: 141.101.90.101
+  server: 104.16.73.213
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇫🇷FR_1003
+  network: ws
+  password: d0298536-d670-4045-bbb1-ddd5ea68683e
+  port: 443
+  server: 104.19.173.68
+  sni: azadnet-5vk.pages.dev
+  type: trojan
+  ws-opts:
+    path: /azadnet-5vk.pages.dev/?ed=2560
+- name: 🇫🇷FR_1735
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 15.237.250.154
+  sni: chief-cricket.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1158
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: vless.herogoing.top
+  sni: vless.herogoing.top
+  type: trojan
+  ws-opts:
+    path: /tr?ed=2560
+- name: 🇫🇷FR_1012
+  network: ws
+  password: 0b5fa773-6f37-4134-87d4-0c349742b6f6
+  port: 443
+  server: app-538961.user-y0o4gm.workers.dev
+  sni: app-538961.user-y0o4gm.workers.dev
+  type: trojan
+  ws-opts:
+    path: /
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1743
+  network: ws
+  password: netra
+  port: 2087
+  server: 104.21.60.109
+  sni: LAtE-FroST-9DA7.ShOamEni5.woRKers.Dev
+  type: trojan
+  ws-opts:
+    path: /tr/WcvMTQZ5OFOfnBZDZ?ed=2560
+- name: '🇫🇷 #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.133
+  skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_946
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: 51.44.161.22
-  skip-cert-verify: true
-  sni: distinct-quail.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_502
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1389
   network: ws
-  password: f18d6149-e214-8554-e737-f7523c8b2eea
+  password: Telegram_healer_config
   port: 443
-  server: 45.131.4.118
-  sni: 0403.infinityconfig4.workers.dev
+  server: 172.67.170.155
+  sni: JfW5fIi30I7-SC560AvFnfnH613.i6JSQ7mr66E-E14trd.WoRKErs.deV
   type: trojan
   ws-opts:
-    path: /sync
-- name: 🇫🇷FR_877
+    path: /tr/BvZonkQYnXRYanP3KUCRjO?ed=2560
+- name: 🇫🇷FR_955
+  network: ws
+  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  port: 443
+  server: blackshadow.dpdns.org
+  sni: blackshadow.dpdns.org
+  type: trojan
+  ws-opts:
+    path: /195.123.218.174-443
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_579
+  password: pFNN9jKe8jwD
+  port: 32245
+  server: 38.180.92.242
+  type: ss
+- name: 🇫🇷FR_634
   network: ws
   password: humanity
   port: 8443
-  server: 77.221.138.199
+  server: 194.147.33.102
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_577
+- name: 🇫🇷FR_617
+  network: ws
+  password: humanity
+  port: 443
+  server: 193.239.160.134
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_1637
+  password: BqnqToih0PbU
+  port: 8388
+  server: fr3.levikogjgfdd.ir
+  type: ss
+- name: 🇫🇷FR_550
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.140
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1709
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: immune-earwig.rooster465.autos
+  sni: immune-earwig.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_890
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.6
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_111
+  network: ws
+  password: humanity
+  port: 443
+  server: 86.38.214.205
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1130
+  network: ws
+  password: humanity
+  port: 40443
+  server: 2.144.21.112
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1228
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.220.100.168
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1708
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: musical-shrew.rooster465.autos
+  sni: musical-shrew.rooster465.autos
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_1543
+  password: ytw2awn
+  port: 443
+  server: pl140.vpnbook.com
+  type: ss
+- name: 🇫🇷FR_1542
+  network: ws
+  password: humanity
+  port: 443
+  server: 84.21.172.81
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_120
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.175
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_521
   network: ws
   password: 257d8622-6701-4c98-a432-67a9696f58ae
   port: 443
@@ -876,52 +1127,408 @@ proxies:
   type: trojan
   ws-opts:
     path: /Novan-ID9
+- name: 🇫🇷FR_1712
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: humane-bird.rooster465.autos
+  sni: humane-bird.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1529
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: distinct-quail.rooster465.autos
+  sni: distinct-quail.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1290
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.77
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
 - name: 🇫🇷FR_36
   network: ws
   password: humanity
   port: 443
-  server: 104.17.177.143
+  server: 141.101.90.101
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_107
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1046
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 104.21.17.125
+  sni: 30f67sBQ8jJwMt7GYtfc14.0M68-Qz3hqYfnLAR6n3Iq.wORkErs.dEv
+  type: trojan
+  ws-opts:
+    path: /tr/hYgAqUlh5GyczDyXP?ed
+- name: '🇫🇷 #5'
   network: ws
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.18.152.207
+  skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_739
+- name: 🇫🇷FR_1679
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 51.44.161.22
+  skip-cert-verify: true
+  sni: distinct-quail.rooster465.autos
+  type: trojan
+- name: '🇫🇷 #3'
   network: ws
   password: humanity
   port: 443
-  server: 185.225.68.232
+  server: 104.18.152.152
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: '🇺🇸 #14'
+  network: ws
+  password: humanity
+  port: 443
+  server: 216.24.57.7
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1377
+  network: ws
+  password: 0b5fa773-6f37-4134-87d4-0c349742b6f6
+  port: 443
+  server: 172.67.177.105
+  skip-cert-verify: true
+  sni: app-538961.user-y0o4gm.workers.dev
+  type: trojan
+  ws-opts:
+    path: /cmh
+- name: 🇫🇷FR_889
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.219
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_596
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.159
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_30
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.187
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_78
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.144
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1704
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.109
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1622
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: correct-pony.rooster465.autos
+  sni: correct-pony.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_4
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.143
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1050
+  network: ws
+  password: 988sR-269PKCKlb&3pMrFTEr
+  port: 443
+  server: jquery.com
+  sni: LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV
+  type: trojan
+  ws-opts:
+    path: /eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
+- name: 🇫🇷FR_209
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: fancy-skink.rooster465.autos
+  sni: fancy-skink.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1391
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.14
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_128
+  network: ws
+  password: 87d1bfd4-574e-4c96-ad42-0426f27461ff
+  port: 443
+  server: join.my.telegram.channel.cmliussss.to.unlock.more.premium.nodes.cf.090227.xyz
+  sni: _acme-challenge.sb.cloudns.biz
+  type: trojan
+  ws-opts:
+    path: /
+- name: 🇫🇷FR_677
+  network: ws
+  password: humanity
+  port: 443
+  server: 5.181.187.58
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_970
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1208
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 104.21.24.95
+  sni: 1V95V6TjywCyTbAHl7f7Lx8b27G.L4495eYcqmsE9he0yVoEMJFc4IBYf-4.wORkERS.DeV
+  type: trojan
+  ws-opts:
+    path: /tr/zJi4ccv7FeEo780U?ed=2560
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇫🇷FR_42
+  network: ws
+  password: humanity
+  port: 443
+  server: join-telegram-channel.tirexnet.kdns.fr
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 'FR法国 #13'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.233
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- name: 'FR法国 #14'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.208
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇫🇷FR_1258
+  network: ws
+  password: humanity
+  port: 443
+  server: 162.159.136.234
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_590
+  network: ws
+  password: humanity
+  port: 443
+  server: render.com
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_10
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.113
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_647
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1588
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.255.179.166
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_47
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.46
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_288
+  network: ws
+  password: f18d6149-e214-8554-e737-f7523c8b2eea
+  port: 443
+  server: 45.131.4.118
+  sni: 0403.infinityconfig4.workers.dev
+  type: trojan
+  ws-opts:
+    path: /sync
+- name: 'FR法国 #15'
+  network: ws
+  password: humanity
+  port: 443
+  server: 8.6.112.0
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇫🇷FR_1711
   network: tcp
   password: PQ05174892
   port: 443
-  server: immune-earwig.rooster465.autos
-  sni: immune-earwig.rooster465.autos
+  server: firm-warthog.rooster465.autos
+  sni: firm-warthog.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_621
+  network: ws
+  password: humanity
+  port: 2053
+  server: 212.118.52.236
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_1815
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: lucky-marmot.rooster465.autos
+  sni: lucky-marmot.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1822
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 13.37.222.178
+  sni: correct-pony.rooster465.autos
   type: trojan
 - alpn:
   - http/1.1
-  name: 🇫🇷FR_1014
+  name: 🇫🇷FR_710
   network: ws
-  password: netra
-  port: 2087
-  server: 104.21.60.109
-  sni: LAtE-FroST-9DA7.ShOamEni5.woRKers.Dev
+  password: bd85f5fe32d9446a8b1f59e4f710455b
+  port: 443
+  server: 104.24.163.206
+  sni: BpB-PAnEL-62c3.mlM-eE9A3b83.wOrKErS.dev
   type: trojan
   ws-opts:
-    path: /tr/WcvMTQZ5OFOfnBZDZ?ed=2560
-- name: '🇫🇷 #1'
+    path: /eyJqdW5rIjoibkN2cER2SDZIUTkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6IiIsInBhbmVsSVBzIjoiWzJhMDI6ODk4OjE0Njo2NDo6XSJ9?ed=2560
+- name: 🇫🇷FR_1540
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: chief-cricket.rooster465.autos
+  sni: chief-cricket.rooster465.autos
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_474
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: soskeynets.z6-0hlnubjibwzpa85.workers.dev
+  sni: 6m1rGyIEclMRx9HeF1.Z6-0hlNUbJIBwZPa85.wOrKerS.DEV
+  type: trojan
+  ws-opts:
+    path: /tr/GaQvfFwT5sWgVxHig8YaXjtiuQPZNI?ed=2560
+- name: 🇫🇷FR_1527
+  network: ws
+  password: humanity
+  port: 2053
+  server: 185.114.72.31
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 'FR法国 #16'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.6
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: '🇫🇷 #4'
   network: ws
   password: humanity
   port: 443
@@ -933,25 +1540,188 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: 🇫🇷FR_971
+- name: 🇫🇷FR_1279
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.37
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_73
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.111.3
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_622
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.225.68.232
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 'FR法国 #17'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.21.46.3
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_16
+  network: ws
+  password: 988sR-269PKCKlb&3pMrFTEr
+  port: 443
+  server: 104.18.155.119
+  sni: LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV
+  type: trojan
+  ws-opts:
+    path: /eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
+- name: 🇫🇷FR_532
+  network: ws
+  password: ff5aeddc-8fea-4d17-b504-1a9fdacca802
+  port: 443
+  server: 45.130.125.160
+  sni: go.appsflyer.com.r3xxe.eu.cc
+  type: trojan
+  ws-opts:
+    path: /br-orcl
+- name: 🇫🇷FR_530
+  network: ws
+  password: 45c47cfa-67da-47e0-b20b-5efa674e6a9b
+  port: 443
+  server: 104.16.75.127
+  sni: unnes.ac.id.r3xxe.eu.cc
+  type: trojan
+  ws-opts:
+    path: /us-gllc
+- name: 🇫🇷FR_167
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.17.177.143
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  - h2
+  - h3
+  name: 🇫🇷FR_113
+  network: ws
+  password: humanity
+  port: 443
+  server: 198.41.223.96
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_65
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.34
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_75
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.108
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_84
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.22
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /%2Fassignment
+- name: 'US美国 #102'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.12
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- name: 🇫🇷FR_374
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 104.21.26.36
+  sni: vless.herogoing.top
+  type: trojan
+  ws-opts:
+    path: /tr?ed=2560
+- name: 🇫🇷FR_1534
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: tough-hermit.rooster465.autos
+  sni: tough-hermit.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_83
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.103
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_1594
+  password: ytw2awn
+  port: 443
+  server: 54.36.174.134
+  type: ss
+- name: 🇫🇷FR_1835
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: star-moray.rooster465.autos
+  sni: star-moray.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1713
   network: tcp
   password: PQ05174892
   port: 443
-  server: lucky-marmot.rooster465.autos
-  sni: lucky-marmot.rooster465.autos
+  server: moral-dolphin.rooster465.autos
+  sni: moral-dolphin.rooster465.autos
   type: trojan
-- name: 🇫🇷FR_952
-  network: tcp
-  password: FH72359861
+- cipher: aes-256-cfb
+  name: 🇫🇷FR_1674
+  password: amazonskr05
   port: 443
-  server: smiling-fowl.rooster465.autos
-  sni: smiling-fowl.rooster465.autos
-  type: trojan
+  server: 15.237.189.197
+  type: ss
 - alpn:
   - h3
   - h2
   - http/1.1
-  name: 🇫🇷FR_32
+  name: 🇫🇷FR_165
   network: ws
   password: humanity
   port: 443
@@ -962,275 +1732,34 @@ proxies:
     path: /assignment
 - alpn:
   - http/1.1
-  name: 🇫🇷FR_627
+  name: 🇫🇷FR_1115
   network: ws
   password: Telegram_healer_config
   port: 443
-  server: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
-  sni: To6R63-kKChiGHqm2.vxz0Dduq7to7Su0CDQf.worKERs.DEV
+  server: 104.21.4.124
+  sni: vRE6r9qrbQi0T25tg.SRtB0M3HDbWr2cjZ8fJuR.WoRKerS.DEv
   type: trojan
   ws-opts:
-    path: /tr/xwtrOUcg21SS0Ega?ed=2560
-- name: 🇫🇷FR_163
+    path: /tr/W3Ei3SdcW9sRVMLIbEd8sB1lm?ed=2560
+- name: 🇫🇷FR_881
   network: ws
   password: humanity
   port: 443
-  server: 45.87.41.18
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_8
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.37
-  skip-cert-verify: true
+  server: 104.16.174.121
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_764
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 172.67.176.194
-  sni: 30f67sBQ8JjwmT7gYtfc14.0M68-QZ3HQYFnLAr6N3IQ.wOrkerS.deV
-  type: trojan
-  ws-opts:
-    path: /tr/VKQiUREJ9PL5qHi1r4bkL9Rm8?ed=2560
-- name: 🇫🇷FR_902
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: correct-pony.rooster465.autos
-  sni: correct-pony.rooster465.autos
-  type: trojan
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 🇫🇷FR_34
+- name: 🇫🇷FR_6
   network: ws
   password: humanity
   port: 443
-  server: join-telegram-channel.tirexnet.kdns.fr
+  server: 104.18.152.229
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇫🇷FR_783
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.20.6.134
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 🇫🇷FR_995
-  network: ws
-  password: humanity
-  port: 443
-  server: join-telegram-channel-tirexnet.trex.kdns.fr
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_974
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: moral-dolphin.rooster465.autos
-  sni: moral-dolphin.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_158
-  network: ws
-  password: humanity
-  port: 2053
-  server: 212.118.52.236
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- cipher: aes-256-cfb
-  name: 🇫🇷FR_915
-  password: amazonskr05
-  port: 443
-  server: 15.188.143.142
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇫🇷FR_905
-  password: amazonskr05
-  port: 443
-  server: 15.237.184.221
-  type: ss
-- name: 'FR法国 #9'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.46.3
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- name: 🇫🇷FR_164
-  network: ws
-  password: humanity
-  port: 8443
-  server: 194.147.33.102
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_957
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: 15.237.214.103
-  skip-cert-verify: true
-  sni: tough-hermit.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_169
-  network: ws
-  password: Aimer
-  port: 2053
-  server: 167.68.4.199
-  sni: epge.muarua.filegear-sg.me
-  type: trojan
-  ws-opts:
-    path: /?proxyip=ts.hpc.tw
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR_865
-  password: ytw2awn
-  port: 443
-  server: pl140.vpnbook.com
-  type: ss
-- name: 🇫🇷FR_878
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.255.179.166
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 🇫🇷FR_125
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.46.3
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 'FR法国 #10'
-  network: ws
-  password: humanity
-  port: 443
-  server: 216.24.57.1
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR_705
-  password: pFNN9jKe8jwD
-  port: 32245
-  server: 38.180.92.242
-  type: ss
-- name: 🇫🇷FR_972
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: firm-warthog.rooster465.autos
-  sni: firm-warthog.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_939
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: nearby-cod.rooster465.autos
-  sni: nearby-cod.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_1006
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: one-quail.rooster465.autos
-  sni: one-quail.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_973
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: humane-bird.rooster465.autos
-  sni: humane-bird.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇫🇷FR_794
-  password: amazonskr05
-  port: 443
-  server: 15.237.177.224
-  type: ss
-- name: 🇫🇷FR_160
-  network: ws
-  password: humanity
-  port: 2053
-  server: 185.114.72.31
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_658
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: fancy-skink.rooster465.autos
-  sni: fancy-skink.rooster465.autos
-  type: trojan
-- name: 🇫🇷FR_964
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.109
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷FR_60
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.22
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /%2Fassignment
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_986
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 104.21.16.123
-  sni: 7X7o3VTq5z6ymu3Hv1fH-Op9BlT.hYa6LOSM6lZNOXHm6w3MK.woRKErS.DeV
-  type: trojan
-  ws-opts:
-    path: /tr/qL8YIeH28wNcXfNTPgLCwOhNFEr?ed=2560
-- name: 🇫🇷FR_275
+- name: 🇫🇷FR_523
   network: ws
   password: 407ecce0-dc85-465f-89f5-e520e9378baf
   port: 443
@@ -1239,7 +1768,7 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: 'FR法国 #11'
+- name: '🇨🇦 #7'
   network: ws
   password: humanity
   port: 443
@@ -1248,8 +1777,62 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
-    path: '%2Fassignment'
-- name: 🇫🇷FR_41
+    path: /assignment
+- name: 🇫🇷FR_33
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.71
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 法国_5
+  password: humanity
+  port: 443
+  server: 8.6.112.6
+  sni: www.ignitelimit.com
+  type: trojan
+- name: 🇫🇷FR_168
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.50
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_31
+  network: ws
+  password: humanity
+  port: 443
+  server: 165.215.250.14
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_1720
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 104.21.16.123
+  sni: 7X7o3VTq5z6ymu3Hv1fH-Op9BlT.hYa6LOSM6lZNOXHm6w3MK.woRKErS.DeV
+  type: trojan
+  ws-opts:
+    path: /tr/qL8YIeH28wNcXfNTPgLCwOhNFEr?ed=2560
+- name: 🇫🇷FR_27
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.16.174.117
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷FR_58
   network: ws
   password: humanity
   port: 443
@@ -1258,26 +1841,49 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
+- name: 🇫🇷FR_1194
+  network: tcp
+  password: QV31589740
+  port: 443
+  server: 51.44.160.58
+  sni: great-krill.rooster465.autos
+  type: trojan
+- name: 🇫🇷FR_1538
+  network: ws
+  password: bpb-trojan
+  port: 443
+  server: 172.67.135.88
+  sni: vless.herogoing.top
+  type: trojan
+  ws-opts:
+    path: /tr?ed=2560
+- cipher: aes-256-cfb
+  name: 🇫🇷FR_1625
+  password: amazonskr05
+  port: 443
+  server: 15.237.184.221
+  type: ss
 - alpn:
+  - http/1.1
+  name: 🇫🇷FR_491
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 172.67.132.19
+  sni: VRE6R9qRbQI0t25TG.SRTB0M3hdbwr2cJZ8fjUr.WoRKeRS.dev
+  type: trojan
+  ws-opts:
+    path: /tr/bDodLFtTQwCZ6EX3ffMYJ06j9EjLse4d?ed=2560
+- alpn:
+  - h3
   - h2
   - http/1.1
-  name: 🇫🇷FR_781
+  name: 🇫🇷FR_502
   network: ws
   password: humanity
   port: 443
-  server: 162.159.136.234
+  server: 104.21.46.3
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- alpn:
-  - http/1.1
-  name: 🇫🇷FR_601
-  network: ws
-  password: Telegram_healer_config
-  port: 443
-  server: 172.67.156.87
-  sni: tO6R63-kkCHIgHQM2.vXZ0dDUq7to7SU0cdQF.wOrKERS.Dev
-  type: trojan
-  ws-opts:
-    path: /tr/yqf0HmXRcvB67eWDKZARhVo4Ts4?ed=2560

@@ -10,8 +10,7 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  name: 未知 TROJAN-389
+- name: 🇪🇪EE_14
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
@@ -21,17 +20,55 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- grpc-opts:
-    grpc-service-name: grpc
-  name: 🇪🇪EE_3
-  network: grpc
+- client-fingerprint: ios
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_1|4.1MB/s
+  network: tcp
+  packet-encoding: xudp
   port: 8443
-  server: 95.85.228.161
-  tls: false
+  reality-opts:
+    public-key: CzI1Zft9ToNgciMIfMhtn_Q5RRO0Q3AyURYvrvnKL14
+    short-id: '!!str '
+  server: 5.181.202.180
+  servername: ads.x5.ru
+  tls: true
   type: vless
-  uuid: 7e8f7489-e65f-4be6-93ed-867a74ec6759
+  udp: true
+  uuid: 8e85752d-c04f-427d-9d70-b10d144c8492
+  xudp: true
 - client-fingerprint: chrome
-  name: 🇪🇪EE_16
+  name: 🇪🇪_爱沙尼亚_151
+  network: ws
+  port: 443
+  server: 5.101.116.108
+  servername: fin4.wba-pn.ru
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20595050-84c7-40e6-b9e3-cf90c99f8a4c
+  ws-opts:
+    headers:
+      Host: fin4.wba-pn.ru
+    path: /
+- client-fingerprint: chrome
+  name: 🇪🇪_爱沙尼亚_156
+  network: ws
+  port: 443
+  server: 95.85.242.159
+  servername: fin4.wba-pn.ru
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20595050-84c7-40e6-b9e3-cf90c99f8a4c
+  ws-opts:
+    headers:
+      Host: fin4.wba-pn.ru
+    path: /
+- client-fingerprint: chrome
+  name: 🇪🇪EE_17
   network: tcp
   port: 443
   server: 38.180.230.27
@@ -41,7 +78,7 @@ proxies:
   uuid: 278412f2-ef42-48e2-a4c0-243b173e612b
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_1
+  name: 🇪🇪EE_2
   network: tcp
   port: 443
   reality-opts:
@@ -54,42 +91,7 @@ proxies:
   uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_4
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Kb0rDCu2kKhfnC6bsi0DMRxDej9S-Mu1vVza1H1l4U4
-    short-id: '!!str 0c'
-  server: 188.127.247.129
-  servername: yahoo.com
-  tls: true
-  type: vless
-  uuid: 33aa2b47-484b-49f6-8f23-fb34602d221f
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪
-  network: tcp
-  port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- grpc-opts:
-    grpc-service-name: grpc
-  name: 🇪🇪EE_6
-  network: grpc
-  port: 8443
-  server: 95.85.224.3
-  tls: false
-  type: vless
-  uuid: 7e8f7489-e65f-4be6-93ed-867a74ec6759
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_7
+  name: 🇪🇪EE_1
   network: tcp
   port: 443
   reality-opts:
@@ -100,19 +102,10 @@ proxies:
   tls: true
   type: vless
   uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
-- client-fingerprint: chrome
-  name: 未知 VLESS-404
-  network: tcp
-  port: 443
-  server: ee2.mehab.me
-  servername: ee2.mehab.me
-  tls: true
-  type: vless
-  uuid: 278412f2-ef42-48e2-a4c0-243b173e612b
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_8
-  network: raw
+  name: 🇪🇪EE_10
+  network: tcp
   port: 443
   reality-opts:
     public-key: SJkDT_L0eziQR2afDGrkN7-uRxjYu6bZxIGXlKeCvX4
@@ -122,3 +115,38 @@ proxies:
   tls: true
   type: vless
   uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_5
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Kb0rDCu2kKhfnC6bsi0DMRxDej9S-Mu1vVza1H1l4U4
+    short-id: '!!str 0c'
+  server: 188.127.247.129
+  servername: yahoo.com
+  tls: true
+  type: vless
+  uuid: 33aa2b47-484b-49f6-8f23-fb34602d221f
+- grpc-opts:
+    grpc-service-name: grpc
+  name: 🇪🇪EE_7
+  network: grpc
+  port: 8443
+  server: 95.85.224.3
+  tls: false
+  type: vless
+  uuid: 7e8f7489-e65f-4be6-93ed-867a74ec6759
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇪🇪 #1'
+  network: tcp
+  port: 443
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888

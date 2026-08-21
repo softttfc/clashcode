@@ -1,39 +1,25 @@
 proxies:
-- name: 台湾(免费节点)_1
-  network: ws
-  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
-  port: 443
-  server: tw3011h8r.cloudflare.182682.xyz
-  skip-cert-verify: true
-  sni: kfb9frqf0v.bpis2026.top
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      host: kfb9frqf0v.bpis2026.top
-    path: /images
-- name: 台湾(免费节点)_2
-  network: ws
-  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
-  port: 443
-  server: visa.com.sg
-  skip-cert-verify: true
-  sni: px8r9i1b4k.bpusfaster2.top
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      host: px8r9i1b4k.bpusfaster2.top
-    path: /images
-- name: 台湾_1
-  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
-  port: 443
-  server: tw3011h8r.cloudflare.182682.xyz
-  sni: kfb9frqf0v.bpis2026.top
-  type: trojan
+- cipher: aes-256-cfb
+  name: 🇹🇼TW_29
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 120.232.253.89
+  type: ss
 - name: 台湾_2
   password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
   port: 443
   server: visa.com.sg
   sni: px8r9i1b4k.bpusfaster2.top
+  type: trojan
+- cipher: aes-256-cfb
+  name: 🇹🇼TW_31
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 120.232.253.94
+  type: ss
+- name: 台湾_1
+  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
+  port: 443
+  server: tw3011h8r.cloudflare.182682.xyz
+  sni: kfb9frqf0v.bpis2026.top
   type: trojan
