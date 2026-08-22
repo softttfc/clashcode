@@ -1,21 +1,91 @@
 proxies:
-- cipher: aes-256-cfb
-  name: 🇹🇼TW_29
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 120.232.253.89
-  type: ss
-- name: 台湾_2
-  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
-  port: 443
-  server: visa.com.sg
-  sni: px8r9i1b4k.bpusfaster2.top
+- alterId: 0
+  cipher: auto
+  name: TW
+  network: tcp
+  port: 794
+  server: 2.27.174.110
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼_台湾_107
+  port: 794
+  server: 2.27.174.110
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
+- name: 🇹🇼_台湾_132
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 12401
+  server: starlink-tw1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
   type: trojan
-- cipher: aes-256-cfb
-  name: 🇹🇼TW_31
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 120.232.253.94
+  udp: true
+- name: 🇹🇼_台湾_133
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 15710
+  server: starlink-tw2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇹🇼_台湾_134
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 20110
+  server: starlink-tw3.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇹🇼_台湾_135
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 15710
+  server: starlink-tw4.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇹🇼_台湾_318
+  password: 97c84ffc-464f-42ff-9341-22e1a58c3433
+  port: 443
+  server: t2w2t2w2.bpca2026.top
+  skip-cert-verify: true
+  sni: t2w2t2w2.bpca2026.top
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: t2w2t2w2.bpca2026.top
+    path: /images
+- name: 🇹🇼_台湾_328
+  password: 97c84ffc-464f-42ff-9341-22e1a58c3433
+  port: 443
+  server: ttww11.bpca2026.top
+  skip-cert-verify: true
+  sni: ttww11.bpca2026.top
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: ttww11.bpca2026.top
+    path: /images
+- cipher: chacha20-ietf-poly1305
+  name: 台湾/新北/Taiwan/New Taipei City
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  port: 50099
+  server: 61.231.22.178
   type: ss
 - name: 台湾_1
   password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
@@ -23,3 +93,15 @@ proxies:
   server: tw3011h8r.cloudflare.182682.xyz
   sni: kfb9frqf0v.bpis2026.top
   type: trojan
+- name: 台湾_2
+  password: e0ab846b-8eb2-4042-96dd-7c695e467fbf
+  port: 443
+  server: visa.com.sg
+  sni: px8r9i1b4k.bpusfaster2.top
+  type: trojan
+- cipher: aes-256-cfb
+  name: 🇹🇼TW_29
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 120.232.253.94
+  type: ss

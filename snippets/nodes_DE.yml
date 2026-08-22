@@ -15,12 +15,21 @@ proxies:
     headers:
       HOST: node4.rtxconfigz.com
     path: /@Malinda6104
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_260
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 120.232.250.163
-  type: ss
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇩🇪 机场推荐:dafei.de 德国 05
+  network: ws
+  password: MiTiVPN
+  port: 443
+  server: 140.248.185.253
+  skip-cert-verify: false
+  sni: ssl.fastly.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/s-w@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
 - cipher: chacha20-ietf-poly1305
   name: 德国(yudou789.top 玉豆免费节点)
   password: XUMTygEM1jVYIvysXKqA5T
@@ -28,149 +37,9 @@ proxies:
   server: hackney-latest-strike.freesocks.work
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_2|2.6MB/s
-  password: amazonskr05
-  port: 443
-  server: 3.75.226.122
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_4|1.5MB/s
-  password: amazonskr05
-  port: 443
-  server: 3.76.102.125
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: de|8711|puddincat07@Telegram
-  password: amazonskr05
-  port: 443
-  server: 63.176.139.123
-  type: ss
-  udp: true
-- name: 德国 002
-  network: tcp
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  port: 443
-  server: 92.119.35.120
-  skip-cert-verify: false
-  type: trojan
-- name: 德国 003
-  network: tcp
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  port: 443
-  server: 92.119.35.130
-  skip-cert-verify: false
-  type: trojan
-- name: 德国 004
-  network: tcp
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  port: 443
-  server: 92.119.35.127
-  skip-cert-verify: false
-  type: trojan
-- client-fingerprint: chrome
-  name: 德国 005
-  network: tcp
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  port: 9443
-  server: de-1.hysteria.ltd
-  skip-cert-verify: false
-  sni: de-1.hysteria.ltd
-  type: trojan
-- name: 德国 006
-  network: tcp
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  port: 443
-  server: 92.119.35.125
-  skip-cert-verify: false
-  type: trojan
-- alterId: 0
-  cipher: aes-128-gcm
-  client-fingerprint: chrome
-  name: 德国 007
-  network: tcp
-  port: 1234
-  server: 141.95.65.9
-  servername: supervpn.super.com
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 德国 010
-  network: tcp
-  port: 2053
-  server: 178.63.237.158
-  skip-cert-verify: true
-  type: vmess
-  uuid: 2d4dd672-180f-415c-9035-e2fc461dd95a
-- alterId: 64
-  cipher: auto
-  name: 德国 011
-  network: tcp
-  port: 31484
-  server: 168.119.107.162
-  skip-cert-verify: true
-  type: vmess
-  uuid: 943961b8-4e27-4bdf-a048-c2f724f542fb
-- alterId: 0
-  cipher: aes-128-gcm
-  name: 未知14
-  network: tcp
-  port: 443
-  server: 46.183.187.73
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 92a048ec-a160-497e-8069-c2e902626d7a
-- alterId: 0
-  cipher: auto
-  name: 德国 013
-  network: tcp
-  port: 28110
-  server: 91.107.255.181
-  skip-cert-verify: true
-  type: vmess
-  uuid: 753fa7bf-b0be-4c2e-adbe-7e49977f1e3d
-- alterId: 0
-  cipher: auto
-  name: 德国 014
-  network: tcp
-  port: 80
-  server: 128.140.109.232
-  skip-cert-verify: true
-  type: vmess
-  uuid: 05a178f9-e6ba-4006-93d7-3d980cdc3a76
-- alterId: 0
-  cipher: auto
-  name: 德国 015
-  network: tcp
-  port: 8880
-  server: 159.69.180.75
-  skip-cert-verify: true
-  type: vmess
-  uuid: 8c0be351-cc26-4c4d-8cb8-147b9b25e50e
-- alterId: 0
-  cipher: auto
-  name: 德国 071
-  network: ws
-  port: 443
-  server: sgp.kapok.buzz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c1bac6b8-934a-44e2-9cf2-ee0db1fc1c85
-  ws-opts:
-    headers:
-      Host: sgp.kapok.buzz
-    path: /4befdd8a6/
-- alterId: 0
-  cipher: auto
-  name: 德国 072
+  name: '德国 002 #1'
   network: ws
   port: 443
   server: 139.162.178.95
@@ -184,7 +53,43 @@ proxies:
     path: /linkwsd
 - alterId: 0
   cipher: auto
-  name: 德国 073
+  name: '德国 014 #1'
+  network: tcp
+  port: 2095
+  server: 178.128.203.125
+  skip-cert-verify: true
+  type: vmess
+  uuid: 774c11a4-62db-40b7-9b3a-d2a6a1cfc9c6
+- alterId: 0
+  cipher: auto
+  name: '德国 015 #1'
+  network: tcp
+  port: 15713
+  server: 193.108.118.136
+  skip-cert-verify: true
+  type: vmess
+  uuid: f74e277e-84b3-46a2-8abd-2777fa5e4af9
+- alterId: 0
+  cipher: auto
+  name: '德国 016 #1'
+  network: tcp
+  port: 24164
+  server: 193.108.117.143
+  skip-cert-verify: true
+  type: vmess
+  uuid: aa3c5c18-6578-4de3-b890-2fd25c3a8f35
+- alterId: 0
+  cipher: auto
+  name: '德国 023 #1'
+  network: tcp
+  port: 8880
+  server: 49.13.174.214
+  skip-cert-verify: true
+  type: vmess
+  uuid: a20549a3-1dbb-4376-ea36-4325e7857efb
+- alterId: 0
+  cipher: auto
+  name: '德国 028 #1'
   network: ws
   port: 443
   server: 130.61.23.77
@@ -198,386 +103,693 @@ proxies:
     path: /linkws
 - alterId: 0
   cipher: auto
-  name: 德国 074
-  network: ws
-  port: 8880
-  server: 185.16.110.212
+  name: '德国 029 #1'
+  network: tcp
+  port: 38872
+  server: 94.136.184.156
   skip-cert-verify: true
   type: vmess
-  uuid: b209dfbf-6bb0-30b2-a77a-286e230466b5
-  ws-opts:
-    headers:
-      Host: TG.WangCai2.s4.db-link02.top
-    path: /dabai
+  uuid: 220732cc-9e43-4453-83f1-c9435be25b5b
 - alterId: 0
   cipher: auto
-  name: 德国 075
-  network: ws
-  port: 443
-  server: 141.94.155.224
+  name: '德国 030 #1'
+  network: tcp
+  port: 27575
+  server: 194.233.72.228
   skip-cert-verify: true
+  type: vmess
+  uuid: 16509262-dbe2-43ba-99ce-07913d2a18b4
+- alterId: 0
+  cipher: auto
+  name: '德国 031 #1'
+  network: tcp
+  port: 14372
+  server: 62.146.232.159
+  skip-cert-verify: true
+  type: vmess
+  uuid: ed1d7ea8-bf40-4a4a-8eac-8e57798ba6f7
+- alterId: 0
+  cipher: auto
+  name: '德国 032 #1'
+  network: tcp
+  port: 33281
+  server: 62.146.232.156
+  skip-cert-verify: true
+  type: vmess
+  uuid: 24eda0ea-acf0-4538-a001-f746a480237a
+- alterId: 0
+  cipher: auto
+  name: '德国 033 #1'
+  network: tcp
+  port: 36712
+  server: 62.146.233.112
+  skip-cert-verify: true
+  type: vmess
+  uuid: 9266df42-0830-48c2-8509-4c57b30fe29d
+- alterId: 0
+  cipher: auto
+  name: '德国 034 #1'
+  network: tcp
+  port: 38324
+  server: 62.146.233.115
+  skip-cert-verify: true
+  type: vmess
+  uuid: f863ef99-5ef0-4321-aaac-a476a5e8c3fb
+- alterId: 0
+  cipher: auto
+  name: '德国 035 #1'
+  network: tcp
+  port: 43763
+  server: 62.146.233.159
+  skip-cert-verify: true
+  type: vmess
+  uuid: 1ddf3ade-5b8c-420c-84f6-f96979ec3080
+- alterId: 0
+  cipher: auto
+  name: '德国 036 #1'
+  network: tcp
+  port: 50678
+  server: 62.146.233.53
+  skip-cert-verify: true
+  type: vmess
+  uuid: 5d1ec6e7-fd58-4e85-91c5-6335a86d2775
+- alterId: 0
+  cipher: auto
+  name: '德国 037 #1'
+  network: tcp
+  port: 52856
+  server: 62.146.232.157
+  skip-cert-verify: true
+  type: vmess
+  uuid: ed54e388-bfc5-4b36-ae4d-8b3cd460d3d4
+- alterId: 0
+  cipher: auto
+  name: '德国 038 #1'
+  network: tcp
+  port: 53144
+  server: 62.146.232.153
+  skip-cert-verify: true
+  type: vmess
+  uuid: 13e13a3e-e981-4eea-a9fc-13e50628fd9b
+- name: 🇩🇪_德国_172
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 443
+  server: starlink-de1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: fapeng.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 德国 076
-  network: ws
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_173
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
   port: 443
-  server: 141.94.155.228
+  server: starlink-de2.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kampong.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 德国 077
-  network: ws
-  port: 443
-  server: 141.94.155.229
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_174
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10024
+  server: z-eu1.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 德国 078
-  network: ws
-  port: 443
-  server: 141.95.126.134
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_175
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10025
+  server: z-eu2.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: jamekk.org
-    path: linkvws
-- alterId: 64
-  cipher: auto
-  name: 德国 079
-  network: ws
-  port: 30001
-  server: 89.163.247.25
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_176
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10028
+  server: z-eu1.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: b8aedf50-c4f5-4255-b73d-3779db661d70
-  ws-opts:
-    headers:
-      Host: www.50360235.xyz
-    path: /path/191019072927
-- alterId: 64
-  cipher: auto
-  name: 德国 080
-  network: ws
-  port: 443
-  server: 194.15.196.172
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_177
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10028
+  server: z-eu2.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 4d0247e0-d1da-444c-9cda-8cc20e4e4435
-  ws-opts:
-    headers:
-      Host: www.87416132.xyz
-    path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: 德国 081
-  network: ws
-  port: 443
-  server: in-full.privateip.net
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_181
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10023
+  server: z-eu1.251313.xyz
   skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: 07722fc6-a688-49fd-9896-fb9e1ca748d6
-  ws-opts:
-    headers:
-      Host: in-full.privateip.net
-    path: /racevpn
-- alterId: 0
-  cipher: auto
-  name: 德国 082
-  network: ws
-  port: 8080
-  server: 138.68.90.231
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_182
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10023
+  server: z-eu2.251313.xyz
   skip-cert-verify: true
-  type: vmess
-  uuid: 294ffdc3-5942-45ae-a154-dc6c92eacf1d
-  ws-opts:
-    headers:
-      Host: 138.68.90.231
-    path: /cctv13/hd.m3u8
-- alterId: 0
-  cipher: auto
-  name: 德国 083
-  network: http
-  port: 40969
-  server: 5.161.106.72
-  skip-cert-verify: true
-  type: vmess
-  uuid: 2fb9f60e-d4dc-458b-e3b2-d9b44f9bbd9e
-- alterId: 0
-  cipher: auto
-  name: 德国 084
-  network: http
-  port: 50978
-  server: 5.161.106.72
-  skip-cert-verify: true
-  type: vmess
-  uuid: 89e6248b-0152-4317-a6ed-b6a0cf41f2cb
-- alterId: 0
-  cipher: auto
-  name: 德国 085
-  network: http
-  port: 443
-  server: 157.90.20.18
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 086
-  network: http
-  port: 443
-  server: 5.75.168.155
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 087
-  network: http
-  port: 443
-  server: 94.130.25.155
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 088
-  network: http
-  port: 443
-  server: 167.235.136.155
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 089
-  network: http
-  port: 443
-  server: 65.21.240.108
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 090
-  network: http
-  port: 443
-  server: 5.75.247.192
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: 德国 091
-  network: http
-  port: 443
-  server: 88.198.104.211
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 4
-  cipher: auto
-  name: 德国 092
-  network: ws
-  port: 443
-  server: 146.0.42.87
-  skip-cert-verify: true
+  sni: www.cloudflare.com
   tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_187
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10019
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_188
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10019
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_190
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10035
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_192
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10012
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_193
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10012
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_194
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10020
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_195
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10020
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_196
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10013
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_197
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10013
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_198
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10008
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_199
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10008
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_200
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10027
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_201
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10027
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_202
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10034
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_203
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10034
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_204
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10007
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_205
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10007
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_206
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10021
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_207
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10021
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_208
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10036
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_209
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10036
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_210
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10005
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_211
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10005
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_212
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10006
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_213
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10010
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_214
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10010
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_215
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10011
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_216
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10011
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_218
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10030
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_219
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10004
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_221
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10029
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_222
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10029
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_231
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10201
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_232
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10201
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_234
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10022
+  server: z-eu1.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_235
+  password: sI0wl1bvYlSXu2RsMSAtAIMM
+  port: 10022
+  server: z-eu2.251313.xyz
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇩🇪_德国_312
+  password: humanity
+  port: 443
+  server: 45.80.111.7
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  udp: true
   ws-opts:
-    headers:
-      Host: germany-dusseldorf.mah3Hoet.com
-    path: /ws
+    path: /assignment
+- name: 🇩🇪_德国_317
+  password: humanity
+  port: 443
+  server: gr3.levikogjgfdd.ir
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
 - cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_120
+  name: 德国/Germany-4
+  password: TU4NUJuMe4XlZ3NCQ_1KiQ
+  port: 1080
+  server: netixu.mashhad1market.ir
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_78
   password: 2YdE4lFOid5a
   port: 8388
   server: 51.195.126.38
   type: ss
-- name: 🇩🇪DE_213
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: rapid-firefly.rooster465.autos
-  sni: rapid-firefly.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_188
+- name: 🇩🇪DE_234
   network: tcp
   password: FH72359861
   port: 443
-  server: epic-iguana.rooster465.autos
+  server: 3.64.117.92
   sni: epic-iguana.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_239
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: 35.156.115.70
-  sni: fine-elf.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_259
-  network: tcp
-  password: fg20mtCFHy
-  port: 5859
-  server: 209.38.240.27
-  skip-cert-verify: true
-  sni: uyped.southbyte.xyz
-  type: trojan
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_35
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 213.202.208.199
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_21
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
   type: ss
-- name: 🇩🇪DE_241
-  network: tcp
-  password: PQ05174892
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_101
+  password: amazonskr05
   port: 443
-  server: 54.93.54.137
-  sni: informed-alpaca.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_183
+  server: 3.66.86.250
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_73
+  password: amazonskr05
+  port: 443
+  server: 18.199.102.146
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_214
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 120.232.250.163
+  type: ss
+- name: 🇩🇪DE_143
   network: tcp
   password: FH72359861
   port: 443
-  server: 35.159.21.7
+  server: summary-lemming.rooster465.autos
   sni: summary-lemming.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_131
+- name: 🇩🇪DE_106
   network: tcp
   password: AE62539071
   port: 443
   server: up-dinosaur.rooster465.autos
   sni: up-dinosaur.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_242
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: 63.179.149.234
-  sni: usable-dogfish.rooster465.autos
-  type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_3
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_22
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
   type: ss
-- name: 🇩🇪DE_238
+- name: 🇩🇪DE_150
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 63.176.171.181
+  sni: engaging-toucan.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_155
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: epic-iguana.rooster465.autos
+  sni: epic-iguana.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_175
   network: tcp
   password: PQ05174892
   port: 443
-  server: 3.124.187.220
-  sni: rapid-firefly.rooster465.autos
+  server: casual-quail.rooster465.autos
+  sni: casual-quail.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_286
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: dashing-bedbug.rooster465.autos
-  sni: dashing-bedbug.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_129
-  password: amazonskr05
-  port: 443
-  server: 3.66.86.250
-  type: ss
-- name: 🇩🇪DE_209
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: fine-elf.rooster465.autos
-  sni: fine-elf.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_162
+- name: 🇩🇪DE_135
   network: tcp
   password: FH72359861
   port: 443
   server: renewed-porpoise.rooster465.autos
   sni: renewed-porpoise.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_279
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: normal-cow.rooster465.autos
-  sni: normal-cow.rooster465.autos
-  type: trojan
 - cipher: aes-256-cfb
-  name: 🇩🇪DE_277
+  name: 🇩🇪DE_258
   password: amazonskr05
   port: 443
-  server: 63.178.246.78
+  server: 3.121.109.240
   type: ss
-- name: 🇩🇪DE_210
-  network: tcp
-  password: PQ05174892
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_228
+  password: amazonskr05
   port: 443
-  server: informed-alpaca.rooster465.autos
-  sni: informed-alpaca.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_280
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: gentle-raptor.rooster465.autos
-  sni: gentle-raptor.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_240
+  server: 52.59.195.252
+  type: ss
+- name: 🇩🇪DE_200
   network: tcp
   password: PQ05174892
   port: 443
   server: 54.93.209.134
   sni: alert-fish.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_232
+- name: 🇩🇪DE_149
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 35.159.21.7
+  sni: summary-lemming.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_176
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: rapid-firefly.rooster465.autos
+  sni: rapid-firefly.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_254
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: 35.156.13.144
+  sni: normal-cow.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_202
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 63.179.149.234
+  sni: usable-dogfish.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_148
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 3.120.138.119
+  sni: up-dinosaur.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_161
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 3.120.70.66
+  sni: renewed-porpoise.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_172
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: fine-elf.rooster465.autos
+  sni: fine-elf.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_250
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: 3.64.59.246
+  sni: gentle-raptor.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_173
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: informed-alpaca.rooster465.autos
+  sni: informed-alpaca.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_192
   network: tcp
   password: PQ05174892
   port: 443
   server: usable-dogfish.rooster465.autos
   sni: usable-dogfish.rooster465.autos
   type: trojan
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_64
-  password: amazonskr05
-  port: 443
-  server: 3.76.30.105
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_4
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
-- name: 🇩🇪DE_189
+- name: 🇩🇪DE_127
   network: tcp
   password: FH72359861
   port: 443
@@ -585,17 +797,59 @@ proxies:
   sni: engaging-toucan.rooster465.autos
   type: trojan
 - cipher: aes-256-cfb
-  name: 🇩🇪DE_268
+  name: 🇩🇪DE_221
   password: amazonskr05
   port: 443
   server: 3.79.230.55
   type: ss
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_110
-  password: amazonskr05
+- name: 🇩🇪DE_199
+  network: tcp
+  password: PQ05174892
   port: 443
-  server: 18.199.102.146
+  server: 35.156.115.70
+  sni: fine-elf.rooster465.autos
+  type: trojan
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_5
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 213.202.208.199
   type: ss
+- name: 🇩🇪DE_265
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 3.124.187.220
+  sni: rapid-firefly.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_229
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: normal-cow.rooster465.autos
+  sni: normal-cow.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_266
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 54.93.54.137
+  sni: informed-alpaca.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_264
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 3.120.37.181
+  sni: many-cricket.rooster465.autos
+  type: trojan
+- name: 🇩🇪DE_222
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: alert-fish.rooster465.autos
+  sni: alert-fish.rooster465.autos
+  type: trojan
 - cipher: aes-256-cfb
   name: 🇩🇪DE_61
   password: amazonskr05
@@ -603,90 +857,41 @@ proxies:
   server: 51.102.205.132
   type: ss
 - cipher: aes-256-cfb
-  name: 🇩🇪DE_278
+  name: 🇩🇪DE_99
   password: amazonskr05
   port: 443
-  server: 52.59.195.252
+  server: 3.76.30.105
   type: ss
-- name: 🇩🇪DE_237
+- name: 🇩🇪DE_230
   network: tcp
-  password: PQ05174892
+  password: EQ30679154
   port: 443
-  server: 3.120.37.181
-  sni: many-cricket.rooster465.autos
+  server: gentle-raptor.rooster465.autos
+  sni: gentle-raptor.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_288
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: 3.64.117.92
-  sni: epic-iguana.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_271
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: alert-fish.rooster465.autos
-  sni: alert-fish.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_184
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: 63.176.171.181
-  sni: engaging-toucan.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_212
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: casual-quail.rooster465.autos
-  sni: casual-quail.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_215
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: many-cricket.rooster465.autos
-  sni: many-cricket.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_243
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_12
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
+  type: ss
+- name: 🇩🇪DE_203
   network: tcp
   password: PQ05174892
   port: 443
   server: 18.199.174.201
   sni: casual-quail.rooster465.autos
   type: trojan
-- name: 🇩🇪DE_182
-  network: tcp
-  password: AE62539071
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_227
+  password: amazonskr05
   port: 443
-  server: 3.120.138.119
-  sni: up-dinosaur.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_196
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: 3.120.70.66
-  sni: renewed-porpoise.rooster465.autos
-  type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_94
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
+  server: 18.153.64.41
   type: ss
-- name: 🇩🇪DE_173
+- name: 🇩🇪DE_178
   network: tcp
-  password: FH72359861
+  password: PQ05174892
   port: 443
-  server: summary-lemming.rooster465.autos
-  sni: summary-lemming.rooster465.autos
-  type: trojan
-- name: 德国_1
-  password: MiTiVPN
-  port: 443
-  server: 151.101.56.7
-  sni: default.fastly.com
+  server: many-cricket.rooster465.autos
+  sni: many-cricket.rooster465.autos
   type: trojan
