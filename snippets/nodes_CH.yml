@@ -1,29 +1,49 @@
 proxies:
-- name: 🇨🇭_瑞士_178
-  password: sI0wl1bvYlSXu2RsMSAtAIMM
-  port: 443
-  server: starlink-ch.251313.xyz
+- name: CH 1 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11005
+  server: 64.110.64.80
   skip-cert-verify: true
-  sni: www.cloudflare.com
-  tls: true
   type: trojan
   udp: true
-- name: 🇨🇭_瑞士_633
-  password: humanity
-  port: 443
-  server: 185.18.250.252
+- name: CH 2 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11007
+  server: 64.110.64.80
   skip-cert-verify: true
-  sni: www.calmlunch.com
-  tls: true
   type: trojan
   udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
+- name: CH 3 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11006
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 4 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11004
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 5 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11000
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163
   type: ss
+- name: 🇨🇭CH_10
+  network: tcp
+  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
+  port: 443
+  server: tr-switzerlandgopota.unlimited-access.ru
+  sni: tr-switzerlandgopota.unlimited-access.ru
+  type: trojan
