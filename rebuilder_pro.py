@@ -3,7 +3,7 @@
 
 """
 ================================================================================
-Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY short-id 修复）
+Clash 配置文件修复工具 (rebuilder.py) - 最终完整版
 ================================================================================
 
 【功能总览】
@@ -20,8 +20,6 @@ Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY sh
     11. 校验 RULE-SET 规则，若引用的 rule-provider 不存在则替换为 REJECT。
     12.【新增】校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
     13.【新增】自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
-    14.【新增】自动修复 VLESS+REALITY 节点的 short-id 格式错误（确保为合法的十六进制
-        字符串，长度偶数，最多16字符；非法内容自动清理，空值生成随机有效值）。
 
 【用法】
     python rebuilder.py <输入文件> <输出文件>
@@ -36,8 +34,6 @@ Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY sh
 import sys
 import yaml
 from collections import Counter, defaultdict
-import re
-import random
 
 # ============================================================================
 # 全局配置（可按需修改）
@@ -464,153 +460,7 @@ def fix_node_group_name_conflicts(proxies, groups):
 
 
 # ============================================================================
-# 13. 【新增】修复 REALITY short-id 格式错误
-#      确保所有 VLESS+REALITY 节点的 short-id 为合法的十六进制字符串，
-#      长度为偶数且不超过16字符。非法字符自动清理，空值自动生成随机有效值。
-# ============================================================================
-def fix_reality_short_id(proxies):
-    """
-    修复 VLESS+REALITY 节点的 short-id 字段。
-    规则：
-      - 必须是十六进制字符串（仅含 0-9, a-f, A-F）
-      - 长度必须为偶数（最多 16 个字符）
-      - 如果值非法或缺失，自动清理并补齐（缺失时生成随机4位十六进制）
-    返回修复的节点数量。
-    """
-    if not isinstance(proxies, list):
-        return 0
-
-    fixed = 0
-    hex_pattern = re.compile(r'^[0-9a-fA-F]*$')  # 用于验证合法性
-
-    for p in proxies:
-        if not isinstance(p, dict) or p.get('type') != 'vless':
-            continue
-
-        # 获取 reality-opts 字典
-        reality = p.get('reality-opts')
-        if not isinstance(reality, dict):
-            # 若不存在 reality-opts，跳过（不是 REALITY 节点）
-            continue
-
-        sid = reality.get('short-id')
-        if sid is None:
-            # 若 short-id 字段完全缺失，可选择性添加默认值。
-            # 此处选择自动生成一个随机有效值，以便配置通过检查。
-            # 若希望保持原样，可将以下三行注释掉。
-            default_sid = format(random.randint(0, 65535), '04x')
-            reality['short-id'] = default_sid
-            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机有效值 '{default_sid}'")
-            fixed += 1
-            continue   # 已处理，无需继续清理
-
-        # 转为字符串（可能是数字或其他类型）
-        sid_str = str(sid)
-
-        # ---------- 步骤1：移除所有非十六进制字符 ----------
-        cleaned = re.sub(r'[^0-9a-fA-F]', '', sid_str)
-
-        # ---------- 步骤2：如果清理后为空，生成随机有效值 ----------
-        if not cleaned:
-            cleaned = format(random.randint(0, 65535), '04x')
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 不含合法十六进制字符，已替换为 '{cleaned}'")
-            fixed += 1
-
-        # ---------- 步骤3：处理长度（必须为偶数，且 ≤ 16） ----------
-        original_cleaned = cleaned
-        if len(cleaned) % 2 != 0:
-            cleaned += '0'   # 末尾补 '0' 使其成为偶数
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 长度奇数，末尾补 0 -> '{cleaned}'")
-            fixed += 1
-        if len(cleaned) > 16:
-            cleaned = cleaned[:16]   # 截断至16字符
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 超过 16 字符，截断为 '{cleaned}'")
-            fixed += 1
-
-        # ---------- 步骤4：若最终结果与原始不同，更新配置 ----------
-        if cleaned != sid_str:
-            reality['short-id'] = cleaned
-            # 注意：如果之前已经因为缺失而添加，此处不会再次增加计数
-            # 如果 cleaned 与 sid_str 不同，但之前未计数（比如只是清理了非法字符），则增加计数
-            # 为避免重复计数，我们只在确实修改了值的情况下增加，但上面已经对特定情况增加了，这里要避免重复。
-            # 我们采用更精确的方式：如果 cleaned != sid_str 且之前没有因为清理或补齐而增加计数，
-            # 但现在无法区分，我们简单处理：如果 cleaned != sid_str 且 sid 原本不是 None，则增加一次。
-            # 更好的做法：上面每次修改都增加了 fixed，但可能重复。我们重构：将 fixed 增加放在最终判断。
-            # 但为了简单，我们让每个修复步骤单独增加，但可能重复（比如既补了0又截断，会增加两次，但实际修复了一处）。
-            # 我们可以采用标志变量。
-            # 这里为了简单，我们采用：每次修改都增加，但会导致计数偏多，但影响不大。
-            # 但更准确的是：仅在最终值改变时增加一次。
-            # 我们重新实现：先用临时变量处理，最终比较。
-            # 但为了符合原有代码风格，我们保持简单，但上面的步骤已经增加了 fixed，可能导致重复。我们重构一下：
-            # 我们撤销上面的 fixed 增加，改为最后统一判断。
-            # 但是已经写了，我们快速修正：重新实现函数，使用临时变量。
-            # 我将在下面重写这个函数，用更准确的方式。
-            # 由于篇幅，此处我将重写整个函数，但为了不破坏已有代码，我将在下面提供修正版。
-
-    return fixed
-
-
-# ============================================================================
-# 修正版 fix_reality_short_id（避免重复计数）
-# ============================================================================
-def fix_reality_short_id(proxies):
-    """
-    修复 VLESS+REALITY 节点的 short-id 字段。
-    规则：
-      - 必须是十六进制字符串（仅含 0-9, a-f, A-F）
-      - 长度必须为偶数（最多 16 个字符）
-      - 如果值非法或缺失，自动清理并补齐（缺失时生成随机4位十六进制）
-    返回修复的节点数量（仅当最终值发生变化时计数）。
-    """
-    if not isinstance(proxies, list):
-        return 0
-
-    fixed = 0
-
-    for p in proxies:
-        if not isinstance(p, dict) or p.get('type') != 'vless':
-            continue
-
-        reality = p.get('reality-opts')
-        if not isinstance(reality, dict):
-            continue
-
-        sid = reality.get('short-id')
-        # 处理缺失情况
-        if sid is None:
-            new_sid = format(random.randint(0, 65535), '04x')
-            reality['short-id'] = new_sid
-            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机有效值 '{new_sid}'")
-            fixed += 1
-            continue  # 已处理，继续下一个
-
-        # 转为字符串
-        sid_str = str(sid)
-
-        # 1. 移除非法字符
-        cleaned = re.sub(r'[^0-9a-fA-F]', '', sid_str)
-
-        # 2. 若为空，生成随机值
-        if not cleaned:
-            cleaned = format(random.randint(0, 65535), '04x')
-
-        # 3. 处理长度（偶数且≤16）
-        if len(cleaned) % 2 != 0:
-            cleaned += '0'
-        if len(cleaned) > 16:
-            cleaned = cleaned[:16]
-
-        # 4. 若最终值与原值不同，更新并计数
-        if cleaned != sid_str:
-            reality['short-id'] = cleaned
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 已修正为 '{cleaned}'（原值: '{sid_str}'）")
-            fixed += 1
-
-    return fixed
-
-
-# ============================================================================
-# 14. 主函数
+# 13. 主函数
 # ============================================================================
 def fix_clash_config(input_file, output_file):
     # ---------- 1. 读取文件 ----------
@@ -639,16 +489,8 @@ def fix_clash_config(input_file, output_file):
     # ---------- 3. 处理 proxies（节点） ----------
     proxy_names = set()
     if 'proxies' in config and isinstance(config['proxies'], list):
-        # 先修复 encryption
         config['proxies'] = fix_vless_encryption(config['proxies'])
-
-        # ===== 新增：修复 REALITY short-id =====
-        total_fixed = fix_reality_short_id(config['proxies'])
-        # =====================================
-
-        # 修复空节点名
-        total_fixed += fix_empty_node_names(config['proxies'])
-
+        total_fixed = fix_empty_node_names(config['proxies'])
         check_duplicate_node_names(config['proxies'])
         proxy_names = {p.get('name') for p in config['proxies'] if isinstance(p, dict) and 'name' in p}
         print(f"ℹ️ 共加载 {len(proxy_names)} 个节点")
