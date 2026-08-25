@@ -60,11 +60,11 @@ jobs:
 
       # ---------- 修复配置文件格式（可选） ----------
       - name: 修复可预见错误1
-        run: python ./rebuilder_pro.py list.metaspeed.yml  list.metaspeedrbd1.yml 
+        run: python ./rebuilder_pro1.py list.metaspeed.yml  list.metaspeedrbd1.yml 
         continue-on-error: true
      # ---------- 修复可预见错误（可选） ----------
       - name: 修复可预见错误2
-        run: python ./rebuilder_pro.py list.metaspeedrp.yml  list.metaspeedrbd.yml 
+        run: python ./rebuilder_pro1.py list.metaspeedrp.yml  list.metaspeedrbd.yml 
         continue-on-error: true
 
       # ---------- 提交并推送变更（不再拉取） ----------
