@@ -3,7 +3,7 @@
 
 """
 ================================================================================
-Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY short-id 修复 + 调试）
+Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY short-id 保守修复 + 调试）
 ================================================================================
 
 【功能总览】
@@ -18,11 +18,11 @@ Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY sh
     9. 修复 proxies 中节点名为空的问题（自动生成唯一名称）。
     10. 修复 proxy-groups 中 use 和 proxies 同时存在的问题（移除 proxies）。
     11. 校验 RULE-SET 规则，若引用的 rule-provider 不存在则替换为 REJECT。
-    12.【新增】校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
-    13.【新增】自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
-    14.【新增】自动修复 VLESS+REALITY 节点的 short-id 格式错误（确保为合法的十六进制
-        字符串，长度偶数，最多16字符；非法内容自动清理，空值生成随机有效值）。
-    15.【新增调试】在修复前打印所有存在 short-id 问题的节点（含序号、来源、名称、原值、问题类型）。
+    12. 校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
+    13. 自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
+    14. 【保守修复】修复 VLESS+REALITY 节点的 short-id：仅处理缺失或长度超限，
+        不修改有效值（不强制偶数长度，不清除非十六进制字符）。
+    15. 【调试】在修复前打印所有存在 short-id 问题的节点（含序号、来源、名称、原值、问题类型）。
 
 【用法】
     python rebuilder.py <输入文件> <输出文件>
@@ -39,7 +39,7 @@ import yaml
 from collections import Counter, defaultdict
 import re
 import random
-import os   # 【新增】用于处理缓存文件路径
+import os
 
 # ============================================================================
 # 全局配置（可按需修改）
@@ -374,11 +374,6 @@ def validate_rule_set_references(rules, provider_names):
 # 11. 校验 rule-providers 定义完整性（只警告，不修改）
 # ============================================================================
 def validate_rule_providers(providers):
-    """
-    检查每个 rule-provider 是否包含必要的字段。
-    对于 http 类型，必须有 url；对于 file 类型，必须有 file。
-    若缺失，输出警告。
-    """
     if not isinstance(providers, dict):
         return
 
@@ -398,59 +393,42 @@ def validate_rule_providers(providers):
             if 'file' not in cfg:
                 print(f"⚠️ 警告：rule-provider '{name}' 类型为 file，但缺少 'file' 字段，请指定本地文件路径")
 
-        # 可选检查 behavior 字段
         behavior = cfg.get('behavior')
         if behavior and behavior not in ('domain', 'ip', 'classic'):
             print(f"⚠️ 警告：rule-provider '{name}' 的 behavior 字段值 '{behavior}' 不是标准值（domain/ip/classic）")
 
 
 # ============================================================================
-# 12. 【新增】修复节点与策略组同名冲突
-#      Clash 要求所有 proxies 和 proxy-groups 的 name 必须全局唯一。
-#      本函数检测到同名时，重命名节点（添加后缀 " (节点)"），并更新所有策略组
-#      的 proxies 列表中对旧名称的引用，从而避免重复名称错误。
+# 12. 修复节点与策略组同名冲突
 # ============================================================================
 def fix_node_group_name_conflicts(proxies, groups):
-    """
-    修复节点名与策略组名冲突的情况。
-    若有同名，则重命名节点（添加 " (节点)" 后缀），并更新所有策略组 proxies 列表中的引用。
-    返回修复计数。
-    """
     if not isinstance(proxies, list) or not isinstance(groups, list):
         return 0
 
-    # 收集策略组名（排除内置关键字不影响）
     group_names = {g['name'] for g in groups if isinstance(g, dict) and 'name' in g}
-    # 收集节点名
     proxy_names = {p['name'] for p in proxies if isinstance(p, dict) and 'name' in p}
-    # 计算冲突名称（交集）
     conflicts = proxy_names & group_names
     if not conflicts:
         return 0
 
     fixed = 0
-    # 构建节点名到节点对象的映射（用于快速修改）
     proxy_dict = {p['name']: p for p in proxies if isinstance(p, dict) and 'name' in p}
 
     for name in conflicts:
-        # 获取所有同名的节点（正常情况下只有一个，但以防万一）
         nodes = [p for p in proxies if isinstance(p, dict) and p.get('name') == name]
         if not nodes:
             continue
 
-        # 生成新名，避免与现有名称冲突（包括节点和组）
         new_name = f"{name} (节点)"
         existing = {p['name'] for p in proxies if isinstance(p, dict) and 'name' in p} | group_names
         while new_name in existing:
             new_name += "_"
 
-        # 重命名所有同名节点
         for p in nodes:
             p['name'] = new_name
             fixed += 1
             print(f"🔧 修复：节点 '{name}' 与策略组重名，重命名为 '{new_name}'")
 
-        # 更新所有策略组的 proxies 列表中的引用（将旧名替换为新名）
         for g in groups:
             if not isinstance(g, dict):
                 continue
@@ -466,108 +444,22 @@ def fix_node_group_name_conflicts(proxies, groups):
 
 
 # ============================================================================
-# 13. 【新增】修复 REALITY short-id 格式错误
-#      确保所有 VLESS+REALITY 节点的 short-id 为合法的十六进制字符串，
-#      长度为偶数且不超过16字符。非法字符自动清理，空值自动生成随机有效值。
+# 13. 【保守修复】修复 REALITY short-id（仅处理缺失/空值及超长）
+#     不再强制偶数长度，不再清除非十六进制字符，避免改变有效值。
 # ============================================================================
 def fix_reality_short_id(proxies):
     """
-    修复 VLESS+REALITY 节点的 short-id 字段。
+    保守修复 VLESS+REALITY 节点的 short-id 字段。
     规则：
-      - 必须是十六进制字符串（仅含 0-9, a-f, A-F）
-      - 长度必须为偶数（最多 16 个字符）
-      - 如果值非法或缺失，自动清理并补齐（缺失时生成随机4位十六进制）
+      - 若 short-id 缺失或为空字符串，生成随机 8 位十六进制值。
+      - 若长度超过 16 字符，截断至 16 字符（并警告）。
+      - 其他情况（非十六进制、奇数长度）原样保留，仅输出调试信息（可选）。
     返回修复的节点数量。
     """
     if not isinstance(proxies, list):
         return 0
 
     fixed = 0
-    hex_pattern = re.compile(r'^[0-9a-fA-F]*$')  # 用于验证合法性
-
-    for p in proxies:
-        if not isinstance(p, dict) or p.get('type') != 'vless':
-            continue
-
-        # 获取 reality-opts 字典
-        reality = p.get('reality-opts')
-        if not isinstance(reality, dict):
-            # 若不存在 reality-opts，跳过（不是 REALITY 节点）
-            continue
-
-        sid = reality.get('short-id')
-        if sid is None:
-            # 若 short-id 字段完全缺失，可选择性添加默认值。
-            # 此处选择自动生成一个随机有效值，以便配置通过检查。
-            # 若希望保持原样，可将以下三行注释掉。
-            default_sid = format(random.randint(0, 65535), '04x')
-            reality['short-id'] = default_sid
-            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机有效值 '{default_sid}'")
-            fixed += 1
-            continue   # 已处理，无需继续清理
-
-        # 转为字符串（可能是数字或其他类型）
-        sid_str = str(sid)
-
-        # ---------- 步骤1：移除所有非十六进制字符 ----------
-        cleaned = re.sub(r'[^0-9a-fA-F]', '', sid_str)
-
-        # ---------- 步骤2：如果清理后为空，生成随机有效值 ----------
-        if not cleaned:
-            cleaned = format(random.randint(0, 65535), '04x')
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 不含合法十六进制字符，已替换为 '{cleaned}'")
-            fixed += 1
-
-        # ---------- 步骤3：处理长度（必须为偶数，且 ≤ 16） ----------
-        original_cleaned = cleaned
-        if len(cleaned) % 2 != 0:
-            cleaned += '0'   # 末尾补 '0' 使其成为偶数
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 长度奇数，末尾补 0 -> '{cleaned}'")
-            fixed += 1
-        if len(cleaned) > 16:
-            cleaned = cleaned[:16]   # 截断至16字符
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 超过 16 字符，截断为 '{cleaned}'")
-            fixed += 1
-
-        # ---------- 步骤4：若最终结果与原始不同，更新配置 ----------
-        if cleaned != sid_str:
-            reality['short-id'] = cleaned
-            # 注意：如果之前已经因为缺失而添加，此处不会再次增加计数
-            # 如果 cleaned 与 sid_str 不同，但之前未计数（比如只是清理了非法字符），则增加计数
-            # 为避免重复计数，我们只在确实修改了值的情况下增加，但上面已经对特定情况增加了，这里要避免重复。
-            # 我们采用更精确的方式：如果 cleaned != sid_str 且之前没有因为清理或补齐而增加计数，
-            # 但现在无法区分，我们简单处理：如果 cleaned != sid_str 且 sid 原本不是 None，则增加一次。
-            # 更好的做法：上面每次修改都增加了 fixed，但可能重复。我们重构：将 fixed 增加放在最终判断。
-            # 但为了简单，我们让每个修复步骤单独增加，但可能重复（比如既补了0又截断，会增加两次，但实际修复了一处）。
-            # 我们可以采用标志变量。
-            # 这里为了简单，我们采用：每次修改都增加，但会导致计数偏多，但影响不大。
-            # 但更准确的是：仅在最终值改变时增加一次。
-            # 我们重新实现：先用临时变量处理，最终比较。
-            # 但为了符合原有代码风格，我们保持简单，但上面的步骤已经增加了 fixed，可能导致重复。我们重构一下：
-            # 我们撤销上面的 fixed 增加，改为最后统一判断。
-            # 但是已经写了，我们快速修正：重新实现函数，使用临时变量。
-            # 我将在下面重写这个函数，用更准确的方式。
-            # 由于篇幅，此处我将重写整个函数，但为了不破坏已有代码，我将在下面提供修正版。
-
-    return fixed
-
-
-# ============================================================================
-# 修正版 fix_reality_short_id（避免重复计数）
-# ============================================================================
-def fix_reality_short_id(proxies):
-    """
-    修复 VLESS+REALITY 节点的 short-id 字段。
-    规则：
-      - 必须是十六进制字符串（仅含 0-9, a-f, A-F）
-      - 长度必须为偶数（最多 16 个字符）
-      - 如果值非法或缺失，自动清理并补齐（缺失时生成随机4位十六进制）
-    返回修复的节点数量（仅当最终值发生变化时计数）。
-    """
-    if not isinstance(proxies, list):
-        return 0
-
-    fixed = 0
 
     for p in proxies:
         if not isinstance(p, dict) or p.get('type') != 'vless':
@@ -578,41 +470,34 @@ def fix_reality_short_id(proxies):
             continue
 
         sid = reality.get('short-id')
-        # 处理缺失情况
-        if sid is None:
-            new_sid = format(random.randint(0, 65535), '04x')
+        # 处理缺失或空字符串
+        if sid is None or (isinstance(sid, str) and sid.strip() == ''):
+            new_sid = format(random.randint(0, 0xFFFFFFFF), '08x')  # 8位十六进制
             reality['short-id'] = new_sid
-            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机有效值 '{new_sid}'")
+            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机值 '{new_sid}'")
             fixed += 1
-            continue  # 已处理，继续下一个
+            continue
 
-        # 转为字符串
         sid_str = str(sid)
+        original = sid_str
 
-        # 1. 移除非法字符
-        cleaned = re.sub(r'[^0-9a-fA-F]', '', sid_str)
-
-        # 2. 若为空，生成随机值
-        if not cleaned:
-            cleaned = format(random.randint(0, 65535), '04x')
-
-        # 3. 处理长度（偶数且≤16）
-        if len(cleaned) % 2 != 0:
-            cleaned += '0'
-        if len(cleaned) > 16:
-            cleaned = cleaned[:16]
-
-        # 4. 若最终值与原值不同，更新并计数
-        if cleaned != sid_str:
-            reality['short-id'] = cleaned
-            print(f"🔧 修复：节点 '{p.get('name')}' 的 short-id 已修正为 '{cleaned}'（原值: '{sid_str}'）")
+        # 仅处理超长（>16）的情况
+        if len(sid_str) > 16:
+            new_sid = sid_str[:16]
+            reality['short-id'] = new_sid
+            print(f"⚠️ 警告：节点 '{p.get('name')}' 的 short-id 长度超过16，已截断为 '{new_sid}'（原值: '{sid_str}'）")
             fixed += 1
+        # 其他情况（包括非十六进制、奇数长度）不做修改，可选择性输出警告（注释掉以免刷屏）
+        # elif not re.fullmatch(r'^[0-9a-fA-F]+$', sid_str):
+        #     print(f"ℹ️ 注意：节点 '{p.get('name')}' 的 short-id 包含非十六进制字符，未修改: '{sid_str}'")
+        # elif len(sid_str) % 2 != 0:
+        #     print(f"ℹ️ 注意：节点 '{p.get('name')}' 的 short-id 长度为奇数，未修改: '{sid_str}'")
 
     return fixed
 
 
 # ============================================================================
-# 【新增调试】列出所有存在 short-id 问题的节点（序号、来源、名称、原值、问题）
+# 14. 【调试】列出所有存在 short-id 问题的节点（序号、来源、名称、原值、问题）
 # ============================================================================
 def debug_print_bad_short_ids(config, config_file_path):
     """
@@ -634,13 +519,11 @@ def debug_print_bad_short_ids(config, config_file_path):
         for provider_name, provider_cfg in providers.items():
             if not isinstance(provider_cfg, dict):
                 continue
-            # 只处理 http 类型（通常有 path 缓存）
             if provider_cfg.get('type') != 'http':
                 continue
             cache_path = provider_cfg.get('path')
             if not cache_path:
                 continue
-            # 处理相对路径
             if not os.path.isabs(cache_path):
                 cache_path = os.path.join(base_dir, cache_path)
             if not os.path.exists(cache_path):
@@ -652,7 +535,6 @@ def debug_print_bad_short_ids(config, config_file_path):
             except Exception:
                 continue
 
-            # 解析缓存内容
             proxies_list = None
             if isinstance(data, list):
                 proxies_list = data
@@ -673,7 +555,6 @@ def debug_print_bad_short_ids(config, config_file_path):
 
     problem_count = 0
     for idx, (source, p) in enumerate(all_proxies, start=1):
-        # 只检查 VLESS 且包含 reality-opts
         if not isinstance(p, dict) or p.get('type') != 'vless':
             continue
         reality = p.get('reality-opts')
@@ -688,10 +569,8 @@ def debug_print_bad_short_ids(config, config_file_path):
             issues.append("缺失 (None)")
         else:
             sid_str = str(sid)
-            # 检查十六进制
             if not re.fullmatch(r'^[0-9a-fA-F]+$', sid_str):
                 issues.append(f"含非十六进制字符 ('{sid_str}')")
-            # 检查长度
             if len(sid_str) % 2 != 0:
                 issues.append(f"长度为奇数 ({len(sid_str)})")
             if len(sid_str) > 16:
@@ -713,7 +592,7 @@ def debug_print_bad_short_ids(config, config_file_path):
 
 
 # ============================================================================
-# 14. 主函数
+# 15. 主函数
 # ============================================================================
 def fix_clash_config(input_file, output_file):
     # ---------- 1. 读取文件 ----------
@@ -731,7 +610,7 @@ def fix_clash_config(input_file, output_file):
         print("❌ 根元素不是字典")
         sys.exit(1)
 
-    # ============ 【新增调试】打印所有 short-id 有问题的节点 ============
+    # ============ 【调试】打印所有 short-id 有问题的节点 ============
     debug_print_bad_short_ids(config, input_file)
     # ================================================================
 
@@ -740,18 +619,17 @@ def fix_clash_config(input_file, output_file):
     if 'proxy-providers' in config and isinstance(config['proxy-providers'], dict):
         provider_names = set(config['proxy-providers'].keys())
         print(f"ℹ️ 发现 {len(provider_names)} 个 proxy-provider: {', '.join(provider_names) if provider_names else '(无)'}")
-        # 【新增】验证 rule-providers 定义完整性
         validate_rule_providers(config['proxy-providers'])
 
     # ---------- 3. 处理 proxies（节点） ----------
     proxy_names = set()
+    total_fixed = 0
     if 'proxies' in config and isinstance(config['proxies'], list):
-        # 先修复 encryption
+        # 修复 encryption
         config['proxies'] = fix_vless_encryption(config['proxies'])
 
-        # ===== 新增：修复 REALITY short-id =====
-        total_fixed = fix_reality_short_id(config['proxies'])
-        # =====================================
+        # 修复 REALITY short-id（保守模式）
+        total_fixed += fix_reality_short_id(config['proxies'])
 
         # 修复空节点名
         total_fixed += fix_empty_node_names(config['proxies'])
@@ -782,20 +660,17 @@ def fix_clash_config(input_file, output_file):
     # 4b. 修复 use 和 proxies 同时存在
     total_fixed += fix_use_and_proxies_conflict(groups)
 
-    # ========== 新增：修复节点与策略组同名冲突 ==========
-    # 必须在 fix_proxy_references 之前执行，因为重命名节点后需要更新 proxies 列表中的引用，
-    # 而 fix_proxy_references 会校验引用的有效性，若先执行会导致旧名称被判定为无效而误删。
+    # 4c. 修复节点与策略组同名冲突
     if 'proxies' in config and isinstance(config['proxies'], list):
         total_fixed += fix_node_group_name_conflicts(config['proxies'], groups)
-        # 重新收集节点名和组名，因为节点可能已被重命名，后续修复函数需要使用最新名称集合
+        # 重新收集节点名和组名
         proxy_names = {p.get('name') for p in config['proxies'] if isinstance(p, dict) and 'name' in p}
         group_names = {g.get('name') for g in groups if isinstance(g, dict)}
-    # =================================================
 
-    # 4c. 修复 proxies 引用
+    # 4d. 修复 proxies 引用
     total_fixed += fix_proxy_references(groups, proxy_names, group_names)
 
-    # 4d. 修复缺失字段 / 类型错误
+    # 4e. 修复缺失字段 / 类型错误
     for idx, g in enumerate(groups):
         if not isinstance(g, dict):
             continue
@@ -824,22 +699,22 @@ def fix_clash_config(input_file, output_file):
                 g['interval'] = DEFAULT_INTERVAL
                 total_fixed += 1
 
-    # 4e. 去重策略组名
+    # 4f. 去重策略组名
     if 'rules' in config and isinstance(config['rules'], list):
         rules = config['rules']
     else:
         rules = []
     total_fixed += deduplicate_group_names(groups, rules)
 
-    # 4f. 检测并修复循环引用
+    # 4g. 检测并修复循环引用
     total_fixed += detect_and_fix_cycles(groups)
 
-    # 4g. 修复 rules 中引用的不存在的组名
+    # 4h. 修复 rules 中引用的不存在的组名
     group_names = {g.get('name') for g in groups if isinstance(g, dict)}
     if rules:
         total_fixed += fix_rules_policy_references(rules, group_names)
 
-    # 4h. 校验 RULE-SET 规则
+    # 4i. 校验 RULE-SET 规则
     if rules:
         total_fixed += validate_rule_set_references(rules, provider_names)
 
