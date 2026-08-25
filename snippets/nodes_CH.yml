@@ -1,11 +1,62 @@
 proxies:
+- name: CH 1 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11005
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 2 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11007
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 3 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11006
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 4 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11004
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 5 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11000
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 未知4
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- cipher: chacha20-ietf-poly1305
+  name: 瑞士/苏黎世/Switzerland/Zurich [htt...
+  password: 5d79906d-89ab-430b-acbc-3327568a5be3
+  port: 33345
+  server: 140.238.175.124
+  type: ss
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163
   type: ss
-- name: 🇨🇭CH_7
+- name: 🇨🇭CH_6
   network: tcp
   password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
   port: 443

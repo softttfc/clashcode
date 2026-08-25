@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -54,13 +54,12 @@ proxies:
   type: http
   udp: true
 - auth: 8569e507-8ef7-481d-9108-6bc7f040c2ff
-  name: 🇨🇭CH_8
+  name: 🇨🇭 机场推荐:dafei.de 瑞士 02
   password: 8569e507-8ef7-481d-9108-6bc7f040c2ff
   port: 9443
   server: newos.klzvezdi.ru
   skip-cert-verify: true
   sni: newos.klzvezdi.ru
-  tls: false
   type: hysteria2
 - name: 🇨🇭 机场推荐:dafei.de 瑞士 03
   port: 443
@@ -68,13 +67,111 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 瑞士/Switzerland [https://raw.gi...
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  port: 443
-  server: 185.191.238.202
+- name: CH 1 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11005
+  server: 64.110.64.80
   skip-cert-verify: true
-  sni: che01plrhy01.tcp-reset-club.net
-  type: hysteria2
+  type: trojan
+  udp: true
+- name: CH 2 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11007
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 3 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11006
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 4 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11004
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 5 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11000
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 未知4
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 002 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- client-fingerprint: chrome
+  name: '瑞士 003 #1'
+  network: ws
+  port: 2053
+  server: 185.195.69.119
+  servername: forfreeuse.sub-flow.online
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  ws-opts:
+    headers:
+      Host: forfreeuse.sub-flow.online
+    path: /
+- name: '瑞士 004 #1'
+  network: tcp
+  port: 2551
+  server: 178.83.157.130
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8b42cd5-a149-4356-9e61-000000000000
+- name: 🇨🇭CH_1|2.0MB/s
+  password: 1Telegram_MojiVPN
+  port: 1080
+  server: ch-zur.pvdata.host
+  skip-cert-verify: true
+  type: socks5
+  udp: true
+  username: N9cyF6jvgy3ZEmCNKe04zBIR
+- name: 🇨🇭CH_2|1.6MB/s
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 瑞士/苏黎世/Switzerland/Zurich [htt...
+  password: 5d79906d-89ab-430b-acbc-3327568a5be3
+  port: 33345
+  server: 140.238.175.124
+  type: ss
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
@@ -82,23 +179,24 @@ proxies:
   server: 84.17.53.163
   type: ss
 - client-fingerprint: chrome
-  name: '瑞士 #1'
-  network: ws
-  port: 443
-  server: 138.124.124.97
-  servername: forfreeuse.rtqa.ru
-  skip-cert-verify: false
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_7
+  network: raw
+  port: 8443
+  reality-opts:
+    public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
+    short-id: '!!str 75fa8ffff864069a'
+  server: 178.83.226.142
+  servername: refersion.com
   tls: true
   type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  ws-opts:
-    headers:
-      Host: forfreeuse.rtqa.ru
-    path: '%2F'
-- client-fingerprint: chrome
+  uuid: eace00a6-39df-474d-af49-9ed74d948eba
+- alpn:
+  - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpnـ
+  client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_2
-  network: raw
+  name: 🇨🇭CH_1
+  network: tcp
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -107,51 +205,54 @@ proxies:
   tls: true
   type: vless
   uuid: 2a77a470-315c-493d-b690-59b814a804cb
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_5
+- name: 🇨🇭CH_8
   network: tcp
-  port: 8443
-  reality-opts:
-    public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
-    short-id: '!!str aa6988d03cc11454'
+  port: 42538
   server: 178.83.226.142
-  servername: refersion.com
+  tls: false
+  type: vless
+  uuid: eace00a6-39df-474d-af49-9ed74d948eba
+  ws-opts:
+    headers:
+      Host: download.windowsupdate.com
+    path: /
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇨🇭CH_14
+  network: grpc
+  port: 2054
+  reality-opts:
+    public-key: JFzd2AbfzZSnMefyKEXNIae_QEZAo5o239pmuHHZsAY
+    short-id: '!!str b27b172e7453e810'
+  server: 132.243.174.112
+  servername: www.swisscom.ch
   tls: true
   type: vless
-  uuid: 4cb63132-e084-4676-ac67-1ed6b60be05a
-- name: 🇨🇭CH_7
+  uuid: d900a139-8b5f-4758-8a32-389c6f36fc86
+- name: 🇨🇭CH_6
   network: tcp
   password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
   port: 443
   server: tr-switzerlandgopota.unlimited-access.ru
   sni: tr-switzerlandgopota.unlimited-access.ru
   type: trojan
-- client-fingerprint: chrome
-  name: '瑞士 #2'
-  network: ws
+- name: 🇨🇭CH_11
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
-  server: 83.228.193.188
-  servername: forfreeuse.rtqa.ru
-  skip-cert-verify: false
-  tls: true
+  server: che01plrhy01.tcp-reset-club.net
+  skip-cert-verify: true
+  sni: che01plrhy01.tcp-reset-club.net
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_9
+  network: tcp
+  port: 42538
+  server: 178.83.226.145
+  tls: false
   type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  uuid: eace00a6-39df-474d-af49-9ed74d948eba
   ws-opts:
     headers:
-      Host: forfreeuse.rtqa.ru
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '瑞士 #3'
-  network: ws
-  port: 443
-  server: 179.43.180.236
-  servername: forfreeuse.rtqa.ru
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  ws-opts:
-    headers:
-      Host: forfreeuse.rtqa.ru
-    path: '%2F'
+      Host: mangaarabics.com
+    path: /
