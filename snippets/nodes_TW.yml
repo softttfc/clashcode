@@ -1,4 +1,15 @@
 proxies:
+- name: 🇦🇪_阿拉伯联合酋长国_491
+  password: humanity
+  port: 443
+  server: 176.97.66.175
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
 - name: 🇨🇳 TW 1 → tg@nicevpn123
   password: 0cc6b4268dea0ba8
   port: 3389
@@ -246,43 +257,46 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: 🇹🇼TW_1|3.2MB/s
-  network: tcp
-  password: a126f35c-e832-4115-8593-b723ade3f7be
-  port: 20115
-  server: kkvlvvq-a.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
-- name: 🇹🇼TW_2|3.6MB/s
-  network: tcp
-  password: a126f35c-e832-4115-8593-b723ade3f7be
-  port: 18372
-  server: rrr2.tube-cat.com
-  skip-cert-verify: true
-  sni: r.tw3.cat.bilibili.com
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: TW
-  network: tcp
-  port: 794
-  server: 2.27.174.110
+- name: 🇹🇼_台湾_97
+  password: b49a4e18799049c3
+  port: 101
+  server: tt928m.pacemakere.com
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼TW_27
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: R3MRCG001287H3P.cybervena.com
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼TW_28
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: 114.25.9.70
-  type: ss
+  type: trojan
+  udp: true
+- name: 🇹🇼_台湾_101
+  password: 88b3dd32347d4ffa
+  port: 20062
+  server: wti11.pacemakere.com
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇹🇼_台湾_102
+  password: 58d1a580a3fc4a87
+  port: 99
+  server: w192m.iamnew2020.top
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇹🇼TW_24
+  network: tcp
+  password: a126f35c-e832-4115-8593-b723ade3f7be
+  port: 20025
+  server: hkdcrtc-e.catcat321.com
+  skip-cert-verify: true
+  sni: tw.catxstar.com
+  type: trojan
+- name: TW台湾
+  network: ws
+  password: humanity
+  port: 443
+  server: 176.97.66.175
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'

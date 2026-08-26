@@ -1,11 +1,24 @@
 proxies:
-- name: 美国_14
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵 JP日本丨yoyapai.com #2'
+  network: ws
+  port: 55009
+  server: 2001:bc8:32d7:225::3
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
+  ws-opts:
+    path: /0zNW56sF
+- name: '🇸🇬 #1'
   network: ws
   port: 8880
   server: 45.40.149.50
   servername: vms.lifetime39.workers.dev
-  skip-cert-verify: true
-  tls: true
+  skip-cert-verify: false
+  tls: false
   type: vless
   udp: true
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
@@ -13,22 +26,9 @@ proxies:
     headers:
       Host: vms.lifetime39.workers.dev
     path: /
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 JP日本丨yoyapai.com #2'
-  network: ws
-  port: 55009
-  server: 2001:bc8:32d7:225::3
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
-  ws-opts:
-    path: /0zNW56sF
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇬 #1'
+  name: 🇸🇬
   network: tcp
   port: 443
   reality-opts:
@@ -36,7 +36,7 @@ proxies:
     short-id: '!!str e53048e82bb20077'
   server: 154.196.139.50
   servername: asia.cendora.ru
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -44,7 +44,29 @@ proxies:
   ws-opts:
     headers:
       Host: asia.cendora.ru
-- name: 🏳️_未知_70
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  name: '🇸🇬_SG_新加坡 #4'
+  network: grpc
+  port: 54324
+  server: sgp3xui.jzy88.top
+  servername: sgp3xui.jzy88.top
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: cdd37253-5f9b-4dcb-8b01-ad60a29384b8
+- name: '🇸🇬_SG_新加坡 #3'
+  password: FC60532879
+  port: 443
+  server: resolved-gelding.rooster465.autos
+  skip-cert-verify: true
+  sni: resolved-gelding.rooster465.autos
+  tls: false
+  type: trojan
+  udp: true
+- name: SG新加坡(mibei77.com 米贝节点分享)
   network: ws
   port: 443
   server: 104.18.37.228
@@ -58,28 +80,6 @@ proxies:
     headers:
       Host: josni.hoyes.cloudns.ch
     path: /sg-melbi
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: '🇸🇬_SG_新加坡 #5'
-  network: grpc
-  port: 54324
-  server: sgp3xui.jzy88.top
-  servername: sgp3xui.jzy88.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: cdd37253-5f9b-4dcb-8b01-ad60a29384b8
-- name: '🇸🇬_SG_新加坡 #4'
-  password: FC60532879
-  port: 443
-  server: resolved-gelding.rooster465.autos
-  skip-cert-verify: true
-  sni: resolved-gelding.rooster465.autos
-  tls: false
-  type: trojan
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇸🇬 机场推荐:dafei.de 新加坡 01
   password: 9325a345-c72f-4637-a8f4-34f9effb7ba6
@@ -117,17 +117,15 @@ proxies:
   server: 211.91.158.44
   type: ss
   udp: true
-- name: 🇸🇬SG_4|⬇️5.1MB/s
-  network: ws
-  password: a9570330-769d-11ef-90dc-1577c1651679
-  port: 443
-  server: 104.18.1.196
-  skip-cert-verify: true
-  sni: sg-trojan.andfree.my.id
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /welcome
+- alterId: 2
+  cipher: auto
+  name: 🇸🇬SG_3|4.2MB/s - 859ms
+  network: tcp
+  port: 30845
+  server: v45.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 🇸🇬 新加坡|@stairnode
   password: 868ecdaf6aed618ec98cf78585672b2b
   port: 4674
@@ -499,63 +497,9 @@ proxies:
   server: 139.59.119.251
   type: ss
   udp: true
-- name: '新加坡 001 #1'
-  network: tcp
-  password: BxceQaOe
-  port: 34039
-  server: 54.179.227.94
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: '新加坡 002 #1'
-  network: ws
-  port: 443
-  server: v2ray1.udpgw.com
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 09961dcc-8414-4ef9-a7f3-1fd2235da390
-  ws-opts:
-    headers:
-      Host: v2ray1.udpgw.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '新加坡 003 #1'
-  network: tcp
-  port: 47630
-  server: 43.228.126.187
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
-- name: 未知 VLESS-419
-  network: tcp
-  port: 44915
-  server: 134.122.202.244
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 0ca45842-71e2-47fe-889f-9e75f93ea459
-- alterId: 0
-  cipher: auto
-  name: '新加坡 005 #1'
-  network: ws
-  port: 18063
-  server: 139.180.211.152
-  skip-cert-verify: true
-  type: vmess
-  uuid: 0d4f647b-0d96-4820-9de8-0186156185dd
-  ws-opts:
-    headers:
-      Host: m.zoom.us
-    path: /Dialog Zoom
-- alterId: 0
-  cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 001 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -566,105 +510,461 @@ proxies:
     headers:
       Host: m.twitter.com
     path: /
-- alterId: 1
-  cipher: auto
-  name: '新加坡 007 #1'
-  network: ws
-  port: 21888
-  server: 104.248.148.147
-  skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 104.248.148.147
-    path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 008 #1'
+  name: '新加坡 002 #1'
   network: ws
-  port: 80
-  server: 139.99.61.154
+  port: 18063
+  server: 139.180.211.152
   skip-cert-verify: true
   type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
+  uuid: 0d4f647b-0d96-4820-9de8-0186156185dd
   ws-opts:
     headers:
-      Host: 139.99.61.154
-    path: /vmess
-- alterId: 4
-  cipher: auto
-  name: '新加坡 009 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.134
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: eeh7iewe.com
-    path: /ws
-- alterId: 4
-  cipher: auto
-  name: '新加坡 010 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.20
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: zecjk.com
-    path: /ws
+      Host: m.zoom.us
+    path: /Dialog Zoom
 - name: 11,12|新加坡3|@ripaojiedian
   network: tcp
+  password: BxceQaOe
+  port: 41421
+  server: 3.115.9.60
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_3|4.3MB/s
+  network: tcp
+  password: BxceQaOe
+  port: 41421
+  server: 3.115.9.60
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_4|1.2MB/s
+  network: tcp
+  packet-encoding: xudp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '!!str 628b3c90c98ead4f'
+  server: 18.138.232.191
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  xudp: true
+- name: 🇸🇬_新加坡_111
+  password: a877ccb0d44f416d
+  port: 101
+  server: ggsg170.pacemakere.com
+  skip-cert-verify: true
+  tls: true
+  type: trojan
+  udp: true
+- name: 🇸🇬_新加坡_134
+  network: ws
+  port: 443
+  server: 8.222.193.153
+  servername: 571x2.r4bn.bim.hh.vavava.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+    path: /?ed=2560
+- name: 🇸🇬_新加坡_138
+  network: ws
+  port: 443
+  server: 89.34.227.245
+  servername: 571x2.r4bn.bim.hh.vavava.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+    path: /?ed=2560
+- name: 🇸🇬_新加坡_164
+  network: ws
+  port: 443
+  server: 161.117.181.127
+  servername: 571x2.r4bn.bim.hh.vavava.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+    path: /?ed=2560
+- name: 🇸🇬_新加坡_171
+  network: ws
+  port: 443
+  server: 188.253.120.206
+  servername: 571x2.r4bn.bim.hh.vavava.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 571x2.r4bn.bim.hh.vavava.kdns.fr
+    path: /?ed=2560
+- alpn:
+  - ''
+  alterId: '0'
+  cipher: auto
+  name: Singapore_None_vmess_1132
+  network: tcp
+  port: '53386'
+  server: x-ui.zxhh.top
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
+  xudp: true
+- alterId: 0
+  name: 🇸🇬SG新加坡
   password: BxceQaOe
   port: 32434
   server: 95.40.27.43
   skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
+  sni: t.me%2Fripaojiedian
+  tls: true
   type: trojan
-- cipher: aes-256-gcm
-  name: Singapore_Singapore_ss_1134
-  password: rjV4WyP9ts5eEGsr
-  port: '33308'
-  server: general-live-13877.holphappyeveryday.com
-  type: ss
   udp: true
-- name: 🇸🇬SG_56
+- name: 🇸🇬SG_54
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 47.129.98.169
+  server: 13.250.120.9
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- cipher: aes-256-gcm
+  name: 🇸🇬SG_64
+  password: 5QCeIKUZUEp4mR9Z
+  port: 443
+  server: 194.233.94.119
+  type: ss
+- name: 🇸🇬SG_33
+  network: tcp
+  password: sshs8_6481354771
+  port: 2087
+  server: 86.38.247.109
+  sni: ul-singapore1.09vpn.com
+  type: trojan
+- name: 🇸🇬SG_60
+  network: ws
+  port: 8080
+  server: 170.114.46.6
+  tls: false
+  type: vless
+  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_80
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.191.206
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_2
+  network: ws
+  port: 8880
+  server: 89.116.161.50
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime08.workers.dev
+    path: /?ed=2560
+- client-fingerprint: chrome
+  name: 🇸🇬SG_21
+  network: ws
+  port: 51262
+  server: 175.41.179.37
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  tls: true
+  type: vless
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: /@Marisa_kristi
+- cipher: aes-256-gcm
+  name: 🇸🇬SG_70
+  password: jSU7bGKupQ96YFvf
+  port: 443
+  server: 139.180.133.90
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_24
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: -O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY
+    short-id: '!!str 7f7f'
+  server: 178.128.112.70
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  uuid: 9206ae06-88ee-49b1-a558-531ade80fcaa
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_10
+  network: raw
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬SG_77
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 47.129.189.148
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_52
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.228.168.117
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_23
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  port: 4466
+  server: 140.99.130.34
+  skip-cert-verify: true
+  sni: sg3.xiaoliyu.cyou
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_46
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 18.141.233.65
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_53
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 18.143.170.35
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_90
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 1935
+  server: 194.87.10.29
+  skip-cert-verify: true
+  sni: 194.87.10.29
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_42
+  network: tcp
+  port: 19261
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 103.106.229.190
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 🇸🇬SG_69
+  network: ws
+  port: 443
+  server: 104.64.207.134
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 840476ec-64a2-496e-b406-c5a0ca1e4a13
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_71
+  network: ws
+  port: 8080
+  server: 170.114.45.6
+  tls: false
+  type: vless
+  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_81
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.255.1.222
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_66
+  network: ws
+  port: 8443
+  server: news.zoom.us
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 624dbb1d-d38b-4ed1-a967-f483af364eca
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_51
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.32.171
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- cipher: aes-256-cfb
+  name: 🇸🇬SG²_1
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.16
+  type: ss
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_40
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
+    short-id: '!!str 133a3f10a1581047'
+  server: 206.206.78.36
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+- name: 🇸🇬SG_1
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_92
+  network: tcp
+  port: 13779
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: '!!str af1bdd293097b664'
+  server: 166.108.235.162
+  servername: tesla.com
+  tls: true
+  type: vless
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+- client-fingerprint: chrome
+  name: 🇸🇬SG_57
+  network: ws
+  port: 443
+  server: 16.176.42.97
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_31
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 52.221.225.195
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_67
+  password: P6qkAwznuC076mbIR2cGPg==
+  port: 34567
+  server: 43.156.90.144
+  skip-cert-verify: true
+  sni: bing.com
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_83
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 47.128.224.158
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_68
+  password: 1427eb10-7529-4d38-a6a2-01b337868b37
+  port: 1935
+  server: sg2.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: 127.0.0.1
   tls: false
   type: hysteria2
 - name: 🇸🇬SG_28
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 18.143.149.2
+  server: 52.221.248.75
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   tls: false
   type: hysteria2
-- client-fingerprint: firefox
-  name: 🇸🇬SG_39
-  network: ws
-  port: 6768
-  server: 54.254.145.25
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-  tls: true
-  type: vless
-  uuid: edd5f4a0-19dd-4017-8d67-03482fd6472a
-  ws-opts:
-    headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-    path: /@Marisa_kristi
-- name: 🇸🇬SG_32
+- name: 🇸🇬SG_48
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.83.43
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_82
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.254.157.26
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_34
   network: ws
   port: 8080
   server: support.zoom.us
@@ -675,15 +975,28 @@ proxies:
     headers:
       Host: zero.csmaster.ggff.net
     path: /
+- client-fingerprint: chrome
+  name: 🇸🇬SG_27
+  network: ws
+  port: 443
+  server: 172.67.118.45
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  ws-opts:
+    headers:
+      Host: zero.csmaster.ggff.net
+    path: /
 - name: 🇸🇬SG_30
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 52.221.225.195
+  server: 47.129.241.226
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   tls: false
   type: hysteria2
-- name: SG新加坡
+- name: 'SG新加坡 #1'
   network: ws
   port: 443
   server: 104.18.37.228
@@ -696,308 +1009,11 @@ proxies:
     headers:
       Host: josni.hoyes.cloudns.ch
     path: '%2Fsg-melbi'
-- name: 🇸🇬SG_29
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.241.226
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_52
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.83.43
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_48
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.229.82.184
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_91
+  name: 🇸🇬SG_8
   network: tcp
-  port: 443
-  reality-opts:
-    public-key: h-O-6FBkY6v51tg1wmKOi46M44orXVysBMf35pFBTEw
-    short-id: '!!str 70d9471ddb045c3e'
-  server: 163.128.99.236
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: b6a0fd63-7191-469f-8e12-2f546050c831
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_106
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: ZMYQqRPgpITMElFSEMesSocBj7jvhhw3JGGzWEfyrBk
-    short-id: '!!str 693f679d3294f967'
-  server: 163.128.99.73
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: f3ed1945-dc1e-478a-b067-12b71badbea9
-- name: 🇸🇬SG_112
-  network: ws
-  port: 80
-  server: 170.114.45.6
-  tls: false
-  type: vless
-  uuid: 2475d0bd-bcb1-4121-9b1c-5e30841630b9
-  ws-opts:
-    headers:
-      Host: sahanwickramasinghevip.shop
-    path: /
-- name: 🇸🇬SG_51
-  network: tcp
-  port: 443
-  server: 134.122.154.210
-  tls: false
-  type: vless
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
-- name: 🇸🇬SG_65
-  network: ws
-  port: 8080
-  server: 170.114.46.6
-  tls: false
-  type: vless
-  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
-  ws-opts:
-    headers:
-      Host: zero.csmaster.ggff.net
-    path: /
-- name: 🇸🇬SG_61
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.250.120.9
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_59
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.228.168.117
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_49
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 18.141.233.65
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_98
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.191.206
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_16
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
-    short-id: '!!str d1742269'
-  server: 91.192.81.214
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 607801ac-dbdd-4938-a167-129015d9978e
-- client-fingerprint: firefox
-  name: 🇸🇬SG_88
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: yVb3JqVqlnXhiIb3E-gAVvgsXCpWgoeLIAJau9yuZ1I
-    short-id: '!!str 3fc9b11ceeb2cc6b'
-  server: 217.217.254.126
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 30430ca4-9a16-4689-a276-4014599d2f39
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-780
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: bOl3cE95DyTP45SarBNVL9VSwvAQETENlm0iMNaxLyo
-    short-id: '!!str 93a993bbc8b86684'
-  server: 163.128.99.49
-  servername: www.apple.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 6aeb24c8-efc1-4a8a-8b70-f4373c57cdc2
-- name: 🇸🇬SG_45
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.75.123
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇸🇬SG_76
-  network: ws
-  port: 443
-  server: 104.64.207.134
-  servername: zero.csmaster.ggff.net
-  tls: true
-  type: vless
-  uuid: 840476ec-64a2-496e-b406-c5a0ca1e4a13
-  ws-opts:
-    headers:
-      Host: zero.csmaster.ggff.net
-    path: /
-- client-fingerprint: chrome
-  name: 🇸🇬SG_43
-  network: ws
-  port: 51262
-  server: 175.41.179.37
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  tls: true
-  type: vless
-  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@Marisa_kristi
-- name: 🇸🇬SG_54
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.52.5
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG_24
-  password: TFElG2FVqyqG
-  port: 8388
-  server: 176.97.64.144
-  type: ss
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_36
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
-    short-id: '!!str 133a3f10a1581047'
-  server: 206.206.78.36
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
-- cipher: aes-256-gcm
-  name: 🇸🇬SG_70
-  password: 5QCeIKUZUEp4mR9Z
-  port: 443
-  server: 194.233.94.119
-  type: ss
-- name: 🇸🇬SG_26
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 52.221.248.75
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_110
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: eXWCRw_UjfzOb2vr1I-VQO3GZQCf3lwlE8Ldzn8EO2A
-    short-id: '!!str 2f8feff3c9e71b4c'
-  server: 163.128.99.208
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 980502a9-c8b4-48bb-b294-bbd846434712
-- cipher: aes-256-gcm
-  name: 🇸🇬SG_69
-  password: jSU7bGKupQ96YFvf
-  port: 80
-  server: 139.180.133.90
-  type: ss
-- name: 🇸🇬SG_73
-  password: P6qkAwznuC076mbIR2cGPg==
-  port: 34567
-  server: 43.156.90.144
-  skip-cert-verify: true
-  sni: bing.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_89
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 7xaL8MH2Wpz59ln39fV4iWGIwWUD2W3vxX93Uxd2tlI
-    short-id: '!!str b4dadf4c5a270d91'
-  server: 163.128.99.89
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: c65ab0e6-9318-43b4-a4c9-39272ee0174a
-- name: 🇸🇬SG_96
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.254.198.250
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_14
-  network: tcp
-  password: pvZE3UfT0ziK1omVLlsjINBqeqqwab1M
-  port: 50573
-  server: 139.59.238.97
-  skip-cert-verify: true
-  sni: 139.59.238.97
-  type: trojan
-- name: 🇸🇬SG_27
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.193.153
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_57
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.32.171
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_7
-  network: tcp
-  port: 12972
+  port: 10574
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: '!!str 48050fab'
@@ -1006,128 +1022,8 @@ proxies:
   tls: true
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬SG_66
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 1935
-  server: sg2.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg2.xiaoliyu.cyou
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_90
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: c6F6xZqeMH9qAwg4Wx0WgAwRis26apZzP3fbuUCeVCc
-    short-id: '!!str 09024903c3dcb6df'
-  server: 163.128.98.102
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 1eced095-170e-4e61-9b02-b172086c0b94
-- name: 🇸🇬SG_84
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  port: 1935
-  server: 194.87.10.29
-  skip-cert-verify: true
-  sni: 194.87.10.29
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_108
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: qQ12uczE0IuwcNF2CXk-XfS8u8p4e9ADS8u0ufIccXQ
-    short-id: '!!str a35c5d9c853afea0'
-  server: 163.128.98.79
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 3b25e77f-e46e-43b0-b2f2-d5d9660e5246
-- name: 🇸🇬SG_101
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.128.224.158
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇸🇬SG_67
-  password: 5QCeIKUZUEp4mR9Z
-  port: 80
-  server: 194.233.94.119
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_22
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY
-    short-id: '!!str 7f7f'
-  server: 178.128.112.70
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  uuid: 9206ae06-88ee-49b1-a558-531ade80fcaa
-- client-fingerprint: chrome
-  name: 🇸🇬SG_20
-  network: ws
-  port: 443
-  server: zero.csmaster.ggff.net
-  servername: zero.csmaster.ggff.net
-  tls: true
-  type: vless
-  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
-  ws-opts:
-    path: /
-- name: 🇸🇬SG_79
-  network: ws
-  port: 8080
-  server: 170.114.45.6
-  tls: false
-  type: vless
-  uuid: ce9e52ff-7069-4b43-91a9-c8bd4a5b38d3
-  ws-opts:
-    headers:
-      Host: zero.csmaster.ggff.net
-    path: /
-- client-fingerprint: chrome
-  name: 🇸🇬SG_25
-  network: ws
-  port: 443
-  server: 172.67.118.45
-  servername: zero.csmaster.ggff.net
-  tls: true
-  type: vless
-  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
-  ws-opts:
-    headers:
-      Host: zero.csmaster.ggff.net
-    path: /
-- name: 🇸🇬SG_95
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.189.148
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_46
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.254.190.23
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇸🇬SG_42
+  name: 🇸🇬SG_32
   network: ws
   port: 30680
   server: 149.28.138.97
@@ -1139,68 +1035,7 @@ proxies:
     headers:
       Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_102
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AAgK52aNv0or2NLswvbExwOdTFcNeUeC2hTsznFnPVQ
-    short-id: '!!str b3e189533758eb90'
-  server: 163.128.99.239
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: d64d50bb-fe6f-49bd-bbfd-a6f02dc47d69
-- name: 🇸🇬SG_60
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 18.143.170.35
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_5
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: vpn-sg-001.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_3
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 54.179.153.191
-  skip-cert-verify: true
-  sni: https://t.me/WangCai2🇨🇳
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_40
-  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  port: 4466
-  server: 140.99.130.34
-  skip-cert-verify: true
-  sni: sg3.xiaoliyu.cyou
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_97
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.144.53
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
 - name: 🇸🇬SG_47
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 52.221.227.91
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_50
   password: H7mP2xY9kJ4nQ9wR5tF6vB3z
   port: 443
   server: vpn-sg-002.fastervpn.world
@@ -1208,53 +1043,47 @@ proxies:
   sni: vpn-sg-002.fastervpn.world
   tls: false
   type: hysteria2
-- name: 🇸🇬SG_100
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.254.157.26
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: 🇸🇬SG²_1
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.16
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬SG_95
+  password: 5d79906d-89ab-430b-acbc-3327568a5be3
+  port: 43345
+  server: 140.245.121.101
   type: ss
-- name: ❓Other_38
-  password: 4hkCvE2nz6svLLqv
-  port: 36001
-  server: 52.221.223.227
-  skip-cert-verify: true
-  sni: sg-ls-z-5.lihmxssuqleitqcxpssa.uk
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_1
+- client-fingerprint: chrome
+  name: 🇸🇬SG_22
   network: ws
-  port: 8880
-  server: www.gov.ua
-  tls: false
+  port: 443
+  server: 172.67.69.106
+  servername: zero.csmaster.ggff.net
+  tls: true
   type: vless
-  uuid: 73ae7d45-1046-4cc5-9741-199375b620f1
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
   ws-opts:
     headers:
-      Host: round-resonance-a84c.13-531.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
+      Host: zero.csmaster.ggff.net
+    path: /
+- name: 🇸🇬SG_14
+  network: tcp
+  password: pvZE3UfT0ziK1omVLlsjINBqeqqwab1M
+  port: 50573
+  server: 139.59.238.97
+  skip-cert-verify: true
+  sni: 139.59.238.97
+  type: trojan
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_6
+  name: 🇸🇬SG_15
   network: tcp
-  port: 10574
+  port: 13898
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: '!!str 48050fab'
-  server: 3.0.111.82
+  server: 103.106.229.190
   servername: www.apple.com
   tls: true
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬SG_55
+- name: 🇸🇬SG_50
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
   server: 54.254.241.184
@@ -1262,8 +1091,16 @@ proxies:
   sni: vpn-sg-001.fastervpn.world
   tls: false
   type: hysteria2
+- name: 🇸🇬SG_45
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.254.190.23
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
 - client-fingerprint: chrome
-  name: 🇸🇬SG_38
+  name: 🇸🇬SG_18
   network: ws
   port: 443
   server: 64.176.36.17
@@ -1275,11 +1112,53 @@ proxies:
     headers:
       Host: zero.csmaster.ggff.net
     path: /
+- client-fingerprint: firefox
+  name: 🇸🇬SG_76
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: yVb3JqVqlnXhiIb3E-gAVvgsXCpWgoeLIAJau9yuZ1I
+    short-id: '!!str 3fc9b11ceeb2cc6b'
+  server: 217.217.254.126
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 30430ca4-9a16-4689-a276-4014599d2f39
+- cipher: aes-256-gcm
+  name: 🇸🇬SG_61
+  password: 5QCeIKUZUEp4mR9Z
+  port: 80
+  server: 194.233.94.119
+  type: ss
+- name: 🇸🇬SG_78
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.254.198.250
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_49
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.52.5
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_29
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.193.153
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
 - client-fingerprint: chrome
-  name: 🇸🇬SG_72
+  name: 🇸🇬SG_87
   network: ws
   port: 8443
-  server: news.zoom.us
+  server: 141.193.213.20
   servername: zero.csmaster.ggff.net
   tls: true
   type: vless
@@ -1288,18 +1167,50 @@ proxies:
     headers:
       Host: zero.csmaster.ggff.net
     path: /
-- name: 🇸🇬SG_58
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_4
+  network: tcp
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬SG_79
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 13.229.54.166
+  server: 47.129.144.53
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   tls: false
   type: hysteria2
-- name: 🇸🇬SG_99
+- name: 🇸🇬SG_44
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 54.255.1.222
+  server: 13.212.75.123
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_17
+  network: ws
+  port: 443
+  server: zero.csmaster.ggff.net
+  servername: zero.csmaster.ggff.net
+  tls: true
+  type: vless
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  ws-opts:
+    path: /
+- name: 🇸🇬SG_89
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.76.106
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   tls: false

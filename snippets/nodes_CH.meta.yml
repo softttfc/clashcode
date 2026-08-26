@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -9,22 +9,7 @@ proxies:
     short-id: '!!str e3d38cee79d4f94c'
   server: 45.195.137.219
   servername: storage.yandex.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
-    short-id: '!!str e3d38cee79d4f94c'
-  server: 45.195.137.119
-  servername: storage.yandex.net
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -37,9 +22,24 @@ proxies:
   reality-opts:
     public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
     short-id: '!!str e3d38cee79d4f94c'
+  server: 45.195.137.119
+  servername: storage.yandex.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY
+    short-id: '!!str e3d38cee79d4f94c'
   server: 45.195.137.109
   servername: storage.yandex.net
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -102,76 +102,6 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 未知4
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '瑞士 002 #1'
-  network: tcp
-  port: 8443
-  server: 138.124.244.77
-  servername: fi1.hys.braidx.tech
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- client-fingerprint: chrome
-  name: '瑞士 003 #1'
-  network: ws
-  port: 2053
-  server: 185.195.69.119
-  servername: forfreeuse.sub-flow.online
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  ws-opts:
-    headers:
-      Host: forfreeuse.sub-flow.online
-    path: /
-- name: '瑞士 004 #1'
-  network: tcp
-  port: 2551
-  server: 178.83.157.130
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d8b42cd5-a149-4356-9e61-000000000000
-- name: 🇨🇭CH_1|2.0MB/s
-  password: 1Telegram_MojiVPN
-  port: 1080
-  server: ch-zur.pvdata.host
-  skip-cert-verify: true
-  type: socks5
-  udp: true
-  username: N9cyF6jvgy3ZEmCNKe04zBIR
-- name: 🇨🇭CH_2|1.6MB/s
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 瑞士/苏黎世/Switzerland/Zurich [htt...
-  password: 5d79906d-89ab-430b-acbc-3327568a5be3
-  port: 33345
-  server: 140.238.175.124
-  type: ss
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
@@ -180,17 +110,24 @@ proxies:
   type: ss
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_7
-  network: raw
+  name: 🇨🇭CH_4
+  network: tcp
   port: 8443
   reality-opts:
     public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
-    short-id: '!!str 75fa8ffff864069a'
+    short-id: '!!str aa6988d03cc11454'
   server: 178.83.226.142
   servername: refersion.com
   tls: true
   type: vless
-  uuid: eace00a6-39df-474d-af49-9ed74d948eba
+  uuid: 4cb63132-e084-4676-ac67-1ed6b60be05a
+- name: 🇨🇭CH_6
+  network: tcp
+  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
+  port: 443
+  server: tr-switzerlandgopota.unlimited-access.ru
+  sni: tr-switzerlandgopota.unlimited-access.ru
+  type: trojan
 - alpn:
   - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpnـ
   client-fingerprint: chrome
@@ -205,54 +142,56 @@ proxies:
   tls: true
   type: vless
   uuid: 2a77a470-315c-493d-b690-59b814a804cb
-- name: 🇨🇭CH_8
-  network: tcp
-  port: 42538
-  server: 178.83.226.142
-  tls: false
-  type: vless
-  uuid: eace00a6-39df-474d-af49-9ed74d948eba
-  ws-opts:
-    headers:
-      Host: download.windowsupdate.com
-    path: /
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇨🇭CH_14
-  network: grpc
-  port: 2054
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_11
+  network: tcp
+  port: 8443
   reality-opts:
-    public-key: JFzd2AbfzZSnMefyKEXNIae_QEZAo5o239pmuHHZsAY
-    short-id: '!!str b27b172e7453e810'
-  server: 132.243.174.112
-  servername: www.swisscom.ch
+    public-key: 8qHRGcCezzSu4S-Cz9l19BNRLWm4MkaSwZV3dNrLEwc
+    short-id: '!!str 445ab326fc7c90ac'
+  server: 45.195.2.133
+  servername: storage.yandex.net
   tls: true
   type: vless
-  uuid: d900a139-8b5f-4758-8a32-389c6f36fc86
-- name: 🇨🇭CH_6
-  network: tcp
-  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
-  port: 443
-  server: tr-switzerlandgopota.unlimited-access.ru
-  sni: tr-switzerlandgopota.unlimited-access.ru
-  type: trojan
-- name: 🇨🇭CH_11
+  uuid: 19b64e79-73b4-4478-bbfc-fb57737b94f8
+- name: 🇨🇭CH_9
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
   server: che01plrhy01.tcp-reset-club.net
   skip-cert-verify: true
+  sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_13
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
+  server: de2.oblaco.bet
+  servername: de2.oblaco.bet
+  tls: true
+  type: vless
+  uuid: ef2c48a7-c113-4610-9d81-b35779660d9e
+- name: 🇨🇭CH_10
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: 185.191.238.202
+  skip-cert-verify: true
   sni: che01plrhy01.tcp-reset-club.net
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_12
   network: tcp
-  port: 42538
-  server: 178.83.226.145
-  tls: false
+  port: 443
+  reality-opts:
+    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
+  server: 138.124.32.222
+  servername: de2.oblaco.bet
+  tls: true
   type: vless
-  uuid: eace00a6-39df-474d-af49-9ed74d948eba
-  ws-opts:
-    headers:
-      Host: mangaarabics.com
-    path: /
+  uuid: ef2c48a7-c113-4610-9d81-b35779660d9e
