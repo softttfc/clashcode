@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -44,28 +44,24 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
-  password: None
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sub_tag: noCache
-  tls: true
-  type: http
-  udp: true
-- auth: 8569e507-8ef7-481d-9108-6bc7f040c2ff
-  name: 🇨🇭 机场推荐:dafei.de 瑞士 02
-  password: 8569e507-8ef7-481d-9108-6bc7f040c2ff
-  port: 9443
-  server: newos.klzvezdi.ru
-  skip-cert-verify: true
-  sni: newos.klzvezdi.ru
-  type: hysteria2
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 03
+- client-fingerprint: chrome
+  name: 瑞士(v2clash.blog 2026-8.28更新)
+  network: ws
   port: 443
-  server: 31.7.62.50
+  server: 185.195.69.158
+  servername: vod.ensf.top
   skip-cert-verify: true
   tls: true
+  type: vless
+  udp: true
+  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+  ws-opts:
+    headers:
+      Host: vod.ensf.top
+    path: /api/v1/irc
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  port: 7272
+  server: 212.65.190.199
   type: http
 - name: CH 1 → tg@nicevpn123
   password: 55319b01-5d85-48a2-a40a-0b3fc1985755
@@ -102,60 +98,86 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
+- alterId: 0
+  cipher: auto
+  name: 未知93
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 002 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- flow: ''
+  name: '瑞士 003 #1'
+  network: ws
+  port: 443
+  server: 194.246.118.199
+  servername: 8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9ce4c9e2-1dcc-abe8-9abf-9bf8bc1269f6
+  ws-opts:
+    headers:
+      Host: 8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr
+    path: /pg/10086-dfc816f117c491730|
+- name: '瑞士 004 #1'
+  network: tcp
+  port: 64584
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d3b59f6e-fab9-46ca-afec-bc240c4899f9
+- name: '瑞士 005 #1'
+  network: tcp
+  port: 2551
+  server: 178.83.157.130
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d8b42cd5-a149-4356-9e61-000000000000
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163
   type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_4
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
-    short-id: '!!str aa6988d03cc11454'
-  server: 178.83.226.142
-  servername: refersion.com
-  tls: true
-  type: vless
-  uuid: 4cb63132-e084-4676-ac67-1ed6b60be05a
-- name: 🇨🇭CH_6
+- name: 🇨🇭CH_7
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
+  port: 443
+  server: hy2-switzerlandgopota.unlimited-access.ru
+  sni: hy2-switzerlandgopota.unlimited-access.ru
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_8
   network: tcp
   password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
   port: 443
   server: tr-switzerlandgopota.unlimited-access.ru
   sni: tr-switzerlandgopota.unlimited-access.ru
   type: trojan
-- alpn:
-  - channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpnـ
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_1
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 178.83.226.55
-  servername: sellflow.org
-  tls: true
-  type: vless
-  uuid: 2a77a470-315c-493d-b690-59b814a804cb
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_11
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 8qHRGcCezzSu4S-Cz9l19BNRLWm4MkaSwZV3dNrLEwc
-    short-id: '!!str 445ab326fc7c90ac'
-  server: 45.195.2.133
-  servername: storage.yandex.net
-  tls: true
-  type: vless
-  uuid: 19b64e79-73b4-4478-bbfc-fb57737b94f8
-- name: 🇨🇭CH_9
+- name: 🇨🇭CH_5
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
   server: che01plrhy01.tcp-reset-club.net
@@ -165,17 +187,18 @@ proxies:
   type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_13
+  name: 🇨🇭CH_1
   network: tcp
   port: 443
   reality-opts:
-    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
-  server: de2.oblaco.bet
-  servername: de2.oblaco.bet
+    public-key: KrFnWxAwVGL6tuj1JE0qpykLzY4aOFjyK3OaymF_hT0
+    short-id: '!!str e2e66f4537770cef'
+  server: 45.90.56.231
+  servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: ef2c48a7-c113-4610-9d81-b35779660d9e
-- name: 🇨🇭CH_10
+  uuid: e2b8f727-c5ee-47e1-8f1b-7c5c61479ce0
+- name: 🇨🇭CH_6
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
   server: 185.191.238.202
@@ -183,15 +206,11 @@ proxies:
   sni: che01plrhy01.tcp-reset-club.net
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_12
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
-  server: 138.124.32.222
-  servername: de2.oblaco.bet
-  tls: true
-  type: vless
-  uuid: ef2c48a7-c113-4610-9d81-b35779660d9e
+- name: 🇨🇭CH_13
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
