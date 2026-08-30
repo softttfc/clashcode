@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -98,85 +98,36 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 未知93
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
+- name: 🇨🇭CH_1|2.0MB/s
+  port: 443
+  server: 31.7.62.50
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- client-fingerprint: chrome
+  type: http
+  udp: true
+- client-fingerprint: firefox
+  encryption: none
   flow: xtls-rprx-vision
-  name: '瑞士 002 #1'
-  network: tcp
-  port: 8443
-  server: 138.124.244.77
-  servername: fi1.hys.braidx.tech
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- flow: ''
-  name: '瑞士 003 #1'
-  network: ws
+  name: 🇨🇭CH_2|2.9MB/s
+  network: raw
+  packet-encoding: xudp
   port: 443
-  server: 194.246.118.199
-  servername: 8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr
-  skip-cert-verify: false
-  tfo: false
+  reality-opts:
+    public-key: IAdOYYmEMPFAhpVUhqfML58AVtYPdAb71R_HAPf0N0k
+    short-id: '!!str '
+  server: de48.tranzit-net.ru
+  servername: d.tranzit-net.ru
   tls: true
   type: vless
   udp: true
-  uuid: 9ce4c9e2-1dcc-abe8-9abf-9bf8bc1269f6
-  ws-opts:
-    headers:
-      Host: 8.o.8.e.t.g.7.w.8.n.e.1.l.e.us.art-us.kdns.fr
-    path: /pg/10086-dfc816f117c491730|
-- name: '瑞士 004 #1'
-  network: tcp
-  port: 64584
-  server: 138.124.123.127
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d3b59f6e-fab9-46ca-afec-bc240c4899f9
-- name: '瑞士 005 #1'
-  network: tcp
-  port: 2551
-  server: 178.83.157.130
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d8b42cd5-a149-4356-9e61-000000000000
+  uuid: be3c103d-2c93-4f8e-adb9-2631537f80eb
+  xudp: true
 - cipher: aes-256-cfb
   name: 🇨🇭_CH_瑞士
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163
   type: ss
-- name: 🇨🇭CH_7
-  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
-  port: 443
-  server: hy2-switzerlandgopota.unlimited-access.ru
-  sni: hy2-switzerlandgopota.unlimited-access.ru
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_8
-  network: tcp
-  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
-  port: 443
-  server: tr-switzerlandgopota.unlimited-access.ru
-  sni: tr-switzerlandgopota.unlimited-access.ru
-  type: trojan
 - name: 🇨🇭CH_5
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
@@ -198,12 +149,11 @@ proxies:
   tls: true
   type: vless
   uuid: e2b8f727-c5ee-47e1-8f1b-7c5c61479ce0
-- name: 🇨🇭CH_6
-  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+- name: 🇨🇭CH_7
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
   port: 443
-  server: 185.191.238.202
-  skip-cert-verify: true
-  sni: che01plrhy01.tcp-reset-club.net
+  server: hy2-switzerlandgopota.unlimited-access.ru
+  sni: hy2-switzerlandgopota.unlimited-access.ru
   tls: false
   type: hysteria2
 - name: 🇨🇭CH_13
@@ -212,5 +162,20 @@ proxies:
   server: 140.238.213.114
   skip-cert-verify: true
   sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_8
+  network: tcp
+  password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi
+  port: 443
+  server: tr-switzerlandgopota.unlimited-access.ru
+  sni: tr-switzerlandgopota.unlimited-access.ru
+  type: trojan
+- name: 🇨🇭CH_6
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: 185.191.238.202
+  skip-cert-verify: true
+  sni: che01plrhy01.tcp-reset-club.net
   tls: false
   type: hysteria2

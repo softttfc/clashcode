@@ -14,27 +14,13 @@ proxies:
   type: vless
   udp: true
   uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国_117
-  network: ws
-  port: 12150
-  server: 61.85.1.77
-  servername: vod.ensf.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  ws-opts:
-    headers:
-      Host: vod.ensf.top
-    path: /api/v1/irc
 - cipher: aes-256-cfb
-  name: 🇨🇳CN-121.46.230.138-30
+  name: China_None_ss_1028
   password: 7eadc6dbe2ae
-  port: 65443
+  port: '65443'
   server: 121.46.230.138
   type: ss
+  udp: true
 - name: 🇰🇷_KR_韩国
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
@@ -385,15 +371,6 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '韩国 001 #1'
-  network: tcp
-  port: 443
-  server: 140.238.2.250
-  skip-cert-verify: true
-  type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: '韩国 002 #1'
   network: ws
   port: 80
   server: 92.223.61.25
@@ -404,127 +381,6 @@ proxies:
     headers:
       Host: mizban888.servecounterstrike.com
     path: /
-- alterId: 1
-  cipher: auto
-  name: '韩国 003 #1'
-  network: ws
-  port: 8888
-  server: 54.180.96.67
-  skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 54.180.96.67
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '韩国 004 #1'
-  network: ws
-  port: 443
-  server: fullaccesstokoreannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
-    path: /ws
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_1|5.1MB/s
-  network: grpc
-  port: 10050
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr5-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_2|5.2MB/s
-  network: grpc
-  port: 10049
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr4-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_3|5.0MB/s
-  network: grpc
-  port: 10046
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr1-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 690FC783-6CE9-4137-8559-40DBA8EDAD31
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇰🇷KR_4|5.5MB/s
-  network: tcp
-  packet-encoding: xudp
-  port: 28482
-  reality-opts:
-    public-key: 8fsYG_Pg35aeg1E5Gc3HUaXou2OUQee4ukxVk99iR0s
-    short-id: '!!str fa1e592603c283'
-  server: 43.202.46.25
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 83973343-90db-423d-a5f7-2e3b56aeb8f4
-  xudp: true
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国_104
-  network: ws
-  port: 12386
-  server: 220.77.188.107
-  servername: vod.ensf.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  ws-opts:
-    headers:
-      Host: vod.ensf.top
-    path: /api/v1/irc
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国_230
-  network: ws
-  port: 12259
-  server: 121.166.39.76
-  servername: vod.ensf.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  ws-opts:
-    headers:
-      Host: vod.ensf.top
-    path: /api/v1/irc
 - client-fingerprint: chrome
   name: 🇰🇷 035  | ⬇️ 20KB/s
   network: tcp
@@ -538,103 +394,6 @@ proxies:
   type: vless
   udp: true
   uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: KR VLESS-1335
-  network: tcp
-  port: 443
-  server: s213.sspcccdn.xyz
-  servername: u643766u17cc9b82s180.kukuss.top
-  tls: true
-  type: vless
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
-  ws-opts:
-    headers:
-      Host: 17cc9b82s180.kukuss.top
-    path: ''
-- name: 🇰🇷KR_7
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇰🇷KR_19
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: 152-67-200-82.liao.kdns.fr
-  tls: false
-  type: hysteria2
-- name: 🇰🇷KR_8
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.96.245
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇰🇷KR_2
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: 989gq45ogQSZLDoUTcLNSYW5v_3ER7W_6Oi_8swZzXo
-    short-id: '!!str cb55f541'
-  server: 178.83.31.93
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 4a97788b-5d8a-410c-875c-ba36930e185e
-- client-fingerprint: chrome
-  name: KR韩国
-  network: ws
-  port: 12150
-  server: 61.85.1.77
-  servername: vod.ensf.top
-  tls: true
-  type: vless
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  ws-opts:
-    headers:
-      Host: vod.ensf.top
-    path: '%2Fapi%2Fv1%2Firc'
-- name: 🇰🇷KR_32
-  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  port: 8080
-  server: 139.28.168.58
-  sni: grape-honk.yyuyy.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇰🇷KR_4
-  network: tcp
-  port: 18967
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇰🇷KR_3
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-kr-003.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-kr-003.fastervpn.world
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
   name: 🇰🇷KR_28
   network: ws
@@ -648,51 +407,6 @@ proxies:
     headers:
       Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
     path: /@Marisa_kristi
-- name: 🇰🇷KR_17
-  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  port: 8080
-  server: 139.28.168.55
-  sni: grape-honk.yyuyy.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇰🇷KR_11
-  network: ws
-  port: 12016
-  server: 220.72.143.166
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  tls: true
-  type: vless
-  uuid: 9487e433-862e-4b53-893a-5a4f6bc911f0
-  ws-opts:
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    path: /@Marisa_kristi
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_12
-  password: qwerREWQ@@
-  port: 2078
-  server: 27.255.82.134
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: KR VLESS-1380
-  network: tcp
-  port: 443
-  server: s214.csgfw.top
-  servername: u643766u17cc9b82s180.kukuss.top
-  tls: true
-  type: vless
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
-  ws-opts:
-    headers:
-      Host: 17cc9b82s180.kukuss.top
-    path: ''
 - name: 🇰🇷KR_36
   password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
   port: 8080
@@ -701,26 +415,13 @@ proxies:
   sni: grape-honk.yyuyy.com
   tls: false
   type: hysteria2
-- name: 🇰🇷KR_35
-  password: 7302ad33229de166d393cd56143a1e4c
-  port: 50160
-  server: 131.186.19.174
-  skip-cert-verify: true
-  sni: www.bing.com
+- name: 🇰🇷KR_32
+  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
+  port: 8080
+  server: 139.28.168.58
+  sni: grape-honk.yyuyy.com
   tls: false
   type: hysteria2
-- client-fingerprint: firefox
-  name: 🇰🇷KR_27
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: Wg07hKwQjSVmOsEHn7X1iLAXR2wkKRSyv8TZmq9ZsRA
-    short-id: '!!str 58186df4a95a1504'
-  server: 151.245.106.49
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 9f7dddc4-6c77-4e2c-bfa4-7e5afdfd48f8
 - alpn:
   - h2
   - http/1.1
@@ -740,3 +441,158 @@ proxies:
     headers:
       Host: 17cc9b82s180.kukuss.top
     path: ''
+- name: 🇰🇷KR_3
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-kr-003.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-kr-003.fastervpn.world
+  tls: false
+  type: hysteria2
+- cipher: aes-256-cfb
+  name: 🇰🇷KR_12
+  password: qwerREWQ@@
+  port: 2078
+  server: 27.255.82.134
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇰🇷KR_2
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: 989gq45ogQSZLDoUTcLNSYW5v_3ER7W_6Oi_8swZzXo
+    short-id: '!!str cb55f541'
+  server: 178.83.31.93
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 4a97788b-5d8a-410c-875c-ba36930e185e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: KR VLESS-1335
+  network: tcp
+  port: 443
+  server: s213.sspcccdn.xyz
+  servername: u643766u17cc9b82s180.kukuss.top
+  tls: true
+  type: vless
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  ws-opts:
+    headers:
+      Host: 17cc9b82s180.kukuss.top
+    path: ''
+- client-fingerprint: chrome
+  name: KR韩国
+  network: ws
+  port: 12150
+  server: 61.85.1.77
+  servername: vod.ensf.top
+  tls: true
+  type: vless
+  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+  ws-opts:
+    headers:
+      Host: vod.ensf.top
+    path: '%2Fapi%2Fv1%2Firc'
+- name: 🇰🇷KR_17
+  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
+  port: 8080
+  server: 139.28.168.55
+  sni: grape-honk.yyuyy.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: firefox
+  name: 🇰🇷KR_27
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: Wg07hKwQjSVmOsEHn7X1iLAXR2wkKRSyv8TZmq9ZsRA
+    short-id: '!!str 58186df4a95a1504'
+  server: 151.245.106.49
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 9f7dddc4-6c77-4e2c-bfa4-7e5afdfd48f8
+- name: 🇰🇷KR_19
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: 152-67-200-82.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: 🇰🇷KR_7
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.93.74
+  skip-cert-verify: true
+  sni: vpn-kr-003.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇰🇷KR_35
+  password: 7302ad33229de166d393cd56143a1e4c
+  port: 50160
+  server: 131.186.19.174
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: KR VLESS-1380
+  network: tcp
+  port: 443
+  server: s214.csgfw.top
+  servername: u643766u17cc9b82s180.kukuss.top
+  tls: true
+  type: vless
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  ws-opts:
+    headers:
+      Host: 17cc9b82s180.kukuss.top
+    path: ''
+- client-fingerprint: chrome
+  name: 🇰🇷KR_11
+  network: ws
+  port: 12016
+  server: 220.72.143.166
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+  tls: true
+  type: vless
+  uuid: 9487e433-862e-4b53-893a-5a4f6bc911f0
+  ws-opts:
+    headers:
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇰🇷KR_4
+  network: tcp
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇰🇷KR_8
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 3.36.96.245
+  skip-cert-verify: true
+  sni: vpn-kr-003.fastervpn.world
+  tls: false
+  type: hysteria2
