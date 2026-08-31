@@ -1,7 +1,7 @@
 proxies:
 - alterId: 2
   cipher: auto
-  name: '🇯🇵_JP_日本->🇸🇬_SG_新加坡 #2'
+  name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
   port: 30845
   server: v45.hdacd.com
   skip-cert-verify: true
@@ -12,7 +12,7 @@ proxies:
 - alterId: 2
   cipher: auto
   client-fingerprint: chrome
-  name: 🇨🇳_中国_22 - 381ms
+  name: 🇨🇳_中国_150 - 245ms
   network: tcp
   port: 30806
   server: v6.hdacd.com
@@ -685,9 +685,44 @@ proxies:
   server: 13.231.229.41
   type: ss
   udp: true
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 25982
+  server: 52.195.148.119
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alterId: 64
+  cipher: auto
+  name: '日本 005 #1'
+  network: ws
+  port: 80
+  server: 61.245.11.60
+  skip-cert-verify: true
+  type: vmess
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+  ws-opts:
+    headers:
+      Host: 61.245.11.60
+    path: /vmess/
 - alterId: 0
   cipher: auto
-  name: '日本 001 #1'
+  name: '日本 013 #1'
+  network: ws
+  port: 443
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: '日本 014 #1'
   network: ws
   port: 80
   server: 103.35.188.226
@@ -700,26 +735,105 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: '日本 002 #1'
-  network: tcp
-  port: 49499
-  server: 139.162.125.97
+  name: '日本 016 #1'
+  network: ws
+  port: 443
+  server: 146.56.162.25
   skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
-  name: '日本 003 #1'
-  network: tcp
-  port: 14935
-  server: 167.179.111.237
+  name: '日本 017 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.u1.glados-config.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.u1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 018 #1'
+  network: ws
+  port: 443
+  server: kr-arm2.018999.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: e98fc1a0-9c52-4091-91a5-c159b0aa274e
+  ws-opts:
+    headers:
+      Host: kr-arm2.018999.xyz
+    path: /e98fc1a0-9c52-4091-91a5-c159b0aa274e
+- alterId: 0
+  cipher: auto
+  name: '日本 019 #1'
+  network: ws
+  port: 443
+  server: 172.105.223.136
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '日本 020 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.v1.glados-config.net
   skip-cert-verify: true
   type: vmess
-  uuid: e961894f-8e90-472f-98d3-09402e4be453
-- name: '🇯🇵 日本|@ripaojiedian #1'
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.v1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 021 #1'
+  network: ws
+  port: 443
+  server: 124.156.225.184
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
+  ws-opts:
+    headers:
+      Host: azjp.pengui.xyz
+    path: /
+- alterId: 4
+  cipher: auto
+  name: '日本 022 #1'
+  network: ws
+  port: 443
+  server: 202.61.141.130
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: 202.61.141.130
+    path: /
+- name: 🇯🇵 日本|@ripaojiedian
   password: BxceQaOe
   port: 9408
-  server: 18.163.11126
+  server: 18.167.96.176
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
@@ -735,39 +849,28 @@ proxies:
   port: 40002
   server: 103.236.66.4
   type: ss
-- name: 🇯🇵_日本_8
-  password: c9618d0e-edc9-46f5-a948-96a3781fc3e9
-  port: 50000
-  server: jp200m.jiasu.asia
-  skip-cert-verify: true
-  sni: jp200m.jiasu.asia
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_11
-  password: 24ef7cf6-9997-4886-9ef7-9e8233c6766f
-  port: 50000
-  server: jp200m.jiasu.asia
-  skip-cert-verify: true
-  sni: jp200m.jiasu.asia
-  type: trojan
-  udp: true
-- name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  port: 20004
-  server: oplosgru-c.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  tls: false
-  type: trojan
-  udp: true
-- name: 香港5|@ripaojiedian
-  network: tcp
+- name: '🇭🇰 香港5|@ripaojiedian #1'
   password: BxceQaOe
-  port: 25982
-  server: 52.195.148.119
+  port: 1103
+  server: 54.168.189
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
+- name: 🇯🇵 Japan/Tokyo [GH:4n0nymou3/m...
+  password: 0964f6b7-6aab-4b84-9e80-dd078ed1f269
+  port: 50000
+  server: jp200m.jiasu.asia
+  skip-cert-verify: true
+  sni: jp200m.jiasu.asia
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: '未知 SS-431 #1'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+  udp: true
 - alterId: 0
   name: 🇯🇵JP日本
   password: BxceQaOe
@@ -778,34 +881,3 @@ proxies:
   tls: true
   type: trojan
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇯🇵JP_17
-  password: ma6zc4JoLRJA
-  port: 8388
-  server: 176.97.73.215
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇯🇵JP_27
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
-  name: '未知 SS-420 #1'
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_2
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-- name: 🇯🇵JP_19
-  network: tcp
-  password: tsuchiya
-  port: 443
-  server: aa.ccmusic.jp
-  sni: aa.ccmusic.jp
-  type: trojan
