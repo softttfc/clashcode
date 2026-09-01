@@ -14,30 +14,42 @@ proxies:
   type: vless
   udp: true
   uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
-- name: KR韩国
-  password: 9cfc9458e48c028ec03ff86ebc71c744
-  port: 50160
-  server: 150-230-252-217.liao.kdns.fr
-  skip-cert-verify: true
-  sni: 150-230-252-217.liao.kdns.fr
-  tls: false
-  type: hysteria2
-  udp: true
 - cipher: aes-256-cfb
-  name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  name: cn|60ea|puddincat07@Telegram
   password: 7eadc6dbe2ae
   port: 65443
   server: 121.46.230.138
-  skip-cert-verify: true
   type: ss
   udp: true
 - name: 🇰🇷 机场推荐:dafei.de 韩国 02
-  password: 1671a252e2a97dc2bda4e515475931da
-  port: 50160
-  server: 132.226.226.189
+  password: ''
+  port: 1090
+  server: 121.169.46.116
   skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
+  type: socks5
+  username: ''
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷_韩国_14 - 182ms
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷_韩国_358 - 182ms
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: 132.145.80.230
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: 🇰🇷 KR 1 → tg@nicevpn123
@@ -377,45 +389,9 @@ proxies:
   server: 13.125.19.50
   type: ss
   udp: true
-- name: '韩国 001 #1'
-  network: ws
-  port: 17416
-  security: tls
-  server: 103.133.240.115
-  servername: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: rolaqoubhqt.bpd67081tsq.ddns-ip.net
-    path: /
-- client-fingerprint: chrome
-  name: '韩国 002 #1'
-  network: ws
-  port: 30001
-  security: tls
-  server: 114.204.40.185
-  servername: 9cvs-zyn4r9-6gzdtuo0w.mikuru.ip-ddns.com
-  tls: true
-  type: vless
-  uuid: 00000000-0000-4000-8000-000000000000
-  ws-opts:
-    headers:
-      Host: 9cvs-zyn4r9-6gzdtuo0w.mikuru.ip-ddns.com
-    path: /
 - alterId: 0
   cipher: auto
-  name: '韩国 003 #1'
-  network: tcp
-  port: 443
-  server: 140.238.2.250
-  skip-cert-verify: true
-  type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: '韩国 004 #1'
+  name: '韩国 001 #1'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -428,7 +404,7 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: '韩国 005 #1'
+  name: '韩国 002 #1'
   network: ws
   port: 80
   server: 92.223.61.25
@@ -441,7 +417,7 @@ proxies:
     path: /
 - alterId: 1
   cipher: auto
-  name: '韩国 006 #1'
+  name: '韩国 003 #1'
   network: ws
   port: 8888
   server: 54.180.96.67
@@ -454,7 +430,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '韩国 007 #1'
+  name: '韩国 004 #1'
   network: ws
   port: 443
   server: fullaccesstokoreannetsubnode1.azurewebsites.net
@@ -466,47 +442,52 @@ proxies:
     headers:
       Host: fullaccesstokoreannetsubnode1.azurewebsites.net
     path: /ws
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: update
+  name: 🇰🇷KR_1|4.9MB/s
+  network: grpc
+  port: 10048
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: kr3-r.link-t7.com
+  servername: s0.awsstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 31904E3E-F57B-41D1-BDB2-CB6D3A496232
 - alterId: 0
   cipher: auto
-  name: '韩国 008 #1'
-  network: ws
-  port: 12889
-  server: gtm1.ktmwan.net
+  name: 🇰🇷_韩国_14
+  port: 443
+  server: 140.238.2.250
   skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 4941aa8d-07d2-408c-be2c-117debecba30
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: 未知67 742.9KB/s
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
-    headers:
-      Host: gtm1.ktmwan.net
-    path: /
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇰🇷_韩国_6
-  port: 5000
-  reality-opts:
-    public-key: cpoZcpYNYSvFXGGB21tByHUoNd7-FYrJ0UP7ZDfSFCs
-    short-id: '!!str a1b2c3d4'
-  server: 31.77.183.88
-  servername: max.ru
-  skip-cert-verify: true
-  tls: true
-  type: vless
+    path: /cctv13.m3u8
+- cipher: aes-256-cfb
+  name: South Korea_None_ss_1128
+  password: qwerREWQ@@
+  port: '2078'
+  server: 27.255.82.134
+  type: ss
   udp: true
-  uuid: 1206bad5-dcc9-410e-9595-d9fe9ee54085
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇰🇷_韩国_12
-  port: 5001
-  reality-opts:
-    public-key: D-G2rTpSUTAF6Rj0C6Gxnk-uzsaGzM6MSbJX3jCyBBk
-    short-id: '!!str a1b2c3d4'
-  server: 31.77.183.88
-  servername: max.ru
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1206bad5-dcc9-410e-9595-d9fe9ee54085
 - client-fingerprint: chrome
   name: 🇰🇷 035  | ⬇️ 20KB/s
   network: tcp
@@ -520,3 +501,11 @@ proxies:
   type: vless
   udp: true
   uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
+- name: '美国 #63'
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  port: 50160
+  server: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+  sni: 150-230-252-217.liao.kdns.fr
+  tls: false
+  type: hysteria2

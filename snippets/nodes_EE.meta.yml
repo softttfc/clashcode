@@ -10,18 +10,18 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 未知 TROJAN-457
+- name: '🇪🇪 #1'
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: russiapower.accesscam.org
   type: trojan
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇪🇪
+  name: '🇪🇪 #2'
   network: tcp
   port: 2053
   reality-opts:
@@ -50,95 +50,69 @@ proxies:
     headers:
       Host: freeuse.firta.ru
     path: /
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_10
+- name: 🇪🇪_爱沙尼亚_50
+  port: 8443
+  server: estproxy4.lockdwn.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+- name: 🇪🇪_爱沙尼亚_434
+  network: ws
   port: 443
-  reality-opts:
-    public-key: t6UrJc0ABkzM0oW0l1TiGdxFUIITAj19nb0WKjM-Wkg
-    short-id: '!!str 5bce48722af99601'
-  server: 95.85.249.77
-  servername: ee1.tgflow.me
+  server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vless
   udp: true
-  uuid: d53f098c-c146-4c16-b8fc-263743fdb6b3
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_25
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    path: /
+- name: 🇪🇪_爱沙尼亚_437
+  network: ws
   port: 443
-  reality-opts:
-    public-key: P2MV0I11JvKg-G3wfg64YVGUEh0Wvy6C4MTVsMPWdyQ
-    short-id: '!!str 7b1c7d9a3f2a'
-  server: 64.188.82.57
-  servername: ee-download.spectrum.vu
+  server: estproxy4.lockdwn.com
+  servername: estproxy4.lockdwn.com
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vless
   udp: true
-  uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_36
-  port: 49001
-  reality-opts:
-    public-key: _LbLyj6OynSREglFpkhdrxVmh_bf9p60uTEWfQbtUWo
-    short-id: '!!str 1a6b1f9d0e'
-  server: 185.123.53.221
-  servername: de-7.techprovide.icu
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 41784775-8846-4579-9d9d-9ad6ea802e2e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_82
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    path: /
+- client-fingerprint: safari
+  name: 🇪🇪_爱沙尼亚_446
+  network: ws
   port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 217.9.12.232
-  servername: ee.cdn-global.pro
+  server: 64.188.82.152
+  servername: cloudflare.vhub.pro
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_86
+  uuid: 7836b28e-8451-4596-ad3e-e3601b2335ba
+  ws-opts:
+    path: /
+- client-fingerprint: chrome
+  name: 🇪🇪_爱沙尼亚_448
+  network: ws
   port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 217.9.12.218
-  servername: ee.cdn-global.pro
+  server: 5.45.117.125
+  servername: freeuse.firta.ru
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪_爱沙尼亚_99
-  port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 217.9.12.234
-  servername: ee.cdn-global.pro
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  ws-opts:
+    path: /
 - alpn:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
+  name: 🇪🇪
   network: tcp
   port: 443
   server: 138.124.100.128
