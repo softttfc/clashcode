@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -44,25 +44,57 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
-  port: 9443
-  server: 37.120.213.210
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇨🇭_CH_瑞士 #5'
+  port: 443
+  reality-opts:
+    public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
+    short-id: '!!str 10a5c8e2f4b7d936'
+  server: 199.68.196.79
+  servername: ch.tunnelx.space
   skip-cert-verify: true
-  sub_tag: noCache
   tls: true
-  type: http
+  type: vless
   udp: true
-- name: 🇨🇭CH_1|2.0MB/s
-  port: 7272
-  server: 212.65.190.199
-  type: http
+  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇨🇭_CH_瑞士 #4'
+  port: 443
+  reality-opts:
+    public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
+    short-id: '!!str 10a5c8e2f4b7d936'
+  server: ch.tunnelx.space
+  servername: ch.tunnelx.space
+  skip-cert-verify: true
+  tls: true
+  type: vless
   udp: true
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 03
+  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  password: None
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
   tls: true
   type: http
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 未知 VLESS-566
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: PMYLdOtnvW-ca8Zf6u7CFgGXoGXCvmCMPerPjGY3AAc
+    short-id: '!!str 77d7abe2c55892f1'
+  server: 45.90.58.216
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2e8077d9-7bd9-444b-b2e3-de940d2eb35e
+  xudp: true
 - name: CH 1 → tg@nicevpn123
   password: 55319b01-5d85-48a2-a40a-0b3fc1985755
   port: 11005
@@ -98,52 +130,16 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: '瑞士 001 #1'
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
+- name: 🇨🇭CH_1|3.4MB/s
+  password: None
+  port: 9443
+  server: 37.120.213.210
   skip-cert-verify: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '瑞士 002 #1'
-  network: tcp
-  port: 8443
-  server: 138.124.244.77
-  servername: fi1.hys.braidx.tech
-  skip-cert-verify: false
-  tfo: false
   tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- name: '瑞士 003 #1'
-  network: tcp
-  port: 64584
-  server: 138.124.123.127
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d3b59f6e-fab9-46ca-afec-bc240c4899f9
-- name: 🇨🇭_瑞士_391
-  password: humanity
-  port: 443
-  server: 185.18.250.252
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - cipher: aes-256-cfb
-  name: 🇨🇭_CH_瑞士
+  name: '🇨🇭_CH_瑞士 #3'
   password: asdKkaskJKfnsa
   port: 80
   server: 84.17.53.163

@@ -7,14 +7,19 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: 新加坡+甲骨文机房
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
+- name: 🇸🇬
+  network: ws
+  port: 8880
+  server: 45.40.149.50
   skip-cert-verify: true
-  sni: www.bing.com
   tls: false
-  type: hysteria2
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime39.workers.dev
+    path: /
 - alterId: 0
   cipher: auto
   name: '🇯🇵 JP日本丨yoyapai.com #2'
@@ -28,22 +33,9 @@ proxies:
   uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
   ws-opts:
     path: /0zNW56sF
-- name: '🇸🇬 #1'
-  network: ws
-  port: 8880
-  server: 45.40.149.50
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime39.workers.dev
-    path: /
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬
+  name: '🇸🇬 #1'
   network: tcp
   port: 443
   reality-opts:
@@ -77,89 +69,18 @@ proxies:
   tls: true
   type: anytls
   udp: true
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc
-  name: '🇸🇬_SG_新加坡 #4'
-  network: grpc
-  port: 54324
-  server: sgp3xui.jzy88.top
-  servername: sgp3xui.jzy88.top
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: cdd37253-5f9b-4dcb-8b01-ad60a29384b8
-- name: '🇸🇬_SG_新加坡 #5'
-  password: FC60532879
-  port: 443
-  server: resolved-gelding.rooster465.autos
-  skip-cert-verify: true
-  sni: resolved-gelding.rooster465.autos
-  tls: false
-  type: trojan
-  udp: true
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 01
-  port: 9090
-  server: 128.199.254.13
-  type: http
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
-  port: 9090
-  server: 104.248.151.93
-  type: http
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 03
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 1933
-  server: sg1.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg1.xiaoliyu.cyou
-  type: hysteria2
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 04
-  password: ''
-  port: 9443
-  server: 149.88.99.209
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: ''
-- auth: 436114b5f36b2e704bdfa0927d57b6cd
-  name: '🇸🇬_SG_新加坡 #3'
-  password: 436114b5f36b2e704bdfa0927d57b6cd
-  port: 50160
-  server: 47.241.108.227
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 06
-  network: ws
-  port: 2096
-  server: 91.193.58.250
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/40.0.2214.115 Safari/537.36
-    path: /free-server.techsonic.dev
-  xudp: true
-- alterId: 64
+- alterId: 2
   cipher: auto
-  name: '新加坡 003 #1'
+  client-fingerprint: chrome
+  name: 🇯🇵_JP_日本->🇸🇬_SG_新加坡 - 603ms
   network: tcp
-  port: 8443
-  server: 13.250.114.194
+  port: 30845
+  server: v45.hdacd.com
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 🇸🇬SG_4|⬇️5.1MB/s
   network: ws
   password: a9570330-769d-11ef-90dc-1577c1651679
@@ -544,42 +465,16 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: '新加坡 002 #1'
-  network: ws
-  port: 443
-  server: v2ray1.udpgw.com
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 09961dcc-8414-4ef9-a7f3-1fd2235da390
-  ws-opts:
-    headers:
-      Host: v2ray1.udpgw.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '新加坡 004 #1'
+  name: '新加坡 001 #1'
   network: tcp
-  port: 47630
-  server: 43.228.126.187
+  port: 8443
+  server: 13.250.114.194
   skip-cert-verify: true
   type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
-- client-fingerprint: chrome
-  name: '新加坡 005 #1'
-  network: tcp
-  port: 443
-  server: 139.59.124.172
-  servername: 8.sahanwickramasinghe.me
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
+  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
 - alterId: 0
   cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 002 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -592,7 +487,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 007 #1'
+  name: '新加坡 003 #1'
   network: ws
   port: 18063
   server: 139.180.211.152
@@ -603,139 +498,28 @@ proxies:
     headers:
       Host: m.zoom.us
     path: /Dialog Zoom
-- alterId: 1
-  cipher: auto
-  name: '新加坡 008 #1'
-  network: ws
-  port: 21888
-  server: 104.248.148.147
-  skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 104.248.148.147
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '新加坡 009 #1'
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  skip-cert-verify: true
-  type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
-  ws-opts:
-    headers:
-      Host: 139.99.61.154
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '新加坡 010 #1'
-  network: ws
-  port: 5001
-  server: steam.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: d4c93465-70f0-30d5-ab5f-a8881f3f49e7
-  ws-opts:
-    headers:
-      Host: steam.dnspro.icu
-    path: /iso
-- alterId: 4
-  cipher: auto
-  name: '新加坡 011 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.134
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: eeh7iewe.com
-    path: /ws
-- alterId: 4
-  cipher: auto
-  name: '新加坡 012 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.20
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: zecjk.com
-    path: /ws
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇸🇬SG_1|4.8MB/s
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 104.18.32.47
-  skip-cert-verify: true
-  sni: fls-bbg--MiTiVPN---MiTiVPN-u.aPp-cLoud.IR
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/49.0.2623.87 Safari/537.36
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/F-ls
 - client-fingerprint: chrome
   encryption: none
   grpc-opts:
     grpc-mode: gun
     grpc-service-name: update
-  name: 🇸🇬SG_2|5.5MB/s
+  name: 🇸🇬SG_1|5.3MB/s
   network: grpc
-  port: 10036
+  port: 10039
   reality-opts:
     public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
     short-id: '!!str 686c0ef0'
-  server: sg1-r.link-t7.com
-  servername: s0.awsstatic.com
+  server: sg4-r.link-t7.com
+  servername: d1.awsstatic.com
   tls: true
   type: vless
   udp: true
-  uuid: C1CE3941-AC6F-4E98-9791-3B33ABBAF64F
-- client-fingerprint: chrome
-  name: 🇸🇬SG_3|4.1MB/s
-  network: ws
-  packet-encoding: xudp
-  port: 443
-  server: 188.164.248.67
-  servername: vp21.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-  ws-opts:
-    headers:
-      Host: vp21.cc.cd
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /
-  xudp: true
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬_新加坡_15
-  port: 8443
-  server: 13.250.114.194
+  uuid: F2987FBA-B653-444D-8057-6B6474E448C6
+- name: 🇸🇬_SG_新加坡
+  password: 436114b5f36b2e704bdfa0927d57b6cd
+  port: 50160
+  server: 47.241.108.227
   skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- name: 🇸🇬_新加坡_65
-  password: BxceQaOe
-  port: 7674
-  server: 18.142.250.141
-  skip-cert-verify: true
-  type: trojan
+  sni: www.bing.com
+  type: hysteria2
   udp: true
