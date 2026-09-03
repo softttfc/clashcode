@@ -21,20 +21,12 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇸🇪SE_1|1.2MB/s
-  port: 443
-  server: 146.70.242.130
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇸🇪SE_2|4.0MB/s
+- name: 🇸🇪 084  | ⬇️ 1MB/s
   port: 443
   server: 146.70.242.146
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
 - name: 🇸🇪SE_3|⬇️3.2MB/s
   network: tcp
   port: 443
@@ -418,39 +410,73 @@ proxies:
     headers:
       Host: www.31270022.xyz
     path: /path/1704188270531
-- client-fingerprint: chrome
-  name: 🇸🇪_SE_瑞典
+- name: '瑞典 006 #1'
   network: ws
-  port: 443
-  server: 202.155.11.249
-  servername: cf2.rumedia-cdn.com
-  skip-cert-verify: true
+  port: 80
+  server: 146.75.119.82
+  servername: rb24.ir
+  skip-cert-verify: false
+  tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  uuid: 4a49c0ba-3d57-48df-bfa4-99fcb9edac56
   ws-opts:
     headers:
-      Host: cf2.rumedia-cdn.com
-    path: /cdn/v3/live
-- name: 🇸🇪 006  | ⬇️ 4MB/s
-  password: Zg0z_Mdkhj_NNZBvZZ4TmwAyQgJlTUev
-  port: 43327
-  server: 2.27.23.44
+      Host: rb24.ir
+    path: ws/?ed=2048/
+- name: '瑞典 007 #1'
+  network: ws
+  port: 2052
+  server: 185.146.173.58
+  servername: 3.V2rayV2ray-_-_-V2ray.irantech.Org.
   skip-cert-verify: false
-  sni: gate-v1.not-a-projects.xyz
   tfo: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典_S66OXN
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: GRxGFwibgoUjG9OL5Dl1OLyK56yw8WaG5BdFP8ifVgQ
-    short-id: '!!str 26f7082dd0e36ca1'
-  server: 2.26.124.85
-  servername: cdn.jsdelivr.net
   tls: true
   type: vless
-  uuid: 30dab345-4de9-4b70-ad9f-8ebd5c66686f
+  udp: true
+  uuid: b57c0631-e5c3-4cc8-bc4d-77f9d5d34e45
+  ws-opts:
+    headers:
+      Host: 3.V2rayV2ray-_-_-V2ray.irantech.Org.
+    path: /Telegram-xiv2ray?ed=2048
+- name: '瑞典 008 #1'
+  network: ws
+  port: 2052
+  server: 185.146.173.54
+  servername: fiWs1.mstrmind.Cloud.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: dd965867-295e-43bb-b47b-6297b293f6c3
+  ws-opts:
+    headers:
+      Host: fiWs1.mstrmind.Cloud.
+    path: /
+- name: 🇸🇪SE_1|2.7MB/s
+  port: 443
+  server: 149.50.216.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇪 109  | ⬇️ 1MB/s
+  port: 39811
+  server: 176.111.37.216
+  type: http
+- name: 🇸🇪 161  | ⬇️ 2MB/s
+  port: 443
+  server: 146.70.242.130
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇪 243  | ⬇️ 172KB/s
+  port: 81
+  server: 46.59.120.87
+  type: http
+- name: 🇸🇪 270  | ⬇️ 288KB/s
+  port: 39811
+  server: 176.111.37.5
+  type: http

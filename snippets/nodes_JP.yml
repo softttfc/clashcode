@@ -19,6 +19,40 @@ proxies:
   port: 40002
   server: 103.236.66.4
   type: ss
+- cipher: aes-256-cfb
+  name: 🇯🇵 015  | ⬇️ 1MB/s
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.137
+  skip-cert-verify: false
+  type: ss
+  udp: false
+- alterId: 0
+  cipher: auto
+  name: '日本 001 #1'
+  network: ws
+  port: 8555
+  server: 54.168.242.25
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    headers:
+      Host: a.189.cn
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 🇸🇬 203  | ⬇️ 9MB/s
+  network: tcp
+  port: 30845
+  server: v45.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  xudp: true
 - name: 🇯🇵 日本|@stairnode
   password: BxceQaOe
   port: 3022
@@ -684,7 +718,21 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: '日本 001 #1'
+  name: '日本 002 #1'
+  network: ws
+  port: 443
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: '日本 003 #1'
   network: ws
   port: 80
   server: 103.35.188.226
@@ -697,29 +745,101 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: '日本 002 #1'
-  network: tcp
-  port: 49499
-  server: 139.162.125.97
+  name: '日本 004 #1'
+  network: ws
+  port: 443
+  server: 146.56.162.25
   skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
-  name: '日本 003 #1'
-  network: tcp
-  port: 14935
-  server: 167.179.111.237
+  name: '日本 005 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.u1.glados-config.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.u1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 006 #1'
+  network: ws
+  port: 443
+  server: kr-arm2.018999.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: e98fc1a0-9c52-4091-91a5-c159b0aa274e
+  ws-opts:
+    headers:
+      Host: kr-arm2.018999.xyz
+    path: /e98fc1a0-9c52-4091-91a5-c159b0aa274e
+- alterId: 0
+  cipher: auto
+  name: '日本 007 #1'
+  network: ws
+  port: 443
+  server: 172.105.223.136
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '日本 008 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.v1.glados-config.net
   skip-cert-verify: true
   type: vmess
-  uuid: e961894f-8e90-472f-98d3-09402e4be453
-- cipher: aes-256-cfb
-  name: cn|20c2|puddincat07@Telegram
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 121.46.230.137
-  type: ss
-  udp: true
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.v1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 009 #1'
+  network: ws
+  port: 443
+  server: 124.156.225.184
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
+  ws-opts:
+    headers:
+      Host: azjp.pengui.xyz
+    path: /
+- alterId: 4
+  cipher: auto
+  name: '日本 010 #1'
+  network: ws
+  port: 443
+  server: 202.61.141.130
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: 202.61.141.130
+    path: /
 - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   port: 20004
@@ -729,13 +849,43 @@ proxies:
   tls: false
   type: trojan
   udp: true
+- alterId: 0
+  cipher: auto
+  name: 'A - 🇯🇵 JP 04 TG: @nodpai'
+  port: 6003
+  server: gtm-sg-cc54q7d1q01.365cloud0285.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
 - alterId: 2
   cipher: none
-  name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
   port: 30806
   server: v6.hdacd.com
   skip-cert-verify: true
   tls: false
   type: vmess
   udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: chacha20-ietf
+  name: 🇯🇵 003  | ⬇️ 5MB/s
+  password: passwd
+  plugin: obfs
+  plugin-opts:
+    host: 37949-LD4JNZAf.download.microsoft.com
+    mode: http
+  port: 8406
+  server: cn12.somethingstranges.com
+  skip-cert-verify: false
+  type: ss
+  udp: false
+- alterId: 2
+  cipher: auto
+  name: 🇯🇵 044  | ⬇️ 1KB/s
+  network: tcp
+  port: 30806
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484

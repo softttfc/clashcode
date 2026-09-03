@@ -22,22 +22,6 @@ proxies:
   skip-cert-verify: true
   type: ss
   udp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇰🇷 机场推荐:dafei.de 韩国 02
-  network: ws
-  port: 2087
-  server: 130.94.29.111
-  type: vless
-  udp: true
-  uuid: 84da6391-1539-4583-a3d9-d6efd796b4d6
-  ws-opts:
-    headers:
-      Host: ''
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/46.0.2490.86 Safari/537.36
-    path: /e17586a75123
-  xudp: true
 - alterId: 0
   cipher: auto
   name: 🇰🇷 KR 1 → tg@nicevpn123
@@ -382,6 +366,34 @@ proxies:
   name: '韩国 001 #1'
   network: ws
   port: 80
+  server: 132.145.80.230
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '韩国 002 #1'
+  network: ws
+  port: 443
+  server: 152.67.218.38
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
+  ws-opts:
+    headers:
+      Host: 152.67.218.38
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '韩国 003 #1'
+  network: ws
+  port: 80
   server: 92.223.61.25
   skip-cert-verify: true
   type: vmess
@@ -390,81 +402,63 @@ proxies:
     headers:
       Host: mizban888.servecounterstrike.com
     path: /
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_1|4.4MB/s
-  network: grpc
-  port: 10050
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr5-r.link-t7.com
-  servername: s0.awsstatic.com
+- alterId: 1
+  cipher: auto
+  name: '韩国 004 #1'
+  network: ws
+  port: 8888
+  server: 54.180.96.67
+  skip-cert-verify: true
+  type: vmess
+  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
+  ws-opts:
+    headers:
+      Host: 54.180.96.67
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '韩国 005 #1'
+  network: ws
+  port: 443
+  server: fullaccesstokoreannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
   tls: true
-  type: vless
-  udp: true
-  uuid: 31904E3E-F57B-41D1-BDB2-CB6D3A496232
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_2|3.9MB/s
-  network: grpc
-  port: 10047
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr2-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 31904E3E-F57B-41D1-BDB2-CB6D3A496232
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: '韩国 006 #1'
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  skip-cert-verify: true
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
 - client-fingerprint: chrome
   encryption: none
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_3|5.2MB/s
-  network: grpc
-  port: 10047
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr2-r.link-t7.com
-  servername: s0.awsstatic.com
+  name: 🇰🇷 052  | ⬇️ 644KB/s
+  network: ws
+  packet-encoding: xudp
+  port: 2087
+  server: 172.64.52.230
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 745A6079-6A61-423D-BDD9-B344C1D26E62
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: update
-  name: 🇰🇷KR_4|2.6MB/s
-  network: grpc
-  port: 10048
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: '!!str 686c0ef0'
-  server: kr3-r.link-t7.com
-  servername: s0.awsstatic.com
-  tls: true
-  type: vless
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    max-early-data: 2560
+    path: /
+- name: 🇰🇷 181  | ⬇️ 15KB/s
+  port: 1080
+  server: 43.164.136.189
+  type: socks5
   udp: true
-  uuid: 31904E3E-F57B-41D1-BDB2-CB6D3A496232
-- client-fingerprint: chrome
-  name: 🇰🇷 035  | ⬇️ 20KB/s
-  network: tcp
-  port: 8686
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-    short-id: '!!str 628b3c90c98ead4f'
-  server: 3.37.55.114
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
