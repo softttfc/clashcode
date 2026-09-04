@@ -1,25 +1,4 @@
 proxies:
-- name: 新加坡3|@ripaojiedian
-  network: tcp
-  password: BxceQaOe
-  port: 9149
-  server: 95.40.28.75
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇸🇬
-  network: ws
-  port: 8880
-  server: 45.40.149.50
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime39.workers.dev
-    path: /
 - alterId: 0
   cipher: auto
   name: '🇯🇵 JP日本丨yoyapai.com #2'
@@ -35,7 +14,7 @@ proxies:
     path: /0zNW56sF
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇬 #1'
+  name: 🇸🇬
   network: tcp
   port: 443
   reality-opts:
@@ -51,57 +30,63 @@ proxies:
   ws-opts:
     headers:
       Host: asia.cendora.ru
-- name: SG新加坡(v2clash.blog 2026-9.1更新)
-  password: 59d52716-c490-4b60-b1eb-76c95ac2a3ce
-  port: 34377
-  server: xxxxxxxxxxxx.luoyun2.com
-  skip-cert-verify: true
-  sni: ydnxy710.ly123.edu.kg
-  tls: true
-  type: anytls
-  udp: true
-- name: SG新加坡(v2clash.blog 2026-9.1更新)...
-  password: 59d52716-c490-4b60-b1eb-76c95ac2a3ce
-  port: 17744
-  server: xxxxxxxxxxxx.luoyun2.com
-  skip-cert-verify: true
-  sni: aom811.ly123.edu.kg
-  tls: true
-  type: anytls
-  udp: true
-- name: 🇸🇬 013  | ⬇️ 262KB/s
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 1933
-  server: sg1.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg1.xiaoliyu.cyou
-  tfo: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 03
-  network: tcp
-  port: 10018
+- client-fingerprint: chrome
+  encryption: none
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: update
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 01
+  network: grpc
+  port: 10037
   reality-opts:
-    public-key: __YqMje4P5LY575OvzZjKJddTTn3vI6n0tMsMKCgcRY
-    short-id: '!!str 6cfa2459bb'
-  server: family.bucket.zjs.s.1.kfc-520.com
-  servername: www.sap.com
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg2-r.link-t7.com
+  servername: s0.awsstatic.com
+  tls: true
+  type: vless
+  uuid: F2987FBA-B653-444D-8057-6B6474E448C6
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
+  password: e4b72b531a2d10900519
+  port: 443
+  server: 104.248.148.240
+  sni: us.acskey.co
+  tls: true
+  type: http
+  username: testuser1
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: update
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 03
+  network: grpc
+  port: 10040
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg5-r.link-t7.com
+  servername: d1.awsstatic.com
+  sub_tag: noCache
   tls: true
   type: vless
   udp: true
-  uuid: c2564a65-0821-3241-b090-45d49cef58fd
-- name: 🇸🇬SG_4|⬇️5.1MB/s
-  network: ws
-  password: a9570330-769d-11ef-90dc-1577c1651679
-  port: 443
-  server: 104.18.1.196
-  skip-cert-verify: true
-  sni: sg-trojan.andfree.my.id
-  type: trojan
+  uuid: F2987FBA-B653-444D-8057-6B6474E448C6
+  xudp: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: update
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 04
+  network: grpc
+  port: 10039
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: '!!str 686c0ef0'
+  server: sg4-r.link-t7.com
+  servername: d1.awsstatic.com
+  tls: true
+  type: vless
   udp: true
-  ws-opts:
-    path: /welcome
+  uuid: F2987FBA-B653-444D-8057-6B6474E448C6
 - name: 🇸🇬 新加坡|@stairnode
   password: 868ecdaf6aed618ec98cf78585672b2b
   port: 4674
@@ -473,21 +458,17 @@ proxies:
   server: 139.59.119.251
   type: ss
   udp: true
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: BxceQaOe
+  port: 7674
+  server: 18.142.250.141
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - alterId: 0
   cipher: auto
   name: '新加坡 002 #1'
-  network: tcp
-  port: 21016
-  server: dog-jp.kunlun01dns.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  xudp: true
-- alterId: 0
-  cipher: auto
-  name: '新加坡 003 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -500,7 +481,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 004 #1'
+  name: '新加坡 003 #1'
   network: ws
   port: 18063
   server: 139.180.211.152
@@ -513,7 +494,7 @@ proxies:
     path: /Dialog Zoom
 - alterId: 1
   cipher: auto
-  name: '新加坡 005 #1'
+  name: '新加坡 004 #1'
   network: ws
   port: 21888
   server: 104.248.148.147
@@ -526,7 +507,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 005 #1'
   network: ws
   port: 80
   server: 139.99.61.154
@@ -539,7 +520,7 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: '新加坡 007 #1'
+  name: '新加坡 006 #1'
   network: ws
   port: 5001
   server: steam.dnspro.icu
@@ -552,7 +533,7 @@ proxies:
     path: /iso
 - alterId: 0
   cipher: auto
-  name: '新加坡 008 #1'
+  name: '新加坡 007 #1'
   network: ws
   port: 9111
   server: st-1.dnspro.icu
@@ -565,7 +546,7 @@ proxies:
     path: /iso
 - alterId: 0
   cipher: auto
-  name: '新加坡 009 #1'
+  name: '新加坡 008 #1'
   network: ws
   port: 5100
   server: st-2.dnspro.icu
@@ -578,7 +559,7 @@ proxies:
     path: /iso
 - alterId: 0
   cipher: auto
-  name: '新加坡 010 #1'
+  name: '新加坡 009 #1'
   network: ws
   port: 20025
   server: sh-cn-1.dnspro.icu
@@ -591,7 +572,7 @@ proxies:
     path: /iso
 - alterId: 4
   cipher: auto
-  name: '新加坡 011 #1'
+  name: '新加坡 010 #1'
   network: ws
   port: 443
   server: 103.253.26.134
@@ -605,7 +586,7 @@ proxies:
     path: /ws
 - alterId: 4
   cipher: auto
-  name: '新加坡 012 #1'
+  name: '新加坡 011 #1'
   network: ws
   port: 443
   server: 103.253.26.20
@@ -619,7 +600,7 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: '新加坡 013 #1'
+  name: '新加坡 012 #1'
   network: tcp
   port: 8443
   server: 13.250.114.194
@@ -628,7 +609,7 @@ proxies:
   uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
 - alterId: 0
   cipher: auto
-  name: '新加坡 014 #1'
+  name: '新加坡 013 #1'
   network: tcp
   port: 47630
   server: 43.228.126.187
@@ -636,7 +617,7 @@ proxies:
   type: vmess
   uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
 - client-fingerprint: chrome
-  name: '未知 VLESS-667 #1'
+  name: '未知 VLESS-668 #1'
   network: tcp
   port: 443
   server: 139.59.124.172
@@ -647,28 +628,31 @@ proxies:
   type: vless
   udp: true
   uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
-- client-fingerprint: firefox
-  name: 🇸🇬_新加坡_283
-  network: ws
-  port: 443
-  server: 134.122.164.55
-  servername: vp10.pages.dev
+- name: '新加坡 015 #1'
+  network: tcp
+  port: 51979
+  server: 172.105.122.253
+  servername: m.zoom.us
   skip-cert-verify: true
+  tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  uuid: d4032948-7ae4-4838-85a9-35b59f57a951
+- name: '新加坡 016 #1'
+  network: ws
+  port: 8900
+  server: 150.109.94.144
+  servername: dns68.putata.eu.org
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d7dd3a35-b68b-4992-b319-a85b8a1fc8e5
   ws-opts:
     headers:
-      Host: vp10.pages.dev
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 'A - 🇸🇬 SG 06 TG: @nodpai'
-  port: 6004
-  server: gtm-sg-cc54q7d1q01.365cloud0285.com
-  type: vmess
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+      Host: dns68.putata.eu.org
 - cipher: chacha20-ietf
   name: 🇸🇬 002  | ⬇️ 5MB/s
   password: passwd
@@ -693,6 +677,14 @@ proxies:
   skip-cert-verify: false
   type: ss
   udp: false
+- name: 🇸🇬 013  | ⬇️ 262KB/s
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  port: 1933
+  server: sg1.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: sg1.xiaoliyu.cyou
+  tfo: false
+  type: hysteria2
 - auth: f87376e17da040ed04c9665ce8972930
   name: 🇸🇬 023  | ⬇️ 9KB/s
   password: f87376e17da040ed04c9665ce8972930

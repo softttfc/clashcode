@@ -1,10 +1,4 @@
 proxies:
-- cipher: aes-256-gcm
-  name: 台湾|@ripaojiedian
-  password: Butterfly123@qwe9527
-  port: 30001
-  server: 36.33.35.105
-  type: ss
 - name: 🇨🇳 TW 1 → tg@nicevpn123
   password: 0cc6b4268dea0ba8
   port: 3389
@@ -252,16 +246,19 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
+- cipher: aes-256-gcm
+  name: 台湾|@ripaojiedian
+  password: Butterfly123@qwe9527
+  port: 30001
+  server: 36.33.35.105
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 'B - 🇹🇼 TW 02 TG: @nodpai'
-  network: ws
-  port: 33412
-  server: ct3.ainivp.com
+  name: TW
+  network: tcp
+  port: 794
+  server: 2.27.174.110
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  ws-opts:
-    headers:
-      Host: ct3.ainivp.com
-    path: /ray
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c

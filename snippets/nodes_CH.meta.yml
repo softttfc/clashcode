@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -74,8 +74,10 @@ proxies:
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
 - name: 🇨🇭 机场推荐:dafei.de 瑞士 01
   password: None
-  port: 7272
-  server: 212.65.190.199
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  tls: true
   type: http
 - name: CH 1 → tg@nicevpn123
   password: 55319b01-5d85-48a2-a40a-0b3fc1985755
@@ -121,9 +123,29 @@ proxies:
   skip-cert-verify: true
   type: vmess
   uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- name: '瑞士 002 #1'
+  network: xhttp
+  port: 10443
+  server: 138.124.242.252
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 05249269-4695-4df8-8968-9cba7a3db33f
+- name: '瑞士 003 #1'
+  network: tcp
+  port: 42238
+  server: 178.83.45.237
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7ac936bf-6757-4367-bf06-e905b76ff853
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '瑞士 002 #1'
+  name: '瑞士 004 #1'
   network: tcp
   port: 8443
   server: 138.124.244.77
@@ -134,17 +156,17 @@ proxies:
   type: vless
   udp: true
   uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- name: '瑞士 003 #1'
+- name: '瑞士 005 #1'
   network: tcp
   port: 62145
-  server: 141.148.240.61
+  server: 141.148.245.146
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
   uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: '瑞士 004 #1'
+- name: '瑞士 006 #1'
   network: tcp
   port: 64584
   server: 138.124.123.127
@@ -154,25 +176,16 @@ proxies:
   type: vless
   udp: true
   uuid: d3b59f6e-fab9-46ca-afec-bc240c4899f9
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇨🇭CH_1|2.8MB/s
-  network: xhttp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: '!!str f79448a30d'
-  server: ch-xh01.tcp-reset-club.net
-  servername: s3.netavex.com
+- name: '瑞士 007 #1'
+  network: tcp
+  port: 62145
+  server: 141.148.243.231
+  skip-cert-verify: false
+  tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  xhttp-opts:
-    mode: packet-up
-    path: /assets/v2/pkg
-  xudp: true
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
 - cipher: aes-256-cfb
   name: '🇨🇭_CH_瑞士 #3'
   password: asdKkaskJKfnsa

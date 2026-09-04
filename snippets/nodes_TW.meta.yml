@@ -1,19 +1,21 @@
 proxies:
-- cipher: aes-256-gcm
-  name: 台湾|@ripaojiedian
-  password: Butterfly123@qwe9527
-  port: 30001
-  server: 36.33.35.105
-  type: ss
 - name: 🇨🇳 机场推荐:dafei.de 台湾 01
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  sni: twmoon1-cdn-route.couldflare-cdn.com
+  password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+  port: 33368
+  server: yazhouany02.downapptwo.cc
+  skip-cert-verify: true
+  sni: tw01.swiftrelay.cc
   tls: true
-  type: http
+  type: anytls
   udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
+- name: 🇹🇼TW_1|3.1MB/s
+  password: bd54ceae-9b5c-477d-b364-ffd8e5c734a7
+  port: 47531
+  server: svip.skycon808.com
+  skip-cert-verify: true
+  sni: tw15.swiftrelay.cc
+  type: anytls
+  udp: true
 - name: 🇨🇳 TW 1 → tg@nicevpn123
   password: 0cc6b4268dea0ba8
   port: 3389
@@ -261,16 +263,28 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
+- cipher: aes-256-gcm
+  name: 台湾|@ripaojiedian
+  password: Butterfly123@qwe9527
+  port: 30001
+  server: 36.33.35.105
+  type: ss
+- name: 🇹🇼TW_2|4.8MB/s
+  password: exaxgqkKkd0TAMrCxeonWg==
+  port: 1443
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  sni: twmoon1-cdn-route.couldflare-cdn.com
+  tls: true
+  type: http
+  udp: true
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
 - alterId: 0
   cipher: auto
-  name: 'B - 🇹🇼 TW 02 TG: @nodpai'
-  network: ws
-  port: 33412
-  server: ct3.ainivp.com
+  name: TW
+  network: tcp
+  port: 794
+  server: 2.27.174.110
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
-  ws-opts:
-    headers:
-      Host: ct3.ainivp.com
-    path: /ray
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c

@@ -14,41 +14,10 @@ proxies:
     headers:
       Host: edge.yzkvm.top
     path: /
-- name: 🇸🇪 机场推荐:dafei.de 瑞典 01
-  password: None
-  port: 443
-  server: 149.50.216.65
-  skip-cert-verify: true
-  tls: true
+- name: 🇸🇪 243  | ⬇️ 172KB/s
+  port: 81
+  server: 46.59.120.87
   type: http
-- name: 🇸🇪 084  | ⬇️ 1MB/s
-  port: 443
-  server: 146.70.242.146
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_3|⬇️3.2MB/s
-  network: tcp
-  port: 443
-  server: secdn17.suio.me
-  servername: secdn17.suio.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: a7a9f670-44c0-45a9-8047-69db0203c142
-- grpc-opts:
-    grpc-service-name: JNIR
-  name: 未知VLESS-49|free-nodes
-  network: grpc
-  port: 504
-  server: dd.openaccessnode.com
-  servername: nobitex.ir
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 31701b5d-ca95-92f9-d684-dae3706161ea
 - alterId: 64
   cipher: auto
   name: SE 1 → tg@nicevpn123
@@ -410,7 +379,16 @@ proxies:
     headers:
       Host: www.31270022.xyz
     path: /path/1704188270531
-- name: '瑞典 006 #1'
+- alterId: 0
+  cipher: auto
+  name: '瑞典 006 #1'
+  network: tcp
+  port: 80
+  server: 217.142.138.61
+  skip-cert-verify: true
+  type: vmess
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+- name: '瑞典 007 #1'
   network: ws
   port: 80
   server: 146.75.119.82
@@ -425,43 +403,30 @@ proxies:
     headers:
       Host: rb24.ir
     path: ws/?ed=2048/
-- name: '瑞典 007 #1'
-  network: ws
-  port: 2052
-  server: 185.146.173.58
-  servername: 3.V2rayV2ray-_-_-V2ray.irantech.Org.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b57c0631-e5c3-4cc8-bc4d-77f9d5d34e45
-  ws-opts:
-    headers:
-      Host: 3.V2rayV2ray-_-_-V2ray.irantech.Org.
-    path: /Telegram-xiv2ray?ed=2048
-- name: '瑞典 008 #1'
-  network: ws
-  port: 2052
-  server: 185.146.173.54
-  servername: fiWs1.mstrmind.Cloud.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: dd965867-295e-43bb-b47b-6297b293f6c3
-  ws-opts:
-    headers:
-      Host: fiWs1.mstrmind.Cloud.
-    path: /
-- name: 🇸🇪SE_1|2.7MB/s
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪SE_1|1.4MB/s
+  network: xhttp
+  packet-encoding: xudp
   port: 443
-  server: 149.50.216.65
+  server: main.hvumyrpstghekb.top
+  servername: main.hvumyrpstghekb.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: bd29f019-85a2-43f6-b10a-e91dbdf58ee3
+  xhttp-opts:
+    host: main.hvumyrpstghekb.top
+    path: /hanBham0QSktwSruCtIbKI6PCsj
+  xudp: true
+- name: 🇸🇪 084  | ⬇️ 1MB/s
+  port: 443
+  server: 146.70.242.146
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
 - name: 🇸🇪 109  | ⬇️ 1MB/s
   port: 39811
   server: 176.111.37.216
@@ -471,12 +436,4 @@ proxies:
   server: 146.70.242.130
   skip-cert-verify: true
   tls: true
-  type: http
-- name: 🇸🇪 243  | ⬇️ 172KB/s
-  port: 81
-  server: 46.59.120.87
-  type: http
-- name: 🇸🇪 270  | ⬇️ 288KB/s
-  port: 39811
-  server: 176.111.37.5
   type: http
