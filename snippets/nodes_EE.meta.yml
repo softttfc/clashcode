@@ -10,7 +10,7 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: '🇪🇪 #2'
+- name: '🇪🇪 #1'
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
@@ -34,27 +34,30 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- client-fingerprint: chrome
-  name: '爱沙尼亚 001 #1'
-  network: ws
+- cipher: chacha20-ietf-poly1305
+  name: 🇪🇪EE_6
+  password: dzSx7W6wBHO1VRI_Gx4cjVM0nN41m8qx
+  port: 114
+  server: 81.90.21.73
+  type: ss
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_1
+  network: tcp
   port: 443
-  server: 5.45.117.125
-  servername: freeuse.firta.ru
-  skip-cert-verify: false
-  tfo: false
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: '!!str a696de84963656de'
+  server: 95.85.224.51
+  servername: max.ru
   tls: true
   type: vless
-  udp: true
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  ws-opts:
-    headers:
-      Host: freeuse.firta.ru
-    path: /
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
 - alpn:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
+  name: '🇪🇪 #2'
   network: tcp
   port: 443
   server: 138.124.100.128
@@ -63,3 +66,29 @@ proxies:
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_3
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Kb0rDCu2kKhfnC6bsi0DMRxDej9S-Mu1vVza1H1l4U4
+    short-id: '!!str 0c'
+  server: 188.127.247.129
+  servername: yahoo.com
+  tls: true
+  type: vless
+  uuid: 33aa2b47-484b-49f6-8f23-fb34602d221f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_5
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 06GvG7PU5F3Hgq-vUH24tU0tpsbGMCCt26BSvlaBNUE
+    short-id: '!!str dfbfa87e9f37f1f0'
+  server: 5.180.40.9
+  servername: cloud.mail.ru
+  tls: true
+  type: vless
+  uuid: 5e19b3c8-c1dc-4163-95e2-895319c15d6c
