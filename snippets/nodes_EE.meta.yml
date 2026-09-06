@@ -21,7 +21,7 @@ proxies:
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇪🇪
+  name: '🇪🇪 #2'
   network: tcp
   port: 2053
   reality-opts:
@@ -34,16 +34,30 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- cipher: chacha20-ietf-poly1305
-  name: 🇪🇪EE_6
-  password: dzSx7W6wBHO1VRI_Gx4cjVM0nN41m8qx
-  port: 114
-  server: 81.90.21.73
-  type: ss
+- name: 🇪🇪EE_4
+  network: tcp
+  port: 2053
+  server: 68.221.221.22
+  tls: false
+  type: vless
+  uuid: 01e0b37a-95e4-4c38-bd89-fef1881273ff
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇪🇪
+  network: tcp
+  port: 443
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
 - client-fingerprint: qq
   flow: xtls-rprx-vision
   name: 🇪🇪EE_1
-  network: tcp
+  network: raw
   port: 443
   reality-opts:
     public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
@@ -53,42 +67,3 @@ proxies:
   tls: true
   type: vless
   uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇪🇪 #2'
-  network: tcp
-  port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_3
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Kb0rDCu2kKhfnC6bsi0DMRxDej9S-Mu1vVza1H1l4U4
-    short-id: '!!str 0c'
-  server: 188.127.247.129
-  servername: yahoo.com
-  tls: true
-  type: vless
-  uuid: 33aa2b47-484b-49f6-8f23-fb34602d221f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_5
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 06GvG7PU5F3Hgq-vUH24tU0tpsbGMCCt26BSvlaBNUE
-    short-id: '!!str dfbfa87e9f37f1f0'
-  server: 5.180.40.9
-  servername: cloud.mail.ru
-  tls: true
-  type: vless
-  uuid: 5e19b3c8-c1dc-4163-95e2-895319c15d6c
