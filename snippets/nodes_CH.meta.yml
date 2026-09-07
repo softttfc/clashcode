@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -46,7 +46,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇨🇭_CH_瑞士 #4'
+  name: '🇨🇭_CH_瑞士 #2'
   port: 443
   reality-opts:
     public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
@@ -60,7 +60,7 @@ proxies:
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇨🇭_CH_瑞士 #5'
+  name: '🇨🇭_CH_瑞士_1 #2'
   port: 443
   reality-opts:
     public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
@@ -72,75 +72,29 @@ proxies:
   type: vless
   udp: true
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-- name: 🇨🇭 089  | ⬇️ 14KB/s
-  port: 7272
-  server: 212.65.190.199
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  tls: true
   type: http
-- name: CH 1 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11005
-  server: 64.110.64.80
+- name: 🇨🇭CH_2|2.1MB/s
+  port: 443
+  server: 31.7.62.50
   skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CH 2 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11007
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CH 3 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11006
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CH 4 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11004
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CH 5 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11000
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: '瑞士 001 #1'
-  network: tcp
-  port: 62145
-  server: 141.148.233.20
-  skip-cert-verify: false
-  tfo: false
   tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- name: '瑞士 002 #1'
-  network: tcp
-  port: 62145
-  server: 141.148.238.119
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
 - alterId: 0
   cipher: auto
-  name: '瑞士 003 #1'
+  name: '瑞士 001 #1'
   network: tcp
   port: 38998
   server: 178.83.45.29
   skip-cert-verify: true
   type: vmess
   uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- name: '瑞士 004 #1'
+- name: '瑞士 002 #1'
   network: tcp
   port: 2086
   server: 138.124.123.127
@@ -152,7 +106,7 @@ proxies:
   uuid: 188c0927-b022-4478-86f7-be53449e2d8b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '瑞士 005 #1'
+  name: '瑞士 003 #1'
   network: tcp
   port: 8443
   server: 138.124.244.77
@@ -163,17 +117,10 @@ proxies:
   type: vless
   udp: true
   uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- name: 🇨🇭CH_1|3.3MB/s
+- name: 🇨🇭CH_1|3.5MB/s
   password: None
   port: 9443
   server: 37.120.213.210
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭CH_2|3.9MB/s
-  port: 443
-  server: 31.7.62.50
   skip-cert-verify: true
   tls: true
   type: http
@@ -184,28 +131,22 @@ proxies:
   port: 80
   server: 84.17.53.163
   type: ss
-- client-fingerprint: firefox
-  name: 🇨🇭CH_6
-  network: xhttp
+- name: 🇨🇭 089  | ⬇️ 14KB/s
+  port: 7272
+  server: 212.65.190.199
+  type: http
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_11
+  network: tcp
   port: 443
   reality-opts:
-    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
-    short-id: '!!str f79448a30d'
-  server: ch-xh01.tcp-reset-club.net
-  servername: s3.netavex.com
+    public-key: bnUUlOHnKSj_dwJQP-zMTTVjJ9IierDOleYNKA_kpn4
+  server: 194.154.29.149
+  servername: ch-1.kihsuyhf8jkiugsxb.cfd
   tls: true
   type: vless
-  uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  ws-opts:
-    path: /assets/v2/pkg
-- name: 🇨🇭CH_8
-  password: a4130dea-9e33-4032-805d-0392fdf26cbd
-  port: 443
-  server: samurai.h4ck.me
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  tls: false
-  type: hysteria2
+  uuid: 0dc1fc26-b8e9-4296-9870-0996de3c2333
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭CH_9
@@ -219,3 +160,38 @@ proxies:
   tls: true
   type: vless
   uuid: 51231507-67c3-4141-ab08-a69eb121c716
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '未知 VLESS-759 #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
+    short-id: '!!str 1ed136481e0ede74'
+  server: 80.66.65.51
+  servername: cdn.geodema.network
+  tls: true
+  type: vless
+  uuid: 78eb4455-0d07-28a0-93e3-7c8654f11d74
+- client-fingerprint: firefox
+  name: 🇨🇭CH_8
+  network: xhttp
+  port: 443
+  reality-opts:
+    public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
+    short-id: '!!str f79448a30d'
+  server: ch-xh01.tcp-reset-club.net
+  servername: s3.netavex.com
+  tls: true
+  type: vless
+  uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  ws-opts:
+    path: /assets/v2/pkg
+- name: 🇨🇭CH_2
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  port: 443
+  server: che01plrhy01.tcp-reset-club.net
+  skip-cert-verify: true
+  sni: che01plrhy01.tcp-reset-club.net
+  tls: false
+  type: hysteria2
