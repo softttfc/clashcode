@@ -10,8 +10,7 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: '🇪🇪 #2'
-  network: tcp
+- name: '🇪🇪爱沙尼亚丨yoyapai.com #2'
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
@@ -34,19 +33,43 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
+- client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇪🇪
-  network: tcp
+  name: 🇪🇪_爱沙尼亚_19
   port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
+  reality-opts:
+    public-key: P2MV0I11JvKg-G3wfg64YVGUEh0Wvy6C4MTVsMPWdyQ
+    short-id: '!!str 7b1c7d9a3f2a'
+  server: 64.188.82.57
+  servername: ee-download.spectrum.vu
+  skip-cert-verify: true
   tls: true
   type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
+  udp: true
+  uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇪🇪_爱沙尼亚_30
+  port: 49001
+  reality-opts:
+    public-key: _LbLyj6OynSREglFpkhdrxVmh_bf9p60uTEWfQbtUWo
+    short-id: '!!str 1a6b1f9d0e'
+  server: 185.123.53.221
+  servername: de-7.techprovide.icu
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41784775-8846-4579-9d9d-9ad6ea802e2e
+- name: 🇪🇪EE_5
+  network: ws
+  port: 443
+  server: 94.183.170.248
+  tls: false
+  type: vless
+  uuid: 9d9e3421-5652-4804-85ba-238355b948ab
+  ws-opts:
+    path: /
 - client-fingerprint: qq
   flow: xtls-rprx-vision
   name: 🇪🇪EE_1
@@ -60,3 +83,24 @@ proxies:
   tls: true
   type: vless
   uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+- name: 🇪🇪EE_4
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sni: 109.206.241.10
+  type: trojan
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇪🇪
+  network: tcp
+  port: 443
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888

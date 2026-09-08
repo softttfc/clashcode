@@ -15,33 +15,21 @@ proxies:
       Host: edge.yzkvm.top
     path: /
 - name: 🇸🇪 机场推荐:dafei.de 瑞典 01
+  port: 81
+  server: 46.59.120.87
+  type: http
+- name: 🇸🇪 093  | ⬇️ 933KB/s
   port: 443
-  server: 146.70.242.130
+  server: 149.50.216.65
   skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
   type: http
-- name: 🇸🇪SE_3|⬇️3.2MB/s
-  network: tcp
-  port: 443
-  server: secdn17.suio.me
-  servername: secdn17.suio.me
-  skip-cert-verify: true
-  tls: true
-  type: vless
   udp: true
-  uuid: a7a9f670-44c0-45a9-8047-69db0203c142
-- grpc-opts:
-    grpc-service-name: JNIR
-  name: 未知VLESS-49|free-nodes
-  network: grpc
-  port: 504
-  server: dd.openaccessnode.com
-  servername: nobitex.ir
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 31701b5d-ca95-92f9-d684-dae3706161ea
+- name: 🇸🇪 038  | ⬇️ 80KB/s
+  port: 39811
+  server: 176.111.37.5
+  type: http
 - alterId: 64
   cipher: auto
   name: '瑞典 001 #1'
@@ -123,6 +111,21 @@ proxies:
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - name: '瑞典 007 #1'
   network: ws
+  port: 2095
+  server: 185.146.173.68
+  servername: QUENTIN--_--DiG.radiotehran.org.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: QUENTIN--_--DiG.radiotehran.org.
+    path: /DigiconnecT?ed=1024
+- name: '瑞典 008 #1'
+  network: ws
   port: 80
   server: 146.75.119.82
   servername: rb24.ir
@@ -131,42 +134,114 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: 1fe034be-053b-4077-8272-d361ab9c8745
+  uuid: 041e5c35-5698-4005-b015-471ccf6812b8
   ws-opts:
     headers:
       Host: rb24.ir
     path: ws/?ed=2048/
-- name: '瑞典 008 #1'
+- name: '瑞典 009 #1'
   network: ws
-  port: 8080
-  server: 185.146.173.58
-  servername: SHHproxy-shhPROXY-SHHproxy.joinTELEGRAM.net.
+  port: 2095
+  server: 185.146.173.43
+  servername: DigiV2ray---_-_---DIGIq.radioTehran.org.
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 5631df39-0f66-4b1b-bcf3-a7b5dd9e3b06
+  uuid: cfb6d9ad-7a14-4061-b159-8902fd73bb59
   ws-opts:
     headers:
-      Host: SHHproxy-shhPROXY-SHHproxy.joinTELEGRAM.net.
-    path: SHHPROXY?ed=8080
-- name: 🇸🇪 093  | ⬇️ 933KB/s
+      Host: DigiV2ray---_-_---DIGIq.radioTehran.org.
+    path: /DIGIV2RAY--DigiV2ray--digiv2ray--DIGIV2RAY--DigiV2ray--digiv2ray--DigiV2ray--DigiV2ray?ed=1024
+- name: '瑞典 010 #1'
+  network: ws
+  port: 80
+  server: 185.146.173.237
+  servername: 6.v.v.V-_-_-V2ray-_-_-V.v.v.vg.www.speedtest.net.uv.Zula.ir.cloudflare.com.mehpOw.iR.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 6.v.v.V-_-_-V2ray-_-_-V.v.v.vg.www.speedtest.net.uv.Zula.ir.cloudflare.com.mehpOw.iR.
+    path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
+- name: 🇸🇪SE_1|3.1MB/s
+  password: None
   port: 443
   server: 149.50.216.65
   skip-cert-verify: true
-  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: 🇸🇪 038  | ⬇️ 80KB/s
-  port: 39811
-  server: 176.111.37.5
+- client-fingerprint: chrome
+  name: 🇸🇪_瑞典_24
+  port: 443
+  server: sw1-chr.astralweb.tech
+  servername: sw1-chr.astralweb.tech
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5dc56757-458e-4df2-9e71-2a14ce47e8af
+- name: Telegram 🆔@cnetvpn 🇸🇪
+  obfs: salamander
+  obfs-password: fuw2k1ddrouwxr3u
+  password: vz86jgszv4zszchv
+  port: 52062
+  server: giftcard.gateway-stream.com
+  skip-cert-verify: false
+  sni: giftcard.gateway-stream.com
+  tls: false
+  type: hysteria2
+- name: 🇸🇪SE_1|3.3MB/s
+  password: None
+  port: 443
+  server: 146.70.242.130
+  skip-cert-verify: true
+  tls: true
   type: http
+  username: null
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | SWE
+  network: xhttp
+  port: 2053
+  server: page.irhubby.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9abe6dbd-5988-4943-8a93-afc65ab50f54
+  xhttp-opts:
+    host: vips.irhubby.ir
+    mode: auto
+    path: /
+- name: 🇸🇪SE_5
+  password: 036c648f927d4d86a82dcf629db8cbe1
+  port: 17538
+  server: jackvpn23.mooo.com
+  skip-cert-verify: true
+  sni: jackvpn23.mooo.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '未知 VLESS-925 #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 4IoUUt2YZPsn8Y1JqOqV9LnQK0vNlY9AeV4m-83e2SE
+    short-id: '!!str ab9d5f3c'
+  server: 185.189.45.247
+  servername: apiv14.betust.net
+  tls: true
+  type: vless
+  uuid: c6037cf7-d931-4027-af06-6bfb0f10684c
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇫🇷FR_1247
-  network: tcp
+  name: 🇸🇪_SE_瑞典
   port: 443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -175,32 +250,9 @@ proxies:
   tls: true
   type: vless
   uuid: 0bc31c7f-1ee2-4dd3-929b-b61ae780eb3c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '未知 VLESS-545 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 4HizFUAIvYp3wzM4p1_VcbhLWsRVHzG53XZG4f7oWiY
-    short-id: '!!str b21f41e79ecbac55'
-  server: 185.189.47.107
-  servername: edge-se.mystatic-cdn.ru
-  tls: true
-  type: vless
-  uuid: 252f7811-d86f-4dc2-97e0-83d3172ef4b8
-- name: 🇸🇪SE_1
-  obfs: salamander
-  obfs-password: Telegram@vpnjey
-  password: Telegram@vpnjey
-  port: 36264
-  server: 77.110.96.201
-  skip-cert-verify: true
-  sni: se.vpnjey2.dpdns.org
-  tls: false
-  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇪SE_9
+  name: 🇸🇪SE_10
   network: tcp
   port: 443
   reality-opts:
@@ -211,24 +263,31 @@ proxies:
   tls: true
   type: vless
   uuid: c6037cf7-d931-4027-af06-6bfb0f10684c
-- client-fingerprint: firefox
+- client-fingerprint: edge
   grpc-opts:
-    grpc-service-name: TunService
-  name: 🇸🇪SE_8
+    grpc-service-name: gun
+  name: 🇸🇪SE_11
   network: grpc
-  port: 33743
+  port: 443
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 79.141.174.147
-  servername: www.google.com
+    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+    short-id: '!!str 3fa234ea9feaa048'
+  server: popos.ubuntuhosting.host
+  servername: popos.ubuntuhosting.host
   tls: true
   type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-- name: 🇸🇪SE_5
-  password: 036c648f927d4d86a82dcf629db8cbe1
-  port: 17538
-  server: jackvpn23.mooo.com
-  skip-cert-verify: true
-  sni: jackvpn23.mooo.com
-  tls: false
-  type: hysteria2
+  uuid: d7430ae7-320c-4658-808b-3006d0627d82
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: gun
+  name: 🇸🇪SE_16
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
+    short-id: '!!str 3fa234ea9feaa048'
+  server: 46.246.97.225
+  servername: popos.ubuntuhosting.host
+  tls: true
+  type: vless
+  uuid: d7430ae7-320c-4658-808b-3006d0627d82

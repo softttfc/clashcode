@@ -1,17 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: '🇷🇺RU俄罗斯 #2'
-  network: ws
-  port: 443
-  server: renderer-stream-2-62.mirra.now
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  udp: true
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
 - cipher: aes-256-gcm
   name: '🇷🇺 RU俄羅斯丨yoyapai.com #2'
   password: 7e1dd4c55bf85da5
@@ -44,6 +31,30 @@ proxies:
   skip-cert-verify: false
   type: ss
   udp: true
+- alterId: 0
+  cipher: auto
+  name: 未知5 35.3KB/s
+  network: ws
+  port: 443
+  server: renderer-stream-2-62.mirra.now
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+- name: 🇫🇷FR_137
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.219
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
 - alterId: 0
   cipher: auto
   name: '俄罗斯 001 #1'
@@ -119,16 +130,11 @@ proxies:
     path: /go
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 007 #1'
+  name: 未知46
   network: tcp
   port: 22324
   server: 5.188.190.252
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇺RU_10
-  password: nEefHwLLpCcvZliayaa1+t/VHJgVt8nP7TxiPOJM6IE=
-  port: 43558
-  server: 130.49.189.158
-  type: ss
