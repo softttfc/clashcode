@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -72,7 +72,7 @@ proxies:
   type: vless
   udp: true
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-- name: 🇨🇭CH_1|2.0MB/s
+- name: 🇨🇭CH_1|2.9MB/s
   password: None
   port: 9443
   server: 37.120.213.210
@@ -80,39 +80,13 @@ proxies:
   tls: true
   type: http
   username: null
-- alterId: 0
-  cipher: auto
-  name: 未知62
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
+- name: 🇨🇭CH_1|2.4MB/s
+  port: 443
+  server: 31.7.62.50
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- name: '瑞士 002 #1'
-  network: tcp
-  port: 2086
-  server: 138.124.123.127
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 188c0927-b022-4478-86f7-be53449e2d8b
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '瑞士 003 #1'
-  network: tcp
-  port: 8443
-  server: 138.124.244.77
-  servername: fi1.hys.braidx.tech
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
 - name: 'کانال تلگرام : Free_VPN_CH@'
   obfs: salamander
   obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
@@ -145,18 +119,22 @@ proxies:
   sni: api.kermanshahi.org
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_2|1.2MB/s
+- name: 🇨🇭CH_2|2.5MB/s
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇨🇭CH_3|2.9MB/s
+  password: None
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇨🇭 089  | ⬇️ 14KB/s
-  port: 7272
-  server: 212.65.190.199
-  type: http
+  username: null
 - client-fingerprint: firefox
-  name: 🇨🇭CH_5
+  name: 🇨🇭CH_4
   network: xhttp
   port: 443
   reality-opts:
@@ -169,28 +147,7 @@ proxies:
   uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   ws-opts:
     path: /assets/v2/pkg
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_6
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: B0S7A-ceRt0c3aRqbeQG69FVSkK-si6NWLBEM_QuC3U
-    short-id: '!!str 16'
-  server: 138.124.67.80
-  servername: tradingview.com
-  tls: true
-  type: vless
-  uuid: 51231507-67c3-4141-ab08-a69eb121c716
-- name: 🇨🇭CH_2
-  password: 84a506ca5aca505696a454d828420b3f
-  port: 50160
-  server: 140.238.213.114
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_7
+- name: 🇨🇭CH_6
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   port: 443
   server: che01plrhy01.tcp-reset-club.net
