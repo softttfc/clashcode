@@ -44,6 +44,23 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
+- name: '🇨🇭CH_1|811KB/s|P002-260618 01 #2'
+  password: None
+  port: 443
+  server: 31.7.62.50
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇨🇭CH_1|3.5MB/s
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: '🇨🇭_CH_瑞士 #2'
@@ -72,15 +89,95 @@ proxies:
   type: vless
   udp: true
   uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-- name: 🇨🇭CH_1|2.9MB/s
-  password: None
-  port: 9443
-  server: 37.120.213.210
+- name: CH 1 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11005
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 2 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11007
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 3 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11006
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 4 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11004
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 5 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11000
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 未知155
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
   skip-cert-verify: true
   tls: true
-  type: http
-  username: null
-- name: 🇨🇭CH_1|2.4MB/s
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- name: '瑞士 003 #1'
+  network: tcp
+  port: 2086
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 188c0927-b022-4478-86f7-be53449e2d8b
+- name: '瑞士 004 #1'
+  network: tcp
+  port: 56539
+  server: 178.83.226.142
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1d2cded7-0930-42da-a9f9-01a7adeb1642
+- name: '瑞士 005 #1'
+  network: tcp
+  port: 3038
+  server: 178.83.45.98
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2dd590a4-fc7b-4ad8-a8d6-c5f19f686cfd
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 006 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: 🇨🇭CH_2|2.6MB/s
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
@@ -119,22 +216,36 @@ proxies:
   sni: api.kermanshahi.org
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_2|2.5MB/s
+- name: 🇨🇭CH_1|3.9MB/s
+  password: None
   port: 9443
   server: 37.120.213.210
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇨🇭CH_3|2.9MB/s
-  password: None
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  tls: true
-  type: http
   username: null
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇨🇭_CH_瑞士->🇫🇮_FI_芬兰
+  port: 5001
+  reality-opts:
+    public-key: HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ
+    short-id: '!!str a1b2c3d4'
+  server: 31.76.4.128
+  servername: fi.aeternavpn.space
+  tls: true
+  type: vless
+  uuid: 5a92a9d2-3067-49cd-bfc5-989bbdfc5d52
+- name: 🇨🇭CH_1
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - client-fingerprint: firefox
-  name: 🇨🇭CH_4
+  name: 🇨🇭CH_3
   network: xhttp
   port: 443
   reality-opts:
