@@ -10,7 +10,7 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: '🇪🇪 #2'
+- name: '🇪🇪 #1'
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
@@ -21,7 +21,7 @@ proxies:
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
+  name: 🇪🇪
   network: tcp
   port: 2053
   reality-opts:
@@ -34,31 +34,27 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪
+- encryption: mlkem768x25519plus.native.0rtt.axhmyvi6WAeIVHyKYLuHz7cMMow5FBwwSjs9-TIWxRY
+  name: '爱沙尼亚 001 #1'
   network: tcp
   port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
+  server: 85.9.194.75
   type: vless
+  udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇪🇪EE_5
-  network: tcp
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  port: 449
-  server: 109.206.241.10
+  xudp: true
+- name: 🇪🇪EE_3
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: cabinet.wwwinternetvideo.click
   skip-cert-verify: true
-  sni: 109.206.241.10
-  type: trojan
+  sni: cabinet.wwwinternetvideo.click
+  tls: false
+  type: hysteria2
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_2
-  network: raw
+  name: 🇪🇪EE_1
+  network: tcp
   port: 443
   reality-opts:
     public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
@@ -68,10 +64,36 @@ proxies:
   tls: true
   type: vless
   uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
-- name: 🇪🇪EE_1
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+- name: 🇪🇪EE_8
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sni: 109.206.241.10
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇪🇪EE_9
+  network: tcp
+  port: 4323
+  reality-opts:
+    public-key: T7pTw3G0AIiLmvi96auuSsRjv1q52lpexxO2oITguhA
+    short-id: '!!str 40d9e0206a1bd03d'
+  server: rital-caca.tempfast.ir
+  servername: play.googleapis.com
+  tls: true
+  type: vless
+  uuid: 78440584-c334-44a8-bab1-8b1a7d08012b
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇪🇪 #2'
+  network: tcp
   port: 443
-  server: cabinet.wwwinternetvideo.click
-  sni: 127.0.0.1
-  tls: false
-  type: hysteria2
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
