@@ -12,13 +12,11 @@ proxies:
   uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
   ws-opts:
     path: /0zNW56sF
-- encryption: none
-  name: 🇸🇬
+- name: '🇸🇬 #1'
   network: ws
-  packet-encoding: xudp
   port: 8880
   server: 45.40.149.50
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -27,10 +25,9 @@ proxies:
     headers:
       Host: vms.lifetime39.workers.dev
     path: /
-  xudp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇸🇬 #1'
+  name: 🇸🇬
   network: tcp
   port: 443
   reality-opts:
@@ -47,15 +44,13 @@ proxies:
     headers:
       Host: asia.cendora.ru
 - name: 🇸🇬 机场推荐:dafei.de 新加坡 01
-  port: 9090
-  server: 128.199.254.13
-  type: http
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
+  password: e4b72b531a2d10900519
   port: 443
-  server: 154.26.139.24
-  skip-cert-verify: true
+  server: 104.248.148.240
+  sni: us.acskey.co
   tls: true
   type: http
+  username: testuser1
 - name: 🇸🇬 新加坡|@stairnode
   password: 868ecdaf6aed618ec98cf78585672b2b
   port: 4674
@@ -427,50 +422,9 @@ proxies:
   server: 139.59.119.251
   type: ss
   udp: true
-- name: '新加坡3|@ripaojiedian #1'
-  network: tcp
-  password: BxceQaOe
-  port: 41142
-  server: 54.251.190.150
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: '新加坡 002 #1'
-  network: tcp
-  port: 8443
-  server: 13.250.114.194
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 0
-  cipher: auto
-  name: '新加坡 003 #1'
-  network: tcp
-  port: 47630
-  server: 43.228.126.187
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
-- name: '新加坡 004 #1'
-  network: ws
-  port: 12710
-  server: 178.128.63.151
-  servername: zoom.us
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1d305115-fb27-4cf5-ba1a-94f926018f26
-  ws-opts:
-    headers:
-      Host: zoom.us
-    path: /FREE+By+Tharuwa+(
-- alterId: 0
-  cipher: auto
-  name: '新加坡 005 #1'
+  name: '新加坡 001 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -483,7 +437,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 002 #1'
   network: ws
   port: 18063
   server: 139.180.211.152
@@ -494,102 +448,60 @@ proxies:
     headers:
       Host: m.zoom.us
     path: /Dialog Zoom
-- alterId: 1
-  cipher: auto
-  name: '新加坡 007 #1'
-  network: ws
-  port: 21888
-  server: 104.248.148.147
+- name: '新加坡3|@ripaojiedian #1'
+  network: tcp
+  password: BxceQaOe
+  port: 41142
+  server: 54.251.190.150
   skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 104.248.148.147
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '新加坡 008 #1'
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  skip-cert-verify: true
-  type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
-  ws-opts:
-    headers:
-      Host: 139.99.61.154
-    path: /vmess
-- alterId: 4
-  cipher: auto
-  name: '新加坡 009 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.134
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: eeh7iewe.com
-    path: /ws
-- alterId: 4
-  cipher: auto
-  name: '新加坡 010 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.20
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: zecjk.com
-    path: /ws
-- name: 🇸🇬169041 | ⚡️Telegram = t.me/S...
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.151.142.26
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 🇸🇬169038 | ⚡️Telegram = t.me/S...
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.0.20
-  skip-cert-verify: true
-  sni: whatsapp.com
-  tls: false
-  type: hysteria2
-- alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  client-fingerprint: chrome
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬SG_1|3.1MB/s
-  network: ws
-  port: '443'
-  server: 170.114.52.22
-  servername: asia.csmasterofficial.store
+  name: end-gfw.com12@sg89
+  network: tcp
+  packet-encoding: xudp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '!!str 628b3c90c98ead4f'
+  server: 13.214.167.119
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 66936521-52b4-47ac-9aeb-6f292e352797
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  xudp: true
+- name: 🇸🇬SG_36
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  port: 1933
+  server: sg1.xiaoliyu.cyou
+  skip-cert-verify: true
+  sni: sg1.xiaoliyu.cyou
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: 🇸🇬SG_2|1.5MB/s
+  network: ws
+  port: 2096
+  server: 188.164.248.78
+  servername: fq.jp188.dpdns.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
   ws-opts:
     headers:
-      Host: asia.csmasterofficial.store
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/69.0.3497.100 Safari/537.36
-    path: /cs
-  xudp: true
+      Host: fq.jp188.dpdns.org
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
 - client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬SG_2|3.4MB/s
+  name: 🇸🇬SG_3|3.1MB/s
   network: ws
   port: '8443'
-  server: news.zoom.us
+  server: 141.193.213.21
   servername: u.srilankangrill.online
   tls: true
   type: vless
@@ -598,10 +510,58 @@ proxies:
   ws-opts:
     headers:
       Host: u.srilankangrill.online
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/70.0.3538.67 Safari/537.36
-    path: /
+      User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1610 Build/MMB29M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
+    path: ''
   xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬 新加坡 | SGP
+  network: ws
+  port: 8443
+  server: 141.193.213.21
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+- auth: dd701b4f908452f85af1c3a5f86c6d32
+  name: 🇸🇬 新加坡 | SGP 2
+  obfs: salamander
+  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
+  password: dd701b4f908452f85af1c3a5f86c6d32
+  port: 443
+  server: 8.219.144.195
+  skip-cert-verify: true
+  sni: 8.219.144.195
+  type: hysteria2
+  udp: true
+- auth: f87376e17da040ed04c9665ce8972930
+  name: 🇸🇬SG_65
+  password: f87376e17da040ed04c9665ce8972930
+  port: 50160
+  server: 138.2.73.238
+  skip-cert-verify: true
+  sni: 138.2.73.238
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬_SG_新加坡
+  network: ws
+  port: 443
+  server: 43.160.241.174
+  servername: mia11.pages.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
+  ws-opts:
+    headers:
+      Host: mia11.pages.dev
+    path: /TG:@MiaChatChannel
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇸🇬 119  | ⬇️ 29KB/s
@@ -626,209 +586,8 @@ proxies:
   username: testuser1
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_35
-  network: tcp
-  port: 59180
-  reality-opts:
-    public-key: NntGU23khU2ASY2g1XM5_Vl0G39MyoXre5q7vanorDM
-    short-id: '!!str 3ced8a51ce74468c'
-  server: 54.151.153.129
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  uuid: 44aedcca-28f8-411d-bed2-9bd6aa491cb5
-- name: 🇸🇬SG_21
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.189.148
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_14
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.83.43
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_5
+  name: 🇸🇬SG_21
   network: raw
-  port: 443
-  reality-opts:
-    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
-    short-id: '!!str d1742269'
-  server: 91.192.81.214
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 607801ac-dbdd-4938-a167-129015d9978e
-- client-fingerprint: chrome
-  name: 未知 VLESS-722
-  network: tcp
-  port: 443
-  server: 8.sahanwickramasinghe.me
-  servername: www.tiktok.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '未知 VLESS-634 #1'
-  network: tcp
-  port: 15562
-  reality-opts:
-    public-key: TzY8IrCzcw3jLJa9tiYLbvHb0h7L6MSZXl6JsqkDCxw
-    short-id: '!!str 5ba824948be6'
-  server: 52.77.240.16
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  uuid: 302debe4-0cc7-48d1-9433-3242dbb6730a
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_18
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
-    short-id: '!!str 133a3f10a1581047'
-  server: 206.206.78.36
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
-- cipher: aes-256-cfb
-  name: 🇸🇬SG²_1
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.16
-  type: ss
-- client-fingerprint: chrome
-  name: 🇸🇬SG_101
-  network: ws
-  port: 443
-  server: 116.251.217.65
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  tls: true
-  type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000002
-  ws-opts:
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-- name: 🇸🇬SG_64
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.151.142.26
-  skip-cert-verify: true
-  sni: t.me
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇸🇬SG_98
-  network: ws
-  port: 8441
-  server: 45.77.241.190
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  tls: true
-  type: vless
-  uuid: b3ddac6f-b2b7-43a6-bd69-413013f30040
-  ws-opts:
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-913
-  network: tcp
-  port: 20221
-  reality-opts:
-    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
-    short-id: '!!str 85ae3d83d037b7'
-  server: 13.212.211.73
-  servername: www.intel.com
-  tls: true
-  type: vless
-  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
-  ws-opts:
-    path: '%2f'
-- client-fingerprint: firefox
-  name: 🇸🇬SG_108
-  network: ws
-  port: 8443
-  server: 104.17.74.206
-  servername: 8.sahanwickramasinghe.me
-  tls: true
-  type: vless
-  uuid: 542fd687-5160-4f80-9223-56678567dd29
-  ws-opts:
-    headers:
-      Host: 8.sahanwickramasinghe.me
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '未知 VLESS-556 #1'
-  network: tcp
-  port: 49805
-  reality-opts:
-    public-key: KhyeJbZtFAik5Mx1K_AQMIEK_MPwQnwUwSe-jTjq8yU
-    short-id: '!!str 4a753538b6a9eee9'
-  server: 47.129.185.35
-  servername: www.intel.com
-  tls: true
-  type: vless
-  uuid: 0803fc94-25f9-42db-9e6b-dd1418ae50ec
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_46
-  network: tcp
-  port: 26146
-  reality-opts:
-    public-key: 4cD2BKaVODTdo4soH4gLcB7Yj-hdLDKDhvbSNQgZLEM
-    short-id: '!!str 3ced8a51ce74468c'
-  server: 56.10.83.247
-  servername: www.intel.com
-  tls: true
-  type: vless
-  uuid: a965aaba-e7d0-44fc-84ad-cd7c341249aa
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_31
-  network: tcp
-  port: 10574
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬SG_89
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  sni: 138.2.73.238
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_22
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.76.106
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_23
-  network: tcp
   port: 19825
   reality-opts:
     public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
@@ -838,78 +597,9 @@ proxies:
   tls: true
   type: vless
   uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- name: 🇸🇬SG_15
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 13.212.32.171
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_37
-  network: tcp
-  port: 44416
-  reality-opts:
-    public-key: l0ERIlwtRtgldh9Kdles1rZrL3hKfityyhyu5U0Y6kM
-    short-id: '!!str 29400ecf83e074'
-  server: 54.254.182.69
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: 956e22b4-2257-4251-a708-679e0518e374
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_36
-  network: tcp
-  port: 58335
-  reality-opts:
-    public-key: 5uFce3cR8rT889d0IDLpENoFf9OnFXaOoO9B8mI8cWQ
-    short-id: '!!str 6ce3397cbd5ada'
-  server: 47.129.204.35
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  uuid: 0f4ce6d4-b4b4-41b9-b1e7-c109ad32b274
-- name: 🇸🇬SG_11
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.241.226
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_115
-  obfs: salamander
-  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
-  password: d042d150716709bb778cc73889cddb02
-  port: 443
-  server: 138.2.89.249
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_117
-  network: tcp
-  port: 443
-  server: 213.163.207.91
-  tls: false
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    path: /
-- name: 🇸🇬SG_33
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 47.129.0.20
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_42
+  name: 🇸🇬SG_30
   network: tcp
   port: 26017
   reality-opts:
@@ -920,19 +610,6 @@ proxies:
   tls: true
   type: vless
   uuid: d318cdac-0033-4b6e-98bf-35116e79c93f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_44
-  network: tcp
-  port: 43840
-  reality-opts:
-    public-key: tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA
-    short-id: '!!str ac4b9f02123aa50b'
-  server: 54.255.121.205
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: f053b140-9673-4ac5-bc8b-587bfd2c8fd8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇸🇬SG_2
@@ -946,10 +623,44 @@ proxies:
   tls: true
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬SG_14
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 47.129.189.148
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_29
+  network: ws
+  port: 443
+  server: 116.251.217.65
+  servername: netlivpn4813.ddhshhshs.workers.dev
+  tls: true
+  type: vless
+  uuid: 2388e166-3890-33ae-f77e-efac00000002
+  ws-opts:
+    headers:
+      Host: netlivpn4813.ddhshhshs.workers.dev
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+- client-fingerprint: firefox
+  name: 🇸🇬SG_73
+  network: ws
+  port: 8443
+  server: 104.17.74.206
+  servername: 8.sahanwickramasinghe.me
+  tls: true
+  type: vless
+  uuid: 542fd687-5160-4f80-9223-56678567dd29
+  ws-opts:
+    headers:
+      Host: 8.sahanwickramasinghe.me
+    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_8
-  network: tcp
+  name: 🇸🇬SG_28
+  network: raw
   port: 12972
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -960,7 +671,138 @@ proxies:
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
-  name: 🇸🇬SG_97
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_31
+  network: tcp
+  port: 43840
+  reality-opts:
+    public-key: tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA
+    short-id: '!!str ac4b9f02123aa50b'
+  server: 54.255.121.205
+  servername: www.sony.com
+  tls: true
+  type: vless
+  uuid: f053b140-9673-4ac5-bc8b-587bfd2c8fd8
+- client-fingerprint: chrome
+  name: 🇸🇬SG_35
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  tls: true
+  type: vless
+  uuid: b3ddac6f-b2b7-43a6-bd69-413013f30040
+  ws-opts:
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+    path: /@Marisa_kristi
+- name: 🇸🇬SG_13
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_67
+  password: 436114b5f36b2e704bdfa0927d57b6cd
+  port: 50160
+  server: 47.241.108.227
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_4
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc
+    short-id: '!!str d1742269'
+  server: 91.192.81.214
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 607801ac-dbdd-4938-a167-129015d9978e
+- cipher: aes-256-cfb
+  name: 🇸🇬SG²_1
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.16
+  type: ss
+- name: 🇸🇬SG_18
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.250.120.9
+  skip-cert-verify: true
+  sni: t.me
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_1
+  network: tcp
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_50
+  network: tcp#👝98@oneclickvpnkeys
+  port: 58335
+  reality-opts:
+    public-key: 5uFce3cR8rT889d0IDLpENoFf9OnFXaOoO9B8mI8cWQ
+    short-id: '!!str 6ce3397cbd5ada'
+  server: 47.129.204.35
+  servername: www.tesla.com
+  tls: true
+  type: vless
+  uuid: 0f4ce6d4-b4b4-41b9-b1e7-c109ad32b274
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_10
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
+    short-id: '!!str 133a3f10a1581047'
+  server: 206.206.78.36
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+- name: 🇸🇬SG_11
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 13.212.32.171
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  name: 🇸🇬SG_84
+  network: ws
+  port: 443
+  server: 170.114.52.22
+  servername: asia.csmasterofficial.store
+  tls: true
+  type: vless
+  uuid: 66936521-52b4-47ac-9aeb-6f292e352797
+  ws-opts:
+    headers:
+      Host: asia.csmasterofficial.store
+    path: /cs
+- client-fingerprint: chrome
+  name: 🇸🇬SG_69
   network: ws
   port: 51262
   server: 175.41.179.37
@@ -972,10 +814,26 @@ proxies:
     headers:
       Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
     path: /@Marisa_kristi
-- name: 🇸🇬SG_16
+- name: 🇸🇬SG_15
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
-  server: 13.250.120.9
+  server: 13.212.76.106
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_41
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.151.142.26
+  skip-cert-verify: true
+  sni: css.rbxcdn.com
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_24
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 47.129.0.20
   skip-cert-verify: true
   sni: vpn-sg-001.fastervpn.world
   tls: false

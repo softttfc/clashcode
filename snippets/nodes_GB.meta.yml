@@ -1,16 +1,6 @@
 proxies:
-- auth: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  name: 'US美国 #50'
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  port: 443
-  server: gta.internet-card.sbs
-  skip-cert-verify: true
-  sni: gta.internet-card.sbs
-  tls: false
-  type: hysteria2
-  udp: true
 - client-fingerprint: chrome
-  name: 'Node #25'
+  name: 'Node #4'
   network: ws
   port: 8443
   server: ad-010.pixel9xdmq.info
@@ -26,7 +16,7 @@ proxies:
     path: /
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇬🇧 #1'
+  name: 🇬🇧
   network: tcp
   port: 2053
   reality-opts:
@@ -40,7 +30,7 @@ proxies:
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - client-fingerprint: chrome
-  name: '🇬🇧 #2'
+  name: '🇬🇧 #1'
   network: ws
   port: 8443
   server: 91.110.174.210
@@ -55,7 +45,7 @@ proxies:
       Host: rubifen.adaspoloandco.com
     path: /GOrbEh
 - encryption: none
-  name: 🇬🇧
+  name: '🇬🇧 #2'
   network: ws
   packet-encoding: xudp
   port: 2087
@@ -67,9 +57,19 @@ proxies:
   uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
   ws-opts:
     path: /8f2690e2d016
+- name: 'GB英国 #2'
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: news.gazette.help
+  skip-cert-verify: false
+  sni: news.gazette.help
+  tfo: false
+  tls: false
+  type: hysteria2
+  udp: true
 - alpn:
   - http/1.1
-  name: GB英国(v2clash.blog 2026-9.10更新)...
+  name: 'HK香港(mibei77.com 米贝节点分享) #2'
   password: humanity
   port: 443
   server: 104.18.23.63
@@ -78,34 +78,11 @@ proxies:
   type: trojan
   udp: true
   ws-opts:
-    path: /assignment
-- name: 🏳️_未知_65
-  password: humanity
-  port: 443
-  server: 172.67.221.242
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- client-fingerprint: chrome
-  name: 'GB英国(mibei77.com 米贝节点分享)_3 #2'
-  network: ws
-  port: 2087
-  server: 104.17.103.118
-  servername: fq.jp188.dpdns.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 42c62a5a-cd31-4551-80ef-908732370287
-  ws-opts:
     headers:
-      Host: fq.jp188.dpdns.org
-    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+      Host: www.ignitelimit.com
+    path: /assignment
 - client-fingerprint: chrome
-  name: GB VLESS-558
+  name: GB VLESS-560
   network: tcp
   port: 21443
   reality-opts:
@@ -145,7 +122,7 @@ proxies:
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: GB VLESS-1543
+  name: GB VLESS-1555
   network: tcp
   port: 10829
   server: s148.okgg.top
@@ -208,7 +185,7 @@ proxies:
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: GB VLESS-1608
+  name: GB VLESS-1607
   network: tcp
   port: 10829
   server: 193.142.59.97
@@ -249,59 +226,19 @@ proxies:
   port: 443
   server: 146.19.49.251
   type: ss
-- name: 🇬🇧 机场推荐:dafei.de 英国 01
+- name: 🇬🇧GB_5|2.8MB/s
   port: 443
   server: 185.235.0.34
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_5|1.3MB/s
-  port: 443
-  server: 212.102.63.61
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_7|2.5MB/s
-  password: ''
-  port: '443'
-  server: 185.235.0.66
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ''
-- name: 🇬🇧 机场推荐:dafei.de 英国 04
-  port: 8443
-  server: 5.101.149.245
-  tls: true
-  type: http
-- name: 🇬🇧 114  | ⬇️ 2KB/s
-  password: freeuser1
-  port: 9251
-  server: ma1-gb.freeconnect.link
-  sni: ma1-gb.freeconnect.link
-  tls: true
-  type: http
-  username: freeuser1
-- name: 🇬🇧GB_4|2.7MB/s
+- name: 🇬🇧 机场推荐:dafei.de 英国 02
   port: 443
   server: 37.120.233.50
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_2|3.5MB/s
-  port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧 机场推荐:dafei.de 英国 08
-  password: None
-  port: 443
-  server: 212.102.63.31
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_3|3.3MB/s
+- name: 🇬🇧 机场推荐:dafei.de 英国 03
   password: None
   port: 443
   server: 37.120.233.34
@@ -309,7 +246,34 @@ proxies:
   sub_tag: noCache
   tls: true
   type: http
-  username: null
+- name: 🇬🇧 机场推荐:dafei.de 英国 04
+  port: 443
+  server: 185.235.0.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇬🇧GB_3|2.6MB/s
+  port: 443
+  server: 37.120.233.18
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇩🇪 德国 | DEU 3
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: AKUQO-fKsD19FFBxNq5XTFCRXWDZfes4zJjRINY1KUI
+    short-id: '!!str beff3ff061a64cfd'
+  server: 171.22.129.56
+  servername: fi-one.quiet-rogue.site
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
 - alterId: 0
   cipher: auto
   name: 英国(yudou789.top 玉豆免费节点)_56
@@ -741,586 +705,45 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '英国 001 #1'
-  network: tcp
-  port: 110
-  server: 31.77.8.97
-  skip-cert-verify: true
-  type: vmess
-  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
-- alterId: 0
-  cipher: auto
-  name: '英国 002 #1'
-  network: tcp
-  port: 180
-  server: 82.198.246.97
-  skip-cert-verify: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: US10 200.6MB/s
-  network: tcp
-  port: 180
-  server: 82.198.246.250
+  network: ws
+  port: 443
+  server: 2.27.16.177
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: US14 282.0MB/s
-  network: tcp
-  port: 180
-  server: 82.198.246.233
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- name: 🇬🇧GB_4|2.7MB/s
+  password: ''
+  port: '443'
+  server: 185.235.0.66
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: 未知106 179.2MB/s
-  network: tcp
-  port: 180
-  server: 82.198.246.37
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: '英国 006 #1'
-  network: tcp
-  port: 8080
-  server: 212.74.39.88
-  skip-cert-verify: true
-  type: vmess
-  uuid: abe912e7-45d9-44d5-b079-c6933b853a56
-- name: '英国 007 #1'
-  network: grpc
-  port: 2085
-  server: 37.221.110.245
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 02c05088-fcb4-4366-b8d3-98d68c7bdb98
-- client-fingerprint: chrome
-  name: '英国 008 #1'
-  network: ws
-  port: 443
-  server: 31.76.88.10
-  servername: cf5.rumedia-cdn.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 03c48eca-e0aa-4e18-998c-1f53f1de293c
-  ws-opts:
-    headers:
-      Host: cf5.rumedia-cdn.com
-    path: /cdn/v3/live
-- name: '英国 009 #1'
-  network: tcp
-  port: 4083
-  server: 78.141.219.108
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0f856f56-822f-49f6-b059-1dfb17466755
-- name: '英国 010 #1'
-  network: ws
-  port: 443
-  server: 45.8.211.217
-  servername: vangoghhh.info
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
-  ws-opts:
-    headers:
-      Host: vangoghhh.info
-    path: /rdfgtws
-- name: '英国 011 #1'
-  network: ws
-  port: 2200
-  server: 185.247.16.3
-  servername: rzd.ru
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
-  ws-opts:
-    headers:
-      Host: rzd.ru
-    path: /v1
-- client-fingerprint: chrome
-  name: '英国 012 #1'
-  network: grpc
-  port: 8443
-  server: 45.9.2.171
-  servername: torr.wlrus.cfd
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 167610e4-bcaf-4074-bc2d-0c08dc4ea294
-- client-fingerprint: chrome
-  name: '英国 013 #1'
-  network: ws
-  port: 2096
-  server: 45.12.31.120
-  servername: ez-f9d60b.ezaccess118dacd.workers.dev
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 59273321-5dd9-b462-688d-3050f9ef3261
-  ws-opts:
-    headers:
-      Host: ez-f9d60b.ezaccess118dacd.workers.dev
-    path: /sync
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '英国 014 #1'
-  network: tcp
-  port: 443
-  server: 5.178.101.166
-  servername: sbrf-8885.website
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 64c3ae71-4874-4a05-8d52-73b2fbb8a207
-- name: '英国 015 #1'
-  network: tcp
-  port: 8686
-  server: 2.28.40.166
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 80eb59ea-d992-456f-adf0-0ada38ffa062
-- name: '英国 016 #1'
-  network: tcp
-  port: 62145
-  server: 141.144.196.65
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- flow: ''
-  name: '英国 017 #1'
-  network: tcp
-  port: 62145
-  server: 92.5.231.30
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-- client-fingerprint: chrome
-  name: '英国 018 #1'
-  network: tcp
-  port: 8443
-  server: 77.74.123.178
-  servername: cdn7-09.vk-cdnvideo.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f
-- name: '英国 019 #1'
-  network: tcp
-  port: 443
-  server: 193.58.119.134
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 97d216c9-7561-45fa-fd67-e56fde36360b
-- client-fingerprint: chrome
-  name: '英国 020 #1'
-  network: ws
-  port: 443
-  server: 164.38.155.135
-  servername: alfi.yas-nowin.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: alfi.yas-nowin.ir
-    path: /?ed=2048
-- name: '英国 021 #1'
-  network: tcp
-  port: 80
-  server: 82.22.40.102
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  name: '英国 022 #1'
-  network: tcp
-  port: 443
-  server: 85.234.65.189
-  servername: eeaxtirr4c22.dop33.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: a63049c0-67ce-400c-beda-1403be8b8de8
-- name: '英国 023 #1'
-  network: tcp
-  port: 20190
-  server: 169.197.113.179
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b
-- name: '英国 024 #1'
-  network: tcp
-  port: 14726
-  server: 178.104.129.39
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: aebf0af6-7890-45ec-adf9-e6f502f2303e
-- client-fingerprint: chrome
-  flow: ''
-  name: 🇫🇷FR_1986
-  network: ws
-  port: 443
-  server: 158.180.231.216
-  servername: bab-6.site
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  ws-opts:
-    headers:
-      Host: bab-6.site
-    path: /vws/
-- name: '英国 026 #1'
-  network: ws
-  port: 8080
-  server: 141.11.45.214
-  servername: net.hostingdata.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: be32aec6-9dde-4365-b574-2e0023462084
-  ws-opts:
-    headers:
-      Host: net.hostingdata.ir
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '英国 028 #1'
-  network: tcp
-  port: 443
-  server: 31.76.5.3
-  servername: viper-26.moriarty-web.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- flow: ''
-  name: '英国 029 #1'
-  network: ws
-  port: 443
-  server: 31.76.76.28
-  servername: 31.76.76.28
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  ws-opts:
-    headers:
-      Host: 31.76.76.28
-    path: /
-- name: '英国 031 #1'
-  network: tcp
-  port: 22222
-  server: 18.132.102.151
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 032 #1'
-  network: tcp
-  port: 22222
-  server: 18.135.85.1
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 033 #1'
-  network: tcp
-  port: 22222
-  server: 3.10.172.12
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 034 #1'
-  network: tcp
-  port: 22223
-  server: 3.10.172.12
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 035 #1'
-  network: tcp
-  port: 22222
-  server: 3.11.116.75
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 036 #1'
-  network: tcp
-  port: 22222
-  server: 3.8.241.196
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 037 #1'
-  network: tcp
-  port: 22222
-  server: 3.9.167.151
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 038 #1'
-  network: tcp
-  port: 22222
-  server: 51.24.76.250
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 039 #1'
-  network: tcp
-  port: 22222
-  server: 52.56.123.186
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: '英国 040 #1'
-  network: grpc
-  port: 2083
-  server: 82.24.203.174
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f2616bce-337a-4d13-8c58-1b5e71986569
-- name: '英国 041 #1'
-  network: grpc
-  port: 2083
-  server: 82.24.203.92
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f2616bce-337a-4d13-8c58-1b5e71986569
-- name: '英国 042 #1'
-  network: xhttp
-  port: 2052
-  server: 25.129.197.233
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '英国 043 #1'
-  network: tcp
-  port: 443
-  server: viper-23.moriarty-web.com
-  servername: viper-23.moriarty-web.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-- alterId: 64
-  cipher: auto
-  name: '英国 044 #1'
-  network: h2
-  port: 443
-  server: 51.15.119.36
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 05b6b25b-bb5d-4dcd-9710-31e374ffa584
-- alterId: 0
-  cipher: auto
-  name: '英国 045 #1'
-  network: ws
-  port: 443
-  server: 185.162.228.228
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      Host: lg1.trump2023.us
-    path: /ECTCJ0DF
-- alterId: 0
-  cipher: auto
-  name: '英国 046 #1'
-  network: ws
-  port: 443
-  server: 185.162.228.110
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  ws-opts:
-    headers:
-      Host: oplg1.cfcdn2.xyz
-    path: /AUIKN8AU
-- alterId: 0
-  cipher: auto
-  name: '英国 047 #1'
-  network: ws
-  port: 443
-  server: 185.162.228.230
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: 2
-  cipher: auto
-  name: '英国 048 #1'
-  network: ws
-  port: 10001
-  server: ddns2.airtcp.vip
-  skip-cert-verify: true
-  type: vmess
-  uuid: 7f67fb11-832d-3492-adfe-63e0cceafbe0
-  ws-opts:
-    headers:
-      Host: ddns2.airtcp.vip
-    path: /
-- alterId: 4
-  cipher: auto
-  name: '英国 049 #1'
-  network: ws
-  port: 443
-  server: 146.70.46.68
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: uk-manchester.eiw2eemo.com
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: '英国 050 #1'
-  network: grpc
-  port: 443
-  server: 146.70.158.111
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 11ae0edd-2f63-4495-8683-037abbda9986
-- name: 🇬🇧GB_1|2.9MB/s
+  username: ''
+- name: 🇬🇧GB_2|2.0MB/s
   port: 443
   server: 185.235.0.98
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: 🇬🇧GB_2|2.4MB/s
+- name: 🇬🇧GB_6|1.5MB/s
+  password: None
   port: 443
   server: 185.235.0.2
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: 🇬🇧GB_3|3.4MB/s
-  password: None
+  username: null
+- name: 🇬🇧GB_5|2.1MB/s
   port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇬🇧GB_4|2.9MB/s
-  port: 443
-  server: 37.120.233.34
+  server: 212.102.63.31
   skip-cert-verify: true
   tls: true
   type: http
@@ -1328,27 +751,35 @@ proxies:
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_5|3.3MB/s
-  network: tcp
+  name: 🇬🇧GB_6|2.3MB/s
+  network: raw
   packet-encoding: xudp
-  port: 2053
+  port: 443
   reality-opts:
-    public-key: AKUQO-fKsD19FFBxNq5XTFCRXWDZfes4zJjRINY1KUI
-    short-id: '!!str beff3ff061a64cfd'
-  server: 171.22.129.56
-  servername: fi-one.quiet-rogue.site
+    public-key: Rf2jgZShaYRQ2kh9nF79eB2KFcIdiYHwPWJyFKA_CWU
+    short-id: '!!str '
+  server: 188.225.27.78
+  servername: max.ru
   tls: true
   type: vless
   udp: true
-  uuid: b2744db0-1c64-4218-a93b-9eba0e5f811f
+  uuid: 3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1
   xudp: true
-- cipher: aes-256-cfb
-  name: 🇬🇧GB_6|2.6MB/s
-  password: amazonskr05
-  port: 443
-  server: 18.130.133.149
-  type: ss
+- client-fingerprint: chrome
+  name: 🇬🇧_英国_233
+  network: ws
+  port: 2096
+  server: 91.193.59.255
+  servername: fq.jp188.dpdns.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
   udp: true
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  ws-opts:
+    headers:
+      Host: fq.jp188.dpdns.org
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
 - name: 🇬🇧_GB_英国
   port: 1446
   server: 78.154.108.51
@@ -1357,42 +788,21 @@ proxies:
   type: vless
   udp: true
   uuid: d8b42cd5-a149-4356-9e61-111111111111
-- cipher: aes-128-gcm
-  name: 🇬🇧GB_28
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.181
-  type: ss
+- down: ''
+  fingerprint: ''
+  name: 🇬🇧GB_2|4.6MB/s
+  obfs: ''
+  obfs-password: ''
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: '443'
+  server: vpn-uk-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-uk-002.fastervpn.world
+  tls: false
+  type: hysteria2
   udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_43
-  password: LXchLsIwtCeUAUgu
-  port: 443
-  server: 149.102.149.207
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_120
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.149
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_182
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.211
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '🇬🇧GB_1|3.1MB/s #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 82.110.60.9
-  type: ss
-  udp: true
-- name: 🇬🇧GB_336
+  up: ''
+- name: 🇬🇧GB_58
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: vpn-uk-001.fastervpn.world
@@ -1428,7 +838,29 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- name: 🇬🇧GB_6|3.1MB/s
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_1|3.0MB/s
+  network: tcp
+  port: '443'
+  reality-opts:
+    public-key: F_ws7uB6_86TsgsC2wUnVT0Jp1qqTgmR0ucRwPRhETg
+    short-id: '!!str 32434434567654'
+  server: lond.2clash.ru
+  servername: lond.2clash.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1
+  xudp: true
+- name: 🇬🇧GB_3|3.8MB/s
+  port: 443
+  server: 212.102.63.61
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇬🇧GB_7|2.9MB/s
   password: None
   port: 443
   server: 37.120.233.18
@@ -1436,347 +868,77 @@ proxies:
   tls: true
   type: http
   username: null
-- client-fingerprint: chrome
-  name: 🇬🇧 英国 | GBR
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_8|3.4MB/s
   network: tcp
-  port: 9000
+  port: '443'
   reality-opts:
-    public-key: Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM
-    short-id: '!!str cd0a1986719e44c8'
-  server: uniteddkingdomm-sgood.wopd.butnorwa.butter.whooisthebest.ir
-  servername: sheets.google.com
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: '!!str 8ffa160e608bf539'
+  server: 31.76.20.217
+  servername: de.pinkmoon.pro
   tls: true
   type: vless
   udp: true
-  uuid: b33e4571-de3f-4249-b246-b2acf3db2f36
-- name: 🇬🇧 英国 | GBR 4
-  network: ws
-  password: humanity
-  port: 2053
-  server: 82.117.245.125
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
+  xudp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇬🇧 英国 | GBR 2
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Rf2jgZShaYRQ2kh9nF79eB2KFcIdiYHwPWJyFKA_CWU
+  server: rus.2clash.ru
+  servername: max.ru
+  tls: true
+  type: vless
   udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
+  uuid: 3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1
+- client-fingerprint: chrome
+  name: 🇬🇧 英国 | GBR 4
+  network: xhttp
+  port: 443
+  reality-opts:
+    public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
+  server: 104.245.242.8
+  servername: download.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
+  xhttp-opts:
+    host: download.nvidia.com
+    mode: auto
+    path: /
+- name: 🇬🇧 114  | ⬇️ 2KB/s
+  password: freeuser1
+  port: 9251
+  server: ma1-gb.freeconnect.link
+  sni: ma1-gb.freeconnect.link
+  tls: true
+  type: http
+  username: freeuser1
 - name: 🇬🇧 128  | ⬇️ 10KB/s
   password: None
   port: 3118
   server: 154.61.56.215
   type: http
-- name: 🇬🇧GB_162
-  obfs: salamander
-  obfs-password: 3sv5vpdl9xr84lyb
-  password: sxc15led4b0vp5fy
-  port: 443
-  server: social.klipp.su
-  sni: social.klipp.su
-  tls: false
-  type: hysteria2
-- cipher: rc4-md5
-  name: 🇬🇧GB_1
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.37
-  type: ss
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_126
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 78.129.150.210
-  servername: strapi.io
-  tls: true
-  type: vless
-  uuid: 3420b101-10af-49ff-b308-8d864b90e52d
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_46
-  password: g5h5jleTRSyO3Rk4
-  port: 443
-  server: 149.102.132.184
-  type: ss
-- name: 🇬🇧GB_273
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-uk-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-uk-002.fastervpn.world
-  tls: false
-  type: hysteria2
-- alpn:
-  - networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_350
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 2.26.178.187
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- name: 🇬🇧GB_211
-  password: 52e3dd44-ed23-4030-b0cc-5b5a953f2d4d
-  port: 8443
-  server: 104.165.205.42
-  sni: speedtestmark.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  name: 🇬🇧GB_261
-  network: grpc
-  port: 2054
-  reality-opts:
-    public-key: zZ3j8Cw2soL_X2yrp5hOiN-Y5l0RdkY523LYkKYfQhM
-  server: 31.76.0.105
-  servername: www.ibm.com
-  tls: true
-  type: vless
-  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
-- cipher: aes-256-cfb
-  name: 🇬🇧GB_342
-  password: amazonskr05
-  port: 443
-  server: 35.179.104.218
-  type: ss
-- client-fingerprint: firefox
-  name: 🇬🇧GB_232
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo
-    short-id: '!!str 949023ece91caa7c'
-  server: 51.89.194.151
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: a8444f42-8aa2-4ef2-8755-2b0d82415fc6
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_41
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
-  type: ss
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇬🇧GB_151
-  network: grpc
-  port: 2087
-  reality-opts:
-    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
-    short-id: '!!str c226283c4de5b1ad'
-  server: 2.26.100.192
-  servername: ads.x5.ru
-  tls: true
-  type: vless
-  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_315
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.143
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_141
-  network: tcp
-  port: 445
-  reality-opts:
-    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
-    short-id: '!!str c226283c4de5b1ad'
-  server: 2.26.100.192
-  servername: ads.x5.ru
-  tls: true
-  type: vless
-  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
-- cipher: aes-256-cfb
-  name: 🇬🇧GB_341
-  password: amazonskr05
-  port: 443
-  server: 3.8.209.170
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_27
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY
-    short-id: '!!str 91af08b1ce1f'
-  server: lists.soloramtin.cyou
-  servername: www.foxsports.com
-  tls: true
-  type: vless
-  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 未知 VLESS-774
+  name: 🇬🇧GB_29
   network: tcp
-  port: 443
+  port: 446
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 78.129.150.110
-  servername: strapi.io
+    public-key: 9LFDlpt6d56wFwxchaKvyLQHGj3lw3ku1g3X8H9JjEI
+    short-id: '!!str 91e6c6797f49ed84'
+  server: 78.129.221.66
+  servername: louisvuitton.com
   tls: true
   type: vless
-  uuid: 671193bf-3203-487a-82bf-9a160ee30254
-  ws-opts:
-    path: '%2f'
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_311
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.77
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_326
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.98
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇬🇧GB_24
-  network: grpc
-  port: 2083
-  server: usejh2.neobo-tooth.ru
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- name: 🇬🇧GB_166
-  network: ws
-  port: 443
-  server: 31.76.76.28
-  tls: false
-  type: vless
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  ws-opts:
-    path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_351
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
-    short-id: '!!str abcd1234'
-  server: 31.77.199.182
-  servername: fi2.yservice.help
-  tls: true
-  type: vless
-  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-922
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: wiu5fVlBM7keSI48Oi3dEnQTR1BnJXgHtXo9xBpAnTA
-    short-id: '!!str 16498ac98306ce31'
-  server: 95.154.196.62
-  servername: foodnetwork.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: a6de5675-5bfe-4fc2-b9b4-4bf4a24f6474
-- name: 🇬🇧GB_22
-  network: ws
-  port: 2096
-  server: usejh2.neobo-tooth.ru
-  servername: usejh2.neobo-tooth.ru
-  tls: false
-  type: vless
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  ws-opts:
-    headers:
-      Host: usejh2.neobo-tooth.ru
-    path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_192
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 5.152.223.192
-  servername: strapi.io
-  tls: true
-  type: vless
-  uuid: 78e13102-dc9a-4d54-9e66-3590bb16924b
-- client-fingerprint: chrome
-  name: '未知 VLESS-1003 #1'
-  network: ws
-  port: 443
-  server: fcs013.getdcz.me
-  servername: fcs013.getdcz.me
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: f081b5e2-f3a0-4ef5-833b-1ea59e0797b6
-  ws-opts:
-    headers:
-      Host: fcs013.getdcz.me
-    path: /6d2fed050b30
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: streaming
-  name: 🇬🇧GB_142
-  network: grpc
-  port: 43439
-  reality-opts:
-    public-key: b4n1pcO8ST3JkGtj8YymXVrW17LEe2EHec5wY7hMMR4
-    short-id: '!!str 39ad36226f3abec8'
-  server: 31.77.111.11
-  servername: cdn.higames.ru
-  tls: true
-  type: vless
-  uuid: 428e923f-e608-412b-9e51-3b09ffab551f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_7
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: '!!str fc994ae7eb10'
-  server: 107.181.151.241
-  servername: www.tradingview.com
-  tls: true
-  type: vless
-  uuid: 317bc783-340f-453c-afb5-b6bf637c0b23
+  uuid: 10000025-9365-7424-f000-93edfcf6a020
 - name: GB英国 2026-9.10)
   network: ws
   password: humanity
@@ -1789,186 +951,74 @@ proxies:
       Host: www.ignitelimit.com
     path: '%2Fassignment'
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_51
+  name: 🇬🇧GB_69
   network: tcp
-  port: 443
+  port: 2053
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 78.129.150.216
-  servername: strapi.io
+    public-key: T10K4VspJ7ZIptzXTqFL0k-lgV2a8ekf7RedogymJzo
+    short-id: '!!str 949023ece91caa7c'
+  server: 51.89.194.151
+  servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: 7ec31525-7ac3-4597-8f39-a2d4edc46342
+  uuid: a8444f42-8aa2-4ef2-8755-2b0d82415fc6
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_352
+  name: 🇬🇧GB_93
   network: tcp
-  port: 443
+  port: 421
   reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 2.26.178.172
-  servername: localhost
+    public-key: zUdAvpr07q1Yd0Om-jc4-Vu4Un5tVird8FGoN-7W9Tg
+    short-id: '!!str a1facbc8575701ae'
+  server: 78.129.208.44
+  servername: chistomat.dry.care
   tls: true
   type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: a3c861cb-e1e7-4ad6-8be2-7c2314ec6f18
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_354
+  name: 🇬🇧GB_112
   network: tcp
   port: 443
   reality-opts:
-    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
-    short-id: '!!str f93c9d5127e622e4'
-  server: 82.152.141.30
-  servername: pl.cloudtechone.org
+    public-key: UzVp3x9LEOVeF_j_X2XzJrumdyfLEiFS0d6qDGVB_3M
+    short-id: '!!str 6252784c3b8de71a'
+  server: uk1.kramiliantha.sbs
+  servername: uk1.kramiliantha.sbs
   tls: true
   type: vless
-  uuid: 2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-556
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 109.169.76.39
-  servername: slashdot.org
-  tls: true
-  type: vless
-  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
+  uuid: b691d443-3d5b-47d3-9c6f-9b84beda2b13
 - cipher: aes-256-cfb
-  name: 🇬🇧GB_339
+  name: 🇬🇧GB_98
   password: amazonskr05
   port: 443
   server: 35.177.213.229
   type: ss
-- client-fingerprint: firefox
+- client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_317
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.158
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  name: '中非 #7'
-  network: ws
-  port: 2087
-  server: 104.17.103.118
-  servername: fq.jp188.dpdns.org
-  tls: true
-  type: vless
-  uuid: 42c62a5a-cd31-4551-80ef-908732370287
-  ws-opts:
-    headers:
-      Host: fq.jp188.dpdns.org
-    path: '%2Fproxyip%3D154.17.22.207%2C69.63.210.157%2C134.195.211.13%2C172.236.245.153%2C209.146.115.209%2C64.186.224.194%2C149.28.94.52%2C107.151.188.57'
-- client-fingerprint: chrome
-  name: 🇬🇧GB_222
-  network: ws
-  port: 52014
-  server: 57.129.130.57
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  tls: true
-  type: vless
-  uuid: 98286408-b683-4c0f-96c5-7e00da649d90
-  ws-opts:
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_322
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.218
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_329
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.2
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: firefox
-  name: 🇬🇧GB_214
+  name: 🇬🇧GB_62
   network: tcp
   port: 2053
   reality-opts:
-    public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
-    short-id: '!!str cf081ff86b298c48'
-  server: 46.250.250.149
-  servername: www.apple.com
+    public-key: dRLd_E_GYCkCcwxLN5EcRQYsREKqisb26_ZSehxUpWY
+    short-id: '!!str 1eb8ea8dae937ae0'
+  server: usejh2.neobo-tooth.ru
+  servername: vk.ru
   tls: true
   type: vless
-  uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_310
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.70
-  servername: localhost
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+- client-fingerprint: ios
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇬🇧GB_65
+  network: grpc
+  port: 2083
+  server: usejh2.neobo-tooth.ru
+  servername: usejh2.neobo-tooth.ru
   tls: true
   type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  name: 🇬🇧GB_219
-  network: ws
-  port: 31867
-  server: 129.151.64.169
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-  tls: true
-  type: vless
-  uuid: 112c9db0-af6f-48b0-a59f-7677bed8e2d7
-  ws-opts:
-    headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_308
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.19
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_335
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.123
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- name: 🇬🇧GB_236
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+- name: 🇬🇧GB_47
   password: 3b8c82ed-fe66-472d-915e-034ccb57103f
   port: 443
   server: labs.frkn.org
@@ -1976,269 +1026,48 @@ proxies:
   sni: labs.frkn.org
   tls: false
   type: hysteria2
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇬🇧GB_26
-  network: grpc
-  port: 2083
-  server: 45.144.28.39
-  servername: usejh2.neobo-tooth.ru
-  tls: true
-  type: vless
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- client-fingerprint: random
-  name: 🇬🇧GB_143
-  network: ws
-  port: 443
-  server: 139.59.189.127
-  servername: shy-fog-af06.alvlirm333.workers.dev
-  tls: true
-  type: vless
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  ws-opts:
-    headers:
-      Host: shy-fog-af06.alvlirm333.workers.dev
-    path: /proxyip=104.223.62.204,99.254.66.219,45.133.17.106,40.233.87.120,40.233.110.251,40.233.68.138,68.233.122.42,144.217.76.62
-- alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_293
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: nnkPnz6R86-6xG92s8k-1DUQPXAJIVMoMWDLPghh4x4
-    short-id: '!!str 0173b2681806bc97'
-  server: eu-north-fi-1.hanvpn.biz
-  servername: eu-north-fi-1.hanvpn.biz
-  tls: true
-  type: vless
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_36
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 95.154.237.47
-  servername: lanacion.com.ar
-  tls: true
-  type: vless
-  uuid: b113f831-8658-467f-a819-927d16a54d6a
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_148
+  name: 🇬🇧GB_107
   network: tcp
   port: 443
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 109.169.85.139
-  servername: slashdot.org
+    public-key: -qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04
+    short-id: '!!str abcd1234'
+  server: 31.77.199.182
+  servername: fi2.yservice.help
   tls: true
   type: vless
-  uuid: 98bc431a-2963-4faa-a712-cc83798a2edb
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_132
-  network: tcp
+  uuid: c09cfd91-b234-4998-9bed-a0211b7f5c3c
+- name: 🇬🇧GB_91
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram
   port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 78.129.150.217
-  servername: strapi.io
-  tls: true
-  type: vless
-  uuid: 66e9b3dc-76e2-417b-a2f3-bc350a8e17dc
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB_15
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_48
-  password: g5h5jleTRSyO3Rk4
-  port: 80
-  server: 149.102.132.184
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_19
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
-  type: ss
-- name: 🇬🇧GB_250
-  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
-  port: 8443
-  server: 104.165.205.40
-  sni: speedtestmark.com
+  server: 31.76.27.23
+  skip-cert-verify: true
+  sni: de.vpnjey.store
   tls: false
   type: hysteria2
+- name: 🇬🇧GB_17
+  network: ws
+  port: 8880
+  server: 172.65.90.52
+  tls: false
+  type: vless
+  uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
+  ws-opts:
+    headers:
+      Host: dark-cake-4743.198-46c.workers.dev
+    path: /pyip=ProxyIP.JP.CMLiussss.net
 - cipher: aes-256-cfb
-  name: 🇬🇧GB_333
+  name: 🇬🇧GB_104
   password: amazonskr05
   port: 443
-  server: 18.170.35.229
-  type: ss
-- cipher: rc4-md5
-  name: 🇬🇧GB_20
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.23.32
+  server: 35.178.181.116
   type: ss
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_187
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 5.152.223.115
-  servername: strapi.io
-  tls: true
-  type: vless
-  uuid: 6b8fe542-f1d9-47cb-97d4-14aa52287879
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_109
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 109.169.37.43
-  servername: foodnetwork.com
-  tls: true
-  type: vless
-  uuid: 7008a53a-10d0-4943-a555-64cb5af6500c
-- client-fingerprint: chrome
-  name: 🇬🇧GB_307
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 130.12.102.62
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_2
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: '!!str 60500a63ad12'
-  server: staging.lastilhame.monster
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_312
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.91
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: firefox
-  name: 🇬🇧GB_292
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: AttEUIEavqeVE5oz4_AxJPrcwx3IgcFElW2OoF8qTAg
-    short-id: '!!str b895d279c8cc40f9'
-  server: 46.250.240.80
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 7dc2737e-1155-42f6-aec4-6b2b001001ae
-- name: 🇬🇧GB_314
-  password: e0b9fb0f-1bbd-478b-9580-c2294778338b
-  port: 8444
-  server: nlq7hy.pleiades.codes
-  skip-cert-verify: true
-  sni: nlq7hy.pleiades.codes
-  tls: false
-  type: hysteria2
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_76
-  network: tcp
-  port: 446
-  reality-opts:
-    public-key: 9LFDlpt6d56wFwxchaKvyLQHGj3lw3ku1g3X8H9JjEI
-    short-id: '!!str 91e6c6797f49ed84'
-  server: 78.129.221.66
-  servername: louisvuitton.com
-  tls: true
-  type: vless
-  uuid: 10000025-9365-7424-f000-93edfcf6a020
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇬🇧GB_165
-  network: ws
-  port: 443
-  server: 31.76.88.10
-  servername: cf5.rumedia-cdn.com
-  tls: true
-  type: vless
-  uuid: 03c48eca-e0aa-4e18-998c-1f53f1de293c
-  ws-opts:
-    headers:
-      Host: cf5.rumedia-cdn.com
-    path: /cdn/v3/live
-- name: 🇬🇧GB_298
-  obfs: salamander
-  obfs-password: 3sv5vpdl9xr84lyb
-  password: sxc15led4b0vp5fy
-  port: 443
-  server: 2.26.49.16
-  sni: social.klipp.su
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 🇬🇧GB_220
-  network: ws
-  port: 52014
-  server: 57.129.130.200
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  tls: true
-  type: vless
-  uuid: b1ecd06b-a931-47a2-8f48-d1d133d2b4f3
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '未知 VLESS-981 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 2ATxqiR22wlo3yXOHc43LFHM5NzWCdSGZLdBay_vJgM
-    short-id: '!!str e4a1b53b03eff60d'
-  server: 95.154.196.61
-  servername: strapi.io
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: e5d917f5-fc78-455e-bbb5-81d08715f3d6
-- client-fingerprint: chrome
-  name: 🇬🇧GB_217
+  name: 🇬🇧GB_37
   network: ws
   port: 52014
   server: 57.129.130.10
@@ -2250,46 +1079,225 @@ proxies:
     headers:
       Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
     path: /@Marisa_kristi
+- cipher: aes-256-cfb
+  name: 🇬🇧GB_101
+  password: amazonskr05
+  port: 443
+  server: 35.179.104.218
+  type: ss
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_140
+  name: 🇬🇧GB_109
+  network: ws
+  port: 443
+  server: 89.106.206.57
+  servername: fcs013.getdcz.me
+  tls: true
+  type: vless
+  uuid: f081b5e2-f3a0-4ef5-833b-1ea59e0797b6
+  ws-opts:
+    headers:
+      Host: fcs013.getdcz.me
+    path: /6d2fed050b30
+- name: 🇬🇧GB_60
+  password: 52e3dd44-ed23-4030-b0cc-5b5a953f2d4d
+  port: 8443
+  server: 104.165.205.42
+  sni: speedtestmark.com
+  tls: false
+  type: hysteria2
+- name: 🇬🇧GB_83
+  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
+  port: 8443
+  server: 104.165.205.40
+  sni: speedtestmark.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 'GB英国 #1'
+  network: ws
+  port: 2087
+  server: 104.17.103.118
+  servername: fq.jp188.dpdns.org
+  tls: true
+  type: vless
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  ws-opts:
+    headers:
+      Host: fq.jp188.dpdns.org
+    path: '%2Fproxyip%3D154.17.22.207%2C69.63.210.157%2C134.195.211.13%2C172.236.245.153%2C209.146.115.209%2C64.186.224.194%2C149.28.94.52%2C107.151.188.57'
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_33
+  password: LXchLsIwtCeUAUgu
+  port: 443
+  server: 149.102.149.207
+  type: ss
+- client-fingerprint: chrome
+  name: 🇬🇧GB_38
+  network: ws
+  port: 31867
+  server: 129.151.64.169
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  tls: true
+  type: vless
+  uuid: 0ff1bcdb-8dcc-4b05-93df-09f028330184
+  ws-opts:
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+    path: /@Marisa_kristi
+- cipher: aes-128-gcm
+  name: 🇬🇧GB_4
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
+  type: ss
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 🇬🇧GB_87
+  network: grpc
+  port: 2054
+  reality-opts:
+    public-key: zZ3j8Cw2soL_X2yrp5hOiN-Y5l0RdkY523LYkKYfQhM
+  server: 31.76.0.105
+  servername: www.ibm.com
+  tls: true
+  type: vless
+  uuid: 75079a7f-75b5-418b-8a65-f7b2f438cd4a
+- alpn:
+  - http/1.1
+  name: 'GB英国 #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.23.63
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+- client-fingerprint: firefox
+  name: 🇬🇧GB_97
+  network: raw
+  port: 2053
+  reality-opts:
+    public-key: AttEUIEavqeVE5oz4_AxJPrcwx3IgcFElW2OoF8qTAg
+    short-id: '!!str b895d279c8cc40f9'
+  server: 46.250.240.80
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 7dc2737e-1155-42f6-aec4-6b2b001001ae
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_23
+  password: LXchLsIwtCeUAUgu
+  port: 80
+  server: 149.102.149.207
+  type: ss
+- client-fingerprint: firefox
+  name: 🇬🇧GB_19
   network: tcp
   port: 443
   reality-opts:
-    public-key: _8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw
-    short-id: '!!str efcfd3c41c1762b0'
-  server: 78.129.184.117
-  servername: strapi.io
+    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
+    short-id: '!!str 98fa0b00d09419f7'
+  server: gr015.techinyab.ir
+  servername: play.google.com
   tls: true
   type: vless
-  uuid: 2dc50eec-e028-4097-9f1c-9a1bbb37a49f
+  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_320
+  name: 🇬🇧GB_5
   network: tcp
   port: 443
   reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.115
-  servername: localhost
+    public-key: G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY
+    short-id: '!!str 91af08b1ce1f'
+  server: lists.soloramtin.cyou
+  servername: www.foxsports.com
   tls: true
   type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
+- client-fingerprint: firefox
+  name: 🇬🇧GB_61
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: eUjgCl7-ujbXq11kaSLe-8q1LJJfSueB5Vkh24wKgk8
+    short-id: '!!str cf081ff86b298c48'
+  server: 46.250.250.149
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 59bf58d9-ddaf-42cd-a0ca-db3559ad8714
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_7
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: '!!str 60500a63ad12'
+  server: 107.181.151.241
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
+- name: 🇬🇧GB_52
+  obfs: salamander
+  obfs-password: 3sv5vpdl9xr84lyb
+  password: sxc15led4b0vp5fy
+  port: 443
+  server: social.klipp.su
+  sni: social.klipp.su
+  tls: false
+  type: hysteria2
+- cipher: aes-256-cfb
+  name: 🇬🇧GB_100
+  password: amazonskr05
+  port: 443
+  server: 3.8.209.170
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_3
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: '!!str fc994ae7eb10'
+  server: staging.lastilhame.monster
+  servername: www.tradingview.com
+  tls: true
+  type: vless
+  uuid: 317bc783-340f-453c-afb5-b6bf637c0b23
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_63
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
+    short-id: '!!str 87f895f23064'
+  server: server.slavkiti.monster
+  servername: www.techradar.com
+  tls: true
+  type: vless
+  uuid: 13aef2e0-b3fb-4322-a0e9-c10b908ce6b5
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_59
+  name: 🇬🇧GB_115
   network: tcp
   port: 443
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 95.154.237.50
-  servername: lanacion.com.ar
+    public-key: fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo
+    short-id: '!!str fc36b4a584871aa5'
+  server: gb1.oshost.network
+  servername: gb1.oshost.network
   tls: true
   type: vless
-  uuid: 6e77d410-b5b3-4f7c-9674-7ae4fe70f583
+  uuid: ea34d4d1-8b87-4a2a-b23e-9927d7c83f46
 - client-fingerprint: chrome
-  name: 🇬🇧GB_33
+  name: 🇬🇧GB_67
   network: xhttp
   port: 8444
   reality-opts:
@@ -2303,64 +1311,106 @@ proxies:
   ws-opts:
     path: /xh
 - client-fingerprint: chrome
+  name: 🇬🇧GB_39
+  network: ws
+  port: 52014
+  server: 57.129.130.57
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  tls: true
+  type: vless
+  uuid: 98286408-b683-4c0f-96c5-7e00da649d90
+  ws-opts:
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+    path: /@Marisa_kristi
+- name: 🇬🇧GB_8
+  network: ws
+  port: 2096
+  server: usejh2.neobo-tooth.ru
+  servername: usejh2.neobo-tooth.ru
+  tls: false
+  type: vless
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /
+- client-fingerprint: random
   flow: xtls-rprx-vision
-  name: 🇬🇧GB_9
-  network: raw
+  name: 🇬🇧GB_114
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: DoZSKLwNQjogQMlE7oEEuB8TqpNa-umXzG-2Q6dTTEY
+    short-id: '!!str 4fa44664f6a566d3'
+  server: 31.76.91.196
+  servername: jpp.milas.click
+  tls: true
+  type: vless
+  uuid: 418a1c58-7f25-421b-a82f-650c04d049a4
+- name: 🇬🇧GB_55
+  network: ws
+  port: 443
+  server: 31.76.76.28
+  tls: false
+  type: vless
+  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
+  ws-opts:
+    path: /
+- name: 🇬🇧GB_44
+  password: d1224950-ffab-4b9a-8696-431b40a6cfbd
+  port: 443
+  server: cze-02.node.lumixnet.com
+  skip-cert-verify: true
+  sni: cze-02.node.lumixnet.com
+  tls: false
+  type: hysteria2
+- cipher: rc4-md5
+  name: 🇬🇧GB_1
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.37
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB_6
+  password: zRZNBszYyWo5
+  port: 8388
+  server: 51.77.225.200
+  type: ss
+- client-fingerprint: chrome
+  name: 🇬🇧GB_88
+  network: ws
+  port: 52014
+  server: 57.129.130.200
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  tls: true
+  type: vless
+  uuid: b1ecd06b-a931-47a2-8f48-d1d133d2b4f3
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_2
+  network: tcp
   port: 443
   reality-opts:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: '!!str d659da01fb94'
+    short-id: '!!str ee1716767f9b'
   server: 107.181.151.39
-  servername: www.foxsports.com
+  servername: www.tradingview.com
   tls: true
   type: vless
-  uuid: ff40696b-06d6-443b-9481-8d01eddd13e1
-- client-fingerprint: firefox
-  name: 🇬🇧GB_37
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
-    short-id: '!!str 98fa0b00d09419f7'
-  server: gr015.techinyab.ir
-  servername: play.google.com
-  tls: true
+  uuid: 4d017db2-7655-4276-9557-e2ec25b04ee7
+- name: 🇬🇧GB_20
+  network: ws
+  port: 2096
+  server: 45.144.28.39
+  tls: false
   type: vless
-  uuid: 9343f183-7a16-4bdd-9c65-b0c21feca40b
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_321
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.235
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_169
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: '!!str fd55b698ee8c3629'
-  server: 82.145.55.75
-  servername: strapi.io
-  tls: true
-  type: vless
-  uuid: ebb9e7a2-93bb-415b-b358-ebba94f84c8c
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇬🇧GB_309
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  server: 194.34.175.223
-  servername: localhost
-  tls: true
-  type: vless
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: usejh2.neobo-tooth.ru
+    path: /

@@ -14,12 +14,40 @@ proxies:
     headers:
       Host: edge.yzkvm.top
     path: /
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: 瑞典
+  network: tcp
+  port: 2083
+  reality-opts:
+    public-key: 40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc
+    short-id: '!!str 32a37218722f0081'
+  server: 171.22.129.56
+  servername: swe-one.quiet-rogue.site
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: b2744db0-1c64-4218-a93b-9eba0e5f811f
 - name: 🇸🇪 机场推荐:dafei.de 瑞典 01
+  password: None
   port: 443
-  server: 146.70.242.130
+  server: 79.142.77.63
   skip-cert-verify: true
   tls: true
   type: http
+- name: 🇸🇪 019  | ⬇️ 4MB/s
+  port: 39811
+  server: 176.111.37.216
+  type: http
+- name: 🇸🇪SE_4|3.2MB/s
+  port: 443
+  server: 146.70.242.146
+  skip-cert-verify: true
+  sub_tag: noCache
+  tls: true
+  type: http
+  udp: true
 - alterId: 64
   cipher: auto
   name: SE 1 → tg@nicevpn123
@@ -311,104 +339,9 @@ proxies:
   udp: true
   ws-opts:
     path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252CTurk'
-- alterId: 0
-  cipher: auto
-  name: '瑞典 001 #1'
-  network: tcp
-  port: 80
-  server: 217.142.138.61
-  skip-cert-verify: true
-  type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- name: '瑞典 002 #1'
-  network: ws
-  port: 80
-  server: 146.75.119.82
-  servername: rb24.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 041e5c35-5698-4005-b015-471ccf6812b8
-  ws-opts:
-    headers:
-      Host: rb24.ir
-    path: ws/?ed=2048/
-- client-fingerprint: chrome
-  name: '瑞典 003 #1'
-  network: grpc
-  port: 443
-  server: 185.146.173.90
-  servername: uPloAdsErvErfinlaNdV2rayfiNonE.FzSAV.CoM.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 042c7251-327e-4900-a937-d6d1be58c92d
-- name: '瑞典 004 #1'
-  network: ws
-  port: 2095
-  server: 185.146.173.186
-  servername: V2ray-_-_-_-_-_-cDn.Mamadv2raYng.CoM.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4d859d3b-a23e-4b83-8cc2-7c01b6c867cb
-  ws-opts:
-    headers:
-      Host: V2ray-_-_-_-_-_-cDn.Mamadv2raYng.CoM.
-- name: '瑞典 005 #1'
-  network: ws
-  port: 80
-  server: 185.146.173.134
-  servername: 10.v.v.v.V-_-_-V2ray-_-_-V.v.v.vp.zula.ir.xn--9iqtb0z3kmg58ejur.ww.speedtest.net.pinocchio1.ir.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7eed1819-7f95-4fc7-b4c5-1cb5c4f737d6
-  ws-opts:
-    headers:
-      Host: 10.v.v.v.V-_-_-V2ray-_-_-V.v.v.vp.zula.ir.xn--9iqtb0z3kmg58ejur.ww.speedtest.net.pinocchio1.ir.
-    path: /
-- name: '瑞典 006 #1'
-  network: ws
-  port: 8880
-  server: 185.146.173.37
-  servername: V2ray.B.LAMBOoOghtYooUUYh.ir.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8a055700-524e-442e-b287-de6feee41677
-  ws-opts:
-    headers:
-      Host: V2ray.B.LAMBOoOghtYooUUYh.ir.
-    path: /
-- name: '瑞典 007 #1'
-  network: ws
-  port: 2052
-  server: 185.146.173.200
-  servername: V2ray.A.PeYmOd.com.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: e7410960-3eb8-46cb-afd5-d8b35e7d5f76
-  ws-opts:
-    headers:
-      Host: V2ray.A.PeYmOd.com.
-    path: '@V2RIRAN-TEL--@V2RIRAN-TEL--@V2RIRAN-TEL--@V2RIRAN-JOIN-@V2RIRAN-TEL--@V2RIRAN-JOIN-@V2RIRAN-TEL-@V2RIRAN-TEL--@V2RIRAN-JOIN-@V2RIRAN-TEL--@V2RIRAN-@ViV2ray/2052?ed=1024'
 - alterId: 64
   cipher: auto
-  name: '瑞典 008 #1'
+  name: '瑞典 001 #1'
   network: ws
   port: 443
   server: 148.135.38.107
@@ -422,7 +355,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 009 #1'
+  name: '瑞典 002 #1'
   network: ws
   port: 443
   server: 148.135.9.156
@@ -436,7 +369,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 010 #1'
+  name: '瑞典 003 #1'
   network: ws
   port: 443
   server: 148.135.14.99
@@ -450,7 +383,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '瑞典 011 #1'
+  name: '瑞典 004 #1'
   network: ws
   port: 443
   server: 148.135.31.171
@@ -464,7 +397,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: '瑞典 012 #1'
+  name: '瑞典 005 #1'
   network: ws
   port: 443
   server: 148.135.33.140
@@ -476,9 +409,24 @@ proxies:
     headers:
       Host: www.31270022.xyz
     path: /path/1704188270531
-- name: 🇸🇪SE_1|1.4MB/s
+- name: 🇸🇪SE_1|2.0MB/s
+  password: None
+  port: 443
+  server: 146.70.242.130
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇪SE_2|1.8MB/s
   port: 443
   server: 149.50.216.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇪SE_3|2.1MB/s
+  port: 443
+  server: 79.142.77.63
   skip-cert-verify: true
   tls: true
   type: http
@@ -493,123 +441,78 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- name: 🇸🇪SE_1|2.2MB/s
-  password: None
-  port: 443
-  server: 79.142.77.63
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: 🇸🇪SE_2|4.0MB/s
-  password: None
-  port: 443
-  server: 146.70.242.130
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: TunService
-  name: '未知 VLESS-948 #1'
-  network: grpc
-  port: 33743
+  encryption: none
+  name: 🇸🇪SE_1|3.2MB/s
+  network: xhttp
+  port: '443'
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 79.141.174.147
-  servername: www.google.com
+    public-key: tl7xSwczBM--oN16cxdLnAD8GMf8tA0f-FXE9ilCCjA
+    short-id: '!!str '
+  server: 89.47.55.9
+  servername: download.intel.com
   tls: true
   type: vless
   udp: true
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
+  xhttp-opts:
+    mode: auto
+    path: /
+  xudp: true
+- name: 🇸🇪SE_2|3.3MB/s
+  password: None
+  port: 443
+  server: 146.70.242.146
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: 🇸🇪SE_3|2.6MB/s
+  password: None
+  port: 443
+  server: 149.50.216.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
 - name: 🇸🇪 111  | ⬇️ 198KB/s
   port: 81
   server: 46.59.120.87
   type: http
-- client-fingerprint: unsafe
-  name: 🇸🇪SE_3
-  network: ws
-  port: 443
-  server: 172.64.84.228
-  servername: ljz5fuexub6s.nova-705deb.workers.dev
-  tls: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-b45978f6d773
-  ws-opts:
-    headers:
-      Host: ljz5fuexub6s.nova-705deb.workers.dev
-    path: /stream/PANEL_ZEUS/b45978f6d773/loc-1
 - client-fingerprint: chrome
-  name: 🇸🇪SE_8
+  name: 🇸🇪SE_10
   network: ws
-  port: 1443
-  server: 2.26.91.98
-  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  port: 43788
+  server: 89.22.224.146
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
   tls: true
   type: vless
-  uuid: 9ba09caf-da90-48ef-9dac-1a4611bc88d1
+  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
   ws-opts:
     headers:
-      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
     path: /@Marisa_kristi
-- name: 🇸🇪SE_17
-  obfs: salamander
-  obfs-password: Telegram@vpnjey
-  password: Telegram
-  port: 443
-  server: 77.110.96.201
-  skip-cert-verify: true
-  sni: se.vpnjey2.dpdns.org
-  tls: false
-  type: hysteria2
 - cipher: aes-256-gcm
-  name: 🇸🇪SE_18
+  name: 🇸🇪SE_14
   password: AxIYWtskJWIIaefW
   port: 8388
   server: 70.34.212.124
   type: ss
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇸🇪SE_20
-  network: ws
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_15
+  network: tcp
   port: 443
-  server: 31.76.21.44.fwqfw783rg2dad.website
-  servername: 31.76.21.44.fwqfw783rg2dad.website
-  tls: true
-  type: vless
-  uuid: 1d8ca2dd-55f4-5345-9e88-abd7b4ddafa8
-  ws-opts:
-    path: /websocket?ed=2560
-- client-fingerprint: chrome
-  name: 🇸🇪SE_9
-  network: ws
-  port: 43788
-  server: 89.22.224.146
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  tls: true
-  type: vless
-  uuid: 49a6eeaf-7dbf-4aa5-ba21-b36cd47e724e
-  ws-opts:
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: TunService
-  name: 🇸🇪SE_21
-  network: grpc
-  port: 9458
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  server: 91.193.17.156
-  servername: www.google.com
+    public-key: ELFdNdI6NYwuEq5OqCkYwnUInHvIpsUhd4z2ud7pOCM
+    short-id: '!!str 0172b7681806bc97'
+  server: 150.241.65.204
+  servername: eu-north-sw-1.hanvpn.biz
   tls: true
   type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: d9d0f208-d582-41d5-bb7b-742671402810
 - client-fingerprint: chrome
-  name: 🇸🇪SE_12
+  name: 🇸🇪SE_3
   network: ws
   port: 444
   server: 84.22.150.239
@@ -621,3 +524,26 @@ proxies:
     headers:
       Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
     path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 🇸🇪SE_1
+  network: ws
+  port: 1443
+  server: 2.26.91.98
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  tls: true
+  type: vless
+  uuid: 487273f5-4aeb-4631-b197-2e169dffc285
+  ws-opts:
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+    path: /@Marisa_kristi
+- name: 🇸🇪SE_12
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram
+  port: 443
+  server: 77.110.96.201
+  skip-cert-verify: true
+  sni: se.vpnjey2.dpdns.org
+  tls: false
+  type: hysteria2
