@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -44,53 +44,81 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: 🇨🇭CH_1|2.6MB/s
+- name: '🇨🇭CH_1|1.4MB/s 01 #2'
+  password: ''
   port: 9443
-  server: 37.120.213.210
+  server: 149.88.27.46
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇨🇭CH_2|1.5MB/s
+  udp: true
+  username: ''
+- name: '🇨🇭CH_4|1.2MB/s|P002-260618 01 #2'
+  password: None
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇨🇭CH_2|2.5MB/s
+  port: 443
+  server: 31.7.62.50
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  password: None
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
   tls: true
   type: http
+- name: CH 1 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11005
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
   udp: true
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_2|3.1MB/s
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-    short-id: '!!str 00a61d55a07de885'
-  server: 131.123.25.3
-  servername: fr.convert-flow.net
+- name: CH 2 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11007
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 3 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11006
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 4 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11004
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: CH 5 → tg@nicevpn123
+  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
+  port: 11000
+  server: 64.110.64.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 🇨🇭CH_1|4.2MB/s
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
   tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 3a22ca95-bd99-02f0-a799-f8f73930ea05
-  xudp: true
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_3|4.0MB/s
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-    short-id: '!!str 00a61d55a07de885'
-  server: 89.105.206.123
-  servername: nl.convert-flow.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3a22ca95-bd99-02f0-a799-f8f73930ea05
-  xudp: true
 - name: 'کانال تلگرام : Free_VPN_CH@'
   obfs: salamander
   obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
@@ -125,8 +153,8 @@ proxies:
   type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_4
-  network: tcp
+  name: 🇨🇭CH_6
+  network: raw
   port: 443
   reality-opts:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
@@ -135,20 +163,10 @@ proxies:
   servername: www.cloudflare.com
   tls: true
   type: vless
+  udp: true
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-- name: 🇨🇭CH_6
-  network: tcp
-  port: 56539
-  server: 178.83.226.142
-  tls: false
-  type: vless
-  uuid: 0c063d7d-099d-4f52-810b-d08cf1751a0d
-  ws-opts:
-    headers:
-      Host: amp-api-edge.apps.apple.com
-    path: /
 - client-fingerprint: firefox
-  name: 🇨🇭CH_3
+  name: 🇨🇭CH_4
   network: xhttp
   port: 443
   reality-opts:
@@ -161,3 +179,24 @@ proxies:
   uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   ws-opts:
     path: /assets/v2/pkg
+- name: 🇨🇭CH_1
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_8
+  network: tcp
+  port: 46280
+  reality-opts:
+    public-key: 3xEvhIbjIvO9bJSqHEF3D91YZEYaA3fWzb2JpxW0XmQ
+    short-id: '!!str e53690af52736850'
+  server: 132.243.162.30
+  servername: amp-api-edge.apps.apple.com
+  tls: true
+  type: vless
+  uuid: 12af43c3-84b4-4248-878b-b75f35835487
