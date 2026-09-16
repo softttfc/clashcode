@@ -44,39 +44,16 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: '🇨🇭CH_1|1.4MB/s 01 #2'
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
   password: ''
   port: 9443
   server: 149.88.27.46
   skip-cert-verify: true
+  sub_tag: noCache
   tls: true
   type: http
   udp: true
   username: ''
-- name: '🇨🇭CH_4|1.2MB/s|P002-260618 01 #2'
-  password: None
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭CH_2|2.5MB/s
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
-  password: None
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  tls: true
-  type: http
 - name: CH 1 → tg@nicevpn123
   password: 55319b01-5d85-48a2-a40a-0b3fc1985755
   port: 11005
@@ -112,13 +89,65 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: 🇨🇭CH_1|4.2MB/s
+- alterId: 0
+  cipher: auto
+  name: 未知62
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- name: '瑞士 002 #1'
+  network: tcp
+  port: 56539
+  server: 178.83.226.142
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1d2cded7-0930-42da-a9f9-01a7adeb1642
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 003 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: '瑞士 004 #1'
+  network: tcp
+  port: 2086
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
+- name: 🇨🇭CH_1|2.2MB/s
   port: 9443
   server: 37.120.213.210
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
+- name: 🇨🇭CH_2|2.3MB/s
+  password: None
+  port: 443
+  server: 31.7.62.50
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: null
 - name: 'کانال تلگرام : Free_VPN_CH@'
   obfs: salamander
   obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
@@ -154,7 +183,7 @@ proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭CH_6
-  network: raw
+  network: tcp
   port: 443
   reality-opts:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
@@ -166,7 +195,7 @@ proxies:
   udp: true
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
 - client-fingerprint: firefox
-  name: 🇨🇭CH_4
+  name: 🇨🇭CH_2
   network: xhttp
   port: 443
   reality-opts:
@@ -179,24 +208,3 @@ proxies:
   uuid: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
   ws-opts:
     path: /assets/v2/pkg
-- name: 🇨🇭CH_1
-  password: 84a506ca5aca505696a454d828420b3f
-  port: 50160
-  server: 140.238.213.114
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_8
-  network: tcp
-  port: 46280
-  reality-opts:
-    public-key: 3xEvhIbjIvO9bJSqHEF3D91YZEYaA3fWzb2JpxW0XmQ
-    short-id: '!!str e53690af52736850'
-  server: 132.243.162.30
-  servername: amp-api-edge.apps.apple.com
-  tls: true
-  type: vless
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
