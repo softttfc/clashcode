@@ -1,26 +1,5 @@
 proxies:
-- auth: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  name: '🇯🇵_JP_日本->🇸🇬_SG_新加坡 #1'
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 20562
-  server: mszz.mangshe.xyz
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  tls: false
-  type: hysteria2
-  udp: true
-- client-fingerprint: chrome
-  name: '🇨🇳_CN_中国->🇺🇸_US_美国 #6'
-  network: tcp
-  port: 52683
-  server: jp.sofast.live
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
-  xudp: true
-- name: '🇯🇵 #6'
+- name: '🇯🇵 #2'
   network: ws
   port: 18122
   server: 155.248.168.35
@@ -34,7 +13,7 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳
-- name: '🇯🇵 #1'
+- name: '🇯🇵 #3'
   network: ws
   port: 11424
   server: 38.47.96.220
@@ -48,7 +27,7 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳
-- name: '🇯🇵 #2'
+- name: '🇯🇵 #1'
   network: ws
   port: 443
   server: 89.125.244.28
@@ -62,7 +41,7 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳
-- name: 🇯🇵
+- name: '🇯🇵 #4'
   network: ws
   port: 443
   server: 154.197.88.253
@@ -78,7 +57,7 @@ proxies:
     path: Telegram-WangCai2🇨🇳
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇯🇵 #3'
+  name: '🇯🇵 #7'
   network: tcp
   port: 443
   reality-opts:
@@ -107,7 +86,7 @@ proxies:
   udp: true
   uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
 - client-fingerprint: chrome
-  name: '🇯🇵 #4'
+  name: '🇯🇵 #6'
   network: ws
   port: 8443
   server: 82.40.42.204
@@ -122,7 +101,7 @@ proxies:
       Host: rubifen.adaspoloandco.com
     path: /GOrbEh
 - client-fingerprint: chrome
-  name: '🇯🇵 #7'
+  name: '🇯🇵 #5'
   network: ws
   port: 8443
   server: 45.192.200.66
@@ -146,6 +125,39 @@ proxies:
   type: vless
   udp: true
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- name: '未知 VLESS-938 #1'
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  server: 137.220.221.179
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: '日本 013 #1'
+  network: tcp
+  packet-encoding: xudp
+  port: 4433
+  server: 45.32.57.118
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  xudp: true
+- cipher: aes-256-gcm
+  name: '🇯🇵JP_5|442KB/s|A004-260618 01 #2'
+  password: 5f82dcfd-cab5-4b71-91c6-8b6fb4f76c55
+  port: 31870
+  server: jp-2.gsafevpnapi.com
+  sub_tag: A004-260618
+  type: ss
+  udp: true
 - cipher: aes-256-cfb
   name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #2'
   password: 7eadc6dbe2ae
@@ -155,11 +167,8 @@ proxies:
   type: ss
   udp: true
 - alterId: 0
-  cipher: none
-  http-opts:
-    path:
-    - /
-  name: '🇯🇵_JP_日本 #3'
+  cipher: auto
+  name: '🇯🇵_JP_日本 #4'
   network: http
   port: 49432
   server: 38.47.121.14
@@ -168,11 +177,9 @@ proxies:
   type: vmess
   udp: true
   uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
-- alpn:
-  - ''
-  alterId: 2
+- alterId: 2
   cipher: auto
-  name: 🇯🇵 日本 | JPN
+  name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #5'
   port: 30806
   server: v6.hdacd.com
   skip-cert-verify: true
@@ -180,21 +187,49 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇯🇵 机场推荐:dafei.de 日本 01
-  port: 443
-  server: fan.571589.xyz
-  skip-cert-verify: false
-  sni: fan.571589.xyz
-  tls: true
-  type: http
-- name: 🇯🇵 机场推荐:dafei.de 日本 02
+- name: 🇯🇵 132  | ⬇️ 2KB/s
   port: 10808
   server: 101.36.104.239
   type: socks5
   udp: true
+- name: 🇯🇵 机场推荐:dafei.de 日本 02
+  password: '!!str 123456'
+  port: 1080
+  server: 8.209.236.192
+  type: socks5
+  username: '123456'
+- name: 🇯🇵 机场推荐:dafei.de 日本 03
+  port: 443
+  server: fan.587475.xyz
+  sni: fan.587475.xyz
+  tls: true
+  type: http
+- client-fingerprint: chrome
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: 🇯🇵 机场推荐:dafei.de 日本 04
+  network: ws
+  port: 8443
+  server: 151.145.67.90
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    path: /city/playlist/out.php
+- name: 🇯🇵 机场推荐:dafei.de 日本 05
+  port: 10808
+  server: 101.36.104.46
+  type: socks5
 - alterId: 2
   cipher: auto
-  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 322ms
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 577ms
   network: tcp
   port: 30806
   server: v6.hdacd.com
@@ -867,80 +902,34 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '日本 001 #1'
-  network: tcp
-  port: 4433
-  server: 45.32.57.118
-  skip-cert-verify: true
+  network: ws
+  port: 27675
+  server: 146.56.40.117
+  skip-cert-verify: false
+  tls: false
   type: vmess
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  uuid: 053ca0f4-057e-493d-ad30-5ba51f00f59c
+  ws-opts:
+    headers:
+      Host: 146.56.40.117
+    path: /
 - alterId: 0
   cipher: auto
   name: '日本 002 #1'
   network: ws
-  port: 80
-  server: 172.111.146.64
-  skip-cert-verify: true
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: 172.111.146.64
-    path: /vmess/
-- name: '日本 003 #1'
-  network: tcp
-  port: 10000
-  server: 14.137.238.40
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- flow: ''
-  name: '日本 005 #1'
-  network: tcp
-  port: 9090
-  server: 61.245.11.28
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  name: '日本 007 #1'
-  network: ws
-  port: 14750
-  server: 45.76.87.125
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: c2c94230-7075-4558-89f4-ddf74d7de107
-  ws-opts:
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    path: /
-- name: '日本 008 #1'
-  network: ws
   port: 443
-  server: 151.101.109.223
-  servername: pan1.global.ssl.fastly.net
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
   skip-cert-verify: true
-  tfo: false
   tls: true
-  type: vless
-  udp: true
-  uuid: c8541f02-4efd-401d-beb7-dc017b12ee94
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
   ws-opts:
     headers:
-      Host: pan1.global.ssl.fastly.net
-    path: /
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
 - alterId: 0
   cipher: auto
-  name: '日本 009 #1'
+  name: '日本 003 #1'
   network: ws
   port: 80
   server: 103.35.188.226
@@ -953,30 +942,127 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: '日本 010 #1'
-  network: tcp
-  port: 49499
-  server: 139.162.125.97
+  name: '日本 004 #1'
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '日本 005 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.u1.glados-config.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.u1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 006 #1'
+  network: ws
+  port: 5001
+  server: steam.dnspro.icu
   skip-cert-verify: true
   type: vmess
-  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+  uuid: d4c93465-70f0-30d5-ab5f-a8881f3f49e7
+  ws-opts:
+    headers:
+      Host: steam.dnspro.icu
+    path: /iso
+- alterId: 0
+  cipher: auto
+  name: '日本 007 #1'
+  network: ws
+  port: 5100
+  server: st-2.dnspro.icu
+  skip-cert-verify: true
+  type: vmess
+  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
+  ws-opts:
+    headers:
+      Host: st-2.dnspro.icu
+    path: /iso
+- alterId: 0
+  cipher: auto
+  name: '日本 008 #1'
+  network: ws
+  port: 443
+  server: kr-arm2.018999.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: e98fc1a0-9c52-4091-91a5-c159b0aa274e
+  ws-opts:
+    headers:
+      Host: kr-arm2.018999.xyz
+    path: /e98fc1a0-9c52-4091-91a5-c159b0aa274e
+- alterId: 0
+  cipher: auto
+  name: '日本 009 #1'
+  network: ws
+  port: 443
+  server: 172.105.223.136
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '日本 010 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.v1.glados-config.net
+  skip-cert-verify: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.v1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
 - alterId: 0
   cipher: auto
   name: '日本 011 #1'
-  network: tcp
-  port: 14935
-  server: 167.179.111.237
+  network: ws
+  port: 443
+  server: 124.156.225.184
   skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: e961894f-8e90-472f-98d3-09402e4be453
-- name: '日本|@ripaojiedian #1'
-  network: tcp
-  password: BxceQaOe
-  port: 3893
-  server: 35.73.128.210
+  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
+  ws-opts:
+    headers:
+      Host: azjp.pengui.xyz
+    path: /
+- alterId: 4
+  cipher: auto
+  name: '日本 012 #1'
+  network: ws
+  port: 443
+  server: 202.61.141.130
   skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: 202.61.141.130
+    path: /
 - cipher: aes-256-gcm
   name: '日本2|@ripaojiedian #1'
   password: Butterfly123@qwe9527
@@ -990,616 +1076,19 @@ proxies:
   server: 103.236.66.4
   type: ss
 - client-fingerprint: chrome
-  name: 🇯🇵JP_1|4.7MB/s
-  network: tcp
-  port: 13779
+  flow: xtls-rprx-vision
+  name: 免费VPN：https://tt.vg/FJOE2Mm
+  port: 443
   reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-    short-id: '!!str af1bdd293097b664'
-  server: 202.144.192.76
-  servername: tesla.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
-- client-fingerprint: chrome
-  name: 🇯🇵 日本_WUO0TM
-  port: 20270
-  reality-opts:
-    public-key: l2Wjf_xR2rZYHYmST-zxaYDDj5QhiL9riXa1ozBSjEE
-    short-id: '!!str 28500ae15838f905'
-  server: jp-1.gsafevpnapi.com
-  servername: www.yahoo.com
+    public-key: GmZv3anSeAeHr_cMFKr-6MPLli-nyKNatnY6P3AFK00
+    short-id: '!!str 9c2378562188c3cb'
+  server: pl.bubahero.com
+  servername: pl.bubahero.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_359
-  network: ws
-  port: 19364
-  server: 210.152.85.154
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /collect/user/products?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_360
-  network: ws
-  port: 57554
-  server: 203.137.165.164
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /live?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_361
-  network: ws
-  port: 43484
-  server: 210.236.228.126
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /hot/trade?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_362
-  network: ws
-  port: 18443
-  server: 92.113.124.204
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /page/outbound/movie?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_363
-  network: ws
-  port: 7219
-  server: 151.241.129.98
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /seller/redirect.html/ads?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_422
-  network: ws
-  port: 443
-  server: 8.222.70.238
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /films?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_423
-  network: ws
-  port: 443
-  server: 8.222.84.103
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /member/discount?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_485
-  network: ws
-  port: 443
-  server: 47.74.62.45
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /map?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_486
-  network: ws
-  port: 443
-  server: 47.79.147.53
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /page/course/download?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_487
-  network: ws
-  port: 443
-  server: 47.79.35.185
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /film/china/directory?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_488
-  network: ws
-  port: 443
-  server: 47.91.15.80
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /play/avatar?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_489
-  network: ws
-  port: 443
-  server: 8.209.209.177
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /groups/buy/magnet?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_490
-  network: ws
-  port: 443
-  server: 8.211.132.111
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /edu/teacher/torrent?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_491
-  network: ws
-  port: 443
-  server: 8.211.145.92
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /new/products?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_492
-  network: ws
-  port: 443
-  server: 8.211.151.113
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /ask/streams/go.php?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_493
-  network: ws
-  port: 443
-  server: 8.211.154.87
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /music/m/news?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_494
-  network: ws
-  port: 443
-  server: 8.211.179.102
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /data?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_495
-  network: ws
-  port: 443
-  server: 8.216.43.57
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /film/series/forum?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_496
-  network: ws
-  port: 443
-  server: 8.216.44.94
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /services/picture?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_497
-  network: ws
-  port: 443
-  server: 8.216.48.198
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /city/topic?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_529
-  network: ws
-  port: 443
-  server: 85.121.50.16
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /friends/go.php?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_588
-  network: ws
-  port: 443
-  server: 104.156.238.23
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /bt?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_589
-  network: ws
-  port: 443
-  server: 104.238.148.149
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /about?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_590
-  network: ws
-  port: 443
-  server: 104.238.149.235
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /docs/torrent/blog?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_591
-  network: ws
-  port: 443
-  server: 202.144.194.170
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /links/post?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_592
-  network: ws
-  port: 443
-  server: 202.182.106.72
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /discount?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_593
-  network: ws
-  port: 443
-  server: 207.148.112.220
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /discuss?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_594
-  network: ws
-  port: 443
-  server: 207.148.94.254
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /picture/thread?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_595
-  network: ws
-  port: 443
-  server: 207.148.99.230
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /test/company/library?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_596
-  network: ws
-  port: 443
-  server: 45.142.166.211
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /p/setting?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_597
-  network: ws
-  port: 443
-  server: 47.74.62.45
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /product/work?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_598
-  network: ws
-  port: 443
-  server: 47.79.147.53
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /directory?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_599
-  network: ws
-  port: 443
-  server: 47.79.35.185
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /url?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_600
-  network: ws
-  port: 443
-  server: 47.91.15.80
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /static/downloads?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_601
-  network: ws
-  port: 443
-  server: 8.209.209.177
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /favs/clips/anime?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_602
-  network: ws
-  port: 443
-  server: 8.211.132.111
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /url?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_603
-  network: ws
-  port: 443
-  server: 8.211.145.92
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /star/info?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_604
-  network: ws
-  port: 443
-  server: 8.211.151.113
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /upload/clip/activity?ed=2560
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_605
-  network: ws
-  port: 443
-  server: 8.211.154.87
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /out.html/f?ed=2560
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
 - name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #3'
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   port: 20004
@@ -1609,25 +1098,20 @@ proxies:
   tls: false
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇯🇵 Japan/Tokyo [TG] #2'
-  port: 443
-  reality-opts:
-    public-key: kb1uhDsBcfsCD6acCuFcVERW29dscNGIjKPd67NArVk
-    short-id: '!!str ab3b914f0c9d9de5'
-  server: 47.74.3.200
-  servername: www.logitech.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7fb42fab-ea8a-4f0f-af9e-55df8ae6cb1d
 - name: 日本
   obfs: salamander
   obfs-password: d0dd99b2b4da604123ce17b6d17072a2
   password: 07a4fcf5553a80cf300374d325386038
   port: 443
   server: 141.147.151.58
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: '日本 #1'
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -1640,7 +1124,49 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇯🇵 062  | ⬇️ 213KB/s
+- client-fingerprint: chrome
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  name: 🇯🇵JP_1|2.9MB/s
+  network: ws
+  port: 8443
+  server: 151.145.67.90
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: cdn8848.776676.xyz
+    path: /city/playlist/out.php?ed=2560
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇯🇵 日本 | JPN
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: adheres-scruple.quick-cdn.net
+  servername: adheres-scruple.quick-cdn.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 62cd6e5a-f41a-462a-8df9-31ab0ef75e46
+  ws-opts:
+    headers:
+      Host: adheres-scruple.quick-cdn.net
+    path: /ws
+- auth: 49f7ff21-a176-30cc-ab60-a5988fd85ce0
+  name: 🇯🇵 日本 | JPN 2
+  password: 49f7ff21-a176-30cc-ab60-a5988fd85ce0
+  port: 60001
+  server: hk01.kfc-520.com
+  skip-cert-verify: true
+  sni: hk01.kfc-520.com
+  type: hysteria2
+- name: 🇯🇵 004  | ⬇️ 111KB/s
   password: 'null'
   port: 443
   server: fan.571589.xyz
@@ -1648,272 +1174,10 @@ proxies:
   tls: true
   type: http
   username: 'null'
-- name: 🇯🇵 063  | ⬇️ 37KB/s
-  password: '!!str 123456'
-  port: 1080
-  server: 8.209.236.192
-  type: socks5
-  username: '123456'
-- cipher: aes-256-gcm
-  name: 未知 SS-524
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_51
-  network: tcp
+- name: 🇯🇵 007  | ⬇️ 26KB/s
   port: 443
-  reality-opts:
-    public-key: 5-5-JEuwU97zcy-IJg32zruuHAOZ-85DM0YhRmzWbG4
-    short-id: '!!str 25d14b49bd77142e'
-  server: 47.79.32.249
-  servername: www.apple.com
+  server: fan.571589.xyz
+  skip-cert-verify: false
+  sni: fan.571589.xyz
   tls: true
-  type: vless
-  uuid: 6030877e-32a0-4f16-b65e-92e076f9e3f9
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_31
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_34
-  network: tcp
-  port: 11452
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 103.75.118.228
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_13
-  network: raw
-  port: 19645
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵JP_21
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  port: 52454
-  server: 45.88.43.116
-  skip-cert-verify: true
-  sni: 45.88.43.116
-  tls: false
-  type: hysteria2
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_4
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_8
-  network: raw
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: '!!str 091e1c5db8451757'
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_5
-  network: raw
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵JP_49
-  network: ws
-  password: 624209bb-8216-45fe-bbe0-50132ec63162
-  port: 443
-  server: 172.67.211.136
-  sni: ot2.hyas.space
-  type: trojan
-  ws-opts:
-    path: /x7f9k2m4p8
-- name: 🇯🇵JP_55
-  network: ws
-  password: 62dbcf02-0989-4441-a01a-93f9c3b93525
-  port: 443
-  server: 162.159.38.58
-  sni: ot.hyas.space
-  type: trojan
-  ws-opts:
-    path: /x7f9k2m4p8
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_16
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: '!!str b558b9305a0b'
-  server: 45.39.108.109
-  servername: www.microsoft.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
-- name: 🇯🇵JP_28
-  password: 184cdec28da5a09450803c8debcd2cc9
-  port: 50160
-  server: 138.3.208.26
-  skip-cert-verify: true
-  sni: 138.3.208.26
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_20
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: rpROz1JNz8wRk2QT5o7jwE9CzJUWMvPNXoeWyS3c1WM
-    short-id: '!!str 09994e53af766acd'
-  server: 104.105.138.244
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: f5c4664b-67ab-4d92-801d-a60984e104d4
-- name: 🇯🇵JP_53
-  obfs: salamander
-  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
-  password: 20b7100438be713dc89876906214c5b1
-  port: 443
-  server: 8.209.217.129
-  skip-cert-verify: true
-  sni: 8.209.217.129
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_33
-  network: tcp
-  port: 12683
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 103.75.118.228
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_46
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Y0noOXC8qHmbM0GmDpj-9BBwKSOtHs-uMbNfKU050GQ
-    short-id: '!!str b558b9305a0b'
-  server: sql.popmintxo.cc
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  uuid: d806a58b-33aa-42e0-b170-395e49c16b37
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_43
-  network: raw
-  port: 20002
-  reality-opts:
-    public-key: _ilhBTibNauMOEUqylnlBAUTYiqHHtmEDXkx18SHCR4
-  server: 185.141.227.155
-  servername: pool.dataroute.biz
-  tls: true
-  type: vless
-  uuid: 2b3e8750-b944-42fc-b36e-ec2c64b48a98
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_44
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: h2GGazCHLBtmIUxiCxGUvsaEF8mGi8xFeCcI14sAJTI
-    short-id: '!!str 4bbe62498d4cc3c9'
-  server: 156.231.113.153
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 3340c44a-042e-4dfd-b82c-33192d56ba98
-- name: 🇯🇵JP_15
-  network: tcp
-  port: 47878
-  server: 152.69.195.67
-  servername: 152.69.195.67
-  tls: false
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_54
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: zPB0R1XcjjUCEWWXVrt4UAKXPFtFDVsrEQueuBRmKwA
-    short-id: '!!str aa76df495eafba20'
-  server: 103.137.215.189
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: d17a1e53-09c7-4174-aed8-033c01d39038
-- name: 🇯🇵JP_47
-  network: ws
-  password: 62dbcf02-0989-4441-a01a-93f9c3b93525
-  port: 443
-  server: 172.64.229.84
-  sni: ot.hyas.space
-  type: trojan
-  ws-opts:
-    path: /x7f9k2m4p8
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_2
-  network: tcp
-  port: 10583
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵JP_45
-  network: ws
-  password: 624209bb-8216-45fe-bbe0-50132ec63162
-  port: 443
-  server: ot2.hyas.space
-  sni: ot2.hyas.space
-  type: trojan
-  ws-opts:
-    path: /x7f9k2m4p8
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_3
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
+  type: http

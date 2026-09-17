@@ -1,4 +1,25 @@
 proxies:
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 82259754d625.oylfmxz.cn
+  servername: 82259754d625.oylfmxz.cn
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 82259754d625.oylfmxz.cn
+    path: /
+  xudp: true
 - name: 🇨🇳 TW 1 → tg@nicevpn123
   password: 0cc6b4268dea0ba8
   port: 3389
@@ -251,10 +272,4 @@ proxies:
   password: Butterfly123@qwe9527
   port: 30001
   server: 36.33.35.105
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼TW_32
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: 36.224.152.189
   type: ss

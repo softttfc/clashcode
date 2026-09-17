@@ -1,7 +1,7 @@
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 'CA加拿大 2026-9.10) #3'
+  name: CA加拿大 2026-9.10)
   network: tcp
   port: 443
   reality-opts:
@@ -13,15 +13,27 @@ proxies:
   type: vless
   udp: true
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- name: 🇨🇳 机场推荐:dafei.de 台湾 01
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 82259754d625.oylfmxz.cn
+  servername: 82259754d625.oylfmxz.cn
   skip-cert-verify: true
-  sni: twmoon1-cdn-route.couldflare-cdn.com
   tls: true
-  type: http
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 82259754d625.oylfmxz.cn
+    path: /
+  xudp: true
 - name: 🇨🇳 TW 1 → tg@nicevpn123
   password: 0cc6b4268dea0ba8
   port: 3389
@@ -275,159 +287,3 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- client-fingerprint: chrome
-  name: 🇹🇼_台湾_521
-  network: ws
-  port: 443
-  server: 103.137.22.71
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: cdn8848.776676.xyz
-    path: /register?ed=2560
-- client-fingerprint: chrome
-  name: 🇹🇼_台湾_522
-  network: ws
-  port: 443
-  server: 103.137.22.71
-  servername: edg-2oo.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /settings?ed=2560
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-785
-  network: tcp
-  port: 43450
-  reality-opts:
-    public-key: HNPJBiUbqYVC3ylvu1GA7fCHLTaHO7S13Bex1nm0O1o
-    short-id: '!!str e65d010354bdad73'
-  server: 35.194.157.16
-  servername: www.amd.com
-  tls: true
-  type: vless
-  uuid: 64d77a12-ad6b-4d85-a349-bd287535af1c
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼TW_32
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: 36.224.152.189
-  type: ss
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_37
-  network: tcp
-  port: 34376
-  reality-opts:
-    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
-    short-id: '!!str 8dbafb690450d8a9'
-  server: 34.81.129.171
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
-- name: 🇹🇼TW_1
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world\u0026insecure=1\u0026allowinsecure=1
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_14
-  network: tcp
-  port: 40800
-  reality-opts:
-    public-key: zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo
-    short-id: '!!str 186e4c2732d61a3d'
-  server: 104.199.219.172
-  servername: www.intel.com
-  tls: true
-  type: vless
-  uuid: 5859f6a7-cda1-47c2-8353-fcdee281f31d
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_19
-  network: raw
-  port: 21776
-  reality-opts:
-    public-key: nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA
-    short-id: '!!str 79b6f82800c68925'
-  server: 34.80.164.239
-  servername: www.tesla.com
-  tls: true
-  type: vless
-  uuid: b0399730-1618-4727-8ddd-2baf94ab90d6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_17
-  network: tcp
-  port: 30837
-  reality-opts:
-    public-key: LXPNhrAGxr_QE4YCdJfKE40ebsPNIHnLbydhl6bipCo
-    short-id: '!!str 97101ba788915e5a'
-  server: 35.201.163.218
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: 85a6bd94-83a9-4e80-849f-c06d7011d1a4
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_10
-  network: tcp
-  port: 35412
-  reality-opts:
-    public-key: eg6DfbLnWtz7PubkXRYvSuQx6QWIRxUsn4l7QEO3Cg4
-    short-id: '!!str 0630b874d595'
-  server: 35.229.136.113
-  servername: www.amd.com
-  tls: true
-  type: vless
-  uuid: 5d3cbdb2-b82d-4078-82b8-5dd413cca82b
-- name: 🇹🇼TW_11
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: 160.187.100.109
-  tls: false
-  type: hysteria2
-- name: 🇹🇼TW_27
-  network: ws
-  port: 443
-  server: 60.248.219.78
-  servername: ty986gfazs.cainiaohub.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇹🇼TW_9
-  network: tcp
-  port: 28364
-  reality-opts:
-    public-key: NPhCET0GkjSZuKg4vWsPHLvjYGHW9w99Ucxvavu0-1I
-    short-id: '!!str 7241c359c2dfab'
-  server: 104.199.134.231
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: 3a62a0c2-ba80-43a9-b757-9aca88b0552e

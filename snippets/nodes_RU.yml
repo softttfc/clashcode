@@ -33,11 +33,11 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: 未知118 36.0KB/s
+  name: '🇷🇺RU俄罗斯 #2'
   network: ws
   port: 443
   server: renderer-stream-2-62.mirra.now
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
@@ -899,15 +899,32 @@ proxies:
 - alterId: 0
   cipher: auto
   name: '俄罗斯 001 #1'
-  network: tcp
-  port: 22324
-  server: 5.188.190.252
+  network: http
+  port: 26743
+  server: 194.87.248.27
   skip-cert-verify: true
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇺RU_10
-  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
-  port: 43558
-  server: 130.49.189.158
-  type: ss
+  uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
+- alterId: 64
+  cipher: auto
+  name: '俄罗斯 002 #1'
+  network: http
+  port: 37672
+  server: 176.119.159.245
+  skip-cert-verify: true
+  type: vmess
+  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
+- alterId: 0
+  cipher: auto
+  name: '俄罗斯 003 #1'
+  network: ws
+  port: 443
+  server: us02.gogogoo.cyou
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda
+  ws-opts:
+    headers:
+      Host: us02.gogogoo.cyou
+    path: /go
