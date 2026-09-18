@@ -44,62 +44,80 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: '🇨🇭CH_1|96KB/s|P002-260618 01 #2'
-  password: None
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭CH_1|4.2MB/s
+- name: 🇨🇭CH_1|3.4MB/s
   port: 9443
   server: 37.120.213.210
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: CH 1 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11005
-  server: 64.110.64.80
+- alterId: 0
+  cipher: auto
+  name: '瑞士 001 #1'
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
   skip-cert-verify: true
-  type: trojan
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- name: '瑞士 002 #1'
+  network: tcp
+  port: 56539
+  server: 178.83.226.142
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
-- name: CH 2 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11007
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
+  uuid: 1d2cded7-0930-42da-a9f9-01a7adeb1642
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 003 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
-- name: CH 3 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11006
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: '瑞士 004 #1'
+  network: tcp
+  port: 2086
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
-- name: CH 4 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11004
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: CH 5 → tg@nicevpn123
-  password: 55319b01-5d85-48a2-a40a-0b3fc1985755
-  port: 11000
-  server: 64.110.64.80
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- name: 🇨🇭CH_2|2.4MB/s
-  password: None
+  uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇭_瑞士_6
   port: 443
-  server: 31.7.62.50
+  reality-opts:
+    public-key: 8IWU6IX0N1fGtdOrg4URBvF-7lNBUhxNJ-QP9juvAkk
+    short-id: '!!str b826977e630ea7b7'
+  server: jap.mguard-pro.com
+  servername: addons.mozilla.org
   skip-cert-verify: true
   tls: true
-  type: http
-  username: null
+  type: vless
+  udp: true
+  uuid: ef805ed2-2a94-4a8c-878c-18fb8a51f4ed
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇭 瑞士 | CHE
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 6V_LHB1yblp9RDyo5GOXL-V_V9MFa-mBRO0epwSQP3U
+    short-id: '!!str a1ab5a56bca2b1d3'
+  server: captaingold.app
+  servername: captaingold.app
+  tls: true
+  type: vless
+  udp: true
+  uuid: c40ed630-4c4f-49d0-9ef3-362e802d47fc

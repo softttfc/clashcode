@@ -1,6 +1,16 @@
 proxies:
+- auth: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  name: '🇷🇺_RU_俄罗斯->🇪🇪_EE_爱沙尼亚 #1'
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: news.gazette.help
+  skip-cert-verify: true
+  sni: news.gazette.help
+  tls: false
+  type: hysteria2
+  udp: true
 - client-fingerprint: chrome
-  name: 'Node #9'
+  name: 'Node #11'
   network: ws
   port: 8443
   server: ad-010.pixel9xdmq.info
@@ -30,7 +40,7 @@ proxies:
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - client-fingerprint: chrome
-  name: '🇬🇧 #1'
+  name: 🇬🇧
   network: ws
   port: 8443
   server: 91.110.174.210
@@ -44,7 +54,7 @@ proxies:
     headers:
       Host: rubifen.adaspoloandco.com
     path: /GOrbEh
-- name: 🇬🇧
+- name: '🇬🇧 #1'
   network: ws
   port: 2087
   server: 188.220.67.245
@@ -55,19 +65,9 @@ proxies:
   uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
   ws-opts:
     path: /8f2690e2d016
-- name: 🏳️_未知_92
-  password: humanity
-  port: 443
-  server: 172.67.221.242
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
 - alpn:
   - http/1.1
-  name: 'HK香港(mibei77.com 米贝节点分享) #2'
+  name: 'HK香港(mibei77.com 米贝节点分享)_1 #2'
   password: humanity
   port: 443
   server: 104.18.23.63
@@ -79,105 +79,19 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- cipher: rc4-md5
-  name: '🇬🇧GB_1|212KB/s 01 #2'
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.37
-  type: ss
-  udp: true
-- name: 🇬🇧GB_7|2.3MB/s
-  port: 443
-  server: 185.235.0.98
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
 - client-fingerprint: chrome
-  name: '🇬🇧GB_7|424KB/s|A004-260618 01 #2'
-  network: raw
-  packet-encoding: xudp
-  port: 8443
-  server: 31.76.76.28
-  servername: neth4.lckdwn.ru
-  sub_tag: A004-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  xudp: true
-- cipher: aes-256-gcm
-  name: '🇬🇧GB_9|510KB/s|A004-260618 01 #2'
-  password: g5h5jleTRSyO3Rk4
-  port: 80
-  server: 149.102.132.184
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: '🇬🇧GB_10|97KB/s|P002-260618 01 #2'
-  password: None
-  port: 443
-  server: 185.235.0.2
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- encryption: none
-  name: '🇬🇧GB_12|336KB/s|M003-260806 01 #2'
-  network: ws
-  packet-encoding: xudp
-  port: 8880
-  server: 172.65.90.53
-  sub_tag: M003-260806
-  type: vless
-  udp: true
-  uuid: c04e959d-3b7a-4d4f-881a-935762102704
-  ws-opts:
-    headers:
-      Host: super-darkness-5bfb.298-142.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/64.0.3282.186 Safari/537.36
-    path: /pyip=ProxyIP.US.CMLiussss.net
-  xudp: true
-- alterId: 0
-  cipher: auto
-  name: 未知22 157.4KB/s
+  name: GB VLESS-590
   network: tcp
-  packet-encoding: xudp
-  port: 22324
-  server: 66.163.117.58
-  servername: '@vpnine1'
-  skip-cert-verify: true
-  sub_tag: A004-260618
+  port: 21443
+  reality-opts:
+    public-key: PEPivzCg5cBehVQUMVJLNPx3A9hy719Fq7HQsXMp4Ro
+  server: hostvds-nl-nl.kvnfreetest.uk
+  servername: cloudflare.com
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  xudp: true
-- grpc-opts:
-    grpc-service-name: vless
-  name: '未知 VLESS-983 #1'
-  network: grpc
-  packet-encoding: xudp
-  port: 2083
-  server: 66.90.104.42
-  servername: /TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1),TELEGRAM_TM(@AZARBAYJAB1)
-  sub_tag: A004-260618
-  tls: false
   type: vless
-  udp: true
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  xudp: true
-- cipher: chacha20-ietf-poly1305
-  name: 荷兰(t.me/s/clashjd免费节点)_5
-  password: c58d16e593d44f42
-  port: 11001
-  server: 158.173.221.214
-  sub_tag: A004-260618
-  type: ss
-  udp: true
+  uuid: 122f8c58-f173-4f4a-acb8-86172ba5e10d
 - name: 英国(t.me/s/clashjd免费节点)
   network: ws
   port: 2053
@@ -205,57 +119,28 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_4|2.9MB/s
+- name: 🇬🇧 机场推荐:dafei.de 英国 02
   password: None
   port: 9443
   server: 37.120.233.34
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-  username: null
-- name: 🇬🇧 机场推荐:dafei.de 英国 03
+- name: 🇬🇧GB_7|1.1MB/s
   port: 443
   server: 185.235.0.66
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_8|1.3MB/s
+  udp: true
+- name: 🇬🇧GB_2|1.8MB/s
   password: None
   port: 443
   server: 37.120.233.50
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- name: 🇬🇧GB_2|⬇️1.7MB/s
-  network: ws
-  port: 443
-  server: 173.245.59.121
-  servername: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 979b6822-d65a-400d-89f8-30391903ac20
-  ws-opts:
-    headers:
-      host: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-    path: /ws
-- name: GBVLESS-110|free-nodes
-  network: ws
-  port: 80
-  server: fuck1.tawanaproxy.online
-  servername: en.tawana.cf.panbehpanel.ir
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: c33275fd-a4fa-470d-90e4-55da39d849a8
-  ws-opts:
-    headers:
-      host: en.tawana.cf.panbehpanel.ir
-    path: /
+  username: null
 - alterId: 0
   cipher: auto
   name: 英国(yudou789.top 玉豆免费节点)_56
@@ -276,414 +161,6 @@ proxies:
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- name: 🇬🇧 GB 1 → tg@nicevpn123
-  password: your_password
-  port: 443
-  server: 52.56.183.187
-  skip-cert-verify: true
-  sni: aws-uk-london-1.f1rocketnode.com
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 10 → tg@nicevpn123
-  password: hBEBjXU6Sk0UK4T6
-  port: 443
-  server: 3.11.154.255
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 11 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 801
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 12 → tg@nicevpn123
-  password: d0774966-fb63-4aca-9478-16c3f32be220
-  port: 443
-  server: waphk.mjt000.com
-  skip-cert-verify: true
-  sni: waphk.mjt000.com
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 13 → tg@nicevpn123
-  password: telegram-id-directvpn
-  port: 22222
-  server: 18.175.9.188
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 14 → tg@nicevpn123
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 141.11.189.239
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇬🇧 GB 15 → tg@nicevpn123
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 77.72.5.113
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 GB 16 → tg@nicevpn123
-  port: 16833
-  server: 144.24.88.101
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f5425ccf-3946-4fb4-eb24-5393d78a392f
-- name: 🇬🇧 GB 17 → tg@nicevpn123
-  password: 09833a6f-4d46-426e-87fe-7793a5489f84
-  port: 46527
-  server: 144.24.87.186
-  skip-cert-verify: true
-  sni: lovehjq.xyz
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 18 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 811
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 19 → tg@nicevpn123
-  password: dkCb8vhXc9GI
-  port: 17408
-  server: 18.130.65.10
-  skip-cert-verify: true
-  sni: appsvs.shop
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 2 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 812
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 20 → tg@nicevpn123
-  password: yCoZBIVH3JIqeUXNdive9B
-  port: 45844
-  server: 51.145.47.225
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 21 → tg@nicevpn123
-  password: 09833a6f-4d46-426e-87fe-7793a5489f84
-  port: 46521
-  server: 144.24.87.186
-  skip-cert-verify: true
-  sni: lovehjq.xyz
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 22 → tg@nicevpn123
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 3.9.27.170
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 23 → tg@nicevpn123
-  password: 1d7692c0-f51c-11ee-91eb-1239d0255272
-  port: 443
-  server: 51.38.65.155
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 24 → tg@nicevpn123
-  password: 1Bukuyf171ArbKaXSvaSf9
-  port: 40933
-  server: 51.145.20.109
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 GB 25 → tg@nicevpn123
-  network: ws
-  port: 80
-  server: 213.35.113.150
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: eaf5e01b-f27d-44cf-94ae-87196143eef9
-  ws-opts:
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 26 → tg@nicevpn123
-  password: QQgNHAq1zAzjVSjMSTp8Rt
-  port: 62801
-  server: 52.151.77.88
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 27 → tg@nicevpn123
-  password: Bog0ELmMM9DSxDdQ
-  port: 443
-  server: 52.56.201.59
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 28 → tg@nicevpn123
-  password: hS5KwcNlwufMFEScwyjVkz
-  port: 32755
-  server: 51.141.230.84
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 GB 29 → tg@nicevpn123
-  password: KixLvKzwjekG00rm
-  port: 8080
-  server: 51.68.206.229
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 GB 3 → tg@nicevpn123
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 145.239.6.202
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 30 → tg@nicevpn123
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 141.11.189.88
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 31 → tg@nicevpn123
-  password: a1956156-b1d6-468e-b22f-59765172b07d
-  port: 443
-  server: hinet.mjt001.com
-  skip-cert-verify: true
-  sni: hinet.mjt001.com
-  type: trojan
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 GB 32 → tg@nicevpn123
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 51.68.206.229
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇬🇧 GB 33 → tg@nicevpn123
-  password: Yc2CtrIz8L
-  port: 16899
-  server: 198.23.196.68
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 34 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 804
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 35 → tg@nicevpn123
-  password: zjQs77eXK0zdfPFyLs95l6
-  port: 39271
-  server: 52.151.70.6
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 36 → tg@nicevpn123
-  password: 8z9R4FiU9Ttgpl6it_pJPw
-  port: 1080
-  server: 104.248.169.207
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 37 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 800
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 38 → tg@nicevpn123
-  password: telegram-id-directvpn
-  port: 22222
-  server: 35.178.45.128
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 39 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 810
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 4 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 809
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 40 → tg@nicevpn123
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 35.176.117.240
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 41 → tg@nicevpn123
-  password: d0774966-fb63-4aca-9478-16c3f32be220
-  port: 443
-  server: jp.mjt000.com
-  skip-cert-verify: true
-  sni: jp.mjt000.com
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 42 → tg@nicevpn123
-  password: mTypilmjidrr6dQYaOGHf7
-  port: 46130
-  server: 13.87.75.155
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 43 → tg@nicevpn123
-  password: IJIljqaePSVQhZeA7ccN1F
-  port: 59083
-  server: 51.143.142.183
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 GB 44 → tg@nicevpn123
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 145.239.6.202
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 45 → tg@nicevpn123
-  password: wkmY1R4EcP
-  port: 443
-  server: 45.76.130.173
-  skip-cert-verify: true
-  sni: z-v2-003289.kailib.com
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 46 → tg@nicevpn123
-  password: a1956156-b1d6-468e-b22f-59765172b07d
-  port: 443
-  server: hinet.mjt001.com
-  skip-cert-verify: true
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 47 → tg@nicevpn123
-  password: 8MDtlO0vf7UIhqFK8aZkhJ
-  port: 60502
-  server: 52.151.73.254
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧 GB 48 → tg@nicevpn123
-  network: ws
-  port: 8880
-  server: 217.160.45.31
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4e186678-fcca-4325-e4bc-b2916bdf6708
-  ws-opts:
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 49 → tg@nicevpn123
-  password: mps3FwmDjLrWaOVg
-  port: 443
-  server: 51.112.72.37
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 5 → tg@nicevpn123
-  password: d0774966-fb63-4aca-9478-16c3f32be220
-  port: 443
-  server: kr.mjt000.com
-  skip-cert-verify: true
-  sni: kr.mjt000.com
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 50 → tg@nicevpn123
-  password: telegram-id-privatevpns
-  port: 22222
-  server: 3.10.18.151
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇬🇧 GB 51 → tg@nicevpn123
-  password: f8f7aCzcPKbsF8p3
-  port: 989
-  server: 77.72.5.150
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 52 → tg@nicevpn123
-  password: J6L1Hf4oKWPxbvMLc8i8ny
-  port: 31103
-  server: 52.151.72.172
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇬🇧 GB 53 → tg@nicevpn123
-  password: pKEW8JPByTVTLtM
-  port: 4444
-  server: 145.239.6.202
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 54 → tg@nicevpn123
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 141.11.189.55
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 6 → tg@nicevpn123
-  password: G!yBwPWH3Vao
-  port: 806
-  server: 185.172.113.182
-  type: ss
-  udp: true
-- name: 🇬🇧 GB 7 → tg@nicevpn123
-  password: d0774966-fb63-4aca-9478-16c3f32be220
-  port: 443
-  server: sg.mjt000.com
-  skip-cert-verify: true
-  sni: sg.mjt000.com
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 8 → tg@nicevpn123
-  password: IJl7gbeZxeXZzZGcKFMaHA
-  port: 33910
-  server: 51.103.183.241
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 9 → tg@nicevpn123
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 141.11.189.205
-  type: ss
-  udp: true
 - alterId: 64
   cipher: auto
   name: '英国 001 #1'
@@ -768,52 +245,473 @@ proxies:
   server: 31.77.8.97
   skip-cert-verify: true
   type: vmess
-  uuid: e8758bf0-c234-4809-89f7-25fd868316d0
-- name: 🇬🇧GB_2|2.6MB/s
-  port: 443
-  server: 185.235.0.34
+  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
+- alterId: 0
+  cipher: auto
+  name: '英国 008 #1'
+  network: tcp
+  port: 180
+  server: 82.198.246.97
+  skip-cert-verify: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: US4 48.1MB/s
+  network: tcp
+  port: 180
+  server: 82.198.246.233
   skip-cert-verify: true
   tls: true
-  type: http
-  udp: true
-- name: 🇬🇧GB_5|2.8MB/s
-  password: None
-  port: 443
-  server: 185.235.0.66
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: '英国 010 #1'
+  network: tcp
+  port: 180
+  server: 82.198.246.37
   skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: null
-- name: 🇬🇧GB_6|2.6MB/s
-  port: 443
-  server: 37.120.233.18
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: '英国 011 #1'
+  network: tcp
+  port: 180
+  server: 82.198.246.250
   skip-cert-verify: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: '英国 012 #1'
+  network: grpc
+  port: 2085
+  server: 37.221.110.245
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: http
+  type: vless
   udp: true
-- name: 🇬🇧GB_9|2.2MB/s
+  uuid: 02c05088-fcb4-4366-b8d3-98d68c7bdb98
+- name: '英国 013 #1'
+  network: tcp
+  port: 4083
+  server: 78.141.219.108
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0f856f56-822f-49f6-b059-1dfb17466755
+- name: '英国 014 #1'
+  network: ws
   port: 443
-  server: 212.102.63.31
-  skip-cert-verify: true
+  server: 45.8.211.217
+  servername: vangoghhh.info
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: http
+  type: vless
   udp: true
-- name: 🇬🇧GB_10|1.5MB/s
+  uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
+  ws-opts:
+    headers:
+      Host: vangoghhh.info
+    path: /rdfgtws
+- name: '英国 015 #1'
+  network: ws
+  port: 2200
+  server: 185.247.16.3
+  servername: rzd.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
+  ws-opts:
+    headers:
+      Host: rzd.ru
+    path: /v1
+- client-fingerprint: chrome
+  name: '英国 016 #1'
+  network: grpc
+  port: 8443
+  server: 45.9.2.171
+  servername: torr.wlrus.cfd
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 167610e4-bcaf-4074-bc2d-0c08dc4ea294
+- name: '英国 017 #1'
+  network: tcp
   port: 443
-  server: 212.102.63.61
-  skip-cert-verify: true
+  server: 2.29.22.151
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: http
+  type: vless
   udp: true
-- name: 🇬🇧GB_11|3.4MB/s
+  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
+- name: '英国 018 #1'
+  network: tcp
   port: 443
-  server: 37.120.233.50
-  skip-cert-verify: true
+  server: 2.29.42.188
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: http
+  type: vless
   udp: true
-- name: 🇬🇧GB_12|2.0MB/s
+  uuid: 2713d763-325f-4dcb-8656-cca54cbea4d9
+- name: '英国 019 #1'
+  network: grpc
+  port: 2085
+  server: 37.221.110.249
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2f3f58c9-7a49-4783-9722-7fcae7e3a203
+- name: ❓Other_356
+  network: tcp
+  port: 9090
+  server: 82.163.7.27
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 3400a61c-7326-4fa2-b006-7e1ba201eacb
+  ws-opts:
+    headers:
+      Host: play-apps-features.googleusercontent.com
+    path: /
+- client-fingerprint: chrome
+  name: '英国 021 #1'
+  network: ws
+  port: 2096
+  server: 45.12.31.120
+  servername: ez-f9d60b.ezaccess118dacd.workers.dev
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 59273321-5dd9-b462-688d-3050f9ef3261
+  ws-opts:
+    headers:
+      Host: ez-f9d60b.ezaccess118dacd.workers.dev
+    path: /sync
+- name: '英国 022 #1'
+  network: xhttp
+  port: 443
+  server: 2.27.59.255
+  servername: et-ger.letsgodance.site
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
+- name: '英国 023 #1'
+  network: tcp
+  port: 25585
+  server: 78.141.221.126
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6eebb521-1844-4c3c-bf54-fb0e19870f80
+- name: '英国 024 #1'
+  network: tcp
+  port: 62145
+  server: 141.144.196.65
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- flow: ''
+  name: '英国 025 #1'
+  network: tcp
+  port: 62145
+  server: 92.5.231.30
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+- client-fingerprint: chrome
+  name: '英国 026 #1'
+  network: tcp
+  port: 8443
+  server: 77.74.123.178
+  servername: cdn7-09.vk-cdnvideo.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f
+- name: '英国 027 #1'
+  network: tcp
+  port: 443
+  server: 193.58.119.134
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 97d216c9-7561-45fa-fd67-e56fde36360b
+- name: '英国 028 #1'
+  network: tcp
+  port: 19000
+  server: 31.77.156.137
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9bbe5565-56fa-4935-940d-1442f443fcc8
+- name: '英国 029 #1'
+  network: tcp
+  port: 51584
+  server: 31.77.156.137
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9bbe5565-56fa-4935-940d-1442f443fcc8
+- client-fingerprint: chrome
+  name: '英国 030 #1'
+  network: ws
+  port: 443
+  server: 164.38.155.135
+  servername: alfi.yas-nowin.ir
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: alfi.yas-nowin.ir
+    path: /?ed=2048
+- client-fingerprint: chrome
+  name: '英国 031 #1'
+  network: tcp
+  port: 443
+  server: 85.234.65.189
+  servername: eeaxtirr4c22.dop33.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a63049c0-67ce-400c-beda-1403be8b8de8
+- name: '英国 032 #1'
+  network: tcp
+  port: 20190
+  server: 169.197.113.179
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b
+- name: '英国 033 #1'
+  network: tcp
+  port: 14726
+  server: 178.104.129.39
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: aebf0af6-7890-45ec-adf9-e6f502f2303e
+- client-fingerprint: chrome
+  flow: ''
+  name: '英国 034 #1'
+  network: ws
+  port: 443
+  server: 158.180.231.216
+  servername: bab-6.site
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  ws-opts:
+    headers:
+      Host: bab-6.site
+    path: /vws/
+- name: '英国 035 #1'
+  network: ws
+  port: 8080
+  server: 141.11.45.214
+  servername: net.hostingdata.ir
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: be32aec6-9dde-4365-b574-2e0023462084
+  ws-opts:
+    headers:
+      Host: net.hostingdata.ir
+    path: /
+- client-fingerprint: chrome
+  name: 🇬🇧GB_7
+  network: raw
+  port: 8443
+  server: 31.76.76.28
+  servername: neth4.lckdwn.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
+- name: '英国 038 #1'
+  network: tcp
+  port: 22222
+  server: 18.132.102.151
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 039 #1'
+  network: tcp
+  port: 22222
+  server: 18.133.115.28
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 040 #1'
+  network: tcp
+  port: 22222
+  server: 18.135.85.1
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 041 #1'
+  network: tcp
+  port: 22222
+  server: 3.11.116.75
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 042 #1'
+  network: tcp
+  port: 22222
+  server: 3.8.241.196
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 043 #1'
+  network: tcp
+  port: 22222
+  server: 3.9.167.151
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 044 #1'
+  network: tcp
+  port: 22222
+  server: 3.9.242.59
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 045 #1'
+  network: tcp
+  port: 22222
+  server: 35.178.21.210
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 046 #1'
+  network: tcp
+  port: 22222
+  server: 35.178.42.199
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 047 #1'
+  network: tcp
+  port: 22222
+  server: 51.44.29.85
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 048 #1'
+  network: tcp
+  port: 22224
+  server: 51.44.29.85
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: '英国 049 #1'
+  network: grpc
+  port: 2083
+  server: 82.24.203.174
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f2616bce-337a-4d13-8c58-1b5e71986569
+- name: '英国 050 #1'
+  network: xhttp
+  port: 2052
+  server: 25.129.197.233
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+- name: 🇬🇧GB_3|1.3MB/s
   password: ''
   port: 443
   server: 185.235.0.2
@@ -822,6 +720,29 @@ proxies:
   type: http
   udp: true
   username: ''
+- name: 🇬🇧GB_4|1.1MB/s
+  port: 443
+  server: 37.120.233.50
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇬🇧GB_5|1.9MB/s
+  password: None
+  port: 443
+  server: 212.102.63.1
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇬🇧GB_6|1.1MB/s
+  password: None
+  port: 443
+  server: 212.102.63.31
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - name: 🇬🇧_GB_英国
   port: 1446
   server: 78.154.108.51
@@ -830,6 +751,15 @@ proxies:
   type: vless
   udp: true
   uuid: d8b42cd5-a149-4356-9e61-111111111111
+- name: 嘎
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-uk-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-uk-002.fastervpn.world
+  tls: false
+  type: hysteria2
+  udp: true
 - name: 英国
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -850,111 +780,95 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- name: 🇬🇧GB_3|2.9MB/s
-  password: None
-  port: 443
-  server: 37.120.233.18
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: 🇬🇧GB_6|2.4MB/s
-  password: None
-  port: 443
-  server: 212.102.63.31
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: 🇬🇧GB_7|2.8MB/s
-  password: None
-  port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: GB VLESS-1622
-  network: tcp
-  port: 10829
-  server: s1243.sspcccdn.xyz
-  servername: u643766ueb8953b4s861.gogocs.xyz
-  tls: true
-  type: vless
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
-  ws-opts:
-    headers:
-      Host: eb8953b4s861.gogocs.xyz
-    path: ''
 - client-fingerprint: chrome
-  name: '英国 #1'
-  network: ws
-  port: 2053
-  server: 91.193.59.32
-  servername: feixiang1981.ccwu.cc
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_1|2.0MB/s
+  network: tcp
+  port: '443'
+  reality-opts:
+    public-key: 8q_xD5tfjZGDPsnq-3VqXWVV7-D03crExMBuL4xQNBM
+    short-id: '!!str d4f6a8c1b2e3f9aa'
+  server: 2.26.51.75
+  servername: 4pda.to
   tls: true
   type: vless
-  uuid: 06fb2cc5-a777-4371-8a1d-c10205b4c85e
-  ws-opts:
-    headers:
-      Host: feixiang1981.ccwu.cc
-    path: '%2F'
-- alpn:
-  - http/1.1
-  name: GB英国(
-  network: ws
-  password: humanity
+  udp: true
+  uuid: 57e2a48b-0cc2-4b60-aacd-b36358fcba96
+  xudp: true
+- name: 🇬🇧GB_4|3.3MB/s
+  password: None
   port: 443
-  server: 104.18.23.63
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: GB VLESS-1637
+  server: 37.120.233.34
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: 🇬🇧GB_5|2.4MB/s
+  port: 1088
+  server: 144.126.197.184
+  type: socks5
+- client-fingerprint: ios
+  name: 🇬🇧GB_6|4.3MB/s
   network: tcp
-  port: 10829
-  server: 193.142.59.97
-  servername: u643766ueb8953b4s861.gogocs.xyz
+  port: '8443'
+  reality-opts:
+    public-key: GzQr6fDhigtRAr0n2Y7Nk3snhdytYyOvaYo9zYe1Xn4
+    short-id: '!!str b3a1cc510a2001c6'
+  server: 2.26.148.189
+  servername: eh.vk.com
   tls: true
   type: vless
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
-  ws-opts:
-    headers:
-      Host: eb8953b4s861.gogocs.xyz
-    path: ''
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
+  udp: true
+  uuid: 6eefb4c5-96c2-4b41-a8e3-3dd13e8e09d0
+  xudp: true
+- client-fingerprint: firefox
+  encryption: none
   flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: GB VLESS-1589
+  name: 🇬🇧GB_7|2.4MB/s
   network: tcp
-  port: 10829
-  server: s148.okgg.top
-  servername: u643766uf33e982bs124.gogocs.xyz
+  port: '443'
+  reality-opts:
+    public-key: sEzXu5KZcPPaT5ZKj8gBIOa4ana3Jq75-iZSMQPW9BY
+    short-id: '!!str 8c3f17a4d92be560'
+  server: 45.43.166.56
+  servername: travel.yandex.ru
   tls: true
   type: vless
-  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
-  ws-opts:
-    headers:
-      Host: f33e982bs124.gogocs.xyz
-    path: ''
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  xudp: true
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: TunService
+  name: 🇬🇧 英国 | GBR
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: FOQzn10eHqu4F5xOxiXW2bTDG8lH4TdOXP6A5rDqKFk
+  server: 45.88.13.5
+  servername: download.nvidia.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2bb8b13c-b3f0-2552-da05-d0929bfb36db
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇬🇧 017  | ⬇️ 47KB/s
+  network: raw
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs
+    short-id: '!!str 10debbdf94767541'
+  server: 46.33.8.21
+  servername: filesconvert.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: fe64e0af-e39b-4335-874e-5bb6993e465a
 - alpn:
   - h2
   - http/1.1
@@ -981,7 +895,56 @@ proxies:
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: GB VLESS-1581
+  name: GB VLESS-1627
+  network: tcp
+  port: 10829
+  server: s1243.sspcccdn.xyz
+  servername: u643766ueb8953b4s861.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  ws-opts:
+    headers:
+      Host: eb8953b4s861.gogocs.xyz
+    path: ''
+- alpn:
+  - http/1.1
+  name: GB英国(
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.23.63
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: GB VLESS-1594
+  network: tcp
+  port: 10829
+  server: s148.okgg.top
+  servername: u643766uf33e982bs124.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  ws-opts:
+    headers:
+      Host: f33e982bs124.gogocs.xyz
+    path: ''
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: GB VLESS-1586
   network: tcp
   port: 10829
   server: s128.okgg.top
@@ -993,17 +956,36 @@ proxies:
     headers:
       Host: f33e982bs124.gogocs.xyz
     path: ''
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_9
+  password: g5h5jleTRSyO3Rk4
+  port: 80
+  server: 149.102.132.184
+  type: ss
 - client-fingerprint: chrome
-  name: GB VLESS-578
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_4
   network: tcp
-  port: 21443
+  port: 443
   reality-opts:
-    public-key: PEPivzCg5cBehVQUMVJLNPx3A9hy719Fq7HQsXMp4Ro
-  server: hostvds-nl-nl.kvnfreetest.uk
-  servername: cloudflare.com
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: '!!str 60500a63ad12'
+  server: 107.181.151.241
+  servername: www.microsoft.com
   tls: true
   type: vless
-  uuid: 122f8c58-f173-4f4a-acb8-86172ba5e10d
+  uuid: 106d20f6-d70a-40e2-b69b-8e82baf8d117
+- name: GB英国 2026-9.10)
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.67.221.242
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.ignitelimit.com
+    path: '%2Fassignment'
 - alpn:
   - h2
   - http/1.1
@@ -1011,7 +993,7 @@ proxies:
   flow: xtls-rprx-vision
   grpc-opts:
     grpc-service-name: ''
-  name: GB VLESS-1639
+  name: GB VLESS-1643
   network: tcp
   port: 10829
   server: 193.142.59.180
@@ -1023,3 +1005,60 @@ proxies:
     headers:
       Host: f33e982bs124.gogocs.xyz
     path: ''
+- name: 🇬🇧GB_17
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-uk-002.fastervpn.world
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇬🇧GB_3
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
+    short-id: '!!str 1374bddeb25d'
+  server: 107.181.151.39
+  servername: www.tradingview.com
+  tls: true
+  type: vless
+  uuid: 6dfc9149-1ff9-41c3-8563-0ef284381731
+- cipher: rc4-md5
+  name: 🇬🇧GB_1
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.37
+  type: ss
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: GB VLESS-1641
+  network: tcp
+  port: 10829
+  server: 193.142.59.97
+  servername: u643766ueb8953b4s861.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 41f4cb15-5a3f-3934-89fe-b4177146adf4
+  ws-opts:
+    headers:
+      Host: eb8953b4s861.gogocs.xyz
+    path: ''
+- name: 🇬🇧GB_12
+  network: ws
+  port: 8880
+  server: 172.65.90.53
+  tls: false
+  type: vless
+  uuid: c04e959d-3b7a-4d4f-881a-935762102704
+  ws-opts:
+    headers:
+      Host: super-darkness-5bfb.298-142.workers.dev
+    path: /pyip=ProxyIP.US.CMLiussss.net

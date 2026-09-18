@@ -1,12 +1,22 @@
 proxies:
-- client-fingerprint: chrome
-  name: 未知 TROJAN-569
+- name: ❓Other_88
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: russiapower.accesscam.org
-  sub_tag: C002-260622
+  type: trojan
+  udp: true
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  name: 🇪🇪 爱沙尼亚 | EST
+  password: eZwp12tXna8-s_ysszXnXq25rv1c8w
+  port: 8443
+  server: ee.cheapgo.cc
+  skip-cert-verify: true
+  sni: ee.cheapgo.cc
   type: trojan
   udp: true
