@@ -1,16 +1,19 @@
 proxies:
-- client-fingerprint: firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 EE丨yoyapai.com爱沙尼亚丨yoyapai.... #2'
+  name: '🇪🇪 #1'
+  network: tcp
   port: 443
   server: 138.124.100.128
   servername: ee4.fast-connect-service.site
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇪🇪
+- name: '🇪🇪 #2'
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
@@ -21,7 +24,7 @@ proxies:
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #2'
+  name: 🇪🇪
   network: tcp
   port: 2053
   reality-opts:
@@ -29,61 +32,92 @@ proxies:
     short-id: '!!str c0d1d1776fed0f6d'
   server: 5.175.178.43
   servername: ee-t3.vinnypuxtomoon.today
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- client-fingerprint: chrome
-  http-opts:
-    headers:
-      Host:
-      - hub-ee-01.hanvpn.cc
-    path:
-    - /ee01-xhttp-8e47a/
-  name: 爱沙尼亚(
-  network: xhttp
-  port: 9443
-  server: 31.76.226.100
-  servername: hub-ee-01.hanvpn.cc
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  ws-opts:
-    headers:
-      Host: hub-ee-01.hanvpn.cc
-    path: /ee01-xhttp-8e47a/
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪 019  | ⬇️ 5MB/s
-  network: tcp
-  packet-encoding: xudp
-  port: 20443
-  reality-opts:
-    public-key: -AdhgMZeNHR2zAmGWa5peg7Ni0-e4IVMoSzydC9n7C4
-    short-id: '!!str 08'
-  server: 89.106.88.123
-  servername: dest1.cdn-update.rutube.info
   skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
-- country: 🇮🇷IR
-  name: 🇪🇪EE_26
-  password: 319ed24b1c7203aa
-  port: 8443
-  server: tishina-axe.dedyn.io
-  skip-cert-verify: true
-  sni: tishina-axe.dedyn.io
-  tls: false
-  type: hysteria2
-  udp: true
+  uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 2e0c1c3ca4
+  name: 爱沙尼亚(
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: lvgY-QZ6xKUDusPI_2_DW7fyPDTGDezBf5-5ezqPcH0
+    short-id: '!!str bcab2c5fdb17be80'
+  server: 94.183.239.34
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
+- name: '🇪🇪EE_2|1.2MB/s|A004-260618 01 #2'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 94.183.170.135
+  servername: 94.183.170.135
+  sub_tag: A004-260618
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers:
+      Host: ''
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/55.0.2883.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇪🇪EE_2
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sni: 109.206.241.10
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: '🇪🇪EE_5|295KB/s|A004-260618 01 #2'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 94.183.170.135
+  sub_tag: A004-260618
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers:
+      Host: estproxy4.lockdwn.com
+      User-Agent: Mozilla/5.0 (Linux; Android 5.1; A37f Build/LMY47V) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 🇪🇪 机场推荐:dafei.de 爱沙尼亚 01
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
+    short-id: '!!str 5c766813929a1fdd'
+  server: 91.215.40.6
+  servername: id.dframe.app
+  tls: true
+  type: vless
+  udp: true
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  xudp: true
+- client-fingerprint: firefox
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_24
+  name: 🇪🇪 062  | ⬇️ 3MB/s
   network: raw
   packet-encoding: xudp
   port: 443
@@ -97,162 +131,16 @@ proxies:
   type: vless
   udp: true
   uuid: a2738d8d-ed26-4b13-a4a2-b89c7238cd10
-- name: 🇪🇪EE_15
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: 31.76.71.63
-  skip-cert-verify: true
-  sni: cabinet.wwwinternetvideo.click
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: 9d30d49278
-  name: 🇪🇪EE_13
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg
-    short-id: '!!str 72ccd4a7563c2953'
-  server: 94.183.170.147
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
-- name: 🇪🇪EE_11
-  obfs: salamander
-  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-  password: cd74c0a406664a5bc0bac098220a2468
-  port: 443
-  server: ee1.sferavpn.pro
-  sni: ee1.sferavpn.pro
-  tls: false
-  type: hysteria2
-- name: 🇪🇪EE_2
-  network: ws
-  port: 443
-  server: 94.183.170.135
-  servername: 94.183.170.135
-  tls: false
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  ws-opts:
-    path: /
-- client-fingerprint: random
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: 🇪🇪EE_25
+  name: 🇪🇪EE_3
   network: tcp
-  port: 443
-  reality-opts:
-    public-key: r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk
-    short-id: '!!str d98e7afec9c0c359'
-  server: estomin1.vodniki.monster
-  servername: estomin1.vodniki.monster
-  tls: true
-  type: vless
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_30
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk
-    short-id: '!!str d98e7afec9c0c359'
-  server: 5.181.201.36
-  servername: estomin1.vodniki.monster
-  tls: true
-  type: vless
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-- name: 🇪🇪EE_19
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: 217.60.182.79
-  skip-cert-verify: true
-  sni: cabinet.wwwinternetvideo.click
-  tls: false
-  type: hysteria2
-- name: 🇪🇪EE_18
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: faq.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: cabinet.wwwinternetvideo.click
-  tls: false
-  type: hysteria2
-- name: 🇪🇪EE_17
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: cabinet.wwwinternetvideo.click
-  sni: 127.0.0.1
-  tls: false
-  type: hysteria2
-- name: 🇪🇪EE_12
-  network: tcp
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  port: 449
-  server: 109.206.241.10
-  skip-cert-verify: true
-  sni: 109.206.241.10
-  type: trojan
-- client-fingerprint: firefox
-  name: 🇪🇪EE_1
-  network: tcp
-  port: 8443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
-  tls: true
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_14
-  network: tcp
-  port: 20443
-  reality-opts:
-    public-key: -AdhgMZeNHR2zAmGWa5peg7Ni0-e4IVMoSzydC9n7C4
-    short-id: '!!str 08'
-  server: ee.cdn-update.rutube.info
-  servername: dest1.cdn-update.rutube.info
-  tls: true
-  type: vless
-  uuid: ad297a2b-ae17-4d2d-8fce-e2eafb89b145
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
-  network: tcp
-  port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_10
-  network: raw
   port: 8443
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: '!!str 6ba85179e30d4fc2'
-  server: 150.241.101.80
+  server: 150.241.101.17
   servername: yandex.net
   tls: true
   type: vless
   uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_27
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 132.243.65.161
-  servername: ee.global-cdn.org
-  tls: true
-  type: vless
-  uuid: 4d08aa81-f729-4857-a2e9-06e48b8b9556
