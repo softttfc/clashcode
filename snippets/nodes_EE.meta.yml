@@ -3,7 +3,7 @@ proxies:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
+  name: 🇪🇪
   network: tcp
   port: 443
   server: 138.124.100.128
@@ -13,17 +13,18 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: '🇪🇪爱沙尼亚丨yoyapai.com #2'
+- name: '🇪🇪 #2'
+  network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: russiapower.accesscam.org
   type: trojan
   udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇪🇪
+  name: '🇪🇪 #1'
   network: tcp
   port: 2053
   reality-opts:
@@ -36,71 +37,74 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: 2e0c1c3ca4
-  name: 🇪🇪 爱沙尼亚_8P13OU
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: lvgY-QZ6xKUDusPI_2_DW7fyPDTGDezBf5-5ezqPcH0
-    short-id: '!!str bcab2c5fdb17be80'
-  server: 94.183.239.34
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
 - client-fingerprint: chrome
   encryption: none
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇪🇪 机场推荐:dafei.de 爱沙尼亚 01
-  network: grpc
+  flow: xtls-rprx-vision
+  name: 🇪🇪 机场推荐:dafei.de 爱沙尼亚 02
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: '!!str 3cbc3d737fb9c4af'
+  server: du-rov.secureservice.top
+  servername: du-rov.secureservice.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+  xudp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪_爱沙尼亚_49
   port: 443
   reality-opts:
-    public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
-    short-id: '!!str 5c766813929a1fdd'
-  server: 91.215.40.6
-  servername: id.dframe.app
-  tls: true
-  type: vless
-  udp: true
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  xudp: true
-- name: 爱沙尼亚 001
-  network: tcp
-  port: 443
-  server: 85.9.194.75
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇪🇪EE_1
-  network: ws
-  port: 443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
-  tls: false
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  ws-opts:
-    path: /
-- name: 🇪🇪EE_3
-  network: tcp
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  port: 449
-  server: 109.206.241.10
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: 95.85.224.17
+  servername: /?TELEGRAM--V2ray_confiig
   skip-cert-verify: true
-  sni: 109.206.241.10
-  type: trojan
+  tls: true
+  type: vless
+  udp: true
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_20
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 132.243.65.151
+  servername: ee.global-cdn.org
+  tls: true
+  type: vless
+  uuid: 17f388d7-1fa2-440f-a8f4-720b72d19195
+- name: 🇪🇪EE_12
+  obfs: salamander
+  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+  password: cd74c0a406664a5bc0bac098220a2468
+  port: 443
+  server: ee1.sferavpn.pro
+  sni: ee1.sferavpn.pro
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_22
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: 132.243.65.159
+  servername: ee.global-cdn.org
+  tls: true
+  type: vless
+  uuid: 46699f9f-b815-47d8-a657-08494b74aa93
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 9d30d49278
-  name: 🇪🇪EE_4
+  name: 🇪🇪EE_13
   network: grpc
   port: 8443
   reality-opts:
@@ -111,3 +115,71 @@ proxies:
   tls: true
   type: vless
   uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
+- client-fingerprint: firefox
+  name: 🇪🇪EE_1
+  network: raw
+  port: 8443
+  server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
+  tls: true
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_21
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 98MNvJC4t0ZjK_xHlQjOx2WfLfAPluNDb71MzS9sPT8
+    short-id: '!!str 38018dde3e27335e'
+  server: 5.181.201.43
+  servername: est1.loozerp.wiki
+  tls: true
+  type: vless
+  uuid: f495298f-2bdb-4fd8-9ac9-5dd33d1b482a
+- name: 🇪🇪EE_8
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sni: 109.206.241.10
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇪🇪EE_16
+  network: ws
+  port: 4433
+  server: 83.147.216.223
+  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  tls: true
+  type: vless
+  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
+  ws-opts:
+    headers:
+      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+    path: /@Marisa_kristi
+- name: 🇪🇪EE_2
+  network: ws
+  port: 443
+  server: 94.183.170.135
+  tls: false
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers:
+      Host: estproxy4.lockdwn.com
+    path: /
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 2e0c1c3ca4
+  name: 爱沙尼亚(
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: lvgY-QZ6xKUDusPI_2_DW7fyPDTGDezBf5-5ezqPcH0
+    short-id: '!!str bcab2c5fdb17be80'
+  server: 94.183.239.34
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 7ab9fe4f-6699-427f-a828-9fcf2496d714
