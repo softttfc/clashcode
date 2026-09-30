@@ -1,19 +1,4 @@
 proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: SG【机场推荐：https://a9a.xyz】29
-  network: tcp
-  port: 20975
-  reality-opts:
-    public-key: GVg6RWWCJfXATSmArzQD69rXqs9-804Ot-_uX3WrJE4
-    short-id: '!!str 2bb0dc48'
-  server: 18.136.119.69
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
 - alterId: 0
   cipher: auto
   name: '🇸🇬 SG新加坡 #1'
@@ -27,7 +12,7 @@ proxies:
   uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
   ws-opts:
     path: /0zNW56sF
-- name: '🇸🇬 #2'
+- name: '🇸🇬 #1'
   network: ws
   port: 8880
   server: 45.40.149.50
@@ -42,7 +27,7 @@ proxies:
     path: /
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬
+  name: '🇸🇬 #2'
   network: tcp
   port: 443
   reality-opts:
@@ -59,7 +44,7 @@ proxies:
     headers:
       Host: asia.cendora.ru
 - client-fingerprint: chrome
-  name: '🇸🇬 #1'
+  name: 🇸🇬
   network: ws
   port: 443
   server: 47.131.189.221
@@ -73,49 +58,20 @@ proxies:
     headers:
       Host: mia7.pages.dev
     path: /TG:@MiaChatChannel
-- auth: 19f72087-4591-4d72-930b-2697078ec2be
-  name: 🇸🇬 新加坡 | SGP 2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 18333
-  server: sg1.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg1.xiaoliyu.cyou
-  type: hysteria2
-- auth: f87376e17da040ed04c9665ce8972930
-  down: ''
+- down: ''
   fingerprint: ''
-  name: 🇸🇬SG_2|1.0MB/s
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 01
   obfs: ''
   obfs-password: ''
   password: f87376e17da040ed04c9665ce8972930
-  port: '50160'
+  port: 50160
   server: 138.2.73.238
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: 138.2.73.238
   type: hysteria2
-  udp: true
   up: ''
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬 新加坡 | SGP 3
-  network: ws
-  packet-encoding: xudp
-  port: 2096
-  server: 104.17.70.206
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
 - auth: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 04
+  name: 🇸🇬 新加坡 | SGP 3
   password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
   port: 18642
   server: s3.huhiuh.space
@@ -123,62 +79,20 @@ proxies:
   sni: www.bing.com
   type: hysteria2
   udp: true
-- name: 🇸🇬SG_4|3.2MB/s
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 2060
-  server: xjp2.mangshe.xyz
+- down: ''
+  fingerprint: ''
+  name: 🇸🇬SG_27
+  obfs: salamander
+  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
+  password: d042d150716709bb778cc73889cddb02
+  port: 443
+  server: 138.2.89.249
   skip-cert-verify: true
-  sni: xjp2.mangshe.xyz
+  sni: www.bing.com
+  tfo: false
+  tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 07
-  network: ws
-  port: 443
-  server: 104.26.11.189
-  servername: shephe.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  ws-opts:
-    headers:
-      Host: shephe.dpdns.org
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 08
-  network: ws
-  port: 443
-  server: 103.71.22.26
-  servername: shephe.dpdns.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  ws-opts:
-    headers:
-      Host: shephe.dpdns.org
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/45.0.2454.101 Safari/537.36
-    path: /
-  xudp: true
-- client-fingerprint: firefox
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 09
-  network: ws
-  port: 2096
-  server: 91.193.58.15
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/48.0.2564.116 Safari/537.36
-    path: /free-server.techsonic.dev
-  xudp: true
+  up: ''
 - name: 🇸🇬 新加坡|@stairnode
   password: 868ecdaf6aed618ec98cf78585672b2b
   port: 4674
@@ -239,69 +153,6 @@ proxies:
     headers:
       Host: m.zoom.us
     path: /Dialog Zoom
-- alterId: 1
-  cipher: auto
-  name: '新加坡 003 #1'
-  network: ws
-  port: 21888
-  server: 104.248.148.147
-  skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 104.248.148.147
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '新加坡 004 #1'
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  skip-cert-verify: true
-  type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
-  ws-opts:
-    headers:
-      Host: 139.99.61.154
-    path: /vmess
-- alterId: 4
-  cipher: auto
-  name: '新加坡 005 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.134
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: eeh7iewe.com
-    path: /ws
-- alterId: 4
-  cipher: auto
-  name: '新加坡 006 #1'
-  network: ws
-  port: 443
-  server: 103.253.26.20
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: zecjk.com
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: '新加坡 007 #1'
-  network: tcp
-  port: 47630
-  server: 43.228.126.187
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡|@ripaojiedian
@@ -332,57 +183,177 @@ proxies:
     headers:
       Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
     path: /ws-vmess
-- client-fingerprint: chrome
-  name: 🇸🇬_新加坡_108
-  port: 443
-  reality-opts:
-    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
-    short-id: '!!str eb97ce837da2f6ad'
-  server: 35.185.179.62
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-- client-fingerprint: firefox
-  name: UN【机场推荐：https://a9a.xyz】97
+- name: 🇸🇬SG_1|1.5MB/s
   network: ws
-  port: 2096
-  server: free-server.techsonic.dev
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  tls: true
+  packet-encoding: xudp
+  port: 8880
+  server: themeforest.net
   type: vless
   udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: c2569d72-0ba1-44e8-986f-be445edb5f3d
   ws-opts:
     headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+      Host: silent-union-ac36.315-33d.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/39.0.2171.95 Safari/537.36
+    path: /pyip=ProxyIP.JP.CMLiussss.net
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: 日本3|@ripaojiedian
+  network: ws
+  port: '443'
+  server: kneNaKHeSXnZH259.v.3dns.vip
+  servername: kneNaKHeSXnZH259.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kneNaKHeSXnZH259.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '新加坡|@ripaojiedian #1'
+  network: ws
+  port: '443'
+  server: ASaqYIDZa9WDQ9Kq.v.3dns.vip
+  servername: ASaqYIDZa9WDQ9Kq.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 新加坡2|@ripaojiedian
+  network: ws
+  port: '443'
+  server: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  servername: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '韩国|@ripaojiedian #1'
+  network: ws
+  port: '443'
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  servername: 8nTzyR5KNivfabaT.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '美国2|@ripaojiedian #1'
+  network: ws
+  port: '443'
+  server: bJ1Aa2ZyJxYamYuK.v.3dns.vip
+  servername: bJ1Aa2ZyJxYamYuK.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: bJ1Aa2ZyJxYamYuK.v.3dns.vip
+    path: /ws-vmess
+- name: 新加坡|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10135
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 🇸🇬 新加坡 | SGP
+  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
+  port: 16406
+  server: test01.y1static-content-distribution.shop
+  skip-cert-verify: true
+  sni: yz203.y1static-content-distribution.shop
+  type: anytls
+  udp: true
+- client-fingerprint: edge
+  name: 🇸🇬 新加坡 | SGP 2
+  network: ws
+  port: 443
+  server: 5.223.51.84
+  servername: hk.152568.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
+  ws-opts:
+    headers:
+      Host: hk.152568.xyz
+    path: /cdn/packages/runtime-core.tar.gz
+- name: 🇸🇬 新加坡 | SGP 4
+  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
+  port: 14855
+  server: test01.y1static-content-distribution.shop
+  skip-cert-verify: true
+  sni: yz238.y1static-content-distribution.shop
+  type: anytls
+  udp: true
 - auth: f87376e17da040ed04c9665ce8972930
-  down: ''
-  fingerprint: ''
-  name: 🇸🇬 新加坡 | SGP
-  obfs: ''
-  obfs-password: ''
+  name: 🇸🇬SG_9
   password: f87376e17da040ed04c9665ce8972930
   port: 50160
   server: 138.2.73.238
   skip-cert-verify: true
-  sni: 138.2.73.238
-  type: hysteria2
-  up: ''
-- name: 🇸🇬 030  | ⬇️ 79KB/s
-  obfs: salamander
-  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
-  password: d042d150716709bb778cc73889cddb02
-  port: 443
-  server: 138.2.89.249
-  skip-cert-verify: true
   sni: www.bing.com
-  tfo: false
+  tls: false
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | SGP 6
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: eAQrXEfedW5BrMMeOecf_M9tkNNqQIShlLOl2xg1cho
+    short-id: '!!str c75bbeb4b67fba71'
+  server: agroup.sg3.ilovegairport.com
+  servername: ap-southeast-1.console.aws.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 129e26fe-cee2-4786-9261-b29668337829
+- name: 🇸🇬 新加坡 | SGP 7
+  password: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+  port: 1892
+  server: sin-a-01.auuas.com
+  skip-cert-verify: true
+  sni: images.apple.com
+  type: anytls
+  udp: true
+- name: 🇸🇬 新加坡 | SGP 8
+  network: ws
+  port: 8880
+  server: 162.159.43.187
+  tls: false
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    path: /?ed=2560security=tls
 - encryption: none
   name: 🇸🇬 063  | ⬇️ 1MB/s
   network: tcp
@@ -395,69 +366,11 @@ proxies:
   type: vless
   udp: true
   uuid: 0590ab38-cb22-41d3-8312-6f396a5cec58
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_17
-  network: raw
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: sg2-8sb.6121999.dpdns.org
-  servername: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- name: SG新加坡
-  obfs: salamander
-  obfs-password: xK9mN2pLq5vR8wB3
-  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
-  port: 20654
-  server: sg4.dexlos.com
-  sni: sg4.dexlos.com
-  tls: false
-  type: hysteria2
-- name: 🇸🇬SG_5
-  network: ws
-  port: 8880
-  server: 104.17.181.19
-  tls: false
-  type: vless
-  uuid: 26fb53e4-fd49-4b34-b605-b6cc1b1a06a8
-  ws-opts:
-    headers:
-      Host: royal-shape-3771.93-728.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-65
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
-    short-id: '!!str 9930177816ab09da'
-  server: 206.206.76.75
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
-- name: 🇸🇬SG_2
-  network: ws
-  port: 8880
-  server: 104.16.8.66
-  servername: rapid-base-6c9e.45-d79.workers.dev
-  tls: false
-  type: vless
-  uuid: 725c66a2-2bce-4a24-ba52-b4e2e7047076
-  ws-opts:
-    headers:
-      Host: rapid-base-6c9e.45-d79.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: 🇸🇬SG_31
+  name: 🇸🇬SG_87
   network: ws
   port: 443
   server: 170.114.52.22
@@ -469,106 +382,69 @@ proxies:
     headers:
       Host: asia.csmasterofficial.store
     path: /cs
-- name: 🇸🇬SG_3
-  network: ws
-  port: 8880
-  server: 104.17.58.113
-  tls: false
-  type: vless
-  uuid: f7cc1898-52f8-4e8e-9a90-320fc7fdadb8
-  ws-opts:
-    headers:
-      Host: raspy-truth-565b.394-8bb.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: 🇸🇬SG_23
-  network: ws
-  port: 8880
-  server: 135.84.72.30
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime06.workers.dev
-    path: /
 - client-fingerprint: chrome
-  name: 🇸🇬SG_21
+  name: 🇸🇬SG_66
   network: ws
-  port: 53646
-  server: 54.179.79.12
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+  port: 2096
+  server: 91.193.58.157
+  servername: free-server.techsonic.dev
   tls: true
   type: vless
-  uuid: d57b9436-a238-4066-8b11-d23ae57c5982
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   ws-opts:
     headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-    path: /@Marisa_kristi
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_7
+  name: 🇸🇬SG_88
   network: tcp
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 146.235.16.130
-  servername: sg2-8sb.6121999.dpdns.org
+  port: 443
+  server: 172.236.142.114
+  servername: onhit.shalana.xyz
   tls: true
   type: vless
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- client-fingerprint: safari
+  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+- client-fingerprint: chrome
+  name: 🇸🇬SG_69
+  network: ws
+  port: 2096
+  server: 91.193.58.52
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_29
-  network: raw
-  port: 443
+  name: 🇸🇬SG_11
+  network: tcp
+  port: 17623
   reality-opts:
-    public-key: 4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ
-    short-id: '!!str ab1df8505f6e0072'
-  server: 163.128.99.57
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
   servername: www.apple.com
   tls: true
   type: vless
-  uuid: 1a049739-b873-4242-9a2b-239951eb2dd3
-- alpn:
-  - http/1.1
-  name: 🇸🇬SG_13
-  network: ws
-  password: U&RdRdcsoeB;VU9.IO
-  port: 8443
-  server: 172.67.167.173
-  sni: Te096C8unFj1zOKTL5peU24bS.878nAMn3I0xJ17no6p3.wORkErS.Dev
-  type: trojan
-  ws-opts:
-    path: /tr/oUxHeBhI2aoGvGd83MTCkEy2kmdXsBX0?ed=2560
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_22
-  network: raw
-  port: 12512
-  reality-opts:
-    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
-    short-id: '!!str e692a8250d2e2fd0'
-  server: 46.137.202.178
-  servername: www.intel.com
-  tls: true
-  type: vless
-  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
-  name: 🇸🇬SG_27
-  network: ws
-  port: 443
-  server: 3.1.187.169
-  servername: mia4.pages.dev
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_92
+  network: tcp
+  port: 28243
+  reality-opts:
+    public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y
+    short-id: '!!str 7996bf4dcf194d18'
+  server: 18.139.227.162
+  servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
-  ws-opts:
-    headers:
-      Host: mia4.pages.dev
-    path: /TG:@MiaChatChannel
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
 - cipher: rc4-md5
-  name: 🇸🇬SG_30
+  name: 🇸🇬SG_83
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.236
@@ -579,3 +455,638 @@ proxies:
   port: 38388
   server: 103.186.155.16
   type: ss
+- client-fingerprint: chrome
+  name: 🇸🇬SG_55
+  network: ws
+  port: 2096
+  server: 91.193.58.45
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_96
+  network: tcp
+  port: 26415
+  reality-opts:
+    public-key: eC5S3o9uFN6i_YjDjiALCXbc_dzh3kEm2C5zduDGtS8
+    short-id: '!!str b7dd999667b0406e'
+  server: 54.251.239.81
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+- client-fingerprint: chrome
+  name: 🇸🇬SG_99
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '!!str 628b3c90c98ead4f'
+  server: 13.212.221.197
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 未知 VLESS-71
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
+    short-id: '!!str 9930177816ab09da'
+  server: 206.206.76.75
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
+- cipher: aes-256-gcm
+  name: 🇸🇬SG_37
+  password: qpSevKaUXYQKvSjp
+  port: 8388
+  server: 139.180.220.175
+  type: ss
+- client-fingerprint: firefox
+  name: 🇸🇬SG_76
+  network: ws
+  port: 2096
+  server: 91.193.58.249
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: firefox
+  name: 🇸🇬SG_61
+  network: ws
+  port: 2096
+  server: 91.193.58.15
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_91
+  network: ws
+  port: 443
+  server: 143.198.213.40
+  servername: edgetunnel-4uw.pages.dev
+  tls: true
+  type: vless
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  ws-opts:
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_21
+  network: tcp
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: firefox
+  name: 🇸🇬SG_59
+  network: ws
+  port: 2096
+  server: 91.193.58.61
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_81
+  network: ws
+  port: 2096
+  server: 91.193.58.255
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- name: 🇸🇬SG_78
+  network: ws
+  port: 8880
+  server: 45.80.111.45
+  tls: false
+  type: vless
+  uuid: 5ffd914e-9594-4198-8327-145f096f8e4c
+  ws-opts:
+    headers:
+      Host: cnd.singapure.mygold.stream
+    path: /cdn/assets/stream
+- client-fingerprint: chrome
+  name: 🇸🇬SG_64
+  network: ws
+  port: 2096
+  server: 91.193.58.27
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇸🇬SG_65
+  network: ws
+  port: 2096
+  server: 104.17.70.206
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- cipher: rc4-md5
+  name: 🇸🇬SG_84
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.45
+  type: ss
+- client-fingerprint: chrome
+  name: 🇸🇬SG_26
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  tls: true
+  type: vless
+  uuid: b3ddac6f-b2b7-43a6-bd69-413013f30040
+  ws-opts:
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_44
+  network: raw
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: '!!str 7f342137c20387'
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- client-fingerprint: chrome
+  name: 🇸🇬SG_58
+  network: ws
+  port: 2096
+  server: 91.193.58.31
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- name: 🇸🇬SG_101
+  password: user317_windows
+  port: 443
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_25
+  network: ws
+  port: 443
+  server: 116.251.217.65
+  servername: netlivpn4813.ddhshhshs.workers.dev
+  tls: true
+  type: vless
+  uuid: 2388e166-3890-33ae-f77e-efac00000002
+  ws-opts:
+    headers:
+      Host: netlivpn4813.ddhshhshs.workers.dev
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+- client-fingerprint: chrome
+  name: 🇸🇬SG_71
+  network: ws
+  port: 2096
+  server: 91.193.58.250
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_95
+  network: tcp
+  port: 21464
+  reality-opts:
+    public-key: 7TVqIgOMgFzxjYG4nSSQxWWTE7cBPXjpoZwCsd337lY
+    short-id: '!!str 52f8'
+  server: 18.143.191.201
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+- name: 🇸🇬SG_12
+  network: tcp
+  password: sshs8_6481354771
+  port: 2087
+  server: 86.38.247.109
+  sni: ul-singapore1.09vpn.com
+  type: trojan
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_94
+  network: tcp
+  port: 23070
+  reality-opts:
+    public-key: px79hKhwQDhnVMdX3CF8dHKQsAVT8-FJ8ilk7JZAO2U
+    short-id: '!!str c7f5ef2673cc86bc'
+  server: 18.140.72.106
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+- client-fingerprint: chrome
+  name: 🇸🇬SG_57
+  network: ws
+  port: 2096
+  server: 91.193.58.131
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_60
+  network: ws
+  port: 2096
+  server: 91.193.58.57
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_77
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: qbsLW0C_w5YhxXuCO42VQU3wjmJu93mpAGBBbcfMLSM
+    short-id: '!!str 0c09d9bb1f10bc4d'
+  server: 8.219.144.195
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  uuid: 867e835d-b5a8-4ab2-aa93-ab8a7cc80470
+- cipher: rc4-md5
+  name: 🇸🇬SG_85
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 128.199.172.224
+  type: ss
+- client-fingerprint: chrome
+  name: 🇸🇬SG_70
+  network: ws
+  port: 2096
+  server: 91.193.58.218
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: firefox
+  name: 🇸🇬SG_67
+  network: ws
+  port: 2096
+  server: 91.193.58.37
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_74
+  network: ws
+  port: 2096
+  server: 91.193.58.136
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- cipher: rc4-md5
+  name: 🇸🇬SG_82
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.235.122
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_52
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: pIkxGlcFFawk7e0T-2VcdFXOc9LsjoBhl47vl8EuRgg
+    short-id: '!!str 36151c48e28cfb65'
+  server: 5.223.74.174
+  servername: 5.223.74.174
+  tls: true
+  type: vless
+  uuid: 29b81e1a-1989-4778-b0cb-a7223730f59d
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_3
+  network: raw
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 🇸🇬SG_89
+  network: tcp
+  port: 443
+  server: onhit.shalana.xyz
+  servername: onhit.shalana.xyz
+  tls: true
+  type: vless
+  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+- cipher: rc4-md5
+  name: 🇸🇬SG_80
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.4
+  type: ss
+- name: 🇸🇬SG_90
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  port: 2060
+  server: xjp1.mangshe.xyz
+  skip-cert-verify: true
+  sni: xjp1.mangshe.xyz
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_54
+  network: ws
+  port: 80
+  server: support.zoom.us
+  tls: false
+  type: vless
+  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_14
+  network: ws
+  port: 51262
+  server: 175.41.179.37
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  tls: true
+  type: vless
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 🇸🇬SG_72
+  network: ws
+  port: 2096
+  server: 91.193.58.5
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_6
+  network: tcp
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: 146.235.16.130
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- name: 🇸🇬SG_100
+  password: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
+  port: 443
+  server: 144151f6-tmeqo0-u4zl7f-1jk6u.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 144151f6-tmeqo0-u4zl7f-1jk6u.sg7.hyhuawei.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_68
+  network: ws
+  port: 2096
+  server: 91.193.58.108
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_34
+  password: umndu7jgfyujpvjvm2sw9hl0rryljngzvwru2hzwehyzkkrx
+  port: 443
+  server: hold.wwwinternetvideo.click
+  skip-cert-verify: true
+  sni: sg2-8sb.6121999.dpdns.org
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇬SG_98
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '!!str 628b3c90c98ead4f'
+  server: 13.212.151.107
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: f0b9ae63-91a7-4673-924e-498e0e0828c0
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_50
+  network: tcp
+  port: 24146
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: '!!str 7205d9079521832c'
+  server: 54.251.9.130
+  servername: www.intel.com
+  tls: true
+  type: vless
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_7
+  network: tcp
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: sg2-8sb.6121999.dpdns.org
+  servername: sg2-8sb.6121999.dpdns.org
+  tls: true
+  type: vless
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- client-fingerprint: chrome
+  name: 🇸🇬SG_56
+  network: ws
+  port: 2096
+  server: 91.193.58.118
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_63
+  network: ws
+  port: 2096
+  server: 91.193.58.122
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  name: 🇸🇬SG_62
+  network: ws
+  port: 2096
+  server: 91.193.58.85
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_97
+  network: tcp
+  port: 20270
+  reality-opts:
+    public-key: q78tZmuaXQTsrrjZtjjRDtoni6tzN-HhXcAY-iT5zF0
+    short-id: '!!str fc13d6208ebbae16'
+  server: sg-1.gsafevpnapi.com
+  servername: www.yahoo.com
+  tls: true
+  type: vless
+  uuid: e3a14b3d-8995-4031-a207-32ba5707c1ba
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_51
+  network: tcp
+  port: 12512
+  reality-opts:
+    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
+    short-id: '!!str e692a8250d2e2fd0'
+  server: 46.137.202.178
+  servername: www.intel.com
+  tls: true
+  type: vless
+  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_93
+  network: tcp
+  port: 31870
+  reality-opts:
+    public-key: HEaa9lsAxLy1r13R-eB0nZWYj9n4kwxAeZFLFTKF4kc
+    short-id: '!!str 2fef6c2f'
+  server: 18.140.238.157
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+- client-fingerprint: chrome
+  name: 🇸🇬SG_75
+  network: ws
+  port: 2096
+  server: 91.193.58.80
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
