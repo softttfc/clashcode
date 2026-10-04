@@ -1,51 +1,30 @@
 proxies:
-- client-fingerprint: chrome
-  name: SG新加坡
+- client-fingerprint: edge
+  encryption: none
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: 'SG新加坡 #3'
   network: tcp
+  packet-encoding: xudp
   port: 443
   reality-opts:
     public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
     short-id: '!!str eb97ce837da2f6ad'
-  server: 136.85.2.50
+  server: 35.185.179.62
   servername: www.cloudflare.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-- name: '美国 505 #1'
-  network: ws
-  port: 8880
-  server: 104.17.191.15
-  servername: fancy-haze-ab00.236-68b.workers.dev
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: adcce8be-9de7-41bd-abcd-52939cec108b
-  ws-opts:
-    headers:
-      Host: fancy-haze-ab00.236-68b.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: '🇸🇬SG新加坡丨yoyapai.com_3 #1'
-  network: ws
-  port: 8880
-  server: 172.65.90.53
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 30a2a9a6-6a03-4353-a7fb-63831d64f718
-  ws-opts:
-    headers:
-      Host: orange-lab-896e.365-80b.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: '🇸🇬SG新加坡丨yoyapai.com_4 #1'
+  xudp: true
+- name: '🇸🇬 #2'
   network: ws
   port: 8880
   server: 172.64.94.251
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -60,18 +39,18 @@ proxies:
   network: ws
   port: 55009
   server: 2001:bc8:32d7:225::3
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
   uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
   ws-opts:
     path: /0zNW56sF
-- name: '🇸🇬 #1'
+- name: 🇸🇬
   network: ws
   port: 8880
   server: 45.40.149.50
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -82,7 +61,7 @@ proxies:
     path: /
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬
+  name: '🇸🇬 #5'
   network: tcp
   port: 443
   reality-opts:
@@ -90,7 +69,7 @@ proxies:
     short-id: '!!str e53048e82bb20077'
   server: 154.196.139.50
   servername: asia.cendora.ru
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -99,7 +78,7 @@ proxies:
     headers:
       Host: asia.cendora.ru
 - client-fingerprint: chrome
-  name: '🇸🇬 #2'
+  name: '🇸🇬 #7'
   network: ws
   port: 443
   server: 47.131.189.221
@@ -113,89 +92,1568 @@ proxies:
     headers:
       Host: mia7.pages.dev
     path: /TG:@MiaChatChannel
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 01
-  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
-  port: 35311
-  server: svip.skycon808.com
-  skip-cert-verify: true
-  sni: xjp88.swiftrelay.cc
-  type: anytls
+- client-fingerprint: ios
+  name: '🇸🇬 #6'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
+    short-id: '!!str eb97ce837da2f6ad'
+  server: 136.85.2.50
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
   udp: true
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
+  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+  ws-opts:
+    headers:
+      Host: www.cloudflare.com
+- name: '🇸🇬 #3'
+  network: ws
+  packet-encoding: xudp
+  port: 8880
+  server: 104.17.191.15
+  skip-cert-verify: false
+  sub_tag: C002-260622
+  tls: false
+  type: vless
+  udp: true
+  uuid: adcce8be-9de7-41bd-abcd-52939cec108b
+  ws-opts:
+    headers:
+      Host: fancy-haze-ab00.236-68b.workers.dev
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+  xudp: true
+- encryption: none
+  name: '🇸🇬 #4'
+  network: ws
+  packet-encoding: xudp
+  port: 8880
+  server: 172.65.90.53
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: false
+  type: vless
+  udp: true
+  uuid: 30a2a9a6-6a03-4353-a7fb-63831d64f718
+  ws-opts:
+    headers:
+      Host: orange-lab-896e.365-80b.workers.dev
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+  xudp: true
+- client-fingerprint: chrome
+  name: 'SG新加坡 #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: AeQDUAVCESyA1hFkw6lENmgWAY3sBH9CFPpPAddPwVc
+    short-id: '!!str fffff8acddadcac3'
+  server: 34.165.56.30
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0c40bce9-8710-4820-8f22-0742b61df999
+- client-fingerprint: chrome
+  name: 🇸🇬_新加坡_150
+  network: ws
+  port: 443
+  server: 43.174.195.1
+  servername: kv.074167.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  ws-opts:
+    headers:
+      Host: kv.074167.xyz
+    path: /
+- cipher: aes-256-cfb
+  country: 🏁 ZZ
+  name: 🇸🇬SG²_1
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.16
+  type: ss
+- alterId: '0'
+  cipher: auto
+  name: 🇸🇬SG_1|748KB/s|C002-260622 01
+  network: raw
+  packet-encoding: xudp
+  port: 18000
+  server: 149.88.23.207
+  skip-cert-verify: false
+  sub_tag: C002-260622
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- name: 🇸🇬SG_2|515KB/s 01
+  password: ''
+  port: 9443
+  server: 149.88.99.209
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: ''
+- name: 🇸🇬SG_3|606KB/s|R002-260618 01
   password: e4b72b531a2d10900519
   port: 443
   server: 146.70.29.45
   sni: 92461d2d.acsnet.co
+  sub_tag: R002-260618
   tls: true
   type: http
+  udp: true
   username: testuser1
-- down: ''
-  fingerprint: ''
-  name: 🇸🇬SG_23
-  obfs: ''
-  obfs-password: ''
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  sni: 138.2.73.238
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG_43|892KB/s|M002-260618 01
+  network: raw
+  packet-encoding: xudp
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  servername: ww11.levikogjgfdd.ir
+  skip-cert-verify: false
+  sub_tag: M002-260618
   tls: false
-  type: hysteria2
-  up: ''
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 04
-  network: ws
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG_47|668KB/s|A004-260618 01
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  servername: ww11.levikogjgfdd.ir
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: '以色列 001 #1'
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
+  server: 149.88.23.207
+  servername: 149.88.23.207
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
   port: 443
-  server: 142.252.103.66
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  sub_tag: noCache
+  server: 154.26.139.24
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG_34|981KB/s|A004-260618 01
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
+  server: 149.88.23.202
+  servername: 149.88.23.202
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_33
+  network: ws
+  port: 8443
+  server: free.sahanwickramasinghe.me
+  servername: zoom.us
+  skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
   type: vless
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: c73ffa6e-a102-4984-9176-3e6242c1925e
+  ws-opts:
+    path: /
+- cipher: rc4-md5
+  name: 🇸🇬SG_50
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.235.122
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_51
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.236
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_52
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.45
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_53
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 128.199.172.224
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇸🇬SG_36|764KB/s|R002-260618 01
+  port: 9090
+  server: 167.99.74.174
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- alpn:
+  - ''
+  alterId: '0'
+  cipher: auto
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: 🇸🇬SG_38|1.1MB/s|B007-260618 01
+  network: http
+  packet-encoding: xudp
+  port: 59121
+  server: 129.226.157.220
+  skip-cert-verify: false
+  sub_tag: B007-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
+  xudp: true
+- encryption: none
+  name: 🇸🇬SG_39
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: free.sahanwickramasinghe.me
+  sub_tag: F003-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: 684f9a2e-4f96-497f-bfd9-ff1e34637952
   ws-opts:
     headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/58.0.3029.81 Safari/537.36
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
+      Host: free.sahanwickramasinghe.me
+    path: /
+  xudp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_48
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.4
+  sub_tag: B007-260618
+  type: ss
+  udp: true
+- client-fingerprint: randomized
+  encryption: none
+  name: 🇫🇷FR_1212|528KB/s|C002-260622 ...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: novantunnel.tech
+  servername: novantunnel.tech
+  sub_tag: C002-260622
+  tls: true
+  type: vless
+  udp: true
+  uuid: ee556a4f-d9f6-44de-af02-42c51659416a
+  ws-opts:
+    headers:
+      Host: novantunnel.tech
+      User-Agent: Mozilla/5.0 (Linux; Android 6.0; vivo 1606 Build/MMB29M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile Safari/537.36
+    path: /Novan-AE9
+  xudp: true
+- alterId: '0'
+  cipher: auto
+  name: 🇸🇬SG_48|801KB/s|C002-260622 01
+  network: raw
+  packet-encoding: xudp
+  port: 18000
+  server: 149.88.23.202
+  skip-cert-verify: false
+  sub_tag: C002-260622
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- encryption: none
+  name: 🇸🇬SG_52|492KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: support.zoom.us
+  servername: support.zoom.us
+  sub_tag: M002-260618
+  type: vless
+  udp: true
+  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/65.0.3325.181 Safari/537.36
+    path: /free-server.techsonic.dev
+  xudp: true
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_51|301KB/s|S001-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 2096
+  server: 104.17.70.206
+  servername: free-server.techsonic.dev
+  sub_tag: S001-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-J710F Build/NRD90M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
+    path: /free-server.techsonic.dev
   xudp: true
 - client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 05
+  name: 未知 VLESS-135
   network: ws
-  port: 443
-  server: 139.180.220.7
-  servername: qcswhj2.edge-cache.danfeng4.xyz
+  packet-encoding: xudp
+  port: 2096
+  server: free-server.techsonic.dev
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   ws-opts:
     headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+  xudp: true
+- encryption: none
+  name: 🇸🇬SG_63
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.93
+  skip-cert-verify: true
+  sub_tag: V003-260618
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
+  ws-opts:
+    path: /
+  xudp: true
+- name: 🇸🇬SG_76|548KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 170.114.45.6
+  servername: support.zoom.us
+  sub_tag: M002-260618
+  type: vless
+  udp: true
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/61.0.3163.79 Safari/537.36
+    path: /dula
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_61|524KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 104.254.140.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/57.0.2987.133 Safari/537.36
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_62|747KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 139.64.235.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-J730GM Build/NRD90M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_63|503KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 154.198.173.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/67.0.3396.87 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_64|290KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 199.34.228.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/42.0.2311.90 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_65|375KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 45.12.30.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/68.0.3440.106 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_66|256KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 45.80.108.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Linux; Android 5.1; A1601 Build/LMY47I) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_67|432KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 5.10.215.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; A37fw Build/LMY47V) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_68|522KB/s|P002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 89.116.250.7
+  servername: speed.dulacloud.store
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_69|471KB/s|K001-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 141.11.202.7
+  servername: speed.dulacloud.store
+  sub_tag: K001-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/49.0.2623.112 Safari/537.36
+    path: /dula?Telegram-WangCai2fp=chrome
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_70|515KB/s|K001-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 167.68.4.7
+  servername: speed.dulacloud.store
+  sub_tag: K001-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
+    path: /dula?Telegram-WangCai2fp=chrome
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_71|220KB/s|K001-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 185.156.19.7
+  servername: speed.dulacloud.store
+  sub_tag: K001-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    path: /dula?Telegram-WangCai2fp=chrome
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_72|471KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 45.85.118.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/65.0.3325.181 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_73|239KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 77.37.33.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/70.0.3538.67 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_74|365KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 5.175.141.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/51.0.2704.63 Safari/537.36
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_75|555KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 141.193.213.20
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.102 Safari/537.36
+    path: /dula
+  xudp: true
+- name: 🇸🇬SG_64
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.179
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  ws-opts:
+    path: /
+  xudp: true
+- name: 🇸🇬_新加坡_281
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.164
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  ws-opts:
+    path: /
+  xudp: true
+- name: 🇸🇬SG_79|425KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 170.114.46.6
+  servername: support.zoom.us
+  sub_tag: M002-260618
+  type: vless
+  udp: true
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/69.0.3497.100 Safari/537.36
+    path: /dula
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_80|573KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 45.131.7.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/31.0.1650.57 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_81|319KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 45.131.6.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/36.0.1985.143 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- name: 🇸🇬SG_82|534KB/s|A004-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.51
+  sub_tag: A004-260618
+  type: vless
+  udp: true
+  uuid: 80c38933-9747-443d-9d87-15c80f8663ea
+  ws-opts:
+    headers:
+      Host: ''
+      User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/60.0.3112.90 Safari/537.36
+    path: /
+  xudp: true
+- name: 🇸🇬SG_65
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.121
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0f7996b1-3ef7-4274-b612-0310270d2a41
+  ws-opts:
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_86|739KB/s|M002-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 89.117.112.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.77 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- name: 🇸🇬SG_87|487KB/s|R002-260618 01
+  network: ws
+  port: 443
+  server: speed.dulacloud.store
+  servername: m.zoom.us
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: b04a7ec4-c501-4d9b-b0ba-73354e4fc972
+  ws-opts:
+    headers:
+      Host: speed.dulacloud.store
+    path: /dula
+- client-fingerprint: chrome
+  name: 🇸🇬SG_88|332KB/s|A004-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 140.245.120.16
+  servername: trackydev.site
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 92d67828-4c56-4795-af5a-f387651380dc
+  ws-opts:
+    headers:
+      Host: ''
       User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/57.0.2987.133 Safari/537.36
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
+    path: /
   xudp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬 机场推荐:dafei.de 新加坡 06
+- name: 🇸🇬SG_67
   network: ws
-  port: 5357
-  server: 218.102.64.147
-  servername: qcswhj2.edge-cache.danfeng4.xyz
+  packet-encoding: xudp
+  port: 80
+  server: 5.223.41.125
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: 3b821031-d7d4-4368-918b-15f2312dba2b
+  ws-opts:
+    path: /
+  xudp: true
+- name: 🇸🇬SG_91|821KB/s|R002-260618 01
+  port: 9090
+  server: 152.42.170.187
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_124|371KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 141.193.213.20
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
   tls: true
   type: vless
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
   ws-opts:
     headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/53.0.2785.143 Safari/537.36
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/56.0.2924.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 未知 VLESS-126 | free-nodes
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 141.193.213.21
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_126|407KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.100
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_127|75KB/s|M003-260806 01
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.103
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/69.0.3497.100 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_128|101KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.104
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/46.0.2490.80 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: '美国 030 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.10
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_130|255KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.116
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/58.0.3029.110 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_131|147KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.117
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/46.0.2490.71 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_132|460KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.189
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_133|472KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.191
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/41.0.2272.101 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_134|144KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.198
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Linux; Android 5.1; A37f Build/LMY47V) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: unsafe
+  encryption: none
+  name: 🇸🇬SG_135|112KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.199
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/46.0.2490.80 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: unsafe
+  name: 🇸🇬SG_136|141KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.233
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/57.0.2987.133 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.235
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_138|432KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.10.2
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/39.0.2171.95 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_139|502KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.156.227
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/55.0.2883.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_140|187KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.16.3.98
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/45.0.2454.85 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_141|424KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.17.117.137
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/62.0.3202.89 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_142|102KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.18.26.90
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/67.0.3396.99 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_143|111KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.19.178.244
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Linux; Android 7.0; TRT-LX3 Build/HUAWEITRT-LX3) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_144|177KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.19.32.166
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/43.0.2357.65 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_145|82KB/s|M003-260806 01
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.21.236.63
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/63.0.3239.132 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_146|464KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.21.5.75
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-J700M Build/MMB29K) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_147|121KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.21.60.109
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/49.0.2623.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_148|512KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.21.70.228
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/55.0.2883.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_149|122KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 104.24.11.68
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/70.0.3538.67 Safari/537.36
+    path: /
+  xudp: true
+- name: 🇸🇬SG_150|489KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 170.114.45.6
+  sub_tag: M003-260806
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/59.0.3071.115 Safari/537.36
+    path: /
+  xudp: true
+- name: 🇸🇬SG_151|124KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 170.114.46.6
+  sub_tag: M003-260806
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/45.0.2454.85 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬SG_152|366KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 188.114.97.6
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/56.0.2924.87 Safari/537.36
+    path: /
+  xudp: true
+- name: 🇸🇬SG_154|513KB/s|M003-260806 0...
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: support.zoom.us
+  servername: u.srilankangrill.online
+  sub_tag: M003-260806
+  type: vless
+  udp: true
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/39.0.2171.95 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_175|421KB/s|M002-260618 0...
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 46.202.30.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/60.0.3112.90 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_176|369KB/s|M002-260618 0...
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 185.135.9.7
+  servername: speed.dulacloud.store
+  sub_tag: M002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: speed.dulacloud.store
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/55.0.2883.87 Safari/537.36
+    max-early-data: 2560
+    path: /dula?Telegram-WangCai2
+  xudp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 03
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1023
+  server: s0gmq6hn.zf-mix.9999231.xyz
+  skip-cert-verify: true
+  sni: sg-sjy.9999231.xyz
+  type: anytls
+  udp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 04
+  port: 9090
+  server: 104.248.151.93
+  type: http
+- down: ''
+  fingerprint: ''
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 05
+  obfs: ''
+  obfs-password: ''
+  password: f7d95364-607b-11ee-93af-f23c91369f2d
+  port: 443
+  server: 6318d09c-tmm5c0-tv7zgh-1ijh5.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 6318d09c-tmm5c0-tv7zgh-1ijh5.sg7.hyhuawei.com
+  type: hysteria2
+  up: ''
+- client-fingerprint: firefox
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 06
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
+    short-id: '!!str '
+  server: sg.monkora.org
+  servername: sg.monkora.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
   xudp: true
 - name: 🇸🇬SG_4|⬇️5.1MB/s
   network: ws
@@ -242,34 +1700,346 @@ proxies:
     headers:
       Host: sni.skylee4.cloudns.ch
     path: /proxyip=ProxyIP.CMLiussss.net
+- name: 🇸🇬 SG 1 → tg@nicevpn123
+  password: ISpGyFeSDr06
+  port: 17418
+  server: 175.41.172.250
+  skip-cert-verify: true
+  sni: appsvs.shop
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 10 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.250.61.18
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 11 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20177
+  server: 139.59.119.251
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 12 → tg@nicevpn123
+  password: 15f804fa-27be-4b0f-85d4-cead43a483ef
+  port: 30020
+  server: us05.freeflyingcloud.xyz
+  skip-cert-verify: true
+  sni: us05.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 13 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.229.184.181
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 14 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 54.179.101.194
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 15 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 52.221.231.138
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 16 → tg@nicevpn123
+  password: yR7hP9aw5L
+  port: 443
+  server: 134.209.105.33
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 17 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 18.142.56.221
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '新加坡 001 #1'
-  network: tcp
-  port: 47630
-  server: 43.228.126.187
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
-- client-fingerprint: chrome
-  name: '新加坡 002 #1'
+  name: 🇸🇬 SG 18 → tg@nicevpn123
   network: ws
-  port: 443
-  server: 139.59.225.43
-  servername: cf2us.3rr0r.online
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
+  port: 80
+  server: sg5g.xn--vhq70hxyat50h6wk.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-  uuid: ab61daa1-b7fb-486e-8946-b1da9a444685
+  uuid: ae1e5588-79c2-44a9-a2c8-a8e4b645fcce
   ws-opts:
     headers:
-      Host: cf2us.3rr0r.online
-    path: /proxyip
+      Host: sg5g.xn--vhq70hxyat50h6wk.com
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 19 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20175
+  server: 139.59.119.251
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 2 → tg@nicevpn123
+  network: ws
+  password: 57460446-1a16-4ac4-bc7d-99b99a9ecc18
+  port: 37508
+  server: sg1.520s.pro
+  skip-cert-verify: true
+  sni: sg01.520s.pro
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: sg01.520s.pro
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F520JICHANG'
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 20 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 18.141.207.80
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 21 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 52.221.183.250
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 22 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20181
+  server: 139.59.119.251
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '新加坡 003 #1'
+  name: 🇸🇬 SG 23 → tg@nicevpn123
+  network: ws
+  port: 34237
+  server: 8.218.136.67
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 345c1562-1449-36ca-adf6-d3d683476712
+  ws-opts:
+    path: /db00
+- name: 🇸🇬 SG 24 → tg@nicevpn123
+  password: 15f804fa-27be-4b0f-85d4-cead43a483ef
+  port: 30018
+  server: sg04.freeflyingcloud.xyz
+  skip-cert-verify: true
+  sni: sg04.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 25 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.229.57.68
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 26 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20180
+  server: 139.59.119.251
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 27 → tg@nicevpn123
+  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
+  port: 443
+  server: 139.162.49.215
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 28 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 54.251.168.143
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 29 → tg@nicevpn123
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
+  port: 443
+  server: sg2-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 3 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 54.169.147.64
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 30 → tg@nicevpn123
+  network: ws
+  password: 57460446-1a16-4ac4-bc7d-99b99a9ecc18
+  port: 37508
+  server: sg1.520s.pro
+  skip-cert-verify: true
+  sni: sg01.520s.pro
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: sg01.520s.pro
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F520JICHANG'
+- name: 🇸🇬 SG 31 → tg@nicevpn123
+  password: e9edd1db-e6f0-4c37-9be7-135335a81e6c
+  port: 30020
+  server: 128.199.13.40
+  skip-cert-verify: true
+  sni: us05.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 32 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 3.0.50.219
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 33 → tg@nicevpn123
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
+  port: 443
+  server: 139.162.39.206
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇸🇬 SG 42 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.250.63.15
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 35 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20182
+  server: 139.59.119.251
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 36 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 54.254.167.160
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 SG 37 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 8.217.85.14
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1a363dc9-698c-49d2-e00d-c43005f64c40
+  ws-opts:
+    path: /TG@dns68免费节点
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 SG 38 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 8.210.9.129
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 89d4fac6-0ef2-4855-92ce-f454b7154202
+  ws-opts:
+    path: /TG@dns68公益节点
+- name: 🇸🇬 SG 39 → tg@nicevpn123
+  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
+  port: 443
+  server: sg3-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇸🇬 SG 4 → tg@nicevpn123
+  password: a-wym4ovY4Yw
+  port: 81
+  server: 8.210.89.240
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 40 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.250.57.60
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 41 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.228.23.150
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 SG 5 → tg@nicevpn123
+  network: ws
+  port: 99
+  server: 128.199.161.230
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: befd085a-91f7-4608-bc45-f40c1ac2f4b7
+  ws-opts:
+    path: /v2ray
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 6 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 18.142.225.182
+  type: ss
+  udp: true
+- name: 🇸🇬 SG 7 → tg@nicevpn123
+  password: I4bO2YDEgs
+  port: 443
+  server: 188.166.252.91
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
+  udp: true
+- name: 🇸🇬 SG 8 → tg@nicevpn123
+  password: af7d4ea7-e793-4030-9766-9a13e1f099f5
+  port: 443
+  server: 139.162.50.211
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 SG 9 → tg@nicevpn123
+  password: df30da54-317f-4726-98bd-8bc8ec8140c9
+  port: 20172
+  server: 139.59.119.251
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '新加坡 002 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -282,7 +2052,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 004 #1'
+  name: '新加坡 003 #1'
   network: ws
   port: 18063
   server: 139.180.211.152
@@ -295,7 +2065,7 @@ proxies:
     path: /Dialog Zoom
 - alterId: 1
   cipher: auto
-  name: '新加坡 005 #1'
+  name: '新加坡 004 #1'
   network: ws
   port: 21888
   server: 104.248.148.147
@@ -308,7 +2078,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 006 #1'
+  name: '新加坡 005 #1'
   network: ws
   port: 80
   server: 139.99.61.154
@@ -319,61 +2089,9 @@ proxies:
     headers:
       Host: 139.99.61.154
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '新加坡 007 #1'
-  network: ws
-  port: 5001
-  server: steam.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: d4c93465-70f0-30d5-ab5f-a8881f3f49e7
-  ws-opts:
-    headers:
-      Host: steam.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
-  name: '新加坡 008 #1'
-  network: ws
-  port: 9111
-  server: st-1.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-1.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
-  name: '新加坡 009 #1'
-  network: ws
-  port: 5100
-  server: st-2.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-2.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
-  name: '新加坡 010 #1'
-  network: ws
-  port: 20025
-  server: sh-cn-1.dnspro.icu
-  skip-cert-verify: true
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: sh-cn-1.dnspro.icu
-    path: /iso
 - alterId: 4
   cipher: auto
-  name: '新加坡 011 #1'
+  name: '新加坡 006 #1'
   network: ws
   port: 443
   server: 103.253.26.134
@@ -387,7 +2105,7 @@ proxies:
     path: /ws
 - alterId: 4
   cipher: auto
-  name: '新加坡 012 #1'
+  name: '新加坡 007 #1'
   network: ws
   port: 443
   server: 103.253.26.20
@@ -399,6 +2117,31 @@ proxies:
     headers:
       Host: zecjk.com
     path: /ws
+- alterId: 0
+  cipher: auto
+  name: '新加坡 008 #1'
+  network: tcp
+  port: 47630
+  server: 43.228.126.187
+  skip-cert-verify: true
+  type: vmess
+  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
+- client-fingerprint: chrome
+  name: '新加坡 009 #1'
+  network: ws
+  port: 443
+  server: 139.180.220.7
+  servername: qcswhj2.edge-cache.danfeng4.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: qcswhj2.edge-cache.danfeng4.xyz
+    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡|@ripaojiedian
@@ -429,222 +2172,256 @@ proxies:
     headers:
       Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
     path: /ws-vmess
-- name: 🇸🇬_新加坡_26
-  network: ws
-  port: 80
-  server: 5.223.19.211
+- name: 🇸🇬 新加坡 | SGP 6
+  password: 5b140fc6a0a74e7f
+  port: 20008
+  server: gsg192i.zxom.eu.org
   skip-cert-verify: true
-  tls: false
-  type: vless
+  sni: gsg192i.zxom.eu.org
+  type: trojan
   udp: true
-  uuid: 4b8a0930-1c36-4efe-b4fe-21f9ad97905c
-  ws-opts:
-    path: /
-- name: 🇸🇬_新加坡_58
-  network: ws
+- name: 🇸🇬_新加坡_24
+  password: UX82473651
   port: 443
-  server: 43.174.195.1
-  servername: kv.074167.xyz
+  server: pet-antelope.rooster465.autos
+  skip-cert-verify: true
+  sni: pet-antelope.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇸🇬_新加坡_145
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  uuid: 8199228b-e84b-42a2-9268-e400391e483a
   ws-opts:
     headers:
-      Host: kv.074167.xyz
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1524... #1'
-  password: XF0klw7870vXn3uQIxe19Q
-  port: 1080
-  server: 84.247.49.211
+      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 🇸🇬_新加坡_146
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
+  ws-opts:
+    headers:
+      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    path: /@Marisa_kristi
+- cipher: aes-256-gcm
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
+  password: qpSevKaUXYQKvSjp
+  port: 8388
+  server: 139.180.220.175
   type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-153
-  network: tcp
-  port: 23070
-  reality-opts:
-    public-key: px79hKhwQDhnVMdX3CF8dHKQsAVT8-FJ8ilk7JZAO2U
-    short-id: '!!str c7f5ef2673cc86bc'
-  server: 18.140.72.106
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  port: 28243
-  server: 18.139.227.162
+- name: 🇸🇬[www.v2nodes.com] vless-SG
+  network: ws
+  port: 2095
+  server: 104.18.47.113
   tls: false
   type: vless
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-- client-fingerprint: chrome
-  name: 🇸🇬SG_31
-  network: ws
-  port: 2096
-  server: 91.193.58.45
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
     headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
-  port: 443
-  server: 134.122.154.210
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    path: /?ed=2560security=tls
+- name: '🇸🇬[www.v2nodes.com] vless-SG #...'
+  network: ws
+  port: 8080
+  server: 104.18.47.113
   tls: false
   type: vless
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
-- alpn:
-  - http/1.1
-  client-fingerprint: ios
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
-  network: ws
-  port: 2083
-  server: 104.18.1.1
-  servername: vlsovip.1d.mom
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
     headers:
-      Host: vlsovip.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    path: /?ed=2560security=tls
 - name: 🇸🇬 新加坡 | SGP
-  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
-  port: 28680
-  server: test01.y1static-content-distribution.shop
+  password: UX82473651
+  port: 443
+  server: holy-lamb.rooster465.autos
   skip-cert-verify: true
-  sni: hk15.swiftrelay.cc
-  type: anytls
+  sni: holy-lamb.rooster465.autos
+  type: trojan
   udp: true
-- name: 🇸🇬 新加坡 | SGP 2
-  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
-  port: 16406
-  server: test01.y1static-content-distribution.shop
-  skip-cert-verify: true
-  sni: yz203.y1static-content-distribution.shop
-  type: anytls
-  udp: true
-- name: 🇸🇬 新加坡 | SGP 3
-  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
-  port: 1040
-  server: 6ixwozox.zf-mix.9999231.xyz
-  skip-cert-verify: true
-  sni: si-wy.9999231.xyz
-  type: anytls
-  udp: true
-- name: 🇸🇬 007  | ⬇️ 7MB/s
-  password: 3fc0f254-54c3-4cf3-896b-5999a2b4c757
-  port: 47096
-  server: test01.y1static-content-distribution.shop
-  skip-cert-verify: true
-  sni: xjp33.pulsarcore.site
-  type: anytls
-  udp: true
-- client-fingerprint: chrome
+- client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_91
+  name: 🇸🇬 新加坡 | SGP 3
   network: tcp
-  port: 8443
+  port: 1891
   reality-opts:
-    public-key: 5wGgDloyck_L25Y5rkWorpV3IK00pK0Lki7LR0VY0io
-    short-id: '!!str 4fba6fd2c74fd18f'
-  server: 216.195.196.86
-  servername: www.cloudflare.com
+    public-key: YJLHQBNzHQ7sOeKbj-EkHo1Ym0asUyZKxj4l_thzyGA
+    short-id: '!!str 8378f267'
+  server: sin-a-02.auuas.com
+  servername: www.npmjs.com
   tls: true
   type: vless
   udp: true
-  uuid: 7c973569-71da-4d18-8c80-aa4c8ee2f257
-- name: 🇸🇬SG_34
-  obfs: salamander
-  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
-  password: d042d150716709bb778cc73889cddb02
+  uuid: 81c4547b-e5d8-4af8-baf0-91c5c0c05a9b
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | SGP 5
+  network: tcp
   port: 443
-  server: 138.2.89.249
+  reality-opts:
+    public-key: sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE
+    short-id: '!!str 6d962e8d8a0dce'
+  server: jumpernode.site
+  servername: shop.business.amazon.com
+  tls: true
+  type: vless
+  uuid: 440f986b-9469-4d80-adf0-01ba37af73c5
+- name: 🇸🇬 006  | ⬇️ 2MB/s
+  password: 55cce5a4-56b7-11ee-af82-f23c9164ca5d
+  port: 443
+  server: 2b380838-tmm5c0-typ01r-1p0be.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 2b380838-tmm5c0-typ01r-1p0be.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 016  | ⬇️ 879KB/s
+  password: b02327ac-a49a-11ef-a673-f23c913c8d2b
+  port: 443
+  server: 6ecfa763-tmm5c0-tqruo0-1pqhp.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 6ecfa763-tmm5c0-tqruo0-1pqhp.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 019  | ⬇️ 988KB/s
+  password: 4729b4c8-1790-11eb-8684-f23c913c8d2b
+  port: 443
+  server: 4da82491-tmm5c0-ts40sw-14g76.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 4da82491-tmm5c0-ts40sw-14g76.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 021  | ⬇️ 1MB/s
+  password: 9d80dd14-ac44-11ee-a116-f23c9164ca5d
+  port: 443
+  server: d63ec149-tmm5c0-twjnjx-1q9g2.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: d63ec149-tmm5c0-twjnjx-1q9g2.sg7.hyhuawei.com
+  tfo: false
+  type: hysteria2
+- name: 🇸🇬 028  | ⬇️ 969KB/s
+  password: 3f514ea2-4662-11ed-a8bf-f23c91cfbbc9
+  port: 443
+  server: c1f25bdb-tmm5c0-tmj4pk-1kcpe.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: c1f25bdb-tmm5c0-tmj4pk-1kcpe.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 029  | ⬇️ 217KB/s
+  password: a18ef18e-293a-11ef-b76e-f23c91cfbbc9
+  port: 443
+  server: fa03629b-tmm5c0-u1dafb-1ro8s.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: fa03629b-tmm5c0-u1dafb-1ro8s.sg7.hyhuawei.com
+  type: hysteria2
+- name: '🇸🇬 032 '
+  password: b2c6384c-f63d-11ec-b1b3-f23c91cfbbc9
+  port: 443
+  server: bba23e91-tmm5c0-tpsg94-1jbj0.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: bba23e91-tmm5c0-tpsg94-1jbj0.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 034  | ⬇️ 844KB/s
+  password: bd515574-3b10-11ee-ac14-f23c9164ca5d
+  port: 443
+  server: 46077a21-tmm5c0-tu0ezx-1m7l4.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 46077a21-tmm5c0-tu0ezx-1m7l4.sg7.hyhuawei.com
+  type: hysteria2
+- name: 🇸🇬 038  | ⬇️ 1MB/s
+  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+  port: 443
+  server: fc705c74-tmm5c0-tonrqx-1khwf.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: fc705c74-tmm5c0-tonrqx-1khwf.sg7.hyhuawei.com
+  type: hysteria2
+- name: '🇸🇬 039 '
+  password: f5c0eda2-4b97-11ed-bd7c-f23c913c8d2b
+  port: 443
+  server: 3417a8da-tmm5c0-ttyjoe-ieln.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: 3417a8da-tmm5c0-ttyjoe-ieln.sg7.hyhuawei.com
+  type: hysteria2
+- auth: f87376e17da040ed04c9665ce8972930
+  name: 🇸🇬SG_23
+  password: f87376e17da040ed04c9665ce8972930
+  port: 50160
+  server: 138.2.73.238
   skip-cert-verify: true
   sni: www.bing.com
-  tfo: false
   tls: false
   type: hysteria2
-- cipher: rc4-md5
-  name: 🇸🇬SG_71
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.45
-  type: ss
-- client-fingerprint: firefox
-  name: 🇸🇬SG_80
-  network: ws
-  port: 2096
-  server: free-server.techsonic.dev
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+  udp: true
 - client-fingerprint: chrome
-  name: 🇸🇬SG_85
-  network: ws
-  port: 2096
-  server: 91.193.58.140
-  servername: free-server.techsonic.dev
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_41
+  network: tcp
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
   tls: true
   type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 🇸🇬SG_44
+  password: umndu7jgfyujpvjvm2sw9hl0rryljngzvwru2hzwehyzkkrx
+  port: 443
+  server: hold.wwwinternetvideo.click
+  skip-cert-verify: true
+  sni: sg2-8sb.6121999.dpdns.org
+  tls: false
+  type: hysteria2
+- name: 🇸🇬SG_10
+  network: ws
+  port: 8880
+  server: 45.12.30.40
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- alpn:
-  - h3
-  name: 🇸🇬SG_65
-  network: ws
-  password: xhl549341
-  port: 443
-  server: 172.64.145.158
-  sni: tro.baiyi.cloudns.org
-  type: trojan
-  ws-opts:
+      Host: vms.lifetime28.workers.dev
     path: /?ed=2560
 - client-fingerprint: chrome
-  name: 🇸🇬SG_48
-  network: ws
-  port: 2096
-  server: 91.193.58.122
-  servername: free-server.techsonic.dev
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_56
+  network: tcp
+  port: 24146
+  reality-opts:
+    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
+    short-id: '!!str 7205d9079521832c'
+  server: 54.251.9.130
+  servername: www.intel.com
   tls: true
   type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_55
+  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
+- name: 🇸🇬SG_3
   network: ws
-  port: 2096
-  server: 91.193.58.250
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  password: 0b5fa773-6f37-4134-87d4-0c349742b6f6
+  port: 443
+  server: 172.67.177.105
+  skip-cert-verify: true
+  sni: app-538961.user-y0o4gm.workers.dev
+  type: trojan
   ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+    path: /cmh
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_2
-  network: tcp
+  name: 🇸🇬SG_5
+  network: raw
   port: 19825
   reality-opts:
     public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
@@ -654,27 +2431,30 @@ proxies:
   tls: true
   type: vless
   uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- cipher: rc4-md5
-  name: 🇸🇬SG_69
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.235.122
-  type: ss
-- client-fingerprint: chrome
-  name: 🇸🇬SG_53
-  network: ws
-  port: 2096
-  server: 91.193.58.52
-  servername: free-server.techsonic.dev
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_18
+  network: tcp
+  port: 19825
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: '!!str 6ba85179e30d4fc2'
+  server: sg2-8sb.6121999.dpdns.org
+  servername: sg2-8sb.6121999.dpdns.org
   tls: true
   type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+- name: 🇸🇬SG_70
+  network: ws
+  port: 80
+  server: 5.223.41.82
+  tls: false
+  type: vless
+  uuid: 22aa8dac-98b8-4f54-b36d-fb60ec3db6d7
   ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+    path: /
 - client-fingerprint: chrome
-  name: 🇸🇬SG_36
+  name: 🇸🇬SG_13
   network: ws
   port: 8441
   server: 45.77.241.190
@@ -686,9 +2466,56 @@ proxies:
     headers:
       Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     path: /@Marisa_kristi
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_76
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: rk_iTiKEWYK02oF8lCIXrVlM7pWMSYX-Iuaz6Eat5lI
+    short-id: '!!str 4b26322b354bd74e'
+  server: 149.33.30.176
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 5fffad1b-10f0-41ff-abe7-e5a92696d5ef
+- name: 🇸🇬SG_72
+  password: 6ddb6a68-d5f5-ca30-3943-cf0c9876d50c
+  port: 443
+  server: c4f4c444-tmkao0-tnnrly-g43g.sg7.hyhuawei.com
+  skip-cert-verify: true
+  sni: c4f4c444-tmkao0-tnnrly-g43g.sg7.hyhuawei.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_36
+  network: tcp
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: '!!str 7f342137c20387'
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- client-fingerprint: firefox
+  name: 未知 VLESS-162
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: '!!str 87829de0e2bb82cb'
+  server: 217.217.254.126
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_63
+  name: 🇸🇬SG_6
   network: raw
   port: 12512
   reality-opts:
@@ -701,8 +2528,8 @@ proxies:
   uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_14
-  network: raw
+  name: 🇸🇬SG_42
+  network: tcp
   port: 10574
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
@@ -712,99 +2539,87 @@ proxies:
   tls: true
   type: vless
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇸🇬SG_49
+  obfs: salamander
+  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
+  password: d042d150716709bb778cc73889cddb02
+  port: 443
+  server: 138.2.89.249
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇸🇬SG_26
+  name: 🇸🇬SG_61
   network: raw
-  port: 41688
+  port: 443
   reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: '!!str 7f342137c20387'
-  server: 54.169.200.246
-  servername: www.intel.com
+    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
+    short-id: '!!str 133a3f10a1581047'
+  server: 206.206.78.36
+  servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- cipher: rc4-md5
-  name: 🇸🇬SG_72
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 128.199.172.224
-  type: ss
-- client-fingerprint: chrome
-  name: 🇸🇬SG_32
-  network: ws
-  port: 2096
-  server: 91.193.58.118
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_49
-  network: ws
-  port: 2096
-  server: 91.193.58.27
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- name: 🇸🇬SG_30
+  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+- name: 🇸🇬SG_68
   network: ws
   port: 80
-  server: support.zoom.us
+  server: 5.223.41.138
   tls: false
   type: vless
-  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
   ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_59
-  network: ws
-  port: 2096
-  server: 91.193.58.136
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: '未知 VLESS-105 #1'
+    path: /
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_66
   network: tcp
+  port: 59615
+  reality-opts:
+    public-key: 7PB-58vYXFLNhK6kY8bJJO3-fPOXTPQJ0UqDlhSOH3M
+    short-id: '!!str 6b'
+  server: 173.234.14.105
+  servername: biosmod.partners.nvidia.com
+  tls: true
+  type: vless
+  uuid: e2632874-614e-4261-af62-52aca3358e4e
+- name: 🇸🇬SG_57
+  password: user317_windows
   port: 443
-  server: onhit.shalana.xyz
-  servername: onhit.shalana.xyz
-  tls: true
-  type: vless
-  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - client-fingerprint: chrome
-  name: 🇸🇬SG_56
+  name: 🇸🇬SG_37
   network: ws
-  port: 2096
-  server: 91.193.58.5
-  servername: free-server.techsonic.dev
+  port: 53646
+  server: 54.179.79.12
+  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
   tls: true
   type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  uuid: d57b9436-a238-4066-8b11-d23ae57c5982
   ws-opts:
     headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+    path: /@Marisa_kristi
 - client-fingerprint: chrome
-  name: 🇸🇬SG_64
+  flow: xtls-rprx-vision
+  name: 🇸🇬SG_16
+  network: tcp
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 🇸🇬SG_47
   network: ws
   port: 51262
   server: 175.41.179.37
@@ -816,274 +2631,24 @@ proxies:
     headers:
       Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 🇸🇬SG_38
+- name: 'SG新加坡 #5'
   network: ws
-  port: 2096
-  server: 91.193.58.131
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_7
-  network: tcp
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇸🇬SG_90
-  password: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
   port: 443
-  server: 496b9e5d-tmeqo0-0-1imi4.sg7.hyhuawei.com
-  skip-cert-verify: true
-  sni: 496b9e5d-tmeqo0-0-1imi4.sg7.hyhuawei.com
-  tls: false
-  type: hysteria2
+  server: 43.174.195.1
+  servername: kv.074167.xyz
+  tls: true
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  ws-opts:
+    headers:
+      Host: kv.074167.xyz
+    path: '%2F'
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_16
-  network: raw
-  port: 19825
-  reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: sg2-8sb.6121999.dpdns.org
-  servername: sg2-8sb.6121999.dpdns.org
-  tls: true
-  type: vless
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- client-fingerprint: firefox
-  name: 🇸🇬SG_62
-  network: ws
-  port: 2096
-  server: 91.193.58.249
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_68
-  network: ws
-  port: 2096
-  server: 91.193.58.255
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- cipher: rc4-md5
-  name: 🇸🇬SG_67
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.4
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇸🇬SG²_1
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.16
-  type: ss
-- client-fingerprint: firefox
-  name: 🇸🇬SG_44
-  network: ws
-  port: 2096
-  server: 91.193.58.15
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: random
-  name: 🇸🇬SG_83
-  network: ws
-  port: 8443
-  server: 132.243.238.192
-  servername: shephe.dpdns.org
-  tls: true
-  type: vless
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  ws-opts:
-    headers:
-      Host: shephe.dpdns.org
-    path: /
-- client-fingerprint: firefox
-  name: 🇸🇬SG_82
+  name: 🇸🇬SG_55
   network: tcp
   port: 443
-  server: 172.237.89.202
-  servername: onhit.shalana.xyz
+  server: free.sahanwickramasinghe.me
+  servername: free.sahanwickramasinghe.me
   tls: true
   type: vless
-  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
-- client-fingerprint: firefox
-  name: 🇸🇬SG_40
-  network: ws
-  port: 2096
-  server: 91.193.58.61
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇸🇬SG_50
-  network: ws
-  port: 2096
-  server: 104.17.70.206
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- cipher: rc4-md5
-  name: 🇸🇬SG_70
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.236
-  type: ss
-- client-fingerprint: chrome
-  name: 🇸🇬SG_39
-  network: ws
-  port: 2096
-  server: 91.193.58.31
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_45
-  network: ws
-  port: 2096
-  server: 91.193.58.85
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  name: 🇸🇬SG_54
-  network: ws
-  port: 2096
-  server: 91.193.58.218
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_5
-  network: raw
-  port: 12972
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: 🇸🇬SG_60
-  network: ws
-  port: 2096
-  server: 91.193.58.80
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: 🇸🇬SG_74
-  network: ws
-  port: 443
-  server: 170.114.52.22
-  servername: asia.csmasterofficial.store
-  tls: true
-  type: vless
-  uuid: 38415950-f815-4ca8-94d0-6cbf22be7566
-  ws-opts:
-    headers:
-      Host: asia.csmasterofficial.store
-    path: /cs
-- name: 🇸🇬SG_89
-  network: ws
-  port: 80
-  server: 5.223.41.31
-  tls: false
-  type: vless
-  uuid: 70513150-d637-4328-a0dc-1e7732f9f0a8
-  ws-opts:
-    path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_84
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
-    short-id: '!!str 133a3f10a1581047'
-  server: 206.206.78.36
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
-- client-fingerprint: firefox
-  name: 🇸🇬SG_86
-  network: ws
-  port: 2096
-  server: 139.162.51.49
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
+  uuid: 3d08ed67-5a47-42d3-a948-ebc7d2eb21f7

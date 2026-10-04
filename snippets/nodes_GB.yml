@@ -1,21 +1,119 @@
 proxies:
-- alterId: 0
+- cipher: rc4-md5
+  name: 🇬🇧GB_1
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.37
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇬🇧GB_3
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.23.32
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_5
+  password: LXchLsIwtCeUAUgu
+  port: 80
+  server: 149.102.149.207
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_6
+  password: g5h5jleTRSyO3Rk4
+  port: 80
+  server: 149.102.132.184
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇬🇧GB_2
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.181
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_10
+  password: LXchLsIwtCeUAUgu
+  port: 443
+  server: 149.102.149.207
+  sub_tag: B007-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: ❓Other_9
+  password: g5h5jleTRSyO3Rk4
+  port: 443
+  server: 149.102.132.184
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB_38
+  password: zRZNBszYyWo5
+  port: 8388
+  server: 51.77.225.200
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇬🇧GB_17
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 146.70.61.18
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_7
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- alterId: '0'
   cipher: auto
-  name: 🇬🇧 GB VMESS-349 | free-nodes
+  name: 🇬🇧GB_28|837KB/s|S004-260618 01
   network: ws
-  port: 2083
-  server: cdn.sfacg.uk
+  packet-encoding: xudp
+  port: 443
+  server: 66.163.117.58
+  servername: aksai.org
   skip-cert-verify: false
+  sub_tag: S004-260618
   tls: true
   type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
+  udp: true
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: or3.sfacg.uk
-    path: /or3
+      Host: aksai.org
+    path: /linkvws
+  xudp: true
 - alterId: 0
   cipher: auto
-  name: '美国 072 #1'
+  name: '美国 120 #1'
+  network: tcp
+  packet-encoding: xudp
+  port: 22324
+  server: 186.190.211.147
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: '美国 074 #1'
   network: ws
   port: 2083
   server: cdn.sfacg.uk
@@ -53,83 +151,417 @@ proxies:
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: '英国 003 #1'
-  network: tcp
-  port: 180
-  server: 82.198.246.97
+- name: 🇬🇧 GB 1 → tg@nicevpn123
+  password: your_password
+  port: 443
+  server: 52.56.183.187
   skip-cert-verify: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: '英国 004 #1'
-  network: tcp
-  port: 180
-  server: 82.198.246.233
+  sni: aws-uk-london-1.f1rocketnode.com
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 10 → tg@nicevpn123
+  password: hBEBjXU6Sk0UK4T6
+  port: 443
+  server: 3.11.154.255
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 11 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 801
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 12 → tg@nicevpn123
+  password: d0774966-fb63-4aca-9478-16c3f32be220
+  port: 443
+  server: waphk.mjt000.com
   skip-cert-verify: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: US16
-  network: tcp
-  port: 180
-  server: 82.198.246.37
+  sni: waphk.mjt000.com
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 13 → tg@nicevpn123
+  password: telegram-id-directvpn
+  port: 22222
+  server: 18.175.9.188
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: '英国 006 #1'
-  network: tcp
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 14 → tg@nicevpn123
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 212.74.39.64
-  skip-cert-verify: true
-  type: vmess
-  uuid: 446e349f-9007-4d3a-9e0d-2456e128cfab
+  server: 141.11.189.239
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇬🇧 GB 15 → tg@nicevpn123
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 77.72.5.113
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '英国 007 #1'
-  network: tcp
-  port: 180
-  server: 82.198.246.250
+  name: 🇬🇧 GB 16 → tg@nicevpn123
+  port: 16833
+  server: 144.24.88.101
   skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  udp: true
+  uuid: f5425ccf-3946-4fb4-eb24-5393d78a392f
+- name: 🇬🇧 GB 17 → tg@nicevpn123
+  password: 09833a6f-4d46-426e-87fe-7793a5489f84
+  port: 46527
+  server: 144.24.87.186
+  skip-cert-verify: true
+  sni: lovehjq.xyz
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 18 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 811
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 19 → tg@nicevpn123
+  password: dkCb8vhXc9GI
+  port: 17408
+  server: 18.130.65.10
+  skip-cert-verify: true
+  sni: appsvs.shop
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 2 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 812
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 20 → tg@nicevpn123
+  password: yCoZBIVH3JIqeUXNdive9B
+  port: 45844
+  server: 51.145.47.225
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 21 → tg@nicevpn123
+  password: 09833a6f-4d46-426e-87fe-7793a5489f84
+  port: 46521
+  server: 144.24.87.186
+  skip-cert-verify: true
+  sni: lovehjq.xyz
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 22 → tg@nicevpn123
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 3.9.27.170
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 23 → tg@nicevpn123
+  password: 1d7692c0-f51c-11ee-91eb-1239d0255272
+  port: 443
+  server: 51.38.65.155
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 24 → tg@nicevpn123
+  password: 1Bukuyf171ArbKaXSvaSf9
+  port: 40933
+  server: 51.145.20.109
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '英国 008 #1'
-  network: tcp
-  port: 23226
-  server: 31.76.11.83
+  name: 🇬🇧 GB 25 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 213.35.113.150
   skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
+  udp: true
+  uuid: eaf5e01b-f27d-44cf-94ae-87196143eef9
+  ws-opts:
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 26 → tg@nicevpn123
+  password: QQgNHAq1zAzjVSjMSTp8Rt
+  port: 62801
+  server: 52.151.77.88
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 27 → tg@nicevpn123
+  password: Bog0ELmMM9DSxDdQ
+  port: 443
+  server: 52.56.201.59
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 28 → tg@nicevpn123
+  password: hS5KwcNlwufMFEScwyjVkz
+  port: 32755
+  server: 51.141.230.84
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧 GB 29 → tg@nicevpn123
+  password: KixLvKzwjekG00rm
+  port: 8080
+  server: 51.68.206.229
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧 GB 3 → tg@nicevpn123
+  password: PCnnH6SQSnfoS27
+  port: 8090
+  server: 145.239.6.202
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 30 → tg@nicevpn123
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 141.11.189.88
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 31 → tg@nicevpn123
+  password: a1956156-b1d6-468e-b22f-59765172b07d
+  port: 443
+  server: hinet.mjt001.com
+  skip-cert-verify: true
+  sni: hinet.mjt001.com
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧 GB 32 → tg@nicevpn123
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 51.68.206.229
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇬🇧 GB 33 → tg@nicevpn123
+  password: Yc2CtrIz8L
+  port: 16899
+  server: 198.23.196.68
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 34 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 804
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 35 → tg@nicevpn123
+  password: zjQs77eXK0zdfPFyLs95l6
+  port: 39271
+  server: 52.151.70.6
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 36 → tg@nicevpn123
+  password: 8z9R4FiU9Ttgpl6it_pJPw
+  port: 1080
+  server: 104.248.169.207
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 37 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 800
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 38 → tg@nicevpn123
+  password: telegram-id-directvpn
+  port: 22222
+  server: 35.178.45.128
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 39 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 810
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 4 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 809
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 40 → tg@nicevpn123
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 35.176.117.240
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 41 → tg@nicevpn123
+  password: d0774966-fb63-4aca-9478-16c3f32be220
+  port: 443
+  server: jp.mjt000.com
+  skip-cert-verify: true
+  sni: jp.mjt000.com
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 42 → tg@nicevpn123
+  password: mTypilmjidrr6dQYaOGHf7
+  port: 46130
+  server: 13.87.75.155
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 43 → tg@nicevpn123
+  password: IJIljqaePSVQhZeA7ccN1F
+  port: 59083
+  server: 51.143.142.183
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧 GB 44 → tg@nicevpn123
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 145.239.6.202
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 45 → tg@nicevpn123
+  password: wkmY1R4EcP
+  port: 443
+  server: 45.76.130.173
+  skip-cert-verify: true
+  sni: z-v2-003289.kailib.com
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 46 → tg@nicevpn123
+  password: a1956156-b1d6-468e-b22f-59765172b07d
+  port: 443
+  server: hinet.mjt001.com
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 47 → tg@nicevpn123
+  password: 8MDtlO0vf7UIhqFK8aZkhJ
+  port: 60502
+  server: 52.151.73.254
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: 未知67 3.7MB/s
-  network: tcp
-  port: 23326
-  server: 31.76.11.83
+  name: 🇬🇧 GB 48 → tg@nicevpn123
+  network: ws
+  port: 8880
+  server: 217.160.45.31
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-- alterId: 0
-  cipher: auto
-  name: '英国 010 #1'
-  network: tcp
-  port: 110
-  server: 31.77.8.97
+  udp: true
+  uuid: 4e186678-fcca-4325-e4bc-b2916bdf6708
+  ws-opts:
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 49 → tg@nicevpn123
+  password: mps3FwmDjLrWaOVg
+  port: 443
+  server: 51.112.72.37
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 5 → tg@nicevpn123
+  password: d0774966-fb63-4aca-9478-16c3f32be220
+  port: 443
+  server: kr.mjt000.com
   skip-cert-verify: true
-  type: vmess
-  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
+  sni: kr.mjt000.com
+  type: trojan
+  udp: true
+- name: 🇬🇧 GB 50 → tg@nicevpn123
+  password: telegram-id-privatevpns
+  port: 22222
+  server: 3.10.18.151
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇬🇧 GB 51 → tg@nicevpn123
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 77.72.5.150
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 52 → tg@nicevpn123
+  password: J6L1Hf4oKWPxbvMLc8i8ny
+  port: 31103
+  server: 52.151.72.172
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇬🇧 GB 53 → tg@nicevpn123
+  password: pKEW8JPByTVTLtM
+  port: 4444
+  server: 145.239.6.202
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 54 → tg@nicevpn123
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 141.11.189.55
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 6 → tg@nicevpn123
+  password: G!yBwPWH3Vao
+  port: 806
+  server: 185.172.113.182
+  type: ss
+  udp: true
+- name: 🇬🇧 GB 7 → tg@nicevpn123
+  password: d0774966-fb63-4aca-9478-16c3f32be220
+  port: 443
+  server: sg.mjt000.com
+  skip-cert-verify: true
+  sni: sg.mjt000.com
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 8 → tg@nicevpn123
+  password: IJl7gbeZxeXZzZGcKFMaHA
+  port: 33910
+  server: 51.103.183.241
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 9 → tg@nicevpn123
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 141.11.189.205
+  type: ss
+  udp: true
 - alterId: 64
   cipher: auto
-  name: '英国 062 #1'
+  name: '英国 005 #1'
   network: h2
   port: 443
   server: 51.15.119.36
@@ -139,7 +571,7 @@ proxies:
   uuid: 05b6b25b-bb5d-4dcd-9710-31e374ffa584
 - alterId: 0
   cipher: auto
-  name: '英国 063 #1'
+  name: '英国 006 #1'
   network: ws
   port: 80
   server: ul-uae2.09vpn.com
@@ -152,7 +584,7 @@ proxies:
     path: /vmess/
 - alterId: 0
   cipher: auto
-  name: '英国 064 #1'
+  name: '英国 007 #1'
   network: ws
   port: 23451
   server: frankfurt.faforex.eu.org
@@ -165,7 +597,7 @@ proxies:
     path: /itdog?ed=2560
 - alterId: 0
   cipher: auto
-  name: '英国 065 #1'
+  name: '英国 008 #1'
   network: ws
   port: 443
   server: 144.24.200.164
@@ -179,7 +611,7 @@ proxies:
     path: /linkws
 - alterId: 0
   cipher: auto
-  name: '英国 066 #1'
+  name: '英国 009 #1'
   network: ws
   port: 80
   server: eu-2.hihu.net
@@ -192,7 +624,7 @@ proxies:
     path: /ch12y6ij
 - alterId: 0
   cipher: auto
-  name: '英国 067 #1'
+  name: '英国 010 #1'
   network: ws
   port: 443
   server: 185.162.228.228
@@ -206,7 +638,7 @@ proxies:
     path: /ECTCJ0DF
 - alterId: 0
   cipher: auto
-  name: '英国 068 #1'
+  name: '英国 011 #1'
   network: ws
   port: 443
   server: 185.162.228.110
@@ -220,7 +652,7 @@ proxies:
     path: /AUIKN8AU
 - alterId: 0
   cipher: auto
-  name: '英国 069 #1'
+  name: '英国 012 #1'
   network: ws
   port: 443
   server: 185.162.228.230
@@ -232,22 +664,9 @@ proxies:
     headers:
       Host: lg10.cfcdn1.xyz
     path: /A2DJOPFT
-- alterId: 2
-  cipher: auto
-  name: '英国 070 #1'
-  network: ws
-  port: 10001
-  server: ddns2.airtcp.vip
-  skip-cert-verify: true
-  type: vmess
-  uuid: 7f67fb11-832d-3492-adfe-63e0cceafbe0
-  ws-opts:
-    headers:
-      Host: ddns2.airtcp.vip
-    path: /
 - alterId: 4
   cipher: auto
-  name: '英国 071 #1'
+  name: '英国 013 #1'
   network: ws
   port: 443
   server: 146.70.46.68
@@ -261,7 +680,7 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: '英国 072 #1'
+  name: '英国 014 #1'
   network: grpc
   port: 443
   server: 146.70.158.111
@@ -269,63 +688,100 @@ proxies:
   tls: true
   type: vmess
   uuid: 11ae0edd-2f63-4495-8683-037abbda9986
-- cipher: rc4-md5
-  name: 🇬🇧GB_18
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.37
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_11
-  password: g5h5jleTRSyO3Rk4
-  port: 80
-  server: 149.102.132.184
-  type: ss
-- cipher: rc4-md5
-  name: 🇬🇧GB_6
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.23.32
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB_20
-  password: zRZNBszYyWo5
-  port: 8388
-  server: 51.77.225.200
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_4
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
-  type: ss
-- cipher: rc4-md5
-  name: 🇬🇧GB_7
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.18
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_10
-  password: LXchLsIwtCeUAUgu
-  port: 80
-  server: 149.102.149.207
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇬🇧GB_2
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.181
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_3
-  password: LXchLsIwtCeUAUgu
-  port: 443
-  server: 149.102.149.207
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_9
-  password: g5h5jleTRSyO3Rk4
-  port: 443
-  server: 149.102.132.184
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: US2
+  network: tcp
+  port: 180
+  server: 82.198.246.97
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: '英国 019 #1'
+  network: tcp
+  port: 180
+  server: 82.198.246.233
+  skip-cert-verify: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: US14
+  network: tcp
+  port: 180
+  server: 82.198.246.37
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: '英国 022 #1'
+  network: tcp
+  port: 180
+  server: 82.198.246.250
+  skip-cert-verify: true
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: '英国 023 #1'
+  network: tcp
+  port: 40910
+  server: 91.228.186.109
+  skip-cert-verify: true
+  type: vmess
+  uuid: 1e7ded27-5883-46ee-b4b9-49c42ca399b1
+- alterId: 0
+  cipher: auto
+  name: '英国 024 #1'
+  network: tcp
+  port: 23226
+  server: 31.76.11.83
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
+- alterId: 0
+  cipher: auto
+  name: 未知126
+  network: tcp
+  port: 23326
+  server: 31.76.11.83
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
+- alterId: 0
+  cipher: auto
+  name: '英国 026 #1'
+  network: tcp
+  port: 110
+  server: 31.77.8.97
+  skip-cert-verify: true
+  type: vmess
+  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
+- alterId: 2
+  cipher: auto
+  name: 🇬🇧 138  | ⬇️ 99KB/s
+  network: tcp
+  port: 11245
+  server: silversbgfgov.vip45.wogbcnmnagfwgov.com
+  tls: false
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+- name: GB【机场推荐：https://a9a.xyz】6
+  network: ws
+  password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
+  port: 8443
+  server: www.wto.org
+  skip-cert-verify: true
+  sni: jiangjc.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: jiangjc.pages.dev
+    path: /

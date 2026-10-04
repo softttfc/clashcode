@@ -1,37 +1,9 @@
 proxies:
-- client-fingerprint: firefox
-  name: '🇪🇪EE爱沙尼亚丨yoyapai.com #1'
-  network: ws
-  port: 2083
-  server: 141.0.187.53
-  servername: crt.dodopanel.biz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8dd437e1-5f3f-446e-98fe-aa29b80057fb
-  ws-opts:
-    path: /vless-ws
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  network: ws
-  port: 2083
-  server: 141.0.187.52
-  servername: crt.dodopanel.biz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8dd437e1-5f3f-446e-98fe-aa29b80057fb
-  ws-opts:
-    path: /vless-ws
 - alpn:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #2'
+  name: '🇪🇪 #3'
   network: tcp
   port: 443
   server: 138.124.100.128
@@ -41,13 +13,15 @@ proxies:
   type: vless
   udp: true
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 🇪🇪
+- client-fingerprint: chrome
+  name: '🇪🇪 #4'
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
   server: 109.206.241.10
   skip-cert-verify: false
   sni: russiapower.accesscam.org
+  sub_tag: C002-260622
   type: trojan
   udp: true
 - client-fingerprint: firefox
@@ -60,19 +34,124 @@ proxies:
     short-id: '!!str c0d1d1776fed0f6d'
   server: 5.175.178.43
   servername: ee-t3.vinnypuxtomoon.today
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - alpn:
   - http/1.1
-  client-fingerprint: chrome
-  name: 🇪🇪 机场推荐:dafei.de 爱沙尼亚 01
+  client-fingerprint: qq
+  name: '🇪🇪 #2'
   network: ws
+  port: 2083
+  server: 141.0.187.52
+  servername: crt.dodopanel.biz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8dd437e1-5f3f-446e-98fe-aa29b80057fb
+  ws-opts:
+    path: /vless-ws
+- client-fingerprint: firefox
+  name: 🇪🇪
+  network: ws
+  port: 2083
+  server: 141.0.187.53
+  servername: crt.dodopanel.biz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8dd437e1-5f3f-446e-98fe-aa29b80057fb
+  ws-opts:
+    path: /vless-ws
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇪🇪EE_5
+  network: raw
+  packet-encoding: xudp
+  port: 8443
+  server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
+  sub_tag: P002-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    path: /
+  xudp: true
+- name: 🇪🇪EE_2
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 94.183.170.135
+  servername: estproxy4.lockdwn.com
+  sub_tag: A004-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇪🇪EE_5|2.1MB/s|B007-260618 01
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sub_tag: B007-260618
+  type: trojan
+  udp: true
+- name: 🇪🇪EE_11|1.8MB/s|A004-260618 01
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 94.183.170.135
+  sub_tag: A004-260618
+  type: vless
+  udp: true
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  ws-opts:
+    headers:
+      Host: estproxy4.lockdwn.com
+      User-Agent: Mozilla/5.0 (Linux; Android 5.1; A37f Build/LMY47V) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇪🇪EE_12|1.9MB/s|A004-260618 01
+  network: tcp
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  port: 449
+  server: 109.206.241.10
+  skip-cert-verify: true
+  sni: 109.206.241.10
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: 🇪🇪 机场推荐:dafei.de 爱沙尼亚 01
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇪🇪EE_16|658KB/s|A001-260618 01
+  network: ws
+  packet-encoding: xudp
   port: 8443
   server: ee10.zazazuza.ru
   servername: fdghyt.com
+  sub_tag: A001-260618
   tls: true
   type: vless
   udp: true
@@ -80,7 +159,10 @@ proxies:
   ws-opts:
     headers:
       Host: fdghyt.com
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/47.0.2526.106 Safari/537.36
     path: /vpn-wss/fluxor/59011/
+  xudp: true
 - client-fingerprint: chrome
   name: '爱沙尼亚 001 #1'
   network: xhttp
@@ -120,80 +202,90 @@ proxies:
       Host: freeuse.firta.ru
     path: /
 - client-fingerprint: chrome
-  name: 🇪🇪_爱沙尼亚_69
-  network: ws
-  port: 2087
-  server: 5.45.115.162
-  servername: qcswhj2.edge-cache.danfeng4.xyz
+  flow: xtls-rprx-vision
+  name: 🇪🇪_爱沙尼亚_63
+  port: 443
+  reality-opts:
+    public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ
+    short-id: '!!str ad6e08b22389abd2'
+  server: 89.125.13.202
+  servername: d3-ee1.cloud-cdn.xyz
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve?ed=2560
-- client-fingerprint: firefox
-  name: 🇪🇪EE_9
-  network: tcp
-  port: 8443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
-  tls: true
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
 - alpn:
   - http/1.1
   client-fingerprint: chrome
-  name: '🇪🇪 爱沙尼亚 | EST #1'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
   network: ws
   port: 2083
   server: 141.0.187.16
   servername: crt.dodopanel.biz
   tls: true
   type: vless
-  udp: true
   uuid: fba73f98-777a-42a6-83c0-7d1f6f070e8d
   ws-opts:
     path: /vless-ws
+- client-fingerprint: firefox
+  name: 🇪🇪 爱沙尼亚 | EST
+  network: tcp
+  port: 25895
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: '!!str a73f0410d728c823'
+  server: 89.144.32.247
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪 128  | ⬇️ 4MB/s
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: '!!str 16e0f049'
+  server: ee174.mech-pro.online
+  servername: ee174.mech-pro.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a15d1b88-e3f4-4f4d-9c04-462a2965a60a
 - client-fingerprint: chrome
-  name: 🇪🇪EE_18
+  name: 🇪🇪EE_12
+  network: ws
+  port: 444
+  server: 109.120.155.155
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  tls: true
+  type: vless
+  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
+  ws-opts:
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 🇪🇪EE_1
   network: ws
   port: 4433
   server: 83.147.216.223
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
   tls: true
   type: vless
-  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
+  uuid: 55889b09-e315-4640-9404-e10834e7728e
   ws-opts:
     headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_20
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 9H_heZMEI3tShkb5pXRrlAzwGWIzGFCRX_HgyPdktnU
-  server: 179.254.126.173
-  servername: www.google.com
-  tls: true
-  type: vless
-  uuid: 7013d889-14f4-4475-a5ff-a5ecd992b522
-- name: 🇪🇪EE_6
-  network: ws
-  port: 443
-  server: 94.183.170.135
-  servername: estproxy4.lockdwn.com
-  tls: false
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  ws-opts:
-    path: /
 - client-fingerprint: chrome
-  name: '爱沙尼亚 #1'
+  name: 🇪🇪EE_18
   network: xhttp
   port: 25395
   reality-opts:
@@ -204,53 +296,3 @@ proxies:
   tls: true
   type: vless
   uuid: 900e2cca-4798-47f6-b972-5288a77c8093
-  ws-opts:
-    path: '%2F'
-- name: 🇪🇪EE_8
-  network: tcp
-  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
-  port: 449
-  server: 109.206.241.10
-  skip-cert-verify: true
-  sni: 109.206.241.10
-  type: trojan
-- client-fingerprint: chrome
-  name: 🇪🇪EE_16
-  network: ws
-  port: 444
-  server: 95.181.162.170
-  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-  tls: true
-  type: vless
-  uuid: 751b51bc-af59-4b04-93c0-3fed4965297e
-  ws-opts:
-    headers:
-      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: '爱沙尼亚 #2'
-  network: ws
-  port: 8443
-  server: 46.36.220.183
-  servername: spjd.cbc.qzz.io
-  tls: true
-  type: vless
-  uuid: 37665857-8b6e-4daa-8231-3e2927221558
-  ws-opts:
-    headers:
-      Host: spjd.cbc.qzz.io
-    path: '%2Fproxyip%3DProxyIP.US.CMLiussss.net'
-- name: EE【机场推荐：https://a9a.xyz】13
-  network: ws
-  port: 8443
-  server: ee10.zazazuza.ru
-  servername: fdghyt.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/

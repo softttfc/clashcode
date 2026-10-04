@@ -1,14 +1,5 @@
 proxies:
-- name: 🇱🇻LV_10
-  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  port: 24443
-  server: 91.240.86.70
-  skip-cert-verify: false
-  sni: hy.quattro-tech.ru
-  tfo: false
-  tls: false
-  type: hysteria2
-- name: 香港 32
+- name: 香港 40
   password: 19f72087-4591-4d72-930b-2697078ec2be
   port: 4433
   server: hk2.xiaoliyu.cyou
@@ -16,26 +7,12 @@ proxies:
   sni: hk2.xiaoliyu.cyou
   tls: false
   type: hysteria2
-- auth: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  down: ''
-  fingerprint: ''
-  name: 🇷🇺 俄罗斯 | RUS
-  obfs: ''
-  obfs-password: ''
-  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  port: 22443
-  server: 91.240.86.70
-  skip-cert-verify: true
-  sni: 91.240.86.70
-  tls: false
-  type: hysteria2
-  up: ''
 - cipher: aes-256-gcm
   name: '🇷🇺 RU俄羅斯丨yoyapai.com #1'
   password: 7e1dd4c55bf85da5
   port: 30129
   server: 212.192.13.91
-  skip-cert-verify: true
+  skip-cert-verify: false
   type: ss
   udp: true
 - client-fingerprint: chrome
@@ -58,7 +35,7 @@ proxies:
   password: 895b4b796a357570
   port: 10910
   server: 176.32.35.51
-  skip-cert-verify: true
+  skip-cert-verify: false
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -66,7 +43,7 @@ proxies:
   password: 895b4b796a357570
   port: 10916
   server: 176.32.35.51
-  skip-cert-verify: true
+  skip-cert-verify: false
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -74,11 +51,11 @@ proxies:
   password: bdb313adf74c2ede
   port: 20188
   server: 195.133.5.207
-  skip-cert-verify: true
+  skip-cert-verify: false
   type: ss
   udp: true
 - client-fingerprint: qq
-  name: '🇷🇺 #8'
+  name: '🇷🇺 #9'
   network: xhttp
   port: 443
   server: 178.72.162.73
@@ -97,7 +74,7 @@ proxies:
     path: /assets/build/_app/immutable/chunks/stream-one/
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇷🇺 #1'
+  name: '🇷🇺 #8'
   network: tcp
   port: 443
   reality-opts:
@@ -105,16 +82,16 @@ proxies:
     short-id: '!!str 9698d67e63bc8ee0'
   server: 157.22.193.73
   servername: larkix.pulsio.cfd
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 1bced29a-3051-42b8-b393-005135b97616
-- name: '🇷🇺 #15'
+- name: '🇷🇺 #1'
   network: ws
   port: 2200
   server: 104.171.137.176
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -124,7 +101,7 @@ proxies:
 - alpn:
   - h3
   client-fingerprint: chrome
-  name: '🇷🇺 #4'
+  name: '🇷🇺 #11'
   network: xhttp
   port: 443
   server: 104.18.32.47
@@ -139,11 +116,11 @@ proxies:
   xhttp-opts:
     mode: auto
     path: /
-- name: '🇷🇺 #7'
+- name: '🇷🇺 #2'
   network: ws
   port: 4100
   server: 176.98.178.17
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -154,7 +131,7 @@ proxies:
     path: /v1
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇷🇺 #13'
+  name: '🇷🇺 #10'
   network: tcp
   port: 443
   reality-opts:
@@ -162,7 +139,7 @@ proxies:
     short-id: '!!str d4331052'
   server: 217.177.74.229
   servername: yandex.ru
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -177,7 +154,7 @@ proxies:
     short-id: '!!str dc8109baf0f607ea'
   server: 78.159.247.253
   servername: storage.yandex.net
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -185,11 +162,11 @@ proxies:
   ws-opts:
     headers:
       Host: storage.yandex.net
-- name: '🇷🇺 #14'
+- name: '🇷🇺 #15'
   network: ws
   port: 2200
   server: 168.222.140.55
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -201,7 +178,7 @@ proxies:
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: grpc-tunnel
-  name: '🇷🇺 #3'
+  name: '🇷🇺 #4'
   network: grpc
   port: 9830
   reality-opts:
@@ -209,14 +186,14 @@ proxies:
     short-id: '!!str aabb'
   server: 176.109.108.83
   servername: dl.google.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 553e3253-c454-431d-a7e6-42bc06ea5e14
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇷🇺 #10'
+  name: '🇷🇺 #12'
   network: tcp
   port: 5000
   reality-opts:
@@ -224,16 +201,16 @@ proxies:
     short-id: '!!str 9e'
   server: 185.72.145.121
   servername: www.vk.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 1cf0f330-88c6-5b9b-866e-607e08cf87d6
-- name: '🇷🇺 #9'
+- name: '🇷🇺 #6'
   network: ws
   port: 4100
   server: 104.171.136.172
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vless
   udp: true
@@ -244,7 +221,7 @@ proxies:
     path: /v1
 - alterId: 0
   cipher: auto
-  name: '🇷🇺RU俄罗斯 #1'
+  name: 未知6
   network: ws
   port: 443
   server: renderer-stream-2-62.mirra.now
@@ -256,7 +233,7 @@ proxies:
   ws-opts:
     path: /api/v1/gpu-stream/socket
 - client-fingerprint: chrome
-  name: '🇷🇺 #12'
+  name: '🇷🇺 #7'
   network: ws
   port: 8082
   server: 89.208.113.120
@@ -272,7 +249,7 @@ proxies:
     path: /
 - client-fingerprint: qq
   flow: xtls-rprx-vision
-  name: '🇷🇺 #2'
+  name: '🇷🇺 #14'
   network: tcp
   port: 443
   reality-opts:
@@ -280,13 +257,13 @@ proxies:
     short-id: '!!str 52ccb3687fe0b7ec'
   server: 200.165.235.78
   servername: api8.eaglors.com
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: 238e492b-bc20-4380-92b6-135d39112ca4
 - client-fingerprint: firefox
-  name: '🇷🇺 #11'
+  name: '🇷🇺 #13'
   network: xhttp
   port: 10654
   reality-opts:
@@ -294,7 +271,7 @@ proxies:
     short-id: '!!str 5c3fb122'
   server: 217.19.122.17
   servername: bl3fk52.sysopnova.art
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
@@ -306,7 +283,7 @@ proxies:
     path: /xhttp_client_upload
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇷🇺 #6'
+  name: '🇷🇺 #3'
   network: tcp
   port: 443
   reality-opts:
@@ -314,59 +291,139 @@ proxies:
     short-id: '!!str eba1498e012ef580'
   server: 45.130.254.10
   servername: amazon.de
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
 - client-fingerprint: chrome
-  name: 美国(海外账号:shop.tgaaaa.co)_56
+  name: NL【机场推荐：https://a9a.xyz】11
   network: ws
   port: 443
-  server: fbsv6.guardora.pro
+  server: 78.159.246.110
   servername: fbsv6.guardora.pro
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
   uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
   ws-opts:
     path: /ws
-- client-fingerprint: firefox
-  name: 俄罗斯_1
-  network: ws
-  port: 443
-  server: fbsv6.guardora.pro
-  servername: fbsv6.guardora.pro
+- client-fingerprint: safari
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 'RU俄罗斯 #6'
+  network: grpc
+  port: 9830
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: '!!str aa'
+  server: 176.109.109.105
+  servername: dl.google.com
   skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
-  ws-opts:
-    headers:
-      Host: fbsv6.guardora.pro
-    path: /ws
-- alpn:
-  - http/1.1
-  client-fingerprint: random
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: chrome
   encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  network: ws
-  port: 443
-  server: fbsv6.guardora.pro
-  servername: fbsv6.guardora.pro
-  skip-cert-verify: true
-  tfo: false
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 🇩🇪DE_144
+  network: grpc
+  packet-encoding: xudp
+  port: 9881
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: '!!str aa'
+  server: 176.109.111.7
+  servername: dl.google.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
-  ws-opts:
-    headers:
-      Host: fbsv6.guardora.pro
-    path: /ws
-- name: 'RU俄罗斯 #2'
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: random
+  encryption: none
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 未知 VLESS-131
+  network: grpc
+  packet-encoding: xudp
+  port: 9881
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+  server: 176.109.111.154
+  servername: dl.google.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: '俄罗斯 #7'
+  network: grpc
+  port: 9894
+  reality-opts:
+    public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
+  server: 176.109.111.152
+  servername: dl.google.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: '俄罗斯 #5'
+  network: grpc
+  port: 9892
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: '!!str aa'
+  server: 176.109.105.186
+  servername: dl.google.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '俄罗斯 #8'
+  network: tcp
+  port: 30007
+  reality-opts:
+    public-key: UR-ELTbCCTAAvg_y8vIznWFkGkCKFFaEAVgTtPYNCCk
+    short-id: '!!str 54861d36'
+  server: files-d1c1.julsapart.com
+  servername: storage.yandexcloud.net
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5bba3558-ad1c-4d97-a360-7d993d503abd
+- client-fingerprint: random
+  encryption: none
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: '俄罗斯 #14'
+  network: grpc
+  packet-encoding: xudp
+  port: 9881
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+  server: 176.109.104.103
+  servername: dl.google.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- name: 'RU俄罗斯 #8'
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
   port: 22443
   server: 91.240.86.70
@@ -375,57 +432,235 @@ proxies:
   tls: false
   type: hysteria2
   udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇳🇱 荷兰 | NLD #3'
-  network: ws
+- name: 🇱🇻LV_5
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  port: 24443
+  server: 91.240.86.70
+  skip-cert-verify: true
+  sni: hy.quattro-tech.ru
+  tls: false
+  type: hysteria2
+  udp: true
+- name: 🇷🇺RU_7|364KB/s|R002-260618 01
+  port: 443
+  server: 178.219.43.226
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇷🇺 机场推荐:dafei.de 俄罗斯 01
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇷🇺RU_9|794KB/s|R002-260618 01
+  port: 443
+  server: 82.147.71.46
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇷🇺RU_10|1.0MB/s|R002-260618 01
+  port: 8443
+  server: 87.242.85.187
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇷🇺RU_12|511KB/s|R002-260618 01
+  port: 443
+  server: 194.186.179.62
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇷🇺RU_14|928KB/s|B007-260618 01
+  network: xhttp
+  packet-encoding: xudp
   port: 2053
-  server: ddnl0.zazazuza.ru
-  servername: wss.zazazuza.ru
+  server: randomquaint.net
+  servername: randomquaint.net
+  sub_tag: B007-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: c2bbf90c-7f13-47dd-b68d-f0bd38b6b3c8
+  xhttp-opts:
+    host: randomquaint.net
+    mode: auto
+    path: /api/v1/upload
+  xudp: true
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-387 | free-nodes
+  network: xhttp
+  port: 443
+  server: 5c264184c99.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
-  udp: true
-  uuid: 6c713691-3ca2-0008-ad25-113d1bed6b03
-  ws-opts:
-    headers:
-      Host: wss.zazazuza.ru
-    path: /vpn-wss/fluxor/59011/
-- name: 🇷🇺 机场推荐:dafei.de 俄罗斯 02
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-388 | free-nodes
+  network: xhttp
   port: 443
-  server: 82.147.71.46
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇷🇺 机场推荐:dafei.de 俄罗斯 03
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 18333
-  server: ru1.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: ru1.xiaoliyu.cyou
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 机场推荐:dafei.de 俄罗斯 04
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: '!!str db04ce8bdb8900f1'
-  server: 201.24.115.189
-  servername: nvidia.com
+  server: 9792205ac100.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
+  skip-cert-verify: false
+  tfo: false
   tls: true
   type: vless
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-- name: 🇷🇺 机场推荐:dafei.de 俄罗斯 05
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-389 | free-nodes
+  network: xhttp
   port: 443
-  server: 194.186.179.62
-  skip-cert-verify: true
+  server: 7427b4edc101.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: http
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-390 | free-nodes
+  network: xhttp
+  port: 443
+  server: d9def735c462.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-453 | free-nodes
+  network: tcp
+  port: 443
+  server: 2a00:b700:4::1ad
+  servername: u695098u14c5ddd4s2358.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-411 | free-nodes
+  network: xhttp
+  port: 443
+  server: 69d2cbcdc461.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-418 | free-nodes
+  network: tcp
+  port: 443
+  server: s2359.kukuss.top
+  servername: u695098u14c5ddd4s2358.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-432 | free-nodes
+  network: tcp
+  port: 443
+  server: s2360.kukuss.top
+  servername: u695098u14c5ddd4s2358.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: ios
+  name: 🇷🇺 RU VLESS-446 | free-nodes
+  network: xhttp
+  port: 443
+  server: f2d0ba8dc394.fuhuovps.xyz
+  servername: f0c5bfd6s394.fuhuovps.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: f0c5bfd6s394.fuhuovps.xyz
+    path: f00757d3fec0e7aca102e554fb32f21e
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-448 | free-nodes
+  network: tcp
+  port: 443
+  server: 193.53.126.91
+  servername: u695098u14c5ddd4s2358.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
 - flow: xtls-rprx-vision
   name: 🇸🇪SE_1|⬇️2.7MB/s
   network: tcp
@@ -446,26 +681,889 @@ proxies:
   type: vless
   udp: true
   uuid: 3b12e953-96f0-40da-ac32-3038dadf20f7
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇱🇹LT_8
+- name: 🇷🇺 RU 1 → tg@nicevpn123
+  password: 71ab3866-4c8b-4a0b-a4bd-a64f110afe0b
+  port: 443
+  server: ca-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 10 → tg@nicevpn123
+  password: U6qnYRhfyDmn8sgn
+  port: 9041
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 11 → tg@nicevpn123
+  password: Zu5sVdhPITkII1Rf9bUTjt0ws1nks4vgBoHhe7QxwEk0j3Ai
+  port: 51348
+  server: 146.185.198.44
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 12 → tg@nicevpn123
+  password: faa0fd1b-ecf9-42ae-a5f3-0a96274b64cb
+  port: 30002
+  server: ru01.freeflyingcloud.xyz
+  skip-cert-verify: true
+  sni: ru01.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 13 → tg@nicevpn123
+  password: U6qnYRhfyDmn8sgn
+  port: 9041
+  server: 5.188.181.201
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 14 → tg@nicevpn123
   network: ws
-  port: 8443
-  server: 213.183.55.153
-  servername: shephe.dpdns.org
-  skip-cert-verify: false
+  port: 443
+  server: nl-full.privateip.net
+  skip-cert-verify: true
   tls: true
-  type: vless
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  type: vmess
+  udp: true
+  uuid: f269033e-a955-4dee-9345-948ed5b77838
   ws-opts:
     headers:
-      Host: shephe.dpdns.org
+      Host: nl-full.privateip.net
+    path: /RACEVPN
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 15 → tg@nicevpn123
+  password: TPqX8edgbAURcAMb
+  port: 9079
+  server: 217.30.10.68
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 16 → tg@nicevpn123
+  password: BwcAUZk8hUFAkDGN
+  port: 9031
+  server: 5.188.181.201
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 17 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- name: 🇷🇺 RU 18 → tg@nicevpn123
+  password: 8b47d63f-1f8e-4f8e-a1e8-ead3686e5da6
+  port: 443
+  server: ca-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 19 → tg@nicevpn123
+  password: 1ef9jGvAyzXLLnjssRFr8M
+  port: 25663
+  server: 94.228.169.114
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 2 → tg@nicevpn123
+  password: u3vnfMkutB4brBoGSkAphE
+  port: 60422
+  server: 195.2.76.71
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 20 → tg@nicevpn123
+  password: gYCYXfkUQEs2TaJQ
+  port: 9038
+  server: 217.30.10.68
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 21 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 45.87.155.70
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 88c0a1fb-fc4d-4eab-85c7-4dd84407e9a5
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 22 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: 185.148.104.118
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  ws-opts:
+    path: /hms02.fxiaomi.sbs/link
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 23 → tg@nicevpn123
+  password: S7KwUu7yBy58S3Ga
+  port: 9042
+  server: 5.188.181.201
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇷🇺 RU 24 → tg@nicevpn123
+  password: Telegram-ZEDMODEON
+  port: 25365
+  server: 78.153.149.211
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 25 → tg@nicevpn123
+  network: ws
+  port: 2086
+  server: 45.133.247.249
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+  ws-opts:
+    path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 26 → tg@nicevpn123
+  password: ygSXLTCrL8zeKb2n6mghK8J26GVHWmZA4pyy84Pyg6E=
+  port: 13896
+  server: 45.67.32.147
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 27 → tg@nicevpn123
+  password: DmMQUmI7pgQDnrWqLXC00L
+  port: 15214
+  server: 94.228.165.234
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 28 → tg@nicevpn123
+  password: IKDBUJ8RH6qI10QR1MSTqR
+  port: 16006
+  server: 46.226.164.2
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 29 → tg@nicevpn123
+  password: d2b376a2-c9b7-42be-8f52-26c0987f2884
+  port: 443
+  server: nl-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 3 → tg@nicevpn123
+  password: WrszSP43UAOcFljDkb8vAL
+  port: 57262
+  server: 185.174.137.72
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 30 → tg@nicevpn123
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 5.188.181.201
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 31 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: is3-vmess.sshmax.xyz
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a8d33442-de64-4980-a779-540c1eedbc25
+  ws-opts:
+    headers:
+      Host: is3-vmess.sshmax.xyz
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 32 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: de1-vmess.greenssh.xyz
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
+  ws-opts:
+    headers:
+      Host: de1-vmess.greenssh.xyz
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 33 → tg@nicevpn123
+  network: ws
+  port: 8880
+  server: 45.87.155.70
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 88c0a1fb-fc4d-4eab-85c7-4dd84407e9a5
+  ws-opts:
+    path: /vmess
+- name: 🇷🇺 RU 34 → tg@nicevpn123
+  password: ebd1c3e8-a136-49a5-a76c-88c4bf0a23aa
+  port: 30002
+  server: ru01.freeflyingcloud.xyz
+  skip-cert-verify: true
+  sni: ru01.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 35 → tg@nicevpn123
+  password: KTwIQM1cQJwtkrjfld6Usn
+  port: 32913
+  server: 46.226.162.112
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 36 → tg@nicevpn123
+  password: UXoGWyjwDVZIl1WMuHtxSi
+  port: 5700
+  server: 139.28.220.18
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 37 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: hk-full.privateip.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f2c48b2f-c581-4d7d-846e-8bd97d93bd65
+  ws-opts:
+    headers:
+      Host: hk-full.privateip.net
+    path: /RACEVPN
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 38 → tg@nicevpn123
+  password: UkXRsXvR6buDMG2Y
+  port: 9001
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 39 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: 80.92.205.112
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4c90ba75-230b-4f8b-bbff-8efa0eb0415f
+  ws-opts:
+    path: /
+- name: 🇷🇺 RU 4 → tg@nicevpn123
+  password: ebd1c3e8-a136-49a5-a76c-88c4bf0a23aa
+  port: 30002
+  server: 45.140.169.83
+  skip-cert-verify: true
+  sni: ru01.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 82 → tg@nicevpn123
+  port: 47555
+  server: 46.29.166.237
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0c49cd19-2758-4d38-e6a8-11f2d6635860
+- name: 🇷🇺 RU 41 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 42 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: 185.148.104.118
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  ws-opts:
+    headers:
+      Host: ab-test-frosty-flower-e7fb.tariroc864.workers.dev
+    path: /hms02.fxiaomi.sbs/link
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 43 → tg@nicevpn123
+  password: TN2YqghxeFDKZfLU
+  port: 9037
+  server: 5.188.181.201
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 44 → tg@nicevpn123
+  password: ba74833c-8c0f-4dcd-8cbc-13e3c32d3765
+  port: 2053
+  server: 185.236.233.111
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 🇷🇺 RU 45 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 46 → tg@nicevpn123
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 146.185.248.22
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 47 → tg@nicevpn123
+  password: ndJuPjq7WbFDjB4oacljGw
+  port: 10141
+  server: 5.182.36.245
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 48 → tg@nicevpn123
+  password: P2zxXPewlV3BlfqqYiSthvtLc
+  port: 12949
+  server: 212.113.106.243
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 49 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 5 → tg@nicevpn123
+  password: HSZuyJQcWe8dxNdF
+  port: 9043
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 50 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 51 → tg@nicevpn123
+  password: GA9KzeEgvfxNrgmM
+  port: 9019
+  server: 217.30.10.18
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 52 → tg@nicevpn123
+  password: NC7jORVNrruV/+3+PwOJrnnOeG7n75X1
+  port: 8388
+  server: 89.19.216.18
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 53 → tg@nicevpn123
+  password: p9z5BVADH2YFs3MN
+  port: 9040
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 54 → tg@nicevpn123
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 213.156.137.67
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 55 → tg@nicevpn123
+  password: 1q7RNKaIk2wYO8fEPmEX0vWQ7Va+QRTA
+  port: 8388
+  server: 91.192.81.21
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 56 → tg@nicevpn123
+  password: BwcAUZk8hUFAkDGN
+  port: 9031
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 57 → tg@nicevpn123
+  password: xCoBqYZGaMivNlzIhjpIH5
+  port: 31212
+  server: 85.192.63.92
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 58 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 59 → tg@nicevpn123
+  password: 3fbeb668f48414f6
+  port: 57456
+  server: 45.139.24.63
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 6 → tg@nicevpn123
+  password: CkMpBwWZ0Cr1RhVVNSXXMp
+  port: 64930
+  server: 5.44.42.60
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 60 → tg@nicevpn123
+  password: bf2307e1-a58f-41c2-8392-d76197fc2866
+  port: 443
+  server: 188.119.112.242
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 🇷🇺 RU 61 → tg@nicevpn123
+  password: bf2307e1-a58f-41c2-8392-d76197fc2866
+  port: 443
+  server: nl-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 62 → tg@nicevpn123
+  password: XZMPTXYRC2XB8jet5UiHOn
+  port: 50211
+  server: 46.19.69.244
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 63 → tg@nicevpn123
+  password: uSFiNtjwzC1y2QMPNhrXAT5gknE1mgHggsqL6gPkUFPvWqrHC63U5p5VCNZBktT7BNoykGd1gxPZy9zoSsj6Hrw5YV3XvoPh
+  port: 40928
+  server: 194.87.179.169
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 64 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 65 → tg@nicevpn123
+  password: LLVD6lbENjzG1vj15Fvq7r
+  port: 15174
+  server: 62.113.110.233
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 66 → tg@nicevpn123
+  password: 4aa4c780-e45f-4011-8b0d-5ce48071bfa0
+  port: 30002
+  server: ru01.freeflyingcloud.xyz
+  skip-cert-verify: true
+  sni: ru01.freeflyingcloud.xyz
+  type: trojan
+  udp: true
+- name: 🇷🇺 RU 67 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- name: 🇷🇺 RU 68 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 69 → tg@nicevpn123
+  password: w5drAL7PfCIwQ2ycUuoDsV2Ls
+  port: 13022
+  server: 212.113.106.243
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 7 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 45.144.2.113
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 88bd03e6-5ada-42da-9e77-448cd8c60e13
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 70 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 85.117.234.167
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1a363dc9-698c-49d2-e00d-c43005f64c40
+  ws-opts:
+    path: /TG@dns68免费节点
+- name: 🇷🇺 RU 71 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- name: 🇷🇺 RU 72 → tg@nicevpn123
+  password: 28c79056-ccfd-4cc1-93d4-c337cc782e65
+  port: 80
+  server: 89.221.224.94
+  skip-cert-verify: true
+  sni: is2-t.sshmax.xyz
+  type: trojan
+  udp: true
+- name: 🇷🇺 RU 73 → tg@nicevpn123
+  password: 01278779-3f58-4477-8ae7-7b82033a5d2e
+  port: 443
+  server: hk-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 🇷🇺 RU 74 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 75 → tg@nicevpn123
+  password: xG1e8ntN2cff9zWCkKqXEd
+  port: 61992
+  server: 212.113.106.76
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 76 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 77 → tg@nicevpn123
+  password: NdipHbnILjBtQgQx0Iww5q
+  port: 59393
+  server: 83.217.9.199
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 78 → tg@nicevpn123
+  password: qgpdyzHj8rZW9fDxxkUHRI
+  port: 29312
+  server: 217.196.103.206
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 79 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: elsone.vbdf.lol
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 94e070a5-fc29-49bf-a1c3-11f3ef2df33d
+  ws-opts:
+    headers:
+      Host: elsone.vbdf.lol
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 8 → tg@nicevpn123
+  password: 1f8jdOIKkxRWMUeOfXPeo8
+  port: 28190
+  server: 109.107.172.30
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 80 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: 77.91.103.47
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 09e35fe0-2efd-44c1-96fb-46b7b3cc28eb
+  ws-opts:
+    path: /vmess
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 81 → tg@nicevpn123
+  password: zErfOQDf3lOXZ24DK9EcAL
+  port: 16991
+  server: 5.42.86.33
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 83 → tg@nicevpn123
+  password: 85bce006-4885-11ee-8792-f23c9164ca5d
+  port: 1007
+  server: 176.32.35.167
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 84 → tg@nicevpn123
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 45.89.52.66
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 85 → tg@nicevpn123
+  network: ws
+  port: 8001
+  server: mdlzz.vbdf.lol
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 94e070a5-fc29-49bf-a1c3-11f3ef2df33d
+  ws-opts:
+    headers:
+      Host: mdlzz.vbdf.lol
+    path: /?ed=512
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 86 → tg@nicevpn123
+  port: 80
+  server: 194.156.98.179
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 87 → tg@nicevpn123
+  password: tEO1As10EffDW5svXAwgvb
+  port: 2562
+  server: 77.105.140.135
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: /
+  name: 🇷🇺 RU 88 → tg@nicevpn123
+  network: grpc
+  port: 32740
+  server: 5.42.80.252
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 433f1111-b780-4eae-b7e7-d7823b09e701
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 89 → tg@nicevpn123
+  password: u6RYZyNId5RmoWTNTum0nz
+  port: 8234
+  server: 185.229.65.157
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 9 → tg@nicevpn123
+  password: UTJA57ypk2XKQpnm
+  port: 9033
+  server: 217.30.10.68
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 90 → tg@nicevpn123
+  password: oog65JXEql48VTve79V89g
+  port: 61992
+  server: 212.113.106.76
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 91 → tg@nicevpn123
+  password: VRKnPTULDqxaExI5yLJjoc
+  port: 32025
+  server: 92.246.136.190
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 92 → tg@nicevpn123
+  password: cg0KkMjbGdJEh
+  port: 998
+  server: 212.192.9.220
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 93 → tg@nicevpn123
+  port: 443
+  server: 45.137.155.195
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 49c76bcf-3a58-43df-b1d4-2bffe9ca03b5
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 94 → tg@nicevpn123
+  network: ws
+  port: 8000
+  server: mdlzz.vbdf.lol
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 94e070a5-fc29-49bf-a1c3-11f3ef2df33d
+  ws-opts:
+    headers:
+      Host: mdlzz.vbdf.lol
+    path: /?ed=512
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 95 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: ca-full.privateip.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 8da41d0a-0454-4ced-a7e2-4de2a3dcc525
+  ws-opts:
+    headers:
+      Host: ca-full.privateip.net
+    path: /RACEVPN
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺 RU 96 → tg@nicevpn123
+  password: hnRXsWFscwBEAvGnqQQoU2
+  port: 25091
+  server: 94.142.138.56
+  type: ss
+  udp: true
+- name: 🇷🇺 RU 97 → tg@nicevpn123
+  network: ws
+  password: maHanVPpN
+  port: 80
+  server: 185.176.24.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: '%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
+- client-fingerprint: random
+  name: 🇨🇾[www.v2nodes.com] vless-CY-1...
+  network: ws
+  port: 2087
+  server: 194.55.166.65
+  servername: free.cndyw.ggff.net
+  tls: true
+  type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  ws-opts:
+    headers:
+      Host: free.cndyw.ggff.net
+    path: pyip=bpb.yousef.isegaro.com
+- client-fingerprint: random
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
+  network: ws
+  port: 443
+  server: 109.120.134.243
+  servername: free.cndyw.ggff.net
+  tls: true
+  type: vless
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  ws-opts:
+    headers:
+      Host: free.cndyw.ggff.net
+    path: pyip=bpb.yousef.isegaro.com
 - client-fingerprint: random
   encryption: none
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🏳[www.v2nodes.com] vless- #4'
   network: grpc
   port: 443
   server: xsru1.ddnsfree.com
@@ -475,7 +1573,7 @@ proxies:
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - client-fingerprint: random
   encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
   network: ws
   port: 8443
   server: 194.87.143.165
@@ -487,7 +1585,7 @@ proxies:
     headers:
       Host: 194.87.143.165
     path: /
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
   network: ws
   password: humanity
   port: 2053
@@ -499,44 +1597,216 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- alterId: 64
+- client-fingerprint: unsafe
+  name: '白俄罗斯 001 #1'
+  network: ws
+  port: 8443
+  server: 95.130.84.36
+  servername: aio.eth0.dpdns.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8d42d29a-ed53-4684-a9ff-6b33826149de
+  ws-opts:
+    headers:
+      Host: aio.eth0.dpdns.org
+    path: /aioproxybot/94.23.144.99-2053
+- alterId: 0
   cipher: auto
   name: '俄罗斯 006 #1'
   network: ws
-  port: 443
-  server: 185.173.94.213
-  skip-cert-verify: false
-  tls: true
+  port: 16231
+  server: 31.129.105.239
+  skip-cert-verify: true
   type: vmess
-  uuid: 8d78c2a8-acaa-467d-9234-d2606624506d
+  uuid: 793e03cc-2b08-4d1b-bb0b-592567d19043
   ws-opts:
     headers:
-      Host: www.69296134.xyz
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /
 - alterId: 0
   cipher: auto
   name: '俄罗斯 007 #1'
+  network: ws
+  port: 80
+  server: 195.54.174.18
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6d6f413f-3dc2-4d02-8d35-8b45e39feb72
+  ws-opts:
+    headers:
+      Host: 195.54.174.18
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '俄罗斯 008 #1'
+  network: http
+  port: 26743
+  server: 194.87.248.27
+  skip-cert-verify: true
+  type: vmess
+  uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
+- alterId: 64
+  cipher: auto
+  name: '俄罗斯 009 #1'
+  network: http
+  port: 37672
+  server: 176.119.159.245
+  skip-cert-verify: true
+  type: vmess
+  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
+- client-fingerprint: chrome
+  name: '俄罗斯 010 #1'
+  network: ws
+  port: 8443
+  server: ee10.zazazuza.ru
+  servername: fdghyt.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  ws-opts:
+    headers:
+      Host: fdghyt.com
+    path: /vpn-wss/fluxor/59011/
+- client-fingerprint: chrome
+  name: '俄罗斯 011 #1'
+  network: grpc
+  port: 9881
+  server: 176.109.111.7
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- name: '俄罗斯 012 #1'
+  network: ws
+  port: 8443
+  server: 77.72.85.246
+  servername: fdghyt.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  ws-opts:
+    headers:
+      Host: fdghyt.com
+    path: /vpn-wss/fluxor/59011/security=tls
+- client-fingerprint: random
+  name: '俄罗斯 013 #1'
+  network: grpc
+  port: 9881
+  server: 176.109.111.154
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: chrome
+  name: 未知 VLESS-130
+  network: grpc
+  port: 9881
+  server: 176.108.245.167
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: random
+  name: '俄罗斯 015 #1'
+  network: grpc
+  port: 9892
+  server: 176.108.241.126
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: random
+  name: '俄罗斯 016 #1'
+  network: grpc
+  port: 443
+  server: 45.93.201.119
+  servername: vir2albridge.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: f778d2eb-1bec-4d19-b0bf-0a5e39feed4f
+- name: '俄罗斯 017 #1'
+  network: ws
+  port: 443
+  server: fbsv6.guardora.pro
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  ws-opts:
+    headers:
+      Host: fbsv6.guardora.pro
+    path: /wsfp=chrome
+- client-fingerprint: random
+  name: '俄罗斯 018 #1'
+  network: grpc
+  port: 9881
+  server: 176.109.104.103
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- client-fingerprint: chrome
+  name: '俄罗斯 019 #1'
+  network: grpc
+  port: 9830
+  server: 176.108.246.110
+  servername: dl.google.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- alterId: 0
+  cipher: auto
+  name: 未知5
   network: tcp
   port: 22324
   server: 5.188.190.252
   skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: HK4
+  name: '俄罗斯 021 #1'
   network: tcp
   port: 22324
   server: 89.223.95.77
   skip-cert-verify: true
-  tls: true
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - client-fingerprint: chrome
-  encryption: none
-  name: 🇷🇺RU_13
+  name: '俄罗斯 022 #1'
   network: xhttp
-  packet-encoding: xudp
   port: 2053
   server: 185.141.227.180
   servername: dismissaltree.net
@@ -546,31 +1816,7 @@ proxies:
   type: vless
   udp: true
   uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  ws-opts:
-    headers:
-      Host: dismissaltree.net
-    path: /api/v1/upload
-  xhttp-opts:
-    host: dismissaltree.net
-    mode: auto
-    path: /api/v1/upload
-- client-fingerprint: chrome
-  name: '俄罗斯 010 #1'
-  network: ws
-  port: 14443
-  server: 95.163.232.171
-  servername: 95.163.232.171
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
-  ws-opts:
-    headers:
-      Host: 95.163.232.171
-    path: /ws
-- name: '俄罗斯 011 #1'
+- name: '俄罗斯 023 #1'
   network: tcp
   port: 13423
   server: 31.15.16.154
@@ -580,7 +1826,7 @@ proxies:
   type: vless
   udp: true
   uuid: 4a6013ef-36ed-4db7-9fde-f9a4f3171acf
-- name: '俄罗斯 012 #1'
+- name: '俄罗斯 024 #1'
   network: tcp
   port: 875
   server: 31.130.149.165
@@ -590,35 +1836,50 @@ proxies:
   type: vless
   udp: true
   uuid: 4a9d6057-985a-4531-851c-5b4db77b0409
-- client-fingerprint: chrome
-  name: '俄罗斯 013 #1'
-  network: ws
-  port: 8445
-  server: 81.94.148.178
-  servername: 2.26.148.147.tyr-agentstvo.tech
+- name: '俄罗斯 025 #1'
+  network: grpc
+  port: 8081
+  server: 194.58.42.166
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 7836b28e-8451-4596-ad3e-e3601b2335ba
-  ws-opts:
-    headers:
-      Host: 2.26.148.147.tyr-agentstvo.tech
-    path: /websocket
+  uuid: 57f03653-3af9-4f11-895b-23672338b0ac
+- name: '俄罗斯 026 #1'
+  network: grpc
+  port: 8080
+  server: 46.254.17.46
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57f03653-3af9-4f11-895b-23672338b0ac
+- name: '俄罗斯 027 #1'
+  network: grpc
+  port: 8081
+  server: 46.254.17.46
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57f03653-3af9-4f11-895b-23672338b0ac
 - client-fingerprint: chrome
-  name: '俄罗斯 014 #1'
-  network: xhttp
+  flow: xtls-rprx-vision
+  name: '俄罗斯 028 #1'
+  network: tcp
   port: 443
-  server: 37.220.86.155
-  servername: uk-cf.aba-hum.store
+  server: 188.225.76.197
+  servername: cdn-pl-exit.extazy.net
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 8f2a6194-1748-4ec7-9c5f-8ad504818aa3
-- name: '俄罗斯 015 #1'
+  uuid: 5cb9410c-1b31-48dc-b33f-cacd93722ffd
+- name: '俄罗斯 029 #1'
   network: ws
   port: 4100
   server: 147.45.253.97
@@ -633,7 +1894,20 @@ proxies:
     headers:
       Host: live.ok.ru
     path: /v1
-- name: '俄罗斯 016 #1'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '俄罗斯 030 #1'
+  network: tcp
+  port: 443
+  server: 193.233.231.30
+  servername: rus40.roscomsosal.de
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a7ec0f75-880b-41c3-ba83-7d85b4861b3b
+- name: '俄罗斯 031 #1'
   network: tcp
   port: 443
   server: 89.208.113.16
@@ -643,7 +1917,37 @@ proxies:
   type: vless
   udp: true
   uuid: adce7c2a-3191-49ae-b61c-9b8258ea1b0e
-- name: '俄罗斯 017 #1'
+- name: '俄罗斯 032 #1'
+  network: grpc
+  port: 2053
+  server: 176.114.86.163
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4090350-b91f-4920-b5c0-c3ffd2798534
+- name: '俄罗斯 033 #1'
+  network: grpc
+  port: 8081
+  server: 176.114.86.163
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4090350-b91f-4920-b5c0-c3ffd2798534
+- name: '俄罗斯 034 #1'
+  network: grpc
+  port: 8081
+  server: 176.114.86.222
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4090350-b91f-4920-b5c0-c3ffd2798534
+- name: '俄罗斯 035 #1'
   network: tcp
   port: 443
   server: 109.120.177.84
@@ -655,7 +1959,8 @@ proxies:
   udp: true
   uuid: ba9ddd0d-5ffd-4d40-b76d-df32ecb092a1
 - client-fingerprint: chrome
-  name: '俄罗斯 018 #1'
+  flow: ''
+  name: '俄罗斯 036 #1'
   network: ws
   port: 443
   server: 217.19.122.200
@@ -671,22 +1976,22 @@ proxies:
       Host: fbsv6.guardora.pro
     path: /ws
 - client-fingerprint: chrome
-  name: '俄罗斯 019 #1'
+  name: '俄罗斯 037 #1'
   network: ws
   port: 443
-  server: 78.159.246.110
-  servername: fbsv6.guardora.pro
+  server: 95.129.236.239
+  servername: 3ds.login.opendns.stream
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  uuid: cc2b6933-0a5f-4688-8260-608b53ea1843
   ws-opts:
     headers:
-      Host: fbsv6.guardora.pro
-    path: /ws
-- name: '俄罗斯 020 #1'
+      Host: 3ds.login.opendns.stream
+    path: /stream/615428/socket
+- name: '俄罗斯 038 #1'
   network: tcp
   port: 443
   server: 95.182.114.74
@@ -698,7 +2003,7 @@ proxies:
   uuid: d5948eae-ef1b-45e4-81aa-d27076b56530
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '俄罗斯 021 #1'
+  name: '俄罗斯 039 #1'
   network: tcp
   port: 52006
   server: 94.26.249.216
@@ -709,7 +2014,7 @@ proxies:
   type: vless
   udp: true
   uuid: e76dc9ca-b09f-07d0-bd4f-316ee0dce041
-- name: '俄罗斯 022 #1'
+- name: '俄罗斯 040 #1'
   network: tcp
   port: 8888
   server: 45.13.119.219
@@ -719,7 +2024,7 @@ proxies:
   type: vless
   udp: true
   uuid: eb77be10-9d9e-527b-a78d-8caaf58992d6
-- name: '俄罗斯 023 #1'
+- name: '俄罗斯 041 #1'
   network: ws
   port: 443
   server: 91.210.169.181
@@ -735,7 +2040,7 @@ proxies:
       Host: wstg.datasynctrue.online
     path: /api/connect
 - client-fingerprint: chrome
-  name: '俄罗斯 024 #1'
+  name: '俄罗斯 042 #1'
   network: ws
   port: 2087
   server: 194.76.18.126
@@ -752,87 +2057,59 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 025 #1'
+  name: 🇷🇺_俄罗斯_275
   network: ws
-  port: 80
-  server: 195.54.174.18
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6d6f413f-3dc2-4d02-8d35-8b45e39feb72
-  ws-opts:
-    headers:
-      Host: 195.54.174.18
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '俄罗斯 026 #1'
-  network: http
-  port: 26743
-  server: 194.87.248.27
-  skip-cert-verify: true
-  type: vmess
-  uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
-- alterId: 64
-  cipher: auto
-  name: '俄罗斯 027 #1'
-  network: http
-  port: 37672
-  server: 176.119.159.245
-  skip-cert-verify: true
-  type: vmess
-  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
-- alterId: 0
-  cipher: auto
-  name: '俄罗斯 028 #1'
-  network: ws
-  port: 16231
-  server: 31.129.105.239
-  skip-cert-verify: true
-  type: vmess
-  uuid: 793e03cc-2b08-4d1b-bb0b-592567d19043
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /
-- client-fingerprint: random
-  name: '俄罗斯 029 #1'
-  network: grpc
-  port: 2053
-  server: nl.gruztrack.online
-  servername: nl.gruztrack.online
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 89f8f53c-2ec5-11f1-bffe-46c4782ac1a7
-- client-fingerprint: random
-  name: '俄罗斯 030 #1'
-  network: grpc
   port: 443
-  server: 45.93.201.119
-  servername: vir2albridge.com
-  skip-cert-verify: false
-  tfo: false
+  server: renderer-stream-1-832.mirra.now
+  servername: renderer-stream-1-832.mirra.now
+  skip-cert-verify: true
   tls: true
-  type: vless
+  type: vmess
   udp: true
-  uuid: f778d2eb-1bec-4d19-b0bf-0a5e39feed4f
-- name: '俄罗斯 031 #1'
-  network: ws
-  port: 8443
-  server: ee10.zazazuza.ru
-  servername: fdghyt.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
   ws-opts:
     headers:
-      Host: fdghyt.com
-    path: /vpn-wss/fluxor/59011/fp=chrome
+      Host: renderer-stream-1-832.mirra.now
+    path: /api/v1/gpu-stream/socket
+- client-fingerprint: chrome
+  name: 🇷🇺_俄罗斯_276
+  network: ws
+  port: 443
+  server: 217.19.122.200
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  ws-opts:
+    path: /ws
+- client-fingerprint: chrome
+  name: 🇷🇺_俄罗斯_277
+  network: ws
+  port: 443
+  server: 81.94.148.214
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  ws-opts:
+    path: /ws
+- client-fingerprint: chrome
+  name: NL【机场推荐：https://a9a.xyz】5
+  network: ws
+  port: 443
+  server: fbsv6.guardora.pro
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  ws-opts:
+    path: /ws
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺_RU_俄罗斯
@@ -846,6 +2123,27 @@ proxies:
   type: vless
   udp: true
   uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
+- cipher: chacha20-ietf-poly1305
+  name: '🏳[www.v2nodes.com] ss- #1'
+  password: VVlAff77CnAU43Aoc5j15Y
+  port: 5112
+  server: 90.156.203.62
+  type: ss
+- client-fingerprint: chrome
+  name: '俄罗斯 #11'
+  network: ws
+  port: 443
+  server: fbsv6.guardora.pro
+  servername: fbsv6.guardora.pro
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  ws-opts:
+    headers:
+      Host: fbsv6.guardora.pro
+    path: /ws
 - name: Telegram 🆔@cnetvpn 🇷🇺
   obfs: salamander
   obfs-password: 09p333uviv2qal0y
@@ -866,21 +2164,11 @@ proxies:
   sni: ru1.sferavpn.pro
   tls: false
   type: hysteria2
-- name: RU俄罗斯
-  network: ws
-  port: 8880
-  server: 155.46.167.30
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime50.workers.dev
-    path: '%2F'
 - alpn:
   - http/1.1
   client-fingerprint: chrome
-  name: 未知 VLESS-150
+  encryption: none
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   network: ws
   port: 443
   server: fbsv6.guardora.pro
@@ -892,33 +2180,43 @@ proxies:
   ws-opts:
     headers:
       Host: fbsv6.guardora.pro
-    path: '%2Fws'
-- client-fingerprint: random
-  name: RU VLESS-144
+    path: /ws
+- alpn:
+  - http/1.1
+  client-fingerprint: qq
+  encryption: mlkem768x25519plus.native.0rtt.fsGtiqlb1xuwUZF-iPrG-9aedIIVJyMnPCNu9EiNrMKVfwcDmvBNvhRpcaxvSMuhMjDI1qh0W1wI1rRzA3OB_TKFqNomhKW841Na5qKCCFYAGRENYXCVY0qqLaU1a9gqdak6T2LG9aUtXLdY_sY1jxI5JOhcNtc6lQGIj6NVHPOa5Zd3FhdRGUo8aFopsJJUaCePlkWN4UxrzUA5geFtM1g7WcVNiFpuV_vOEQKPgHQNgwAdWYGZWfVIp6TJTfk3HYvChZgjbUkeU9y6t8A9H2Ut9QiTqjA-z1IV8CgUUNa7PvuHYOUgsLipX9BeFYOf4VSpwsmMtWtywIN2LyBU69wjyhMPmEwGOdGWdvGyVJWQ4xULffWEpvlCBBCRSJAQGyIMHPVdYuU7ALzE5dgM_Aodphek1LLAcAx3ZWIAdtowSvKD9GwuPIotC-TFNaa60qCHbsW1YFQS1CJDGxDIUCYbwKGgIqM4__BYhtDIrGtmltQKyjxJJrI3ndKrHaJb4tjDc2dJ1yO_Lom8K8mZfpVM9qg0xIE3aqeBaSFIxiueWzVf4uy0FISgxip0pzw7E4tjepIXkXbI1ZkMG2VtPmwr0wR4fWddPPV-rdklaeNzonguCspC9-JEwTjFQ3nG5yXPrLm5LcovgjIHPylwDqsQiqN2J8ESI9xOQcKJ-JVrSzZwnEhO8iZ4wVhm_Ga7qIk-TDK23JDHRRJAkvy7WYWtCluPIlXK_upU_gN-BAUrC3V81AvHQqWnBeopVaGppFo7QZd9JpoXB_RqqpXGRfXGHptsPhGUR0h-7dYnEFR_MCIV_jNLCwy2U2UDd2TBBODKF5fEPisCoYMiXQrKhhhacZqL5Io5UpWYB9lmH9VFyHwTBFfJuAuYrhcKx_Ag5kNJoBJDRTiMDifBS7MewSSrzeWCoIuiK2Q5BGodsSZAdcbGs5mySwsmQBwQWCqgDObMYzeHMxu-IksLlLKMCVQET5smRdRTkgtJclAvsuB9l4rDkPcVsKCCH8ktxGO6aSPLS4ib2Hc32qNgKASVRZYfyGM6GoN5c9hsa_QVtfa4ANqaqMzJmbJaxcA2FmsHXhaG6UXGqDd32hofLjt1NyUH8DjAIksdA2Ycy5xz3yRZCIIeKHaUR5s9uoQWfZYYMYJfl6o6ohmEXrScGGN_BYgb1GSkX5OcODGDKBVdPEd20IQ62je4pYUJzjtw66MkZUuS2_VRlni1aqNz4JB3sKpAtDyMqYApa-x2v5YU1tdH1BQkYmty16pqE1w4akVZ-rJOQwnJlrY6-1gz2PtjWHQoWju_31E92WYYwoMBSPkEhgCcbTys0FAD6sxu6Mh2UrSh0AZIX3mdXWk2IlmSd7QuoFuNEClwRCiNpokoclMkyvOe7oEFa6xIGvGMGnc2RzkmCyXBjyZgIgussYtl8ZplgcOAiAZzf-sM7-XItKlWAABWituyNyOiL_FtLkGgrpYw4NjJ_iZtoJaVpkGcALwtnrSWv1M9yvMV4wFlkDiyOyaWERidV5s75sA0l_ADPKpMd0_DPh_PN_2luzFs4QMrudBp2KJEE8Jn5Ob0_dk
+  name: 🇷🇺 145  | ⬇️ 23KB/s
   network: ws
+  packet-encoding: xudp
   port: 443
-  server: tr3.wba-pn.ru
-  servername: tr3.wba-pn.ru
+  server: ware.tunnelgate.org
+  servername: ware.tunnelgate.org
+  skip-cert-verify: false
   tls: true
   type: vless
-  uuid: af2a0c18-b08c-471f-baa3-259ac2ce3a85
-  ws-opts:
-    path: '%2F'
-- name: 俄罗斯_2
-  network: ws
-  port: 14443
-  server: 95.163.232.171
-  servername: media-se.compressor.work
-  tls: true
-  type: vless
-  uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
+  udp: true
+  uuid: 4deb9957-e037-4ae2-8892-da357cc6f99f
   ws-opts:
     headers:
-      Host: media-se.compressor.work
-    path: /ws
+      Host: ware.tunnelgate.org
+    path: /ws/v1/ru
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 'RU俄罗斯 #2'
+  network: grpc
+  port: 9892
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: '!!str aabb'
+  server: 176.108.241.126
+  servername: dl.google.com
+  tls: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
 - client-fingerprint: chrome
-  name: 🇷🇺RU_4
-  network: raw
+  name: 🇷🇺RU_1
+  network: tcp
   port: 26424
   reality-opts:
     public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
@@ -928,57 +2226,48 @@ proxies:
   tls: true
   type: vless
   uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-- grpc-opts:
-    grpc-service-name: grpc-tunnel
-  name: 俄罗斯
-  network: grpc
-  port: 9881
-  server: 176.109.106.182
-  tls: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  ws-opts:
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇺RU_18
-  password: 9qGcNiZj4uCi7DGSjxlg5Q
-  port: 2055
-  server: 62.181.53.170
+- cipher: aes-256-gcm
+  name: 🇷🇺RU_11
+  password: 81a20429165df87e
+  port: 20998
+  server: 195.133.23.200
   type: ss
-- client-fingerprint: random
-  name: 'RU俄罗斯 #3'
+- client-fingerprint: chrome
+  name: '俄罗斯 #10'
   network: ws
   port: 443
-  server: fbsv6.guardora.pro
+  server: 78.159.246.110
   servername: fbsv6.guardora.pro
   tls: true
   type: vless
   uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
   ws-opts:
     path: '%2Fws'
+- name: 🇷🇺RU_10
+  password: 41edb44c8e
+  port: 11592
+  server: srv-17e124.21freedom.net
+  skip-cert-verify: true
+  sni: srv-17e124.21freedom.net
+  tls: false
+  type: hysteria2
+- cipher: aes-256-gcm
+  name: 🇷🇺RU_12
+  password: 895b4b796a357570
+  port: 20998
+  server: 46.17.41.166
+  type: ss
 - client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: RU【机场推荐：https://a9a.xyz】20
-  port: 443
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: 'RU俄罗斯 #10'
+  network: grpc
+  port: 9891
   reality-opts:
-    public-key: -GzslqnFGVkpNJvcZt7uKnMGOn8R2v_z6sLOtmci6B0
-    short-id: '!!str 2fff0b51ab07386a'
-  server: 194.55.239.148
-  servername: my.selectel.ru
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: '!!str aa'
+  server: 45.132.176.161
+  servername: dl.google.com
   tls: true
   type: vless
-  udp: true
-  uuid: ff65fb9b-552f-426f-8321-4c85024377e6
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: RU【机场推荐：https://a9a.xyz】26
-  port: 443
-  reality-opts:
-    public-key: EroArXWVxIMXclqgp4WNolB5vtfWSZEF1wjb_t1QrBE
-    short-id: '!!str a150dcf9'
-  server: lk-1.yes-on.ru
-  servername: lk-1.yes-on.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6a3c68b1-d4b8-0004-975f-a01da4184225
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
