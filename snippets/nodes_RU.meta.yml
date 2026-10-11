@@ -327,153 +327,6 @@ proxies:
   skip-cert-verify: true
   type: ss
   udp: true
-- name: 🇷🇺RU_2|1.1MB/s
-  port: 1446
-  server: 46.29.166.134
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇷🇺RU_4|2.5MB/s
-  port: 443
-  server: 178.219.43.226
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: 未命名
-  network: xhttp
-  packet-encoding: xudp
-  port: 2053
-  server: dismissaltree.net
-  servername: dismissaltree.net
-  sub_tag: B007-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  ws-opts:
-    headers:
-      Host: dismissaltree.net
-    path: /api/v1/upload
-  xhttp-opts:
-    mode: auto
-    path: /api/v1/upload
-    reuse-settings:
-      c-max-reuse-times: 64-128
-      max-concurrency: 16-32
-      max-connections: '0'
-    x-padding-bytes: 100-1000
-  xudp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇷🇺RU_5|698KB/s|B007-260618 01 #1'
-  network: xhttp
-  packet-encoding: xudp
-  port: 2053
-  server: 185.141.227.180
-  servername: dismissaltree.net
-  sub_tag: B007-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  xhttp-opts:
-    host: dismissaltree.net
-    mode: auto
-    path: /api/v1/upload
-  xudp: true
-- alpn:
-  - h2
-  - +http/1.1
-  client-fingerprint: firefox
-  name: '🇷🇺RU_6|830KB/s|P002-260618 01 #1'
-  network: xhttp
-  port: 2053
-  server: 78.159.250.84
-  servername: summerculture.net
-  sub_tag: P002-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  xhttp-opts:
-    host: summerculture.net
-    mode: auto
-    path: /api/v1/upload
-- alpn:
-  - http/1.1
-  - h2
-  client-fingerprint: firefox
-  encryption: none
-  name: '🇷🇺 俄罗斯 | RUS #3'
-  network: xhttp
-  packet-encoding: xudp
-  port: 2053
-  server: 78.159.246.85
-  servername: fitindoor.net
-  sub_tag: S001-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
-  xhttp-opts:
-    host: fitindoor.net
-    mode: auto
-    path: /api/v1/upload
-    x-padding-bytes: 100-1000
-  xudp: true
-- cipher: aes-256-gcm
-  name: '🇷🇺RU_11|2.0MB/s|K001-260618 01 #1'
-  password: 4938e975724d0ed1
-  port: 40440
-  server: 194.87.196.13
-  sub_tag: K001-260618
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '🇷🇺RU_12|1.6MB/s|K001-260618 01 #1'
-  password: 6b39ae3234dfd68b
-  port: 20221
-  server: 46.17.42.141
-  sub_tag: K001-260618
-  type: ss
-  udp: true
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: '🇷🇺RU_14|814KB/s|S004-260618 01 #1'
-  network: xhttp
-  packet-encoding: xudp
-  port: 2053
-  server: fitindoor.net
-  servername: fitindoor.net
-  sub_tag: S004-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 95a608b6-bff1-4e10-bb61-0a39f221bb7d
-  xhttp-opts:
-    host: fitindoor.net
-    mode: auto
-    path: /api/v1/upload
-    reuse-settings:
-      c-max-reuse-times: 64-128
-      max-concurrency: 16-32
-      max-connections: '0'
-    sc-max-each-post-bytes: 1000000
-    sc-min-posts-interval-ms: 30
-    x-padding-bytes: 100-1000
-  xudp: true
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: grpc-tunnel
@@ -714,6 +567,12 @@ proxies:
   type: vless
   udp: true
   uuid: ec6f8131-7a5d-4117-9627-6fb2b39ae0da
+- name: 🇷🇺 机场推荐:dafei.de 俄罗斯 01
+  port: 443
+  server: 178.219.43.226
+  skip-cert-verify: true
+  tls: true
+  type: http
 - flow: xtls-rprx-vision
   name: 🇸🇪SE_1|⬇️2.7MB/s
   network: tcp
@@ -1678,23 +1537,6 @@ proxies:
   type: vless
   udp: true
   uuid: 4dc0a354-1fc7-433f-9b58-0fd017b0a6b3
-- client-fingerprint: qq
-  name: 🇷🇺 俄罗斯 | RUS 2
-  network: xhttp
-  port: 8468
-  reality-opts:
-    public-key: mLNQ8cirYSUCtYa5485RnCPzrmp2OfkI0ENmweDxJQc
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 188.225.77.143
-  servername: ads.x5.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 40c12ce6-b1c6-424e-862e-010a4585ff52
-  xhttp-opts:
-    host: ads.x5.ru
-    mode: auto
-    path: /xh
 - client-fingerprint: ios
   flow: xtls-rprx-vision
   name: 🇷🇺_俄罗斯_62
@@ -1847,6 +1689,12 @@ proxies:
     headers:
       Host: 194.87.143.165
     path: /
+- name: 🇷🇺RU_2|1.1MB/s
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  tls: true
+  type: http
 - client-fingerprint: chrome
   name: 'RU俄罗斯 #3'
   network: ws
@@ -1905,6 +1753,19 @@ proxies:
   type: vless
   udp: true
   uuid: 86096188-0ece-41af-922d-792c5f96c3ad
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: RU【机场推荐：https://a9a.xyz】33
+  port: 443
+  reality-opts:
+    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
+    short-id: '!!str a9dc98a7dc87a7dc'
+  server: kozyavka.yandex-api.com
+  servername: kozyavka.yandex-api.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
 - name: RU【机场推荐：https://a9a.xyz】38
   network: ws
   port: 443
