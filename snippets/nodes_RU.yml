@@ -33,17 +33,41 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: 未知6
+  name: '🇷🇺RU俄罗斯 #1'
   network: ws
   port: 443
   server: renderer-stream-2-62.mirra.now
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vmess
   udp: true
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     path: /api/v1/gpu-stream/socket
+- cipher: aes-256-gcm
+  name: 'RU俄罗斯(v2clash.blog 2026-10.10更... #2'
+  password: a2c044fe22258a18
+  port: 40126
+  server: 45.129.2.107
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '🇷🇺RU_11|2.0MB/s|K001-260618 01 #1'
+  password: 4938e975724d0ed1
+  port: 40440
+  server: 194.87.196.13
+  sub_tag: K001-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '🇷🇺RU_12|1.6MB/s|K001-260618 01 #1'
+  password: 6b39ae3234dfd68b
+  port: 20221
+  server: 46.17.42.141
+  sub_tag: K001-260618
+  type: ss
+  udp: true
 - name: 🇷🇺 RU 1 → tg@nicevpn123
   password: 71ab3866-4c8b-4a0b-a4bd-a64f110afe0b
   port: 443
@@ -896,21 +920,18 @@ proxies:
   udp: true
   ws-opts:
     path: '%2525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252Fmahan'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
-  network: ws
-  password: humanity
-  port: 2053
-  server: 185.114.72.31
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 006 #1'
+  name: '俄罗斯 004 #1'
+  network: tcp
+  port: 2020
+  server: 95.181.162.100
+  skip-cert-verify: true
+  type: vmess
+  uuid: 67744e32-4a46-4805-d42c-70391bdb8dc5
+- alterId: 0
+  cipher: auto
+  name: '俄罗斯 005 #1'
   network: ws
   port: 16231
   server: 31.129.105.239
@@ -923,85 +944,44 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 007 #1'
-  network: ws
-  port: 80
-  server: 195.54.174.18
-  skip-cert-verify: true
-  type: vmess
-  uuid: 6d6f413f-3dc2-4d02-8d35-8b45e39feb72
-  ws-opts:
-    headers:
-      Host: 195.54.174.18
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '俄罗斯 008 #1'
-  network: http
-  port: 26743
-  server: 194.87.248.27
-  skip-cert-verify: true
-  type: vmess
-  uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
-- alterId: 64
-  cipher: auto
-  name: '俄罗斯 009 #1'
-  network: http
-  port: 37672
-  server: 176.119.159.245
-  skip-cert-verify: true
-  type: vmess
-  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
-- alterId: 0
-  cipher: auto
-  name: 未知5
-  network: tcp
-  port: 22324
-  server: 5.188.190.252
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: '俄罗斯 021 #1'
-  network: tcp
-  port: 22324
-  server: 89.223.95.77
-  skip-cert-verify: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺_俄罗斯_275
+  name: 🇷🇺_俄罗斯_209
   network: ws
   port: 443
-  server: renderer-stream-1-832.mirra.now
-  servername: renderer-stream-1-832.mirra.now
+  server: 5.188.26.85
   skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
-  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: renderer-stream-1-832.mirra.now
+      Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- cipher: chacha20-ietf-poly1305
-  name: '🏳[www.v2nodes.com] ss- #1'
-  password: VVlAff77CnAU43Aoc5j15Y
-  port: 5112
-  server: 90.156.203.62
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺_俄罗斯_212
+  network: ws
+  port: 443
+  server: 80.240.252.241
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - cipher: aes-256-gcm
-  name: 🇷🇺RU_11
-  password: 81a20429165df87e
-  port: 20998
-  server: 195.133.23.200
+  name: '🇷🇺 俄罗斯 | RUS #1'
+  password: 4938e975724d0ed1
+  port: 40440
+  server: 194.87.196.107
   type: ss
+  udp: true
 - cipher: aes-256-gcm
-  name: 🇷🇺RU_12
-  password: 895b4b796a357570
-  port: 20998
-  server: 46.17.41.166
+  name: 🇷🇺RU_7
+  password: 6b39ae3234dfd68b
+  port: 50660
+  server: 46.17.42.141
   type: ss

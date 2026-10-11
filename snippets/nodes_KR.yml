@@ -1,32 +1,7 @@
 proxies:
-- client-fingerprint: chrome
-  name: 🇰🇷KR_25
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
-  skip-cert-verify: true
-  sni: 154.90.62.70
-  sub_tag: A004-260618
-  type: trojan
-  udp: true
 - alterId: '0'
   cipher: auto
-  name: 🇰🇷KR_22|629KB/s|C002-260622 01
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  server: 140.238.2.250
-  skip-cert-verify: false
-  sub_tag: C002-260622
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  xudp: true
-- alterId: '0'
-  cipher: auto
-  name: 🇰🇷KR_23|343KB/s|C002-260622 01
+  name: '🇰🇷KR_2|237KB/s|C002-260622 01 #1'
   network: raw
   packet-encoding: xudp
   port: 443
@@ -40,47 +15,7 @@ proxies:
   xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR_24|500KB/s|A004-260618 01
-  network: none
-  packet-encoding: xudp
-  port: 443
-  server: 140.238.2.250
-  skip-cert-verify: false
-  sub_tag: A004-260618
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  xudp: true
-- alterId: 0
-  cipher: auto
-  name: 未知163 525.5KB/s
-  network: ws
-  packet-encoding: xudp
-  port: 80
-  server: 132.145.80.230
-  skip-cert-verify: true
-  sub_tag: B007-260618
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    path: /cctv13.m3u8
-  xudp: true
-- client-fingerprint: chrome
-  name: 🇰🇷KR_30|497KB/s|A004-260618 01
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
-  skip-cert-verify: true
-  sub_tag: A004-260618
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_33|480KB/s|M002-260618 01
+  name: '🇰🇷KR_7|524KB/s|M002-260618 01 #1'
   network: ws
   packet-encoding: xudp
   port: 80
@@ -97,21 +32,295 @@ proxies:
       Host: kr02.a0a.xyz
     path: /cctv13.m3u8
   xudp: true
-- cipher: aes-256-gcm
-  name: 🇰🇷KR_35|468KB/s|B007-260618 01
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 141.164.45.187
-  sub_tag: B007-260618
-  type: ss
+- alterId: '0'
+  cipher: auto
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: '🇰🇷KR_9|775KB/s|C002-260622 01 #1'
+  network: http
+  packet-encoding: xudp
+  port: 80
+  server: 217.142.138.61
+  skip-cert-verify: false
+  sub_tag: C002-260622
+  tls: false
+  type: vmess
   udp: true
-- cipher: aes-256-gcm
-  name: 🇰🇷KR_37|131KB/s|A001-260618 01
-  password: faBAoD54k87UJG7
-  port: 2376
-  server: 141.164.45.187
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇰🇷KR_10|417KB/s|A004-260618 01 #1'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_12|75KB/s|A004-260618 01 #1'
+  network: none
+  packet-encoding: xudp
+  port: 443
+  server: 140.238.2.250
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_23|107KB/s|B007-260618 01 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: 132.145.80.230
+  skip-cert-verify: false
+  sub_tag: B007-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers: {}
+    path: /cctv13.m3u8
+  xudp: true
+- client-fingerprint: chrome
+  name: '未知 TROJAN-118 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: main-fawn.rooster465.autos
+  skip-cert-verify: true
+  sni: main-fawn.rooster465.autos
+  sub_tag: M002-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-127
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: pretty-rat.rooster465.autos
+  skip-cert-verify: true
+  sni: pretty-rat.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_31
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: engaging-toucan.rooster465.autos
+  skip-cert-verify: false
+  sni: engaging-toucan.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_35
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: noted-cougar.rooster465.autos
+  skip-cert-verify: true
+  sni: noted-cougar.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_37
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: optimum-snapper.rooster465.autos
+  skip-cert-verify: true
+  sni: optimum-snapper.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_55
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.34.131.153
+  skip-cert-verify: false
+  sni: pretty-rat.rooster465.autos
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_42
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: delicate-buck.rooster465.autos
+  skip-cert-verify: true
+  sni: delicate-buck.rooster465.autos
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_41
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.125.69.162
+  skip-cert-verify: false
+  sni: engaging-toucan.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_58
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.35.207.188
+  skip-cert-verify: false
+  sni: main-fawn.rooster465.autos
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_45
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.39.225.215
+  skip-cert-verify: true
+  sni: kind-stork.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '🇰🇷KR_44|377KB/s|A004-260618 01 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.35.168.225
+  skip-cert-verify: true
+  sni: noted-cougar.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_46
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 43.201.100.203
+  skip-cert-verify: true
+  sni: optimum-snapper.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-132
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: kind-stork.rooster465.autos
+  skip-cert-verify: true
+  sni: kind-stork.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_56
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 52.78.203.191
+  skip-cert-verify: false
+  sni: delicate-buck.rooster465.autos
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_69
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: working-tomcat.rooster465.autos
+  skip-cert-verify: true
+  sni: working-tomcat.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇰🇷KR_70
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: central-jawfish.rooster465.autos
+  skip-cert-verify: true
+  sni: central-jawfish.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-149
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: pure-kodiak.rooster465.autos
+  skip-cert-verify: true
+  sni: pure-kodiak.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-131
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: inviting-rabbit.rooster465.autos
+  skip-cert-verify: true
+  sni: inviting-rabbit.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '未知 TROJAN-126 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: glorious-lark.rooster465.autos
+  skip-cert-verify: true
+  sni: glorious-lark.rooster465.autos
   sub_tag: A001-260618
-  type: ss
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '🇰🇷[www.v2nodes.com] trojan-KR-... #16'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: fancy-skink.rooster465.autos
+  skip-cert-verify: true
+  sni: fancy-skink.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-127 | free-nodes
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: cunning-grub.rooster465.autos
+  skip-cert-verify: false
+  sni: cunning-grub.rooster465.autos
+  sub_tag: C001-260618
+  type: trojan
   udp: true
 - alterId: 0
   cipher: auto
@@ -465,46 +674,6 @@ proxies:
     headers:
       Host: mizban888.servecounterstrike.com
     path: /
-- alterId: 1
-  cipher: auto
-  name: '韩国 002 #1'
-  network: ws
-  port: 8888
-  server: 54.180.96.67
-  skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 54.180.96.67
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '韩国 003 #1'
-  network: ws
-  port: 443
-  server: fullaccesstokoreannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: '韩国 004 #1'
-  network: ws
-  port: 12889
-  server: gtm1.ktmwan.net
-  skip-cert-verify: true
-  type: vmess
-  uuid: 4941aa8d-07d2-408c-be2c-117debecba30
-  ws-opts:
-    headers:
-      Host: gtm1.ktmwan.net
-    path: /
 - alterId: 0
   cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
@@ -520,50 +689,71 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
-- name: 🇰🇷_韩国_27
-  password: 178c178666bb4ae5
-  port: 20007
-  server: ikr100b.zxom.eu.org
-  skip-cert-verify: true
-  sni: ikr100b.zxom.eu.org
-  type: trojan
-  udp: true
-- name: 🇰🇷 韩国 | KOR 4
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1580... #1'
+  password: ac9c0a7b
+  port: 49642
+  server: ce1fc2d8.krkt.hkssip.com
+  type: ss
+- name: 🇰🇷KR_68
+  network: tcp
   password: UX82473651
   port: 443
-  server: delicate-buck.rooster465.autos
+  server: full-egret.rooster465.autos
   skip-cert-verify: true
-  sni: delicate-buck.rooster465.autos
+  sni: full-egret.rooster465.autos
   type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷_韩国_97
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #23'
+  password: UX82473651
   port: 443
-  server: 140.238.2.250
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
-  password: TEzjfAYq2IjtuoS
-  port: 6697
-  server: 141.164.45.187
+  server: neutral-quail.rooster465.autos
+  sni: neutral-quail.rooster465.autos
+  type: trojan
+- name: 未知 TROJAN-101
+  password: UX82473651
+  port: 443
+  server: amazing-peacock.rooster465.autos
+  sni: amazing-peacock.rooster465.autos
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 52.79.212.191
   type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇰🇷 South Korea/Seoul [TG]
+  password: UsIv5aKJabiqnYtY8IfWd6FfgjzrJlfZ
+  port: 8388
+  server: 43.155.223.71
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1580...
+  password: ac9c0a7b
+  port: 49642
+  server: 211.174.113.172
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 韩国 | KOR 2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.202.57.168
+  type: ss
+  udp: true
 - alterId: 2
   cipher: auto
-  name: 🇰🇷 083  | ⬇️ 29KB/s
+  name: 🇰🇷 016  | ⬇️ 129KB/s
   network: tcp
   port: 11240
   server: silversbgfgov.vip40.wogbcnmnagfwgov.com
+  tls: false
   type: vmess
-  udp: true
   uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
 - alterId: 2
   cipher: auto
-  name: 🇰🇷 104  | ⬇️ 118KB/s
+  name: 🇰🇷 042  | ⬇️ 114KB/s
   network: tcp
   port: 11264
   server: goldcnmltyljgfwgov.vip64.wogcnmnnagfwgov.com
@@ -571,14 +761,22 @@ proxies:
   type: vmess
   uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
 - cipher: aes-256-gcm
-  name: 🇰🇷KR_42
-  password: PCnnH6SQSnfoS27
-  port: 8091
+  name: 🇰🇷KR_53
+  password: Y6R9pAtvxxzmGC
+  port: 5001
   server: 141.164.45.187
   type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR_41
-  password: cdBIDV42DCwnfIN
-  port: 8119
-  server: 141.164.45.187
+- cipher: aes-256-cfb
+  name: 🇰🇷KR_51
+  password: qwerREWQ@@
+  port: 4652
+  server: p141.panda001.net
   type: ss
+- name: 🇰🇷KR_20
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sni: 154.90.62.70
+  type: trojan

@@ -1,23 +1,7 @@
 proxies:
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  name: '🇨🇭 #3'
-  network: grpc
-  port: 9882
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: '!!str aabb'
-  server: 45.132.177.83
-  servername: dl.google.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: 🇨🇭
   network: tcp
   port: 8443
   reality-opts:
@@ -32,7 +16,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #3'
   network: tcp
   port: 8443
   reality-opts:
@@ -47,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #1'
+  name: '🇨🇭 #2'
   network: tcp
   port: 8443
   reality-opts:
@@ -60,35 +44,23 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇨🇭_CH_瑞士 #2'
-  port: 443
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: '🇨🇭 #1'
+  network: grpc
+  port: 9882
   reality-opts:
-    public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
-    short-id: '!!str 10a5c8e2f4b7d936'
-  server: 199.68.196.79
-  servername: ch.tunnelx.space
-  skip-cert-verify: true
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: '!!str aabb'
+  server: 45.132.177.83
+  servername: dl.google.com
+  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇨🇭_CH_瑞士_1 #2'
-  port: 443
-  reality-opts:
-    public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
-    short-id: '!!str 10a5c8e2f4b7d936'
-  server: ch.tunnelx.space
-  servername: ch.tunnelx.space
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- name: '🇨🇭CH_1|426KB/s 01 #1'
   password: ''
   port: 9443
   server: 149.88.27.46
@@ -97,53 +69,30 @@ proxies:
   type: http
   udp: true
   username: ''
-- name: 🇨🇭CH_8|724KB/s|P002-260618 01
-  password: None
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭CH_9|539KB/s|R002-260618 01
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇨🇭CH_5
+  name: '未知 SS-74 #1'
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
   port: 8388
   server: 132.243.175.144
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: 🇨🇭CH_15|327KB/s|R002-260618 01
-  port: 443
-  server: 216.152.150.180
+- name: 🇨🇭 机场推荐:dafei.de 瑞士 01
+  port: 9443
+  server: 37.120.213.210
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 02
-  password: None
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sub_tag: noCache
-  tls: true
-  type: http
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 03
+- name: 🇨🇭CH_1|2.3MB/s
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
   type: http
+  udp: true
 - name: CH 1 → tg@nicevpn123
   password: 55319b01-5d85-48a2-a40a-0b3fc1985755
   port: 11005
@@ -179,39 +128,17 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: '瑞士 001 #1'
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
+- name: 🇨🇭CH_16
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165
+  port: 443
+  server: 208.69.78.217
   skip-cert-verify: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '瑞士 002 #1'
-  network: tcp
-  port: 8443
-  server: 138.124.244.77
-  servername: fi1.hys.braidx.tech
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
-- name: '瑞士 003 #1'
-  network: tcp
-  port: 2086
-  server: 138.124.123.127
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
-- name: 🇨🇭CH_10
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_9
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   port: 8443
   server: 82.38.64.237
@@ -219,20 +146,81 @@ proxies:
   sni: hopp-swizland-new.mysynology.net
   tls: false
   type: hysteria2
-- auth: 3a702d4d1de4949005d8431220e040fb
-  name: 🇨🇭CH_9
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-  password: 3a702d4d1de4949005d8431220e040fb
-  port: 443
-  server: 152.67.75.161
+- name: 🇨🇭 瑞士 | CHE
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1024
+  server: sj8aycl6.zf-mix.9999231.xyz
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: ch-wy.9999231.xyz
+  type: anytls
+  udp: true
+- name: 🇨🇭 瑞士 | CHE 2
+  password: 6cdc1a00-e9e7-4ef2-8d53-541688f9324c
+  port: 1024
+  server: ksfz1g3r.zf-mix.9999231.xyz
+  skip-cert-verify: true
+  sni: ch-wy.9999231.xyz
+  type: anytls
+  udp: true
+- client-fingerprint: random
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: vless-grpc-reality
+  name: 🇨🇭 瑞士 | CHE 3
+  network: grpc
+  port: 2096
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 153.76.161.57
+  servername: id.vk.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
+- client-fingerprint: random
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: vless-grpc-reality
+  name: 🇨🇭 瑞士 | CHE 4
+  network: grpc
+  port: 2096
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 153.76.161.59
+  servername: id.vk.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
+- name: 🇨🇭CH_5
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+  port: 8443
+  server: 82.38.64.239
+  sni: hopp-swizland-new.mysynology.net
   tls: false
   type: hysteria2
-- name: '🇨🇭 瑞士 | CHE #1'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_18
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: 179.255.191.86
+  servername: sweth.ali-bard.online
+  tls: true
+  type: vless
+  uuid: 15c9be2b-20f1-47b7-bf33-747ed1ff7fb7
+- name: 🇨🇭CH_4
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+  port: 8443
+  server: 82.38.64.229
+  sni: hopp-swizland-new.mysynology.net
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_1
   obfs: salamander
-  obfs-password: salamander
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
   password: 3a702d4d1de4949005d8431220e040fb
   port: 443
   server: 152.67.75.161
@@ -252,39 +240,10 @@ proxies:
   tls: true
   type: vless
   uuid: 5a92a9d2-3067-49cd-bfc5-989bbdfc5d52
-- name: 🇨🇭CH_4
-  password: 84a506ca5aca505696a454d828420b3f
-  port: 50160
-  server: 140.238.213.114
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_15
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 8PZTYkhNhSgagVdaI-iqSCPXJwDhHU23IUwZIu08zH4
-    short-id: '!!str 9de8ae53dabf1dc2'
-  server: 179.237.103.152
-  servername: www.google.com
-  tls: true
-  type: vless
-  uuid: e0bd9dfa-0cf9-47c0-92ac-7dba08ebcff8
-- name: 🇨🇭CH_11
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  port: 8443
-  server: 82.38.64.235
-  skip-cert-verify: true
-  sni: hopp-swizland-new.mysynology.net
-  tls: false
-  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭CH_2
-  network: tcp
+  network: raw
   port: 443
   reality-opts:
     public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
@@ -294,3 +253,31 @@ proxies:
   tls: true
   type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+- name: 🇨🇭CH_7
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_19
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: sweth.ali-bard.online
+  servername: sweth.ali-bard.online
+  tls: true
+  type: vless
+  uuid: 15c9be2b-20f1-47b7-bf33-747ed1ff7fb7
+- name: 🇨🇭CH_10
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+  port: 8443
+  server: 82.38.64.235
+  skip-cert-verify: true
+  sni: hopp-swizland-new.mysynology.net
+  tls: false
+  type: hysteria2
