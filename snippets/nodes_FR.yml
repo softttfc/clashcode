@@ -593,6 +593,27 @@ proxies:
     headers:
       Host: o.metuji.com
     path: /linkvws
+- client-fingerprint: chrome
+  name: '🇫🇷FR_4|3.4MB/s #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 162.159.36.20
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/63.0.3239.84 Safari/537.36
+    path: /assignment
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR_8
+  password: BqnqToih0PbU
+  port: 8388
+  server: 51.255.13.232
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB_2
   password: zRZNBszYyWo5
@@ -605,12 +626,20 @@ proxies:
   port: 8388
   server: 57.131.48.45
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR_8
-  password: BqnqToih0PbU
-  port: 8388
-  server: 51.255.13.232
-  type: ss
+- alpn:
+  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+  network: ws
+  password: humanity
+  port: 8443
+  server: 212.227.144.37
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - alpn:
   - http/1.1
   name: 🇫🇷FR_246
@@ -944,18 +973,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /tr/d2y5re8Z9iqkUtWNtSR
-- name: 🇫🇷FR_738
-  network: ws
-  password: trojan
-  port: 8443
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: longwanghen.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: longwanghen.pages.dev
-    path: /
 - alpn:
   - http/1.1
   name: 🇫🇷FR_666

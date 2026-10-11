@@ -286,7 +286,7 @@ proxies:
   type: trojan
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇹🇼TW_1|4.5MB/s
+  name: Taiwan_Taichung City_ss_11162
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   plugin: obfs
   plugin-opts:
@@ -300,7 +300,7 @@ proxies:
   name: 🇹🇼[www.v2nodes.com] vless-TW-1...
   network: ws
   port: 443
-  server: 60.248.219.53
+  server: 59.125.69.23
   servername: ty986gfazs.cainiaohub.xyz
   tls: true
   type: vless
@@ -309,14 +309,21 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇹🇼 🇨🇳 台湾 | TWN
-  password: 13f0acfa-38c1-4e82-a758-583aa31740df
-  port: 10688
-  server: yazhou09.twzq59.cc
+- alpn:
+  - h3
+  congestion-controller: bbr
+  disable-sni: false
+  name: 🇹🇼 🇨🇳 台湾 | TWN
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  port: 8080
+  reduce-rtt: false
+  request-timeout: 0
+  server: tw5.dexlos.com
   skip-cert-verify: true
-  sni: yazhou09.twzq59.cc
-  type: anytls
-  udp: true
+  sni: tw5.dexlos.com
+  type: tuic
+  udp-relay-mode: native
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
 - alterId: 2
   cipher: auto
   name: 🇹🇼 011  | ⬇️ 36KB/s

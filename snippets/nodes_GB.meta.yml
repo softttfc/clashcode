@@ -178,7 +178,8 @@ proxies:
   type: vless
   udp: true
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: DE【机场推荐：https://a9a.xyz】9
+- encryption: none
+  name: DE【机场推荐：https://a9a.xyz】9
   network: tcp
   port: 2053
   server: test.keoplentuio.xyz
@@ -392,18 +393,19 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_1|2.7MB/s
+- name: 🇬🇧 机场推荐:dafei.de 英国 03
   port: 443
   server: 84.17.50.193
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧 机场推荐:dafei.de 英国 04
+- name: '🇬🇧GB_2|1.9MB/s #1'
   port: 9443
   server: 84.17.50.129
   skip-cert-verify: true
   tls: true
   type: http
+  udp: true
 - name: 🇬🇧 机场推荐:dafei.de 英国 05
   password: None
   port: 443
@@ -417,41 +419,12 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_2|1005KB/s
+- name: 🇬🇧 机场推荐:dafei.de 英国 07
   port: 443
   server: 212.102.63.1
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- name: 🇬🇧GB_2|⬇️1.7MB/s
-  network: ws
-  port: 443
-  server: 173.245.59.121
-  servername: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 979b6822-d65a-400d-89f8-30391903ac20
-  ws-opts:
-    headers:
-      host: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-    path: /ws
-- name: GBVLESS-110|free-nodes
-  network: ws
-  port: 80
-  server: fuck1.tawanaproxy.online
-  servername: en.tawana.cf.panbehpanel.ir
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: c33275fd-a4fa-470d-90e4-55da39d849a8
-  ws-opts:
-    headers:
-      host: en.tawana.cf.panbehpanel.ir
-    path: /
 - alterId: 0
   cipher: auto
   name: 英国(yudou789.top 玉豆免费节点)_56
@@ -1028,9 +1001,9 @@ proxies:
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /ch12y6ij
-- name: 🇬🇧GB_2|2.0MB/s
-  port: 9443
-  server: 84.17.50.214
+- name: '🇬🇧GB_1|1.0MB/s #1'
+  port: 443
+  server: 185.164.138.156
   skip-cert-verify: true
   tls: true
   type: http
@@ -1146,13 +1119,6 @@ proxies:
   server: 82.38.31.200
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: '🇬🇧 英国 | GBR #1'
-  password: amazonskr05
-  port: 443
-  server: 13.40.25.145
-  type: ss
-  udp: true
 - name: 🇬🇧[www.v2nodes.com] vless-GB-1...
   port: 8443
   server: node-uk.connectsuite.org
@@ -1162,6 +1128,7 @@ proxies:
 - alpn:
   - http/1.1
   client-fingerprint: chrome
+  encryption: none
   name: 🇬🇧GB_32
   network: tcp
   port: 443
@@ -1171,47 +1138,45 @@ proxies:
   tls: true
   type: vless
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-- encryption: none
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
   network: ws
-  port: 80
-  server: 57.129.132.223
-  tls: false
+  port: 443
+  server: 159.65.51.189
+  servername: ccc.010304.xyz
+  tls: true
   type: vless
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
+  uuid: d342d11e-d224-4463-b982-532309285094
   ws-opts:
     headers:
-      Host: google.com
-    path: /vless/
-- name: 🇬🇧GB_3|3.5MB/s
+      Host: ccc.010304.xyz
+    path: /fp=chrome
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_6
+  password: g5h5jleTRSyO3Rk4
   port: 443
-  server: 212.102.63.61
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_4|1.8MB/s
-  password: None
+  server: 149.102.132.184
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇬🇧GB_4
+  password: LXchLsIwtCeUAUgu
   port: 443
-  server: 37.120.233.18
-  skip-cert-verify: true
-  tls: true
-  type: http
-- encryption: mlkem768x25519plus.native.0rtt.3yYZRBUbOREiit9nPAtdnx2rzs0sFb9skBmEh09XfVo
-  http-opts:
+  server: 149.102.149.207
+  type: ss
+- http-opts:
     headers:
       Host:
-      - connectivitycheck.android.com
+      - dns1.begzar.ir
     method: GET
     path:
     - /
-  name: 🇬🇧 英国 | GBR
+  name: '🇬🇧 英国 | GBR #1 #1'
   network: http
-  port: 20018
-  server: lv-store.rovilo.ir
+  port: 443
+  server: 188.166.175.137
   tls: false
   type: vless
   udp: true
-  uuid: 5ea90a32-909e-45d2-8525-7e19c0f9d854
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
 - alterId: 2
   cipher: auto
   name: 🇬🇧 027  | ⬇️ 99KB/s
@@ -1291,12 +1256,6 @@ proxies:
   port: 8080
   server: 146.70.23.32
   type: ss
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_4
-  password: LXchLsIwtCeUAUgu
-  port: 443
-  server: 149.102.149.207
-  type: ss
 - name: 🇬🇧GB_43
   network: tcp
   password: Trojan@82164024
@@ -1315,12 +1274,6 @@ proxies:
   uuid: 3f073591-ad53-4f73-89da-bca5379b9b1b
   ws-opts:
     path: '%2Fws'
-- cipher: aes-256-gcm
-  name: 🇬🇧GB_6
-  password: g5h5jleTRSyO3Rk4
-  port: 443
-  server: 149.102.132.184
-  type: ss
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇬🇧GB_19

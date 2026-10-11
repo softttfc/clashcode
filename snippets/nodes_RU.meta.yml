@@ -552,9 +552,8 @@ proxies:
     path: ''
 - client-fingerprint: chrome
   grpc-opts:
-    grpc-mode: gun
     grpc-service-name: grpc
-  name: 🇩🇪 德国 | DEU
+  name: 俄罗斯(海外账号:shop.tgaaaa.co)_1
   network: grpc
   port: 2087
   reality-opts:
@@ -573,26 +572,21 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- flow: xtls-rprx-vision
-  name: 🇸🇪SE_1|⬇️2.7MB/s
-  network: tcp
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺_俄罗斯_212
+  network: ws
   port: 443
-  server: 176.125.240.166
-  servername: apple.com
+  server: 80.240.252.241
   skip-cert-verify: true
-  tls: false
-  type: vless
+  tls: true
+  type: vmess
   udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- name: RUVLESS-51|free-nodes
-  network: tcp
-  port: 10468
-  server: 185.113.10.198
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 3b12e953-96f0-40da-ac32-3038dadf20f7
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - name: 🇷🇺 RU 1 → tg@nicevpn123
   password: 71ab3866-4c8b-4a0b-a4bd-a64f110afe0b
   port: 443
@@ -1619,21 +1613,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺_俄罗斯_212
-  network: ws
-  port: 443
-  server: 80.240.252.241
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇷🇺_RU_俄罗斯
@@ -1647,13 +1626,16 @@ proxies:
   type: vless
   udp: true
   uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a
-- cipher: aes-256-gcm
-  name: '🇷🇺 俄罗斯 | RUS #1'
-  password: 4938e975724d0ed1
-  port: 40440
-  server: 194.87.196.107
-  type: ss
-  udp: true
+- name: 🇺🇸US_379
+  obfs: salamander
+  obfs-password: eba1b4766d2a26d6c167e2d2e9efabf4
+  password: 033dc6b532
+  port: 11592
+  server: 77.232.139.128
+  skip-cert-verify: false
+  sni: srv-8718e6.frd21.ru
+  tls: false
+  type: hysteria2
 - name: Telegram 🆔@cnetvpn 🇷🇺
   obfs: salamander
   obfs-password: 09p333uviv2qal0y
@@ -1665,6 +1647,7 @@ proxies:
   tls: false
   type: hysteria2
 - client-fingerprint: random
+  encryption: none
   grpc-opts:
     grpc-service-name: grpc-ru
   name: 🇷🇺[www.v2nodes.com] vless-RU-1...
@@ -1689,12 +1672,6 @@ proxies:
     headers:
       Host: 194.87.143.165
     path: /
-- name: 🇷🇺RU_2|1.1MB/s
-  port: 1446
-  server: 46.29.166.134
-  skip-cert-verify: true
-  tls: true
-  type: http
 - client-fingerprint: chrome
   name: 'RU俄罗斯 #3'
   network: ws
