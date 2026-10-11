@@ -84,7 +84,7 @@ from urllib.parse import quote
 # -------------------- 超时与并发设置 --------------------
 # TCP 连通性测试超时（秒）
 # 建议范围: 1~3，数值越小淘汰越快，但可能误判网络抖动
-CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 1))
+CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 2))
 
 # HTTP 延迟测试超时（秒）
 # 建议范围: 2~5，数值越大越能测出高延迟节点，但耗时增加
@@ -92,7 +92,7 @@ DELAY_TIMEOUT = float(os.environ.get("DELAY_TIMEOUT", 2))
 
 # QUIC 握手测试超时（秒）
 # 建议范围: 2~5，过短易误判，过长拖慢 CI
-QUIC_TIMEOUT = float(os.environ.get("QUIC_TIMEOUT", 3))
+QUIC_TIMEOUT = float(os.environ.get("QUIC_TIMEOUT", 2))
 
 # 并发测试线程数
 # 建议范围: 10~50，取决于网络环境和系统资源，过大可能触发防火墙限制
@@ -115,11 +115,11 @@ DEFAULT_INPUT = "list.meta.yml"
 DEFAULT_OUTPUT = "list.metaspeed.yml"
 
 # -------------------- 协议分类 --------------------
-# 走 TCP 连通性测试的协议
-TCP_TYPES = {
-    "http", "https", "socks5", "socks5h",
-    "vmess", "vless", "trojan", "ss", "ssr",
-}
+# 走 TCP 连通性测试的协议，TCP_TYPES冗余无用
+#TCP_TYPES = {
+#    "http", "https", "socks5", "socks5h",
+#    "vmess", "vless", "trojan", "ss", "ssr",
+#}
 
 # 走 QUIC 握手测试的协议（UDP 协议，不监听 TCP 端口）
 QUIC_TYPES = {"hysteria2", "hy2", "tuic"}
@@ -128,9 +128,10 @@ QUIC_TYPES = {"hysteria2", "hy2", "tuic"}
 HTTP_TEST_TYPES = {"http", "https", "socks5", "socks5h"}
 
 # 兼容原有变量名
-HTTP_PROXY_TYPES = ("http", "https")
-SOCKS_PROXY_TYPES = ("socks5", "socks5h")
-ALLOWED_PROXY_TYPES = HTTP_PROXY_TYPES + SOCKS_PROXY_TYPES
+#HTTP_PROXY_TYPES = ("http", "https")
+#SOCKS_PROXY_TYPES = ("socks5", "socks5h")
+#ALLOWED_PROXY_TYPES = HTTP_PROXY_TYPES + SOCKS_PROXY_TYPES
+ALLOWED_PROXY_TYPES = HTTP_TEST_TYPES
 
 # ============================================================================
 # 工具函数
