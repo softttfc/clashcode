@@ -1,5 +1,5 @@
 proxies:
-- name: '🇩🇪DE德国丨yoyapai.com_16 #1'
+- name: '🇩🇪DE德国丨yoyapai.com_12 #1'
   password: humanity
   port: 443
   server: 88.198.82.150
@@ -9,6 +9,98 @@ proxies:
   udp: true
   ws-opts:
     path: /assignment
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪DE_1|278KB/s|B007-260618 01 #1'
+  network: ws
+  password: Telegram_healer_config
+  port: 443
+  server: 172.67.130.246
+  skip-cert-verify: false
+  sni: 3OQxS5h6kCscecND.ZMh9KCGos2cq55uh6qDYaa938a5UgB.wOrkERS.dEV
+  sub_tag: B007-260618
+  type: trojan
+  udp: true
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/62.0.3202.89 Safari/537.36
+    max-early-data: 2560
+    path: /tr/zMUJnc0O87fJR02xzGNed
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_31
+  password: kKEd0rBrd56Furjz
+  port: 443
+  server: 2.58.81.221
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_30
+  password: kKEd0rBrd56Furjz
+  port: 80
+  server: 2.58.81.221
+  sub_tag: T001-260618
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_7
+  password: 2YdE4lFOid5a
+  port: 8388
+  server: 51.195.126.38
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇫🇷FR_469
+  network: ws
+  password: eabf1999fefbb7d2
+  port: 2087
+  server: 172.67.205.222
+  skip-cert-verify: false
+  sni: WaYSi.wAYsI6688.WOrkeRS.deV
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /tr/sMpzOZ0eWEt6jbZ1jjN3BaM7LLoQ
+- client-fingerprint: chrome
+  name: 🇩🇪DE_73
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: actual-squid.rooster465.autos
+  skip-cert-verify: true
+  sni: actual-squid.rooster465.autos
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇩🇪DE_120
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 63.178.198.94
+  skip-cert-verify: false
+  sni: pleased-albacore.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇩🇪DE_155
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.75.93.113
+  skip-cert-verify: false
+  sni: meet-goshawk.rooster465.autos
+  sub_tag: S004-260618
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   h2-opts: {}
@@ -27,7 +119,7 @@ proxies:
     path: /@Malinda6104
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国_179
+  name: 🇩🇪_德国_177
   network: ws
   port: 443
   server: 13.140.28.46
@@ -42,7 +134,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国_208
+  name: 🇩🇪_德国_206
   network: ws
   port: 443
   server: 85.215.41.19
@@ -57,7 +149,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国_210
+  name: 🇩🇪_德国_208
   network: ws
   port: 443
   server: 111.88.74.167
@@ -72,7 +164,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国_214
+  name: 🇩🇪_德国_212
   network: ws
   port: 443
   server: 89.127.218.61
@@ -87,7 +179,7 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国_215
+  name: 🇩🇪_德国_213
   network: ws
   port: 443
   server: 31.77.223.21
@@ -107,14 +199,11 @@ proxies:
   server: hackney-latest-strike.freesocks.work
   type: ss
   udp: true
-- alterId: 0
-  cipher: chacha20-ietf-poly1305
-  name: '🇷🇺RU俄罗斯 #2'
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪 DE 1 → tg@nicevpn123
   password: 36ZCHeabUSfKjfQEvJ4HDV
   port: 54170
   server: 185.242.86.156
-  skip-cert-verify: true
-  tls: true
   type: ss
   udp: true
 - name: 🇩🇪 DE 10 → tg@nicevpn123
@@ -546,9 +635,99 @@ proxies:
   server: 217.182.198.219
   type: ss
   udp: true
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.220.100.168
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: '德国 002 #1'
+  name: '德国 005 #1'
+  network: tcp
+  port: 2053
+  server: 178.63.237.158
+  skip-cert-verify: true
+  type: vmess
+  uuid: 2d4dd672-180f-415c-9035-e2fc461dd95a
+- alterId: 64
+  cipher: auto
+  name: '德国 006 #1'
+  network: tcp
+  port: 31484
+  server: 168.119.107.162
+  skip-cert-verify: true
+  type: vmess
+  uuid: 943961b8-4e27-4bdf-a048-c2f724f542fb
+- alterId: 0
+  cipher: aes-128-gcm
+  name: '德国 007 #1'
+  network: tcp
+  port: 443
+  server: 46.183.187.73
+  skip-cert-verify: true
+  type: vmess
+  uuid: 92a048ec-a160-497e-8069-c2e902626d7a
+- alterId: 0
+  cipher: auto
+  name: '德国 008 #1'
+  network: tcp
+  port: 43462
+  server: 5.75.204.152
+  skip-cert-verify: true
+  type: vmess
+  uuid: 38dd079f-b778-44cf-8532-574c6ebc24d4
+- alterId: 0
+  cipher: auto
+  name: 未知145
+  network: tcp
+  port: 8080
+  server: 91.107.162.63
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 0232607c-5100-4a10-a387-33a6a42b1f22
+- alterId: 0
+  cipher: auto
+  name: '德国 010 #1'
+  network: tcp
+  port: 80
+  server: 128.140.109.232
+  skip-cert-verify: true
+  type: vmess
+  uuid: 05a178f9-e6ba-4006-93d7-3d980cdc3a76
+- alterId: 0
+  cipher: auto
+  name: '德国 081 #1'
+  network: tcp
+  port: 10803
+  server: 5.45.97.147
+  skip-cert-verify: true
+  type: vmess
+  uuid: 018fbfb7-721a-49a9-b9f5-fb55d92592b6
+- alterId: 0
+  cipher: auto
+  name: '德国 082 #1'
+  network: ws
+  port: 443
+  server: sgp.kapok.buzz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: c1bac6b8-934a-44e2-9cf2-ee0db1fc1c85
+  ws-opts:
+    headers:
+      Host: sgp.kapok.buzz
+    path: /4befdd8a6/
+- alterId: 0
+  cipher: auto
+  name: '德国 083 #1'
   network: ws
   port: 443
   server: 139.162.178.95
@@ -562,43 +741,7 @@ proxies:
     path: /linkwsd
 - alterId: 0
   cipher: auto
-  name: '德国 014 #1'
-  network: tcp
-  port: 2095
-  server: 178.128.203.125
-  skip-cert-verify: true
-  type: vmess
-  uuid: 774c11a4-62db-40b7-9b3a-d2a6a1cfc9c6
-- alterId: 0
-  cipher: auto
-  name: '德国 015 #1'
-  network: tcp
-  port: 15713
-  server: 193.108.118.136
-  skip-cert-verify: true
-  type: vmess
-  uuid: f74e277e-84b3-46a2-8abd-2777fa5e4af9
-- alterId: 0
-  cipher: auto
-  name: '德国 016 #1'
-  network: tcp
-  port: 24164
-  server: 193.108.117.143
-  skip-cert-verify: true
-  type: vmess
-  uuid: aa3c5c18-6578-4de3-b890-2fd25c3a8f35
-- alterId: 0
-  cipher: auto
-  name: '德国 023 #1'
-  network: tcp
-  port: 8880
-  server: 49.13.174.214
-  skip-cert-verify: true
-  type: vmess
-  uuid: a20549a3-1dbb-4376-ea36-4325e7857efb
-- alterId: 0
-  cipher: auto
-  name: '德国 028 #1'
+  name: '德国 084 #1'
   network: ws
   port: 443
   server: 130.61.23.77
@@ -612,160 +755,141 @@ proxies:
     path: /linkws
 - alterId: 0
   cipher: auto
-  name: '德国 029 #1'
-  network: tcp
-  port: 38872
-  server: 94.136.184.156
-  skip-cert-verify: true
-  type: vmess
-  uuid: 220732cc-9e43-4453-83f1-c9435be25b5b
-- alterId: 0
-  cipher: auto
-  name: '德国 030 #1'
-  network: tcp
-  port: 27575
-  server: 194.233.72.228
-  skip-cert-verify: true
-  type: vmess
-  uuid: 16509262-dbe2-43ba-99ce-07913d2a18b4
-- alterId: 0
-  cipher: auto
-  name: '德国 031 #1'
-  network: tcp
-  port: 14372
-  server: 62.146.232.159
-  skip-cert-verify: true
-  type: vmess
-  uuid: ed1d7ea8-bf40-4a4a-8eac-8e57798ba6f7
-- alterId: 0
-  cipher: auto
-  name: '德国 032 #1'
-  network: tcp
-  port: 33281
-  server: 62.146.232.156
-  skip-cert-verify: true
-  type: vmess
-  uuid: 24eda0ea-acf0-4538-a001-f746a480237a
-- alterId: 0
-  cipher: auto
-  name: '德国 033 #1'
-  network: tcp
-  port: 36712
-  server: 62.146.233.112
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9266df42-0830-48c2-8509-4c57b30fe29d
-- alterId: 0
-  cipher: auto
-  name: '德国 034 #1'
-  network: tcp
-  port: 38324
-  server: 62.146.233.115
-  skip-cert-verify: true
-  type: vmess
-  uuid: f863ef99-5ef0-4321-aaac-a476a5e8c3fb
-- alterId: 0
-  cipher: auto
-  name: '德国 035 #1'
-  network: tcp
-  port: 43763
-  server: 62.146.233.159
-  skip-cert-verify: true
-  type: vmess
-  uuid: 1ddf3ade-5b8c-420c-84f6-f96979ec3080
-- alterId: 0
-  cipher: auto
-  name: '德国 036 #1'
-  network: tcp
-  port: 50678
-  server: 62.146.233.53
-  skip-cert-verify: true
-  type: vmess
-  uuid: 5d1ec6e7-fd58-4e85-91c5-6335a86d2775
-- alterId: 0
-  cipher: auto
-  name: '德国 037 #1'
-  network: tcp
-  port: 52856
-  server: 62.146.232.157
-  skip-cert-verify: true
-  type: vmess
-  uuid: ed54e388-bfc5-4b36-ae4d-8b3cd460d3d4
-- alterId: 0
-  cipher: auto
-  name: '德国 038 #1'
-  network: tcp
-  port: 53144
-  server: 62.146.232.153
-  skip-cert-verify: true
-  type: vmess
-  uuid: 13e13a3e-e981-4eea-a9fc-13e50628fd9b
-- name: 🇩🇪_德国_221
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #11'
+  name: '德国 085 #1'
   network: ws
+  port: 8080
+  server: 138.68.90.231
+  skip-cert-verify: true
+  type: vmess
+  uuid: 294ffdc3-5942-45ae-a154-dc6c92eacf1d
+  ws-opts:
+    headers:
+      Host: 138.68.90.231
+    path: /cctv13/hd.m3u8
+- alterId: 0
+  cipher: auto
+  name: '德国 086 #1'
+  network: http
+  port: 40969
+  server: 5.161.106.72
+  skip-cert-verify: true
+  type: vmess
+  uuid: 2fb9f60e-d4dc-458b-e3b2-d9b44f9bbd9e
+- alterId: 0
+  cipher: auto
+  name: '德国 087 #1'
+  network: http
+  port: 50978
+  server: 5.161.106.72
+  skip-cert-verify: true
+  type: vmess
+  uuid: 89e6248b-0152-4317-a6ed-b6a0cf41f2cb
+- alterId: 0
+  cipher: auto
+  name: '德国 088 #1'
+  network: http
+  port: 443
+  server: 157.90.20.18
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 089 #1'
+  network: http
+  port: 443
+  server: 5.75.168.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 090 #1'
+  network: http
+  port: 443
+  server: 94.130.25.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 091 #1'
+  network: http
+  port: 443
+  server: 167.235.136.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 092 #1'
+  network: http
+  port: 443
+  server: 65.21.240.108
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 093 #1'
+  network: http
+  port: 443
+  server: 5.75.247.192
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 094 #1'
+  network: http
+  port: 443
+  server: 88.198.104.211
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 4
+  cipher: auto
+  name: '德国 095 #1'
+  network: ws
+  port: 443
+  server: 146.0.42.87
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: germany-dusseldorf.mah3Hoet.com
+    path: /ws
+- name: 🇩🇪_德国_218
   password: humanity
   port: 443
   server: 185.220.100.168
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
+  udp: true
   ws-opts:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_4
-  password: kKEd0rBrd56Furjz
-  port: 443
-  server: 2.58.81.221
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
+  client-fingerprint: ''
   http-opts:
     headers:
       Host:
       - down-cdn.dingtalk.com
     path:
     - /QQqun-737805443
-  name: 🇩🇪 014  | ⬇️ 41KB/s
+  name: 🇩🇪 013  | ⬇️ 6MB/s
   network: http
   port: 52080
   server: 23.165.200.150
   tls: false
   type: vmess
   uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-- name: 🇩🇪DE_157
-  network: tcp
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  port: 443
-  server: ger1.fytpn.com
-  sni: ger1.fytpn.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_13
-  password: kKEd0rBrd56Furjz
-  port: 80
-  server: 2.58.81.221
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_6
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-- name: 🇩🇪DE_19
+- name: 🇩🇪DE_43
   network: tcp
   password: M7v%w11Se*
   port: 443
@@ -774,24 +898,79 @@ proxies:
   sni: dggg.wsone.icu
   type: trojan
 - cipher: rc4-md5
-  name: 🇩🇪DE_40
+  name: 🇩🇪DE_59
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 169.150.210.233
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_1
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
-  type: ss
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: grpcbeast
+  name: 🇩🇪DE_102
+  network: grpc
+  password: f8b-U5TxjNRYKLvU0Js_6YeMCdj_82km
+  port: 443
+  server: cz-musicc.moritech.net
+  sni: cz-musicc.moritech.net
+  type: trojan
 - cipher: aes-256-gcm
-  name: 🇩🇪DE_58
+  name: 🇩🇪DE_14
   password: XKFKl2rULjIp74
   port: 8008
   server: 185.226.172.8
   type: ss
-- name: '🇩🇪 #13'
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_1
+  password: 1hhrqrokj3ag
+  port: 8388
+  server: 209.46.102.22
+  type: ss
+- name: 🇩🇪DE_179
+  network: tcp
+  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
+  port: 443
+  server: ger1.fytpn.com
+  sni: ger1.fytpn.com
+  type: trojan
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_128
+  password: amazonskr05
+  port: 443
+  server: 3.75.231.76
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇩🇪DE_119
+  password: amazonskr05
+  port: 443
+  server: 3.67.197.81
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_150
+  password: adzpq0ltVHdCxO2lsW5N9C8H5B9hXnD7YyXZfP5aulw=
+  port: 42800
+  server: 31.76.11.83
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_9
+  password: PWpjPo3tqhPN4yRZ
+  port: 20001
+  server: 8.209.74.72
+  type: ss
+- name: 🇩🇪DE_77
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.120.109.26
+  sni: actual-squid.rooster465.autos
+  type: trojan
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_41
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 213.202.208.199
+  type: ss
+- name: '🇩🇪 #16'
   network: ws
   password: humanity
   port: 443
@@ -801,82 +980,3 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- name: 🇩🇪DE_112
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 63.178.198.94
-  sni: pleased-albacore.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_127
-  password: amazonskr05
-  port: 443
-  server: 18.184.136.175
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_26
-  password: 2YdE4lFOid5a
-  port: 8388
-  server: 51.195.126.38
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_150
-  password: adzpq0ltVHdCxO2lsW5N9C8H5B9hXnD7YyXZfP5aulw=
-  port: 42800
-  server: 31.76.11.83
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_138
-  password: amazonskr05
-  port: 443
-  server: 3.79.59.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_115
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 213.202.208.199
-  type: ss
-- name: 🇩🇪DE_160
-  network: tcp
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  port: 443
-  server: ger2.fytpn.com
-  sni: ger2.fytpn.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_20
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 213.202.208.199
-  type: ss
-- name: 🇩🇪DE_156
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 3.75.93.113
-  sni: meet-goshawk.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_47
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: actual-squid.rooster465.autos
-  skip-cert-verify: true
-  sni: actual-squid.rooster465.autos
-  type: trojan
-- name: 🇩🇪DE_51
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 3.120.109.26
-  skip-cert-verify: true
-  sni: actual-squid.rooster465.autos
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇩🇪DE_120
-  password: amazonskr05
-  port: 443
-  server: 18.196.88.40
-  type: ss

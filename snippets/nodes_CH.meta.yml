@@ -31,7 +31,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #2'
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -47,7 +47,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc-tunnel
-  name: '🇨🇭 #1'
+  name: '🇨🇭 #2'
   network: grpc
   port: 9882
   reality-opts:
@@ -60,6 +60,14 @@ proxies:
   type: vless
   udp: true
   uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- name: '🇨🇭CH_4|710KB/s|R002-260618 01 #1'
+  port: 443
+  server: 216.152.150.188
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
 - name: 🇨🇭 机场推荐:dafei.de 瑞士 01
   port: 9443
   server: 37.120.213.210
@@ -68,7 +76,7 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇨🇭 机场推荐:dafei.de 瑞士 02
+- name: 🇨🇭CH_1|2.0MB/s
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
@@ -109,15 +117,57 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: '🇨🇭CH_1|1.2MB/s #1'
-  password: None
-  port: 443
-  server: 31.7.62.50
+- alterId: 0
+  cipher: auto
+  name: 未知34
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
   skip-cert-verify: true
   tls: true
-  type: http
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '瑞士 002 #1'
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
-- name: 🇨🇭CH_16
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: '瑞士 003 #1'
+  network: tcp
+  port: 2086
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_1|1.5MB/s
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA
+    short-id: '!!str '
+  server: 179.237.69.151
+  servername: yloyqo0gfsqm.edgepop.lol
+  tls: true
+  type: vless
+  udp: true
+  uuid: c9c219dc-50da-4135-8e5b-67020291f0ec
+  xudp: true
+- name: 🇨🇭CH_17
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165
@@ -127,7 +177,7 @@ proxies:
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_9
+- name: 🇨🇭CH_6
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   port: 8443
   server: 82.38.64.237
@@ -135,54 +185,47 @@ proxies:
   sni: hopp-swizland-new.mysynology.net
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_5
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  port: 8443
-  server: 82.38.64.239
-  sni: hopp-swizland-new.mysynology.net
-  tls: false
-  type: hysteria2
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_18
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  server: 179.255.191.86
-  servername: sweth.ali-bard.online
-  tls: true
-  type: vless
-  uuid: 15c9be2b-20f1-47b7-bf33-747ed1ff7fb7
-- name: 🇨🇭CH_4
-  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
-  port: 8443
-  server: 82.38.64.229
-  sni: hopp-swizland-new.mysynology.net
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_1
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-  password: 3a702d4d1de4949005d8431220e040fb
-  port: 443
-  server: 152.67.75.161
+- name: 🇨🇭 瑞士 | CHE
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1024
+  server: sj8aycl6.zf-mix.9999231.xyz
   skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: qq
+  sni: ch-wy.9999231.xyz
+  type: anytls
+  udp: true
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: mlkem768x25519plus.native.0rtt.100-111-1111.75-0-111.50-0-3333.r0GHkKItWBaa1PUy0tN6uBX3xozktLQIs6Vr1tbc0X0
   flow: xtls-rprx-vision
-  name: 🇨🇭_CH_瑞士->🇫🇮_FI_芬兰
-  port: 5001
-  reality-opts:
-    public-key: HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ
-    short-id: '!!str a1b2c3d4'
-  server: 31.76.4.128
-  servername: fi.aeternavpn.space
+  name: 🇨🇭 瑞士 | CHE 2
+  network: xhttp
+  port: 443
+  server: 20e77b03.bilibiliapp.cn
+  servername: 9fe7f691.m3u8.chcauib.pay.cfcndns.pp.ua
   tls: true
   type: vless
-  uuid: 5a92a9d2-3067-49cd-bfc5-989bbdfc5d52
+  udp: true
+  uuid: d5556fce-cc34-4df9-b1ff-755b02a3fc9a
+  xhttp-opts:
+    host: 20e77b03.bilibiliapp.cn
+    mode: auto
+    no-grpc-header: false
+    no-sse-header: false
+    path: /zones
+    sc-max-buffered-posts: 60
+    sc-max-each-post-bytes: 1000000
+    sc-min-posts-interval-ms: 5
+    sc-stream-up-server-secs: 5-10
+    x-padding-bytes: 100-1000
+- name: 🇨🇭 瑞士 | CHE 3
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1024
+  server: 67agpcp5.zf-mix.9999231.xyz
+  skip-cert-verify: true
+  sni: ch-wy.9999231.xyz
+  type: anytls
+  udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭CH_2
@@ -196,7 +239,25 @@ proxies:
   tls: true
   type: vless
   uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-- name: 🇨🇭CH_7
+- name: 🇨🇭CH_3
+  obfs: salamander
+  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+  password: 3a702d4d1de4949005d8431220e040fb
+  port: 443
+  server: 152.67.75.161
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_9
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+  port: 8443
+  server: 82.38.64.235
+  skip-cert-verify: true
+  sni: hopp-swizland-new.mysynology.net
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_4
   password: 84a506ca5aca505696a454d828420b3f
   port: 50160
   server: 140.238.213.114
@@ -204,23 +265,41 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
+- name: 🇨🇭CH_8
+  password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
+  port: 8443
+  server: 82.38.64.229
+  sni: hopp-swizland-new.mysynology.net
+  tls: false
+  type: hysteria2
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_19
+  name: 🇨🇭CH_20
   network: tcp
   port: 443
   reality-opts:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  server: sweth.ali-bard.online
-  servername: sweth.ali-bard.online
+  server: 179.255.191.86
+  servername: dobro.ali-bard.online
   tls: true
   type: vless
-  uuid: 15c9be2b-20f1-47b7-bf33-747ed1ff7fb7
-- name: 🇨🇭CH_10
+  uuid: 12e95f93-443c-45f0-9a2a-5b318b9124cf
+- client-fingerprint: firefox
+  name: 🇨🇭CH_12
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: '!!str ad86e2d52ff40ebd'
+  server: 208.69.78.217
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+- name: 🇨🇭CH_5
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   port: 8443
-  server: 82.38.64.235
-  skip-cert-verify: true
+  server: 82.38.64.239
   sni: hopp-swizland-new.mysynology.net
   tls: false
   type: hysteria2

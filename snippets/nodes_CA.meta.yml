@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: 'Node #16'
+  name: 'Node #5'
   network: ws
   port: 443
   server: 162.159.8.42
@@ -15,7 +15,7 @@ proxies:
       Host: t1s1.rittbo.kdns.fr
     path: /
 - client-fingerprint: chrome
-  name: 'Node #19'
+  name: 'Node #24'
   network: ws
   port: 8443
   server: ad-013.pixel9xdmq.info
@@ -30,7 +30,7 @@ proxies:
       Host: ad-013.pixel9xdmq.info
     path: /
 - client-fingerprint: chrome
-  name: '🇨🇦 #15'
+  name: '🇨🇦 #6'
   network: ws
   port: 443
   server: 104.26.2.173
@@ -50,7 +50,7 @@ proxies:
       - konkortur.sanjeshvipspeed.ir
     path:
     - /
-  name: '🇨🇦 #3'
+  name: '🇨🇦 #18'
   network: httpupgrade
   port: 8080
   server: www.speedtest.net
@@ -69,7 +69,7 @@ proxies:
       - svn-panel-team.lorqino.ir
     path:
     - /mmd
-  name: '🇨🇦 #13'
+  name: '🇨🇦 #11'
   network: httpupgrade
   port: 8880
   server: 104.17.121.110
@@ -88,7 +88,7 @@ proxies:
       - nexo.xelviro.ir
     path:
     - /wss
-  name: '🇨🇦 #14'
+  name: '🇨🇦 #16'
   network: httpupgrade
   port: 2052
   server: 104.21.88.174
@@ -116,7 +116,7 @@ proxies:
   type: vless
   udp: true
   uuid: c0a7e427-1034-485a-b5c7-4449bd04b28d
-- name: '🇨🇦 #11'
+- name: '🇨🇦 #7'
   network: ws
   port: 8880
   server: 155.46.167.30
@@ -128,11 +128,14 @@ proxies:
   ws-opts:
     headers:
       Host: vms.lifetime50.workers.dev
-- name: '🇨🇦 #6'
+- encryption: none
+  name: '🇨🇦 #10'
   network: ws
+  packet-encoding: xudp
   port: 8880
   server: 104.21.23.72
   skip-cert-verify: false
+  sub_tag: C002-260622
   tls: false
   type: vless
   udp: true
@@ -141,6 +144,7 @@ proxies:
     headers:
       Host: calm-haze-d105.21-7cd.workers.dev
     path: /pyip=ProxyIP.SG.CMLiussss.net
+  xudp: true
 - name: '🇨🇦CA加拿大丨yoyapai.com_3 #1'
   network: ws
   port: 8880
@@ -293,7 +297,7 @@ proxies:
   ws-opts:
     path: /assignment
 - client-fingerprint: chrome
-  name: '🇨🇦 #12'
+  name: '🇨🇦 #15'
   network: ws
   port: 8443
   server: yg9.ygkkk.dpdns.org
@@ -307,8 +311,78 @@ proxies:
     headers:
       Host: ygwp.sbbz.tech
     path: /
+- cipher: rc4-md5
+  name: 🇨🇦CA_4
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.197.141.58
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇨🇦CA_13
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 137.184.174.93
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '美国 609 #1'
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
+  server: 23.162.200.198
+  skip-cert-verify: true
+  sub_tag: M002-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- name: 🇨🇦CA_2|2.5MB/s
+  port: 443
+  server: 206.223.183.13
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇨🇦CA_5|516KB/s|R002-260618 01 #1'
+  port: 443
+  server: 206.223.183.21
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇨🇦CA_6|97KB/s|R002-260618 01 #1'
+  port: 9443
+  server: 23.169.224.34
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇨🇦CA_7|408KB/s|R002-260618 01 #1'
+  port: 443
+  server: 206.223.183.16
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇨🇦CA_8|772KB/s|R002-260618 01 #1'
+  port: 443
+  server: 35.183.131.26
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
 - client-fingerprint: chrome
-  name: US【机场推荐：https://a9a.xyz】21
+  name: US【机场推荐：https://a9a.xyz】7
   network: ws
   port: 443
   server: 209.206.51.240
@@ -360,12 +434,6 @@ proxies:
 - name: 🇨🇦 机场推荐:dafei.de 加拿大 01
   port: 443
   server: 142.44.210.129
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇨🇦 机场推荐:dafei.de 加拿大 02
-  port: 443
-  server: 206.223.183.13
   skip-cert-verify: true
   tls: true
   type: http
@@ -1361,9 +1429,85 @@ proxies:
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /IOebhLMhl1CTbFHbL95myfRX2
-- alterId: 64
+- alterId: 0
   cipher: auto
   name: '加拿大 003 #1'
+  network: tcp
+  port: 35034
+  server: 165.154.195.38
+  skip-cert-verify: true
+  type: vmess
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- alterId: 0
+  cipher: auto
+  name: '加拿大 004 #1'
+  network: ws
+  port: 443
+  server: 167.17.68.89
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: vspeedfast.org
+    path: /linkvws
+- name: '加拿大 005 #1'
+  network: xhttp
+  port: 443
+  server: 151.101.215.69
+  servername: accounts.fastly.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 07fa06b4-0be2-4c6f-8fa1-5ef7e184cfc0
+- name: '加拿大 006 #1'
+  network: xhttp
+  port: 443
+  server: 104.234.135.88
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0aec6598-7fb5-44e6-bff7-a4d550117830
+- name: '加拿大 007 #1'
+  network: xhttp
+  port: 443
+  server: 151.101.215.97
+  servername: accounts.fastly.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26becb32-3d57-4b59-9252-3b046768b1ea
+- name: '加拿大 008 #1'
+  network: tcp
+  port: 80
+  server: 35.183.148.110
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6daa0b95-9210-4f29-be40-8c6db00bc5bb
+- name: '加拿大 009 #1'
+  network: tcp
+  port: 443
+  server: 184.107.106.68
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+- alterId: 64
+  cipher: auto
+  name: '加拿大 010 #1'
   network: ws
   port: 443
   server: 142.171.79.10
@@ -1377,7 +1521,7 @@ proxies:
     path: /path/1704276466760
 - alterId: 64
   cipher: auto
-  name: '加拿大 004 #1'
+  name: '加拿大 011 #1'
   network: ws
   port: 443
   server: 142.171.215.99
@@ -1391,7 +1535,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '加拿大 005 #1'
+  name: '加拿大 012 #1'
   network: ws
   port: 443
   server: 142.171.61.106
@@ -1405,7 +1549,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '加拿大 006 #1'
+  name: '加拿大 013 #1'
   network: ws
   port: 443
   server: 142.171.238.19
@@ -1419,7 +1563,7 @@ proxies:
     path: /path/1703493333049
 - alterId: 64
   cipher: auto
-  name: '加拿大 007 #1'
+  name: '加拿大 014 #1'
   network: ws
   port: 443
   server: 142.171.237.242
@@ -1433,7 +1577,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '加拿大 008 #1'
+  name: '加拿大 015 #1'
   network: ws
   port: 443
   server: 142.171.141.211
@@ -1447,7 +1591,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: '加拿大 009 #1'
+  name: '加拿大 016 #1'
   network: ws
   port: 443
   server: 142.171.215.52
@@ -1461,7 +1605,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '加拿大 010 #1'
+  name: '加拿大 017 #1'
   network: ws
   port: 443
   server: 142.171.187.178
@@ -1475,7 +1619,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '加拿大 011 #1'
+  name: '加拿大 018 #1'
   network: ws
   port: 443
   server: 142.171.149.75
@@ -1489,25 +1633,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: '加拿大 012 #1'
-  network: tcp
-  port: 22324
-  server: 198.57.27.212
-  skip-cert-verify: true
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: '加拿大 013 #1'
-  network: tcp
-  port: 14812
-  server: 38.111.114.153
-  skip-cert-verify: true
-  type: vmess
-  uuid: 0146fc40-5962-4e9a-b36a-2b606d001467
-- alterId: 0
-  cipher: aes-128-gcm
-  name: '加拿大 014 #1'
+  name: '加拿大 019 #1'
   network: ws
   port: 80
   server: 51.79.103.76
@@ -1520,7 +1646,7 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
 - alterId: 0
   cipher: auto
-  name: '加拿大 015 #1'
+  name: '加拿大 020 #1'
   network: ws
   port: 443
   server: 68.168.31.196
@@ -1534,39 +1660,90 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: '加拿大 016 #1'
-  network: tcp
-  port: 26924
-  server: 68.168.31.184
+  name: '加拿大 021 #1'
+  network: ws
+  port: 443
+  server: hohm.microsoft.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: hohm.microsoft.com
+    path: /9JZFDTKE
+- alterId: 0
+  cipher: auto
+  name: '加拿大 022 #1'
+  network: ws
+  port: 80
+  server: 165.154.246.71
   skip-cert-verify: true
   type: vmess
-  uuid: 9f8b16a8-369d-4b79-af82-201c089dadd2
+  uuid: 13581ae8-65c9-4fbe-9c78-77fac9ca503a
+  ws-opts:
+    headers:
+      Host: 165.154.246.71
+    path: ?ed=2048
+- alterId: 0
+  cipher: auto
+  name: '加拿大 023 #1'
+  network: ws
+  port: 443
+  server: tw-1.qwqjsq.top
+  skip-cert-verify: true
+  type: vmess
+  uuid: b0543a3b-d690-3ed9-9a81-f24f852e74f7
+  ws-opts:
+    headers:
+      Host: tw-1.qwqjsq.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '加拿大 024 #1'
+  network: ws
+  port: 80
+  server: 165.154.246.107
+  skip-cert-verify: true
+  type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
+  ws-opts:
+    headers:
+      Host: tms.dingtalk.com
+    path: /
+- name: 🇨🇦CA_1|3.1MB/s
+  port: 9443
+  server: 198.44.157.19
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - cipher: aes-256-gcm
-  name: ❓Other_18
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1559... #2'
   password: zDNVedRFPQexG9v
   port: 445
   server: 51.222.141.125
   type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦CA_28
+  name: 🇨🇦CA_20
   password: cdBIDV42DCwnfIN
   port: 8118
   server: 51.79.85.185
   type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦CA_12
+  name: 🇨🇦CA_15
   password: Y6R9pAtvxxzmGC
   port: 5000
   server: 51.222.200.165
   type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦CA_27
+  name: 🇨🇦CA_29
   password: kDWvXYZoTBcGkC4
   port: 8882
   server: 51.222.136.236
   type: ss
 - cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #2'
+  name: 🇨🇦CA_19
   password: Y6R9pAtvxxzmGC
   port: 5601
   server: 51.222.155.113
@@ -1578,72 +1755,34 @@ proxies:
   server: 51.222.155.32
   type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦CA_17
+  name: '🇨🇦[www.v2nodes.com] ss-CA-1545... #2'
   password: cdBIDV42DCwnfIN
   port: 8119
   server: 51.79.64.198
   type: ss
 - cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1545... #3'
+  name: ❓Other_71
   password: kDWvXYZoTBcGkC4
   port: 8882
   server: 51.79.49.116
   type: ss
 - cipher: aes-256-gcm
-  name: 🇨🇦CA_18
+  name: 🇨🇦CA_6
   password: zDNVedRFPQexG9v
   port: 445
   server: 51.222.12.127
   type: ss
-- name: 🇨🇦
-  network: ws
-  password: humanity
+- name: 🇨🇦CA_2|2.8MB/s
   port: 443
-  server: 104.16.174.101
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- cipher: rc4-md5
-  name: 🇨🇦CA_2
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.197.141.58
-  type: ss
-- name: '🇨🇦 #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.174.44
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.ignitelimit.com
-    path: /assignment
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_37
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI
-    short-id: '!!str 15bcc0a77c3cacdf'
-  server: 45.148.103.85
-  servername: ca-root.sworkingvpn.com
+  server: 206.223.161.47
+  skip-cert-verify: true
   tls: true
-  type: vless
-  uuid: 2b781b4a-5942-48e0-a7f3-5a07b7b488c1
-- name: 🇨🇦CA_41
-  network: tcp
+  type: http
+- name: 🇨🇦CA_3|3.5MB/s
   port: 8080
-  server: 194.77.220.104
-  tls: false
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-- name: '🇨🇦 #2'
+  server: 173.180.22.3
+  type: http
+- name: 🇨🇦
   network: ws
   password: humanity
   port: 443
@@ -1655,58 +1794,46 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- client-fingerprint: chrome
-  name: 'CA加拿大 #3'
-  network: ws
-  port: 2096
-  server: 49.238.238.156
-  servername: and-75r.pages.dev
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_16
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
+    short-id: '!!str f98843107912e782'
+  server: 209.200.246.148
+  servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: 573c6482-37db-454a-8c31-5b45a338a580
-  ws-opts:
-    headers:
-      Host: and-75r.pages.dev
-    path: '%2F'
-- name: '🇨🇦 #4'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.16.73.213
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
 - cipher: aes-128-gcm
-  name: 🇨🇦CA_40
-  password: 1cbb3e347ee86e1980a7c731e9dd00a0
-  port: 17202
-  server: 64.74.161.149
+  name: 🇨🇦CA_35
+  password: 4efe1af272e7292139b889f6a63ee071
+  port: 18764
+  server: 64.74.163.67
   type: ss
-- name: '🇨🇦 #5'
+- name: '🇨🇦 #1'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.204
+  server: 104.18.152.187
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
     path: /assignment
-- name: '🇨🇦 #7'
+- name: '🇨🇦 #2'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.16.174.101
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
-    headers:
-      Host: www.ignitelimit.com
     path: /assignment
-- name: '🇨🇦 #8'
+- name: '🇨🇦 #3'
   network: ws
   password: humanity
   port: 443
@@ -1716,7 +1843,7 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- name: '🇨🇦 #9'
+- name: '🇨🇦 #4'
   network: ws
   password: humanity
   port: 443
@@ -1728,42 +1855,31 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: '🇨🇦 #10'
+- name: '🇨🇦 #5'
   network: ws
   password: humanity
   port: 443
-  server: 104.18.152.229
+  server: 104.16.174.44
   skip-cert-verify: false
   sni: www.ignitelimit.com
   type: trojan
   ws-opts:
-    path: /assignment
-- name: 加拿大_7
-  network: ws
-  port: 2083
-  server: 172.67.69.86
-  servername: helloapps.cc.cd
-  tls: true
-  type: vless
-  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-  ws-opts:
     headers:
-      Host: helloapps.cc.cd
-    path: /
+      Host: www.ignitelimit.com
+    path: /assignment
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇦CA_19
+  name: 🇨🇦CA_11
   network: tcp
-  port: 443
+  port: 2053
   reality-opts:
-    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
-    short-id: '!!str f98843107912e782'
-  server: 209.200.246.148
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: '!!str 83f8317a948bb769'
+  server: 66.70.179.198
   servername: www.cloudflare.com
   tls: true
   type: vless
-  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-- name: '🇨🇦 #16'
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+- name: '🇨🇦 #8'
   network: ws
   password: humanity
   port: 443
@@ -1773,19 +1889,45 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- name: 加拿大_6
+- name: '🇨🇦 #9'
   network: ws
-  port: 2083
-  server: 27.50.48.142
-  servername: and-75r.pages.dev
-  tls: true
-  type: vless
-  uuid: 573c6482-37db-454a-8c31-5b45a338a580
+  password: humanity
+  port: 443
+  server: 104.16.73.213
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- cipher: aes-128-gcm
+  name: 🇨🇦CA_2
+  password: shadowsocks
+  port: 443
+  server: 149.22.95.183
+  type: ss
+- name: '🇨🇦 #12'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.77
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
   ws-opts:
     headers:
-      Host: and-75r.pages.dev
-    path: /
-- name: '🇨🇦 #17'
+      Host: www.ignitelimit.com
+    path: /assignment
+- name: '🇨🇦 #13'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.229
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  ws-opts:
+    path: /assignment
+- name: '🇨🇦 #14'
   network: ws
   password: humanity
   port: 443
@@ -1797,43 +1939,17 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- name: 加拿大_3
+- name: '🇨🇦 #17'
   network: ws
-  port: 2083
-  server: 188.164.248.48
-  servername: helloapps.cc.cd
-  tls: true
-  type: vless
-  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  password: humanity
+  port: 443
+  server: 104.18.152.204
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
   ws-opts:
-    headers:
-      Host: helloapps.cc.cd
-    path: /
-- client-fingerprint: firefox
-  name: 🇨🇦CA_14
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: '!!str 83f8317a948bb769'
-  server: 66.70.179.198
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-- name: 加拿大_4
-  network: ws
-  port: 2096
-  server: 49.238.238.156
-  servername: and-75r.pages.dev
-  tls: true
-  type: vless
-  uuid: 573c6482-37db-454a-8c31-5b45a338a580
-  ws-opts:
-    headers:
-      Host: and-75r.pages.dev
-    path: /
-- name: '🇨🇦 #18'
+    path: /assignment
+- name: '🇨🇦 #19'
   network: ws
   password: humanity
   port: 443
@@ -1843,58 +1959,3 @@ proxies:
   type: trojan
   ws-opts:
     path: /assignment
-- client-fingerprint: chrome
-  name: 'CA加拿大 #2'
-  network: ws
-  port: 2053
-  server: 49.238.238.154
-  servername: and-75r.pages.dev
-  tls: true
-  type: vless
-  uuid: 573c6482-37db-454a-8c31-5b45a338a580
-  ws-opts:
-    headers:
-      Host: and-75r.pages.dev
-    path: '%2F'
-- name: 加拿大_1
-  network: ws
-  port: 2083
-  server: 172.66.0.230
-  servername: helloapps.cc.cd
-  tls: true
-  type: vless
-  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
-  ws-opts:
-    headers:
-      Host: helloapps.cc.cd
-    path: /
-- cipher: rc4-md5
-  name: 🇨🇦CA_11
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 137.184.174.93
-  type: ss
-- name: '🇨🇦 #19'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.152.187
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  ws-opts:
-    path: /assignment
-- name: CA【机场推荐：https://a9a.xyz】31
-  network: ws
-  port: 443
-  server: 188.114.96.9
-  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
-  ws-opts:
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome

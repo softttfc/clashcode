@@ -1,6 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: '🇸🇪 #1'
+  name: 🇸🇪
   network: ws
   port: 8443
   server: 193.232.178.149
@@ -15,7 +15,7 @@ proxies:
       Host: edge.yzkvm.top
     path: /
 - client-fingerprint: ios
-  name: 🇸🇪
+  name: '🇸🇪 #1'
   network: tcp
   port: 443
   reality-opts:
@@ -31,6 +31,34 @@ proxies:
   ws-opts:
     headers:
       Host: www.cloudflare.com
+- name: 🇸🇪 机场推荐:dafei.de 瑞典 03
+  port: 443
+  server: 79.142.77.63
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇪SE_2|101KB/s|M003-260806 01 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 43788
+  server: 89.22.224.146
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
+  ws-opts:
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/48.0.2564.109 Safari/537.36
+    path: /@Marisa_kristi
+  xudp: true
 - name: 🇸🇪 机场推荐:dafei.de 瑞典 01
   password: None
   port: 443
@@ -44,18 +72,34 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇸🇪 机场推荐:dafei.de 瑞典 03
-  port: 443
-  server: 79.142.77.63
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪 机场推荐:dafei.de 瑞典 04
+- name: 🇸🇪SE_1|1.5MB/s
   port: 443
   server: 146.70.242.146
   skip-cert-verify: true
   tls: true
   type: http
+- name: 🇸🇪SE_3|⬇️3.2MB/s
+  network: tcp
+  port: 443
+  server: secdn17.suio.me
+  servername: secdn17.suio.me
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: a7a9f670-44c0-45a9-8047-69db0203c142
+- grpc-opts:
+    grpc-service-name: JNIR
+  name: 未知VLESS-49|free-nodes
+  network: grpc
+  port: 504
+  server: dd.openaccessnode.com
+  servername: nobitex.ir
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 31701b5d-ca95-92f9-d684-dae3706161ea
 - alterId: 64
   cipher: auto
   name: SE 1 → tg@nicevpn123
@@ -347,9 +391,212 @@ proxies:
   udp: true
   ws-opts:
     path: '%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252F%25252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252525252CTurk'
+- name: '瑞典 001 #1'
+  network: ws
+  port: 80
+  server: 185.146.173.59
+  servername: digi--v2raycncfs.RadioTeHran.oRG.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: digi--v2raycncfs.RadioTeHran.oRG.
+    path: /Digiv2ray-
+- name: '瑞典 002 #1'
+  network: ws
+  port: 2095
+  server: 185.146.173.37
+  servername: V2ray-_-_-_-_-_-_-_-_-ShhProxy.TelegramChannelJoinBede.com.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 00a26afd-093b-47f5-a396-dbe994325a45
+  ws-opts:
+    headers:
+      Host: V2ray-_-_-_-_-_-_-_-_-ShhProxy.TelegramChannelJoinBede.com.
+    path: /
+- client-fingerprint: chrome
+  name: '瑞典 003 #1'
+  network: ws
+  port: 443
+  server: 146.75.59.186
+  servername: looaboijjnetheri.global.ssl.fastly.net.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 05102194-fc99-4b80-9ab3-d4f0c6f57c33
+  ws-opts:
+    headers:
+      Host: looaboijjnetheri.global.ssl.fastly.net.
+    path: /
+- name: '瑞典 004 #1'
+  network: xhttp
+  port: 443
+  server: 146.75.59.79
+  servername: accounts.fastly.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 07f11347-0104-4ecb-b507-46f054f627ae
+- name: '瑞典 005 #1'
+  network: ws
+  port: 80
+  server: 185.146.173.37
+  servername: 1.v.v.V-_-_-V2ray-_-_-V.v.v.mv.speedtest.net.www.Zula.ir.check-host.net.2.cakesfoodapp.COM.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1759dd49-3e82-4abb-a9ea-0b097037e09d
+  ws-opts:
+    headers:
+      Host: 1.v.v.V-_-_-V2ray-_-_-V.v.v.mv.speedtest.net.www.Zula.ir.check-host.net.2.cakesfoodapp.COM.
+    path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
+- client-fingerprint: chrome
+  name: '瑞典 006 #1'
+  network: ws
+  port: 443
+  server: 146.75.84.3
+  servername: BechBad.global.ssl.fastly.net
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 387ea624-7cdb-41de-b3d8-798d3769c2b7
+  ws-opts:
+    headers:
+      Host: BechBad.global.ssl.fastly.net
+    path: /
+- client-fingerprint: chrome
+  name: '瑞典 007 #1'
+  network: ws
+  port: 443
+  server: 146.75.57.111
+  servername: kingkingprofosor123.global.ssl.fastly.net
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3ceb6b43-ea1b-49bf-9e1e-4435e778db05
+  ws-opts:
+    headers:
+      Host: kingkingprofosor123.global.ssl.fastly.net
+    path: /
+- name: '瑞典 008 #1'
+  network: ws
+  port: 8080
+  server: 185.146.173.37
+  servername: xn--047h.iman-v2ray.sbs.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4cac189c-5611-4cfa-9946-bf1b2b3d152c
+  ws-opts:
+    headers:
+      Host: xn--047h.iman-v2ray.sbs.
+    path: /
+- client-fingerprint: chrome
+  name: '瑞典 009 #1'
+  network: xhttp
+  port: 443
+  server: 146.75.56.210
+  servername: iran.ir
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7a196b46-ddc6-48cc-9f6b-e933919fbe87
+- client-fingerprint: chrome
+  name: '瑞典 010 #1'
+  network: xhttp
+  port: 443
+  server: 146.75.57.238
+  servername: speedtest.net
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7a196b46-ddc6-48cc-9f6b-e933919fbe87
+- name: '瑞典 011 #1'
+  network: ws
+  port: 80
+  server: 146.75.119.82
+  servername: rb24.ir
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 83324aab-2981-4036-a7a4-1692d732d82b
+  ws-opts:
+    headers:
+      Host: rb24.ir
+    path: /ws/?ed=2048/
+- name: '瑞典 012 #1'
+  network: ws
+  port: 8080
+  server: 185.146.173.39
+  servername: digikala.com.arvancloud.ir.farsroid.com.soft98.ir.par30dl.com.flstudio.com.xn--0-ko6ab82c106mda34ulw7efa.blog.shabazian.ir.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: digikala.com.arvancloud.ir.farsroid.com.soft98.ir.par30dl.com.flstudio.com.xn--0-ko6ab82c106mda34ulw7efa.blog.shabazian.ir.
+    path: /?ed=2560
+- name: '瑞典 013 #1'
+  network: ws
+  port: 80
+  server: 185.146.173.158
+  servername: 8.v.v.V-_-_-V2ray-_-_-V.v.v.v.www.speedtest.net.z.Zula.ir.cloudflare.com.bahrane.IR.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8.v.v.V-_-_-V2ray-_-_-V.v.v.v.www.speedtest.net.z.Zula.ir.cloudflare.com.bahrane.IR.
+    path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
+- name: '瑞典 014 #1'
+  network: ws
+  port: 80
+  server: 185.146.173.237
+  servername: 3.V.v.V.v.V.v.V-_-_-V2ray-_-_-V.v.V.v.arV2ray.Host.
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 3.V.v.V.v.V.v.V-_-_-V2ray-_-_-V.v.V.v.arV2ray.Host.
+    path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
 - alterId: 64
   cipher: auto
-  name: '瑞典 001 #1'
+  name: '瑞典 015 #1'
   network: ws
   port: 443
   server: 148.135.38.107
@@ -363,7 +610,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 002 #1'
+  name: '瑞典 016 #1'
   network: ws
   port: 443
   server: 148.135.9.156
@@ -377,7 +624,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: '瑞典 003 #1'
+  name: '瑞典 017 #1'
   network: ws
   port: 443
   server: 148.135.14.99
@@ -391,7 +638,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: '瑞典 004 #1'
+  name: '瑞典 018 #1'
   network: ws
   port: 443
   server: 148.135.31.171
@@ -405,7 +652,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: '瑞典 005 #1'
+  name: '瑞典 019 #1'
   network: ws
   port: 443
   server: 148.135.33.140
@@ -417,21 +664,17 @@ proxies:
     headers:
       Host: www.31270022.xyz
     path: /path/1704188270531
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '瑞典 006 #1'
-  network: tcp
+- name: 🇸🇪SE_3|2.9MB/s
+  password: None
   port: 443
-  server: sto5.vpntype.dev
-  skip-cert-verify: false
-  tfo: false
+  server: 79.142.77.63
+  skip-cert-verify: true
   tls: true
-  type: vless
+  type: http
   udp: true
-  uuid: 601ad357-c8cf-491f-98e6-62175e130658
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇸🇪_瑞典_51
+  name: 🇸🇪_瑞典_46
   port: 443
   reality-opts:
     public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
@@ -444,7 +687,7 @@ proxies:
   udp: true
   uuid: 732255eb-8ce9-4cd5-8bdc-376bd3fa0b11
 - client-fingerprint: chrome
-  name: 🇸🇪_瑞典_169
+  name: 🇸🇪_瑞典_167
   network: ws
   port: 8443
   server: 167.104.104.138
@@ -466,36 +709,47 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  name: 🇸🇪 瑞典 | SWE
-  network: xhttp
+- name: 🇸🇪SE_2|3.0MB/s
+  password: None
   port: 443
-  reality-opts:
-    public-key: R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0
-  server: 104.245.243.2
-  servername: cdn.steamstatic.com
+  server: 149.50.216.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇪 瑞典 | SWE
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1020
+  server: 56juef1w.zf-mix.9999231.xyz
+  skip-cert-verify: true
+  sni: se-house.9999231.xyz
+  type: anytls
+  udp: true
+- auth: 8bd04756-3beb-4348-82c9-d35453df50ce
+  name: 🇸🇪 瑞典 | SWE 2
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  port: 21223
+  server: sweedenqfds777.qcloud.surf
+  skip-cert-verify: true
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | SWE 3
+  network: ws
+  port: 41826
+  server: lte.homyak.app
+  servername: sweden.homyak.app
   tls: true
   type: vless
   udp: true
-  uuid: 8ff8938c-49b6-b22f-a934-b55e91154ca3
-  xhttp-opts:
-    host: cdn.steamstatic.com
+  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
+  ws-opts:
+    headers:
+      Host: lte.homyak.app
     path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇸🇪_SE_瑞典
-  port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 141.227.160.23
-  servername: se.sellflow.org
-  tls: true
-  type: vless
-  uuid: 0bc31c7f-1ee2-4dd3-929b-b61ae780eb3c
+    v2ray-http-upgrade: true
 - client-fingerprint: safari
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-  name: 未知 VLESS-270
+  name: 未知 VLESS-290
   network: grpc
   port: 2053
   reality-opts:
@@ -506,15 +760,29 @@ proxies:
   tls: true
   type: vless
   uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a
-- client-fingerprint: random
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: SE【机场推荐：https://a9a.xyz】35
-  port: 443
+  name: 🇸🇪SE_10
+  network: tcp
+  port: 25119
   reality-opts:
-    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
-  server: 2.26.55.163
-  servername: specific3.kandnet.com
+    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
+    short-id: '!!str 10f517'
+  server: se3.h1cloud.net
+  servername: www.samsung.com
   tls: true
   type: vless
-  udp: true
-  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+- client-fingerprint: chrome
+  name: 🇸🇪SE_7
+  network: ws
+  port: 8443
+  server: 94.183.235.247
+  servername: cf3.schzyc.cc.cd
+  tls: true
+  type: vless
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  ws-opts:
+    headers:
+      Host: cf3.schzyc.cc.cd
+    path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
