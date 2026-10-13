@@ -1,3 +1,8 @@
+#直接订阅	以 .yaml / .yml / .txt 结尾	直接下载，不爬取	https://example.com/sub.yaml → 立即下载并解析节点
+#普通页面	不含 *，且非直接订阅	作为爬取起点（深度=1），可绑定通配符	https://example.com/index → 入队，patterns 可能来自通配符绑定
+#通配符项	含 *	不单独入队，而是与普通页面绑定；若无法绑定则自身作为起点	https://example.com/api/*/list → 
+#             可能绑定到 https://example.com/api/v2/list（若存在），否则自身 https://example.com/api/ 作为起点
+#动态日期	以 +date 开头	格式化后按上述规则继续分类	+date https://example.com/%Y%m%d → 2026-08-15 → https://example.com/20260815
 https://nodefree.me
 https://nodefree.me/p/*.html
 https://oneclash.cc/
