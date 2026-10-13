@@ -3,7 +3,7 @@
 
 """
 ================================================================================
-Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY short-id 保守修复 + 调试）
+Clash 配置文件修复工具 (rebuilder_pro.py) - 最终完整版
 ================================================================================
 
 【功能总览】
@@ -18,28 +18,30 @@ Clash 配置文件修复工具 (rebuilder.py) - 最终完整版（含 REALITY sh
     9. 修复 proxies 中节点名为空的问题（自动生成唯一名称）。
     10. 修复 proxy-groups 中 use 和 proxies 同时存在的问题（移除 proxies）。
     11. 校验 RULE-SET 规则，若引用的 rule-provider 不存在则替换为 REJECT。
-    12. 校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
-    13. 自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
-    14. 【保守修复】修复 VLESS+REALITY 节点的 short-id：仅处理缺失或长度超限，
-        不修改有效值（不强制偶数长度，不清除非十六进制字符）。
-    15. 【调试】在修复前打印所有存在 short-id 问题的节点（含序号、来源、名称、原值、问题类型）。
+    12.【新增】校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
+    13.【新增】自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
+    14.【本次新增】最终安全化：
+        - 节点名清理（...、#、&、*、|、>、< 等危险字符）
+        - network 字段清理（去除 # 污染、非白名单值重置为 tcp）
+        - VLESS security: none 与 reality-opts 冲突修复
+        - Adblock 规则残留符号清理（^、||、@@）
+        - 使用 NoAliasDumper 禁止 YAML 锚点/别名输出
 
 【用法】
-    python rebuilder.py <输入文件> <输出文件>
+    python rebuilder_pro.py <输入文件> <输出文件>
 
 【全局变量】
     DEFAULT_URL                  - 测速地址
     DEFAULT_INTERVAL             - 检测间隔
     VLESS_DEFAULT_ENCRYPTION     - VLESS 加密修正值
+    VALID_NETWORKS               - network 字段合法值白名单
 ================================================================================
 """
 
 import sys
+import re
 import yaml
 from collections import Counter, defaultdict
-import re
-import random
-import os
 
 # ============================================================================
 # 全局配置（可按需修改）
@@ -50,6 +52,32 @@ VLESS_DEFAULT_ENCRYPTION = "none"
 
 # 内置关键字（Clash 保留策略）
 BUILTIN_KEYWORDS = {"DIRECT", "REJECT", "REJECT-DROP", "PASS", "GLOBAL", "SOCKS5", "HTTP"}
+
+# 【新增】network 字段合法值白名单
+VALID_NETWORKS = {
+    'tcp', 'ws', 'grpc', 'h2', 'http', 'httpupgrade', 'xhttp', 'raw',
+    'udp', 'quic', '',
+}
+
+
+# ============================================================================
+# 【新增】YAML 安全 Dumper：禁止锚点/别名，特殊字符串自动加引号
+# ============================================================================
+class NoAliasDumper(yaml.SafeDumper):
+    """禁止 YAML 锚点/别名输出，避免 Clash Verge 解析异常。"""
+
+    def ignore_aliases(self, data):
+        return True
+
+    def represent_str(self, data):
+        style = None
+        # 包含 YAML 特殊字符时强制使用双引号
+        if any(ch in data for ch in '&*#...|>@`?:{}[],!%^'):
+            style = '"'
+        return self.represent_scalar('tag:yaml.org,2002:str', data, style=style)
+
+
+NoAliasDumper.add_representer(str, NoAliasDumper.represent_str)
 
 
 # ============================================================================
@@ -374,6 +402,11 @@ def validate_rule_set_references(rules, provider_names):
 # 11. 校验 rule-providers 定义完整性（只警告，不修改）
 # ============================================================================
 def validate_rule_providers(providers):
+    """
+    检查每个 rule-provider 是否包含必要的字段。
+    对于 http 类型，必须有 url；对于 file 类型，必须有 file。
+    若缺失，输出警告。
+    """
     if not isinstance(providers, dict):
         return
 
@@ -402,6 +435,11 @@ def validate_rule_providers(providers):
 # 12. 修复节点与策略组同名冲突
 # ============================================================================
 def fix_node_group_name_conflicts(proxies, groups):
+    """
+    修复节点名与策略组名冲突的情况。
+    若有同名，则重命名节点（添加 " (节点)" 后缀），并更新所有策略组 proxies 列表中的引用。
+    返回修复计数。
+    """
     if not isinstance(proxies, list) or not isinstance(groups, list):
         return 0
 
@@ -412,7 +450,6 @@ def fix_node_group_name_conflicts(proxies, groups):
         return 0
 
     fixed = 0
-    proxy_dict = {p['name']: p for p in proxies if isinstance(p, dict) and 'name' in p}
 
     for name in conflicts:
         nodes = [p for p in proxies if isinstance(p, dict) and p.get('name') == name]
@@ -444,155 +481,95 @@ def fix_node_group_name_conflicts(proxies, groups):
 
 
 # ============================================================================
-# 13. 【保守修复】修复 REALITY short-id（仅处理缺失/空值及超长）
-#     不再强制偶数长度，不再清除非十六进制字符，避免改变有效值。
+# 14.【本次新增】最终安全化
+#     功能：
+#       1. 节点名清理（...、#、&、*、|、>、< 等危险字符）
+#       2. network 字段清理（去除 # 污染、非白名单值重置为 tcp）
+#       3. VLESS security: none 与 reality-opts 冲突修复
+#       4. Adblock 规则残留符号清理（^、||、@@）
+#       5. IPv6 server 去方括号
+#     说明：
+#       本函数在写入最终文件前调用，作为最后一道防线。
+#       原有 13 个修复函数已处理结构性引用问题，本函数只负责 YAML 语法安全
+#       和字段合法性，不改变原有流程。
 # ============================================================================
-def fix_reality_short_id(proxies):
+def sanitize_final_config(config):
     """
-    保守修复 VLESS+REALITY 节点的 short-id 字段。
-    规则：
-      - 若 short-id 缺失或为空字符串，生成随机 8 位十六进制值。
-      - 若长度超过 16 字符，截断至 16 字符（并警告）。
-      - 其他情况（非十六进制、奇数长度）原样保留，仅输出调试信息（可选）。
-    返回修复的节点数量。
+    最终安全化处理。返回修复计数。
     """
-    if not isinstance(proxies, list):
-        return 0
-
     fixed = 0
 
-    for p in proxies:
-        if not isinstance(p, dict) or p.get('type') != 'vless':
-            continue
+    # ---------- 4.1 节点名清理 + network 清理 + VLESS reality 修复 ----------
+    proxies = config.get('proxies', [])
+    if isinstance(proxies, list):
+        for p in proxies:
+            if not isinstance(p, dict):
+                continue
 
-        reality = p.get('reality-opts')
-        if not isinstance(reality, dict):
-            continue
+            # 4.1.1 节点名清理
+            if 'name' in p and isinstance(p['name'], str):
+                old = p['name']
+                new = old.replace('...', '…').replace('#', '＃').replace('&', '＆') \
+                         .replace('*', '＊').replace('|', '｜').replace('>', '＞').replace('<', '＜')
+                new = ''.join(ch for ch in new if ord(ch) >= 0x20 or ch == ' ')
+                new = new.strip() or "未命名"
+                if new != old:
+                    p['name'] = new
+                    fixed += 1
 
-        sid = reality.get('short-id')
-        # 处理缺失或空字符串
-        if sid is None or (isinstance(sid, str) and sid.strip() == ''):
-            new_sid = format(random.randint(0, 0xFFFFFFFF), '08x')  # 8位十六进制
-            reality['short-id'] = new_sid
-            print(f"🔧 修复：节点 '{p.get('name')}' 缺少 short-id，已添加随机值 '{new_sid}'")
-            fixed += 1
-            continue
+            # 4.1.2 network 字段清理
+            if 'network' in p:
+                net = str(p['network']).split('#')[0].split('&')[0].strip().lower()
+                if net not in VALID_NETWORKS:
+                    net = 'tcp'
+                if net != p['network']:
+                    p['network'] = net
+                    fixed += 1
 
-        sid_str = str(sid)
-        original = sid_str
+            # 4.1.3 IPv6 server 去方括号
+            if 'server' in p and isinstance(p['server'], str):
+                srv = p['server']
+                if srv.startswith('[') and srv.endswith(']'):
+                    p['server'] = srv[1:-1]
+                    fixed += 1
 
-        # 仅处理超长（>16）的情况
-        if len(sid_str) > 16:
-            new_sid = sid_str[:16]
-            reality['short-id'] = new_sid
-            print(f"⚠️ 警告：节点 '{p.get('name')}' 的 short-id 长度超过16，已截断为 '{new_sid}'（原值: '{sid_str}'）")
-            fixed += 1
-        # 其他情况（包括非十六进制、奇数长度）不做修改，可选择性输出警告（注释掉以免刷屏）
-        # elif not re.fullmatch(r'^[0-9a-fA-F]+$', sid_str):
-        #     print(f"ℹ️ 注意：节点 '{p.get('name')}' 的 short-id 包含非十六进制字符，未修改: '{sid_str}'")
-        # elif len(sid_str) % 2 != 0:
-        #     print(f"ℹ️ 注意：节点 '{p.get('name')}' 的 short-id 长度为奇数，未修改: '{sid_str}'")
+            # 4.1.4 VLESS security 与 reality 冲突修复
+            if p.get('type') == 'vless' and 'reality-opts' in p:
+                if p.get('security') != 'reality':
+                    p['security'] = 'reality'
+                    fixed += 1
+                if p.get('tls') is not True:
+                    p['tls'] = True
+                    fixed += 1
+
+    # ---------- 4.2 Adblock 规则残留符号清理 ----------
+    rules = config.get('rules', [])
+    if isinstance(rules, list):
+        for i, rule in enumerate(rules):
+            if not isinstance(rule, str):
+                continue
+            parts = rule.split(',')
+            if len(parts) >= 3 and parts[0] in ('DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'DOMAIN'):
+                match = parts[1]
+                if '^' in match or '||' in match or '@@' in match or '|' in match:
+                    match = re.sub(r'[\^|@]', '', match)
+                    if '||' in match:
+                        match = match.split('||')[0]
+                    match = match.strip()
+                    if not match:
+                        # 清空后无法恢复，丢弃该条规则
+                        rules[i] = "REJECT"
+                        fixed += 1
+                        continue
+                    parts[1] = match
+                    rules[i] = ','.join(parts)
+                    fixed += 1
 
     return fixed
 
 
 # ============================================================================
-# 14. 【调试】列出所有存在 short-id 问题的节点（序号、来源、名称、原值、问题）
-# ============================================================================
-def debug_print_bad_short_ids(config, config_file_path):
-    """
-    从主配置和所有 provider 缓存中加载全部节点，检查每个 VLESS+REALITY 节点的 short-id，
-    若存在缺失、非十六进制、长度奇数或超过 16 字符，则打印详细信息。
-    不修改任何配置。
-    """
-    all_proxies = []          # 存储 (来源, 节点字典) 元组
-
-    # 1. 从主配置的 proxies 加载
-    if 'proxies' in config and isinstance(config['proxies'], list):
-        for p in config['proxies']:
-            all_proxies.append(("主配置 proxies", p))
-
-    # 2. 从 proxy-providers 缓存加载
-    providers = config.get('proxy-providers', {})
-    if isinstance(providers, dict):
-        base_dir = os.path.dirname(config_file_path)
-        for provider_name, provider_cfg in providers.items():
-            if not isinstance(provider_cfg, dict):
-                continue
-            if provider_cfg.get('type') != 'http':
-                continue
-            cache_path = provider_cfg.get('path')
-            if not cache_path:
-                continue
-            if not os.path.isabs(cache_path):
-                cache_path = os.path.join(base_dir, cache_path)
-            if not os.path.exists(cache_path):
-                continue
-
-            try:
-                with open(cache_path, 'r', encoding='utf-8') as f:
-                    data = yaml.safe_load(f)
-            except Exception:
-                continue
-
-            proxies_list = None
-            if isinstance(data, list):
-                proxies_list = data
-            elif isinstance(data, dict) and 'proxies' in data:
-                proxies_list = data['proxies']
-            if not isinstance(proxies_list, list):
-                continue
-
-            for p in proxies_list:
-                all_proxies.append((f"provider '{provider_name}'", p))
-
-    if not all_proxies:
-        print("[DEBUG] 没有找到任何节点。")
-        return
-
-    print("\n" + "=" * 70)
-    print("[DEBUG] ★★★ 检测所有 VLESS+REALITY 节点的 short-id 问题 ★★★")
-
-    problem_count = 0
-    for idx, (source, p) in enumerate(all_proxies, start=1):
-        if not isinstance(p, dict) or p.get('type') != 'vless':
-            continue
-        reality = p.get('reality-opts')
-        if not isinstance(reality, dict):
-            continue
-
-        sid = reality.get('short-id')
-        node_name = p.get('name', '未命名')
-        issues = []
-
-        if sid is None:
-            issues.append("缺失 (None)")
-        else:
-            sid_str = str(sid)
-            if not re.fullmatch(r'^[0-9a-fA-F]+$', sid_str):
-                issues.append(f"含非十六进制字符 ('{sid_str}')")
-            if len(sid_str) % 2 != 0:
-                issues.append(f"长度为奇数 ({len(sid_str)})")
-            if len(sid_str) > 16:
-                issues.append(f"长度超过16 ({len(sid_str)})")
-
-        if issues:
-            problem_count += 1
-            print(f"[DEBUG] #{idx:>4} | 来源: {source}")
-            print(f"        名称: {node_name}")
-            print(f"        short-id 原始值: {sid}")
-            print(f"        ❌ 问题: {', '.join(issues)}")
-            print("-" * 70)
-
-    if problem_count == 0:
-        print("[DEBUG] ✅ 未发现 short-id 有问题的节点。")
-    else:
-        print(f"[DEBUG] ⚠️ 共发现 {problem_count} 个节点存在 short-id 问题。")
-    print("=" * 70 + "\n")
-
-
-# ============================================================================
-# 15. 主函数
+# 13. 主函数
 # ============================================================================
 def fix_clash_config(input_file, output_file):
     # ---------- 1. 读取文件 ----------
@@ -610,10 +587,6 @@ def fix_clash_config(input_file, output_file):
         print("❌ 根元素不是字典")
         sys.exit(1)
 
-    # ============ 【调试】打印所有 short-id 有问题的节点 ============
-    debug_print_bad_short_ids(config, input_file)
-    # ================================================================
-
     # ---------- 2. 收集 provider 名称并验证 rule-providers ----------
     provider_names = set()
     if 'proxy-providers' in config and isinstance(config['proxy-providers'], dict):
@@ -623,17 +596,9 @@ def fix_clash_config(input_file, output_file):
 
     # ---------- 3. 处理 proxies（节点） ----------
     proxy_names = set()
-    total_fixed = 0
     if 'proxies' in config and isinstance(config['proxies'], list):
-        # 修复 encryption
         config['proxies'] = fix_vless_encryption(config['proxies'])
-
-        # 修复 REALITY short-id（保守模式）
-        total_fixed += fix_reality_short_id(config['proxies'])
-
-        # 修复空节点名
-        total_fixed += fix_empty_node_names(config['proxies'])
-
+        total_fixed = fix_empty_node_names(config['proxies'])
         check_duplicate_node_names(config['proxies'])
         proxy_names = {p.get('name') for p in config['proxies'] if isinstance(p, dict) and 'name' in p}
         print(f"ℹ️ 共加载 {len(proxy_names)} 个节点")
@@ -643,8 +608,17 @@ def fix_clash_config(input_file, output_file):
     # ---------- 4. 处理 proxy-groups ----------
     if 'proxy-groups' not in config:
         print("⚠️ 未找到 proxy-groups，直接复制")
-        with open(output_file, 'w', encoding='utf-8') as f:
-            yaml.dump(config, f, allow_unicode=True, sort_keys=False)
+        # 仍进行最终安全化，保证输出合法
+        total_fixed = total_fixed if 'total_fixed' in dir() else 0
+        total_fixed += sanitize_final_config(config)
+        try:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                yaml.dump(config, f, Dumper=NoAliasDumper,
+                          allow_unicode=True, sort_keys=False, default_flow_style=False)
+            print(f"✅ 已写入: {output_file}（共修复 {total_fixed} 个问题）")
+        except Exception as e:
+            print(f"❌ 写入失败: {e}")
+            sys.exit(1)
         return
 
     groups = config['proxy-groups']
@@ -660,17 +634,17 @@ def fix_clash_config(input_file, output_file):
     # 4b. 修复 use 和 proxies 同时存在
     total_fixed += fix_use_and_proxies_conflict(groups)
 
-    # 4c. 修复节点与策略组同名冲突
+    # ========== 修复节点与策略组同名冲突 ==========
     if 'proxies' in config and isinstance(config['proxies'], list):
         total_fixed += fix_node_group_name_conflicts(config['proxies'], groups)
-        # 重新收集节点名和组名
         proxy_names = {p.get('name') for p in config['proxies'] if isinstance(p, dict) and 'name' in p}
         group_names = {g.get('name') for g in groups if isinstance(g, dict)}
+    # ============================================
 
-    # 4d. 修复 proxies 引用
+    # 4c. 修复 proxies 引用
     total_fixed += fix_proxy_references(groups, proxy_names, group_names)
 
-    # 4e. 修复缺失字段 / 类型错误
+    # 4d. 修复缺失字段 / 类型错误
     for idx, g in enumerate(groups):
         if not isinstance(g, dict):
             continue
@@ -699,29 +673,43 @@ def fix_clash_config(input_file, output_file):
                 g['interval'] = DEFAULT_INTERVAL
                 total_fixed += 1
 
-    # 4f. 去重策略组名
+    # 4e. 去重策略组名
     if 'rules' in config and isinstance(config['rules'], list):
         rules = config['rules']
     else:
         rules = []
     total_fixed += deduplicate_group_names(groups, rules)
 
-    # 4g. 检测并修复循环引用
+    # 4f. 检测并修复循环引用
     total_fixed += detect_and_fix_cycles(groups)
 
-    # 4h. 修复 rules 中引用的不存在的组名
+    # 4g. 修复 rules 中引用的不存在的组名
     group_names = {g.get('name') for g in groups if isinstance(g, dict)}
     if rules:
         total_fixed += fix_rules_policy_references(rules, group_names)
 
-    # 4i. 校验 RULE-SET 规则
+    # 4h. 校验 RULE-SET 规则
     if rules:
         total_fixed += validate_rule_set_references(rules, provider_names)
 
-    # ---------- 5. 写入文件 ----------
+    # ---------- 5. 【本次新增】最终安全化 ----------
+    print("\n🧹 执行最终安全化...")
+    sanitize_count = sanitize_final_config(config)
+    if sanitize_count:
+        print(f"📝 最终安全化修复 {sanitize_count} 处")
+    total_fixed += sanitize_count
+
+    # ---------- 6. 写入文件（使用 NoAliasDumper） ----------
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
-            yaml.dump(config, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
+            yaml.dump(
+                config,
+                f,
+                Dumper=NoAliasDumper,
+                allow_unicode=True,
+                sort_keys=False,
+                default_flow_style=False,
+            )
         print(f"✅ 已写入: {output_file}")
         if total_fixed > 0:
             print(f"📝 共修复 {total_fixed} 个问题")
@@ -737,6 +725,6 @@ def fix_clash_config(input_file, output_file):
 # ============================================================================
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("用法: rebuilder.py <输入文件> <输出文件>")
+        print("用法: rebuilder_pro.py <输入文件> <输出文件>")
         sys.exit(1)
     fix_clash_config(sys.argv[1], sys.argv[2])
