@@ -18,23 +18,30 @@ Clash 配置文件修复工具 (rebuilder_pro1.py) - 最终完整版
     9. 修复 proxies 中节点名为空的问题（自动生成唯一名称）。
     10. 修复 proxy-groups 中 use 和 proxies 同时存在的问题（移除 proxies）。
     11. 校验 RULE-SET 规则，若引用的 rule-provider 不存在则替换为 REJECT。
-    12.【新增】校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
-    13.【新增】自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
-    14.【本次新增】最终安全化：
+    12. 校验 rule-providers 定义完整性，若缺失 url/file 等关键字段则输出警告。
+    13. 自动修复节点与策略组同名冲突（重命名节点并更新策略组引用）。
+    14. 最终安全化：
         - 节点名清理（...、#、&、*、|、>、< 等危险字符）
         - network 字段清理（去除 # 污染、非白名单值重置为 tcp）
         - VLESS security: none 与 reality-opts 冲突修复
         - Adblock 规则残留符号清理（^、||、@@）
         - 使用 NoAliasDumper 禁止 YAML 锚点/别名输出
+    15.【本次新增】REALITY 字段清理：
+        - short-id：剔除非法字符、补齐/截断到合法长度
+        - public-key：必须是 43 位合法 base64url，否则删除整个节点
+        - 删除节点后同步清理 proxy-groups 的引用
 
 【用法】
-    python rebuilder_pro.py <输入文件> <输出文件>
+    python rebuilder_pro1.py <输入文件> <输出文件>
 
 【全局变量】
     DEFAULT_URL                  - 测速地址
     DEFAULT_INTERVAL             - 检测间隔
     VLESS_DEFAULT_ENCRYPTION     - VLESS 加密修正值
     VALID_NETWORKS               - network 字段合法值白名单
+    VALID_PUBLIC_KEY_CHARS       - REALITY public-key 合法字符集
+    PUBLIC_KEY_LEN               - REALITY public-key 标准长度
+    VALID_SHORT_ID_CHARS         - REALITY short-id 合法字符集
 ================================================================================
 """
 
@@ -53,15 +60,28 @@ VLESS_DEFAULT_ENCRYPTION = "none"
 # 内置关键字（Clash 保留策略）
 BUILTIN_KEYWORDS = {"DIRECT", "REJECT", "REJECT-DROP", "PASS", "GLOBAL", "SOCKS5", "HTTP"}
 
-# 【新增】network 字段合法值白名单
+# network 字段合法值白名单
 VALID_NETWORKS = {
     'tcp', 'ws', 'grpc', 'h2', 'http', 'httpupgrade', 'xhttp', 'raw',
     'udp', 'quic', '',
 }
 
+# 【本次新增】REALITY public-key 合法字符集（base64url）
+VALID_PUBLIC_KEY_CHARS = set(
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    'abcdefghijklmnopqrstuvwxyz'
+    '0123456789-_'
+)
+
+# 【本次新增】REALITY public-key 标准长度
+PUBLIC_KEY_LEN = 43
+
+# 【本次新增】REALITY short-id 合法字符集（十六进制）
+VALID_SHORT_ID_CHARS = set('0123456789abcdef')
+
 
 # ============================================================================
-# 【新增】YAML 安全 Dumper：禁止锚点/别名，特殊字符串自动加引号
+# YAML 安全 Dumper：禁止锚点/别名，特殊字符串自动加引号
 # ============================================================================
 class NoAliasDumper(yaml.SafeDumper):
     """禁止 YAML 锚点/别名输出，避免 Clash Verge 解析异常。"""
@@ -481,13 +501,17 @@ def fix_node_group_name_conflicts(proxies, groups):
 
 
 # ============================================================================
-# 14.【本次新增】最终安全化
+# 14. 最终安全化
 #     功能：
 #       1. 节点名清理（...、#、&、*、|、>、< 等危险字符）
 #       2. network 字段清理（去除 # 污染、非白名单值重置为 tcp）
 #       3. VLESS security: none 与 reality-opts 冲突修复
 #       4. Adblock 规则残留符号清理（^、||、@@）
 #       5. IPv6 server 去方括号
+#       6. 【本次新增】REALITY 字段清理：
+#          - short-id：剔除非法字符、补齐/截断到合法长度
+#          - public-key：必须是 43 位合法 base64url，否则删除整个节点
+#          - 删除节点后同步清理 proxy-groups 的引用
 #     说明：
 #       本函数在写入最终文件前调用，作为最后一道防线。
 #       原有 13 个修复函数已处理结构性引用问题，本函数只负责 YAML 语法安全
@@ -498,6 +522,9 @@ def sanitize_final_config(config):
     最终安全化处理。返回修复计数。
     """
     fixed = 0
+
+    # 用于记录 REALITY public-key 损坏、需要删除的节点
+    bad_reality_nodes = set()
 
     # ---------- 4.1 节点名清理 + network 清理 + VLESS reality 修复 ----------
     proxies = config.get('proxies', [])
@@ -541,6 +568,84 @@ def sanitize_final_config(config):
                 if p.get('tls') is not True:
                     p['tls'] = True
                     fixed += 1
+
+            # 4.1.5【本次新增】REALITY 字段清理
+            #   public-key：必须 43 位合法 base64url，否则标记节点待删
+            #   short-id：规范化（剔除非法字符、补齐/截断）
+            if p.get('type') == 'vless' and isinstance(p.get('reality-opts'), dict):
+                ro = p['reality-opts']
+
+                # ---- public-key 校验 ----
+                pk = ro.get('public-key')
+                if not isinstance(pk, str):
+                    bad_reality_nodes.add(id(p))
+                    continue
+                pk_clean = ''.join(c for c in pk if c in VALID_PUBLIC_KEY_CHARS)
+                if len(pk_clean) != PUBLIC_KEY_LEN:
+                    # 长度不合法（被截断/污染），无法修复，标记节点待删
+                    bad_reality_nodes.add(id(p))
+                    continue
+                if pk_clean != pk:
+                    ro['public-key'] = pk_clean
+                    fixed += 1
+
+                # ---- short-id 规范化 ----
+                sid = ro.get('short-id')
+                if sid is not None:
+                    if not isinstance(sid, str):
+                        ro.pop('short-id', None)
+                        fixed += 1
+                    else:
+                        sid_clean = sid.lower().strip()
+                        sid_clean = ''.join(
+                            c for c in sid_clean if c in VALID_SHORT_ID_CHARS
+                        )
+                        # 奇数长度补 '0'
+                        if len(sid_clean) % 2 != 0:
+                            sid_clean = '0' + sid_clean
+                        # 超过 16 位截断
+                        if len(sid_clean) > 16:
+                            sid_clean = sid_clean[:16]
+                        if sid_clean != sid:
+                            if sid_clean:
+                                ro['short-id'] = sid_clean
+                            else:
+                                ro.pop('short-id', None)
+                            fixed += 1
+
+    # ---------- 4.1.6【本次新增】删除 REALITY 损坏的节点，并清理引用 ----------
+    if bad_reality_nodes:
+        original_proxies = config.get('proxies', [])
+        if isinstance(original_proxies, list):
+            deleted_names = set()
+            new_proxies = []
+            for p in original_proxies:
+                if isinstance(p, dict) and id(p) in bad_reality_nodes:
+                    name = p.get('name', '未命名')
+                    deleted_names.add(name)
+                    print(f"🗑️  删除 REALITY public-key 损坏的节点: {name}")
+                    fixed += 1
+                else:
+                    new_proxies.append(p)
+            config['proxies'] = new_proxies
+
+            # 从所有 proxy-groups 的 proxies 列表中移除已删除节点的名字
+            groups = config.get('proxy-groups', [])
+            if isinstance(groups, list) and deleted_names:
+                for g in groups:
+                    if not isinstance(g, dict):
+                        continue
+                    plist = g.get('proxies')
+                    if isinstance(plist, list):
+                        original_len = len(plist)
+                        plist[:] = [item for item in plist if item not in deleted_names]
+                        removed = original_len - len(plist)
+                        if removed > 0:
+                            print(f"🔧 修复：组 '{g.get('name')}' 移除了 {removed} 个已删除节点的引用")
+                            fixed += 1
+                        if not plist:
+                            plist.append("DIRECT")
+                            fixed += 1
 
     # ---------- 4.2 Adblock 规则残留符号清理 ----------
     rules = config.get('rules', [])
@@ -608,7 +713,6 @@ def fix_clash_config(input_file, output_file):
     # ---------- 4. 处理 proxy-groups ----------
     if 'proxy-groups' not in config:
         print("⚠️ 未找到 proxy-groups，直接复制")
-        # 仍进行最终安全化，保证输出合法
         total_fixed = total_fixed if 'total_fixed' in dir() else 0
         total_fixed += sanitize_final_config(config)
         try:
@@ -692,7 +796,7 @@ def fix_clash_config(input_file, output_file):
     if rules:
         total_fixed += validate_rule_set_references(rules, provider_names)
 
-    # ---------- 5. 【本次新增】最终安全化 ----------
+    # ---------- 5. 最终安全化（含 REALITY 字段清理 + 删除损坏节点） ----------
     print("\n🧹 执行最终安全化...")
     sanitize_count = sanitize_final_config(config)
     if sanitize_count:
@@ -725,6 +829,6 @@ def fix_clash_config(input_file, output_file):
 # ============================================================================
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("用法: rebuilder_pro.py <输入文件> <输出文件>")
+        print("用法: rebuilder_pro1.py <输入文件> <输出文件>")
         sys.exit(1)
     fix_clash_config(sys.argv[1], sys.argv[2])
