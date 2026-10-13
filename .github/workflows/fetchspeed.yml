@@ -53,9 +53,32 @@ jobs:
       - name: 执行任务
         run: python ./fetch_pro3.py
 
+      # ---------- 预处理测速文件（新增，失败不中断） ----------
+      # 调用 preprocess_speed.py 对 list.meta.yml 做安全化处理：
+      #   1. 清理节点名中的 YAML 危险字符（...、#、&、* 等）
+      #   2. 保证节点名唯一，避免测速结果按 name 错配
+      #   3. 清理 network 字段污染（# URL fragment）
+      #   4. 修复 VLESS security 与 reality-opts 字段冲突
+      #   5. IPv6 server 去方括号
+      #   6. 使用 NoAliasDumper 输出，禁止锚点/别名
+      # 失败不中断：若本步骤失败，speed_pro1.py 会自动回退到原始文件
+      - name: 预处理测速文件
+        run: python ./preprocess_speed.py list.meta.yml list.meta.safe.yml
+        continue-on-error: true
+
       # ---------- 测速（可选，失败不中断） ----------
+      # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
+      # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。
       - name: 测试节点连通性延迟性
-        run: python ./speed_pro1.py --delay list.meta.yml list.metaspeed.yml
+        run: |
+          INPUT_FILE="list.meta.yml"
+          if [ -f list.meta.safe.yml ]; then
+            INPUT_FILE="list.meta.safe.yml"
+            echo "✅ 使用预处理后的文件: $INPUT_FILE"
+          else
+            echo "⚠️ 未找到 list.meta.safe.yml，回退使用原始文件: $INPUT_FILE"
+          fi
+          python ./speed_pro1.py --delay "$INPUT_FILE" list.metaspeed.yml
         continue-on-error: true
 
       # ---------- 修复配置文件格式（可选） ----------
@@ -68,7 +91,7 @@ jobs:
         run: python ./rebuilder_pro1.py list.metaspeedrp.yml list.metaspeedrbd.yml
         continue-on-error: true
 
-      # ---------- 校验节点文件（新增） ----------
+      # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
       - name: 校验节点文件
         run: |
           if [ -f list.metaspeedrbd.yml ]; then
@@ -85,7 +108,7 @@ jobs:
           fi
         continue-on-error: true
 
-      # ---------- 打印校验报告到 Actions 日志（新增） ----------
+      # ---------- 打印校验报告到 Actions 日志 ----------
       - name: 打印校验报告
         if: always()
         run: |
@@ -95,7 +118,7 @@ jobs:
             echo "======================================="
           fi
 
-      # ---------- 将校验报告作为 artifact 上传（新增） ----------
+      # ---------- 将校验报告作为 artifact 上传（方案 B 核心） ----------
       - name: 上传校验报告
         if: always()
         uses: actions/upload-artifact@v4
@@ -117,7 +140,7 @@ jobs:
           # 添加所有需要跟踪的文件
           git add list*
           git add snippets/
-          # 新增：把校验报告也纳入版本管理
+          # 把校验报告也纳入版本管理
           if [ -f 错误日志.txt ]; then
             git add 错误日志.txt
           fi
