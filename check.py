@@ -15,6 +15,7 @@ check.py - Clash 节点文件校验工具
     6.  proxy-groups 引用有效性
     7.  rules 引用有效性、语法合法性
     8.  已知会导致 Clash Verge 报 "invalid yaml" 的问题
+    9.  【本次新增】REALITY short-id 格式校验
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO]
@@ -24,7 +25,12 @@ check.py - Clash 节点文件校验工具
     - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
     - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
     - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
-    - 其余检查逻辑保持不变
+    - 【本次新增】新增 REALITY short-id 格式校验
+        mihomo 对 short-id 的要求：
+          * 必须是十六进制字符串（0-9, a-f）
+          * 长度必须是偶数
+          * 长度不能超过 16
+          * 不能是数字类型（YAML 会把纯数字解析为 int）
 """
 
 import sys
@@ -69,6 +75,9 @@ VALID_RULE_TYPES = {
     'UID', 'NETWORK', 'DSCP', 'RULE-SET', 'AND', 'OR', 'NOT',
     'SUB-RULE', 'MATCH',
 }
+
+# 【本次新增】REALITY short-id 合法字符集
+VALID_SHORT_ID_CHARS = set('0123456789abcdef')
 
 
 # ============================================================================
@@ -152,6 +161,98 @@ def check_yaml_parse(path, rep):
 
 
 # ============================================================================
+# 【本次新增】REALITY short-id 校验
+# ============================================================================
+def check_reality_opts(proxy, loc, rep):
+    """
+    校验 REALITY 的 reality-opts 字段。
+
+    mihomo 对 short-id 的要求：
+      * 必须是字符串类型（YAML 会把纯数字解析为 int，导致 mihomo 报
+        "invalid REALITY short id"）
+      * 必须是十六进制字符串（0-9, a-f）
+      * 长度必须是偶数
+      * 长度不能超过 16
+      * 空字符串部分版本允许，但不确定，因此给 WARN
+
+    参数:
+        proxy: 节点字典
+        loc:   位置描述，如 "proxies[123]"
+        rep:   报告器
+    """
+    ro = proxy.get('reality-opts')
+    if not isinstance(ro, dict):
+        return
+
+    # ---------- public-key 检查 ----------
+    pk = ro.get('public-key')
+    if pk is None:
+        rep.warn('PROXY', f'reality-opts 缺少 public-key', loc)
+    elif not isinstance(pk, str):
+        rep.error('PROXY',
+                  f'public-key 不是字符串: {type(pk).__name__} = {pk!r}',
+                  loc)
+    elif len(pk) == 0:
+        rep.warn('PROXY', 'public-key 为空字符串', loc)
+
+    # ---------- short-id 检查 ----------
+    sid = ro.get('short-id')
+
+    # 情况 1：字段不存在
+    if sid is None:
+        rep.info('PROXY',
+                 'reality-opts 缺少 short-id（部分 mihomo 版本允许，'
+                 '但建议显式提供合法值）',
+                 loc)
+        return
+
+    # 情况 2：不是字符串（YAML 把纯数字或科学计数法解析成了 int/float）
+    if not isinstance(sid, str):
+        rep.error('PROXY',
+                  f'short-id 不是字符串（{type(sid).__name__} = {sid!r}），'
+                  f'mihomo 会报 "invalid REALITY short id"',
+                  loc)
+        return
+
+    # 情况 3：空字符串
+    if len(sid) == 0:
+        rep.warn('PROXY',
+                 'short-id 为空字符串（部分 mihomo 版本允许，'
+                 '但建议显式提供合法值）',
+                 loc)
+        return
+
+    # 情况 4：含非十六进制字符
+    invalid_chars = [c for c in sid.lower() if c not in VALID_SHORT_ID_CHARS]
+    if invalid_chars:
+        rep.error('PROXY',
+                  f'short-id 含非十六进制字符: {sid!r} '
+                  f'(非法字符: {invalid_chars})',
+                  loc)
+        return
+
+    # 情况 5：长度超过 16
+    if len(sid) > 16:
+        rep.error('PROXY',
+                  f'short-id 长度超过 16（{len(sid)} 位）: {sid!r}',
+                  loc)
+        return
+
+    # 情况 6：长度为奇数
+    if len(sid) % 2 != 0:
+        rep.error('PROXY',
+                  f'short-id 长度为奇数（{len(sid)} 位）: {sid!r}，'
+                  f'mihomo 要求偶数长度',
+                  loc)
+        return
+
+    # 全部通过，给个 INFO 提示合法
+    rep.info('PROXY',
+             f'short-id 合法: {sid!r}（{len(sid)} 位）',
+             loc)
+
+
+# ============================================================================
 # 2. 节点字段校验
 # ============================================================================
 def check_proxy(proxy, idx, name_set, rep):
@@ -231,6 +332,11 @@ def check_proxy(proxy, idx, name_set, rep):
         if proxy.get('security') == 'none' and 'reality-opts' in proxy:
             rep.warn('PROXY', f'vless 同时存在 security: none 和 reality-opts，'
                               f'部分 mihomo 版本会判为字段冲突', loc)
+
+        # 【本次新增】REALITY short-id 校验
+        # 只对含有 reality-opts 的节点进行检查，其余节点不受影响
+        if 'reality-opts' in proxy:
+            check_reality_opts(proxy, loc, rep)
 
     # ws-opts / grpc-opts 结构
     for opt in ('ws-opts', 'grpc-opts', 'h2-opts', 'http-opts', 'xhttp-opts', 'reality-opts'):
