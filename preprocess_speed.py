@@ -15,12 +15,17 @@ preprocess_speed.py - 测速前预处理脚本
         4. VLESS security: none 与 reality-opts 字段冲突
         5. IPv6 地址带方括号
         6. 输出 YAML 含锚点/别名
+        7. 【本次新增】REALITY 字段损坏（short-id 粘连、public-key 被截断）
 
 【与 speed_pro1.py 的关系】
     speed_pro1.py 使用 name 作为 delay_status 的键，节点名重复会导致测速结果
     错配。本脚本保证输出节点名唯一。
     speed_pro1.py 直接使用 yaml.safe_load 读取，若输入非法会直接崩溃。本脚本
     保证输出 YAML 语法合法。
+
+【REALITY 字段清理规则】
+    - short-id：剔除非法字符、奇数长度补 0、超过 16 位截断、空值删除字段
+    - public-key：必须是 43 位合法 base64url 字符，否则整个节点删除
 
 【用法】
     python preprocess_speed.py <输入文件> <输出文件>
@@ -82,6 +87,19 @@ ALLOWED_TYPES = {
     'http', 'https', 'socks5', 'socks5h',
     'snell', 'wireguard', 'mieru', 'ssh', 'juicity',
 }
+
+# 【本次新增】REALITY public-key 合法字符集（base64url）
+VALID_PUBLIC_KEY_CHARS = set(
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    'abcdefghijklmnopqrstuvwxyz'
+    '0123456789-_'
+)
+
+# 【本次新增】REALITY public-key 标准长度
+PUBLIC_KEY_LEN = 43
+
+# 【本次新增】REALITY short-id 合法字符集（十六进制）
+VALID_SHORT_ID_CHARS = set('0123456789abcdef')
 
 
 # ============================================================================
@@ -198,6 +216,73 @@ def fix_vless_reality(proxy):
     return fixed
 
 
+def clean_reality_opts(proxy):
+    """
+    【本次新增】清理 REALITY 字段。
+
+    处理逻辑：
+      - public-key：必须是 43 位合法 base64url 字符，否则返回 False
+        （表示节点应删除，因为 REALITY 握手无法完成）
+      - short-id：
+          * 剔除非法字符（只保留 0-9、a-f）
+          * 奇数长度补 '0'
+          * 超过 16 位截断到 16 位
+          * 空值删除 short-id 字段（部分 mihomo 版本允许）
+
+    参数:
+        proxy: 节点字典
+
+    返回:
+        True  -> 节点可保留
+        False -> 节点应删除（public-key 不合法）
+    """
+    ro = proxy.get('reality-opts')
+    if not isinstance(ro, dict):
+        return True  # 不是 REALITY 节点，保留
+
+    # ---------- public-key 校验 ----------
+    pk = ro.get('public-key')
+    if not isinstance(pk, str):
+        return False  # 类型错误，节点无法使用
+
+    pk_clean = ''.join(c for c in pk if c in VALID_PUBLIC_KEY_CHARS)
+    if len(pk_clean) != PUBLIC_KEY_LEN:
+        # 长度不对（被截断或含非法字符），无法修复，删除节点
+        return False
+    if pk_clean != pk:
+        ro['public-key'] = pk_clean
+
+    # ---------- short-id 规范化 ----------
+    sid = ro.get('short-id')
+    if sid is None:
+        # 缺少 short-id，部分 mihomo 版本允许，保留节点
+        return True
+
+    if not isinstance(sid, str):
+        # 类型错误，删除 short-id 字段（部分 mihomo 版本允许）
+        ro.pop('short-id', None)
+        return True
+
+    sid_clean = sid.lower().strip()
+    sid_clean = ''.join(c for c in sid_clean if c in VALID_SHORT_ID_CHARS)
+
+    # 奇数长度补 '0'
+    if len(sid_clean) % 2 != 0:
+        sid_clean = '0' + sid_clean
+
+    # 超过 16 位截断
+    if len(sid_clean) > 16:
+        sid_clean = sid_clean[:16]
+
+    # 空则删除字段
+    if not sid_clean:
+        ro.pop('short-id', None)
+    else:
+        ro['short-id'] = sid_clean
+
+    return True
+
+
 def is_valid_proxy(proxy):
     """
     判断节点是否结构上有效（保留供筛选使用）。
@@ -309,6 +394,7 @@ def main():
     fixed_network = 0
     fixed_server = 0
     fixed_reality = 0
+    dropped_reality = 0
 
     for p in proxies:
         if not isinstance(p, dict):
@@ -317,6 +403,12 @@ def main():
         if not is_valid_proxy(p):
             # 结构无效的节点直接剔除，避免测速脚本崩溃
             dropped += 1
+            continue
+
+        # 【本次新增】REALITY 字段清理（public-key 不合法则删除节点）
+        if not clean_reality_opts(p):
+            dropped_reality += 1
+            print(f"  🗑️  剔除 REALITY public-key 损坏的节点: {p.get('name', '未命名')}")
             continue
 
         # 清理 name
@@ -361,15 +453,16 @@ def main():
 
     # ---------- 报告 ----------
     print("─" * 60)
-    print(f"📊 原始节点数    : {original_count}")
-    print(f"📊 有效节点数    : {len(cleaned)}")
-    print(f"📊 剔除无效节点  : {dropped}")
-    print(f"📊 唯一名称数    : {unique_count}")
-    print(f"📊 重命名节点    : {renamed}")
-    print(f"📊 修复 name      : {fixed_name}")
-    print(f"📊 修复 network   : {fixed_network}")
-    print(f"📊 修复 server    : {fixed_server}")
-    print(f"📊 修复 reality   : {fixed_reality}")
+    print(f"📊 原始节点数        : {original_count}")
+    print(f"📊 有效节点数        : {len(cleaned)}")
+    print(f"📊 剔除无效节点      : {dropped}")
+    print(f"📊 剔除 REALITY 损坏 : {dropped_reality}")
+    print(f"📊 唯一名称数        : {unique_count}")
+    print(f"📊 重命名节点        : {renamed}")
+    print(f"📊 修复 name          : {fixed_name}")
+    print(f"📊 修复 network       : {fixed_network}")
+    print(f"📊 修复 server        : {fixed_server}")
+    print(f"📊 修复 reality       : {fixed_reality}")
     print("─" * 60)
     print(f"✅ 预处理完成: {output_file}")
 
