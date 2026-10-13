@@ -15,7 +15,8 @@ check.py - Clash 节点文件校验工具
     6.  proxy-groups 引用有效性
     7.  rules 引用有效性、语法合法性
     8.  已知会导致 Clash Verge 报 "invalid yaml" 的问题
-    9.  【本次新增】REALITY short-id 格式校验
+    9.  REALITY short-id 格式校验
+    10.【本次新增】REALITY public-key 格式校验
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO]
@@ -25,12 +26,12 @@ check.py - Clash 节点文件校验工具
     - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
     - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
     - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
-    - 【本次新增】新增 REALITY short-id 格式校验
-        mihomo 对 short-id 的要求：
-          * 必须是十六进制字符串（0-9, a-f）
-          * 长度必须是偶数
-          * 长度不能超过 16
-          * 不能是数字类型（YAML 会把纯数字解析为 int）
+    - 新增 REALITY short-id 格式校验
+    - 【本次新增】新增 REALITY public-key 格式校验
+        mihomo 对 public-key 的要求：
+          * 必须是 base64url 字符集（A-Z, a-z, 0-9, -, _）
+          * 长度通常为 43 位（32 字节 x25519 公钥的 base64url 编码）
+          * 不能含 : / ? @ . 等 URL 字符
 """
 
 import sys
@@ -76,8 +77,18 @@ VALID_RULE_TYPES = {
     'SUB-RULE', 'MATCH',
 }
 
-# 【本次新增】REALITY short-id 合法字符集
+# REALITY short-id 合法字符集
 VALID_SHORT_ID_CHARS = set('0123456789abcdef')
+
+# 【本次新增】REALITY public-key 合法字符集（base64url）
+VALID_PUBLIC_KEY_CHARS = set(
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    'abcdefghijklmnopqrstuvwxyz'
+    '0123456789-_'
+)
+
+# 【本次新增】public-key 常见长度（base64url 无 padding 时 43 位）
+PUBLIC_KEY_EXPECTED_LEN = 43
 
 
 # ============================================================================
@@ -161,7 +172,7 @@ def check_yaml_parse(path, rep):
 
 
 # ============================================================================
-# 【本次新增】REALITY short-id 校验
+# REALITY 字段校验（short-id + public-key）
 # ============================================================================
 def check_reality_opts(proxy, loc, rep):
     """
@@ -175,6 +186,11 @@ def check_reality_opts(proxy, loc, rep):
       * 长度不能超过 16
       * 空字符串部分版本允许，但不确定，因此给 WARN
 
+    mihomo 对 public-key 的要求：
+      * 必须是 base64url 字符集（A-Z, a-z, 0-9, -, _）
+      * 长度通常为 43 位
+      * 不能含 : / ? @ . 等 URL 字符
+
     参数:
         proxy: 节点字典
         loc:   位置描述，如 "proxies[123]"
@@ -184,18 +200,45 @@ def check_reality_opts(proxy, loc, rep):
     if not isinstance(ro, dict):
         return
 
-    # ---------- public-key 检查 ----------
+    # ============================================================================
+    # public-key 检查
+    # ============================================================================
     pk = ro.get('public-key')
     if pk is None:
-        rep.warn('PROXY', f'reality-opts 缺少 public-key', loc)
+        rep.warn('PROXY', 'reality-opts 缺少 public-key', loc)
     elif not isinstance(pk, str):
         rep.error('PROXY',
                   f'public-key 不是字符串: {type(pk).__name__} = {pk!r}',
                   loc)
     elif len(pk) == 0:
         rep.warn('PROXY', 'public-key 为空字符串', loc)
+    else:
+        # 检查是否含非法字符（非 base64url 字符）
+        invalid_chars = [c for c in pk if c not in VALID_PUBLIC_KEY_CHARS]
+        if invalid_chars:
+            # 找出第一个非法字符的位置，便于定位污染位置
+            first_invalid_pos = next(
+                i for i, c in enumerate(pk) if c not in VALID_PUBLIC_KEY_CHARS
+            )
+            prefix = pk[:first_invalid_pos]
+            rep.error('PROXY',
+                      f'public-key 含非 base64url 字符 '
+                      f'(首个非法字符在第 {first_invalid_pos + 1} 位: '
+                      f'{pk[first_invalid_pos]!r})，'
+                      f'合法前缀为 {prefix!r}（{len(prefix)} 位）',
+                      loc)
+        elif len(pk) != PUBLIC_KEY_EXPECTED_LEN:
+            # 长度异常但不是非法字符
+            rep.warn('PROXY',
+                     f'public-key 长度异常（{len(pk)} 位，通常为 '
+                     f'{PUBLIC_KEY_EXPECTED_LEN} 位）: {pk!r}',
+                     loc)
+        else:
+            rep.info('PROXY', 'public-key 合法（43 位）', loc)
 
-    # ---------- short-id 检查 ----------
+    # ============================================================================
+    # short-id 检查
+    # ============================================================================
     sid = ro.get('short-id')
 
     # 情况 1：字段不存在
@@ -225,9 +268,16 @@ def check_reality_opts(proxy, loc, rep):
     # 情况 4：含非十六进制字符
     invalid_chars = [c for c in sid.lower() if c not in VALID_SHORT_ID_CHARS]
     if invalid_chars:
+        # 找出第一个非法字符的位置
+        first_invalid_pos = next(
+            i for i, c in enumerate(sid) if c.lower() not in VALID_SHORT_ID_CHARS
+        )
+        prefix = sid[:first_invalid_pos]
         rep.error('PROXY',
-                  f'short-id 含非十六进制字符: {sid!r} '
-                  f'(非法字符: {invalid_chars})',
+                  f'short-id 含非十六进制字符 '
+                  f'(首个非法字符在第 {first_invalid_pos + 1} 位: '
+                  f'{sid[first_invalid_pos]!r})，'
+                  f'合法前缀为 {prefix!r}（{len(prefix)} 位）',
                   loc)
         return
 
@@ -333,7 +383,7 @@ def check_proxy(proxy, idx, name_set, rep):
             rep.warn('PROXY', f'vless 同时存在 security: none 和 reality-opts，'
                               f'部分 mihomo 版本会判为字段冲突', loc)
 
-        # 【本次新增】REALITY short-id 校验
+        # REALITY 字段校验（short-id + public-key）
         # 只对含有 reality-opts 的节点进行检查，其余节点不受影响
         if 'reality-opts' in proxy:
             check_reality_opts(proxy, loc, rep)
