@@ -1,4 +1,118 @@
 proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 日本_5
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: FE18081Cm-WUzpu6JyGpmlJqHEZpDmeWCAcisuRKtX4
+    short-id: '!!str 2235c8526bc59d67'
+  server: 141.147.150.232
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: fa13a9f7-5cba-4dca-b6b7-c14953f0ac65
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 日本_2
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: zRYILDpfkddIbXYu10kE3d-NouoDNvQR_Rq9UPx-lyM
+    short-id: '!!str ed9e79c488173f57'
+  server: 161.33.37.121
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: fea92fee-3202-43bf-bca5-ff06db0f95c0
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 日本_9
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: DbiBFFM_s7eBSN20U4fxvliZdcBfV2_41T_PWX2mrj0
+    short-id: '!!str 708f353722c36d17'
+  server: 158.179.191.37
+  servername: www.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 53f1e11a-2b55-43f0-953f-d44c5fba92b6
+- client-fingerprint: chrome
+  name: 🇯🇵_日本_332
+  network: ws
+  port: 26418
+  server: 154.31.112.237
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: ab2a5cc0-11d1-4bc4-a9d4-b5654ad18dc4
+  ws-opts:
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 'JP日本(mibei77.com 米贝节点分享)_4 #4'
+  network: ws
+  port: 4798
+  server: 107.191.53.86
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 16a5e4f6-246f-406d-9787-1b5686a97cbc
+  ws-opts:
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 'JP日本(mibei77.com 米贝节点分享)_5 #4'
+  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
+  port: 1020
+  server: 06nn6kxv.zf-mix.9999231.xyz
+  skip-cert-verify: true
+  sni: se-house.9999231.xyz
+  tls: true
+  type: anytls
+  udp: true
+- cipher: aes-256-cfb
+  name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #5'
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.137
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵_JP_日本 #5'
+  network: http
+  port: 49432
+  server: 38.47.121.14
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+- alterId: 2
+  cipher: auto
+  name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #5'
+  port: 30806
+  server: v6.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: '🇯🇵 #5'
   network: ws
   port: 18122
@@ -115,16 +229,6 @@ proxies:
     headers:
       Host: rubifen.adaspoloandco.com
     path: /GOrbEh
-- client-fingerprint: chrome
-  name: CN【机场推荐：https://a9a.xyz】29
-  network: tcp
-  port: 58011
-  server: us22.sofast.live
-  skip-cert-verify: true
-  tls: false
-  type: vless
-  udp: true
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
 - client-fingerprint: random
   flow: xtls-rprx-vision
   name: '🇯🇵 #8'
@@ -154,120 +258,6 @@ proxies:
   type: vless
   udp: true
   uuid: 0c4c6ebb-603f-4429-8682-beef6b65b80d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 日本_5
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: FE18081Cm-WUzpu6JyGpmlJqHEZpDmeWCAcisuRKtX4
-    short-id: '!!str 2235c8526bc59d67'
-  server: 141.147.150.232
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: fa13a9f7-5cba-4dca-b6b7-c14953f0ac65
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 日本_2
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: zRYILDpfkddIbXYu10kE3d-NouoDNvQR_Rq9UPx-lyM
-    short-id: '!!str ed9e79c488173f57'
-  server: 161.33.37.121
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: fea92fee-3202-43bf-bca5-ff06db0f95c0
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 日本_9
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: DbiBFFM_s7eBSN20U4fxvliZdcBfV2_41T_PWX2mrj0
-    short-id: '!!str 708f353722c36d17'
-  server: 158.179.191.37
-  servername: www.apple.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 53f1e11a-2b55-43f0-953f-d44c5fba92b6
-- client-fingerprint: chrome
-  name: 🇯🇵_日本_332
-  network: ws
-  port: 26418
-  server: 154.31.112.237
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: ab2a5cc0-11d1-4bc4-a9d4-b5654ad18dc4
-  ws-opts:
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 'JP日本(v2clash.blog 2026-10.12更新... #4'
-  network: ws
-  port: 4798
-  server: 107.191.53.86
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 16a5e4f6-246f-406d-9787-1b5686a97cbc
-  ws-opts:
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 'JP日本(v2clash.blog 2026-10.12更新... #5'
-  password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
-  port: 1020
-  server: 06nn6kxv.zf-mix.9999231.xyz
-  skip-cert-verify: true
-  sni: se-house.9999231.xyz
-  tls: true
-  type: anytls
-  udp: true
-- cipher: aes-256-cfb
-  name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #2'
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 121.46.230.137
-  skip-cert-verify: true
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵_JP_日本 #2'
-  network: http
-  port: 49432
-  server: 38.47.121.14
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
-- alterId: 2
-  cipher: auto
-  name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #2'
-  port: 30806
-  server: v6.hdacd.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 日本(海外账号:shop.tgaaaa.co)_1
   password: a7c5d30b-ce9b-4e34-b5cb-66f8308790ef
   port: 1001
@@ -330,7 +320,7 @@ proxies:
     path: /Sydney3
 - alterId: 0
   cipher: auto
-  name: '🇦🇺 澳大利亚 | AUS #3 #1'
+  name: '🇦🇺 澳大利亚 | AUS #3'
   network: ws
   port: 443
   server: 212.135.211.242
@@ -352,27 +342,6 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇯🇵 日本|@stairnode
-  password: BxceQaOe
-  port: 3022
-  server: 52.194.222.108
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: 🇯🇵 日本2|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 4937
-  server: 13.231.134.78
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: 🇯🇵 日本3|@stairnode
-  password: 868ecdaf6aed618ec98cf78585672b2b
-  port: 9201
-  server: 43.207.115.26
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
 - alterId: 0
   cipher: auto
   name: 日本(yudou789.top 玉豆免费节点)
@@ -383,108 +352,416 @@ proxies:
   type: vmess
   udp: true
   uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 日本|@ripaojiedian #2'
+- alpn:
+  - h3
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇯🇵JP_1|5.3MB/s
   network: ws
+  packet-encoding: xudp
   port: 443
-  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  skip-cert-verify: false
+  server: saas.sin.fan
+  servername: snip.edgeoneai.cc.cd
   tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 日本2|@ripaojiedian #2'
-  network: ws
+      Host: snip.edgeoneai.cc.cd
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/68.0.3440.106 Safari/537.36
+    max-early-data: 2560
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458
+  xudp: true
+- name: 未知 TROJAN-126
+  network: tcp
+  password: UX82473651
   port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
+  server: evolving-platypus.rooster465.autos
+  skip-cert-verify: true
+  sni: evolving-platypus.rooster465.autos
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '日本 006 #1'
+  name: 🇯🇵JP_68|570KB/s|S004-260618
   network: ws
-  port: 80
+  port: '80'
   server: 168.138.43.75
-  skip-cert-verify: false
   tls: false
   type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
     headers:
       Host: jp01.a0a.xyz
-    path: /
-- name: '日本 007 #1'
-  network: ws
-  port: 8880
-  server: 156.238.18.221
-  servername: inaslnyekosshernist.borogomsho12pa34.kiling-spoooky---dude.spikevpn.cfd.
-  skip-cert-verify: false
-  tfo: false
+    path: /cctv13.m3u8
+- name: 未知 TROJAN-118
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: comic-poodle.rooster465.autos
+  skip-cert-verify: true
+  sni: comic-poodle.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_170|287KB/s|A004-260618
+  network: tcp
+  port: 27916
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: '!!str 6772eb2b7a'
+  server: 39.109.110.80
+  servername: cdn-dynmedia-1.microsoft.com
   tls: true
   type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- name: 🇯🇵JP_157
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 18.183.167.216
+  skip-cert-verify: true
+  sni: amazed-mako.rooster465.autos
+  type: trojan
   udp: true
-  uuid: 1806567a-fdd6-47dd-d0fd-b1459853a240
+- name: 🇯🇵JP_84
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.230.139.12
+  skip-cert-verify: true
+  sni: brief-glider.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_155|183KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.10.234
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: inaslnyekosshernist.borogomsho12pa34.kiling-spoooky---dude.spikevpn.cfd.
-    path: /telegram-
-- name: '日本 008 #1'
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_40
   network: tcp
-  port: 10000
-  server: 14.137.238.40
-  skip-cert-verify: false
-  tfo: false
+  port: 43000
+  reality-opts:
+    public-key: onJvbzSx_vZUyycafvPuhsiSQsr9tw4zotyVMSWCvm4
+    short-id: '!!str 8d66106f'
+  server: 142.91.106.31
+  servername: 142.91.106.31
   tls: true
   type: vless
+  uuid: f8681dba-d368-4bab-a3c2-a8dc712ba368
+- name: 🇯🇵JP_1|3.9MB/s
+  port: 1080
+  server: 217.142.236.180
+  tls: false
+  type: socks5
+  username: Og%3D%3D
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_1
+  network: tcp
+  port: 18007
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 未知 TROJAN-127
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: fancy-javelin.rooster465.autos
+  skip-cert-verify: true
+  sni: fancy-javelin.rooster465.autos
+  type: trojan
   udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-- name: '日本 009 #1'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_142|75KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.10.2
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵_日本_50
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 52.194.251.232
+  skip-cert-verify: true
+  sni: optimal-penguin.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_106|119KB/s|M002-260618
+  network: ws
+  port: 443
+  server: 104.27.46.35
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_126
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.65.177.190
+  skip-cert-verify: true
+  sni: winning-marten.rooster465.autos
+  type: trojan
+- name: 🇯🇵JP_109|311KB/s|S001-260618
+  network: ws
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  port: 443
+  server: jp3.998998.best
+  sni: nat11.outsidemyheart.space
+  type: trojan
+  ws-opts:
+    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_86|566KB/s|S004-260618
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: None
+    path: /cctv13.m3u8
+- client-fingerprint: firefox
+  name: '🇯🇵JP_13 #1'
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: '!!str 9922313fffed1c63'
+  server: 46.250.250.149
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+- name: 未知 TROJAN-114
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: assuring-skink.rooster465.autos
+  skip-cert-verify: true
+  sni: assuring-skink.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_91|145KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 152.69.200.216
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_6
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: firefox
+  name: 🇯🇵JP_176|193KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 43.170.8.95
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_70|545KB/s|S004-260618
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: 168.138.43.75
+    path: /cctv13.m3u8
+- name: 🇯🇵JP_72|163KB/s|A004-260618
+  password: 184cdec28da5a09450803c8debcd2cc9
+  port: 50160
+  server: 138.3.208.26
+  skip-cert-verify: true
+  sni: 138.3.208.26
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇯🇵JP_104|92KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.10.9
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_120
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 52.192.217.187
+  skip-cert-verify: true
+  sni: evolving-platypus.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇯🇵JP_118
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 176.34.5.100
+  skip-cert-verify: true
+  sni: assuring-skink.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_105|208KB/s|M002-260618
+  network: ws
+  port: 443
+  server: 104.16.10.185
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_174|138KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.10.22
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_11
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.238.153.132
+  skip-cert-verify: true
+  sni: obliging-louse.rooster465.autos
+  type: trojan
+- name: 🇯🇵JP_119
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.249.55.154
+  skip-cert-verify: true
+  sni: prime-corgi.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_101|143KB/s|M002-260618
+  network: ws
+  port: 443
+  server: 104.17.50.53
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_79
   network: tcp
   port: 443
-  server: 134.122.154.210
-  skip-cert-verify: false
-  tfo: false
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: '!!str 1a'
+  server: 153.121.36.102
+  servername: www.amazon.com
   tls: true
   type: vless
-  udp: true
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
-- name: '日本 010 #1'
-  network: grpc
-  port: 2003
-  server: 172.105.252.35
-  servername: in-full.privateip.net
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
-- flow: xtls-rprx-vision
-  name: '日本 011 #1'
-  network: tcp
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+- client-fingerprint: chrome
+  name: 🇯🇵JP_102|290KB/s|A004-260618
+  network: ws
   port: 443
-  server: 172.105.252.35
-  servername: in-full.privateip.net
-  skip-cert-verify: true
-  tfo: false
+  server: 104.16.10.56
+  servername: jp3.yohototo.top
   tls: true
   type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_163|569KB/s|A004-260618
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.114.99.222
+  sni: allowed-poodle.rooster465.autos
+  type: trojan
+- name: ❓Other_103
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: brief-glider.rooster465.autos
+  skip-cert-verify: true
+  sni: brief-glider.rooster465.autos
+  type: trojan
   udp: true
-  uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
 - name: 🇯🇵JP_39
   network: tcp
   port: 443
@@ -495,245 +772,580 @@ proxies:
   type: vless
   udp: true
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: '日本 013 #1'
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_169|647KB/s|A004-260618
+  network: tcp
+  port: 27916
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: '!!str 6772eb2b7a'
+  server: 103.30.76.37
+  servername: cdn-dynmedia-1.microsoft.com
+  tls: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- name: 🇯🇵JP_85
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.249.36.167
+  sni: comic-poodle.rooster465.autos
+  type: trojan
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_47
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: '!!str 1a'
+  server: t9.qifei.app
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+- client-fingerprint: chrome
+  name: 🇯🇵JP_160|143KB/s|A004-260618
   network: ws
   port: 443
-  server: 151.101.109.223
-  servername: pan1.global.ssl.fastly.net
+  server: 104.18.153.10
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_172|372KB/s|A004-260618
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZrHDiON568oDDRIl0XXBL5kBK5bNnkadKFzt6UYIoUs
+    short-id: '!!str ee2fb8a902f1fa2b'
+  server: 31.77.29.47
+  servername: jp-akn-1.movietop24.site
+  tls: true
+  type: vless
+  uuid: 9ee57d03-dcf5-488b-aff7-305301879353
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇯🇵JP_16 #1'
+  network: raw
+  port: 50159
+  reality-opts:
+    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
+    short-id: '!!str 091e1c5db8451757'
+  server: 154.31.114.248
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_156
+  network: tcp
+  port: 27916
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: '!!str 6772eb2b7a'
+  server: apifunx.mate-fox.com
+  servername: cdn-dynmedia-1.microsoft.com
+  tls: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- cipher: aes-128-gcm
+  name: '🇯🇵JP_2 #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.241
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_5
+  network: tcp
+  port: 19645
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_24|119KB/s|M003-260806
+  network: tcp
+  port: '54291'
+  server: 103.127.243.66
+  tls: false
+  type: vmess
+  uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
+- client-fingerprint: chrome
+  name: 🇯🇵JP_8|132KB/s|M003-260806
+  network: ws
+  port: 4443
+  server: 54.178.110.17
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  tls: true
+  type: vless
+  uuid: d5fbd83b-7346-4ad9-94c0-76293724824d
+  ws-opts:
+    headers:
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+    path: '%2F%40Marisa_kristi'
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_157|596KB/s|A004-260618
+  network: raw
+  port: 27916
+  reality-opts:
+    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
+    short-id: '!!str 6772eb2b7a'
+  server: 43.255.157.234
+  servername: cdn-dynmedia-1.microsoft.com
+  tls: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- name: 🇯🇵JP_148|368KB/s|A004-260618
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  port: 8443
+  server: 8.211.175.236
   skip-cert-verify: true
-  tfo: false
+  sni: 8.211.175.236
+  tls: false
+  type: hysteria2
+- client-fingerprint: firefox
+  name: 🇯🇵JP_94|596KB/s|T001-260618
+  network: ws
+  port: 443
+  server: 8.219.155.125
+  servername: vp10.pages.dev
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp10.pages.dev
+    path: '%2F'
+- name: 🇯🇵JP_134|428KB/s|A004-260618
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 18.183.212.83
+  skip-cert-verify: true
+  sni: normal-macaque.rooster465.autos
+  type: trojan
+- name: 🇯🇵JP_162
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.230.91.226
+  skip-cert-verify: true
+  sni: musical-terrier.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_17|191KB/s|A004-260618
+  network: ws
+  port: 57554
+  server: 203.137.165.164
+  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+  tls: true
+  type: vless
+  uuid: e5b2a063-a114-4bd0-802d-b2da1fe1d1da
+  ws-opts:
+    headers:
+      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+    path: '%2F%40Marisa_kristi'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_103|165KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.111.195
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_90|399KB/s|C002-260622
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    path: /cctv13.m3u8
+- name: 🇯🇵JP_53
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: promoted-rattler.rooster465.autos
+  skip-cert-verify: true
+  sni: promoted-rattler.rooster465.autos
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇯🇵JP_20
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+- name: 🇯🇵JP_108
+  password: 96ab5cd282733fd4c312a61f972f330a
+  port: 443
+  server: 45.32.10.7
+  sni: vp3.yysyy.online
+  tls: false
+  type: hysteria2
+- name: 🇯🇵JP_95
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 52.192.45.137
+  skip-cert-verify: true
+  sni: promoted-rattler.rooster465.autos
+  type: trojan
+- name: 🇯🇵JP_154|352KB/s|A004-260618
+  network: tcp
+  password: HOrViv
+  port: 28106
+  server: 209.248.32.116
+  skip-cert-verify: true
+  sni: download.windowsupdate.com
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇯🇵JP_164|85KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.16.10.63
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_111|77KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 162.159.254.3
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_52|451KB/s|A004-260618
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 43.207.198.39
+  sni: fancy-javelin.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇯🇵JP_9|292KB/s|M003-260806
+  network: ws
+  port: 57554
+  server: 203.137.165.164
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  tls: true
+  type: vless
+  uuid: 9c7501fb-4e23-44d8-9a9e-973807ae4f35
+  ws-opts:
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+    path: '%2F%40Marisa_kristi'
+- name: 🇯🇵_日本_22
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.193.213.184
+  skip-cert-verify: true
+  sni: stable-python.rooster465.autos
+  type: trojan
+  udp: true
+- name: 🇯🇵JP_162|415KB/s|A004-260618
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.112.29.244
+  sni: evident-ant.rooster465.autos
+  type: trojan
+- client-fingerprint: chrome
+  name: 🇯🇵JP_175|71KB/s|A004-260618
+  network: ws
+  port: 443
+  server: 104.18.42.98
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- name: 🇯🇵JP_93
+  network: tcp
+  port: 20802
+  server: 152.69.192.144
+  tls: false
+  type: vless
+  uuid: ac76a374-7447-4dab-bfa9-b7f83a7a7946
+- name: JP【机场推荐：https://a9a.xyz】28
+  network: tcp
+  password: Trojan@82164024
+  port: 443
+  server: jp.tronsg.com
+  skip-cert-verify: true
+  sni: jp.tronsg.com
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇯🇵JP_87|505KB/s|A004-260618
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+    short-id: '!!str 1a'
+  server: 160.16.139.182
+  servername: www.amazon.com
+  tls: true
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+- client-fingerprint: chrome
+  name: 🇯🇵JP_93|475KB/s|T001-260618
+  network: ws
+  port: 443
+  server: proxyip.jp.cmliussss.net
+  servername: vp10.pages.dev
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp10.pages.dev
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 Japan/Osaka [TG]
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+  server: 172.233.79.107
+  servername: googleapis.com
   tls: true
   type: vless
   udp: true
-  uuid: c8541f02-4efd-401d-beb7-dc017b12ee94
-  ws-opts:
-    headers:
-      Host: pan1.global.ssl.fastly.net
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 014 #1'
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: ❓Other_40
+  network: tcp
+  port: 10583
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.114.220.22
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- name: 🇯🇵JP_37
+  password: 96ab5cd282733fd4c312a61f972f330a
+  port: 443
+  server: vp3.yysyy.online
+  sni: vp3.yysyy.online
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇯🇵JP_110|290KB/s|A004-260618
   network: ws
   port: 443
-  server: 172.105.239.241
-  skip-cert-verify: true
+  server: 104.16.10.135
+  servername: jp3.yohototo.top
   tls: true
-  type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: js.adbse.xyz
-    path: /down
-- alterId: 0
-  cipher: auto
-  name: '日本 015 #1'
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_98|275KB/s|V006-260618
+  network: ws
+  port: 57554
+  server: 203.137.165.164
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  tls: true
+  type: vless
+  uuid: 45b4cd4c-3bd3-4838-b61e-031f75551dd5
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: '%2F%40Marisa_kristi'
+- name: jp|707c|puddincat07@Telegram
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  port: 8443
+  server: 8.211.175.236
+  skip-cert-verify: true
+  sni: bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇯🇵JP_19|137KB/s|M002-260618
+  network: ws
+  port: 57554
+  server: 203.137.165.164
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  tls: true
+  type: vless
+  uuid: 7fdb95f9-c758-486c-865a-7c1219823670
+  ws-opts:
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+    path: '%2F%40Marisa_kristi'
+- client-fingerprint: chrome
+  name: 🇯🇵JP_120|111KB/s|A004-260618
   network: ws
   port: 443
-  server: 172.105.238.164
-  skip-cert-verify: true
+  server: 104.21.70.228
+  servername: jp3.yohototo.top
   tls: true
-  type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: js.adbse.xyz
-    path: /down
-- alterId: 0
-  cipher: auto
-  name: '日本 016 #1'
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_159|187KB/s|M002-260618
   network: ws
   port: 443
-  server: fullaccesstojapannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
+  server: 104.16.111.102
+  servername: jp3.yohototo.top
   tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: fullaccesstojapannetsubnode1.azurewebsites.net
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: '日本 017 #1'
-  network: ws
-  port: 80
-  server: 103.35.188.226
-  skip-cert-verify: true
-  type: vmess
-  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
-  ws-opts:
-    headers:
-      Host: 103.35.188.226
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '日本 018 #1'
-  network: ws
-  port: 80
-  server: 3h-philippines1.09vpn.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: '日本 019 #1'
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- cipher: aes-128-gcm
+  name: '🇯🇵JP_1 #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
+- client-fingerprint: chrome
+  name: 🇯🇵JP_158|84KB/s|A004-260618
   network: ws
   port: 443
-  server: 146.56.162.25
-  skip-cert-verify: true
+  server: 104.16.10.48
+  servername: jp3.yohototo.top
   tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: '日本 020 #1'
-  network: ws
-  port: 3331
-  server: f1f3227.u1.glados-config.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  ws-opts:
-    headers:
-      Host: f1f3227.u1.glados-config.net
-    path: /s/f1f3227.fm.apple.com:111548
-- alterId: 0
-  cipher: auto
-  name: '日本 021 #1'
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_161|105KB/s|M002-260618
   network: ws
   port: 443
-  server: 8.209.252.35
+  server: 104.19.33.25
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇯🇵JP_17 #1'
+  network: tcp
+  port: 12683
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 103.75.118.228
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_107|157KB/s|M002-260618
+  network: ws
+  port: 443
+  server: 104.19.12.94
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
+- cipher: aes-128-gcm
+  name: ❓Other_12
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
+- client-fingerprint: chrome
+  name: 🇯🇵JP_95|492KB/s|T001-260618
+  network: ws
+  port: 443
+  server: 64.204.49.68
+  servername: vp10.pages.dev
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp10.pages.dev
+    path: '%2Ffp%3Dfirefox'
+- name: 🇯🇵_日本_33
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.112.188.176
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
-  ws-opts:
-    headers:
-      Host: js.adbse.xyz
-    path: /down
-- alterId: 0
-  cipher: auto
-  name: '日本 022 #1'
+  sni: live-stallion.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: unsafe
+  name: 🇯🇵JP_166|233KB/s|M002-260618
   network: ws
   port: 443
-  server: 172.105.223.136
-  skip-cert-verify: true
+  server: 104.17.50.227
+  servername: jp3.yohototo.top
   tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
-      Host: www.microsoft.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 023 #1'
-  network: ws
-  port: 3331
-  server: f1f3227.v1.glados-config.net
-  skip-cert-verify: true
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  ws-opts:
-    headers:
-      Host: f1f3227.v1.glados-config.net
-    path: /s/f1f3227.fm.apple.com:111548
-- alterId: 0
-  cipher: auto
-  name: '日本 024 #1'
-  network: ws
-  port: 443
-  server: 124.156.225.184
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
-  ws-opts:
-    headers:
-      Host: azjp.pengui.xyz
-    path: /
-- alterId: 4
-  cipher: auto
-  name: '日本 025 #1'
-  network: ws
-  port: 443
-  server: 202.61.141.130
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: 202.61.141.130
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 026 #1'
-  network: ws
-  port: 443
-  server: new3.hucloud-dns.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
-  ws-opts:
-    headers:
-      Host: new3.hucloud-dns.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本|@ripaojiedian
-  network: ws
-  port: 443
-  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本2|@ripaojiedian
-  network: ws
-  port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本3|@ripaojiedian
-  network: ws
-  port: 443
-  server: kneNaKHeSXnZH259.v.3dns.vip
-  servername: kneNaKHeSXnZH259.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kneNaKHeSXnZH259.v.3dns.vip
-    path: /ws-vmess
+      Host: jp3.yohototo.top
+    path: '%2Ftyxyws'
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 日期：10-13
@@ -748,94 +1360,6 @@ proxies:
   type: vless
   udp: true
   uuid: 9ee57d03-dcf5-488b-aff7-305301879353
-- name: ❓Other_103
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: brief-glider.rooster465.autos
-  skip-cert-verify: true
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_22
-  password: UX82473651
-  port: 443
-  server: 13.193.213.184
-  skip-cert-verify: true
-  sni: stable-python.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_157
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 18.183.167.216
-  skip-cert-verify: true
-  sni: amazed-mako.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_119
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.249.55.154
-  skip-cert-verify: true
-  sni: prime-corgi.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_33
-  password: UX82473651
-  port: 443
-  server: 3.112.188.176
-  skip-cert-verify: true
-  sni: live-stallion.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_162
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.230.91.226
-  skip-cert-verify: true
-  sni: musical-terrier.rooster465.autos
-  type: trojan
-  udp: true
-- name: 未知 TROJAN-114
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: assuring-skink.rooster465.autos
-  skip-cert-verify: true
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-  udp: true
-- name: 未知 TROJAN-127
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: fancy-javelin.rooster465.autos
-  skip-cert-verify: true
-  sni: fancy-javelin.rooster465.autos
-  type: trojan
-  udp: true
-- name: 未知 TROJAN-126
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: evolving-platypus.rooster465.autos
-  skip-cert-verify: true
-  sni: evolving-platypus.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_53
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: promoted-rattler.rooster465.autos
-  skip-cert-verify: true
-  sni: promoted-rattler.rooster465.autos
-  type: trojan
-  udp: true
 - name: 🇯🇵JP_158
   network: tcp
   password: UX82473651
@@ -843,15 +1367,6 @@ proxies:
   server: 43.206.225.188
   skip-cert-verify: true
   sni: warm-krill.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_84
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.230.139.12
-  skip-cert-verify: true
-  sni: brief-glider.rooster465.autos
   type: trojan
   udp: true
 - name: 🇯🇵JP_52
@@ -879,23 +1394,6 @@ proxies:
   sni: legible-ram.rooster465.autos
   type: trojan
   udp: true
-- name: 未知 TROJAN-118
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: comic-poodle.rooster465.autos
-  skip-cert-verify: true
-  sni: comic-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_50
-  password: UX82473651
-  port: 443
-  server: 52.194.251.232
-  skip-cert-verify: true
-  sni: optimal-penguin.rooster465.autos
-  type: trojan
-  udp: true
 - name: 🇯🇵JP_86
   network: tcp
   password: UX82473651
@@ -903,32 +1401,6 @@ proxies:
   server: 54.199.66.128
   skip-cert-verify: true
   sni: integral-rodent.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_118
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 176.34.5.100
-  skip-cert-verify: true
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_120
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.192.217.187
-  skip-cert-verify: true
-  sni: evolving-platypus.rooster465.autos
-  type: trojan
-  udp: true
-- name: JP【机场推荐：https://a9a.xyz】28
-  password: Trojan@82164024
-  port: 443
-  server: jp.tronsg.com
-  skip-cert-verify: true
-  sni: jp.tronsg.com
   type: trojan
   udp: true
 - client-fingerprint: chrome
@@ -969,7 +1441,7 @@ proxies:
   uuid: 7b102311-43fd-4e8f-877e-8090623c101d
   ws-opts:
     path: /
-- name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #3'
+- name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #6'
   password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
   port: 20004
   server: oplosgru-c.catcat321.com
@@ -978,7 +1450,7 @@ proxies:
   tls: false
   type: trojan
   udp: true
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #16'
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #14'
   network: ws
   password: 0400697c-b581-4575-9d2f-0bbd4659312d
   port: 20230
@@ -987,32 +1459,300 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #29'
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #27'
   password: UX82473651
   port: 443
   server: 54.250.237.143
   type: trojan
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #31'
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #29'
   password: UX82473651
   port: 443
   server: 54.238.153.132
   type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵 Japan/Osaka [TG]
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本|@ripaojiedian #1'
+  network: ws
   port: 443
-  reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  server: 172.233.79.107
-  servername: googleapis.com
+  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
+  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本2|@ripaojiedian #1'
+  network: ws
+  port: 443
+  server: kQov7UKaDknXb8a3.v.3dns.vip
+  servername: kQov7UKaDknXb8a3.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kQov7UKaDknXb8a3.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 日本 006
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: jp01.a0a.xyz
+    path: /
+- name: 日本 007
+  network: ws
+  port: 8880
+  server: 156.238.18.221
+  servername: inaslnyekosshernist.borogomsho12pa34.kiling-spoooky---dude.spikevpn.cfd.
+  skip-cert-verify: false
+  tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
-- name: 🇯🇵JP_1|3.9MB/s
-  port: 1080
-  server: 217.142.236.180
-  type: socks5
+  uuid: 1806567a-fdd6-47dd-d0fd-b1459853a240
+  ws-opts:
+    headers:
+      Host: inaslnyekosshernist.borogomsho12pa34.kiling-spoooky---dude.spikevpn.cfd.
+    path: /telegram-
+- name: 日本 008
+  network: tcp
+  port: 10000
+  server: 14.137.238.40
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
+- name: 日本 009
+  network: tcp
+  port: 443
+  server: 134.122.154.210
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+- name: 日本 010
+  network: grpc
+  port: 2003
+  server: 172.105.252.35
+  servername: in-full.privateip.net
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99de7aac-d2a5-48fd-92cb-d1e6c3c719a4
+- name: 日本 013
+  network: ws
+  port: 443
+  server: 151.101.109.223
+  servername: pan1.global.ssl.fastly.net
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: c8541f02-4efd-401d-beb7-dc017b12ee94
+  ws-opts:
+    headers:
+      Host: pan1.global.ssl.fastly.net
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 日本 014
+  network: ws
+  port: 443
+  server: 172.105.239.241
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  ws-opts:
+    headers:
+      Host: js.adbse.xyz
+    path: /down
+- alterId: 0
+  cipher: auto
+  name: 日本 015
+  network: ws
+  port: 443
+  server: 172.105.238.164
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  ws-opts:
+    headers:
+      Host: js.adbse.xyz
+    path: /down
+- alterId: 0
+  cipher: auto
+  name: 日本 016
+  network: ws
+  port: 443
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: 日本 017
+  network: ws
+  port: 80
+  server: 103.35.188.226
+  skip-cert-verify: true
+  type: vmess
+  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
+  ws-opts:
+    headers:
+      Host: 103.35.188.226
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 日本 018
+  network: ws
+  port: 80
+  server: 3h-philippines1.09vpn.com
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
+  ws-opts:
+    headers:
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: 日本 019
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 日本 020
+  network: ws
+  port: 3331
+  server: f1f3227.u1.glados-config.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.u1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: 日本 021
+  network: ws
+  port: 443
+  server: 8.209.252.35
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  ws-opts:
+    headers:
+      Host: js.adbse.xyz
+    path: /down
+- alterId: 0
+  cipher: auto
+  name: 日本 022
+  network: ws
+  port: 443
+  server: 172.105.223.136
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 日本 023
+  network: ws
+  port: 3331
+  server: f1f3227.v1.glados-config.net
+  skip-cert-verify: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.v1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: 日本 024
+  network: ws
+  port: 443
+  server: 124.156.225.184
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
+  ws-opts:
+    headers:
+      Host: azjp.pengui.xyz
+    path: /
+- alterId: 4
+  cipher: auto
+  name: 日本 025
+  network: ws
+  port: 443
+  server: 202.61.141.130
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: 202.61.141.130
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 日本 026
+  network: ws
+  port: 443
+  server: new3.hucloud-dns.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
+  ws-opts:
+    headers:
+      Host: new3.hucloud-dns.xyz
+    path: /
 - client-fingerprint: chrome
   name: '🇯🇵 日本 | JPN #1'
   network: ws
@@ -1199,19 +1939,6 @@ proxies:
   tls: true
   type: vless
   uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_5
-  network: tcp
-  port: 19645
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - cipher: aes-256-gcm
   name: 🇯🇵JP_2
   password: 3eOFeNssde7PYYMv
@@ -1252,18 +1979,6 @@ proxies:
     headers:
       Host: cf3.schzyc.cc.cd
     path: /proxyip=ProxyIP.CMLiussss.net
-- client-fingerprint: firefox
-  name: '🇯🇵JP_13 #1'
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-    short-id: '!!str 9922313fffed1c63'
-  server: 46.250.250.149
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
 - name: 🇯🇵 日本_C01ZH8
   network: ws
   port: 8880
@@ -1276,19 +1991,6 @@ proxies:
     headers:
       Host: morning-brook-d78e.347.workers.dev
     path: /pyip=ProxyIP.JP.CMLiussss.net
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_1
-  network: tcp
-  port: 18007
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.114.220.22
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
   name: 'JP日本 #9'
   network: ws
@@ -1322,38 +2024,6 @@ proxies:
   sni: open.2ml.bid
   tls: false
   type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇯🇵JP_20
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-128-gcm
-  name: '🇯🇵JP_2 #1'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
-- name: 🇯🇵JP_93
-  network: tcp
-  port: 20802
-  server: 152.69.192.144
-  tls: false
-  type: vless
-  uuid: ac76a374-7447-4dab-bfa9-b7f83a7a7946
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_156
-  network: tcp
-  port: 27916
-  reality-opts:
-    public-key: ztQ8VYq_dVDc3x-QM8LXjup2161CirYrIBE1F7loVzQ
-    short-id: '!!str 6772eb2b7a'
-  server: apifunx.mate-fox.com
-  servername: cdn-dynmedia-1.microsoft.com
-  tls: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
 - name: 🇯🇵JP_38
   password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
   port: 2060
@@ -1375,14 +2045,6 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: /Telegram-WangCai2🇨🇳
-- name: 🇯🇵JP_6
-  password: 184cdec28da5a09450803c8debcd2cc9
-  port: 50160
-  server: 138.3.208.26
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
   name: 🇯🇵JP_129
   network: ws
@@ -1409,19 +2071,6 @@ proxies:
     headers:
       Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_79
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: '!!str 1a'
-  server: 153.121.36.102
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
 - client-fingerprint: chrome
   name: 🇯🇵JP_127
   network: ws
@@ -1456,30 +2105,6 @@ proxies:
   skip-cert-verify: true
   sni: concrete-aardvark.rooster465.autos
   type: trojan
-- name: 🇯🇵JP_95
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.192.45.137
-  skip-cert-verify: true
-  sni: promoted-rattler.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_126
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.65.177.190
-  skip-cert-verify: true
-  sni: winning-marten.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_11
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.238.153.132
-  skip-cert-verify: true
-  sni: obliging-louse.rooster465.autos
-  type: trojan
 - client-fingerprint: chrome
   name: 🇯🇵JP_124
   network: ws
@@ -1493,13 +2118,6 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- name: 🇯🇵JP_37
-  password: 96ab5cd282733fd4c312a61f972f330a
-  port: 443
-  server: vp3.yysyy.online
-  sni: vp3.yysyy.online
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
   name: 🇯🇵JP_128
   network: ws
@@ -1513,32 +2131,6 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇯🇵JP_17 #1'
-  network: tcp
-  port: 12683
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 103.75.118.228
-  servername: www.apple.com
-  tls: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: 🇯🇵JP_108
-  password: 96ab5cd282733fd4c312a61f972f330a
-  port: 443
-  server: 45.32.10.7
-  sni: vp3.yysyy.online
-  tls: false
-  type: hysteria2
-- cipher: aes-128-gcm
-  name: '🇯🇵JP_1 #1'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
 - name: 日本_4
   network: ws
   port: 4798
@@ -1564,32 +2156,6 @@ proxies:
     headers:
       Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_47
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-    short-id: '!!str 1a'
-  server: t9.qifei.app
-  servername: www.amazon.com
-  tls: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇯🇵JP_16 #1'
-  network: raw
-  port: 50159
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-    short-id: '!!str 091e1c5db8451757'
-  server: 154.31.114.248
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
 - name: 🇯🇵JP_30
   password: my_super_password_123
   port: 5443
@@ -1630,25 +2196,6 @@ proxies:
     headers:
       Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     path: /@marisa_kristi
-- name: 🇯🇵JP_85
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.249.36.167
-  sni: comic-poodle.rooster465.autos
-  type: trojan
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇯🇵JP_40
-  network: tcp
-  port: 43000
-  reality-opts:
-    public-key: onJvbzSx_vZUyycafvPuhsiSQsr9tw4zotyVMSWCvm4
-    short-id: '!!str 8d66106f'
-  server: 142.91.106.31
-  tls: true
-  type: vless
-  uuid: f8681dba-d368-4bab-a3c2-a8dc712ba368
 - client-fingerprint: chrome
   name: 🇯🇵JP_45
   network: ws
@@ -1690,15 +2237,3 @@ proxies:
   sni: open.2ml.bid
   tls: false
   type: hysteria2
-- client-fingerprint: firefox
-  name: 节点日期：2026-10-13
-  port: 8443
-  reality-opts:
-    public-key: 7T9ZSCdUh4IUlx17R1Vbzk8kjiopA3j5mI7-inh6aQU
-    short-id: '!!str 187eea0acfb7f778'
-  server: 185.22.153.40
-  servername: x5club.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: c96f941e-dd8a-006e-89d5-740b79202ed0
