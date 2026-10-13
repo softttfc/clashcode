@@ -7,7 +7,7 @@ check.py - Clash 节点文件校验工具
     python check.py <节点文件.yml> <错误日志输出.txt>
 
 功能:
-    1.  YAML 语法解析（含锚点/别名检测）
+    1.  YAML 语法解析（锚点/别名检测降级为 INFO）
     2.  proxies 段结构校验
     3.  每个节点的必填字段、协议字段校验
     4.  节点名合法性（#、...、特殊字符、未加引号等）
@@ -19,6 +19,12 @@ check.py - Clash 节点文件校验工具
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO]
     FATAL 和 ERROR 是导致 Clash Verge 拒绝加载的直接原因
+
+本次修改（相对旧版）:
+    - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
+    - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
+    - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
+    - 其余检查逻辑保持不变
 """
 
 import sys
@@ -37,15 +43,16 @@ BUILTIN_POLICIES = {
 }
 
 # mihomo 支持的 type
+# 注意: shadowtls 不是独立代理类型，而是 VLESS/AnyTLS 的 TLS 伪装选项，因此不列入
 KNOWN_PROXY_TYPES = {
     'ss', 'ssr', 'vmess', 'vless', 'trojan',
     'hysteria', 'hysteria2', 'hy2', 'tuic', 'anytls',
     'http', 'https', 'socks5', 'socks5h', 'snell', 'wireguard',
-    'mieru', 'ssh', 'juicity', 'shadowtls', 'ssh',
+    'mieru', 'ssh', 'juicity',
 }
 
 # 较新的协议，老版本 mihomo 不支持，会直接拒绝
-NEW_PROXY_TYPES = {'anytls', 'mieru', 'juicity', 'shadowtls', 'hysteria2', 'tuic'}
+NEW_PROXY_TYPES = {'anytls', 'mieru', 'juicity', 'hysteria2', 'tuic'}
 
 # 合法 network 值
 VALID_NETWORKS = {
@@ -109,27 +116,31 @@ def check_yaml_parse(path, rep):
         rep.fatal('YAML', f'文件不是有效的 UTF-8: {e}')
         return None, None
 
-    # 锚点 / 别名检测（不需要解析就能看）
+    # 锚点 / 别名检测
+    # mihomo 使用 gopkg.in/yaml.v3，官方支持 YAML 锚点/别名，不应据此拒绝
+    # 因此降级为 INFO，仅供用户参考
     anchor_lines = []
     for i, line in enumerate(text.splitlines(), 1):
         if re.search(r'&\w+', line) or re.search(r'(?<![\w*])\*\w+', line):
             anchor_lines.append((i, line.rstrip()))
     if anchor_lines:
-        rep.warn('YAML', f'检测到 {len(anchor_lines)} 处可能的锚点/别名，'
-                         f'Clash Verge 可能拒绝。请用 NoAliasDumper 重写。')
+        rep.info('YAML', f'检测到 {len(anchor_lines)} 处 YAML 锚点/别名，'
+                         f'mihomo 支持锚点，但建议使用 NoAliasDumper 避免兼容性问题。')
         for ln, content in anchor_lines[:5]:
-            rep.warn('YAML', f'  第 {ln} 行: {content[:100]}')
+            rep.info('YAML', f'  第 {ln} 行: {content[:100]}')
 
-    # 是否用了 !!str 等 PyYAML 标签
+    # PyYAML 标签 !!str / !!int / !!bool
+    # 这些都是标准 YAML 标签，mihomo 能正确解析为对应类型，不应据此拒绝
+    # 因此降级为 INFO
     tag_lines = []
     for i, line in enumerate(text.splitlines(), 1):
         if '!!str' in line or '!!int' in line or '!!bool' in line:
             tag_lines.append((i, line.rstrip()))
     if tag_lines:
-        rep.error('YAML', f'检测到 {len(tag_lines)} 处 PyYAML 标签（!!str 等），'
-                          f'Clash 会当成非法值处理。')
+        rep.info('YAML', f'检测到 {len(tag_lines)} 处标准 YAML 标签（!!str 等），'
+                         f'mihomo 可正确解析，但建议避免手工输出这些标签。')
         for ln, content in tag_lines[:5]:
-            rep.error('YAML', f'  第 {ln} 行: {content[:100]}')
+            rep.info('YAML', f'  第 {ln} 行: {content[:100]}')
 
     try:
         data = yaml.safe_load(text)
