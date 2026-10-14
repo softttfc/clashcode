@@ -87,16 +87,20 @@ jobs:
       #   continue-on-error: true
 
       # ---------- 修复可预见错误（可选） ----------
-      # - name: 修复可预见错误
-      #   run: python ./rebuilder_pro1.py list.metaspeedrp.yml list.metaspeedrbd.yml
-      #   continue-on-error: true
+      - name: 修复可预见错误
+        run: python ./rebuilder_pro2.py list.metaspeedrp.yml list.metaspeedrbd.yml
+        continue-on-error: true
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
       - name: 校验节点文件
         run: |
+          if [ -f list.meta.safe.yml ]; then
+            echo "开始校验 list.meta.safe.yml ..."
+            python ./check.py list.meta.safe.yml 错误日志safe.txt
+          fi
           if [ -f list.metaspeedrbd.yml ]; then
             echo "开始校验 list.metaspeedrbd.yml ..."
-            python ./check.py list.metaspeedrbd.yml 错误日志.txt
+            python ./check.py list.metaspeedrbd.yml 错误日志rbd.txt
           elif [ -f list.metaspeedrp.yml ]; then
             echo "list.metaspeedrbd.yml 不存在，改为校验 list.metaspeedrp.yml ..."
             python ./check.py list.metaspeedrp.yml 错误日志.txt
