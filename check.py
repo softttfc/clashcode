@@ -17,30 +17,23 @@ check.py - Clash 节点文件校验工具
     8.  已知会导致 Clash Verge 报 "invalid yaml" 的问题
     9.  ws-opts / grpc-opts / h2-opts 详细字段校验
     10. 节点特征诊断（用于定位"延迟测试全部失败"的根因）
+    11. 【本次新增】Q1: 节点数对不上相关诊断
+        - Q1.1 proxies 名称全角清洗字符残留
+        - Q1.2 proxy-groups 引用名 vs proxies 实际名"近似匹配"
+        - Q1.3 各 proxy-group 的 proxies 长度分布
+        - Q1.4 未被引用的节点统计
+    12. 【本次新增】Q2: 延迟全失败相关诊断
+        - Q2.1 ws-opts.path 含 URL 编码 (%2F 等)
+        - Q2.2 VLESS XUDP(Vision) 与非 TCP 传输冲突
+        - Q2.3 VLESS UUID 被替换为默认值
+        - Q2.4 REALITY 字段完整性（public-key/short-id/fp）
+        - Q2.5 grpc-opts.grpc-service-name 空值
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO] / [DIAG]
     FATAL 和 ERROR 是导致 Clash Verge 拒绝加载的直接原因
     每个 ERROR/WARN 都会带 proxies[N] 索引和节点名，方便定位
     DIAG 是诊断信息，不计入错误统计
-
-本次修改（相对旧版）:
-    - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
-    - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
-    - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
-    - ws-opts.headers.Host 内容合法性检查
-    - ws-opts.path / grpc-opts / h2-opts 字段校验
-    - 错误信息带节点名，方便定位
-    - 【本次新增】diagnose_proxies() 节点特征诊断：
-        * 协议分布
-        * VLESS 节点 flow 分布（识别 XUDP 节点）
-        * VLESS 节点中 UUID 被替换为默认值的数量
-        * VLESS 节点中 UUID 长度分布
-        * VLESS 节点中 sni/servername 缺失数量
-        * VLESS 节点 network 分布
-        * VLESS 节点 tls 字段分布
-        * VLESS 节点 security 分布
-        * 最终诊断结论
 """
 
 import sys
@@ -100,6 +93,9 @@ HOST_FORBIDDEN_CHARS = set(' \t\r\n\\/?#,;')
 
 # Host 类字段禁止出现的子串
 HOST_FORBIDDEN_SUBSTRINGS = ('://',)
+
+# preprocess/rebuilder 用来清洗 name 的全角替换字符集
+SANITIZE_CHARS = {'＃', '＆', '＊', '｜', '＞', '＜', '…'}
 
 
 # ============================================================================
@@ -360,10 +356,19 @@ def check_ws_opts(proxy, loc, rep, node_name):
             rep.warn('PROXY',
                      f'ws-opts.path 为空字符串（建议改为 "/"）',
                      loc)
+        elif '%' in path:
+            # 【本次修改】含 URL 编码时升级为 ERROR
+            # 因为 mihomo 不会自动解码 %2F 等，WS 握手必然失败
+            rep.error('PROXY',
+                      f'ws-opts.path 含 URL 编码（mihomo 不会解码，'
+                      f'WS 握手必然失败）: {path!r}',
+                      loc)
         elif not path.startswith('/'):
-            rep.warn('PROXY',
-                     f'ws-opts.path 不以 / 开头: {path!r}',
-                     loc)
+            # 【本次修改】不以 / 开头由 WARN 升级为 ERROR
+            # 因为 mihomo 会拒绝连接
+            rep.error('PROXY',
+                      f'ws-opts.path 不以 / 开头（mihomo 会拒绝连接）: {path!r}',
+                      loc)
         # path 里不能有控制字符
         for i, c in enumerate(path):
             if not c.isprintable():
@@ -526,26 +531,12 @@ def check_proxy(proxy, idx, name_set, rep):
 
 
 # ============================================================================
-# 2.5【本次新增】节点特征诊断
+# 2.5 节点特征诊断
 #     目的：定位"Clash Verge 里所有节点延迟测试都 Error"的原因
-#     输出使用 [DIAG] 分类，与原有的 [YAML]/[PROXY]/[GROUP] 等区分
 # ============================================================================
 def diagnose_proxies(proxies, rep):
     """
     对 proxies 做特征统计，输出诊断报告。
-
-    统计维度：
-        1. 协议分布
-        2. VLESS 节点 flow 字段分布（识别 XUDP 节点）
-        3. VLESS 节点中 UUID 被替换成默认值的数量
-        4. VLESS 节点中 UUID 长度分布
-        5. VLESS 节点中 sni/servername 缺失数量
-        6. VLESS 节点 network 分布
-        7. VLESS 节点 tls 字段分布
-        8. VLESS 节点 security 分布
-        9. 最终诊断结论
-
-    输出使用 [DIAG] 分类，便于与原有 [PROXY]/[GROUP] 等区分。
     """
     if not isinstance(proxies, list):
         return
@@ -695,6 +686,482 @@ def diagnose_proxies(proxies, rep):
 
 
 # ============================================================================
+# 2.6【新增】Q1.1 proxies 名称全角清洗字符残留诊断
+# ============================================================================
+def diagnose_sanitized_names(proxies, rep):
+    """
+    如果 proxies 里出现 ＃ ｜ ＆ 等全角字符，说明上游（preprocess/rebuilder）
+    已对 name 做过 sanitize；若 proxy-groups 未同步更新，就会导致引用失配。
+    """
+    if not isinstance(proxies, list):
+        return
+
+    sanitized = []
+    for idx, p in enumerate(proxies):
+        if not isinstance(p, dict):
+            continue
+        name = p.get('name', '')
+        if isinstance(name, str) and any(c in name for c in SANITIZE_CHARS):
+            sanitized.append((idx, name))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q1.1】proxies 名称全角清洗字符诊断')
+    rep.info('DIAG', '=' * 62)
+    if not sanitized:
+        rep.info('DIAG', '  ✅ proxies 中没有全角清洗字符')
+        rep.info('DIAG', '     说明 proxies 的 name 是"原生"的，没有被 sanitize')
+    else:
+        rep.warn('DIAG',
+                 f'⚠️ 发现 {len(sanitized)} 个节点 name 含清洗字符 '
+                 f'（＃ ＆ ＊ ｜ ＞ ＜ …）')
+        rep.warn('DIAG',
+                 '     说明上游脚本已对 proxies.name 做了 sanitize。'
+                 '若 proxy-groups 未同步，就会导致引用失配。')
+        rep.info('DIAG', '  前 10 个示例:')
+        for idx, name in sanitized[:10]:
+            rep.info('DIAG', f'    proxies[{idx}] {name!r}')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.7【新增】Q1.2 proxy-groups 引用名 vs proxies 实际名"近似匹配"诊断
+# ============================================================================
+def _to_halfwidth(s):
+    """把常见全角清洗字符还原为半角，用于近似匹配"""
+    if not isinstance(s, str):
+        return s
+    return (s.replace('＃', '#').replace('＆', '&')
+             .replace('＊', '*').replace('｜', '|')
+             .replace('＞', '>').replace('＜', '<')
+             .replace('…', '...'))
+
+
+def diagnose_reference_mismatch(groups, proxy_names, rep):
+    """
+    验证"引用名与节点名只因半角/全角差异而不匹配"的数量。
+    这是 preprocess_speed.py 清洗 proxies.name 但未同步 proxy-groups 的
+    直接证据。
+    """
+    if not isinstance(groups, list):
+        return
+
+    normalized = {}
+    for n in proxy_names:
+        normalized.setdefault(_to_halfwidth(n), n)
+
+    # 收集所有组名（供合法引用检查）
+    all_group_names = set()
+    for g in groups:
+        if isinstance(g, dict):
+            n = g.get('name')
+            if isinstance(n, str):
+                all_group_names.add(n)
+
+    total_refs = 0
+    missing_refs = []
+    near_miss = []
+
+    for g in groups:
+        if not isinstance(g, dict):
+            continue
+        gname = g.get('name', '未命名组')
+        plist = g.get('proxies')
+        if not isinstance(plist, list):
+            continue
+        for item in plist:
+            total_refs += 1
+            if not isinstance(item, str):
+                continue
+            # 精确匹配：命中 proxy_names 或 组名 或 内置
+            if item in proxy_names:
+                continue
+            if item in all_group_names:
+                continue
+            if item in BUILTIN_POLICIES:
+                continue
+            # 记录"真正缺失"的引用
+            missing_refs.append((gname, item))
+            # 判断是否只是"全角/半角"差异
+            half = _to_halfwidth(item)
+            if half in normalized:
+                near_miss.append((gname, item, normalized[half]))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q1.2】proxy-groups 引用 vs proxies 实际名 匹配诊断')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  proxy-groups 的总引用条目数: {total_refs}')
+    rep.info('DIAG', f'  精确匹配失败（缺失引用）: {len(missing_refs)}')
+    rep.info('DIAG', f'  其中"近似匹配"（仅全角/半角不同）: {len(near_miss)}')
+
+    if near_miss:
+        rep.warn('DIAG',
+                 f'⚠️ 发现 {len(near_miss)} 处"仅因全角/半角差异"导致的引用失配！')
+        rep.warn('DIAG',
+                 '     这是 preprocess_speed.py 清洗 proxies.name '
+                 '但未同步 proxy-groups 的直接证据。')
+        rep.info('DIAG', '  前 20 处示例:')
+        for gname, ref, actual in near_miss[:20]:
+            rep.info('DIAG', f'    组 {gname!r}')
+            rep.info('DIAG', f'      groups 里引用: {ref!r}')
+            rep.info('DIAG', f'      proxies 里实际: {actual!r}')
+        if len(near_miss) > 20:
+            rep.info('DIAG', f'    ... 还有 {len(near_miss) - 20} 处')
+
+    if missing_refs and not near_miss:
+        rep.warn('DIAG',
+                 f'⚠️ 有 {len(missing_refs)} 处引用完全找不到对应节点'
+                 f'（不只是半角/全角问题）')
+
+    if not missing_refs:
+        rep.info('DIAG', '  ✅ 所有 proxy-groups 引用均能精确匹配到节点')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.8【新增】Q1.3/1.4 节点引用使用统计
+# ============================================================================
+def diagnose_node_usage(proxies, groups, rep):
+    """
+    量化"有多少 proxies 里的节点被组引用"，
+    直接回答"为什么 Clash 只显示 2773 个，而 proxies 里有 11221 个"。
+    """
+    if not isinstance(proxies, list) or not isinstance(groups, list):
+        return
+
+    proxy_names = {p.get('name') for p in proxies
+                   if isinstance(p, dict) and p.get('name')}
+    used = set()
+    for g in groups:
+        if not isinstance(g, dict):
+            continue
+        for item in g.get('proxies') or []:
+            if isinstance(item, str):
+                used.add(item)
+
+    unused = proxy_names - used
+    used_actually = proxy_names & used
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q1.3/1.4】节点引用使用统计')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  proxies 中节点总数:        {len(proxy_names)}')
+    rep.info('DIAG', f'  被 proxy-groups 引用的:    {len(used_actually)}')
+    rep.info('DIAG', f'  未被任何组引用:            {len(unused)}')
+    if proxy_names:
+        rep.info('DIAG',
+                 f'  实际使用率: {len(used_actually)/len(proxy_names)*100:.1f}%')
+
+    if unused and len(unused) > len(used_actually):
+        rep.warn('DIAG',
+                 f'⚠️ 超过一半节点未被引用！')
+        rep.warn('DIAG',
+                 '     Clash 只会加载并显示"被 proxy-groups 引用到的节点"，'
+                 '所以界面上看到的数量会远小于 proxies 里的总数。')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.9【新增】Q1.3 各 proxy-group 的 proxies 长度分布
+# ============================================================================
+def diagnose_group_sizes(groups, rep):
+    """
+    从组的角度看"哪个组引用被大量移除"。
+    """
+    if not isinstance(groups, list):
+        return
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q1.3】各 proxy-group 的 proxies 长度分布')
+    rep.info('DIAG', '=' * 62)
+    rows = []
+    for g in groups:
+        if not isinstance(g, dict):
+            continue
+        name = g.get('name', '未命名组')
+        gtype = g.get('type', '?')
+        plist = g.get('proxies')
+        n = len(plist) if isinstance(plist, list) else 0
+        has_use = 'use' in g
+        rows.append((name, gtype, n, has_use))
+
+    for name, gtype, n, has_use in rows:
+        flag = ''
+        if n == 0:
+            flag = '  ← 空！'
+        elif n <= 5:
+            flag = '  ← 极少'
+        if has_use:
+            flag += '  [含 use]'
+        rep.info('DIAG', f'    {name!r} (type={gtype}) -> {n} 个引用{flag}')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.10【新增】Q2.1 WebSocket 路径 URL 编码诊断
+# ============================================================================
+def diagnose_ws_path_encoding(proxies, rep):
+    """
+    验证 ws-opts.path 是否含 URL 编码 (%2F/%3F 等)。
+    mihomo 不会自动解码，WS 握手必然失败。
+    """
+    if not isinstance(proxies, list):
+        return
+
+    total_ws = 0
+    with_percent = []
+    not_slash = []
+    empty_path = []
+
+    for idx, p in enumerate(proxies):
+        if not isinstance(p, dict):
+            continue
+        ws = p.get('ws-opts')
+        if not isinstance(ws, dict):
+            continue
+        total_ws += 1
+        path = ws.get('path')
+        name = p.get('name', '未命名')
+        if not isinstance(path, str):
+            continue
+        if path == '':
+            empty_path.append((idx, name))
+        elif '%' in path:
+            with_percent.append((idx, name, path))
+        elif not path.startswith('/'):
+            not_slash.append((idx, name, path))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q2.1】WebSocket 路径 URL 编码诊断')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  含 ws-opts 的节点总数: {total_ws}')
+    rep.info('DIAG', f'  ├ path 含 "%" (URL编码): {len(with_percent)}')
+    rep.info('DIAG', f'  ├ path 不以 "/" 开头:     {len(not_slash)}')
+    rep.info('DIAG', f'  └ path 为空字符串:         {len(empty_path)}')
+
+    if with_percent:
+        rep.warn('DIAG',
+                 f'⚠️ 发现 {len(with_percent)} 个节点 path 含 URL 编码，'
+                 f'mihomo 不会自动解码，WS 握手必然失败！')
+        rep.info('DIAG', '  前 10 个示例:')
+        for idx, name, path in with_percent[:10]:
+            rep.info('DIAG', f'    proxies[{idx}] {name!r}')
+            rep.info('DIAG', f'        path = {path!r}')
+        if len(with_percent) > 10:
+            rep.info('DIAG', f'    ... 还有 {len(with_percent) - 10} 个')
+
+    if not_slash:
+        rep.warn('DIAG',
+                 f'⚠️ 发现 {len(not_slash)} 个节点 path 不以 "/" 开头 '
+                 f'(mihomo 可能拒绝)。')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.11【新增】Q2.2 VLESS XUDP(Vision) 与传输层冲突诊断
+# ============================================================================
+def diagnose_xudp_conflict(proxies, rep):
+    """
+    xtls-rprx-vision 必须搭配 network=tcp，
+    配合 ws/grpc/h2/httpupgrade 时 mihomo 会拒绝连接。
+    """
+    vless = [p for p in proxies
+             if isinstance(p, dict) and p.get('type') == 'vless']
+    if not vless:
+        return
+
+    xudp_total = 0
+    xudp_by_net = Counter()
+    conflicts = []
+
+    for p in vless:
+        flow = p.get('flow', '') or ''
+        net = p.get('network', 'tcp') or 'tcp'
+        if 'xtls-rprx-vision' in flow:
+            xudp_total += 1
+            xudp_by_net[net] += 1
+            if net != 'tcp':
+                conflicts.append((p.get('name', '未命名'), flow, net))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q2.2】VLESS XUDP(Vision) 与传输层冲突诊断')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  VLESS 节点总数: {len(vless)}')
+    rep.info('DIAG', f'  XUDP(Vision) 节点总数: {xudp_total}')
+    if xudp_total:
+        rep.info('DIAG', '  XUDP 节点的 network 分布:')
+        for n, c in xudp_by_net.most_common():
+            rep.info('DIAG', f'    {n}: {c}')
+
+    if conflicts:
+        rep.warn('DIAG',
+                 f'⚠️ 致命冲突: {len(conflicts)} 个 XUDP 节点使用了非 TCP 传输！')
+        rep.warn('DIAG',
+                 '    (xtls-rprx-vision 必须搭配 network=tcp，'
+                 '否则 mihomo 会直接握手失败)')
+        rep.info('DIAG', '  前 10 个示例:')
+        for name, flow, net in conflicts[:10]:
+            rep.info('DIAG', f'    {name!r}: flow={flow!r}, network={net!r}')
+        if len(conflicts) > 10:
+            rep.info('DIAG', f'    ... 还有 {len(conflicts) - 10} 个')
+    else:
+        rep.info('DIAG', '  ✅ 未发现 XUDP 与非 TCP 传输冲突的节点')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.12【新增】Q2.3 VLESS UUID 默认值诊断（含示例）
+# ============================================================================
+def diagnose_default_uuid(proxies, rep):
+    """
+    统计 VLESS 节点中 UUID=8888... 的数量，这些节点认证必然失败。
+    """
+    if not isinstance(proxies, list):
+        return
+    vless = [p for p in proxies
+             if isinstance(p, dict) and p.get('type') == 'vless']
+    if not vless:
+        return
+
+    bad = []
+    for idx, p in enumerate(proxies):
+        if not isinstance(p, dict):
+            continue
+        if p.get('type') != 'vless':
+            continue
+        if p.get('uuid') == DEFAULT_UUID:
+            bad.append((idx, p.get('name', '未命名')))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q2.3】VLESS UUID 默认值诊断')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  VLESS 节点总数: {len(vless)}')
+    rep.info('DIAG', f'  UUID=默认值(8888...) 的节点数: {len(bad)}')
+    if bad:
+        rep.warn('DIAG', '⚠️ 这些节点认证必然失败:')
+        for idx, name in bad[:10]:
+            rep.info('DIAG', f'    proxies[{idx}] {name!r}')
+        if len(bad) > 10:
+            rep.info('DIAG', f'    ... 还有 {len(bad) - 10} 个')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.13【新增】Q2.4 REALITY 字段完整性诊断
+# ============================================================================
+def diagnose_reality_fields(proxies, rep):
+    """
+    验证 public-key 长度、short-id 字符、client-fingerprint 是否齐全。
+    """
+    vless = [p for p in proxies
+             if isinstance(p, dict) and p.get('type') == 'vless']
+    reality_nodes = []
+    for p in vless:
+        ro = p.get('reality-opts')
+        if isinstance(ro, dict):
+            reality_nodes.append((p, ro))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q2.4】REALITY 字段完整性诊断')
+    rep.info('DIAG', '=' * 62)
+
+    if not reality_nodes:
+        rep.info('DIAG', '  无 REALITY 节点')
+        rep.info('DIAG', '=' * 62)
+        return
+
+    pk_lens = Counter()
+    pk_bad = []
+    sid_bad = []
+    no_fp = 0
+
+    for p, ro in reality_nodes:
+        pk = ro.get('public-key', '')
+        if isinstance(pk, str):
+            pk_lens[len(pk)] += 1
+            if len(pk) != 43:
+                pk_bad.append((p.get('name', '未命名'), pk))
+        else:
+            pk_lens['非字符串'] += 1
+            pk_bad.append((p.get('name', '未命名'), repr(pk)))
+
+        sid = ro.get('short-id')
+        if isinstance(sid, str) and sid:
+            if not all(c in '0123456789abcdef' for c in sid.lower()):
+                sid_bad.append((p.get('name', '未命名'), sid))
+
+        if not p.get('client-fingerprint'):
+            no_fp += 1
+
+    rep.info('DIAG', f'  REALITY 节点总数: {len(reality_nodes)}')
+    rep.info('DIAG', '  public-key 长度分布:')
+    for l, c in pk_lens.most_common():
+        rep.info('DIAG', f'    {l}: {c}')
+    if pk_bad:
+        rep.warn('DIAG',
+                 f'  ⚠️ public-key 长度≠43 的节点: {len(pk_bad)}')
+        for name, pk in pk_bad[:5]:
+            rep.info('DIAG', f'      {name!r}: pk={pk!r}')
+
+    if sid_bad:
+        rep.warn('DIAG',
+                 f'  ⚠️ short-id 含非 hex 字符的节点: {len(sid_bad)}')
+        for name, sid in sid_bad[:5]:
+            rep.info('DIAG', f'      {name!r}: sid={sid!r}')
+
+    if no_fp:
+        rep.warn('DIAG',
+                 f'  ⚠️ 缺少 client-fingerprint 的 REALITY 节点: {no_fp}')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
+# 2.14【新增】Q2.5 gRPC service-name 空值诊断
+# ============================================================================
+def diagnose_grpc_empty(proxies, rep):
+    """
+    统计 grpc-opts.grpc-service-name 为空的节点。
+    这些节点 mihomo 无法握手。
+    """
+    if not isinstance(proxies, list):
+        return
+    grpc_nodes = 0
+    empty_svc = []
+    for idx, p in enumerate(proxies):
+        if not isinstance(p, dict):
+            continue
+        grpc = p.get('grpc-opts')
+        if not isinstance(grpc, dict):
+            continue
+        grpc_nodes += 1
+        svc = grpc.get('grpc-service-name')
+        if svc is None or (isinstance(svc, str) and svc == ''):
+            empty_svc.append((idx, p.get('name', '未命名')))
+
+    rep.info('DIAG', '')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '【Q2.5】gRPC service-name 空值诊断')
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', f'  含 grpc-opts 的节点总数: {grpc_nodes}')
+    if empty_svc:
+        rep.warn('DIAG',
+                 f'⚠️ grpc-service-name 为空的节点: {len(empty_svc)} '
+                 f'(mihomo 无法握手)')
+        for idx, name in empty_svc[:10]:
+            rep.info('DIAG', f'    proxies[{idx}] {name!r}')
+    else:
+        rep.info('DIAG', '  ✅ 所有 gRPC 节点都有 service-name')
+    rep.info('DIAG', '=' * 62)
+
+
+# ============================================================================
 # 3. proxy-groups 校验
 # ============================================================================
 def check_groups(groups, proxy_names, rep):
@@ -834,7 +1301,7 @@ def main():
         fout.write('=' * 70 + '\n\n')
 
         # ---------- 1. YAML 解析 ----------
-        print('[1/6] YAML 解析...')
+        print('[1] YAML 解析...')
         data, text = check_yaml_parse(input_file, rep)
         if data is None:
             print(f'\nYAML 无法解析，错误已写入 {output_file}')
@@ -847,7 +1314,7 @@ def main():
             sys.exit(2)
 
         # ---------- 2. proxies ----------
-        print('[2/6] 校验 proxies...')
+        print('[2] 校验 proxies...')
         proxies = data.get('proxies')
         if proxies is None:
             rep.warn('PROXY', '配置中没有 proxies 段')
@@ -870,21 +1337,53 @@ def main():
                           f'Clash 会因引用不明确而拒绝')
 
         # ---------- 2.5 节点特征诊断 ----------
-        print('[2.5/6] 诊断节点特征...')
+        print('[2.5] 诊断节点特征...')
         diagnose_proxies(proxies, rep)
 
+        # ---------- 2.6 Q1: 节点数对不上相关 ----------
+        print('[2.6] 诊断 Q1: 节点名称清洗 & 全角残留...')
+        diagnose_sanitized_names(proxies, rep)
+
+        # ---------- 2.7 Q2: 延迟失败相关（节点维度） ----------
+        print('[2.7] 诊断 Q2.1: WS 路径 URL 编码...')
+        diagnose_ws_path_encoding(proxies, rep)
+
+        print('[2.8] 诊断 Q2.2: XUDP 与传输层冲突...')
+        diagnose_xudp_conflict(proxies, rep)
+
+        print('[2.9] 诊断 Q2.3: UUID 默认值...')
+        diagnose_default_uuid(proxies, rep)
+
+        print('[2.10] 诊断 Q2.4: REALITY 字段...')
+        diagnose_reality_fields(proxies, rep)
+
+        print('[2.11] 诊断 Q2.5: gRPC service-name 空值...')
+        diagnose_grpc_empty(proxies, rep)
+
         # ---------- 3. proxy-groups ----------
-        print('[3/6] 校验 proxy-groups...')
+        print('[3] 校验 proxy-groups...')
         groups = data.get('proxy-groups') or []
         group_names = check_groups(groups, proxy_names, rep)
 
+        # ---------- 3.5 Q1 续: 引用 vs 实际名匹配 ----------
+        print('[3.5] 诊断 Q1.2: 引用名 vs 实际名匹配...')
+        diagnose_reference_mismatch(groups, proxy_names, rep)
+
+        # ---------- 3.6 Q1 续: 节点使用统计 ----------
+        print('[3.6] 诊断 Q1.3/1.4: 节点引用使用统计...')
+        diagnose_node_usage(proxies, groups, rep)
+
+        # ---------- 3.7 Q1 续: 各组引用长度 ----------
+        print('[3.7] 诊断 Q1.3: 各 proxy-group 引用长度...')
+        diagnose_group_sizes(groups, rep)
+
         # ---------- 4. rules ----------
-        print('[4/6] 校验 rules...')
+        print('[4] 校验 rules...')
         rules = data.get('rules') or []
         check_rules(rules, proxy_names, group_names, rep)
 
         # ---------- 5. 未使用的节点（提示） ----------
-        print('[5/6] 统计未使用的节点...')
+        print('[5] 统计未使用的节点...')
         used = set()
         for g in groups:
             if isinstance(g, dict):
