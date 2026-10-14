@@ -62,9 +62,9 @@ jobs:
       #   5. IPv6 server 去方括号
       #   6. 使用 NoAliasDumper 输出，禁止锚点/别名
       # 失败不中断：若本步骤失败，speed_pro1.py 会自动回退到原始文件
-      - name: 预处理测速文件
-        run: python ./preprocess_speed.py list.meta.yml list.meta.safe.yml
-        continue-on-error: true
+      # - name: 预处理测速文件
+      #   run: python ./preprocess_speed.py list.meta.yml list.meta.safe.yml
+      #   continue-on-error: true
 
       # ---------- 测速（可选，失败不中断） ----------
       # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
