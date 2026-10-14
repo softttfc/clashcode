@@ -1840,6 +1840,50 @@ check.py 校验报告
 [WARN] [PROXY] ws-opts.path 不以 / 开头: '%2Fws%2F0b3c3f4f-843a-5b0a-98fe-132c88fbefc0' @ proxies[11188]
 [WARN] [PROXY] ws-opts.path 不以 / 开头: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443' @ proxies[11195]
 [WARN] [PROXY] ws-opts.path 不以 / 开头: '%2F%40Marisa_kristi' @ proxies[11201]
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 节点特征诊断（用于定位"延迟测试全部失败"的原因）
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【1. 协议分布】
+[INFO] [DIAG]   vless: 6018 (53.6%)
+[INFO] [DIAG]   trojan: 3640 (32.4%)
+[INFO] [DIAG]   vmess: 1217 (10.8%)
+[INFO] [DIAG]   ss: 338 (3.0%)
+[INFO] [DIAG]   anytls: 6 (0.1%)
+[INFO] [DIAG]   http: 2 (0.0%)
+[INFO] [DIAG] 
+[INFO] [DIAG] 【2. VLESS 节点】共 6018 个
+[INFO] [DIAG]   flow 分布:
+[INFO] [DIAG]     (无): 5203 (86.5%)
+[INFO] [DIAG]     xtls-rprx-vision: 776 (12.9%)
+[INFO] [DIAG]     (空): 39 (0.6%)
+[WARN] [DIAG]   ⚠️ UUID 被替换成默认值 (88888888-8888-8888-8888-888888888888) 的节点: 95 (1.6%)
+[WARN] [DIAG]      <-- 假设 1：这些节点认证必然失败
+[INFO] [DIAG]   UUID 长度分布:
+[INFO] [DIAG]     长度 36: 6018
+[WARN] [DIAG]   无 sni/servername 的节点: 1444 (24.0%)
+[WARN] [DIAG]      <-- 假设 2：TLS 握手可能失败
+[INFO] [DIAG]   network 分布:
+[INFO] [DIAG]     ws: 4057
+[INFO] [DIAG]     tcp: 1286
+[INFO] [DIAG]     xhttp: 350
+[INFO] [DIAG]     grpc: 219
+[INFO] [DIAG]     httpupgrade: 84
+[INFO] [DIAG]     raw: 21
+[INFO] [DIAG]     http: 1
+[INFO] [DIAG]   tls 分布:
+[INFO] [DIAG]     true: 4129
+[INFO] [DIAG]     false: 1889
+[INFO] [DIAG]   security 分布:
+[INFO] [DIAG]     none: 4879
+[INFO] [DIAG]     reality: 1139
+[WARN] [DIAG]   XUDP 节点 (flow=xtls-rprx-vision*): 776 (12.9%)
+[WARN] [DIAG]      <-- 假设 3：需要服务端支持 Vision 流控
+[INFO] [DIAG] 
+[INFO] [DIAG] 【3. 诊断结论】
+[INFO] [DIAG]   1. UUID 被替换为默认值的节点 95 个 → 认证必然失败（最可能是主因）
+[INFO] [DIAG]   2. XUDP 节点 776 个 → 需服务端支持 Vision 流控，普通节点会握手失败
+[INFO] [DIAG]   3. 无 sni/servername 的节点 1444 个 → TLS 握手可能失败
+[INFO] [DIAG] ==============================================================
 [INFO] [PROXY] 8448 个节点未被任何 proxy-group 引用（不影响加载）
 
 ======================================================================
@@ -1847,8 +1891,9 @@ check.py 校验报告
 ======================================================================
 FATAL: 0
 ERROR: 0
-WARN : 1831
-INFO : 7
+WARN : 1837
+INFO : 45
+DIAG : 0  （诊断信息，非错误）
 
 ----------------------------------------------------------------------
 错误/警告定位汇总（按出现顺序）
