@@ -1,6 +1,15 @@
 proxies:
+- name: 'JP日本 #6'
+  network: tcp
+  password: Trojan@82164024
+  port: 443
+  server: jp.tronsg.com
+  skip-cert-verify: true
+  sni: jp.tronsg.com
+  type: trojan
+  udp: true
 - cipher: aes-256-cfb
-  name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #5'
+  name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #2'
   password: 7eadc6dbe2ae
   port: 65443
   server: 121.46.230.137
@@ -9,7 +18,7 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
-  name: '🇯🇵_JP_日本 #5'
+  name: '🇯🇵_JP_日本 #2'
   network: http
   port: 49432
   server: 38.47.121.14
@@ -20,7 +29,7 @@ proxies:
   uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
 - alterId: 2
   cipher: auto
-  name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #5'
+  name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #2'
   port: 30806
   server: v6.hdacd.com
   skip-cert-verify: true
@@ -28,65 +37,42 @@ proxies:
   type: vmess
   udp: true
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵_日本_237 - 145ms
-  network: ws
-  port: 443
-  server: 212.135.211.242
-  tls: true
-  type: vmess
-  uuid: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
-  ws-opts:
-    headers:
-      Host: aus.lovehk.xyz
-    path: /Sydney3
-- alterId: 0
-  cipher: auto
-  name: '🇦🇺 澳大利亚 | AUS #3'
-  network: ws
-  port: 443
-  server: 212.135.211.242
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
-  ws-opts:
-    headers:
-      Host: aus.lovehk.xyz
-    path: /Sydney3
 - alterId: 2
   cipher: auto
-  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 1017ms
+  client-fingerprint: chrome
+  name: 🇯🇵 025  | ⬇️ 82KB/s
   network: tcp
-  port: 30806
-  server: v6.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 0
-  cipher: auto
-  name: 日本(yudou789.top 玉豆免费节点)
-  port: 56738
-  server: 103.127.243.59
-  skip-cert-verify: false
+  port: 11205
+  server: sbgfgov.vip5.wogacnmnagfwgov.com
   tls: false
   type: vmess
   udp: true
-  uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
-- name: 未知 TROJAN-126
-  network: tcp
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+- cipher: aes-256-gcm
+  name: 'EPODONIOS #7695'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+- cipher: aes-256-gcm
+  name: 'EPODONIOS #7721'
+  password: 3eOFeNssde7PYYMv
+  port: 443
+  server: 84.247.155.196
+  type: ss
+- name: 🇯🇵193920 | ⚡️Telegram = t.me/S...
   password: UX82473651
   port: 443
-  server: evolving-platypus.rooster465.autos
-  skip-cert-verify: true
-  sni: evolving-platypus.rooster465.autos
+  server: 13.114.99.222
   type: trojan
-  udp: true
+- name: 🇯🇵193893 | ⚡️Telegram = t.me/S...
+  password: UX82473651
+  port: 443
+  server: 3.112.29.244
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_68|570KB/s|S004-260618
+  name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵
   network: ws
   port: '80'
   server: 168.138.43.75
@@ -97,96 +83,13 @@ proxies:
     headers:
       Host: jp01.a0a.xyz
     path: /cctv13.m3u8
-- name: 未知 TROJAN-118
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: comic-poodle.rooster465.autos
-  skip-cert-verify: true
-  sni: comic-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_157
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 18.183.167.216
-  skip-cert-verify: true
-  sni: amazed-mako.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_84
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.230.139.12
-  skip-cert-verify: true
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: 未知 TROJAN-127
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: fancy-javelin.rooster465.autos
-  skip-cert-verify: true
-  sni: fancy-javelin.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_50
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.194.251.232
-  skip-cert-verify: true
-  sni: optimal-penguin.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_126
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.65.177.190
-  skip-cert-verify: true
-  sni: winning-marten.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_109|311KB/s|S001-260618
-  network: ws
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: jp3.998998.best
-  sni: nat11.outsidemyheart.space
-  type: trojan
-  ws-opts:
-    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_86|566KB/s|S004-260618
+  name: 'EPODONIOS #7195'
   network: ws
   port: '80'
   server: 168.138.43.75
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: None
-    path: /cctv13.m3u8
-- name: 未知 TROJAN-114
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: assuring-skink.rooster465.autos
-  skip-cert-verify: true
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_70|545KB/s|S004-260618
-  network: ws
-  port: '80'
-  server: 168.138.43.75
+  servername: ''
   tls: false
   type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
@@ -194,278 +97,228 @@ proxies:
     headers:
       Host: 168.138.43.75
     path: /cctv13.m3u8
-- name: 🇯🇵JP_120
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.192.217.187
-  skip-cert-verify: true
-  sni: evolving-platypus.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_118
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 176.34.5.100
-  skip-cert-verify: true
-  sni: assuring-skink.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_11
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.238.153.132
-  skip-cert-verify: true
-  sni: obliging-louse.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_119
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.249.55.154
-  skip-cert-verify: true
-  sni: prime-corgi.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_163|569KB/s|A004-260618
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.114.99.222
-  sni: allowed-poodle.rooster465.autos
-  type: trojan
-- name: ❓Other_103
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: brief-glider.rooster465.autos
-  skip-cert-verify: true
-  sni: brief-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_85
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.249.36.167
-  sni: comic-poodle.rooster465.autos
-  type: trojan
-- cipher: aes-128-gcm
-  name: '🇯🇵JP_2 #1'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_24|119KB/s|M003-260806
-  network: tcp
-  port: '54291'
-  server: 103.127.243.66
-  tls: false
-  type: vmess
-  uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
-- name: 🇯🇵JP_134|428KB/s|A004-260618
+- client-fingerprint: chrome
+  name: '🇯🇵JP_7|141KB/s|A004-260618 #2'
   network: tcp
   password: UX82473651
   port: 443
   server: 18.183.212.83
   skip-cert-verify: true
   sni: normal-macaque.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_162
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.230.91.226
-  skip-cert-verify: true
-  sni: musical-terrier.rooster465.autos
+  sub_tag: A004-260618
   type: trojan
   udp: true
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_90|399KB/s|C002-260622
-  network: ws
-  port: '80'
-  server: 168.138.43.75
+  name: '🇯🇵JP_4|69KB/s|M003-260806 #2'
+  network: tcp
+  port: '54291'
+  server: 103.127.243.66
   tls: false
   type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    path: /cctv13.m3u8
-- name: 🇯🇵JP_53
+  uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
+- client-fingerprint: chrome
+  name: '🇯🇵JP_5|193KB/s|A004-260618 #2'
   network: tcp
   password: UX82473651
   port: 443
-  server: promoted-rattler.rooster465.autos
+  server: 54.65.177.190
   skip-cert-verify: true
-  sni: promoted-rattler.rooster465.autos
+  sni: winning-marten.rooster465.autos
+  sub_tag: A004-260618
   type: trojan
   udp: true
-- cipher: aes-256-gcm
-  name: 🇯🇵JP_20
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- name: 🇯🇵JP_95
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.192.45.137
-  skip-cert-verify: true
-  sni: promoted-rattler.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_154|352KB/s|A004-260618
-  network: tcp
-  password: HOrViv
-  port: 28106
-  server: 209.248.32.116
-  skip-cert-verify: true
-  sni: download.windowsupdate.com
-  type: trojan
-- name: 🇯🇵JP_52|451KB/s|A004-260618
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 43.207.198.39
-  sni: fancy-javelin.rooster465.autos
-  type: trojan
-- name: 🇯🇵_日本_22
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.193.213.184
-  skip-cert-verify: true
-  sni: stable-python.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_162|415KB/s|A004-260618
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 3.112.29.244
-  sni: evident-ant.rooster465.autos
-  type: trojan
-- name: JP【机场推荐：https://a9a.xyz】28
+- client-fingerprint: chrome
+  name: '🇯🇵JP_8|220KB/s|A004-260618 #2'
   network: tcp
   password: Trojan@82164024
   port: 443
-  server: jp.tronsg.com
+  server: 108.61.186.37
   skip-cert-verify: true
   sni: jp.tronsg.com
+  sub_tag: A004-260618
   type: trojan
   udp: true
-- cipher: aes-128-gcm
-  name: '🇯🇵JP_1 #1'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
-- cipher: aes-128-gcm
-  name: ❓Other_12
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-- name: 🇯🇵_日本_33
+- client-fingerprint: chrome
+  name: '🇯🇵JP_2|103KB/s|A004-260618 #2'
   network: tcp
   password: UX82473651
   port: 443
-  server: 3.112.188.176
+  server: assuring-skink.rooster465.autos
   skip-cert-verify: true
-  sni: live-stallion.rooster465.autos
+  sni: assuring-skink.rooster465.autos
+  sub_tag: A004-260618
   type: trojan
   udp: true
-- name: 🇯🇵JP_158
+- alterId: 2
+  cipher: auto
+  name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1 - 347ms
   network: tcp
+  port: 11231
+  server: silversbgfgov.vip31.wogbcnmnagfwgov.com
+  tls: false
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #33'
   password: UX82473651
   port: 443
-  server: 43.206.225.188
+  server: winning-marten.rooster465.autos
   skip-cert-verify: true
-  sni: warm-krill.rooster465.autos
+  sni: winning-marten.rooster465.autos
   type: trojan
-  udp: true
-- name: 🇯🇵JP_52
+- name: 🇯🇵_JP_日本 - 378ms
+  password: UX82473651
+  port: 443
+  server: organic-caribou.rooster465.autos
+  skip-cert-verify: true
+  sni: organic-caribou.rooster465.autos
+  type: trojan
+- name: '未知 TROJAN-146 #1'
+  password: UX82473651
+  port: 443
+  server: prime-corgi.rooster465.autos
+  skip-cert-verify: true
+  sni: prime-corgi.rooster465.autos
+  type: trojan
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 598ms
   network: tcp
-  password: UX82473651
-  port: 443
-  server: integral-rodent.rooster465.autos
-  skip-cert-verify: true
-  sni: integral-rodent.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_43
-  password: UX82473651
-  port: 443
-  server: 54.250.237.143
-  skip-cert-verify: true
-  sni: accurate-frog.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵_日本_44
-  password: UX82473651
-  port: 443
-  server: 18.176.52.171
-  skip-cert-verify: true
-  sni: legible-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: 🇯🇵JP_86
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.199.66.128
-  skip-cert-verify: true
-  sni: integral-rodent.rooster465.autos
-  type: trojan
-  udp: true
+  port: 30806
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: 🇯🇵_日本_291
+  name: 🇯🇵_日本_291 - 156ms
   network: ws
   port: 80
   server: 172.111.146.64
-  skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
+    headers:
+      Host: 172.111.146.64
     path: /vmess/
-- name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #6'
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  port: 20004
-  server: oplosgru-c.catcat321.com
+- name: 🇯🇵 日本|@stairnode
+  password: BxceQaOe
+  port: 3022
+  server: 52.194.222.108
   skip-cert-verify: true
-  sni: hk.catxstar.com
-  tls: false
+  sni: t.me%252Fripaojiedian
   type: trojan
-  udp: true
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #14'
-  network: ws
-  password: 0400697c-b581-4575-9d2f-0bbd4659312d
-  port: 20230
-  server: jp005.421421.xyz
-  sni: www.alibaba.com
+- name: 🇯🇵 日本2|@stairnode
+  password: 868ecdaf6aed618ec98cf78585672b2b
+  port: 4937
+  server: 13.231.134.78
+  skip-cert-verify: false
+  sni: www.nintendogames.net
   type: trojan
-  ws-opts:
-    path: /
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #27'
-  password: UX82473651
-  port: 443
-  server: 54.250.237.143
-  type: trojan
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #29'
-  password: UX82473651
-  port: 443
-  server: 54.238.153.132
+- name: 🇯🇵 日本3|@stairnode
+  password: 868ecdaf6aed618ec98cf78585672b2b
+  port: 9201
+  server: 43.207.115.26
+  skip-cert-verify: false
+  sni: www.nintendogames.net
   type: trojan
 - alterId: 0
   cipher: auto
-  name: '🇯🇵 日本|@ripaojiedian #1'
+  name: 日本(yudou789.top 玉豆免费节点)
+  port: 56738
+  server: 103.127.243.59
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
+- alterId: 0
+  cipher: auto
+  name: '日本 001 #1'
+  network: ws
+  port: 80
+  server: 103.35.188.226
+  skip-cert-verify: true
+  type: vmess
+  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
+  ws-opts:
+    headers:
+      Host: 103.35.188.226
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: '日本 002 #1'
+  network: tcp
+  port: 49499
+  server: 139.162.125.97
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+- alterId: 0
+  cipher: auto
+  name: '日本 003 #1'
+  network: tcp
+  port: 14935
+  server: 167.179.111.237
+  skip-cert-verify: true
+  type: vmess
+  uuid: e961894f-8e90-472f-98d3-09402e4be453
+- alterId: 0
+  cipher: auto
+  name: '日本 005 #1'
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  skip-cert-verify: true
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- alterId: 0
+  cipher: auto
+  name: '日本 006 #1'
+  network: ws
+  port: 80
+  server: 3h-philippines1.09vpn.com
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
+  ws-opts:
+    headers:
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    path: /vmess/
+- alpn:
+  - ''
+  alterId: '0'
+  cipher: auto
+  http-opts:
+    headers: {}
+    path:
+    - /ABCDE
+  name: '🇯🇵JP_4|69KB/s|M003-260806 #1'
+  network: http
+  packet-encoding: xudp
+  port: 54291
+  server: 103.127.243.66
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇯🇵JP_6|297KB/s|A004-260618 #1'
+  network: tcp
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 45.32.52.173
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本|@ripaojiedian
   network: ws
   port: 443
   server: Z9FfBx3zs2q5O0BG.v.3dns.vip
@@ -480,7 +333,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: '🇯🇵 日本2|@ripaojiedian #1'
+  name: 🇯🇵 日本2|@ripaojiedian
   network: ws
   port: 443
   server: kQov7UKaDknXb8a3.v.3dns.vip
@@ -495,206 +348,68 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 日本 006
+  name: 🇯🇵 日本3|@ripaojiedian
   network: ws
-  port: 80
-  server: 168.138.43.75
+  port: 443
+  server: kneNaKHeSXnZH259.v.3dns.vip
+  servername: kneNaKHeSXnZH259.v.3dns.vip
   skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kneNaKHeSXnZH259.v.3dns.vip
+    path: /ws-vmess
+- name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #3'
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20004
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
   tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: jp01.a0a.xyz
-    path: /
+  type: trojan
+  udp: true
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #30'
+  password: UX82473651
+  port: 443
+  server: 54.250.237.143
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 日本 014
+  name: '🇯🇵 日本|@ripaojiedian #2'
   network: ws
   port: 443
-  server: 172.105.239.241
-  skip-cert-verify: true
+  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
+  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
+  skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: js.adbse.xyz
-    path: /down
+      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 日本 015
+  name: '🇯🇵 日本2|@ripaojiedian #2'
   network: ws
   port: 443
-  server: 172.105.238.164
-  skip-cert-verify: true
+  server: kQov7UKaDknXb8a3.v.3dns.vip
+  servername: kQov7UKaDknXb8a3.v.3dns.vip
+  skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: js.adbse.xyz
-    path: /down
-- alterId: 0
-  cipher: auto
-  name: 日本 016
-  network: ws
+      Host: kQov7UKaDknXb8a3.v.3dns.vip
+    path: /ws-vmess
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #15'
+  password: UX82473651
   port: 443
-  server: fullaccesstojapannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstojapannetsubnode1.azurewebsites.net
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: 日本 017
-  network: ws
-  port: 80
-  server: 103.35.188.226
-  skip-cert-verify: true
-  type: vmess
-  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
-  ws-opts:
-    headers:
-      Host: 103.35.188.226
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 日本 018
-  network: ws
-  port: 80
-  server: 3h-philippines1.09vpn.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: 日本 019
-  network: ws
-  port: 443
-  server: 146.56.162.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 日本 020
-  network: ws
-  port: 3331
-  server: f1f3227.u1.glados-config.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  ws-opts:
-    headers:
-      Host: f1f3227.u1.glados-config.net
-    path: /s/f1f3227.fm.apple.com:111548
-- alterId: 0
-  cipher: auto
-  name: 日本 021
-  network: ws
-  port: 443
-  server: 8.209.252.35
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 3706161f-3ee3-48e5-bfcf-0d856cc6f0ab
-  ws-opts:
-    headers:
-      Host: js.adbse.xyz
-    path: /down
-- alterId: 0
-  cipher: auto
-  name: 日本 022
-  network: ws
-  port: 443
-  server: 172.105.223.136
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 日本 023
-  network: ws
-  port: 3331
-  server: f1f3227.v1.glados-config.net
-  skip-cert-verify: true
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  ws-opts:
-    headers:
-      Host: f1f3227.v1.glados-config.net
-    path: /s/f1f3227.fm.apple.com:111548
-- alterId: 0
-  cipher: auto
-  name: 日本 024
-  network: ws
-  port: 443
-  server: 124.156.225.184
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
-  ws-opts:
-    headers:
-      Host: azjp.pengui.xyz
-    path: /
-- alterId: 4
-  cipher: auto
-  name: 日本 025
-  network: ws
-  port: 443
-  server: 202.61.141.130
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: 202.61.141.130
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 日本 026
-  network: ws
-  port: 443
-  server: new3.hucloud-dns.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
-  ws-opts:
-    headers:
-      Host: new3.hucloud-dns.xyz
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 🇯🇵 025  | ⬇️ 82KB/s
-  network: tcp
-  port: 11205
-  server: sbgfgov.vip5.wogacnmnagfwgov.com
-  tls: false
-  type: vmess
-  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  server: 54.238.153.132
+  type: trojan
 - alterId: 2
   cipher: auto
   name: 🇯🇵 029  | ⬇️ 102KB/s
@@ -722,25 +437,3 @@ proxies:
   tls: false
   type: vmess
   uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
-- cipher: aes-256-gcm
-  name: 🇯🇵JP_2
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- name: 🇯🇵JP_105
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.231.247.130
-  skip-cert-verify: true
-  sni: concrete-aardvark.rooster465.autos
-  type: trojan
-- name: 🇯🇵JP_97
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 3.112.245.255
-  skip-cert-verify: true
-  sni: dynamic-imp.rooster465.autos
-  type: trojan
