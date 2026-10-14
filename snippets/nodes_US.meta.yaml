@@ -1,64 +1,272 @@
 proxies:
+- name: 🇺🇸US_1|1.1MB/s - 51ms
+  port: 9443
+  server: 38.95.111.226
+  sni: 38.95.111.226
+  tls: true
+  type: http
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸US_2|1.0MB/s - 84ms
+  network: tcp
+  port: 443
+  server: s880.gogocs.xyz
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- name: 🇺🇸US_3|1.0MB/s - 36ms
+  port: 443
+  server: 12.221.146.147
+  sni: 12.221.146.147
+  tls: true
+  type: http
+- name: 🇺🇸US_4|1.0MB/s - 24ms
+  port: 443
+  server: 12.202.180.10
+  sni: 12.202.180.10
+  tls: true
+  type: http
+- name: 🇺🇸US_5|1.4MB/s - 26ms
+  port: 443
+  server: 12.202.180.118
+  sni: 12.202.180.118
+  tls: true
+  type: http
+- name: 🇺🇸US_6|1.3MB/s - 117ms
+  port: 443
+  server: 149.34.248.65
+  sni: 149.34.248.65
+  tls: true
+  type: http
+- name: 🇺🇸US_7|4.2MB/s - 53ms
+  port: 443
+  server: 148.135.10.80
+  sni: 148.135.10.80
+  tls: true
+  type: http
+- cipher: aes-256-cfb
+  name: 🇺🇸_US_美国 - 5ms
+  password: amazonskr05
+  port: 443
+  server: 98.89.22.134
+  type: ss
 - alterId: 2
   cipher: auto
-  name: 🇭🇰_HK_中国香港->🇺🇸_US_美国 - 316ms
+  name: 🇭🇰_HK_中国香港->🇺🇸_US_美国 - 704ms
   network: tcp
-  port: 30804
-  server: v4.hdacd.com
+  port: 30829
+  server: v29.hdacd.com
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 🇺🇸_US_美国_1 - 84ms
+  password: UX82473651
+  port: 443
+  server: happy-gibbon.rooster465.autos
+  skip-cert-verify: true
+  sni: happy-gibbon.rooster465.autos
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇺🇸_US_美国 - 35ms
+  name: 🇺🇸_US_美国_2 - 103ms
   network: ws
   port: 443
-  server: www.shopify.com
-  sni: guanwang.awsno.com
+  server: guanwang.awsno.com
   tls: true
   type: vmess
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
   ws-opts:
     headers:
       Host: guanwang.awsno.com
-    path: /hls/cctv5phd.m3u8
+    path: /
+- name: 🇺🇸_US_美国_1 - 85ms
+  password: UX82473651
+  port: 443
+  server: ultimate-jaguar.rooster465.autos
+  skip-cert-verify: true
+  sni: ultimate-jaguar.rooster465.autos
+  type: trojan
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇺🇸_US_美国->🇫🇮_FI_芬兰 - 1ms
+  name: 🇺🇸_US_美国_2 - 134ms
   network: ws
   port: 443
-  server: 199.232.78.159
+  server: 86153507-1976-48f1-ac86-e8ab274470a8.fly.dev
   tls: true
   type: vless
-  uuid: 6e2e03e2-4f66-479a-a186-a34d66ca8c91
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇺🇸_US_美国 - 1082ms
-  network: tcp
-  port: 993
-  reality-opts:
-    public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
-  server: 88.218.44.4
-  tls: true
-  type: vless
-  uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+  uuid: 0b3c3f4f-843a-5b0a-98fe-132c88fbefc0
 - encryption: none
   flow: ''
-  name: 🇺🇸_US_美国_2 - 9ms
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国 - 96ms
   network: ws
-  port: 8880
-  server: 104.17.21.32
+  port: 8443
+  server: iiproxy888.iiproxy.com
+  tls: true
+  type: vless
+  uuid: 806fa224-44f7-4c1b-b7a3-05bfdfdfbf87
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇵🇱_PL_波兰 - 106ms
+  network: ws
+  port: 8443
+  server: iiproxy8.iiproxy.com
+  tls: true
+  type: vless
+  uuid: 806fa224-44f7-4c1b-b7a3-05bfdfdfbf87
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国_1 - 20ms
+  network: ws
+  port: 443
+  server: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国 - 84ms
+  network: ws
+  port: 443
+  server: s3ws.ragingbull.de5.net
+  tls: true
+  type: vless
+  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 95ms
+  network: ws
+  port: 2083
+  server: s4ws.ragingbull.de5.net
+  tls: true
+  type: vless
+  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国 - 27ms
+  network: ws
+  port: 2052
+  server: eu02.123450908.xyz
   tls: false
   type: vless
-  uuid: 300f44af-adb8-42b7-b869-bef70b205d7e
+  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
 - alterId: 0
   cipher: auto
-  name: 🇺🇸_US_美国_3 - 154ms
-  network: tcp
-  port: 443
-  server: guanwang.awsno.com
+  name: 🇺🇸_US_美国_1 - 21ms
+  network: ws
+  port: 2083
+  server: or3.sfacg.uk
   tls: true
   type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  ws-opts:
+    headers:
+      Host: or3.sfacg.uk
+    path: /
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_2 - 1062ms
+  network: ws
+  port: 443
+  server: x.m-90.xyz
+  tls: true
+  type: vless
+  uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+- name: 🇺🇸_US_美国 - 179ms
+  password: UX82473651
+  port: 443
+  server: pro-mako.rooster465.autos
+  skip-cert-verify: true
+  sni: pro-mako.rooster465.autos
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇬🇧_GB_英国 - 184ms
+  network: ws
+  port: 80
+  server: https.http.www.net.com.ramseyv2.ir.
+  tls: false
+  type: vmess
+  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /
+- name: 🇺🇸_US_美国_1 - 84ms_1
+  password: UX82473651
+  port: 443
+  server: alert-titmouse.rooster465.autos
+  skip-cert-verify: true
+  sni: alert-titmouse.rooster465.autos
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2 - 222ms
+  network: tcp
+  port: 12330
+  server: p05.rghvf.sbs
+  tls: true
+  type: vmess
+  uuid: 68adffea-4146-4f92-b2f9-955cd634c274
+- encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇳🇱_NL_荷兰 - 165ms
+  network: ws
+  port: 47289
+  server: switchyard.proxy.rlwy.net
+  tls: false
+  type: vless
+  uuid: 64b683e6-50e9-4168-884a-1707d1d8e176
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇬🇧_GB_英国 - 32ms
+  network: ws
+  port: 443
+  server: vpn.kovira.site
+  tls: true
+  type: vless
+  uuid: 22e6604e-0481-411f-8028-ffbd65f624b6
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 20ms
+  network: ws
+  port: 443
+  server: whuiy.xyz
+  tls: true
+  type: vless
+  uuid: c64992bd-54aa-4d3d-8527-42da7d7e520a
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国->🇩🇪_DE_德国 - 128ms
+  network: ws
+  port: 443
+  server: spiderpanel-development-g5884.lucity.app
+  tls: true
+  type: vless
+  uuid: cd0bd679-5760-4dd6-9340-576dd279228f
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇺🇸_US_美国_1 - 37ms
+  network: ws
+  port: 443
+  server: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
+  tls: true
+  type: vless
+  uuid: a8a4a3c1-1ae9-e9d2-4984-31561b113e87
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国_2 - 113ms
+  network: tcp
+  port: 443
+  server: nl.demka.live
+  tls: true
+  type: vless
+  uuid: 6230dfe2-7de5-4d4b-990f-73ac7f53e987

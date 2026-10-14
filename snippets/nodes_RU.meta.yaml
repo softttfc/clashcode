@@ -1,1 +1,55 @@
-proxies: []
+proxies:
+- client-fingerprint: randomized
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺RU_1|1022KB/s - 140ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: jOfry9bT2Z21ZiI_PvTqEgovPtqYu905diSA6J1OOlU
+    short-id: '!!str c96601c4976f71be'
+  server: app-ss-103.deep-aispb-analytics.com
+  tls: true
+  type: vless
+  uuid: 090da6a8-69f7-4b49-8af9-a8f8bfb07f17
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇷🇺_RU_俄罗斯 - 287ms
+  network: ws
+  port: 443
+  server: fbsv6.guardora.pro
+  tls: true
+  type: vless
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰 - 100ms
+  network: tcp
+  port: 8443
+  server: nl.alpheratzz.org
+  tls: true
+  type: vless
+  uuid: 8de76932-518a-4ac8-ac92-be6b1f17ddd8
+- encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰 - 86ms
+  network: tcp
+  port: 8443
+  server: nl.alpheratzz.org
+  tls: true
+  type: vless
+  uuid: 1bda2ae7-b597-4704-95a8-29c0f76324ba
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺_RU_俄罗斯 - 274ms
+  network: ws
+  port: 443
+  server: renderer-stream-2-114.mirra.now
+  tls: true
+  type: vmess
+  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-114.mirra.now
+    path: /
