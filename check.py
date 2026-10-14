@@ -15,23 +15,24 @@ check.py - Clash 节点文件校验工具
     6.  proxy-groups 引用有效性
     7.  rules 引用有效性、语法合法性
     8.  已知会导致 Clash Verge 报 "invalid yaml" 的问题
-    9.  REALITY short-id 格式校验
-    10.【本次新增】REALITY public-key 格式校验
+    9.  ws-opts / grpc-opts / h2-opts 详细字段校验
+        - ws-opts.headers.Host 内容合法性（mihomo 严格校验）
+        - ws-opts.path 合法性
+        - grpc-opts.grpc-service-name 合法性
+        - h2-opts.host / path 合法性
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO]
     FATAL 和 ERROR 是导致 Clash Verge 拒绝加载的直接原因
+    每个 ERROR/WARN 都会带 proxies[N] 索引和节点名，方便定位
 
 本次修改（相对旧版）:
     - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
     - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
     - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
-    - 新增 REALITY short-id 格式校验
-    - 【本次新增】新增 REALITY public-key 格式校验
-        mihomo 对 public-key 的要求：
-          * 必须是 base64url 字符集（A-Z, a-z, 0-9, -, _）
-          * 长度通常为 43 位（32 字节 x25519 公钥的 base64url 编码）
-          * 不能含 : / ? @ . 等 URL 字符
+    - 【本次新增】ws-opts.headers.Host 内容合法性检查
+    - 【本次新增】ws-opts.path / grpc-opts / h2-opts 字段校验
+    - 【本次新增】错误信息带节点名，方便定位
 """
 
 import sys
@@ -77,18 +78,15 @@ VALID_RULE_TYPES = {
     'SUB-RULE', 'MATCH',
 }
 
-# REALITY short-id 合法字符集
-VALID_SHORT_ID_CHARS = set('0123456789abcdef')
+# ws-opts.headers 中 mihomo 严格校验的特殊字段
+# mihomo 会对这些字段做 host 合法性检查
+WS_HEADER_STRICT_FIELDS = {'Host'}
 
-# 【本次新增】REALITY public-key 合法字符集（base64url）
-VALID_PUBLIC_KEY_CHARS = set(
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    'abcdefghijklmnopqrstuvwxyz'
-    '0123456789-_'
-)
+# Host 类字段禁止出现的字符
+HOST_FORBIDDEN_CHARS = set(' \t\r\n\\/?#,;')
 
-# 【本次新增】public-key 常见长度（base64url 无 padding 时 43 位）
-PUBLIC_KEY_EXPECTED_LEN = 43
+# Host 类字段禁止出现的子串
+HOST_FORBIDDEN_SUBSTRINGS = ('://',)
 
 
 # ============================================================================
@@ -98,6 +96,8 @@ class Reporter:
     def __init__(self, out_file):
         self.out = out_file
         self.counts = {'FATAL': 0, 'ERROR': 0, 'WARN': 0, 'INFO': 0}
+        # 记录所有 ERROR/WARN 定位信息，方便统计
+        self.error_locations = []
 
     def log(self, level, category, msg, location=''):
         self.counts[level] = self.counts.get(level, 0) + 1
@@ -107,8 +107,14 @@ class Reporter:
         self.out.write(line + '\n')
 
     def fatal(self, cat, msg, loc=''): self.log('FATAL', cat, msg, loc)
-    def error(self, cat, msg, loc=''): self.log('ERROR', cat, msg, loc)
-    def warn(self, cat, msg, loc=''):  self.log('WARN',  cat, msg, loc)
+    def error(self, cat, msg, loc=''):
+        self.log('ERROR', cat, msg, loc)
+        if loc:
+            self.error_locations.append((loc, msg))
+    def warn(self, cat, msg, loc=''):
+        self.log('WARN', cat, msg, loc)
+        if loc:
+            self.error_locations.append((loc, msg))
     def info(self, cat, msg, loc=''):  self.log('INFO',  cat, msg, loc)
 
     def summary(self):
@@ -120,10 +126,21 @@ class Reporter:
         self.out.write(f"ERROR: {self.counts['ERROR']}\n")
         self.out.write(f"WARN : {self.counts['WARN']}\n")
         self.out.write(f"INFO : {self.counts['INFO']}\n")
+
+        # 汇总定位信息
+        if self.error_locations:
+            self.out.write('\n' + '-' * 70 + '\n')
+            self.out.write('错误/警告定位汇总（按出现顺序）\n')
+            self.out.write('-' * 70 + '\n')
+            for loc, msg in self.error_locations:
+                self.out.write(f'  {loc}: {msg[:120]}\n')
+
         if self.counts['FATAL'] == 0 and self.counts['ERROR'] == 0:
             self.out.write('\n结论: 未发现会导致 Clash 拒绝加载的问题。\n')
         else:
             self.out.write('\n结论: 存在 FATAL/ERROR，这会导致 Clash Verge 报 "invalid yaml"。\n')
+            self.out.write('提示: 请根据 "错误/警告定位汇总" 部分定位到 proxies[N] 索引，\n')
+            self.out.write('      然后在 YAML 文件中查找对应的 - name: 节点。\n')
 
 
 # ============================================================================
@@ -137,8 +154,6 @@ def check_yaml_parse(path, rep):
         return None, None
 
     # 锚点 / 别名检测
-    # mihomo 使用 gopkg.in/yaml.v3，官方支持 YAML 锚点/别名，不应据此拒绝
-    # 因此降级为 INFO，仅供用户参考
     anchor_lines = []
     for i, line in enumerate(text.splitlines(), 1):
         if re.search(r'&\w+', line) or re.search(r'(?<![\w*])\*\w+', line):
@@ -150,8 +165,6 @@ def check_yaml_parse(path, rep):
             rep.info('YAML', f'  第 {ln} 行: {content[:100]}')
 
     # PyYAML 标签 !!str / !!int / !!bool
-    # 这些都是标准 YAML 标签，mihomo 能正确解析为对应类型，不应据此拒绝
-    # 因此降级为 INFO
     tag_lines = []
     for i, line in enumerate(text.splitlines(), 1):
         if '!!str' in line or '!!int' in line or '!!bool' in line:
@@ -172,134 +185,230 @@ def check_yaml_parse(path, rep):
 
 
 # ============================================================================
-# REALITY 字段校验（short-id + public-key）
+# 1.5 新增：ws-opts / grpc-opts / h2-opts 详细校验
 # ============================================================================
-def check_reality_opts(proxy, loc, rep):
+
+def _describe_value(v, max_len=80):
+    """生成值的简短描述，用于日志"""
+    if isinstance(v, str):
+        s = repr(v)
+        if len(s) > max_len:
+            s = s[:max_len] + '...'
+        return f"{s} (str, {len(v)} 字符)"
+    if isinstance(v, (list, tuple)):
+        return f"{repr(v)[:max_len]} (list, {len(v)} 项)"
+    if isinstance(v, dict):
+        return f"{repr(v)[:max_len]} (dict, {len(v)} 键)"
+    return f"{repr(v)[:max_len]} ({type(v).__name__})"
+
+
+def _check_host_like(value, field_name, loc, rep, node_name):
     """
-    校验 REALITY 的 reality-opts 字段。
+    校验 host 类字段（如 ws-opts.headers.Host、h2-opts.host 的每个元素）。
 
-    mihomo 对 short-id 的要求：
-      * 必须是字符串类型（YAML 会把纯数字解析为 int，导致 mihomo 报
-        "invalid REALITY short id"）
-      * 必须是十六进制字符串（0-9, a-f）
-      * 长度必须是偶数
-      * 长度不能超过 16
-      * 空字符串部分版本允许，但不确定，因此给 WARN
+    mihomo 拒绝条件：
+        - 非字符串
+        - 空字符串 / 纯空白
+        - 含空白、/、\\、?、#、,、; 等
+        - 含 ://
+        - 含控制字符
 
-    mihomo 对 public-key 的要求：
-      * 必须是 base64url 字符集（A-Z, a-z, 0-9, -, _）
-      * 长度通常为 43 位
-      * 不能含 : / ? @ . 等 URL 字符
-
-    参数:
-        proxy: 节点字典
-        loc:   位置描述，如 "proxies[123]"
-        rep:   报告器
+    返回:
+        True  -> 合法
+        False -> 非法（已记录错误）
     """
-    ro = proxy.get('reality-opts')
-    if not isinstance(ro, dict):
-        return
+    prefix = f"[节点: {node_name}] " if node_name else ""
 
-    # ============================================================================
-    # public-key 检查
-    # ============================================================================
-    pk = ro.get('public-key')
-    if pk is None:
-        rep.warn('PROXY', 'reality-opts 缺少 public-key', loc)
-    elif not isinstance(pk, str):
+    # 类型检查
+    if value is None:
         rep.error('PROXY',
-                  f'public-key 不是字符串: {type(pk).__name__} = {pk!r}',
+                  f'{prefix}{field_name} 为 None（mihomo 会报 "invalid"）',
                   loc)
-    elif len(pk) == 0:
-        rep.warn('PROXY', 'public-key 为空字符串', loc)
-    else:
-        # 检查是否含非法字符（非 base64url 字符）
-        invalid_chars = [c for c in pk if c not in VALID_PUBLIC_KEY_CHARS]
-        if invalid_chars:
-            # 找出第一个非法字符的位置，便于定位污染位置
-            first_invalid_pos = next(
-                i for i, c in enumerate(pk) if c not in VALID_PUBLIC_KEY_CHARS
-            )
-            prefix = pk[:first_invalid_pos]
+        return False
+
+    if not isinstance(value, str):
+        rep.error('PROXY',
+                  f'{prefix}{field_name} 不是字符串: {_describe_value(value)}',
+                  loc)
+        return False
+
+    if not value:
+        rep.error('PROXY',
+                  f'{prefix}{field_name} 为空字符串（mihomo 会报 "invalid"）',
+                  loc)
+        return False
+
+    if not value.strip():
+        rep.error('PROXY',
+                  f'{prefix}{field_name} 为纯空白: {value!r}',
+                  loc)
+        return False
+
+    # 前后空白
+    if value != value.strip():
+        rep.error('PROXY',
+                  f'{prefix}{field_name} 有前后空白: {value!r} '
+                  f'（建议改为 {value.strip()!r}）',
+                  loc)
+        return False
+
+    # 协议前缀
+    for sub in HOST_FORBIDDEN_SUBSTRINGS:
+        if sub in value:
+            pos = value.index(sub)
             rep.error('PROXY',
-                      f'public-key 含非 base64url 字符 '
-                      f'(首个非法字符在第 {first_invalid_pos + 1} 位: '
-                      f'{pk[first_invalid_pos]!r})，'
-                      f'合法前缀为 {prefix!r}（{len(prefix)} 位）',
+                      f'{prefix}{field_name} 含协议前缀 {sub!r} '
+                      f'（位置 {pos}）: {value!r} '
+                      f'（建议改为 {value.split(sub, 1)[1].split("/", 1)[0]!r}）',
                       loc)
-        elif len(pk) != PUBLIC_KEY_EXPECTED_LEN:
-            # 长度异常但不是非法字符
-            rep.warn('PROXY',
-                     f'public-key 长度异常（{len(pk)} 位，通常为 '
-                     f'{PUBLIC_KEY_EXPECTED_LEN} 位）: {pk!r}',
-                     loc)
-        else:
-            rep.info('PROXY', 'public-key 合法（43 位）', loc)
+            return False
 
-    # ============================================================================
-    # short-id 检查
-    # ============================================================================
-    sid = ro.get('short-id')
+    # 非法字符
+    for i, c in enumerate(value):
+        if c in HOST_FORBIDDEN_CHARS:
+            rep.error('PROXY',
+                      f'{prefix}{field_name} 含非法字符 {c!r} '
+                      f'（位置 {i}）: {value!r} '
+                      f'（合法前缀: {value[:i]!r}）',
+                      loc)
+            return False
+        if not c.isprintable():
+            rep.error('PROXY',
+                      f'{prefix}{field_name} 含控制字符 U+{ord(c):04X} '
+                      f'（位置 {i}）: {value!r}',
+                      loc)
+            return False
 
-    # 情况 1：字段不存在
-    if sid is None:
-        rep.info('PROXY',
-                 'reality-opts 缺少 short-id（部分 mihomo 版本允许，'
-                 '但建议显式提供合法值）',
-                 loc)
-        return
-
-    # 情况 2：不是字符串（YAML 把纯数字或科学计数法解析成了 int/float）
-    if not isinstance(sid, str):
-        rep.error('PROXY',
-                  f'short-id 不是字符串（{type(sid).__name__} = {sid!r}），'
-                  f'mihomo 会报 "invalid REALITY short id"',
-                  loc)
-        return
-
-    # 情况 3：空字符串
-    if len(sid) == 0:
+    # 尾随点
+    if value.endswith('.'):
         rep.warn('PROXY',
-                 'short-id 为空字符串（部分 mihomo 版本允许，'
-                 '但建议显式提供合法值）',
+                 f'{prefix}{field_name} 以点结尾: {value!r}',
                  loc)
+
+    return True
+
+
+def check_ws_opts(proxy, loc, rep, node_name):
+    """
+    校验 ws-opts 的详细字段。
+
+    mihomo 严格校验：
+        - ws-opts.headers.Host
+        - ws-opts.path
+        - ws-opts.headers 里的其他自定义字段（部分版本也校验）
+    """
+    ws = proxy.get('ws-opts')
+    if ws is None:
+        return
+    if not isinstance(ws, dict):
+        # 已在主流程里报过"不是字典"
         return
 
-    # 情况 4：含非十六进制字符
-    invalid_chars = [c for c in sid.lower() if c not in VALID_SHORT_ID_CHARS]
-    if invalid_chars:
-        # 找出第一个非法字符的位置
-        first_invalid_pos = next(
-            i for i, c in enumerate(sid) if c.lower() not in VALID_SHORT_ID_CHARS
-        )
-        prefix = sid[:first_invalid_pos]
-        rep.error('PROXY',
-                  f'short-id 含非十六进制字符 '
-                  f'(首个非法字符在第 {first_invalid_pos + 1} 位: '
-                  f'{sid[first_invalid_pos]!r})，'
-                  f'合法前缀为 {prefix!r}（{len(prefix)} 位）',
-                  loc)
+    # ---- headers ----
+    headers = ws.get('headers')
+    if headers is not None:
+        if not isinstance(headers, dict):
+            rep.error('PROXY',
+                      f'ws-opts.headers 不是字典: {_describe_value(headers)}',
+                      loc)
+        else:
+            for hkey, hval in headers.items():
+                if not isinstance(hkey, str):
+                    rep.error('PROXY',
+                              f'ws-opts.headers 键不是字符串: {hkey!r}',
+                              loc)
+                    continue
+                # Host 类字段严格校验
+                if hkey in WS_HEADER_STRICT_FIELDS:
+                    _check_host_like(
+                        hval,
+                        f'ws-opts.headers[{hkey}]',
+                        loc, rep, node_name
+                    )
+                else:
+                    # 其他字段宽松一些：至少要是字符串
+                    if not isinstance(hval, str):
+                        rep.error('PROXY',
+                                  f'ws-opts.headers[{hkey}] 不是字符串: '
+                                  f'{_describe_value(hval)}',
+                                  loc)
+
+    # ---- path ----
+    path = ws.get('path')
+    if path is not None:
+        if not isinstance(path, str):
+            rep.error('PROXY',
+                      f'ws-opts.path 不是字符串: {_describe_value(path)}',
+                      loc)
+        elif not path:
+            rep.warn('PROXY',
+                     f'ws-opts.path 为空字符串（建议改为 "/"）',
+                     loc)
+        elif not path.startswith('/'):
+            rep.warn('PROXY',
+                     f'ws-opts.path 不以 / 开头: {path!r}',
+                     loc)
+        # path 里不能有控制字符
+        for i, c in enumerate(path):
+            if not c.isprintable():
+                rep.error('PROXY',
+                          f'ws-opts.path 含控制字符 U+{ord(c):04X} '
+                          f'（位置 {i}）: {path!r}',
+                          loc)
+                break
+
+
+def check_grpc_opts(proxy, loc, rep, node_name):
+    """校验 grpc-opts 的详细字段"""
+    grpc = proxy.get('grpc-opts')
+    if grpc is None:
+        return
+    if not isinstance(grpc, dict):
         return
 
-    # 情况 5：长度超过 16
-    if len(sid) > 16:
-        rep.error('PROXY',
-                  f'short-id 长度超过 16（{len(sid)} 位）: {sid!r}',
-                  loc)
+    svc = grpc.get('grpc-service-name')
+    if svc is not None:
+        if not isinstance(svc, str):
+            rep.error('PROXY',
+                      f'grpc-opts.grpc-service-name 不是字符串: '
+                      f'{_describe_value(svc)}',
+                      loc)
+        elif not svc:
+            rep.warn('PROXY',
+                     f'grpc-opts.grpc-service-name 为空字符串',
+                     loc)
+
+
+def check_h2_opts(proxy, loc, rep, node_name):
+    """校验 h2-opts 的详细字段"""
+    h2 = proxy.get('h2-opts')
+    if h2 is None:
+        return
+    if not isinstance(h2, dict):
         return
 
-    # 情况 6：长度为奇数
-    if len(sid) % 2 != 0:
-        rep.error('PROXY',
-                  f'short-id 长度为奇数（{len(sid)} 位）: {sid!r}，'
-                  f'mihomo 要求偶数长度',
-                  loc)
-        return
+    # host 必须是列表
+    host = h2.get('host')
+    if host is not None:
+        if not isinstance(host, list):
+            rep.error('PROXY',
+                      f'h2-opts.host 不是列表: {_describe_value(host)}',
+                      loc)
+        else:
+            for i, h in enumerate(host):
+                _check_host_like(
+                    h,
+                    f'h2-opts.host[{i}]',
+                    loc, rep, node_name
+                )
 
-    # 全部通过，给个 INFO 提示合法
-    rep.info('PROXY',
-             f'short-id 合法: {sid!r}（{len(sid)} 位）',
-             loc)
+    # path 必须是字符串
+    path = h2.get('path')
+    if path is not None:
+        if not isinstance(path, str):
+            rep.error('PROXY',
+                      f'h2-opts.path 不是字符串: {_describe_value(path)}',
+                      loc)
 
 
 # ============================================================================
@@ -316,6 +425,9 @@ def check_proxy(proxy, idx, name_set, rep):
     server = proxy.get('server')
     port = proxy.get('port')
 
+    # 节点名（后续用于错误信息里标注）
+    node_name = name if isinstance(name, str) else None
+
     # 必填
     if not name:
         rep.error('PROXY', '缺少 name 字段', loc)
@@ -328,11 +440,9 @@ def check_proxy(proxy, idx, name_set, rep):
         if '...' in name:
             rep.warn('PROXY', f'name 含 "..."，部分解析器会误判: {name!r}', loc)
         if '#' in name and not name.startswith('#'):
-            # 若原始 YAML 没加引号，# 后内容会被当注释
             rep.warn('PROXY', f'name 含 "#"，如未加引号会被当成注释: {name!r}', loc)
         if '\n' in name or '\r' in name or '\t' in name:
             rep.error('PROXY', f'name 含控制字符（\\n/\\r/\\t）: {name!r}', loc)
-        # 不可见字符（除常见空格）
         for ch in name:
             if ord(ch) < 0x20 and ch != ' ':
                 rep.error('PROXY', f'name 含不可见控制字符 U+{ord(ch):04X}: {name!r}', loc)
@@ -383,15 +493,16 @@ def check_proxy(proxy, idx, name_set, rep):
             rep.warn('PROXY', f'vless 同时存在 security: none 和 reality-opts，'
                               f'部分 mihomo 版本会判为字段冲突', loc)
 
-        # REALITY 字段校验（short-id + public-key）
-        # 只对含有 reality-opts 的节点进行检查，其余节点不受影响
-        if 'reality-opts' in proxy:
-            check_reality_opts(proxy, loc, rep)
-
-    # ws-opts / grpc-opts 结构
+    # ws-opts / grpc-opts / h2-opts 结构
     for opt in ('ws-opts', 'grpc-opts', 'h2-opts', 'http-opts', 'xhttp-opts', 'reality-opts'):
         if opt in proxy and not isinstance(proxy[opt], dict):
             rep.error('PROXY', f'{opt} 不是字典: {type(proxy[opt]).__name__}', loc)
+
+    # ---- 新增：详细字段校验 ----
+    check_ws_opts(proxy, loc, rep, node_name)
+    check_grpc_opts(proxy, loc, rep, node_name)
+    check_h2_opts(proxy, loc, rep, node_name)
+    # ---------------------------
 
     # name 重复
     if isinstance(name, str) and name:
@@ -407,7 +518,6 @@ def check_groups(groups, proxy_names, rep):
         return set()
 
     group_names = set()
-    group_name_list = []
     for idx, g in enumerate(groups):
         loc = f'proxy-groups[{idx}]'
         if not isinstance(g, dict):
@@ -423,7 +533,6 @@ def check_groups(groups, proxy_names, rep):
         if name in group_names:
             rep.error('GROUP', f'组名重复: {name!r}', loc)
         group_names.add(name)
-        group_name_list.append(name)
 
         gtype = g.get('type')
         if not gtype:
@@ -437,7 +546,6 @@ def check_groups(groups, proxy_names, rep):
             if 'interval' not in g:
                 rep.info('GROUP', f'组 {name!r} 是 {gtype} 但没有 interval', loc)
 
-        # proxies 列表
         plist = g.get('proxies')
         if plist is None:
             if 'use' not in g:
@@ -488,7 +596,6 @@ def check_rules(rules, proxy_names, group_names, rep):
             rep.error('RULE', f'未知规则类型: {rtype!r}', loc)
             continue
 
-        # MATCH 只有一个参数
         if rtype == 'MATCH':
             if len(parts) < 2:
                 rep.error('RULE', f'MATCH 规则缺少策略: {rule!r}', loc)
@@ -502,7 +609,6 @@ def check_rules(rules, proxy_names, group_names, rep):
             rep.error('RULE', f'规则至少需要 3 个字段: {rule!r}', loc)
             continue
 
-        # 检查匹配字段是否含非法字符
         match_field = parts[1].strip()
         if rtype.startswith('DOMAIN') or rtype == 'GEOSITE':
             if '^' in match_field or '||' in match_field or '|' in match_field:
@@ -510,9 +616,10 @@ def check_rules(rules, proxy_names, group_names, rep):
                           f'{rtype} 的匹配字段含 Adblock 语法符号 (^/|): {match_field!r}',
                           loc)
             if match_field.startswith('@@'):
-                rep.error('RULE', f'{rtype} 的匹配字段含 Adblock 白名单前缀 @@: {match_field!r}', loc)
+                rep.error('RULE',
+                          f'{rtype} 的匹配字段含 Adblock 白名单前缀 @@: {match_field!r}',
+                          loc)
 
-        # 策略是否有效
         policy = parts[-1].strip()
         if policy not in valid_policy:
             rep.fatal('RULE', f'规则引用了不存在的策略: {policy!r}  ({rule!r})', loc)
