@@ -87,28 +87,34 @@ jobs:
       #   continue-on-error: true
 
       # ---------- 修复可预见错误（可选） ----------
-      - name: 修复可预见错误
-        run: python ./rebuilder_pro2.py list.metaspeedrp.yml list.metaspeedrbd.yml
-        continue-on-error: true
+      # - name: 修复可预见错误
+      #   run: python ./rebuilder_pro2.py list.metaspeedrp.yml list.metaspeedrbd.yml
+      #   continue-on-error: true
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
+      # ---------- 校验节点文件（分别对 safe 和 rbd 校验，失败不中断） ----------
       - name: 校验节点文件
         run: |
+          # 校验 list.meta.safe.yml（预处理后、rebuilder 前）
           if [ -f list.meta.safe.yml ]; then
             echo "开始校验 list.meta.safe.yml ..."
-            python ./check.py list.meta.safe.yml 错误日志safe.txt
+            python ./check.py list.meta.safe.yml 错误日志safe.txt || true
+          else
+            echo "⚠️ 未找到 list.meta.safe.yml，跳过" > 错误日志safe.txt
           fi
+
+          # 校验 list.metaspeedrbd.yml（rebuilder 后最终文件）
           if [ -f list.metaspeedrbd.yml ]; then
             echo "开始校验 list.metaspeedrbd.yml ..."
-            python ./check.py list.metaspeedrbd.yml 错误日志rbd.txt
+            python ./check.py list.metaspeedrbd.yml 错误日志rbd.txt || true
           elif [ -f list.metaspeedrp.yml ]; then
             echo "list.metaspeedrbd.yml 不存在，改为校验 list.metaspeedrp.yml ..."
-            python ./check.py list.metaspeedrp.yml 错误日志.txt
+            python ./check.py list.metaspeedrp.yml 错误日志rp.txt || true
           elif [ -f list.metaspeed.yml ]; then
             echo "list.metaspeedrbd.yml 和 list.metaspeedrp.yml 都不存在，改为校验 list.metaspeed.yml ..."
-            python ./check.py list.metaspeed.yml 错误日志.txt
+            python ./check.py list.metaspeed.yml 错误日志speed.txt || true
           else
-            echo "警告：没有找到任何待校验的 YAML 文件" > 错误日志.txt
+            echo "⚠️ 未找到 list.metaspeedrbd.yml / list.metaspeedrp.yml / list.metaspeed.yml" > 错误日志rbd.txt
           fi
         continue-on-error: true
 
@@ -116,19 +122,37 @@ jobs:
       - name: 打印校验报告
         if: always()
         run: |
-          if [ -f 错误日志.txt ]; then
-            echo "========== check.py 校验报告 =========="
-            cat 错误日志.txt
-            echo "======================================="
+          if [ -f 错误日志safe.txt ]; then
+            echo "========== check.py 校验报告: list.meta.safe.yml =========="
+            cat 错误日志safe.txt
+            echo "==========================================================="
           fi
-
-      # ---------- 将校验报告作为 artifact 上传（方案 B 核心） ----------
+          if [ -f 错误日志rbd.txt ]; then
+            echo "========== check.py 校验报告: list.metaspeedrbd.yml =========="
+            cat 错误日志rbd.txt
+            echo "============================================================="
+          fi
+          if [ -f 错误日志rp.txt ]; then
+            echo "========== check.py 校验报告: list.metaspeedrp.yml =========="
+            cat 错误日志rp.txt
+            echo "============================================================="
+          fi
+          if [ -f 错误日志speed.txt ]; then
+            echo "========== check.py 校验报告: list.metaspeed.yml =========="
+            cat 错误日志speed.txt
+            echo "============================================================="
+          fi          
+      # ---------- 将两份校验报告作为 artifact 上传 ----------
       - name: 上传校验报告
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: check-report
-          path: 错误日志.txt
+          path: |
+            错误日志safe.txt
+            错误日志rbd.txt
+            错误日志rp.txt
+            错误日志speed.txt            
           if-no-files-found: ignore
 
       # ---------- 提交并推送变更（不再拉取） ----------
@@ -145,8 +169,11 @@ jobs:
           git add list*
           git add snippets/
           # 把校验报告也纳入版本管理
-          if [ -f 错误日志.txt ]; then
-            git add 错误日志.txt
+          if [ -f 错误日志safe.txt ]; then
+            git add 错误日志safe.txt
+          fi
+          if [ -f 错误日志rbd.txt ]; then
+            git add 错误日志rbd.txt
           fi
 
           # 检查是否有变更需要提交
