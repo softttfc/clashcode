@@ -16,23 +16,31 @@ check.py - Clash 节点文件校验工具
     7.  rules 引用有效性、语法合法性
     8.  已知会导致 Clash Verge 报 "invalid yaml" 的问题
     9.  ws-opts / grpc-opts / h2-opts 详细字段校验
-        - ws-opts.headers.Host 内容合法性（mihomo 严格校验）
-        - ws-opts.path 合法性
-        - grpc-opts.grpc-service-name 合法性
-        - h2-opts.host / path 合法性
+    10. 节点特征诊断（用于定位"延迟测试全部失败"的根因）
 
 输出:
-    错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO]
+    错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO] / [DIAG]
     FATAL 和 ERROR 是导致 Clash Verge 拒绝加载的直接原因
     每个 ERROR/WARN 都会带 proxies[N] 索引和节点名，方便定位
+    DIAG 是诊断信息，不计入错误统计
 
 本次修改（相对旧版）:
     - YAML 锚点/别名检测由 WARN 降级为 INFO（mihomo 官方支持锚点）
     - PyYAML 标签 !!str/!!int/!!bool 检测由 ERROR 降级为 INFO
     - 从 KNOWN_PROXY_TYPES 中移除 shadowtls（非独立代理类型）
-    - 【本次新增】ws-opts.headers.Host 内容合法性检查
-    - 【本次新增】ws-opts.path / grpc-opts / h2-opts 字段校验
-    - 【本次新增】错误信息带节点名，方便定位
+    - ws-opts.headers.Host 内容合法性检查
+    - ws-opts.path / grpc-opts / h2-opts 字段校验
+    - 错误信息带节点名，方便定位
+    - 【本次新增】diagnose_proxies() 节点特征诊断：
+        * 协议分布
+        * VLESS 节点 flow 分布（识别 XUDP 节点）
+        * VLESS 节点中 UUID 被替换为默认值的数量
+        * VLESS 节点中 UUID 长度分布
+        * VLESS 节点中 sni/servername 缺失数量
+        * VLESS 节点 network 分布
+        * VLESS 节点 tls 字段分布
+        * VLESS 节点 security 分布
+        * 最终诊断结论
 """
 
 import sys
@@ -49,6 +57,11 @@ BUILTIN_POLICIES = {
     'DIRECT', 'REJECT', 'REJECT-DROP', 'PASS', 'GLOBAL',
     'SOCKS5', 'HTTP', 'COMPATIBLE',
 }
+
+# fetch_pro3.py 中用于替换非法 UUID 的默认值
+# 若节点文件里大量出现这个 UUID，说明上游脚本做了错误的 UUID 替换，
+# 会导致 mihomo 用错误 UUID 去认证，必然失败
+DEFAULT_UUID = '88888888-8888-8888-8888-888888888888'
 
 # mihomo 支持的 type
 # 注意: shadowtls 不是独立代理类型，而是 VLESS/AnyTLS 的 TLS 伪装选项，因此不列入
@@ -95,7 +108,8 @@ HOST_FORBIDDEN_SUBSTRINGS = ('://',)
 class Reporter:
     def __init__(self, out_file):
         self.out = out_file
-        self.counts = {'FATAL': 0, 'ERROR': 0, 'WARN': 0, 'INFO': 0}
+        # DIAG 单独计数，不计入错误
+        self.counts = {'FATAL': 0, 'ERROR': 0, 'WARN': 0, 'INFO': 0, 'DIAG': 0}
         # 记录所有 ERROR/WARN 定位信息，方便统计
         self.error_locations = []
 
@@ -116,6 +130,7 @@ class Reporter:
         if loc:
             self.error_locations.append((loc, msg))
     def info(self, cat, msg, loc=''):  self.log('INFO',  cat, msg, loc)
+    def diag(self, msg, loc=''):       self.log('DIAG',  'DIAG', msg, loc)
 
     def summary(self):
         self.out.write('\n')
@@ -126,6 +141,7 @@ class Reporter:
         self.out.write(f"ERROR: {self.counts['ERROR']}\n")
         self.out.write(f"WARN : {self.counts['WARN']}\n")
         self.out.write(f"INFO : {self.counts['INFO']}\n")
+        self.out.write(f"DIAG : {self.counts['DIAG']}  （诊断信息，非错误）\n")
 
         # 汇总定位信息
         if self.error_locations:
@@ -185,7 +201,7 @@ def check_yaml_parse(path, rep):
 
 
 # ============================================================================
-# 1.5 新增：ws-opts / grpc-opts / h2-opts 详细校验
+# 1.5 ws-opts / grpc-opts / h2-opts 详细校验
 # ============================================================================
 
 def _describe_value(v, max_len=80):
@@ -498,7 +514,7 @@ def check_proxy(proxy, idx, name_set, rep):
         if opt in proxy and not isinstance(proxy[opt], dict):
             rep.error('PROXY', f'{opt} 不是字典: {type(proxy[opt]).__name__}', loc)
 
-    # ---- 新增：详细字段校验 ----
+    # ---- 详细字段校验 ----
     check_ws_opts(proxy, loc, rep, node_name)
     check_grpc_opts(proxy, loc, rep, node_name)
     check_h2_opts(proxy, loc, rep, node_name)
@@ -507,6 +523,175 @@ def check_proxy(proxy, idx, name_set, rep):
     # name 重复
     if isinstance(name, str) and name:
         name_set[name].append(idx)
+
+
+# ============================================================================
+# 2.5【本次新增】节点特征诊断
+#     目的：定位"Clash Verge 里所有节点延迟测试都 Error"的原因
+#     输出使用 [DIAG] 分类，与原有的 [YAML]/[PROXY]/[GROUP] 等区分
+# ============================================================================
+def diagnose_proxies(proxies, rep):
+    """
+    对 proxies 做特征统计，输出诊断报告。
+
+    统计维度：
+        1. 协议分布
+        2. VLESS 节点 flow 字段分布（识别 XUDP 节点）
+        3. VLESS 节点中 UUID 被替换成默认值的数量
+        4. VLESS 节点中 UUID 长度分布
+        5. VLESS 节点中 sni/servername 缺失数量
+        6. VLESS 节点 network 分布
+        7. VLESS 节点 tls 字段分布
+        8. VLESS 节点 security 分布
+        9. 最终诊断结论
+
+    输出使用 [DIAG] 分类，便于与原有 [PROXY]/[GROUP] 等区分。
+    """
+    if not isinstance(proxies, list):
+        return
+
+    rep.info('DIAG', '=' * 62)
+    rep.info('DIAG', '节点特征诊断（用于定位"延迟测试全部失败"的原因）')
+    rep.info('DIAG', '=' * 62)
+
+    # ---------- 1. 协议分布 ----------
+    type_dist = Counter()
+    for p in proxies:
+        if isinstance(p, dict):
+            type_dist[p.get('type', '?')] += 1
+
+    rep.info('DIAG', '【1. 协议分布】')
+    total = len(proxies)
+    for t, c in type_dist.most_common():
+        pct = c / total * 100 if total else 0
+        rep.info('DIAG', f'  {t}: {c} ({pct:.1f}%)')
+
+    # ---------- 只针对 vless 做详细统计 ----------
+    vless = [p for p in proxies
+             if isinstance(p, dict) and p.get('type') == 'vless']
+    if not vless:
+        rep.info('DIAG', '【VLESS 节点】无')
+        rep.info('DIAG', '=' * 62)
+        return
+
+    vless_total = len(vless)
+    rep.info('DIAG', '')
+    rep.info('DIAG', f'【2. VLESS 节点】共 {vless_total} 个')
+
+    # ---- 2.1 flow 分布 ----
+    flow_dist = Counter()
+    for p in vless:
+        flow = p.get('flow', '(无)')
+        if flow is None or flow == '':
+            flow = '(空)'
+        flow_dist[flow] += 1
+
+    rep.info('DIAG', '  flow 分布:')
+    for f, c in flow_dist.most_common():
+        pct = c / vless_total * 100
+        rep.info('DIAG', f'    {f}: {c} ({pct:.1f}%)')
+
+    # ---- 2.2 UUID 被替换成默认值的数量 ----
+    default_uuid_count = sum(1 for p in vless if p.get('uuid') == DEFAULT_UUID)
+    if default_uuid_count:
+        pct = default_uuid_count / vless_total * 100
+        rep.warn('DIAG',
+                 f'  ⚠️ UUID 被替换成默认值 ({DEFAULT_UUID}) 的节点: '
+                 f'{default_uuid_count} ({pct:.1f}%)')
+        rep.warn('DIAG', f'     <-- 假设 1：这些节点认证必然失败')
+
+    # ---- 2.3 UUID 长度分布 ----
+    uuid_len_dist = Counter()
+    for p in vless:
+        uuid = p.get('uuid')
+        if isinstance(uuid, str):
+            uuid_len_dist[len(uuid)] += 1
+        else:
+            uuid_len_dist['非字符串'] += 1
+
+    rep.info('DIAG', '  UUID 长度分布:')
+    for l, c in uuid_len_dist.most_common():
+        rep.info('DIAG', f'    长度 {l}: {c}')
+
+    # ---- 2.4 sni/servername 缺失 ----
+    no_sni_count = 0
+    for p in vless:
+        sni = p.get('sni') or p.get('servername')
+        if not sni:
+            no_sni_count += 1
+    if no_sni_count:
+        pct = no_sni_count / vless_total * 100
+        rep.warn('DIAG',
+                 f'  无 sni/servername 的节点: {no_sni_count} ({pct:.1f}%)')
+        rep.warn('DIAG', f'     <-- 假设 2：TLS 握手可能失败')
+
+    # ---- 2.5 network 分布 ----
+    net_dist = Counter()
+    for p in vless:
+        net_dist[p.get('network', '(无)')] += 1
+    rep.info('DIAG', '  network 分布:')
+    for n, c in net_dist.most_common():
+        rep.info('DIAG', f'    {n}: {c}')
+
+    # ---- 2.6 tls 字段分布 ----
+    tls_dist = Counter()
+    for p in vless:
+        tls = p.get('tls', '(无)')
+        if isinstance(tls, bool):
+            tls = 'true' if tls else 'false'
+        tls_dist[tls] += 1
+    rep.info('DIAG', '  tls 分布:')
+    for t, c in tls_dist.most_common():
+        rep.info('DIAG', f'    {t}: {c}')
+
+    # ---- 2.7 security 分布 ----
+    sec_dist = Counter()
+    for p in vless:
+        sec_dist[p.get('security', '(无)')] += 1
+    rep.info('DIAG', '  security 分布:')
+    for s, c in sec_dist.most_common():
+        rep.info('DIAG', f'    {s}: {c}')
+
+    # ---- 2.8 XUDP 节点统计 ----
+    xudp_count = sum(
+        1 for p in vless
+        if p.get('flow') in ('xtls-rprx-vision', 'xtls-rprx-vision-udp443')
+    )
+    if xudp_count:
+        pct = xudp_count / vless_total * 100
+        rep.warn('DIAG',
+                 f'  XUDP 节点 (flow=xtls-rprx-vision*): '
+                 f'{xudp_count} ({pct:.1f}%)')
+        rep.warn('DIAG', f'     <-- 假设 3：需要服务端支持 Vision 流控')
+
+    # ---- 2.9 诊断结论 ----
+    rep.info('DIAG', '')
+    rep.info('DIAG', '【3. 诊断结论】')
+
+    issues = []
+    if default_uuid_count > 0:
+        issues.append(
+            f'UUID 被替换为默认值的节点 {default_uuid_count} 个 → '
+            f'认证必然失败（最可能是主因）'
+        )
+    if xudp_count > 0:
+        issues.append(
+            f'XUDP 节点 {xudp_count} 个 → '
+            f'需服务端支持 Vision 流控，普通节点会握手失败'
+        )
+    if no_sni_count > 0:
+        issues.append(
+            f'无 sni/servername 的节点 {no_sni_count} 个 → '
+            f'TLS 握手可能失败'
+        )
+
+    if issues:
+        for i, issue in enumerate(issues, 1):
+            rep.info('DIAG', f'  {i}. {issue}')
+    else:
+        rep.info('DIAG', '  未发现明显的共性问题，可能是节点源质量问题')
+
+    rep.info('DIAG', '=' * 62)
 
 
 # ============================================================================
@@ -649,7 +834,7 @@ def main():
         fout.write('=' * 70 + '\n\n')
 
         # ---------- 1. YAML 解析 ----------
-        print('[1/5] YAML 解析...')
+        print('[1/6] YAML 解析...')
         data, text = check_yaml_parse(input_file, rep)
         if data is None:
             print(f'\nYAML 无法解析，错误已写入 {output_file}')
@@ -662,7 +847,7 @@ def main():
             sys.exit(2)
 
         # ---------- 2. proxies ----------
-        print('[2/5] 校验 proxies...')
+        print('[2/6] 校验 proxies...')
         proxies = data.get('proxies')
         if proxies is None:
             rep.warn('PROXY', '配置中没有 proxies 段')
@@ -684,18 +869,22 @@ def main():
                           f'节点名重复 {name!r} 出现在索引 {idxs}，'
                           f'Clash 会因引用不明确而拒绝')
 
+        # ---------- 2.5 节点特征诊断 ----------
+        print('[2.5/6] 诊断节点特征...')
+        diagnose_proxies(proxies, rep)
+
         # ---------- 3. proxy-groups ----------
-        print('[3/5] 校验 proxy-groups...')
+        print('[3/6] 校验 proxy-groups...')
         groups = data.get('proxy-groups') or []
         group_names = check_groups(groups, proxy_names, rep)
 
         # ---------- 4. rules ----------
-        print('[4/5] 校验 rules...')
+        print('[4/6] 校验 rules...')
         rules = data.get('rules') or []
         check_rules(rules, proxy_names, group_names, rep)
 
         # ---------- 5. 未使用的节点（提示） ----------
-        print('[5/5] 统计未使用的节点...')
+        print('[5/6] 统计未使用的节点...')
         used = set()
         for g in groups:
             if isinstance(g, dict):
@@ -710,7 +899,8 @@ def main():
 
     print(f'\n报告已写入: {output_file}')
     print(f"FATAL={rep.counts['FATAL']}  ERROR={rep.counts['ERROR']}  "
-          f"WARN={rep.counts['WARN']}  INFO={rep.counts['INFO']}")
+          f"WARN={rep.counts['WARN']}  INFO={rep.counts['INFO']}  "
+          f"DIAG={rep.counts['DIAG']}")
     if rep.counts['FATAL'] or rep.counts['ERROR']:
         sys.exit(2)
     sys.exit(0)
