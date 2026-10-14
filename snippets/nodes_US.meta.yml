@@ -1,4 +1,142 @@
 proxies:
+- client-fingerprint: chrome
+  name: 美国+CloudFlare节点
+  network: ws
+  port: 443
+  server: 172.64.158.170
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /
+- client-fingerprint: unsafe
+  name: '美国+CloudFlare节点 #1'
+  network: ws
+  port: 443
+  server: 104.16.111.102
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- alpn:
+  - h3
+  - h2
+  client-fingerprint: chrome
+  name: '美国+CloudFlare节点 #2'
+  network: ws
+  port: 443
+  server: saas.sin.fan
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560
+- name: 美国+Xerox
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  port: 21223
+  server: sweedenqfds777.qcloud.surf
+  skip-cert-verify: true
+  sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国
+  port: 443
+  server: 165.140.217.2
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+- client-fingerprint: chrome
+  name: 🇺🇸_US_美国_1
+  network: ws
+  port: 2096
+  server: 104.17.25.208
+  servername: fq.jp188.dpdns.org
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  ws-opts:
+    headers:
+      Host: fq.jp188.dpdns.org
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.232
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  port: 52683
+  server: jp.sofast.live
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
+- alterId: 2
+  cipher: auto
+  name: 美国(yudou789.top 玉豆免费节点)_53
+  port: 30804
+  server: v4.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.233
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  port: 58011
+  server: us22.sofast.live
+  skip-cert-verify: true
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2
+  network: ws
+  port: 443
+  server: www.shopify.com
+  servername: guanwang.awsno.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    headers:
+      Host: guanwang.awsno.com
+    path: /hls/cctv5phd.m3u8
 - name: 美国(yudou789.top 玉豆免费节点)_12
   password: Aimer
   port: 2053
@@ -221,16 +359,6 @@ proxies:
     headers:
       Host: vms.lifetime26.workers.dev
     path: /?ed=2560&https://t.me/YouTube@小青科学网🇨🇳
-- alterId: 2
-  cipher: auto
-  name: 英国(yudou789.top 玉豆免费节点)_23
-  port: 30836
-  server: v36.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 美国(yudou789.top 玉豆免费节点)_50
   network: ws
   port: 8880
@@ -262,16 +390,6 @@ proxies:
     headers:
       Host: vms.lifetime03.workers.dev
     path: /?ed=2560&https://t.me/YouTube@小青科学网🇨🇳
-- alterId: 2
-  cipher: auto
-  name: 美国(yudou789.top 玉豆免费节点)_53
-  port: 30804
-  server: v4.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - name: 美国(yudou789.top 玉豆免费节点)_55
   network: ws
   port: 2053

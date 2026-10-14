@@ -1,4 +1,159 @@
 proxies:
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.137
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国
+  port: 443
+  server: 165.140.217.2
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
+- cipher: aes-256-cfb
+  name: 🇮🇪_IE_爱尔兰
+  password: amazonskr05
+  port: 443
+  server: 54.171.218.140
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 64
+  cipher: auto
+  name: 🇨🇳_CN_中国
+  port: 50002
+  server: 112.132.215.108
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰 香港|@ripaojiedian
+  port: 30807
+  server: v10.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  port: 30835
+  server: v35.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.232
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  name: 美国(yudou789.top 玉豆免费节点)_53
+  port: 30804
+  server: v4.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.233
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 121.46.230.138
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+  port: 30833
+  server: v33.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 2
+  cipher: auto
+  name: 英国(yudou789.top 玉豆免费节点)_23
+  port: 30836
+  server: v36.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2
+  network: ws
+  port: 443
+  server: www.shopify.com
+  servername: guanwang.awsno.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    headers:
+      Host: guanwang.awsno.com
+    path: /hls/cctv5phd.m3u8
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵_JP_日本
+  network: http
+  port: 49432
+  server: 38.47.121.14
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+- cipher: aes-256-cfb
+  name: 🇲🇾_MY_马来西亚
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 118.107.222.231
+  skip-cert-verify: true
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+  port: 30806
+  server: v6.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - cipher: chacha20-ietf-poly1305
   name: 美国(yudou789.top 玉豆免费节点)_9
   password: 9tqhMdIrTkgQ46PvhyAtMH
@@ -63,16 +218,6 @@ proxies:
   server: tinkered-pennies-puppies.freesocks.work
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰 香港|@ripaojiedian
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
   name: 日本(yudou789.top 玉豆免费节点)
@@ -213,16 +358,6 @@ proxies:
   type: vmess
   udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 2
-  cipher: auto
-  name: 英国(yudou789.top 玉豆免费节点)_23
-  port: 30836
-  server: v36.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - cipher: aes-128-gcm
   name: 美国(yudou789.top 玉豆免费节点)_51
   password: JVrsLLN1tkN8oXZO
@@ -230,16 +365,6 @@ proxies:
   server: chengbai02.ascwt179.com
   type: ss
   udp: true
-- alterId: 2
-  cipher: auto
-  name: 美国(yudou789.top 玉豆免费节点)_53
-  port: 30804
-  server: v4.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 2
   cipher: auto
   name: 美国(yudou789.top 玉豆免费节点)_83
