@@ -26,13 +26,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 pyyaml
+          pip install requests beautifulsoup4 pyyaml requests-file aioquic
 
       - name: Run crawler
         run: python crawler_pro.py
+        
+      - name: 生成 Meta 配置
+        run: python config.py crawclash.yaml crawclash.meta.yaml 
+        
       # ---------- 修复配置文件格式（可选） ----------
       - name: 修复可预见错误1
-        run: python ./rebuilder_pro.py crawclash.yaml  crawclashrbd.yaml
+        run: python ./rebuilder_pro.py crawclash.meta.yaml  crawclash.metarbd.yaml
         continue-on-error: true
 
       - name: Commit and push output files
@@ -59,8 +63,13 @@ jobs:
 
           # 3. 拉取远程最新变更（使用 rebase 保持线性历史）
           # 此时工作区干净（已提交或没有变更），pull 不会报错
+          # if ! git pull --rebase origin "$DEFAULT_BRANCH"; then
+          #   echo "❌ pull 失败，可能远程有冲突，终止流程"
+          #   exit 1
+          # fi
           if ! git pull --rebase origin "$DEFAULT_BRANCH"; then
-            echo "❌ pull 失败，可能远程有冲突，终止流程"
+            echo "❌ pull 失败，回滚 rebase"
+            git rebase --abort || true
             exit 1
           fi
 
