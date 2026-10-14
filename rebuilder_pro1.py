@@ -26,10 +26,18 @@ Clash 配置文件修复工具 (rebuilder_pro1.py) - 最终完整版
         - VLESS security: none 与 reality-opts 冲突修复
         - Adblock 规则残留符号清理（^、||、@@）
         - 使用 NoAliasDumper 禁止 YAML 锚点/别名输出
-    15.【本次新增】REALITY 字段清理：
+    15. REALITY 字段清理：
         - short-id：剔除非法字符、补齐/截断到合法长度
         - public-key：必须是 43 位合法 base64url，否则删除整个节点
         - 删除节点后同步清理 proxy-groups 的引用
+    16.【本次新增】ws-opts.headers.Host 清理：
+        - 空字符串 / None / 纯空白 → 移除 Host 字段（让 mihomo 用默认）
+        - 含协议前缀 / 路径 / 查询 / fragment / 多值 → 清洗为纯主机名
+        - 非字符串类型 → 移除 Host 字段
+        - 尾随点 → 去除
+        - 目的：修复 mihomo 报 "field ws-opts.headers[Host] invalid" 导致
+                Clash Verge 拒绝加载整份配置的问题
+        - 覆盖范围：vmess / vless / trojan 等所有使用 ws-opts 的协议
 
 【用法】
     python rebuilder_pro1.py <输入文件> <输出文件>
@@ -66,17 +74,17 @@ VALID_NETWORKS = {
     'udp', 'quic', '',
 }
 
-# 【本次新增】REALITY public-key 合法字符集（base64url）
+# REALITY public-key 合法字符集（base64url）
 VALID_PUBLIC_KEY_CHARS = set(
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     'abcdefghijklmnopqrstuvwxyz'
     '0123456789-_'
 )
 
-# 【本次新增】REALITY public-key 标准长度
+# REALITY public-key 标准长度
 PUBLIC_KEY_LEN = 43
 
-# 【本次新增】REALITY short-id 合法字符集（十六进制）
+# REALITY short-id 合法字符集（十六进制）
 VALID_SHORT_ID_CHARS = set('0123456789abcdef')
 
 
@@ -98,6 +106,75 @@ class NoAliasDumper(yaml.SafeDumper):
 
 
 NoAliasDumper.add_representer(str, NoAliasDumper.represent_str)
+
+
+# ============================================================================
+# 工具函数：清洗 ws-opts.headers.Host
+# ============================================================================
+def clean_ws_host(host):
+    """
+    清洗 ws-opts.headers.Host，去除 mihomo 不接受的字符。
+
+    mihomo 拒绝加载的 Host 值条件：
+        - None（YAML 的 ~ / null）
+        - 空字符串 / 纯空白
+        - 含空白、/、\\、?、#、,、; 等
+        - 含 ://（协议前缀）
+        - 多值（逗号分隔）
+        - 非字符串类型（list / dict / int / float）
+
+    参数:
+        host: 原始值（任意类型）
+
+    返回:
+        清洗后的合法 host 字符串；无法清洗时返回 None
+    """
+    if host is None:
+        return None
+
+    # 列表 / 元组：取第一个非空元素
+    if isinstance(host, (list, tuple)):
+        for item in host:
+            cleaned = clean_ws_host(item)
+            if cleaned:
+                return cleaned
+        return None
+
+    # 字典直接放弃
+    if isinstance(host, dict):
+        return None
+
+    # 其他类型转字符串
+    if not isinstance(host, str):
+        host = str(host)
+
+    # 去除前后空白
+    host = host.strip()
+    if not host:
+        return None
+
+    # 去除协议前缀
+    if '://' in host:
+        host = host.split('://', 1)[1]
+
+    # 去除路径 / 查询 / fragment
+    for sep in ('/', '?', '#'):
+        if sep in host:
+            host = host.split(sep, 1)[0]
+
+    # 多值取第一个
+    if ',' in host:
+        host = host.split(',', 1)[0].strip()
+    if ';' in host:
+        host = host.split(';', 1)[0].strip()
+
+    # 去除空白和不可见字符
+    host = ''.join(c for c in host if c.isprintable() and not c.isspace())
+
+    # 去除尾随点
+    host = host.rstrip('.')
+
+    return host if host else None
 
 
 # ============================================================================
@@ -508,10 +585,14 @@ def fix_node_group_name_conflicts(proxies, groups):
 #       3. VLESS security: none 与 reality-opts 冲突修复
 #       4. Adblock 规则残留符号清理（^、||、@@）
 #       5. IPv6 server 去方括号
-#       6. 【本次新增】REALITY 字段清理：
+#       6. REALITY 字段清理：
 #          - short-id：剔除非法字符、补齐/截断到合法长度
 #          - public-key：必须是 43 位合法 base64url，否则删除整个节点
 #          - 删除节点后同步清理 proxy-groups 的引用
+#       7.【本次新增】ws-opts.headers.Host 清理：
+#          - 空 / None / 非法字符 → 移除 Host 字段（让 mihomo 用默认）
+#          - 含协议前缀 / 路径 / 多值 → 清洗为纯主机名
+#          - 修复 mihomo 报 "field ws-opts.headers[Host] invalid" 的问题
 #     说明：
 #       本函数在写入最终文件前调用，作为最后一道防线。
 #       原有 13 个修复函数已处理结构性引用问题，本函数只负责 YAML 语法安全
@@ -526,7 +607,7 @@ def sanitize_final_config(config):
     # 用于记录 REALITY public-key 损坏、需要删除的节点
     bad_reality_nodes = set()
 
-    # ---------- 4.1 节点名清理 + network 清理 + VLESS reality 修复 ----------
+    # ---------- 4.1 节点名清理 + network 清理 + VLESS reality 修复 + Host 清理 ----------
     proxies = config.get('proxies', [])
     if isinstance(proxies, list):
         for p in proxies:
@@ -569,7 +650,7 @@ def sanitize_final_config(config):
                     p['tls'] = True
                     fixed += 1
 
-            # 4.1.5【本次新增】REALITY 字段清理
+            # 4.1.5 REALITY 字段清理
             #   public-key：必须 43 位合法 base64url，否则标记节点待删
             #   short-id：规范化（剔除非法字符、补齐/截断）
             if p.get('type') == 'vless' and isinstance(p.get('reality-opts'), dict):
@@ -613,7 +694,39 @@ def sanitize_final_config(config):
                                 ro.pop('short-id', None)
                             fixed += 1
 
-    # ---------- 4.1.6【本次新增】删除 REALITY 损坏的节点，并清理引用 ----------
+            # 4.1.6【本次新增】ws-opts.headers.Host 清理
+            #   修复 mihomo 报 "field ws-opts.headers[Host] invalid" 的问题
+            #   覆盖 vmess / vless / trojan 等所有使用 ws-opts 的协议
+            if isinstance(p.get('ws-opts'), dict):
+                ws_opts = p['ws-opts']
+                if isinstance(ws_opts.get('headers'), dict):
+                    headers = ws_opts['headers']
+                    if 'Host' in headers:
+                        original = headers['Host']
+                        cleaned = clean_ws_host(original)
+                        if cleaned:
+                            if cleaned != original:
+                                headers['Host'] = cleaned
+                                fixed += 1
+                                print(
+                                    f"🔧 修复：节点 '{p.get('name', '未命名')}' 的 "
+                                    f"ws-opts.headers.Host 已清洗: "
+                                    f"{original!r} -> {cleaned!r}"
+                                )
+                        else:
+                            # 清洗失败：移除 Host 字段，让 mihomo 使用默认（server / SNI）
+                            del headers['Host']
+                            # headers 空了就一并删除
+                            if not headers:
+                                del ws_opts['headers']
+                            fixed += 1
+                            print(
+                                f"🔧 修复：节点 '{p.get('name', '未命名')}' 的 "
+                                f"ws-opts.headers.Host 非法 ({original!r})，已移除，"
+                                f"mihomo 将使用 server 作默认 Host"
+                            )
+
+    # ---------- 4.1.7 删除 REALITY 损坏的节点，并清理引用 ----------
     if bad_reality_nodes:
         original_proxies = config.get('proxies', [])
         if isinstance(original_proxies, list):
@@ -796,7 +909,7 @@ def fix_clash_config(input_file, output_file):
     if rules:
         total_fixed += validate_rule_set_references(rules, provider_names)
 
-    # ---------- 5. 最终安全化（含 REALITY 字段清理 + 删除损坏节点） ----------
+    # ---------- 5. 最终安全化（含 REALITY 字段清理 + ws-opts.headers.Host 清理 + 删除损坏节点） ----------
     print("\n🧹 执行最终安全化...")
     sanitize_count = sanitize_final_config(config)
     if sanitize_count:
