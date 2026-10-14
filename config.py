@@ -6,26 +6,26 @@
 #
 # 一、功能
 # -----------------------------------------------------------------------------
-# 本脚本用于将 Clash 格式的 list.yaml 转换为 Clash Meta 格式的 list.meta.yml。
+# 本脚本用于将 Clash 格式的 list.yaml 转换为 Clash Meta 格式的 list.meta.yaml。
 # 同时生成：
-#   - 按地区分类的节点片段：snippets/nodes_*.yml
-#   - 按地区分类的 Meta 节点片段：snippets/nodes_*.meta.yml
-#   - 主节点片段：snippets/nodes.meta.yml
-#   - 规则片段：snippets/rules_*.yml
-#   - snippets/rules.yml / snippets/rules_online.yml
+#   - 按地区分类的节点片段：snippets/nodes_*.yaml
+#   - 按地区分类的 Meta 节点片段：snippets/nodes_*.meta.yaml
+#   - 主节点片段：snippets/nodes.meta.yaml
+#   - 规则片段：snippets/rules_*.yaml
+#   - snippets/rules.yaml / snippets/rules_online.yaml
 #   - Adblock 规则合并
 #
 # 二、运行方式
 # -----------------------------------------------------------------------------
-#   python config.py list.yaml list.meta.yml
+#   python config.py list.yaml list.meta.yaml
 #
-#   - list.yaml     : 输入文件（Clash 格式，含 proxies）
-#   - list.meta.yml : 输出文件（Clash Meta 格式）
+#   - list.yaml      : 输入文件（Clash 格式，含 proxies）
+#   - list.meta.yaml : 输出文件（Clash Meta 格式）
 #
 # 三、GitHub Actions 中使用
 # -----------------------------------------------------------------------------
 #   - name: 生成 Meta 配置
-#     run: python config.py list.yaml list.meta.yml
+#     run: python config.py crawclash.yaml crawclash.meta.yaml
 #
 # 四、支持的协议（Clash Verge）
 # -----------------------------------------------------------------------------
@@ -33,29 +33,39 @@
 #
 # 五、全局变量
 # -----------------------------------------------------------------------------
-#   CONFIG_TEMPLATE : 模板文件名（Meta 配置骨架）
+#   CONFIG_TEMPLATE : 模板文件名（Meta 配置骨架，保持 .yml 不变）
 #   SNIPPETS_DIR    : 片段输出目录
+#   SNIPPET_EXT     : 片段文件扩展名（统一为 .yaml）
 #
 # 六、依赖
 # -----------------------------------------------------------------------------
 #   pip install pyyaml requests requests-file
-#七、目录
+#
+# 七、目录结构
+# -----------------------------------------------------------------------------
 #   project/
-# ├── config.py              # 本脚本
-# ├── config.yml             # Meta 配置模板（必须）
-# ├── list.yaml              # 输入文件（Clash 格式）
-# ├── list.meta.yml          # 输出文件（Meta 格式）
-# ├── abpwhite.txt           # 可选：Adblock 白名单
-# ├── local_proxy.conf       # 可选：本地代理
-# ├── local_NO_ADBLOCK       # 可选：跳过 Adblock
-# └── snippets/              # 输出片段目录
-#     ├── nodes_美国.meta.yml
-#     ├── nodes_日本.meta.yml
-#     ├── nodes.meta.yml
-#     ├── rules_广告拦截.yml
-#     ├── rules.yml
-#     ├── rules_online.yml
-#     └── example.yml       #可选：规则片段模板
+#   ├── config.py                    # 本脚本
+#   ├── config.yml                   # Meta 配置模板（必须，保持 .yml）
+#   ├── list.yaml                    # 输入文件（Clash 格式）
+#   ├── list.meta.yaml               # 输出文件（Meta 格式）
+#   ├── abpwhite.txt                 # 可选：Adblock 白名单
+#   ├── local_proxy.conf             # 可选：本地代理
+#   ├── local_NO_ADBLOCK             # 可选：跳过 Adblock
+#   └── snippets/                    # 输出片段目录
+#       ├── nodes_美国.meta.yaml
+#       ├── nodes_日本.meta.yaml
+#       ├── nodes.meta.yaml
+#       ├── rules_广告拦截.yaml
+#       ├── rules.yaml
+#       ├── rules_online.yaml
+#       └── example.yaml             # 可选：规则片段模板
+#
+# 八、注意事项
+# -----------------------------------------------------------------------------
+#   - 若 config.yml 中的 rule-providers 引用了 snippets/xxx.yml，
+#     需同步改为 snippets/xxx.yaml，否则 Clash Verge 无法找到片段文件。
+#   - 若已有 snippets/example.yml，建议重命名为 snippets/example.yaml，
+#     脚本会优先读取 .yaml，找不到时回退到 .yml（向后兼容）。
 # =============================================================================
 
 import sys
@@ -77,8 +87,9 @@ from requests_file import FileAdapter
 # =============================================================================
 
 # ---------- 文件路径 ----------
-CONFIG_TEMPLATE = "config.yml"    # Meta 配置模板文件名（必须存在）
+CONFIG_TEMPLATE = "config.yml"    # Meta 配置模板文件名（保持 .yml 不变）
 SNIPPETS_DIR    = "snippets"      # 片段输出目录
+SNIPPET_EXT     = ".yaml"         # 片段文件统一扩展名（方案 B）
 LOCAL_PROXY_CONF = "local_proxy.conf"  # 可选：本地代理配置
 
 # ---------- 名称显示控制 ----------
@@ -1192,12 +1203,13 @@ def load_nodes_from_yaml(input_file: str) -> Dict[int, Node]:
 def main():
     # ---------- 解析命令行参数 ----------
     input_file  = sys.argv[1] if len(sys.argv) > 1 else "list.yaml"
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "list.meta.yml"
+    output_file = sys.argv[2] if len(sys.argv) > 2 else "list.meta.yaml"
 
     print(f"📥 输入文件: {input_file}")
     print(f"📤 输出文件: {output_file}")
     print(f"📄 模板文件: {CONFIG_TEMPLATE}")
     print(f"📁 片段目录: {SNIPPETS_DIR}")
+    print(f"📎 片段扩展名: {SNIPPET_EXT}")
     print()
 
     # ---------- 1. 读取输入节点 ----------
@@ -1260,10 +1272,12 @@ def main():
         # 写出分类节点片段
         os.makedirs(SNIPPETS_DIR, exist_ok=True)
         for ctg, proxies in ctg_nodes.items():
-            with open(os.path.join(SNIPPETS_DIR, "nodes_" + ctg + ".yml"), 'w', encoding="utf-8") as f:
+            path = os.path.join(SNIPPETS_DIR, "nodes_" + ctg + SNIPPET_EXT)
+            with open(path, 'w', encoding="utf-8") as f:
                 yaml.dump({'proxies': proxies}, f, allow_unicode=True)
         for ctg, proxies in ctg_nodes_meta.items():
-            with open(os.path.join(SNIPPETS_DIR, "nodes_" + ctg + ".meta.yml"), 'w', encoding="utf-8") as f:
+            path = os.path.join(SNIPPETS_DIR, "nodes_" + ctg + ".meta" + SNIPPET_EXT)
+            with open(path, 'w', encoding="utf-8") as f:
                 yaml.dump({'proxies': proxies}, f, allow_unicode=True)
 
     # ---------- 5. 处理规则（合并 Adblock 到 conf['rules']） ----------
@@ -1365,14 +1379,15 @@ def main():
                 filtered = [p for p in original if p not in all_group_names]
                 g['proxies'] = filtered
 
-    # ---------- 7. 写出 list.meta.yml ----------
+    # ---------- 7. 写出 list.meta.yaml ----------
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(datetime.datetime.now().strftime('# Update: %Y-%m-%d %H:%M\n'))
         f.write(yaml.dump(conf, allow_unicode=True).replace('!!str ', ''))
 
     # ---------- 8. 写出主节点片段 ----------
     os.makedirs(SNIPPETS_DIR, exist_ok=True)
-    with open(os.path.join(SNIPPETS_DIR, "nodes.meta.yml"), 'w', encoding="utf-8") as f:
+    nodes_meta_path = os.path.join(SNIPPETS_DIR, "nodes.meta" + SNIPPET_EXT)
+    with open(nodes_meta_path, 'w', encoding="utf-8") as f:
         f.write(yaml.dump({'proxies': proxies_meta_snip}, allow_unicode=True).replace('!!str ', ''))
 
     # ---------- 9. 写出规则片段 ----------
@@ -1388,11 +1403,19 @@ def main():
             if rpolicy in name_map:
                 snippets[name_map[rpolicy]].append(rule)
         for name, payload in snippets.items():
-            with open(os.path.join(SNIPPETS_DIR, name + ".yml"), 'w', encoding="utf-8") as f:
+            path = os.path.join(SNIPPETS_DIR, name + SNIPPET_EXT)
+            with open(path, 'w', encoding="utf-8") as f:
                 yaml.dump({'payload': payload}, f, allow_unicode=True)
 
-        # 生成 rules.yml / rules_online.yml
-        example_path = os.path.join(SNIPPETS_DIR, "example.yml")
+        # 生成 rules.yaml / rules_online.yaml
+        # 优先读 example.yaml，找不到再回退 example.yml（向后兼容）
+        example_path = os.path.join(SNIPPETS_DIR, "example" + SNIPPET_EXT)
+        if not os.path.exists(example_path):
+            fallback_path = os.path.join(SNIPPETS_DIR, "example.yml")
+            if os.path.exists(fallback_path):
+                print(f"⚠️ 建议将 {fallback_path} 重命名为 {example_path}")
+                example_path = fallback_path
+
         if os.path.exists(example_path):
             with open(example_path, encoding="utf-8") as f:
                 template: Dict[str, Any] = yaml.full_load(f)
@@ -1405,12 +1428,14 @@ def main():
                 if 'use' in group:
                     del group['use']
                     group['include-all'] = True
-            with open(os.path.join(SNIPPETS_DIR, "rules_online.yml"), 'w', encoding="utf-8") as f:
+            rules_online_path = os.path.join(SNIPPETS_DIR, "rules_online" + SNIPPET_EXT)
+            with open(rules_online_path, 'w', encoding="utf-8") as f:
                 yaml.dump(template, f, allow_unicode=True)
 
             del template['rule-providers']
             template['rules'] = conf['rules']
-            with open(os.path.join(SNIPPETS_DIR, "rules.yml"), 'w', encoding="utf-8") as f:
+            rules_path = os.path.join(SNIPPETS_DIR, "rules" + SNIPPET_EXT)
+            with open(rules_path, 'w', encoding="utf-8") as f:
                 yaml.dump(template, f, allow_unicode=True)
 
     print(f"✅ 写出完成：{output_file}")
