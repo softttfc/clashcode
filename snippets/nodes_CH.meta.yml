@@ -1,1 +1,44 @@
-proxies: []
+proxies:
+- name: 瑞士 001
+  network: tcp
+  port: 10443
+  server: 138.124.90.177
+  servername: 138.124.90.177
+  tls: false
+  type: vless
+  udp: true
+  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 瑞士 002
+  network: tcp
+  port: 38998
+  server: 178.83.45.29
+  skip-cert-verify: true
+  type: vmess
+  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 瑞士 003
+  network: tcp
+  port: 8443
+  server: 138.124.244.77
+  servername: fi1.hys.braidx.tech
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8787dd0a-095a-414e-804f-a7d16a1ae166
+- name: 瑞士 004
+  network: tcp
+  port: 2086
+  server: 138.124.123.127
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
