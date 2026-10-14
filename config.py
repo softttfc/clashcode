@@ -39,7 +39,23 @@
 # 六、依赖
 # -----------------------------------------------------------------------------
 #   pip install pyyaml requests requests-file
-#
+#七、目录
+#   project/
+# ├── config.py              # 本脚本
+# ├── config.yml             # Meta 配置模板（必须）
+# ├── list.yaml              # 输入文件（Clash 格式）
+# ├── list.meta.yml          # 输出文件（Meta 格式）
+# ├── abpwhite.txt           # 可选：Adblock 白名单
+# ├── local_proxy.conf       # 可选：本地代理
+# ├── local_NO_ADBLOCK       # 可选：跳过 Adblock
+# └── snippets/              # 输出片段目录
+#     ├── nodes_美国.meta.yml
+#     ├── nodes_日本.meta.yml
+#     ├── nodes.meta.yml
+#     ├── rules_广告拦截.yml
+#     ├── rules.yml
+#     ├── rules_online.yml
+#     └── example.yml       #可选：规则片段模板
 # =============================================================================
 
 import sys
