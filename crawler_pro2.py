@@ -183,7 +183,7 @@ KEYWORDS = [
     'subscribe',        # 显式列出，可读性
     'feed',             # RSS / feed
     # ---- 节点关键词 ----
-    'node',             # node / nodes
+   # 'node',             # node / nodes
     #'server',           # server / servers
     # ---- 订阅格式后缀 ----
     '.yaml', '.yml',    # Clash 配置
@@ -194,7 +194,7 @@ KEYWORDS = [
     # ---- 配置类型 / 客户端 ----
     'clash', 'mihomo',
    # 'singbox', 'sing-box',
-    'v2ray', 'xray',
+   # 'v2ray', 'xray',
     'surfboard',
     # ---- 协议名 ----
     'vmess', 'vless', 'trojan', 'shadowsocks', 'hysteria', 'tuic',
