@@ -140,6 +140,14 @@
 #        - crawl 主循环改为 while self.queue（不检查 request_count）
 #        - 结果：已入队 URL 全部处理完，不再丢节点
 #        - 实际请求数可能达 400-500，队列只出不进必然清空
+#    Q3：enqueue 返回 bool，让调用方知道是否真正入队
+#        - 解决日志误导：之前 _run_attribute_extractors 在 enqueue 被拒后
+#          仍无条件打印 "[ATTR] queued"，看起来像"超 400 还在入队"
+#        - 修复：enqueue 返回 True/False；只有成功才计数和 print
+#        - 影响点：
+#            * Crawler.enqueue 返回值改为 bool
+#            * _run_attribute_extractors 调用点改为 if self.enqueue(...): 才计数
+#            * parse_page 调用点忽略返回值（可选：调试时打印拒绝信息）
 # =============================================================================
 
 import os
@@ -2270,16 +2278,23 @@ class Crawler:
         return wildcard_map, direct_urls, plain_pages
 
     def enqueue(self, url, depth, patterns):
+        """
+        【修复 Q3】入队：URL 规范化 + 准入检查 + 返回 bool 表示是否成功入队
+        返回:
+            True  -> 成功加入队列
+            False -> 未加入（已访问 或 超出 MAX_REQUESTS 配额）
+        """
         # ---- 【修改 E】新增：URL 规范化 ----
         url = normalize_url(url)
         if url in self.visited_urls:
-            return
+            return False
         # ---- 【修复 Q2】enqueue 仍保留准入闸门 ----
         # 达到 MAX_REQUESTS 后不再接受新 URL（防止队列无限增长）
         # 但已入队 URL 会继续处理完（软上限）
         if self.request_count >= MAX_REQUESTS:
-            return
+            return False
         self.queue.append((url, depth, patterns))
+        return True
 
     # ---- 【新增 D】三级降级统一入口 ----
     def _process_url(self, url, depth, patterns):
@@ -2300,7 +2315,9 @@ class Crawler:
             return
         self.visited_urls.add(url)
         self.request_count += 1
-        print(f"[{self.request_count}/{MAX_REQUESTS}] Processing: {url} (depth={depth})")
+        # ---- 【新增】软上限后显示队列剩余（正常阶段不干扰） ----
+        _over = f" [queue: {len(self.queue)}]" if self.request_count > MAX_REQUESTS else ""
+        print(f"[{self.request_count}/{MAX_REQUESTS}] Processing: {url} (depth={depth}){_over}")
 
         # ---- 抓取内容 ----
         try:
@@ -2373,6 +2390,10 @@ class Crawler:
           - 2) 有订阅后缀（.txt/.b64/...）→ 立即 _process_url，不入队
           - 3) 无后缀网页 URL → 走关键词过滤后 enqueue
 
+        【修复 Q3】enqueue 返回 bool 修正日志：
+          - 之前 enqueue 被拒绝（超 400 或已访问）后仍无条件 queued += 1 + print
+          - 现在只有 enqueue 返回 True 时才计数和打印
+
         设计细节：
           - 每个提取器独立 try/except：单个失败不影响其他
           - 汇总日志：仅在找到 URL 时输出，避免刷屏
@@ -2443,11 +2464,13 @@ class Crawler:
                 continue
 
             # ---- 3) 无后缀网页 URL：走关键词过滤后入队 ----
+            # 【修复 Q3】只有 enqueue 返回 True 时才计数和打印
+            # （enqueue 在超 MAX_REQUESTS 或已访问时返回 False，静默拒绝）
             if is_node_link(url):
                 if depth < MAX_DEPTH:
-                    self.enqueue(url, depth + 1, patterns)
-                    queued += 1
-                    print(f"  [ATTR] queued: {url[:100]}")
+                    if self.enqueue(url, depth + 1, patterns):
+                        queued += 1
+                        print(f"  [ATTR] queued: {url[:100]}")
 
         if parsed:
             print(f"  [ATTR] {parsed} nodes parsed directly")
@@ -2538,6 +2561,7 @@ class Crawler:
                 if is_blacklisted(full_url):
                     continue
                 # ---- 【修改 F】命中后仅入队，由主循环统一走 _process_url ----
+                # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
                 if depth < MAX_DEPTH:
                     self.enqueue(full_url, depth + 1, patterns)
 
@@ -2562,6 +2586,7 @@ class Crawler:
                 if is_blacklisted(url):
                     continue
                 # ---- 【修改 F】命中后仅入队 ----
+                # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
                 if depth < MAX_DEPTH:
                     self.enqueue(url, depth + 1, patterns)
 
