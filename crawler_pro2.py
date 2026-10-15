@@ -184,7 +184,7 @@ KEYWORDS = [
     'feed',             # RSS / feed
     # ---- 节点关键词 ----
     'node',             # node / nodes
-    'server',           # server / servers
+    #'server',           # server / servers
     # ---- 订阅格式后缀 ----
     '.yaml', '.yml',    # Clash 配置
     '.txt',             # 通用订阅
@@ -193,7 +193,7 @@ KEYWORDS = [
     '.conf',            # Clash / Surge
     # ---- 配置类型 / 客户端 ----
     'clash', 'mihomo',
-    'singbox', 'sing-box',
+   # 'singbox', 'sing-box',
     'v2ray', 'xray',
     'surfboard',
     # ---- 协议名 ----
