@@ -366,8 +366,11 @@ def normalize_url(url):
         port = None
     netloc = host if port is None else f"{host}:{port}"
     path = p.path or ''
-    if len(path) > 1 and path.endswith('/'):
-        path = path.rstrip('/')
+    # ---- 修复：不再去掉末尾斜杠 ----
+    # 原因：/path 和 /path/ 在服务器端可能是不同资源（404 vs 200）
+    # 例如 v2nodes.com 强制要求带 '/'，去掉后返回 404
+    # if len(path) > 1 and path.endswith('/'):
+    #     path = path.rstrip('/')
     query = ''
     if p.query:
         parts = sorted(x for x in p.query.split('&') if x)
