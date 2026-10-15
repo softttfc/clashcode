@@ -108,6 +108,28 @@
 # 【修改 K】Crawler._process_url() 的 [3] 分支加 4 行挂钩
 #    调用新增的 _run_attribute_extractors
 # =============================================================================
+# 七、本次修复（关键修复）
+# -----------------------------------------------------------------------------
+# 【修复 L】补全 parse_trojan() 函数
+#    - 之前 parse_node_link 调用了 parse_trojan 但函数未定义
+#    - 导致所有 trojan:// 节点解析报 "name 'parse_trojan' is not defined"
+#    - 修复：在 parse_ssr 之后补上函数定义
+#
+# 【修复 M】属性提取器协议链接分流
+#    - 之前 _run_attribute_extractors 把所有 URL（含 vless:// 等协议链接）
+#      都 enqueue，导致：
+#        1. 浪费请求配额（fetch_binary("vless://...") 必然失败）
+#        2. 与"协议链接直接解析"原则冲突
+#    - 修复：命中 NODE_PREFIXES 的 URL 直接 parse_node_link 加入 all_nodes，
+#      不再 enqueue；只有网页 URL 才 enqueue
+#
+# 【已取消】语言子域跳过（原【修复 N】）
+#    - 原设想：v2nodes.com 有 it/id/jv/ko/fr/de/... 等子域，视为"语言副本"跳过
+#    - 实际情况：这些子域是**不同国家的独立入口**，各自挂载不同国家的节点，
+#               内容互不相同，跳过会漏掉该国节点池
+#    - 结论：完全取消该逻辑，保留所有子域的抓取
+#    - 去重由 normalize_node_key() 在节点级别处理，不在 URL 级别拦截
+# =============================================================================
 
 import os
 import sys
@@ -787,6 +809,75 @@ def parse_ssr(ssr_url):
                     node['protocol-param'] = v_dec
                 elif k == 'group':
                     node['group'] = v_dec
+        if not node['add'] or not node['password']:
+            return None
+        return node
+    except Exception:
+        return None
+
+
+# ======================== 【修复 L】补全 parse_trojan 函数 ========================
+# 之前 parse_node_link 调用了 parse_trojan 但函数未定义，导致：
+#   "name 'parse_trojan' is not defined"
+# 修复：在 parse_ssr 之后补上完整定义
+# ==============================================================================
+
+def parse_trojan(trojan_url):
+    """
+    【修复 L】解析 Trojan 链接。
+    格式: trojan://password@host:port[?sni=xxx&allowInsecure=1&type=ws&path=...&host=...]
+    常见参数：
+      - sni          : TLS SNI
+      - peer         : 老式 SNI 参数
+      - allowInsecure: 是否跳过证书验证
+      - insecure     : 同上（部分客户端使用）
+      - type         : 传输层（tcp/ws/grpc）
+      - path         : WebSocket 路径（type=ws 时）
+      - host         : WebSocket Host 头
+      - alpn         : ALPN 列表
+      - fp           : 客户端指纹
+    """
+    if not trojan_url.startswith('trojan://'):
+        return None
+    try:
+        parsed = urlparse(trojan_url)
+        node = {
+            'type': 'trojan',
+            'add': parsed.hostname or '',
+            'port': parsed.port or 443,
+            'password': parsed.username or '',
+            'ps': parsed.fragment or f"Trojan-{parsed.hostname}",
+            'raw': trojan_url,
+        }
+        query = parse_qs(parsed.query)
+        # SNI（sni 优先，兼容 peer）
+        if query.get('sni', [''])[0]:
+            node['sni'] = query.get('sni', [''])[0]
+        elif query.get('peer', [''])[0]:
+            node['sni'] = query.get('peer', [''])[0]
+        # 跳过证书验证
+        if query.get('allowInsecure', ['0'])[0] == '1':
+            node['skip-cert-verify'] = True
+            node['allowInsecure'] = True
+        if query.get('insecure', ['0'])[0] == '1':
+            node['skip-cert-verify'] = True
+            node['allowInsecure'] = True
+        # ALPN
+        if query.get('alpn', [''])[0]:
+            node['alpn'] = unquote(query.get('alpn', [''])[0])
+        # 传输层（ws/grpc/tcp）
+        if query.get('type', [''])[0]:
+            node['network'] = query.get('type', [''])[0]
+        # WS 路径
+        if query.get('path', [''])[0]:
+            node['path'] = unquote(query.get('path', [''])[0])
+        # WS Host 头
+        if query.get('host', [''])[0]:
+            node['host'] = query.get('host', [''])[0]
+        # 客户端指纹
+        if query.get('fp', [''])[0]:
+            node['client-fingerprint'] = query.get('fp', [''])[0]
+
         if not node['add'] or not node['password']:
             return None
         return node
@@ -1878,6 +1969,13 @@ def to_clash_proxy(node):
         alpn = _alpn_to_list(node.get('alpn'))
         if alpn:
             proxy['alpn'] = alpn
+        # ---- ws / grpc 传输 ----
+        if node.get('network') == 'ws':
+            proxy['network'] = 'ws'
+            proxy['ws-opts'] = {
+                'path': node.get('path') or '/',
+                'headers': {'Host': node.get('host') or node.get('add')}
+            }
         return proxy
 
     # ---- hysteria2 ----
@@ -2230,7 +2328,13 @@ class Crawler:
           - 3 个提取器（属性/文本容器/脚本）无条件全跑
           - 结果按字符串去重后合并
           - 走与原代码一致的过滤链：
-              visited_urls → is_blacklisted → is_node_link → enqueue
+              visited_urls → 黑名单 → 协议链接直接解析 → 网页链接 enqueue
+
+        【修复 M】协议链接分流：
+          - 命中 NODE_PREFIXES 的 URL（如 vless://... / trojan://...）
+            → 直接 parse_node_link 加入 all_nodes
+            → 不再 enqueue（因为 fetch_binary("vless://...") 必然失败）
+          - 只有网页 URL（https://...）才 enqueue
 
         设计细节：
           - 每个提取器独立 try/except：单个失败不影响其他
@@ -2267,19 +2371,35 @@ class Crawler:
         summary = ", ".join(f"{k}={v}" for k, v in stats.items())
         print(f"  [ATTR] found {len(all_urls)} unique URLs ({summary})")
 
-        # ---- 统一过滤链（与 parse_page 源 1/2 一致） ----
+        # ---- 统一过滤链（与 parse_page 源 1/2/3 对齐） ----
+        # 【修复 M】协议链接直接解析 / 网页链接 enqueue
+        parsed = 0
         queued = 0
         for url in all_urls:
             if url in self.visited_urls:
                 continue
             if is_blacklisted(url):
                 continue
+
+            # ---- 协议链接：直接解析，不入队 ----
+            if url.startswith(NODE_PREFIXES):
+                node = parse_node_link(url)
+                if node:
+                    node['raw'] = url
+                    self.all_nodes.append(node)
+                    parsed += 1
+                    print(f"  [ATTR] parsed node: {url[:60]}...")
+                continue   # 处理完直接下一个，绝不入队
+
+            # ---- 网页 URL：走关键词过滤后入队 ----
             if is_node_link(url):
                 if depth < MAX_DEPTH:
                     self.enqueue(url, depth + 1, patterns)
                     queued += 1
                     print(f"  [ATTR] queued: {url[:100]}")
 
+        if parsed:
+            print(f"  [ATTR] {parsed} nodes parsed directly")
         if queued:
             print(f"  [ATTR] {queued} URLs queued")
 
