@@ -88,6 +88,26 @@
 #
 # 说明：download_subscription 保留为 legacy，主流程不再调用但保留供外部使用
 # =============================================================================
+# 六、本次新增（并行并集属性提取器）
+# -----------------------------------------------------------------------------
+# 【新增 H】属性提取器配置（EXTRACTOR_MODE / _URL_ATTRS / _ATTR_SKIP_TAGS 等）
+#    用于抓取藏在 HTML 属性 / 文本容器 / 脚本里的 URL，例如：
+#      - v2nodes.com 订阅链接：<input value="https://...">
+#      - v2nodes.com 节点文本：<textarea readonly>vless://...</textarea>
+#      - 结构化数据：<script type="application/ld+json">{...}</script>
+#
+# 【新增 I】3 个独立提取器函数：
+#    - _extract_from_attrs()          属性型（input value / button data-config / meta content）
+#    - _extract_from_text_containers() 文本容器型（textarea / code / pre / kbd / samp）
+#    - _extract_from_scripts()          脚本型（JSON-LD / SSR state）
+#    三者无条件全跑（union 模式），结果并集去重
+#
+# 【新增 J】Crawler._run_attribute_extractors() 调度器
+#    与 parse_page 并列，独立错误隔离，走相同过滤链
+#
+# 【修改 K】Crawler._process_url() 的 [3] 分支加 4 行挂钩
+#    调用新增的 _run_attribute_extractors
+# =============================================================================
 
 import os
 import sys
@@ -224,6 +244,54 @@ BLACKLIST_SEGMENTS = {
     # ---- 其它噪声 ----
     'ads', 'ad', 'banner', 'popup', 'modal',
 }
+
+# ======================== 【新增 H】属性提取器配置 ========================
+# 目的：抓取藏在 HTML 属性 / 文本容器 / 脚本里的 URL
+# 典型场景：
+#   - v2nodes.com 订阅链接：<input value="https://...">
+#   - v2nodes.com 节点文本：<textarea readonly>vless://...</textarea>
+#   - 结构化数据：<script type="application/ld+json">{...}</script>
+#
+# 设计原则：
+#   1. 与 parse_page 的源 1-4 并列，互不影响
+#   2. 提取到的 URL 走相同过滤链（visited / 黑名单 / is_node_link）
+#   3. 所有提取器无条件全跑（union 模式），零漏检
+# ================================================================
+
+# 提取模式（当前只实现 union）
+#   'union'  = 所有提取器全跑，结果合并（默认，零漏检）
+EXTRACTOR_MODE = 'union'
+
+# ---- 属性白名单：这些属性的值会被尝试提取 URL ----
+_URL_ATTRS = (
+    # v2nodes 订阅链接
+    'data-config',
+    # 通用数据属性
+    'data-url', 'data-href', 'data-link',
+    'data-subscription', 'data-sub', 'data-node',
+    # 复制/剪切板按钮
+    'data-clipboard-text', 'data-clipboard',
+    'data-copy', 'data-copy-text',
+    # 资源/嵌入
+    'data-src', 'data-original', 'data-download-url', 'src',
+    # 标准属性
+    'value', 'content',
+)
+
+# 属性提取时跳过的标签：
+#   a/link       → 避免与 parse_page 源 1 重复
+#   script/style → 内容在别处处理，属性多为 src/href 噪声
+_ATTR_SKIP_TAGS = {'a', 'link', 'script', 'style'}
+
+# ---- 文本容器型标签（URL 是标签之间的可见文本） ----
+_TEXT_CONTAINER_TAGS = ('textarea', 'code', 'pre', 'kbd', 'samp')
+
+# ---- 统一 URL 匹配正则（http(s) + 全部协议链接） ----
+_CONTAINER_URL_RE = re.compile(
+    r'(?:vmess|vless|ssr|ss|trojan|hysteria2?|hy2|tuic|'
+    r'socks5h|socks5|socks|https?)://[^\s<>"\'{}|\\^`\[\]]+',
+    re.IGNORECASE,
+)
 
 # ======================== 辅助函数（解析与导出） ========================
 
@@ -409,6 +477,93 @@ def is_blacklisted(url):
         if name in BLACKLIST_SEGMENTS:
             return True
     return False
+
+# ======================== 【新增 I】3 个独立提取器函数 ========================
+# 用途：从 HTML 属性 / 文本容器 / 脚本里提取 URL
+# 设计：每个提取器独立、纯函数、无副作用
+# 调度：由 Crawler._run_attribute_extractors 统一调用
+# ==========================================================================
+
+def _extract_from_attrs(soup, base_url):
+    """
+    【提取器 1】属性型：从标签的 URL 属性中提取链接。
+    覆盖：input[value]、button[data-config]、meta[content]、iframe[src] 等。
+    跳过：a / link / script / style（避免与源 1 冲突 + 避免噪声）。
+    返回：URL 字符串列表（已 clean_url，已去重）。
+    """
+    found, seen = [], set()
+    for tag in soup.find_all(True):
+        if tag.name in _ATTR_SKIP_TAGS:
+            continue
+        for attr in _URL_ATTRS:
+            v = tag.get(attr)
+            if not v or not isinstance(v, str):
+                continue
+            # 属性值里可能有多个 URL，用正则全部提取
+            for m in _CONTAINER_URL_RE.finditer(v):
+                u = clean_url(m.group(0))
+                if u and u not in seen:
+                    seen.add(u)
+                    found.append(u)
+    return found
+
+
+def _extract_from_text_containers(soup, base_url):
+    """
+    【提取器 2】文本容器型：从 textarea/code/pre 等标签的可见文本里提取链接。
+    返回：URL 字符串列表。
+    """
+    found, seen = [], set()
+    for tag_name in _TEXT_CONTAINER_TAGS:
+        for tag in soup.find_all(tag_name):
+            text = tag.get_text() or ''
+            for m in _CONTAINER_URL_RE.finditer(text):
+                u = clean_url(m.group(0))
+                if u and u not in seen:
+                    seen.add(u)
+                    found.append(u)
+    return found
+
+
+def _extract_from_scripts(soup, base_url):
+    """
+    【提取器 3】脚本型：从 JSON-LD / application/json / SSR state 里提取链接。
+    只处理白名单 type 或常见 SSR id，避免把普通 JS 全抓出来产生噪声。
+    返回：URL 字符串列表。
+    """
+    found, seen = [], set()
+    for script in soup.find_all('script'):
+        stype = (script.get('type') or '').lower()
+        sid = (script.get('id') or '').lower()
+        content = script.string or ''
+
+        # 白名单：JSON-LD / 内嵌 JSON / SSR state
+        is_json = stype in ('application/ld+json', 'application/json')
+        is_ssr = ('__initial_state' in sid or '__next_data' in sid
+                  or '__nuxt' in sid or '__apollo' in sid)
+        # SSR 变量赋值形式：window.__XXX__ = {...}
+        is_window_var = bool(re.match(
+            r'\s*(?:window|self|globalThis)\.[A-Za-z_$][\w$]*\s*=',
+            content[:200]
+        ))
+
+        if not (is_json or is_ssr or is_window_var):
+            continue
+
+        for m in _CONTAINER_URL_RE.finditer(content):
+            u = clean_url(m.group(0))
+            if u and u not in seen:
+                seen.add(u)
+                found.append(u)
+    return found
+
+
+# 提取器注册表（union 模式下顺序不影响结果）
+URL_EXTRACTORS = [
+    ('attrs',            _extract_from_attrs),
+    ('text-containers',  _extract_from_text_containers),
+    ('scripts',          _extract_from_scripts),
+]
 
 # ======================== HTTP 抓取 ========================
 
@@ -2058,8 +2213,75 @@ class Crawler:
                 self.parse_page(text, url, depth, patterns)
             except Exception as e:
                 print(f"  -> page scan error: {e}")
+
+            # ---- 【修改 K】新增：属性提取器（并行并集） ----
+            try:
+                self._run_attribute_extractors(text, url, depth, patterns)
+            except Exception as e:
+                print(f"  -> attr scan error: {e}")
+            # ----------------------------------------
         else:
             print(f"  -> depth limit reached ({MAX_DEPTH}), stop expanding")
+
+    # ======================== 【新增 J】属性提取器调度器 ========================
+    def _run_attribute_extractors(self, html, base_url, depth, patterns):
+        """
+        【新增 J】并行并集模式：
+          - 3 个提取器（属性/文本容器/脚本）无条件全跑
+          - 结果按字符串去重后合并
+          - 走与原代码一致的过滤链：
+              visited_urls → is_blacklisted → is_node_link → enqueue
+
+        设计细节：
+          - 每个提取器独立 try/except：单个失败不影响其他
+          - 汇总日志：仅在找到 URL 时输出，避免刷屏
+          - 不修改 visited_urls，交给 enqueue 统一处理
+        """
+        try:
+            soup = BeautifulSoup(html, 'html.parser')
+        except Exception as e:
+            print(f"  [ATTR] soup parse error: {e}")
+            return
+
+        all_urls, seen = [], set()
+        stats = {}
+
+        # ---- 逐提取器执行（union：全部跑） ----
+        for name, fn in URL_EXTRACTORS:
+            try:
+                urls = fn(soup, base_url)
+            except Exception as e:
+                print(f"  [ATTR-{name}] error: {e}")
+                stats[name] = 0
+                continue
+            stats[name] = len(urls)
+            for u in urls:
+                if u not in seen:
+                    seen.add(u)
+                    all_urls.append(u)
+
+        if not all_urls:
+            return
+
+        # ---- 汇总日志 ----
+        summary = ", ".join(f"{k}={v}" for k, v in stats.items())
+        print(f"  [ATTR] found {len(all_urls)} unique URLs ({summary})")
+
+        # ---- 统一过滤链（与 parse_page 源 1/2 一致） ----
+        queued = 0
+        for url in all_urls:
+            if url in self.visited_urls:
+                continue
+            if is_blacklisted(url):
+                continue
+            if is_node_link(url):
+                if depth < MAX_DEPTH:
+                    self.enqueue(url, depth + 1, patterns)
+                    queued += 1
+                    print(f"  [ATTR] queued: {url[:100]}")
+
+        if queued:
+            print(f"  [ATTR] {queued} URLs queued")
 
     # ---- 【Legacy】原有订阅下载方法（保留，不被主流程调用） ----
     def download_subscription(self, url):
