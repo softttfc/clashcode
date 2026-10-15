@@ -87,7 +87,7 @@ import hashlib
 # 爬虫控制
 MAX_DEPTH = 5               # 爬取深度（从起始页算起）。增大可发现更多链接，但增加请求数。建议 2~5
 MAX_REQUESTS = 400         # 总请求数上限（含页面和订阅）。控制资源消耗，避免超时。建议 100~500
-KEYWORDS = ['node', 'subscri', 'feed', '.yaml', '.yml', '.txt']  # 用于识别订阅链接的关键词（URL 包含即视为订阅）
+KEYWORDS = ['node', 'subscri','subscription', 'feed', '.yaml', '.yml', '.txt']  # 用于识别订阅链接的关键词（URL 包含即视为订阅）
 
 # 网络请求
 REQUEST_TIMEOUT = 15        # HTTP 请求超时（秒）。增大可应对慢速服务器，减小可加快失败检测。建议 15~60
