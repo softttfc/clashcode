@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # =============================================================================
-# crawler_pro.py 说明
+# crawler_pro2.py 说明
 # =============================================================================
 #
 # 一、功能
@@ -129,6 +129,17 @@
 #               内容互不相同，跳过会漏掉该国节点池
 #    - 结论：完全取消该逻辑，保留所有子域的抓取
 #    - 去重由 normalize_node_key() 在节点级别处理，不在 URL 级别拦截
+#
+# 【修复 Q】订阅后缀直接处理 + 软上限
+#    Q1：_run_attribute_extractors 增加"有订阅后缀立即处理"分支
+#        后缀命中（.txt/.yaml/.yml/.b64/.base64/.conf）→ 直接 _process_url
+#        不再占用队列槽位，不被 MAX_REQUESTS 截断
+#    Q2：MAX_REQUESTS 改为"软上限"
+#        - enqueue 仍然拒绝超过 400 后的新 URL（防止无限增长）
+#        - 但 _process_url 不再检查上限
+#        - crawl 主循环改为 while self.queue（不检查 request_count）
+#        - 结果：已入队 URL 全部处理完，不再丢节点
+#        - 实际请求数可能达 400-500，队列只出不进必然清空
 # =============================================================================
 
 import os
@@ -499,6 +510,24 @@ def is_blacklisted(url):
         if name in BLACKLIST_SEGMENTS:
             return True
     return False
+
+
+def has_subscription_suffix(url):
+    """
+    【新增 Q1】判断 URL 是否有明确的订阅文件后缀。
+    只判断路径部分（忽略 query / fragment）。
+    命中：.txt / .yaml / .yml / .b64 / .base64 / .conf
+    用途：属性提取器分流 —— 有后缀的立即处理，不入队。
+    示例：
+      https://a.com/sub.txt           → True
+      https://a.com/sub.b64?key=xxx   → True（忽略 query）
+      https://a.com/subs/?key=xxx     → False（无后缀）
+    """
+    if not url:
+        return False
+    lower = url.lower()
+    path = lower.split('?', 1)[0].split('#', 1)[0]
+    return path.endswith(('.txt', '.yaml', '.yml', '.b64', '.base64', '.conf'))
 
 # ======================== 【新增 I】3 个独立提取器函数 ========================
 # 用途：从 HTML 属性 / 文本容器 / 脚本里提取 URL
@@ -2245,6 +2274,9 @@ class Crawler:
         url = normalize_url(url)
         if url in self.visited_urls:
             return
+        # ---- 【修复 Q2】enqueue 仍保留准入闸门 ----
+        # 达到 MAX_REQUESTS 后不再接受新 URL（防止队列无限增长）
+        # 但已入队 URL 会继续处理完（软上限）
         if self.request_count >= MAX_REQUESTS:
             return
         self.queue.append((url, depth, patterns))
@@ -2257,13 +2289,14 @@ class Crawler:
           [2] 当字段列表解析（parse_field_list_text）→ 成功则继续 [3]
           [3] 当网页解析（parse_page）→ 递归找关键词/通配符链接
 
-        深度由全局变量 MAX_DEPTH 控制；请求数由 MAX_REQUESTS 控制。
+        深度由全局变量 MAX_DEPTH 控制；请求数由 MAX_REQUESTS 控制（软上限）。
         """
-        # ---- URL 规范化 + visited 检查 + 请求上限检查 ----
+        # ---- URL 规范化 + visited 检查 ----
+        # 【修复 Q2】软上限：不再检查 request_count
+        # 达到 MAX_REQUESTS 后 enqueue 已拒绝新 URL，队列只出不进必然清空
+        # 已入队的 URL 必须处理完，不再丢节点
         url = normalize_url(url)
         if url in self.visited_urls:
-            return
-        if self.request_count >= MAX_REQUESTS:
             return
         self.visited_urls.add(url)
         self.request_count += 1
@@ -2334,12 +2367,16 @@ class Crawler:
           - 命中 NODE_PREFIXES 的 URL（如 vless://... / trojan://...）
             → 直接 parse_node_link 加入 all_nodes
             → 不再 enqueue（因为 fetch_binary("vless://...") 必然失败）
-          - 只有网页 URL（https://...）才 enqueue
+
+        【修复 Q1】订阅后缀分流（三分类）：
+          - 1) 协议链接 → 直接解析，不入队
+          - 2) 有订阅后缀（.txt/.b64/...）→ 立即 _process_url，不入队
+          - 3) 无后缀网页 URL → 走关键词过滤后 enqueue
 
         设计细节：
           - 每个提取器独立 try/except：单个失败不影响其他
           - 汇总日志：仅在找到 URL 时输出，避免刷屏
-          - 不修改 visited_urls，交给 enqueue 统一处理
+          - 不修改 visited_urls，交给 enqueue / _process_url 统一处理
         """
         try:
             soup = BeautifulSoup(html, 'html.parser')
@@ -2372,16 +2409,18 @@ class Crawler:
         print(f"  [ATTR] found {len(all_urls)} unique URLs ({summary})")
 
         # ---- 统一过滤链（与 parse_page 源 1/2/3 对齐） ----
-        # 【修复 M】协议链接直接解析 / 网页链接 enqueue
-        parsed = 0
-        queued = 0
+        # 【修复 M】协议链接直接解析
+        # 【修复 Q1】三分类：协议链接 / 有后缀订阅 / 无后缀网页
+        parsed = 0        # 协议链接直接解析
+        subscribed = 0    # 有后缀订阅立即处理
+        queued = 0        # 无后缀网页 URL 入队
         for url in all_urls:
             if url in self.visited_urls:
                 continue
             if is_blacklisted(url):
                 continue
 
-            # ---- 协议链接：直接解析，不入队 ----
+            # ---- 1) 协议链接：直接解析，不入队 ----
             if url.startswith(NODE_PREFIXES):
                 node = parse_node_link(url)
                 if node:
@@ -2389,9 +2428,21 @@ class Crawler:
                     self.all_nodes.append(node)
                     parsed += 1
                     print(f"  [ATTR] parsed node: {url[:60]}...")
-                continue   # 处理完直接下一个，绝不入队
+                continue
 
-            # ---- 网页 URL：走关键词过滤后入队 ----
+            # ---- 2) 有订阅后缀：立即处理，不入队 ----
+            # 【修复 Q1】后缀命中（.txt/.yaml/.yml/.b64/.base64/.conf）
+            # 直接 _process_url，避免排队占用槽位、避免被 MAX_REQUESTS 截断
+            if has_subscription_suffix(url):
+                print(f"  [ATTR] subscription (suffix), processing directly: {url[:80]}")
+                try:
+                    self._process_url(url, depth + 1, patterns)
+                    subscribed += 1
+                except Exception as e:
+                    print(f"  [ATTR] direct subscription error: {e}")
+                continue
+
+            # ---- 3) 无后缀网页 URL：走关键词过滤后入队 ----
             if is_node_link(url):
                 if depth < MAX_DEPTH:
                     self.enqueue(url, depth + 1, patterns)
@@ -2400,6 +2451,8 @@ class Crawler:
 
         if parsed:
             print(f"  [ATTR] {parsed} nodes parsed directly")
+        if subscribed:
+            print(f"  [ATTR] {subscribed} subscriptions processed directly")
         if queued:
             print(f"  [ATTR] {queued} URLs queued")
 
@@ -2549,7 +2602,10 @@ class Crawler:
         print(f"📋 Initial queue size: {len(self.queue)}")
 
         # ---- 【修改 G】主循环统一走 _process_url ----
-        while self.queue and self.request_count < MAX_REQUESTS:
+        # 【修复 Q2】软上限：只处理队列，不检查 request_count
+        # MAX_REQUESTS 只控制 enqueue 准入；达到上限后队列只出不进，必然清空
+        # 已入队的 URL 全部处理完，不再丢节点
+        while self.queue:
             url, depth, patterns = self.queue.popleft()
             if url in self.visited_urls:
                 continue
