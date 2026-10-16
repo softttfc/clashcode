@@ -193,7 +193,7 @@ KEYWORDS = [
     '.conf',            # Clash / Surge
     # ---- 配置类型 / 客户端 ----
   #  'clash', 'mihomo',
-    '订阅链接',
+    '订阅链接','clashnode',
    # 'singbox', 'sing-box',
    # 'v2ray', 'xray',
    # 'surfboard',
