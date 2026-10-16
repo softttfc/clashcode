@@ -1,4 +1,20 @@
 proxies:
+- cipher: aes-128-gcm
+  name: '🇨🇭CH_36|1.8MB/s|A004-260618 #1'
+  password: 2bf536a4bd6008511734a505d248de2c
+  port: 13261
+  server: 86.106.84.194
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: CH 🇨🇭 | @Raydikalx | F1B5C9
+  network: tcp
+  password: 80L0GT8FBWLLP39qdXJCtYRRqD1yG_ut
+  port: 7443
+  server: 82.163.7.43
+  sni: node18.overcdn.ru
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
   name: 'CH 🇨🇭 | @Raydikalx | D33792 #2'
   network: ws
@@ -12,24 +28,31 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: AutoAiVPN745603
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  port: 8388
-  server: 132.243.175.144
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 'EPODONIOS #7039'
+- client-fingerprint: chrome
+  name: CH 🇨🇭 | @Raydikalx | 6E4325
   network: tcp
-  port: '8080'
-  server: 37.143.131.229
-  servername: ''
-  tls: false
-  type: vmess
+  password: Masir_Sefid
+  port: 443
+  server: 84.234.29.238
+  sni: store.steampowered.com
+  type: trojan
   udp: true
-  uuid: f8aac2be-4d3c-4fa3-9afb-89b6c7e14596
+- name: CH 🇨🇭 | @Raydikalx | 6F7849
+  network: tcp
+  password: SoftNetConnect
+  port: 443
+  server: 83.228.224.161
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: CH 🇨🇭 | @Raydikalx | BE5137
+  network: tcp
+  password: uRkZYGid1r
+  port: 41464
+  server: 179.237.75.190
+  sni: rd.autos.yahoo.com
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: CH 🇨🇭 | @Raydikalx | 95D641
@@ -45,3 +68,15 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
+- name: '[CH] Art.29 #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.18.250.252
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
