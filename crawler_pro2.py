@@ -192,7 +192,7 @@ KEYWORDS = [
     '.json',            # Clash.Meta / sing-box
     '.conf',            # Clash / Surge
     # ---- 配置类型 / 客户端 ----
-    'clash', 'mihomo',
+  #  'clash', 'mihomo',
    # 'singbox', 'sing-box',
    # 'v2ray', 'xray',
     'surfboard',
