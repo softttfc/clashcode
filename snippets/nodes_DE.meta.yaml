@@ -1,14 +1,40 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: DE VMESS-1390 | free-nodes - 1...
-  network: ws
-  port: 80
-  server: fr3.niekotin.de
-  tls: false
-  type: vmess
-  uuid: 59e29918-53b3-4fa2-becf-56a601f33998
-  ws-opts:
-    headers:
-      Host: fr3.niekotin.de
-    path: /vmess
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE VLESS-546 | free-nodes -...
+  network: tcp
+  port: 443
+  server: s251.wagahaha.xyz
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE VLESS-553 | free-nodes -...
+  network: tcp
+  port: 443
+  server: s249.freessr.bid
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇩🇪 DE VLESS-562 | free-nodes -...
+  network: tcp
+  port: 443
+  server: 179.61.138.177
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
