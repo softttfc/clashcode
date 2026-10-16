@@ -202,10 +202,10 @@ KEYWORDS = [
    # 'country', 'countries',
     'www.v2nodes.com/country',
     'subscriptions/country',
-    'region', 'location',
-    'collect', 'share', 'free',
+  #  'region', 'location',
+   # 'collect', 'share', 'free',
     # ---- 更新标记 ----
-    'latest', 'update', 'daily',
+  #  'latest', 'update', 'daily',
 ]
 
 
