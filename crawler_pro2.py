@@ -195,7 +195,7 @@ KEYWORDS = [
   #  'clash', 'mihomo',
    # 'singbox', 'sing-box',
    # 'v2ray', 'xray',
-    'surfboard',
+   # 'surfboard',
     # ---- 协议名 ----
     'vmess', 'vless', 'trojan', 'shadowsocks', 'hysteria', 'tuic',
     # ---- 目录 / 集合（用于递归发现下级）----
