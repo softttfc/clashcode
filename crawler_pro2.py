@@ -199,7 +199,9 @@ KEYWORDS = [
     # ---- 协议名 ----
     'vmess', 'vless', 'trojan', 'shadowsocks', 'hysteria', 'tuic',
     # ---- 目录 / 集合（用于递归发现下级）----
-    'country', 'countries',
+   # 'country', 'countries',
+    'www.v2nodes.com/country',
+    'subscriptions/country',
     'region', 'location',
     'collect', 'share', 'free',
     # ---- 更新标记 ----
