@@ -1,11 +1,13 @@
 proxies:
 - client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #2 #2'
+  name: '🇸🇬SG_105|249KB/s|M003-260806 0... #1'
   network: ws
+  packet-encoding: xudp
   port: 443
   server: 104.21.28.176
   servername: sg.lovehk.xyz
   skip-cert-verify: false
+  sub_tag: M003-260806
   tls: true
   type: vless
   udp: true
@@ -13,7 +15,10 @@ proxies:
   ws-opts:
     headers:
       Host: sg.lovehk.xyz
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.102 Safari/537.36
     path: /Singapore1
+  xudp: true
 - alterId: 0
   cipher: auto
   name: '🇸🇬 SG新加坡 #1'
@@ -27,7 +32,7 @@ proxies:
   uuid: cd80d0a4-a8ef-4492-b956-da82a6cecaf9
   ws-opts:
     path: /0zNW56sF
-- name: 🇸🇬
+- name: '🇸🇬SG新加坡丨yoyapai.com_1 #1'
   network: ws
   port: 8880
   server: 45.40.149.50
@@ -41,13 +46,15 @@ proxies:
       Host: vms.lifetime39.workers.dev
     path: /
 - client-fingerprint: firefox
+  encryption: none
   flow: xtls-rprx-vision
-  name: '🇸🇬 #3'
+  name: 🇸🇬SG新加坡丨yoyapai.com_1 - 228ms
   network: tcp
   port: 443
   reality-opts:
     public-key: eaRNeC8fccrx0nBNvBpAXZgK4m4FxfnQ-t0W7NOM7mU
     short-id: '!!str e53048e82bb20077'
+  security: reality
   server: 154.196.139.50
   servername: asia.cendora.ru
   skip-cert-verify: false
@@ -55,11 +62,8 @@ proxies:
   type: vless
   udp: true
   uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  ws-opts:
-    headers:
-      Host: asia.cendora.ru
 - client-fingerprint: chrome
-  name: '🇸🇬 #2'
+  name: '🇸🇬SG新加坡丨yoyapai.com_4 #1'
   network: ws
   port: 443
   server: 47.131.189.221
@@ -73,7 +77,7 @@ proxies:
     headers:
       Host: mia7.pages.dev
     path: /TG:@MiaChatChannel
-- name: '🇸🇬 #1'
+- name: '🇸🇬SG新加坡丨yoyapai.com_5 #1'
   network: ws
   port: 8880
   server: 172.64.94.251
@@ -87,7 +91,7 @@ proxies:
       Host: old-violet-a5ce.29-440.workers.dev
     path: /pyip=ProxyIP.SG.CMLiussss.net
 - client-fingerprint: chrome
-  name: '🇸🇬 #4'
+  name: '🇸🇬SG新加坡丨yoyapai.com_6 #1'
   network: ws
   port: 443
   server: 103.25.202.102
@@ -101,8 +105,18 @@ proxies:
     headers:
       Host: asia.csmaster.site
     path: /
+- alterId: 0
+  cipher: auto
+  name: SG新加坡(v2clash.blog 2026-10.16更...
+  port: 123
+  server: 43.108.103.167
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
 - client-fingerprint: chrome
-  name: 🇸🇬_新加坡_240
+  name: 🇸🇬_新加坡_109
   network: ws
   port: 51262
   server: 175.41.179.37
@@ -116,64 +130,9 @@ proxies:
     headers:
       Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 美国_11
-  network: ws
-  port: 443
-  server: 43.174.195.1
-  servername: kv.074167.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
-  ws-opts:
-    headers:
-      Host: kv.074167.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷_韩国_86
-  port: 123
-  server: 43.108.103.167
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
-- client-fingerprint: chrome
-  name: 'SG新加坡(v2clash.blog 2026-10.15更... #3'
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8199228b-e84b-42a2-9268-e400391e483a
-  ws-opts:
-    headers:
-      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 'SG新加坡(v2clash.blog 2026-10.15更... #4'
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
-  ws-opts:
-    headers:
-      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    path: /@Marisa_kristi
 - client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: SG【机场推荐：https://a9a.xyz】20
+  name: 🇸🇬 新加坡_GDR639
   network: tcp
   port: 10444
   reality-opts:
@@ -182,123 +141,10 @@ proxies:
   server: 147.93.173.45
   servername: video.yandex.ru
   skip-cert-verify: true
-  tfo: false
   tls: true
   type: vless
   udp: true
   uuid: 75c5f51b-d548-4eab-a26e-aa10fc3dbc7b
-- client-fingerprint: chrome
-  name: 'SG新加坡 #4'
-  network: tcp
-  port: 21001
-  reality-opts:
-    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
-    short-id: '!!str c6887d3b76ef73c9'
-  server: 545.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
-- client-fingerprint: chrome
-  name: 'SG新加坡 #6'
-  network: tcp
-  port: 21004
-  reality-opts:
-    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
-    short-id: '!!str 4ba266730580fd96'
-  server: 545.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
-- client-fingerprint: chrome
-  name: 'SG新加坡 #1'
-  network: tcp
-  port: 21002
-  reality-opts:
-    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
-    short-id: '!!str a52a4528cd4d4c52'
-  server: 545.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
-- client-fingerprint: chrome
-  name: 'SG新加坡 #11'
-  network: tcp
-  port: 21003
-  reality-opts:
-    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
-    short-id: '!!str 5a2d904fe6d0a39b'
-  server: 545.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
-- client-fingerprint: chrome
-  name: 'SG新加坡 #3'
-  network: tcp
-  port: 21004
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str 2df2bd9d8366cef1'
-  server: 511.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  name: 'SG新加坡 #9'
-  network: tcp
-  port: 21003
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str bab49aa4c2a88d27'
-  server: 511.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  name: 'SG新加坡 #8'
-  network: tcp
-  port: 21002
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str 3ab8d93dd9b1a5be'
-  server: 511.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  name: SG新加坡
-  network: tcp
-  port: 21001
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str ab39fc68ab3dee81'
-  server: 511.150333.xyz
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
 - cipher: aes-256-cfb
   country: 🏁 ZZ
   name: 🇸🇬SG²_1
@@ -306,29 +152,22 @@ proxies:
   port: 38388
   server: 103.186.155.16
   type: ss
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
+  password: ''
+  port: 9443
+  server: 149.88.99.209
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: ''
 - alterId: 0
   cipher: auto
-  name: '🇸🇬SG_30|393KB/s|C002-260622 #1'
-  network: tcp
+  name: '🇸🇬SG_29|939KB/s|C002-260622 #1'
+  network: raw
   packet-encoding: xudp
   port: '18000'
   server: 149.88.23.202
-  servername: 149.88.23.202
-  skip-cert-verify: false
-  sub_tag: A004-260618
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  xudp: true
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG_49|1023KB/s|A004-260618 #1'
-  network: tcp
-  packet-encoding: xudp
-  port: '18000'
-  server: 149.88.23.207
-  servername: ''
   skip-cert-verify: false
   sub_tag: C002-260622
   tls: false
@@ -336,28 +175,42 @@ proxies:
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   xudp: true
-- cipher: rc4-md5
-  name: 🇸🇬SG_9
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.45
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: 🇸🇬SG_10
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 128.199.172.224
-  sub_tag: A004-260618
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: '🇸🇬SG_24|964KB/s|A004-260618 #1'
+  name: 🇸🇬SG_3｜364KB/s｜C002-260622 01 ...
   network: tcp
   packet-encoding: xudp
-  port: '18000'
+  port: 18000
+  server: 149.88.23.202
+  servername: 149.88.23.202
+  skip-cert-verify: true
+  sub_tag: C002-260622
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG_7｜133KB/s｜A004-260618 01 ...
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
+  server: 149.88.23.207
+  servername: ''
+  skip-cert-verify: true
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 689659 - ...
+  network: tcp
+  packet-encoding: xudp
+  port: 18000
   server: ww11.levikogjgfdd.ir
   servername: ''
   skip-cert-verify: false
@@ -367,9 +220,164 @@ proxies:
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   xudp: true
+- alterId: 0
+  cipher: auto
+  name: '🇸🇬SG_1|892KB/s|C002-260622 #1'
+  network: raw
+  packet-encoding: xudp
+  port: '18000'
+  server: 149.88.23.207
+  skip-cert-verify: false
+  sub_tag: C002-260622
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- name: '🇸🇬SG_16|603KB/s|R002-260618 01 #1'
+  port: 443
+  server: 154.26.139.24
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- cipher: rc4-md5
+  name: '🇸🇬SG_28|770KB/s|B007-260618 #1'
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.4
+  sub_tag: B007-260618
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '🇸🇬SG_27|1002KB/s|M002-260618 #1'
+  network: raw
+  packet-encoding: xudp
+  port: '18000'
+  server: ww11.levikogjgfdd.ir
+  servername: ww11.levikogjgfdd.ir
+  skip-cert-verify: false
+  sub_tag: M002-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  xudp: true
+- cipher: rc4-md5
+  name: '🇸🇬SG_16|948KB/s|A004-260618 #1'
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.235.122
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_8｜385KB/s｜A004-260618 01 ...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.236
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_4
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.45
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: 🇸🇬SG_5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 128.199.172.224
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: '🇸🇬SG_31|815KB/s|R002-260618 01 #1'
+  port: 9090
+  server: 128.199.116.219
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- name: 🇸🇬SG_2|2.4MB/s
+  port: 9090
+  server: 167.99.74.174
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: '未知 TROJAN-133 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: inviting-ferret.rooster465.autos
+  skip-cert-verify: true
+  sni: inviting-ferret.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '未知 TROJAN-140 #1'
+  network: tcp
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 139.180.146.200
+  skip-cert-verify: true
+  sni: 139.180.146.200
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
   encryption: none
-  name: '🇲🇾[www.v2nodes.com] vless-MY-5... #2'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #18'
+  network: ws
+  packet-encoding: xudp
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇸🇬SG_46|863KB/s|B007-260618 01 #1'
+  network: tcp
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 139.180.146.200
+  skip-cert-verify: true
+  sub_tag: B007-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | C302D0
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: free.nadun.store
+  servername: free.nadun.store
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_7
   network: ws
   packet-encoding: xudp
   port: 443
@@ -387,12 +395,186 @@ proxies:
     path: /
   xudp: true
 - client-fingerprint: chrome
-  name: 新加坡_4
-  network: ws
+  name: 未知 TROJAN-135
+  network: tcp
+  password: UX82473651
   port: 443
-  server: 165.245.182.116
+  server: musical-mouse.rooster465.autos
+  skip-cert-verify: true
+  sni: musical-mouse.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: '🇸🇬SG_56|879KB/s|R002-260618 01 #1'
+  port: 9090
+  server: 104.248.151.93
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 0B8CEE - ...
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: glorious-glider.rooster465.autos
+  skip-cert-verify: true
+  sni: glorious-glider.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: '🇸🇬SG_62|819KB/s|R002-260618 01 #1'
+  port: 9090
+  server: 128.199.121.61
+  sub_tag: R002-260618
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: 未知 TROJAN-126
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: brave-tomcat.rooster465.autos
+  skip-cert-verify: true
+  sni: brave-tomcat.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: '未知 TROJAN-137 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: simple-molly.rooster465.autos
+  skip-cert-verify: true
+  sni: simple-molly.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 08
+  port: 443
+  server: 156.146.56.97
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇬SG_1|2.8MB/s
+  port: 9443
+  server: 152.233.9.239
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ A8F135 - ...
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 18.141.136.8
+  skip-cert-verify: true
+  sni: musical-mouse.rooster465.autos
+  sub_tag: M002-260618
+  type: trojan
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇸🇬SG_77|543KB/s|A004-260618 01 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 188.114.97.6
+  servername: free.nadun.store
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    headers:
+      Host: free.nadun.store
+      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3)
+        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | 0C80F0
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.151.181.75
+  skip-cert-verify: true
+  sni: moral-basilisk.rooster465.autos
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 45.118.133.249
+  servername: free.nadun.store
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    headers:
+      Host: free.nadun.store
+    path: /
+  xudp: true
+- name: 🇸🇬SG_7|4.2MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.212.186.198
+  skip-cert-verify: true
+  type: http
+  udp: true
+  username: '1234'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_81|656KB/s|M002-260618 01 #1'
+  network: ws
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  port: 443
+  server: sg2.998998.best
+  skip-cert-verify: false
+  sni: nat6.outsidemyheart.space
+  sub_tag: M002-260618
+  type: trojan
+  udp: true
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/57.0.2987.133 Safari/537.36
+    max-early-data: 2560
+    path: /eriujtheriughwiue
+- client-fingerprint: chrome
+  name: '🇸🇬SG_99|135KB/s|M002-260618 #1'
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 47.131.250.125
+  skip-cert-verify: false
+  sni: simple-molly.rooster465.autos
+  sub_tag: M002-260618
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 美国_58
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: 76.13.218.192
   servername: snip.edgeoneai.cc.cd
   skip-cert-verify: true
+  sub_tag: F003-260618
   tls: true
   type: vless
   udp: true
@@ -401,61 +583,223 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 01
-  port: 9090
-  server: 128.199.254.13
-  type: http
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 02
-  password: e4b72b531a2d10900519
-  port: 443
-  server: 146.70.29.45
-  sni: 92461d2d.acsnet.co
+  xudp: true
+- name: '🇱🇰[www.v2nodes.com] vless-LK-7... #2'
+  network: ws
+  packet-encoding: xudp
+  port: 80
+  server: free.sahanwickramasinghe.me
+  servername: free.sahanwickramasinghe.me
+  sub_tag: A001-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  ws-opts:
+    headers:
+      Host: free.sahanwickramasinghe.me
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇸🇬SG_91|323KB/s|A004-260618 01 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: free.sahanwickramasinghe.me
+  servername: free.sahanwickramasinghe.me
+  sub_tag: A004-260618
   tls: true
+  type: vless
+  udp: true
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  ws-opts:
+    headers:
+      Host: free.sahanwickramasinghe.me
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/40.0.2214.111 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: CA 🇨🇦 | @Raydikalx | 3AB618
+  network: ws
+  packet-encoding: xudp
+  port: 8443
+  server: centurylink.es
+  servername: free.sahanwickramasinghe.me
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  ws-opts:
+    headers:
+      Host: free.sahanwickramasinghe.me
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬SG_94|474KB/s|F003-260618 01 #1'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 139.59.225.43
+  servername: snip.edgeoneai.cc.cd
+  sub_tag: F003-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 新加坡_4
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 165.245.182.116
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+  xudp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 09
+  password: '!!str 8888'
+  port: 1080
+  server: 47.236.168.243
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: '8888'
+- client-fingerprint: chrome
+  name: 未知 TROJAN-131
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 3.1.252.137
+  skip-cert-verify: false
+  sni: brave-tomcat.rooster465.autos
+  sub_tag: A001-260618
+  type: trojan
+  udp: true
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 01
+  password: None
+  port: 9090
+  server: 104.248.151.93
+  sub_tag: R002-260618
   type: http
-  username: testuser1
+  udp: true
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 'EPODONIOS #9282'
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 188.114.98.0
+  servername: free.nadun.store
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    headers:
+      Host: free.nadun.store
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇸🇬_新加坡_110
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8199228b-e84b-42a2-9268-e400391e483a
+  ws-opts:
+    headers:
+      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: 🇸🇬_新加坡_139
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
+  ws-opts:
+    headers:
+      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    path: /@Marisa_kristi
 - name: 🇸🇬 机场推荐:dafei.de 新加坡 03
+  port: 9999
+  server: 8.219.122.8
+  type: socks5
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 04
   password: '!!str 1234'
   port: 2080
-  server: 54.169.224.224
+  server: 18.143.169.187
   skip-cert-verify: true
   type: http
   username: '1234'
-- name: 🇸🇬 机场推荐:dafei.de 新加坡 04
-  port: 9443
-  server: 149.88.99.209
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 05
+  password: '!!str 1234'
+  port: 2080
+  server: 13.212.249.115
+  skip-cert-verify: true
+  type: http
+  username: '1234'
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇸🇬 机场推荐:dafei.de 新加坡 06
+  network: tcp
+  port: 20007
+  reality-opts:
+    public-key: h67BY8lUGUOtatqfbLJ8pgxS-bYXqODnS_aBIRUrIDw
+    short-id: '!!str 22b82cf5d70ea10e'
+  server: 103.180.20.132
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 4fcd1f98-0f62-467e-9516-8df807386953
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 07
+  port: 443
+  server: 43.160.239.37
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: SG 🇸🇬 | @Raydikalx | 48DAB0
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Uzz3xzDxrpC7NHMkJ3cXMPz88NrgvXbip5dHS-57hko
-    short-id: '!!str ae59ee08e3eb8bff'
-  server: 43.160.226.41
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: c01391fa-7bd3-4b9d-b2db-4829b75e30da
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇸🇬SG_97|681KB/s|R002-260618 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: wSLW8DGUOMkRuCFWnBs31PYwBtvcHbBUGHu_dDTBYgc
-    short-id: '!!str 829330332af8c863'
-  server: 172.104.49.9
-  servername: www.cloudflare.com
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 11
+  port: 9090
+  server: 152.42.170.187
+  type: http
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 13
+  password: '!!str 1234'
+  port: 2080
+  server: 13.229.236.228
   skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9677f03-95c1-4357-9b31-b35b732bd188
+  type: http
+  username: '1234'
 - name: 新加坡(yudou789.top 玉豆免费节点)
   network: ws
   port: 443
@@ -469,4181 +813,60 @@ proxies:
     headers:
       Host: sni.skylee4.cloudns.ch
     path: /proxyip=ProxyIP.CMLiussss.net
-- client-fingerprint: firefox
-  name: 'SG 🇸🇬 | @Raydikalx | B1683A #3'
-  network: tcp
-  port: 25452
-  reality-opts:
-    public-key: zJI16_ywLd4clshY0IQQPxQ_YBbIq2b0XTO_dnTJOy4
-    short-id: '!!str fe51f413b9646e97'
-  server: 164.37.224.232
-  servername: www.ns.nl
+- client-fingerprint: chrome
+  name: '🇺🇸 美国 | USA #7 #1'
+  network: ws
+  port: 8443
+  server: news.zoom.us
+  servername: u.srilankangrill.online
   tls: true
   type: vless
   udp: true
-  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: becc6caf9bea
-  name: 'SG 🇸🇬 | @Raydikalx | 1EB2BA #3'
-  network: grpc
-  port: 25454
-  reality-opts:
-    public-key: YOgsoXtChX3RvA0Gf9SSsP8VLP4GGk7dytVBo9qZCH4
-    short-id: '!!str 221ba0d14384ccf1'
-  server: 164.37.224.232
-  servername: www.ns.nl
-  tls: true
-  type: vless
-  udp: true
-  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
-- cipher: chacha20-ietf-poly1305
-  name: 'SG 🇸🇬 | @Raydikalx | F03E48 #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 54.255.178.40
-  type: ss
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4C4B9F
-  network: tcp
-  password: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  port: 443
-  server: 43.174.246.41
-  sni: sk.ylka.dpdns.org
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 361A80
-  network: tcp
-  password: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  port: 443
-  server: 43.174.247.41
-  sni: sk.ylka.dpdns.org
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A104F2
-  network: tcp
-  password: 06e4425e-a8cb-4b63-929f-2105604ab0a9
-  port: 443
-  server: www.ddwhm.com
-  sni: sk.ylka.dpdns.org
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 71FAD2
-  network: tcp
-  password: '!!str 123456'
-  port: 443
-  server: 194.233.88.109
-  sni: 194.233.88.109
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B8851B
-  network: tcp
-  password: 16132fb0-4945-11f0-a95e-1239d0255272
-  port: 443
-  server: 91.192.81.167
-  sni: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 900213
-  network: tcp
-  password: 16132fb0-4945-11f0-a95e-1239d0255272
-  port: 443
-  server: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 17913D
-  network: tcp
-  password: '!!str 3828095943467868160'
-  port: 443
-  server: 103.106.229.111
-  sni: poetic-coral.dolphin109.quest
-  type: trojan
-  udp: true
-- name: '@Alirewa-1367'
-  network: tcp
-  password: 38f169d6-d202-4b1b-8db8-e6eb1648f5cf
-  port: 443
-  server: 43.160.197.160
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B4EC4B
-  network: tcp
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  port: 443
-  server: 185.151.146.40
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C1AA71
-  network: tcp
-  password: 58dcd460-65df-47b1-b062-517df30bef29
-  port: 443
-  server: 46.137.203.18
-  sni: sg.liangyuandian.top
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C6376A
-  network: tcp
-  password: 7522e2c27233459aab8d0f1d715828d0
-  port: 443
-  server: 185.151.146.211
-  sni: www.gpt123.one
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 280174
-  network: tcp
-  password: 83c66e32-1934-4b54-bd41-6f9908352162
-  port: 443
-  server: 146.190.90.40
-  sni: sg.hktkcloud.cloud
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 085F08
-  network: tcp
-  password: 842b5f9dd11e458d8613c907c4cc5723
-  port: 443
-  server: 149.28.151.140
-  sni: www.gpt123.one
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F566BD
-  network: tcp
-  password: 8a967ec0-634e-11ed-8ef5-1239d0255272
-  port: 443
-  server: sgovh-trojan.bonds.id
-  sni: www.namava.ir
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B84171
-  network: tcp
-  password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e
-  port: 443
-  server: 13.229.1.82
-  sni: jp.iamnotagoodman.com
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CD3C46
-  network: tcp
-  password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e
-  port: 443
-  server: 46.137.251.176
-  sni: jp.iamnotagoodman.com
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 313AE3
-  network: tcp
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: 83.229.121.78
-  sni: Koma-YT.PAGeS.Dev
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 8ABF02
-  network: tcp
-  password: 96dca130-61c6-11ed-bc37-1239d0255272
-  port: 443
-  server: 51.79.220.79
-  sni: zoom.us
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 627C61
-  network: tcp
-  password: 973c7f53-7411-4173-b805-d65c912e4d55
-  port: 443
-  server: 43.134.48.62
-  sni: 86sg.ljydw.top
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 00760B
-  network: tcp
-  password: 9c2cd61e-fa64-3e6f-a817-132e17e11949
-  port: 443
-  server: 152.175.65.24
-  sni: www.microsoft365.com
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 65D819
-  network: tcp
-  password: 9c2cd61e-fa64-3e6f-a817-132e17e11949
-  port: 443
-  server: radiance.occupy.hefty.aliyunglsb.com
-  sni: www.microsoft365.com
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F7AB59
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: awake-satyr.rooster465.autos
-  sni: awake-satyr.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 94487B
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: better-molly.rooster465.autos
-  sni: better-molly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3065D2
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: capable-jay.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F4D6E3
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: causal-ladybug.rooster465.autos
-  sni: causal-ladybug.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E6F116
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: deep-ringtail.rooster465.autos
-  sni: deep-ringtail.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0ED9A3
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: definite-panda.rooster465.autos
-  sni: definite-panda.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F4297B
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: driving-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EB7626
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: exciting-grizzly.rooster465.autos
-  sni: exciting-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D11FFF
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: fun-poodle.rooster465.autos
-  sni: fun-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CC7356
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: glorious-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 47A4FC
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: grateful-crawdad.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C30CE3
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: ideal-phoenix.rooster465.autos
-  sni: ideal-phoenix.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 315C10
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: improved-anteater.rooster465.autos
-  sni: improved-anteater.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D7481E
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: intense-wildcat.rooster465.autos
-  sni: intense-wildcat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F77DA2
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: intimate-moray.rooster465.autos
-  sni: intimate-moray.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C4D69E
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: inviting-burro.rooster465.autos
-  sni: inviting-burro.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 80D5F8
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: light-sheepdog.rooster465.autos
-  sni: light-sheepdog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C8079C
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: literate-cow.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4DCBFD
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: magnetic-haddock.rooster465.autos
-  sni: magnetic-haddock.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3A9C94
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: new-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | AE84A0
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: new-eagle.rooster465.autos
-  sni: new-eagle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 15A848
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: novel-bat.rooster465.autos
-  sni: novel-bat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 196DB0
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: on-roughy.rooster465.autos
-  sni: on-roughy.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C6F2AA
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: oriented-pegasus.rooster465.autos
-  sni: oriented-pegasus.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2C48C5
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: pet-antelope.rooster465.autos
-  sni: pet-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | BD0E73
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: pleased-pelican.rooster465.autos
-  sni: pleased-pelican.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 385867
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: polished-katydid.rooster465.autos
-  sni: polished-katydid.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 237034
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: possible-yeti.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3A64C7
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: premium-perch.rooster465.autos
-  sni: premium-perch.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | FE9423
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: real-cardinal.rooster465.autos
-  sni: real-cardinal.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 206705
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: saved-ghoul.rooster465.autos
-  sni: saved-ghoul.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2AE60A
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: sweeping-parakeet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4B5F6E
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: tough-robin.rooster465.autos
-  sni: tough-robin.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DD83C7
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: viable-serval.rooster465.autos
-  sni: viable-serval.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D13BC5
-  network: tcp
-  password: AE62539071
-  port: 443
-  server: wise-longhorn.rooster465.autos
-  sni: wise-longhorn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9EBD9B
-  network: tcp
-  password: af4b064a9c39472fb34ad8b113acdc6b
-  port: 443
-  server: 45.145.154.8
-  sni: 45.145.154.8
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 24AAC9
-  network: tcp
-  password: Aimer
-  port: 2053
-  server: 3.1.116.161
-  sni: epmo.ambercc.filegear-sg.me
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 35A231
-  network: tcp
-  password: Aimer
-  port: 443
-  server: 43.156.253.94
-  sni: ngepx.ambercc.filegear-sg.me
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6DC32D
-  network: tcp
-  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
-  port: 443
-  server: 139.162.49.215
-  sni: 139.162.49.215
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F94BBA
-  network: tcp
-  password: blue2024
-  port: 443
-  server: www.ddwhm.com
-  sni: ta.promote.icu
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 23641A
-  network: tcp
-  password: c25c4610-489e-11f0-bd10-1239d0255272
-  port: 443
-  server: 91.192.81.167
-  sni: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B20D0A
-  network: tcp
-  password: c25c4610-489e-11f0-bd10-1239d0255272
-  port: 443
-  server: sg4.6n6.net
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 64C0FD
-  network: tcp
-  password: c623a730-48a2-11f0-b6c7-1239d0255272
-  port: 443
-  server: 91.192.81.167
-  sni: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 8B2A1F
-  network: tcp
-  password: c623a730-48a2-11f0-b6c7-1239d0255272
-  port: 443
-  server: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DBC9B8
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: 13.250.60.171
-  sni: united-molly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F515FC
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: 47.128.146.47
-  sni: pure-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6E4D66
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: alert-redfish.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C04B31
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: awake-satyr.rooster465.autos
-  sni: awake-satyr.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | FDFEAE
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: charming-puma.rooster465.autos
-  sni: charming-puma.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 383AB4
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: diverse-thrush.rooster465.autos
-  sni: diverse-thrush.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 01DFDA
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: enormous-whippet.rooster465.autos
-  sni: enormous-whippet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6D7560
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: eternal-horse.rooster465.autos
-  sni: eternal-horse.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3B7175
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: glowing-marmoset.rooster465.autos
-  sni: glowing-marmoset.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | FFF2E2
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: grateful-owl.rooster465.autos
-  sni: grateful-owl.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4B0A09
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: informed-stud.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 368C28
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: intimate-moray.rooster465.autos
-  sni: intimate-moray.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2AD88A
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: moral-basilisk.rooster465.autos
-  sni: moral-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | DB4443
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: nearby-egret.rooster465.autos
-  sni: nearby-egret.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 689A0B
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: powerful-troll.rooster465.autos
-  sni: powerful-troll.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DF6A53
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: present-ram.rooster465.autos
-  sni: present-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 93AD32
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: pure-ram.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E7E0D1
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: real-cardinal.rooster465.autos
-  sni: real-cardinal.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 91122B
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: sacred-shepherd.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B61B99
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: sharp-scorpion.rooster465.autos
-  sni: sharp-scorpion.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4F1373
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: star-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 97F4FE
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: star-dodo.rooster465.autos
-  sni: star-dodo.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 210EF7
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: steady-prawn.rooster465.autos
-  sni: steady-prawn.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E32D49
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: tolerant-stag.rooster465.autos
-  sni: tolerant-stag.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4E4368
-  network: tcp
-  password: CF68213490
-  port: 443
-  server: wealthy-gobbler.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CF323D
-  network: tcp
-  password: d0d08cddacc3190ea81b1b792e1b5fde
-  port: 443
-  server: 178.128.106.216
-  sni: www.baidu.com
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | FFBF0B
-  network: tcp
-  password: d342d31e-d016-4c25-82fe-19a892795da2
-  port: 443
-  server: 43.134.48.62
-  sni: 86sg.ljydw.top
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D4C994
-  network: tcp
-  password: d6b8011a-c725-435a-9fec-bf6d3530392c
-  port: 2096
-  server: 92.243.75.178
-  sni: vle.amclubdns.dpdns.org
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C8BAE1
-  network: tcp
-  password: df1f7e80-48a2-11f0-8b4b-1239d0255272
-  port: 443
-  server: 91.192.81.167
-  sni: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | FFE923
-  network: tcp
-  password: df1f7e80-48a2-11f0-8b4b-1239d0255272
-  port: 443
-  server: sg4.6n6.net
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0D4752
-  network: tcp
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 159.223.41.212
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | BF3391
-  network: tcp
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 64.120.94.225
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  udp: true
-- name: AutoAiVPN860619
-  network: tcp
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 8443
-  server: 83.229.121.78
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 74D858
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: 56.10.68.131
-  sni: excited-alien.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7F04F7
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: adjusted-orca.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 38F13E
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: awake-redbird.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B7E776
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: aware-coyote.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 48F1AF
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: brave-tomcat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CE8E1A
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: capable-jay.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7DA133
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: champion-panther.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9CD183
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: charmed-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 363AC6
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: clear-monitor.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6051BB
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: concise-grackle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 8BF8EC
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: definite-gazelle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F5FC31
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: elegant-mouse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 54F24A
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: eternal-horse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 49B143
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: ethical-raccoon.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9A123B
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: exciting-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A19E48
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: gentle-perch.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 096C9E
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: golden-kangaroo.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EC2476
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: humorous-snake.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 288EF1
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: intense-kid.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7E1012
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: intimate-hog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D16AAC
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: kind-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 78C6E9
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: moved-osprey.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D10123
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: nearby-egret.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 49A8B5
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: novel-bat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5032E9
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: novel-kodiak.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2659ED
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: open-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9B2763
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: pet-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D2143D
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: pet-mako.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C1F9B4
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: pleased-pelican.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D836DF
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: polished-katydid.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 843D28
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: precise-locust.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9ACC35
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: prime-quail.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | ED15EF
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: pumped-clam.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 1C0638
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: pure-ghoul.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 703C36
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: rare-lion.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | AC2E88
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: rested-seahorse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 94FD97
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: sacred-shepherd.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A41F94
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: saving-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3B45B1
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: sharing-fawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0D9A48
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: square-anchovy.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D5C5B0
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: star-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 091084
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: star-shrimp.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C4991E
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: sure-humpback.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 15E3B3
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: thorough-foxhound.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 267243
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: tough-shark.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C4775E
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: united-frog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5C0985
-  network: tcp
-  password: EQ30679154
-  port: 443
-  server: winning-shrimp.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 5C0EB9
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: absolute-bobcat.rooster465.autos
-  sni: absolute-bobcat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | EAE4BC
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: amazed-burro.rooster465.autos
-  sni: amazed-burro.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4DCF80
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: classic-duckling.rooster465.autos
-  sni: classic-duckling.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C1BECF
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: ideal-phoenix.rooster465.autos
-  sni: ideal-phoenix.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 05BBC7
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: included-hedgehog.rooster465.autos
-  sni: included-hedgehog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9645E7
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: intense-wildcat.rooster465.autos
-  sni: intense-wildcat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | BCB37C
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: inviting-burro.rooster465.autos
-  sni: inviting-burro.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | A3D555
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: literate-grizzly.rooster465.autos
-  sni: literate-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 04E168
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: mature-civet.rooster465.autos
-  sni: mature-civet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 61A9E5
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: maximum-elk.rooster465.autos
-  sni: maximum-elk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C1E5E4
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: moved-osprey.rooster465.autos
-  sni: moved-osprey.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 749F53
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: open-octopus.rooster465.autos
-  sni: open-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 366AAE
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: premium-perch.rooster465.autos
-  sni: premium-perch.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9864BD
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: pro-tortoise.rooster465.autos
-  sni: pro-tortoise.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3B00A8
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: rested-pheasant.rooster465.autos
-  sni: rested-pheasant.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 528C42
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: saving-sawfly.rooster465.autos
-  sni: saving-sawfly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 069628
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: sweeping-parakeet.rooster465.autos
-  sni: sweeping-parakeet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 50E049
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: tough-shark.rooster465.autos
-  sni: tough-shark.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 14BF9B
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: upright-impala.rooster465.autos
-  sni: upright-impala.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | E18776
-  network: tcp
-  password: FC60532879
-  port: 443
-  server: wise-longhorn.rooster465.autos
-  sni: wise-longhorn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | E8836E
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: 56.10.68.149
-  sni: square-guinea.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6F1F79
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: absolute-bobcat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7A2392
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: alert-redfish.rooster465.autos
-  sni: alert-redfish.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B6D23F
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: aware-coyote.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4F77A9
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: brief-hare.rooster465.autos
-  sni: brief-hare.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5C89F0
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: champion-panther.rooster465.autos
-  sni: champion-panther.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | AD10FF
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: charming-puma.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | DA2990
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: daring-sunbeam.rooster465.autos
-  sni: daring-sunbeam.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D5123E
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: driven-bulldog.rooster465.autos
-  sni: driven-bulldog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E99B94
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: flexible-pony.rooster465.autos
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6984C2
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: grateful-crawdad.rooster465.autos
-  sni: grateful-crawdad.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7818EC
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: included-hedgehog.rooster465.autos
-  sni: included-hedgehog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 33A68F
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: intimate-moray.rooster465.autos
-  sni: intimate-moray.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E44924
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: learning-ladybug.rooster465.autos
-  sni: learning-ladybug.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0CBE21
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: literate-cow.rooster465.autos
-  sni: literate-cow.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D03298
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: major-goose.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 66BAB6
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: many-pangolin.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 02D389
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: moral-basilisk.rooster465.autos
-  sni: moral-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DBA3FB
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: new-eagle.rooster465.autos
-  sni: new-eagle.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1FB1A9
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: possible-yeti.rooster465.autos
-  sni: possible-yeti.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B28BE5
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: precise-locust.rooster465.autos
-  sni: precise-locust.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7F542C
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: pure-ram.rooster465.autos
-  sni: pure-ram.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | F0F3E5
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: rich-gelding.rooster465.autos
-  sni: rich-gelding.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 458078
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: sacred-shepherd.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 1D5AB7
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: square-tortoise.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 927449
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: star-cheetah.rooster465.autos
-  sni: star-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 465078
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: steady-prawn.rooster465.autos
-  sni: steady-prawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C7F1BB
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: stunning-mastodon.rooster465.autos
-  sni: stunning-mastodon.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 60BE9E
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: sure-husky.rooster465.autos
-  sni: sure-husky.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1E3B2D
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: tight-fawn.rooster465.autos
-  sni: tight-fawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6D9572
-  network: tcp
-  password: FH72359861
-  port: 443
-  server: wise-gibbon.rooster465.autos
-  sni: wise-gibbon.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 97C27A
-  network: tcp
-  password: FnF2E0fmnd
-  port: 443
-  server: 146.190.86.235
-  sni: dl-media.viber.com
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4063B6
-  network: tcp
-  password: GToK9gzuwh
-  port: 443
-  server: 146.190.84.34
-  sni: aka.ms
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5955E7
-  network: tcp
-  password: HC04361579
-  port: 443
-  server: driven-doberman.rooster465.autos
-  sni: driven-doberman.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 50E603
-  network: tcp
-  password: HC04361579
-  port: 443
-  server: key-barnacle.rooster465.autos
-  sni: key-barnacle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 720F6A
-  network: tcp
-  password: HC04361579
-  port: 443
-  server: powerful-troll.rooster465.autos
-  sni: powerful-troll.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F5447D
-  network: tcp
-  password: HC04361579
-  port: 443
-  server: star-shrimp.rooster465.autos
-  sni: star-shrimp.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DA4BD5
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: aware-coyote.rooster465.autos
-  sni: aware-coyote.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B4651D
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: casual-bee.rooster465.autos
-  sni: casual-bee.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C44DB8
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: daring-cobra.rooster465.autos
-  sni: daring-cobra.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 01905C
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: deep-ringtail.rooster465.autos
-  sni: deep-ringtail.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 70E506
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: outgoing-eagle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4ED5B2
-  network: tcp
-  password: HW85960347
-  port: 443
-  server: sharing-fawn.rooster465.autos
-  sni: sharing-fawn.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4DDD94
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: absolute-bobcat.rooster465.autos
-  sni: absolute-bobcat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B94FB8
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: amazed-burro.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 663D24
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: busy-slug.rooster465.autos
-  sni: busy-slug.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4C80FF
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: careful-cow.rooster465.autos
-  sni: careful-cow.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 8EA080
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: crack-martin.rooster465.autos
-  sni: crack-martin.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7F7DB3
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: deciding-rattler.rooster465.autos
-  sni: deciding-rattler.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5278A5
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: enhanced-dassie.rooster465.autos
-  sni: enhanced-dassie.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 17D38C
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: evolving-grouper.rooster465.autos
-  sni: evolving-grouper.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B364D8
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: flexible-pony.rooster465.autos
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 297D74
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: guided-warthog.rooster465.autos
-  sni: guided-warthog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 973316
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: ideal-phoenix.rooster465.autos
-  sni: ideal-phoenix.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | AAFC60
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: improved-anteater.rooster465.autos
-  sni: improved-anteater.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 75D9AE
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: intense-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 10BB4A
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: key-sponge.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DDC9A6
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: literate-grizzly.rooster465.autos
-  sni: literate-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 09BC76
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: moved-osprey.rooster465.autos
-  sni: moved-osprey.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 529694
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: novel-bat.rooster465.autos
-  sni: novel-bat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E4DD5F
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: pumped-eft.rooster465.autos
-  sni: pumped-eft.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 638750
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: saving-sawfly.rooster465.autos
-  sni: saving-sawfly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C22905
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: simple-molly.rooster465.autos
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6747E3
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: square-anchovy.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2BD7C9
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: sweeping-parakeet.rooster465.autos
-  sni: sweeping-parakeet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 563F5D
-  network: tcp
-  password: IQ68037294
-  port: 443
-  server: tough-shark.rooster465.autos
-  sni: tough-shark.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7CCFB5
-  network: tcp
-  password: iyinglong
-  port: 443
-  server: 18.140.67.76
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | A24CE2
-  network: tcp
-  password: j0GM8nFJVq
-  port: 443
-  server: 167.71.209.134
-  sni: aka.ms
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A87E89
-  network: tcp
-  password: JA96378052
-  port: 443
-  server: absolute-bobcat.rooster465.autos
-  sni: absolute-bobcat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F6659D
-  network: tcp
-  password: JA96378052
-  port: 443
-  server: aware-coyote.rooster465.autos
-  sni: aware-coyote.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DFEA10
-  network: tcp
-  password: JA96378052
-  port: 443
-  server: careful-cow.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 55CD8C
-  network: tcp
-  password: JA96378052
-  port: 443
-  server: relaxed-unicorn.rooster465.autos
-  sni: relaxed-unicorn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5C0104
-  network: tcp
-  password: JA96378052
-  port: 443
-  server: upward-puma.rooster465.autos
-  sni: upward-puma.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3B18D2
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: flexible-pony.rooster465.autos
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | F7623B
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: included-hedgehog.rooster465.autos
-  sni: included-hedgehog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A44C19
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: inspired-hound.rooster465.autos
-  sni: inspired-hound.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 64E9CC
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: maximum-elk.rooster465.autos
-  sni: maximum-elk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0169B9
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: open-octopus.rooster465.autos
-  sni: open-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 460EAA
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: saving-sawfly.rooster465.autos
-  sni: saving-sawfly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C0E51F
-  network: tcp
-  password: JT80563429
-  port: 443
-  server: sweeping-parakeet.rooster465.autos
-  sni: sweeping-parakeet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3A03C4
-  network: tcp
-  password: MwDUxmFOAo
-  port: 443
-  server: 152.42.162.175
-  sni: aka.ms
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | ECEDF1
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: better-molly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 298544
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: casual-bee.rooster465.autos
-  sni: casual-bee.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 636CC6
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: definite-malamute.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5E745E
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: grateful-owl.rooster465.autos
-  sni: grateful-owl.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 250C2F
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: main-whippet.rooster465.autos
-  sni: main-whippet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 02684D
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: picked-guinea.rooster465.autos
-  sni: picked-guinea.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3C0B98
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: pure-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | D2FF49
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: real-werewolf.rooster465.autos
-  sni: real-werewolf.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 468816
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: saving-octopus.rooster465.autos
-  sni: saving-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0C94BB
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: striking-maggot.rooster465.autos
-  sni: striking-maggot.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 82278A
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: stunning-mite.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 311B50
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: sure-humpback.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4E445F
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: tough-robin.rooster465.autos
-  sni: tough-robin.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 72F684
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: uncommon-feline.rooster465.autos
-  sni: uncommon-feline.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C94A4B
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: upright-impala.rooster465.autos
-  sni: upright-impala.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C01A6E
-  network: tcp
-  password: ND91608427
-  port: 443
-  server: upward-puma.rooster465.autos
-  sni: upward-puma.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 898F99
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: 13.212.151.64
-  sni: able-dane.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CB86FA
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: ace-liger.rooster465.autos
-  sni: ace-liger.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0A0F52
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: alert-wren.rooster465.autos
-  sni: alert-wren.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2D1262
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: alive-glider.rooster465.autos
-  sni: alive-glider.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B2C5D0
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: brief-hare.rooster465.autos
-  sni: brief-hare.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 895632
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: calm-muskrat.rooster465.autos
-  sni: calm-muskrat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 78133B
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: capable-jay.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0FCC4C
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: crack-martin.rooster465.autos
-  sni: crack-martin.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 17EC62
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: dynamic-eel.rooster465.autos
-  sni: dynamic-eel.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 56A1D1
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: flexible-gannet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9B990E
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: golden-kangaroo.rooster465.autos
-  sni: golden-kangaroo.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3BD72F
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: grateful-crawdad.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4B9C36
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: innocent-mullet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 192409
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: inviting-ferret.rooster465.autos
-  sni: inviting-ferret.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5F0AF9
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: joint-ewe.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D176EF
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: magnetic-haddock.rooster465.autos
-  sni: magnetic-haddock.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 8CBC3C
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: mighty-lemming.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 663E60
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: musical-mouse.rooster465.autos
-  sni: musical-mouse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4601B5
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: new-eagle.rooster465.autos
-  sni: new-eagle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3E0369
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: picked-guinea.rooster465.autos
-  sni: picked-guinea.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6D2621
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: powerful-troll.rooster465.autos
-  sni: powerful-troll.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 224D19
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: prime-quail.rooster465.autos
-  sni: prime-quail.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 962D87
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: pure-ghoul.rooster465.autos
-  sni: pure-ghoul.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E6CE8B
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: shining-prawn.rooster465.autos
-  sni: shining-prawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CB7B19
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: striking-maggot.rooster465.autos
-  sni: striking-maggot.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 877710
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: stunning-mastodon.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6F819D
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: sure-husky.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6DA5A2
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: thorough-foxhound.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2983FD
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: awake-satyr.rooster465.autos
-  sni: awake-satyr.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1BF268
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: definite-panda.rooster465.autos
-  sni: definite-panda.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 1E7CE8
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: desired-boxer.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | F27130
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: driving-antelope.rooster465.autos
-  sni: driving-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | BFCCFF
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: glorious-glider.rooster465.autos
-  sni: glorious-glider.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 98E5E3
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: kind-grizzly.rooster465.autos
-  sni: kind-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 696B43
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: light-sheepdog.rooster465.autos
-  sni: light-sheepdog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D3B81E
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: mighty-lemming.rooster465.autos
-  sni: mighty-lemming.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9E1F25
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: novel-kodiak.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | BC1C4E
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: polished-cicada.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3251DC
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: powerful-troll.rooster465.autos
-  sni: powerful-troll.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B22615
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: precise-locust.rooster465.autos
-  sni: precise-locust.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 8E6404
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: rare-lion.rooster465.autos
-  sni: rare-lion.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0AE826
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: saved-ghoul.rooster465.autos
-  sni: saved-ghoul.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 65032B
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: shining-prawn.rooster465.autos
-  sni: shining-prawn.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 39BDDC
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: simple-molly.rooster465.autos
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6126AF
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: tolerant-stag.rooster465.autos
-  sni: tolerant-stag.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 745BA9
-  network: tcp
-  password: ON38567014
-  port: 443
-  server: winning-polecat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F3E1EF
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: 54.254.186.203
-  sni: on-roughy.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 520863
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: ace-liger.rooster465.autos
-  sni: ace-liger.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9DB603
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: alert-redfish.rooster465.autos
-  sni: alert-redfish.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9F7565
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: brief-flamingo.rooster465.autos
-  sni: brief-flamingo.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 072F7B
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: capable-jay.rooster465.autos
-  sni: capable-jay.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 5EF216
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: champion-panther.rooster465.autos
-  sni: champion-panther.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 33ED66
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: charmed-cheetah.rooster465.autos
-  sni: charmed-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 20C5F8
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: communal-buffalo.rooster465.autos
-  sni: communal-buffalo.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 609E44
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: concise-grackle.rooster465.autos
-  sni: concise-grackle.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | AC1E6F
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: definite-gazelle.rooster465.autos
-  sni: definite-gazelle.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1C5273
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: fun-poodle.rooster465.autos
-  sni: fun-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4A7552
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: golden-kangaroo.rooster465.autos
-  sni: golden-kangaroo.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6B527C
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: grateful-owl.rooster465.autos
-  sni: grateful-owl.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E3ADD3
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: in-catfish.rooster465.autos
-  sni: in-catfish.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EF2681
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: kind-grizzly.rooster465.autos
-  sni: kind-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F54ACE
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: learning-ladybug.rooster465.autos
-  sni: learning-ladybug.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 08D511
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: light-sheepdog.rooster465.autos
-  sni: light-sheepdog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E794DA
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: magnetic-haddock.rooster465.autos
-  sni: magnetic-haddock.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3DA8B2
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: nearby-egret.rooster465.autos
-  sni: nearby-egret.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 1479CD
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: on-roughy.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6339BD
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: present-ram.rooster465.autos
-  sni: present-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 63217D
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: pumped-sailfish.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 57D1B7
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: pure-ram.rooster465.autos
-  sni: pure-ram.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 5C83B9
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: real-werewolf.rooster465.autos
-  sni: real-werewolf.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | E401BB
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: relaxed-unicorn.rooster465.autos
-  sni: relaxed-unicorn.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 603C30
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: rich-gelding.rooster465.autos
-  sni: rich-gelding.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D7ADF5
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: settling-shad.rooster465.autos
-  sni: settling-shad.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 8BA134
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: sharing-fawn.rooster465.autos
-  sni: sharing-fawn.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D39A2E
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: simple-molly.rooster465.autos
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | F87600
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: stunning-mastodon.rooster465.autos
-  sni: stunning-mastodon.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 88FC99
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: sure-husky.rooster465.autos
-  sni: sure-husky.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 5A2FF2
-  network: tcp
-  password: PD07395842
-  port: 443
-  server: united-molly.rooster465.autos
-  sni: united-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | 6A4B65
-  network: tcp
-  password: PI36027154
-  port: 443
-  server: ethical-raccoon.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3122CD
-  network: tcp
-  password: PI36027154
-  port: 443
-  server: exciting-grizzly.rooster465.autos
-  sni: exciting-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F0621E
-  network: tcp
-  password: PI36027154
-  port: 443
-  server: moved-osprey.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | D4C20A
-  network: tcp
-  password: PI36027154
-  port: 443
-  server: pro-tortoise.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | 958C91
-  network: tcp
-  password: PI36027154
-  port: 443
-  server: pumped-eft.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7D5A4C
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: 47.129.119.44
-  sni: right-mastiff.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7F702B
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: 52.220.98.46
-  sni: pleased-albacore.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | E87E40
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: 56.10.68.131
-  sni: excited-alien.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 49FA73
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: amazed-burro.rooster465.autos
-  sni: amazed-burro.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EAF398
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: awake-redbird.rooster465.autos
-  sni: awake-redbird.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 11B29E
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: better-molly.rooster465.autos
-  sni: better-molly.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2D2FB3
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: brief-flamingo.rooster465.autos
-  sni: brief-flamingo.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2081CF
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: capable-jay.rooster465.autos
-  sni: capable-jay.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | DBC3AE
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: careful-cow.rooster465.autos
-  sni: careful-cow.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 9A0CF7
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: concise-guinea.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C81D39
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: ethical-raccoon.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0A0AFF
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: flexible-pony.rooster465.autos
-  sni: flexible-pony.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | CE4B2A
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: fun-poodle.rooster465.autos
-  sni: fun-poodle.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C2A429
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: game-ant.rooster465.autos
-  sni: game-ant.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1D27E1
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: ideal-phoenix.rooster465.autos
-  sni: ideal-phoenix.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 8F1763
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: intense-kid.rooster465.autos
-  sni: intense-kid.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0481AC
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: intimate-hog.rooster465.autos
-  sni: intimate-hog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 023D9D
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: key-sponge.rooster465.autos
-  sni: key-sponge.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 182C31
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: lucky-albacore.rooster465.autos
-  sni: lucky-albacore.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | AE2983
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: main-whippet.rooster465.autos
-  sni: main-whippet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | F976CB
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: major-duckling.rooster465.autos
-  sni: major-duckling.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B1AE98
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: mighty-lemming.rooster465.autos
-  sni: mighty-lemming.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | FF0A6B
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: moved-weasel.rooster465.autos
-  sni: moved-weasel.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A597BE
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: musical-mouse.rooster465.autos
-  sni: musical-mouse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 21316D
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: perfect-emu.rooster465.autos
-  sni: perfect-emu.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | CB8C48
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: picked-guinea.rooster465.autos
-  sni: picked-guinea.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 89F782
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: prime-quail.rooster465.autos
-  sni: prime-quail.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 699FC7
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: pumped-clam.rooster465.autos
-  sni: pumped-clam.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | FD699E
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: saved-ghoul.rooster465.autos
-  sni: saved-ghoul.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 4705A5
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: sensible-barnacle.rooster465.autos
-  sni: sensible-barnacle.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C0F869
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: steady-prawn.rooster465.autos
-  sni: steady-prawn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 665B6D
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: unbiased-coyote.rooster465.autos
-  sni: unbiased-coyote.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 906F95
-  network: tcp
-  password: PQ05174892
-  port: 443
-  server: viable-serval.rooster465.autos
-  sni: viable-serval.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | DD7720
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.212.10.94
-  sni: real-werewolf.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | CC472F
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.212.35.242
-  sni: ace-liger.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 520598
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.212.81.3
-  sni: holy-lamb.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 30D5BC
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.229.121.67
-  sni: rested-seahorse.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | EC5D71
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 13.229.59.187
-  sni: inspired-hound.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: '🇸🇬SG_106|422KB/s|M002-260618 #1'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 18.141.136.8
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+- name: 🇸🇬SG_2|3.0MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.229.54.109
   skip-cert-verify: true
-  sni: musical-mouse.rooster465.autos
-  type: trojan
+  type: http
   udp: true
-- name: SG 🇸🇬 | @Raydikalx | 475259
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 18.143.92.167
-  sni: glowing-marmoset.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: '🇸🇬SG_100|416KB/s|M002-260618 #1'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 47.131.250.125
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6C6B48
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.221.218.179
-  sni: real-cardinal.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | DA1EA3
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.221.219.241
-  sni: fond-mammoth.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A9D4D6
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 52.221.220.227
-  sni: pet-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: '🇸🇬SG_78|382KB/s|A004-260618 #1'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.151.181.75
+  username: '1234'
+- name: 🇸🇬SG_3|1.6MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.212.90.38
   skip-cert-verify: true
-  sni: moral-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 949D4F
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.179.159.9
-  sni: present-ram.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | ECBB95
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.179.60.162
-  sni: intense-wildcat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7D8CD9
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 54.254.59.149
-  sni: desired-boxer.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 13851A
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: 56.10.9.77
-  sni: inviting-ferret.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #14'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: ace-liger.rooster465.autos
-  sni: ace-liger.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 6AFAE7
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: glowing-marmoset.rooster465.autos
-  sni: glowing-marmoset.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C3A9A1
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: holy-lamb.rooster465.autos
-  sni: holy-lamb.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #7'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: inspired-hound.rooster465.autos
-  sni: inspired-hound.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #8'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: intense-wildcat.rooster465.autos
-  sni: intense-wildcat.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #9'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: joint-ewe.rooster465.autos
-  sni: joint-ewe.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #18'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: pet-antelope.rooster465.autos
-  sni: pet-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #19'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: real-cardinal.rooster465.autos
-  sni: real-cardinal.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 73A406
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: real-werewolf.rooster465.autos
-  sni: real-werewolf.rooster465.autos
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #13'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: rested-seahorse.rooster465.autos
-  sni: rested-seahorse.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 28E7CF
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: absolute-bobcat.rooster465.autos
-  sni: absolute-bobcat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 68D151
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: busy-slug.rooster465.autos
-  sni: busy-slug.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | A82A04
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: careful-cow.rooster465.autos
-  sni: careful-cow.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 8B4D75
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: crack-martin.rooster465.autos
-  sni: crack-martin.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9D640C
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: deciding-rattler.rooster465.autos
-  sni: deciding-rattler.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3BC36E
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: good-bluebird.rooster465.autos
-  sni: good-bluebird.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9A4F25
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: guided-warthog.rooster465.autos
-  sni: guided-warthog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | BF3C85
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: improved-anteater.rooster465.autos
-  sni: improved-anteater.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0113D7
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: included-hedgehog.rooster465.autos
-  sni: included-hedgehog.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | AD8AA2
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: intense-basilisk.rooster465.autos
-  sni: intense-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D16921
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: inviting-burro.rooster465.autos
-  sni: inviting-burro.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 466E1E
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: literate-grizzly.rooster465.autos
-  sni: literate-grizzly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 0B3AF3
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: major-duckling.rooster465.autos
-  sni: major-duckling.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 9F2E37
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: mature-civet.rooster465.autos
-  sni: mature-civet.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D37F93
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: maximum-elk.rooster465.autos
-  sni: maximum-elk.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 191A6E
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: new-antelope.rooster465.autos
-  sni: new-antelope.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 50B9BE
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: novel-bat.rooster465.autos
-  sni: novel-bat.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 4575D3
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: pleased-lobster.rooster465.autos
-  sni: pleased-lobster.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 5A74A7
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: polished-cicada.rooster465.autos
-  sni: polished-cicada.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | AB5C35
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: premium-perch.rooster465.autos
-  sni: premium-perch.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | FC68D1
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: saving-sawfly.rooster465.autos
-  sni: saving-sawfly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 033D21
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: simple-molly.rooster465.autos
-  sni: simple-molly.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 914010
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: square-anchovy.rooster465.autos
-  sni: square-anchovy.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | A4D1AE
-  network: tcp
-  password: WG39087154
-  port: 443
-  server: sweeping-parakeet.rooster465.autos
-  sni: sweeping-parakeet.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 0D0F2E
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: adjusted-orca.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 1A3AA2
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: calm-muskrat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2996B4
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: charmed-cheetah.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | A7AA14
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: flexible-pony.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7B91FA
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: flying-escargot.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | ECC5B1
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: grateful-owl.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 41DB43
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: guided-warthog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 2F7BDB
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: improved-anteater.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 5462C0
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: included-hedgehog.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EDB431
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: intense-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | B9846A
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: novel-bat.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | CE3CB4
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: open-octopus.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7C121B
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: polite-husky.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 3FB439
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: pumped-sailfish.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | EAACC9
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: relaxed-unicorn.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 48E949
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: rested-seahorse.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 7D0138
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: rich-gelding.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 995550
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: tough-shark.rooster465.autos
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | C7966F
-  network: tcp
-  password: XG59623478
-  port: 443
-  server: wealthy-gobbler.rooster465.autos
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B30B20
-  network: ws
-  port: 443
-  server: www.hxino.com
-  servername: www.hxino.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 00f8cbcc-bf10-418b-a842-35519f460c7f
-  ws-opts:
-    headers:
-      Host: deh.irandoc.info
-    path: /38284/api4
-    v2ray-http-upgrade: true
-    v2ray-http-upgrade-fast-open: true
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #13'
-  network: ws
-  port: 443
-  server: 45.118.133.249
-  servername: free.nadun.store
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
-  ws-opts:
-    headers:
-      Host: free.nadun.store
-    path: /
-- client-fingerprint: chrome
-  name: 'SG 🇸🇬 | @Raydikalx | 502C25 #3'
-  network: ws
-  port: 443
-  server: free.nadun.store
-  tls: true
-  type: vless
-  udp: true
-  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
-  ws-opts:
-    path: /
-- client-fingerprint: chrome
-  name: 'SG 🇸🇬 | @Raydikalx | 0B071A #1'
-  network: ws
-  port: 20205
-  server: 185.220.68.226
-  servername: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 282733b7-3cd4-4fa3-b6bd-beff60052f31
-  ws-opts:
-    headers:
-      Host: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 38FDAB
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2949e720-4588-4edc-8642-ff2b7b368c78
-  ws-opts:
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-    path: /@Marisa_kristi
-- name: SG 🇸🇬 | @Raydikalx | 54AE5D
-  network: tcp
-  port: 10443
-  server: 178.94.25.73
-  servername: 178.94.25.73
-  tls: false
-  type: vless
-  udp: true
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D3F0F7
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 30b40928-f431-4c83-bfed-44f1243d16ff
-  ws-opts:
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: 'SG 🇸🇬 | @Raydikalx | 0DD43D #3'
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
-  ws-opts:
-    headers:
-      Host: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: android
-  name: ❓Other_100
-  network: ws
-  port: 443
-  server: 152.42.187.204
-  servername: proxy-1cu.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  ws-opts:
-    headers:
-      Host: proxy-1cu.pages.dev
-    path: /
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | 296B29
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: aUdvs6o4PHN6jmdkIKBA2rHsN_7l8W2SaDfNgzn-BwU
-    short-id: '!!str '
-  server: 103.106.229.236
-  servername: sg.monkora.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 454431fc-71e2-42b1-b375-5b55dd06666a
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
-  network: tcp
-  port: 41688
-  reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: '!!str 7f342137c20387'
-  server: 54.169.200.246
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-- client-fingerprint: chrome
-  name: '未知 VLESS-205 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
-    short-id: '!!str eb97ce837da2f6ad'
-  server: 34.87.113.18
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  name: 'SG 🇸🇬 | @Raydikalx | 3547B9 #1'
-  network: tcp
-  port: 35544
-  reality-opts:
-    public-key: HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc
-    short-id: '!!str 25c79e5856c7'
-  server: funagfrdfs.alixxplay.com
-  servername: iosapps.itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-- name: SG 🇸🇬 | @Raydikalx | 013C52
-  network: tcp
-  port: 443
-  server: 149.118.55.234
-  tls: false
-  type: vless
-  udp: true
-  uuid: 58f7687b-5209-4dcd-a11e-6e4eb2191378
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7E1D02
-  network: ws
-  port: 443
-  server: 168.144.253.82
-  servername: powered-by-surena.configfarsi695fcfe8a2e58.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  ws-opts:
-    headers:
-      Host: powered-by-surena.configfarsi695fcfe8a2e58.workers.dev
-    path: /
-- name: SG 🇸🇬 | @Raydikalx | A39232
-  network: ws
-  port: 8880
-  server: 154.194.12.30
-  servername: vms.lifetime35.workers.dev
-  tls: false
-  type: vless
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime35.workers.dev
-    path: /
-- name: SG 🇸🇬 | @Raydikalx | 0FB087
-  network: ws
-  port: 8880
-  server: 154.194.12.40
-  servername: vms.lifetime35.workers.dev
-  tls: false
-  type: vless
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime35.workers.dev
-    path: /?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | B0A659
-  network: ws
-  port: 20205
-  server: 185.220.68.226
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6830c2dd-466e-4d4d-9dea-f9f79758c560
-  ws-opts:
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: SG 🇸🇬 | @Raydikalx | F84D02
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 5wGgDloyck_L25Y5rkWorpV3IK00pK0Lki7LR0VY0io
-    short-id: '!!str 4fba6fd2c74fd18f'
-  server: 216.195.196.86
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7c973569-71da-4d18-8c80-aa4c8ee2f257
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2CF12C
-  network: ws
-  port: 8441
-  server: 45.77.241.190
-  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7e622534-4a90-40ba-bb30-5cb5403be121
-  ws-opts:
-    headers:
-      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 'SG 🇸🇬 | @Raydikalx | 86701E #2'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g
-    short-id: '!!str 819a87bf1651bf44'
-  server: 54.255.178.40
-  servername: www.ahtxhqdz.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_13
-  network: raw
-  port: 10574
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇸🇬SG_5|206KB/s|C002-260622 #1'
-  network: tcp
-  port: 17623
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.0.111.82
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7E37D1
-  network: ws
-  port: 51262
-  server: 175.41.179.37
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | E52FF3
-  network: ws
-  port: 443
-  server: 140.245.120.16
-  servername: trackydev.site
-  tls: true
-  type: vless
-  udp: true
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  ws-opts:
-    headers:
-      Host: trackydev.site
-    path: /
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 40F438
-  network: ws
-  port: 20205
-  server: 185.220.68.226
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: c3fc2988-df6e-4cbd-96c6-a2a6276e0a86
-  ws-opts:
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6CD643
-  network: ws
-  port: 20205
-  server: 185.220.68.226
-  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: c4c484d9-69e5-49ea-bf96-bdee8ece865b
-  ws-opts:
-    headers:
-      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 3C3C36
-  network: ws
-  port: 8441
-  server: 45.77.241.190
-  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: c65d2504-f68e-4948-841d-0a2dc5d66fbe
-  ws-opts:
-    headers:
-      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 246D0C
-  network: ws
-  port: 8441
-  server: 45.77.241.190
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: c6e09f95-bf02-4854-bcba-7a977a0f8ecd
-  ws-opts:
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇸🇬SG_86|85KB/s|A004-260618 #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
-    short-id: '!!str b2efed6d157e7bb0'
-  server: 5.34.177.164
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | D75A73
-  network: ws
-  port: 443
-  server: zhechengtoy.com
-  servername: zhechengtoy.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd73e80c-912e-4f8c-bd0f-92be89bcb6df
-  ws-opts:
-    headers:
-      Host: ded1up.hpcdn.shop
-    path: /14424/v7
-    v2ray-http-upgrade: true
-    v2ray-http-upgrade-fast-open: true
-- client-fingerprint: firefox
-  name: SG 🇸🇬 | @Raydikalx | 082DBD
-  network: tcp
-  port: 25239
-  reality-opts:
-    public-key: 0hYbfdNYeWetabbW1wCcrwi0e1VQA45Jhgi42YxU5nk
-    short-id: '!!str 9a382b227140e86f'
-  server: 164.37.224.244
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 628707
-  network: xhttp
-  port: 443
-  server: sy2.syragame.com
-  servername: sy.syragame.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: de92dc6a-4eed-4888-9077-1fc006ad339d
-  xhttp-opts:
-    host: sy.syragame.com
-    mode: auto
-    path: /
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 1C248F
-  network: tcp
-  port: 443
-  server: 139.162.27.96
-  servername: aka.ms
-  tls: true
-  type: vless
-  udp: true
-  uuid: f1178fbe-1420-4eef-b087-4f33b32b4a19
-- client-fingerprint: chrome
-  name: 'SG 🇸🇬 | @Raydikalx | 21FA73 #2'
-  network: ws
-  port: 443
-  server: free.nadun.store
-  servername: free.nadun.store
-  tls: true
-  type: vless
-  udp: true
-  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
-  ws-opts:
-    headers:
-      Host: free.nadun.store
-    path: /
-- name: 'SG 🇸🇬 | @Raydikalx | 57633C #2'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: moral-basilisk.rooster465.autos
-  type: trojan
-  udp: true
-- name: '未命名 #37'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: musical-mouse.rooster465.autos
+  type: http
+  udp: true
+  username: '1234'
+- name: 🇸🇬SG_4|1.2MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 54.151.242.187
   skip-cert-verify: true
-  type: trojan
+  type: http
   udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  network: tcp
-  port: 12512
-  reality-opts:
-    public-key: sO0RBMr_l8TLtZaYBX8n3NdI9AtaugUqJpCR1szNsyA
-    short-id: '!!str e692a8250d2e2fd0'
-  server: 46.137.202.178
-  servername: www.intel.com
-  tls: true
-  type: vless
+  username: '1234'
+- name: 🇸🇬SG_7｜1.8MB/s - 221ms
+  password: '!!str 1234'
+  port: 2080
+  server: 13.212.14.88
+  skip-cert-verify: true
+  type: http
   udp: true
-  uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
-- client-fingerprint: chrome
-  name: 'SG 🇸🇬 | @Raydikalx | 208F60 #2'
-  network: tcp
-  password: UX82473651
-  port: 443
-  server: inviting-ferret.rooster465.autos
-  type: trojan
+  username: '1234'
+- name: 🇸🇬SG_6|1.2MB/s
+  password: ''
+  port: 1083
+  server: 222.71.205.37
+  skip-cert-verify: true
+  type: socks5
   udp: true
+  username: ''
 - name: 🇸🇬SG_4|⬇️5.1MB/s
   network: ws
   password: a9570330-769d-11ef-90dc-1577c1651679
@@ -4678,7 +901,20 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: '新加坡 001 #1'
+  name: '新加坡 004 #1'
+  network: ws
+  port: 443
+  server: 18.143.159.173
+  skip-cert-verify: true
+  type: vmess
+  uuid: 1d8999fd-9045-40df-83e8-190721913412
+  ws-opts:
+    headers:
+      Host: 18.143.159.173
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '新加坡 005 #1'
   network: ws
   port: 16737
   server: 139.180.211.152
@@ -4691,7 +927,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '新加坡 002 #1'
+  name: '新加坡 006 #1'
   network: ws
   port: 18063
   server: 139.180.211.152
@@ -4702,6 +938,60 @@ proxies:
     headers:
       Host: m.zoom.us
     path: /Dialog Zoom
+- alterId: 1
+  cipher: auto
+  name: '新加坡 007 #1'
+  network: ws
+  port: 21888
+  server: 104.248.148.147
+  skip-cert-verify: true
+  type: vmess
+  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
+  ws-opts:
+    headers:
+      Host: 104.248.148.147
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '新加坡 008 #1'
+  network: ws
+  port: 80
+  server: 139.99.61.154
+  skip-cert-verify: true
+  type: vmess
+  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
+  ws-opts:
+    headers:
+      Host: 139.99.61.154
+    path: /vmess
+- alterId: 4
+  cipher: auto
+  name: '新加坡 009 #1'
+  network: ws
+  port: 443
+  server: 103.253.26.134
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: eeh7iewe.com
+    path: /ws
+- alterId: 4
+  cipher: auto
+  name: '新加坡 010 #1'
+  network: ws
+  port: 443
+  server: 103.253.26.20
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: zecjk.com
+    path: /ws
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡|@ripaojiedian
@@ -4719,7 +1009,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 03E73A
+  name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
   server: 6JiziO8PxQAXBAtZ.v.3dns.vip
@@ -4727,543 +1017,418 @@ proxies:
   skip-cert-verify: false
   tls: true
   type: vmess
-  udp: true
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
       Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
     path: /ws-vmess
-- name: SG 🇸🇬 | @Raydikalx | 562461
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  type: hysteria2
-- name: 🇸🇬SG_11
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: SG 🇸🇬 | @Raydikalx | 8FC69B
-  password: y2demTOKv5GdWcxB
-  port: 8388
-  server: 132.243.238.21
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: 🇸🇬SG_8
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.236
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: '🇸🇬SG_25|807KB/s|A004-260618 #1'
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.235.122
-  type: ss
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | 97BA3A
-  network: tcp
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 139.180.146.200
-  type: trojan
-  udp: true
-- name: SG 🇸🇬 | @Raydikalx | AA9F76
-  network: ws
-  port: 14430
-  server: 178.94.25.73
-  servername: 178.94.25.73
-  tls: false
-  type: vless
-  udp: true
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-  ws-opts:
-    headers:
-      Host: 178.94.25.73
-    path: /vless
 - client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7198EF
-  network: ws
-  port: 53646
-  server: 54.179.79.12
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8bcbf86d-1f93-4dc7-a9e8-b954928f2347
-  ws-opts:
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
-  name: SG 🇸🇬 | @Raydikalx | AF0442
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 0A55D7 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: za53zkNAm5tPgC6ZTU1oM90ofHaI9ODk-6msB-M3cWU
-    short-id: '!!str 0f65424c53d491e6'
-  server: 149.104.30.138
-  servername: www.bing.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a33cfdfd-90af-4e5b-a42e-047293c528e6
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 7E3347
-  network: ws
-  port: 443
-  server: 47.237.85.7
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /stars/shows/friend?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | C83EFA
-  network: ws
-  port: 443
-  server: 47.84.109.138
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /collect/friends/stars?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 6530DA
-  network: ws
-  port: 443
-  server: 8.219.173.17
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /message?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 23CE2E
-  network: ws
-  port: 443
-  server: 8.222.155.193
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /mag/albums?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 47E081
-  network: ws
-  port: 443
-  server: 8.222.185.236
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /ads/directory/member?ed=2560
-- client-fingerprint: chrome
-  name: SG 🇸🇬 | @Raydikalx | 2DF193
-  network: ws
-  port: 53646
-  server: 54.179.79.12
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: d57b9436-a238-4066-8b11-d23ae57c5982
-  ws-opts:
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-    path: /@Marisa_kristi
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 58899B
-  network: tcp
-  port: 53386
-  server: 129.150.61.136
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | CF0750
-  network: tcp
-  port: 59121
-  server: 129.226.157.220
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 290599
-  network: tcp
-  port: 8443
-  server: 13.250.114.194
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 64
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 7E884C
-  network: ws
-  port: 80
-  server: 159.223.94.156
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
-  ws-opts:
-    path: /anti13.zingfast.vn
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C5D91D
-  network: ws
-  port: 53267
-  server: 167.150.100.81
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 0a4e5d12-f804-4991-a3bf-e45dbfcb1201
-  ws-opts:
-    path: /gx5hemjvd8
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E246D9
-  network: tcp
-  port: 53386
-  server: 213.35.103.177
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 1735A6
-  network: ws
-  port: 443
-  server: 2nj8qyoHuZwgCP8J.v.3dns.vip
-  servername: 2nj8qyoHuZwgCP8J.v.3dns.vip
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
-  ws-opts:
-    headers:
-      Host: 2nj8qyoHuZwgCP8J.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 3577BA
-  network: ws
-  port: 55002
-  server: 45.127.32.220
-  servername: www.bing.com
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b25731af-0428-4274-be5d-31a273a8d632
-  ws-opts:
-    headers:
-      Host: www.bing.com
-    path: b25731af-0428-4274-be5d-31a273a8d632-vm
-- alterId: 0
-  cipher: auto
-  name: 未知 VMESS-349 | free-nodes
-  network: tcp
-  port: '443'
-  server: 45.32.120.173
-  servername: ''
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E0CF2C
-  network: tcp
-  port: 23267
-  server: 47.236.207.245
-  servername: 47.236.207.245
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6a15faf6-3d61-4c93-974e-8ca01f2aa451
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
-  network: tcp
-  port: 29521
-  server: 47.236.207.245
-  servername: 47.236.207.245
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | EB55D4
-  network: tcp
-  port: 57614
-  server: 5.34.176.111
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 4e55ce40-9f8e-417d-f8ae-aa6af97a7097
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E93E65
-  network: ws
-  port: 443
-  server: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  servername: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  tls: true
-  type: vmess
-  udp: true
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: 5FPTMOqdtsxQRFmA.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | F58635
-  network: ws
-  port: 443
-  server: Aim7HqTuvNOofcsx.v.3dns.vip
-  servername: Aim7HqTuvNOofcsx.v.3dns.vip
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Aim7HqTuvNOofcsx.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C76D47
-  network: tcp
-  port: 8443
-  server: awlix4.pcjxq.digital
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 471CC1
-  network: ws
-  port: 443
-  server: gs03-1.guoshi1520.com
-  servername: gs03-1.guoshi1520.com
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 82ff6d30-2920-4ebd-b95c-b016ede1a841
-  ws-opts:
-    headers:
-      Host: gs03-1.guoshi1520.com
-    path: /82ff6d30
-- alterId: 0
-  cipher: auto
-  name: 未知 VMESS-381 | free-nodes
-  network: ws
-  port: '443'
-  server: K5DYRTmkNsLnAj8V.v.3dns.vip
-  servername: K5DYRTmkNsLnAj8V.v.3dns.vip
-  tls: true
-  type: vmess
-  udp: true
-  uuid: b89b702b-31ef-4f6a-85df-c264795a987b
-  ws-opts:
-    headers:
-      Host: K5DYRTmkNsLnAj8V.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 未知 VMESS-469 | free-nodes
-  network: tcp
-  port: '22324'
-  server: magicvip.iddns.ir
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5516DE
-  network: ws
-  port: 443
-  server: singapore01.zgjok.com
-  servername: singapore01.zgjok.com
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 9469bf84-6e2a-4cc2-84e9-f334161a9e94
-  ws-opts:
-    headers:
-      Host: singapore01.zgjok.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 未知50
-  network: tcp
-  port: 10001
-  server: sy.australiacaregroup.site
+    public-key: wSLW8DGUOMkRuCFWnBs31PYwBtvcHbBUGHu_dDTBYgc
+    short-id: '!!str 829330332af8c863'
+  security: reality
+  server: 172.104.49.9
+  servername: www.cloudflare.com
   skip-cert-verify: true
   tls: true
-  type: vmess
+  type: vless
   udp: true
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D2A027
+  uuid: d9677f03-95c1-4357-9b31-b35b732bd188
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇸🇬SG_147|696KB/s|M003-260806 #1'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
+    short-id: '!!str 9930177816ab09da'
+  server: 206.206.76.75
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 88D59C - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
+    short-id: '!!str b2efed6d157e7bb0'
+  security: reality
+  server: 5.34.177.164
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
+  network: tcp
+  port: 41688
+  reality-opts:
+    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+    short-id: '!!str 7f342137c20387'
+  server: 54.169.200.246
+  servername: www.intel.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+- client-fingerprint: chrome
+  name: '🇳🇱NL_330|131KB/s|S004-260618 #1'
+  network: tcp
+  port: 25452
+  reality-opts:
+    public-key: zJI16_ywLd4clshY0IQQPxQ_YBbIq2b0XTO_dnTJOy4
+    short-id: '!!str fe51f413b9646e97'
+  server: 164.37.224.232
+  servername: www.ns.nl
+  tls: true
+  type: vless
+  udp: true
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+- name: SG 🇸🇬 | @Raydikalx | 21FA73
   network: ws
   port: 443
-  server: wap.appleid.bf
-  servername: gw.alicdn.com
-  tls: false
-  type: vmess
+  server: free.nadun.store
+  servername: free.nadun.store
+  tls: true
+  type: vless
   udp: true
-  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
   ws-opts:
     headers:
-      Host: gw.alicdn.com
-    path: /CAT
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 9E4ECB
-  network: tcp
-  port: 53385
-  server: x-ui.zxhh.top
-  tls: false
-  type: vmess
+      Host: free.nadun.store
+    path: /
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: becc6caf9bea
+  name: SG 🇸🇬 | @Raydikalx | 1EB2BA
+  network: grpc
+  port: 25454
+  reality-opts:
+    public-key: YOgsoXtChX3RvA0Gf9SSsP8VLP4GGk7dytVBo9qZCH4
+    short-id: '!!str 221ba0d14384ccf1'
+  server: 164.37.224.232
+  servername: www.ns.nl
+  tls: true
+  type: vless
   udp: true
-  uuid: 6aac0241-0c66-4bec-942d-e8a8d9b11a3a
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 67E8A6
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇸🇬SG_20|197KB/s #1'
   network: tcp
-  port: 53386
-  server: x-ui.zxhh.top
-  tls: false
-  type: vmess
+  port: 10574
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
   udp: true
-  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #12'
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 1CB226 - ...
+  network: tcp
+  port: 12972
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  security: reality
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ C18D52 - ...
+  network: tcp
+  port: 17623
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  security: reality
+  server: 3.0.111.82
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  name: 'SG新加坡 #14'
+  network: tcp
+  port: 21002
+  reality-opts:
+    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
+    short-id: '!!str a52a4528cd4d4c52'
+  server: 545.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
+- client-fingerprint: chrome
+  name: 'SG新加坡 #18'
+  network: tcp
+  port: 21003
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str bab49aa4c2a88d27'
+  server: 511.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  name: 'SG新加坡 #17'
+  network: tcp
+  port: 21004
+  reality-opts:
+    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
+    short-id: '!!str 4ba266730580fd96'
+  server: 545.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
+- client-fingerprint: chrome
+  name: 'SG新加坡 #20'
+  network: tcp
+  port: 21002
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str 3ab8d93dd9b1a5be'
+  server: 511.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  name: 'SG新加坡 #15'
+  network: tcp
+  port: 21003
+  reality-opts:
+    public-key: 7RyQhh-unO6BjkHRVycWKlFyQgJ3vi5_bAI3Mc8CGCA
+    short-id: '!!str 5a2d904fe6d0a39b'
+  server: 545.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: b17f6233-6726-41ff-9f62-fde7ccdbd282
+- client-fingerprint: chrome
+  name: 'SG新加坡 #5'
+  network: tcp
+  port: 21001
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str ab39fc68ab3dee81'
+  server: 511.150333.xyz
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | 3C3C36
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: c65d2504-f68e-4948-841d-0a2dc5d66fbe
+  ws-opts:
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | 2CF12C
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  servername: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7e622534-4a90-40ba-bb30-5cb5403be121
+  ws-opts:
+    headers:
+      Host: d-l28t5-65-b.pbe40wmcujaw726h7cpqernzmawz4stwtrnqve0n1s5reht.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | 246D0C
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: c6e09f95-bf02-4854-bcba-7a977a0f8ecd
+  ws-opts:
+    headers:
+      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
+    path: /@Marisa_kristi
+- name: SG 🇸🇬 | @Raydikalx | 208F60
+  network: tcp
   password: UX82473651
   port: 443
-  server: fond-mammoth.rooster465.autos
-  sni: fond-mammoth.rooster465.autos
+  server: inviting-ferret.rooster465.autos
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 日本3|@ripaojiedian #3'
-  network: ws
+  udp: true
+- name: SG 🇸🇬 | @Raydikalx | 57633C
+  network: tcp
+  password: UX82473651
   port: 443
-  server: kneNaKHeSXnZH259.v.3dns.vip
-  servername: kneNaKHeSXnZH259.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kneNaKHeSXnZH259.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬 新加坡|@ripaojiedian #3'
-  network: ws
-  port: 443
-  server: ASaqYIDZa9WDQ9Kq.v.3dns.vip
-  servername: ASaqYIDZa9WDQ9Kq.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬 新加坡2|@ripaojiedian #3'
-  network: ws
-  port: 443
-  server: 6JiziO8PxQAXBAtZ.v.3dns.vip
-  servername: 6JiziO8PxQAXBAtZ.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇰🇷 韩国|@ripaojiedian #3'
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  servername: 8nTzyR5KNivfabaT.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇺🇸 美国2|@ripaojiedian #3'
-  network: ws
-  port: 443
-  server: bJ1Aa2ZyJxYamYuK.v.3dns.vip
-  servername: bJ1Aa2ZyJxYamYuK.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: bJ1Aa2ZyJxYamYuK.v.3dns.vip
-    path: /ws-vmess
+  server: moral-basilisk.rooster465.autos
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
-  name: '🇸🇬SG_94|474KB/s|F003-260618 #1'
+  name: SG 🇸🇬 | @Raydikalx | D3F0F7
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 30b40928-f431-4c83-bfed-44f1243d16ff
+  ws-opts:
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    path: /@Marisa_kristi
+- client-fingerprint: chrome
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 13851A - ...
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 56.10.9.77
+  sni: inviting-ferret.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: SG 🇸🇬 | @Raydikalx | 38FDAB
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2949e720-4588-4edc-8642-ff2b7b368c78
+  ws-opts:
+    headers:
+      Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    path: /@Marisa_kristi
+- name: SG 🇸🇬 | @Raydikalx | 8CFF33
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: musical-mouse.rooster465.autos
+  type: trojan
+  udp: true
+- cipher: aes-256-gcm
+  name: Singapore_Singapore_ss_1051
+  password: qpSevKaUXYQKvSjp
+  port: 8388
+  server: 139.180.220.175
+  type: ss
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #24'
+  password: UX82473651
+  port: 443
+  server: 47.131.250.125
+  type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #25'
+  password: UX82473651
+  port: 443
+  server: 54.151.181.75
+  type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #26'
+  password: UX82473651
+  port: 443
+  server: 3.1.252.137
+  type: trojan
+- name: 未知 TROJAN-144 | free-nodes
+  password: UX82473651
+  port: 443
+  server: 18.141.136.8
+  type: trojan
+- name: AutoAiVPN690857
+  network: ws
+  port: 80
+  server: support.zoom.us
+  servername: u.srilankangrill.online
+  tls: false
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_134|744KB/s|M003-260806 #1'
   network: ws
   port: 443
-  server: 139.59.225.43
+  server: 104.21.89.41
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- name: 🇸🇬SG_4｜1.8MB/s｜GPT⁺｜YT-SG｜NF｜0...
+  port: 1080
+  server: 47.236.168.243
+  tls: false
+  type: socks5
+  username: ODg4ODo4ODg4
+- client-fingerprint: chrome
+  name: '🇸🇬SG_62|326KB/s|A004-260618 #1'
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  servername: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
+  tls: true
+  type: vless
+  uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
+  ws-opts:
+    headers:
+      Host: 7nnoiou0z.3xn99hzq2sh7iekktpkeq7rofs3qc8iohrqs4pb9p.workers.dev
+    path: '%2F%40Marisa_kristi'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_150|728KB/s|F003-260618 #1'
+  network: ws
+  port: 8443
+  server: 109.176.19.244
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -5273,66 +1438,33 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
 - client-fingerprint: chrome
-  name: '🇸🇬SG_57|721KB/s|A004-260618 #1'
-  network: ws
-  port: 443
-  server: free.nadun.store
-  servername: free.nadun.store
-  tls: true
-  type: vless
-  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
-  ws-opts:
-    path: '%2F'
-- name: '🇸🇬SG_85|150KB/s|A001-260618 #1'
-  network: ws
-  port: 80
-  server: free.sahanwickramasinghe.me
-  tls: false
-  type: vless
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
-  ws-opts:
-    headers:
-      Host: free.sahanwickramasinghe.me
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇸🇬SG_91|323KB/s|A004-260618 #1'
+  name: '🇸🇬SG_109|578KB/s|M003-260806 #1'
   network: ws
   port: 8443
-  server: free.sahanwickramasinghe.me
-  servername: free.sahanwickramasinghe.me
+  server: news.zoom.us
+  servername: u.srilankangrill.online
   tls: true
   type: vless
-  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
   ws-opts:
     headers:
-      Host: free.sahanwickramasinghe.me
+      Host: u.srilankangrill.online
     path: '%2F'
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG_13|886KB/s|C002-260622 #1'
-  network: raw
-  port: '18000'
-  server: 149.88.23.207
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: chrome
-  name: '🇸🇬SG_47|434KB/s|B007-260618 #1'
+- name: '🇸🇬SG_137|780KB/s|M003-260806 #1'
   network: ws
-  port: 443
-  server: 216.173.67.59
-  servername: ccc.010304.xyz
-  tls: true
+  port: 80
+  server: 170.114.45.6
+  tls: false
   type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
   ws-opts:
     headers:
-      Host: ccc.010304.xyz
+      Host: u.srilankangrill.online
     path: '%2F'
 - alpn:
   - http/1.1
   client-fingerprint: chrome
-  name: '🇸🇬SG_77|543KB/s|A004-260618 #1'
+  name: '🇸🇬SG_73|718KB/s|A004-260618 #1'
   network: ws
   port: 443
   server: 188.114.97.6
@@ -5345,19 +1477,141 @@ proxies:
       Host: free.nadun.store
     path: '%2F'
 - client-fingerprint: chrome
-  name: '🇸🇬SG_105|249KB/s|M003-260806 #1'
+  name: '🇸🇬SG_37|538KB/s|A004-260618 #1'
   network: ws
   port: 443
-  server: 104.21.28.176
-  servername: sg.lovehk.xyz
+  server: free.nadun.store
+  servername: free.nadun.store
   tls: true
   type: vless
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+  ws-opts:
+    path: '%2F'
+- name: '🇸🇬SG_92|73KB/s|A004-260618 #1'
+  network: ws
+  port: 80
+  server: support.zoom.us
+  servername: support.zoom.us
+  tls: false
+  type: vless
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
   ws-opts:
     headers:
-      Host: sg.lovehk.xyz
-    path: '%2FSingapore1'
-- name: '🇸🇬SG_59|546KB/s|C002-260622 #1'
+      Host: free.sahanwickramasinghe.me
+    path: '%2F'
+- name: '🇸🇬SG_21|1.0MB/s|R002-260618 #1'
+  password: f87376e17da040ed04c9665ce8972930
+  port: 50160
+  server: 138.2.73.238
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: '🇸🇬SG_94|418KB/s|F003-260618 #1'
+  network: ws
+  port: 443
+  server: 139.59.225.43
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_128|698KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.19.178.244
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_136|591KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.24.11.68
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 'CA 🇨🇦 | @Raydikalx | C53210 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.189
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '越南 #1'
+  network: ws
+  port: 443
+  server: 103.161.179.171
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_122|740KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.235
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: unsafe
+  name: '🇸🇬SG_120|662KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.233
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_131|648KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.21.5.75
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- name: '🇸🇬SG_63|494KB/s|A004-260618 #1'
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   port: 443
   server: vpn-sg-001.fastervpn.world
@@ -5365,14 +1619,354 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
-- name: '🇸🇬SG_96|675KB/s|R002-260618 #1'
-  port: 1080
-  server: 47.236.168.243
+- client-fingerprint: unsafe
+  name: '🇸🇬SG_119|762KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.199
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- name: '🇸🇬SG_78|692KB/s|M002-260618 #1'
+  network: ws
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  port: 443
+  server: sg2.998998.best
+  sni: nat6.outsidemyheart.space
+  type: trojan
+  ws-opts:
+    path: '%2Feriujtheriughwiue%3Fed%3D2560'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_115|681KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.117
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_123|737KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.2
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_118|508KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.198
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 'CA 🇨🇦 | @Raydikalx | 25A781 #2'
+  network: ws
+  port: 443
+  server: 104.16.156.227
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_112|713KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.104
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_114|594KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.116
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_117|758KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.191
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '@npv_vpn11 #1199'
+  network: ws
+  port: 8443
+  server: centurylink.es
+  servername: free.sahanwickramasinghe.me
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  ws-opts:
+    headers:
+      Host: free.sahanwickramasinghe.me
+    path: '%2F'
+- name: '🇸🇬SG_138|781KB/s|M003-260806 #1'
+  network: ws
+  port: 80
+  server: 170.114.46.6
   tls: false
-  type: socks5
-  username: ODg4ODo4ODg4
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_139|700KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 188.114.97.6
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_111|378KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.103
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_125|694KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.3.98
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_132|654KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.21.60.109
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇸🇬SG_84|648KB/s|M002-260618 #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
+    short-id: '!!str 133a3f10a1581047'
+  server: 206.206.78.36
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
+- client-fingerprint: chrome
+  name: '🇸🇬SG_127|583KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.18.26.90
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_121|730KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.234
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_34|353KB/s|A004-260618 #1'
+  network: ws
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: '%2Ffree-server.techsonic.dev'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_95|775KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 165.245.182.116
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_135|696KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.24.0.184
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_110|561KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.100
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_82|695KB/s|F003-260618 #1'
+  network: ws
+  port: 8443
+  server: 76.13.218.192
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_133|768KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.21.70.228
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_130|722KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.21.236.63
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_113|480KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.16.10.10
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_126|736KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.17.117.137
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
 - client-fingerprint: firefox
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  name: '未知 VLESS-157 #1'
   network: ws
   port: 443
   server: 45.118.133.249
@@ -5386,186 +1980,128 @@ proxies:
       Host: free.nadun.store
     path: '%2F'
 - client-fingerprint: chrome
-  name: '🇸🇬SG_95|751KB/s|M003-260806 #1'
-  network: ws
-  port: 443
-  server: 165.245.182.116
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
-- alpn:
-  - h3
-  congestion-controller: bbr
-  name: '🇸🇬SG_51|697KB/s|M002-260618 #1'
-  password: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  port: 33738
-  server: sg2-8sb.6121999.dpdns.org
-  sni: sg2-8sb.6121999.dpdns.org
-  type: tuic
-  udp-relay-mode: quic
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-- client-fingerprint: chrome
-  name: '🇸🇬SG_43|604KB/s|A004-260618 #1'
-  network: ws
-  port: 2096
-  server: 139.162.27.96
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: '%2Ffree-server.techsonic.dev'
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG_53|1008KB/s|M002-260618 #1'
-  network: raw
-  port: '18000'
-  server: ww11.levikogjgfdd.ir
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: '🇸🇬SG_93|84KB/s|A004-260618 #1'
-  network: ws
-  port: 80
-  server: support.zoom.us
-  servername: free.sahanwickramasinghe.me
-  tls: false
-  type: vless
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
-  ws-opts:
-    headers:
-      Host: free.sahanwickramasinghe.me
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇸🇬SG_84|758KB/s|F003-260618 #1'
+  name: AutoAiVPN821434
   network: ws
   port: 8443
-  server: 76.13.218.192
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG_3|738KB/s|C002-260622 #1'
-  network: raw
-  port: '18000'
-  server: 149.88.23.202
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- client-fingerprint: chrome
-  name: '🇸🇬SG_92|92KB/s|A004-260618 #1'
-  network: ws
-  port: 8443
-  server: centurylink.es
-  servername: free.sahanwickramasinghe.me
-  tls: true
-  type: vless
-  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
-  ws-opts:
-    headers:
-      Host: free.sahanwickramasinghe.me
-    path: '%2F'
-- name: '🇸🇬SG_81|656KB/s|M002-260618 #1'
-  network: ws
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: sg2.998998.best
-  sni: nat6.outsidemyheart.space
-  type: trojan
-  ws-opts:
-    path: '%2Feriujtheriughwiue%3Fed%3D2560'
-- cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1559... #2'
-  password: qpSevKaUXYQKvSjp
-  port: 8388
-  server: 139.180.220.175
-  type: ss
-- name: 🇸🇬 新加坡 | SGP 2
-  network: ws
-  password: trojan
-  port: 8443
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: longwanghen.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: longwanghen.pages.dev
-    path: /
-- name: '🇸🇬 新加坡 | SGP #2'
-  password: trojan
-  port: 8443
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: longwanghen.pages.dev
-  type: trojan
-- alpn:
-  - http/1.1
-  name: '🇸🇬[www.v2nodes.com] vless-SG #...'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: lucasjow.us.ci
+  server: 141.193.213.20
+  servername: u.srilankangrill.online
   skip-cert-verify: false
   tls: true
   type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
   ws-opts:
     headers:
-      Host: lucasjow.us.ci
-    path: /cart/docs/www/proxyip=108.160.132.132fp=chrome
-- name: 🇸🇬SG_1|1.8MB/s
-  password: None
-  port: 9090
-  server: 128.199.254.13
-  type: http
+      Host: u.srilankangrill.online
+    path: '%2F'
 - client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #1'
-  network: ws
-  port: 443
-  server: 104.21.83.194
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3c5f522d-6695-474f-abcf-2b1a65d503fa
-  ws-opts:
-    headers:
-      Host: sg.lovehk.xyz
-    path: /Singapore1
-- client-fingerprint: chrome
-  name: 🇸🇬_新加坡_124
+  name: '🇸🇬SG_108|290KB/s|M003-260806 #1'
   network: ws
   port: 8443
-  server: 149.118.55.215
-  servername: tongue-expects-begins-old.trycloudflare.com
+  server: 141.193.213.21
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_129|470KB/s|M003-260806 #1'
+  network: ws
+  port: 443
+  server: 104.19.32.166
+  servername: u.srilankangrill.online
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: '%2F'
+- client-fingerprint: chrome
+  name: '🇸🇬SG_38|583KB/s|B007-260618 #1'
+  network: ws
+  port: 443
+  server: 216.173.67.59
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: '%2F'
+- encryption: none
+  flow: ''
+  name: 未知 VLESS-239
+  network: tcp
+  port: 16263
+  server: 47.237.74.17
+  tls: false
+  type: vless
+  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
+- name: 🇸🇬SG_3|3.2MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 54.151.156.21
   skip-cert-verify: true
+  type: http
+  username: '1234'
+- name: '🇸🇬 新加坡 | SGP #1 #1'
+  network: tcp
+  port: 10443
+  server: 178.94.25.73
+  servername: 178.94.25.73
+  tls: false
+  type: vless
+  udp: true
+  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  ws-opts:
+    path: /
+- name: '🇸🇬 新加坡 | SGP #2 #1'
+  network: ws
+  port: 14430
+  server: 178.94.25.73
+  servername: 178.94.25.73
+  tls: false
+  type: vless
+  udp: true
+  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  ws-opts:
+    headers:
+      Host: 178.94.25.73
+    path: /vless
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: mlkem768x25519plus.native.0rtt.100-111-1111.75-0-111.50-0-3333.ftcfrMeW8BZe83oGjRMzHnCiatP89lRTLREh9JuodBc
+  flow: xtls-rprx-vision
+  name: 🇸🇬 新加坡 | SGP 3
+  network: xhttp
+  port: 443
+  server: e05be65a.bilibiliapp.cn
+  servername: 087f701e.m3u8.sgascacg.pay.cfcndns.pp.ua
   tls: true
   type: vless
   udp: true
-  uuid: c01391fa-7bd3-4b9d-b2db-4829b75e30da
-  ws-opts:
-    headers:
-      Host: tongue-expects-begins-old.trycloudflare.com
-    path: /
+  uuid: d5556fce-cc34-4df9-b1ff-755b02a3fc9a
+  xhttp-opts:
+    host: e05be65a.bilibiliapp.cn
+    mode: auto
+    no-grpc-header: false
+    no-sse-header: false
+    path: /zones
+    sc-max-buffered-posts: 60
+    sc-max-each-post-bytes: 1000000
+    sc-min-posts-interval-ms: 5
+    sc-stream-up-server-secs: 5-10
+    x-padding-bytes: 100-1000
 - client-fingerprint: chrome
-  name: 🇸🇬_新加坡_131
+  name: 🇸🇬_新加坡_45
   network: ws
-  port: 443
-  server: 139.59.225.43
+  port: 8443
+  server: 109.176.19.244
   servername: snip.edgeoneai.cc.cd
   skip-cert-verify: true
   tls: true
@@ -5611,68 +2147,324 @@ proxies:
       Host: smtp.mmadcoffee.info
     path: /
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
-  network: ws
-  port: 443
-  server: 104.234.239.139
-  servername: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  type: vless
-  uuid: 70756c73-0000-4000-8000-650000000000
-  ws-opts:
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-    path: '%2Fpulse'
-- alpn:
-  - http/1.1
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
-  network: ws
-  port: 2083
-  server: 104.18.1.1
-  servername: vlsovip.1d.mom
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlsovip.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080fp=iossecurity=tls
-- client-fingerprint: chrome
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
+  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
   network: ws
   port: 443
-  server: 104.234.239.139
-  servername: parsa-panel-u48we.wotic15356.workers.dev
+  server: 43.174.193.1
+  servername: ccc.010304.xyz
   tls: true
   type: vless
-  uuid: 70756c73-0000-4000-8000-650000000000
+  uuid: d342d11e-d224-4463-b982-532309285094
   ws-opts:
     headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-    path: /pulse
-- name: 🇸🇬SG_2|4.9MB/s
+      Host: ccc.010304.xyz
+    path: /fp=chrome
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-8.222.249.101-240
+  network: ws
+  port: 443
+  server: K5DYRTmkNsLnAj8V.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: b89b702b-31ef-4f6a-85df-c264795a987b
+  ws-headers:
+    Host: K5DYRTmkNsLnAj8V.v.3dns.vip
+  ws-path: /ws-vmess
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇸🇬 004  | ⬇️ 17KB/s
+  network: tcp
+  port: 10444
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: '!!str 8debcf36f1cc69ff'
+  server: 178.94.25.73
+  servername: video.yandex.ru
+  tls: true
+  type: vless
+  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+- name: 🇸🇬SG_4｜3.4MB/s - 222ms
+  password: '!!str 1234'
+  port: 2080
+  server: 54.255.133.243
+  skip-cert-verify: true
+  type: http
+  username: '1234'
+- name: 🇸🇬SG_5｜3.2MB/s - 221ms
   password: '!!str 1234'
   port: 2080
   server: 54.169.52.51
   skip-cert-verify: true
   type: http
   username: '1234'
-- name: 🇸🇬SG_3|4.2MB/s
-  password: '!!str 1234'
-  port: 2080
-  server: 54.151.156.21
-  skip-cert-verify: true
-  type: http
-  username: '1234'
-- name: 🇸🇬SG_4|4.6MB/s
+- name: 🇸🇬SG_6｜2.1MB/s - 218ms
   password: '!!str 1234'
   port: 2080
   server: 13.250.21.56
   skip-cert-verify: true
   type: http
   username: '1234'
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇸🇬SG_1｜2.9MB/s - 22ms
+  network: ws
+  port: 8443
+  server: news.zoom.us
+  tls: true
+  type: vless
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇸🇬SG_3｜2.2MB/s - 5ms
+  network: ws
+  port: 8443
+  server: 141.193.213.21
+  tls: true
+  type: vless
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬 新加坡 - 298ms
+  network: ws
+  port: 443
+  server: ASaqYIDZa9WDQ9Kq.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
+    path: /
+- encryption: none
+  flow: ''
+  name: 🇸🇬SG新加坡丨yoyapai.com - 5ms
+  network: ws
+  port: 8880
+  server: 45.40.149.50
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇸🇬SG新加坡丨yoyapai.com_3 - 221ms
+  network: ws
+  port: 443
+  server: 47.131.189.221
+  tls: true
+  type: vless
+  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
+- encryption: none
+  flow: ''
+  name: 🇸🇬SG新加坡丨yoyapai.com_4 - 5ms
+  network: ws
+  port: 8880
+  server: 172.64.94.251
+  tls: false
+  type: vless
+  uuid: fb5058f5-a9ed-424e-9ed7-33d455438286
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇸🇬SG新加坡丨yoyapai.com_5 - 227ms
+  network: ws
+  port: 443
+  server: 103.25.202.102
+  tls: true
+  type: vless
+  uuid: a853e120-3570-462b-aec1-e8f3d4f92d24
+- name: 🇸🇬SG_1｜424KB/s｜R002-260618 01 ...
+  password: e4b72b531a2d10900519
+  port: 443
+  server: 146.70.29.45
+  sni: 92461d2d.acsnet.co
+  tls: true
+  type: http
+  username: testuser1
+- encryption: none
+  flow: ''
+  name: 🇸🇬SG_2｜65KB/s｜K001-260618 01 -...
+  network: ws
+  port: 80
+  server: 172.67.148.41
+  tls: false
+  type: vless
+  uuid: 8be64379-08a5-4362-b8cf-234a65409bda
+- encryption: none
+  flow: ''
+  name: 🇸🇬SG_6｜220KB/s｜C002-260622 01 ...
+  network: ws
+  port: 8880
+  server: 104.18.10.118
+  tls: false
+  type: vless
+  uuid: 8b9986f7-889c-4213-bc64-fafe012fabd6
+- encryption: none
+  flow: ''
+  name: 🇸🇬SG_12｜258KB/s｜A004-260618 01...
+  network: ws
+  port: 8080
+  server: 104.18.35.86
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- alterId: 0
+  cipher: auto
+  name: SG新加坡(mibei77.com 米贝节点分享) - 23...
+  network: tcp
+  port: 10001
+  server: 62.146.233.139
+  tls: false
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- alterId: 0
+  cipher: auto
+  name: SG新加坡(mibei77.com 米贝节点分享) - 26...
+  network: ws
+  port: 10001
+  server: 159.australiacaregroup.site
+  tls: true
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  ws-opts:
+    headers:
+      Host: 159.australiacaregroup.site
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 'SG新加坡(mibei77.com 米贝节点分享) - 26... #1'
+  network: tcp
+  port: 10001
+  server: sy.australiacaregroup.site
+  tls: false
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 10 → tg@nicevpn123 - 228...
+  password: amazonskr05
+  port: 443
+  server: 13.250.61.18
+  type: ss
+- name: 🇸🇬 SG 16 → tg@nicevpn123 - 227...
+  password: yR7hP9aw5L
+  port: 443
+  server: 134.209.105.33
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
+- name: 🇸🇬 SG 27 → tg@nicevpn123 - 227...
+  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
+  port: 443
+  server: 139.162.49.215
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 SG 33 → tg@nicevpn123 - 218...
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
+  port: 443
+  server: 139.162.39.206
+  skip-cert-verify: true
+  type: trojan
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 40 → tg@nicevpn123 - 219...
+  password: amazonskr05
+  port: 443
+  server: 13.250.57.60
+  type: ss
+- name: 🇸🇬 SG 7 → tg@nicevpn123 - 228m...
+  password: I4bO2YDEgs
+  port: 443
+  server: 188.166.252.91
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 44579C - ...
+  network: ws
+  port: 443
+  server: free.nadun.store
+  tls: true
+  type: vless
+  uuid: 20ff936a-8eb5-4d27-9cce-93f2016d467b
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 246D0C - ...
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  tls: true
+  type: vless
+  uuid: c6e09f95-bf02-4854-bcba-7a977a0f8ecd
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 3C3C36 - ...
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  tls: true
+  type: vless
+  uuid: c65d2504-f68e-4948-841d-0a2dc5d66fbe
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 2CF12C - ...
+  network: ws
+  port: 8441
+  server: 45.77.241.190
+  tls: true
+  type: vless
+  uuid: 7e622534-4a90-40ba-bb30-5cb5403be121
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ D3F0F7 - ...
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  tls: true
+  type: vless
+  uuid: 30b40928-f431-4c83-bfed-44f1243d16ff
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 0DD43D - ...
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  tls: true
+  type: vless
+  uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: SG 🇸🇬 ｜ @Raydikalx ｜ 38FDAB - ...
+  network: ws
+  port: 627
+  server: 142.91.101.39
+  tls: true
+  type: vless
+  uuid: 2949e720-4588-4edc-8642-ff2b7b368c78
+- client-fingerprint: chrome
+  name: 'SG新加坡 #13'
+  network: ws
+  port: 51262
+  server: 175.41.179.37
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  tls: true
+  type: vless
+  uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
+  ws-opts:
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    path: '%2F%40Marisa_kristi'
 - name: 新加坡_2
   network: ws
   port: 627
@@ -5685,69 +2477,6 @@ proxies:
     headers:
       Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
     path: /@marisa_kristi
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬SG_15
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: UOLfRKeEoVxkp-APTF2OlvFkKSoiR2mWzUuhSWxcVmQ
-    short-id: '!!str 133a3f10a1581047'
-  server: 206.206.78.36
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: e3f0c894-0f76-4683-a751-6a93da8fd14d
-- client-fingerprint: chrome
-  name: 'SG新加坡 #12'
-  network: ws
-  port: 51262
-  server: 175.41.179.37
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  tls: true
-  type: vless
-  uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
-  ws-opts:
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    path: '%2F%40Marisa_kristi'
-- name: 🇸🇬SG_6
-  network: ws
-  port: 8880
-  server: 104.18.10.118
-  tls: false
-  type: vless
-  uuid: 8b9986f7-889c-4213-bc64-fafe012fabd6
-  ws-opts:
-    headers:
-      Host: morning-cell-adfc.99-c38.workers.dev
-    path: /pyip=ProxyIP.US.CMLiussss.net
-- client-fingerprint: chrome
-  name: 'SG新加坡 #5'
-  network: ws
-  port: 627
-  server: 142.91.101.39
-  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-  tls: true
-  type: vless
-  uuid: 8199228b-e84b-42a2-9268-e400391e483a
-  ws-opts:
-    headers:
-      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇸🇬 新加坡_3VMR6R
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: vUhHTgZiXSho6Nv84w_JZW7Mo7XjJr0TsOBf19Dpols
-    short-id: '!!str 37c94ae25b69a93a'
-  server: sg1.oh-node.com
-  servername: sg-hyp-api.hoyoverse.com
-  tls: true
-  type: vless
-  uuid: 7cfd34ae-edad-4cc5-9d6f-066f7add7829
 - name: 新加坡
   network: ws
   port: 51262
@@ -5760,23 +2489,16 @@ proxies:
     headers:
       Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     path: /@marisa_kristi
-- name: 🇸🇬SG_2
+- client-fingerprint: chrome
+  name: 'SG新加坡 #16'
   network: ws
-  port: 80
-  server: 172.67.148.41
-  servername: telegram4.freepersianland8.workers.dev
-  tls: false
+  port: 627
+  server: 142.91.101.39
+  servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+  tls: true
   type: vless
-  uuid: 8be64379-08a5-4362-b8cf-234a65409bda
+  uuid: 8199228b-e84b-42a2-9268-e400391e483a
   ws-opts:
     headers:
-      Host: telegram4.freepersianland8.workers.dev
-    path: /eyJqdW5rIjoiOW56N0hTRm9IS252IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==?ed=2560
-- name: 🇸🇬SG_14
-  network: tcp
-  password: A7GQgrEcSn
-  port: 119
-  server: cdn-dynmedia.shalana.shop
-  skip-cert-verify: true
-  sni: whatsapp.net
-  type: trojan
+      Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    path: '%2F%40Marisa_kristi'
