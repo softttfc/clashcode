@@ -9,6 +9,10 @@ check.py 校验报告
 [INFO] [YAML]   第 54784 行:     path: "/?ed=2560&https://t.me/WangCai2\U0001F1E8\U0001F1F3"
 [INFO] [YAML]   第 54799 行:     path: "/?ed=2560&https://t.me/YouTube@小青科学网\U0001F1E8\U0001F1F3"
 [INFO] [YAML]   第 54830 行:     path: "/?ed=2560&https://t.me/YouTube@小青科学网\U0001F1E8\U0001F1F3"
+[WARN] [YAML] 发现 3 处 short-id 裸写且形如科学计数法，Go yaml.v3（mihomo 使用）会误判为浮点数，导致 "invalid REALITY short ID"
+[WARN] [YAML]   第 40794 行: short-id: 9e8739  ← 建议改为 short-id: '9e8739'
+[WARN] [YAML]   第 89405 行: short-id: 4360e536  ← 建议改为 short-id: '4360e536'
+[WARN] [YAML]   第 157724 行: short-id: 9e8739  ← 建议改为 short-id: '9e8739'
 [WARN] [PROXY] 较新协议 'anytls'，老版本 Clash 核心可能不支持 @ proxies[187]
 [WARN] [PROXY] 较新协议 'anytls'，老版本 Clash 核心可能不支持 @ proxies[188]
 [WARN] [PROXY] 较新协议 'anytls'，老版本 Clash 核心可能不支持 @ proxies[189]
@@ -1477,7 +1481,7 @@ check.py 校验报告
 ======================================================================
 FATAL: 0
 ERROR: 9
-WARN : 1262
+WARN : 1266
 INFO : 197
 DIAG : 0  （诊断信息，非错误）
 
