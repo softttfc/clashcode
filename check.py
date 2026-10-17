@@ -28,6 +28,12 @@ check.py - Clash 节点文件校验工具
         - Q2.3 VLESS UUID 被替换为默认值
         - Q2.4 REALITY 字段完整性（public-key/short-id/fp）
         - Q2.5 grpc-opts.grpc-service-name 空值
+    13. 【本次新增】REALITY 字段 ERROR 级校验（check_reality_opts）
+        - public-key：必须是 43 位 base64url 字符串
+        - short-id：必须是十六进制字符串，长度偶数且 ≤ 16
+        - 命中即 FATAL/ERROR，能在 error_locations 里看到 proxies[N] 索引
+        - 目的：定位 mihomo 报 "invalid REALITY short ID"
+                / "invalid REALITY public key" 的具体节点
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO] / [DIAG]
@@ -96,6 +102,22 @@ HOST_FORBIDDEN_SUBSTRINGS = ('://',)
 
 # preprocess/rebuilder 用来清洗 name 的全角替换字符集
 SANITIZE_CHARS = {'＃', '＆', '＊', '｜', '＞', '＜', '…'}
+
+# ============================================================================
+# 【本次新增】REALITY 字段校验相关常量
+# ============================================================================
+# REALITY public-key 合法字符集（base64url 无 padding）
+VALID_PUBLIC_KEY_CHARS = set(
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    'abcdefghijklmnopqrstuvwxyz'
+    '0123456789-_'
+)
+
+# REALITY public-key 标准长度（mihomo 严格校验）
+PUBLIC_KEY_LEN = 43
+
+# REALITY short-id 合法字符集（十六进制，大小写均可）
+VALID_SHORT_ID_CHARS = set('0123456789abcdefABCDEF')
 
 
 # ============================================================================
@@ -433,6 +455,100 @@ def check_h2_opts(proxy, loc, rep, node_name):
 
 
 # ============================================================================
+# 【本次新增】1.6 reality-opts 详细校验
+# ============================================================================
+def check_reality_opts(proxy, loc, rep, node_name):
+    """
+    校验 reality-opts 的详细字段。
+
+    mihomo 严格校验：
+        - public-key：必须是 43 位 base64url 字符串
+        - short-id：必须是十六进制字符串，长度偶数且 ≤ 16
+        - 否则会报：
+            * "invalid REALITY public key"
+            * "invalid REALITY short ID"
+
+    覆盖范围：
+        - vless / anytls 等支持 reality 的协议
+        - 仅当 reality-opts 是 dict 时才校验
+        - 其他协议若出现 reality-opts 也检查（防御性）
+    """
+    ro = proxy.get('reality-opts')
+    if ro is None:
+        return
+    if not isinstance(ro, dict):
+        rep.error('PROXY',
+                  f'reality-opts 不是字典: {_describe_value(ro)}',
+                  loc)
+        return
+
+    prefix = f"[节点: {node_name}] " if node_name else ""
+
+    # ---- public-key 校验 ----
+    pk = ro.get('public-key')
+    if pk is None:
+        rep.warn('PROXY',
+                 f'{prefix}reality-opts 缺少 public-key 字段',
+                 loc)
+    elif not isinstance(pk, str):
+        rep.error('PROXY',
+                  f'{prefix}reality-opts.public-key 不是字符串 '
+                  f'(mihomo 会报 invalid REALITY public key): '
+                  f'{_describe_value(pk)}',
+                  loc)
+    else:
+        # 长度必须为 43
+        if len(pk) != PUBLIC_KEY_LEN:
+            rep.error('PROXY',
+                      f'{prefix}reality-opts.public-key 长度必须为 {PUBLIC_KEY_LEN} '
+                      f'(mihomo 会报 invalid REALITY public key)，'
+                      f'实际 {len(pk)}: {pk!r}',
+                      loc)
+        # 字符集校验
+        invalid_chars = [c for c in pk if c not in VALID_PUBLIC_KEY_CHARS]
+        if invalid_chars:
+            rep.error('PROXY',
+                      f'{prefix}reality-opts.public-key 含非法字符 '
+                      f'(仅允许 A-Z a-z 0-9 - _): {invalid_chars[:5]!r}  '
+                      f'原值: {pk!r}',
+                      loc)
+
+    # ---- short-id 校验 ----
+    sid = ro.get('short-id')
+    if sid is not None:
+        if not isinstance(sid, str):
+            # 例如 YAML 里写成不带引号的 2351e1 被解析为浮点数
+            rep.error('PROXY',
+                      f'{prefix}reality-opts.short-id 必须是字符串 '
+                      f'(mihomo 会报 invalid REALITY short ID，'
+                      f'YAML 里请加双引号): {_describe_value(sid)}',
+                      loc)
+        elif sid:  # 非空字符串才检查格式
+            # 长度上限 16
+            if len(sid) > 16:
+                rep.error('PROXY',
+                          f'{prefix}reality-opts.short-id 长度必须 ≤ 16 '
+                          f'(mihomo 会报 invalid REALITY short ID)，'
+                          f'实际 {len(sid)}: {sid!r}',
+                          loc)
+            # 长度必须是偶数
+            if len(sid) % 2 != 0:
+                rep.error('PROXY',
+                          f'{prefix}reality-opts.short-id 长度必须为偶数 '
+                          f'(hex 解码要求，mihomo 会报 invalid REALITY short ID)，'
+                          f'实际 {len(sid)}: {sid!r}',
+                          loc)
+            # 必须是十六进制
+            bad_hex = [c for c in sid if c not in VALID_SHORT_ID_CHARS]
+            if bad_hex:
+                rep.error('PROXY',
+                          f'{prefix}reality-opts.short-id 必须是十六进制字符 '
+                          f'(mihomo 会报 invalid REALITY short ID)，'
+                          f'非法字符: {bad_hex[:5]!r}  原值: {sid!r}',
+                          loc)
+
+
+# ============================================================================
 # 2. 节点字段校验
 # ============================================================================
 def check_proxy(proxy, idx, name_set, rep):
@@ -523,6 +639,8 @@ def check_proxy(proxy, idx, name_set, rep):
     check_ws_opts(proxy, loc, rep, node_name)
     check_grpc_opts(proxy, loc, rep, node_name)
     check_h2_opts(proxy, loc, rep, node_name)
+    # 【本次新增】reality-opts 详细校验（ERROR 级，进入 FATAL/ERROR 计数）
+    check_reality_opts(proxy, loc, rep, node_name)
     # ---------------------------
 
     # name 重复
