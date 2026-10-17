@@ -1,0 +1,192 @@
+======================================================================
+check.py 校验报告
+输入文件: crawclash.metarbd.yaml
+======================================================================
+
+[INFO] [YAML] 检测到 2 处 YAML 锚点/别名，mihomo 支持锚点，但建议使用 NoAliasDumper 避免兼容性问题。
+[INFO] [YAML]   第 18435 行:   password: "g12sQi#ss#&1"
+[INFO] [YAML]   第 18969 行:   password: "g12sQi#ss#&1"
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 节点特征诊断（用于定位"延迟测试全部失败"的原因）
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【1. 协议分布】
+[INFO] [DIAG]   vless: 1629 (43.9%)
+[INFO] [DIAG]   vmess: 1224 (33.0%)
+[INFO] [DIAG]   trojan: 419 (11.3%)
+[INFO] [DIAG]   ss: 276 (7.4%)
+[INFO] [DIAG]   http: 146 (3.9%)
+[INFO] [DIAG]   socks5: 15 (0.4%)
+[INFO] [DIAG] 
+[INFO] [DIAG] 【2. VLESS 节点】共 1629 个
+[INFO] [DIAG]   flow 分布:
+[INFO] [DIAG]     (空): 1137 (69.8%)
+[INFO] [DIAG]     xtls-rprx-vision: 492 (30.2%)
+[WARN] [DIAG]   ⚠️ UUID 被替换成默认值 (88888888-8888-8888-8888-888888888888) 的节点: 10 (0.6%)
+[WARN] [DIAG]      <-- 假设 1：这些节点认证必然失败
+[INFO] [DIAG]   UUID 长度分布:
+[INFO] [DIAG]     长度 36: 1629
+[WARN] [DIAG]   无 sni/servername 的节点: 1104 (67.8%)
+[WARN] [DIAG]      <-- 假设 2：TLS 握手可能失败
+[INFO] [DIAG]   network 分布:
+[INFO] [DIAG]     ws: 758
+[INFO] [DIAG]     tcp: 644
+[INFO] [DIAG]     xhttp: 98
+[INFO] [DIAG]     grpc: 90
+[INFO] [DIAG]     raw: 21
+[INFO] [DIAG]     httpupgrade: 18
+[INFO] [DIAG]   tls 分布:
+[INFO] [DIAG]     true: 1307
+[INFO] [DIAG]     false: 322
+[INFO] [DIAG]   security 分布:
+[INFO] [DIAG]     (无): 1011
+[INFO] [DIAG]     reality: 618
+[WARN] [DIAG]   XUDP 节点 (flow=xtls-rprx-vision*): 492 (30.2%)
+[WARN] [DIAG]      <-- 假设 3：需要服务端支持 Vision 流控
+[INFO] [DIAG] 
+[INFO] [DIAG] 【3. 诊断结论】
+[INFO] [DIAG]   1. UUID 被替换为默认值的节点 10 个 → 认证必然失败（最可能是主因）
+[INFO] [DIAG]   2. XUDP 节点 492 个 → 需服务端支持 Vision 流控，普通节点会握手失败
+[INFO] [DIAG]   3. 无 sni/servername 的节点 1104 个 → TLS 握手可能失败
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q1.1】proxies 名称全角清洗字符诊断
+[INFO] [DIAG] ==============================================================
+[WARN] [DIAG] ⚠️ 发现 2881 个节点 name 含清洗字符 （＃ ＆ ＊ ｜ ＞ ＜ …）
+[WARN] [DIAG]      说明上游脚本已对 proxies.name 做了 sanitize。若 proxy-groups 未同步，就会导致引用失配。
+[INFO] [DIAG]   前 10 个示例:
+[INFO] [DIAG]     proxies[10] 'US%E7%BE%8E%E5%9B%BD%28v2clash…'
+[INFO] [DIAG]     proxies[12] 'VLESS-dey.lnmarketplace.net - …'
+[INFO] [DIAG]     proxies[24] 'VLESS-funagfrdfs.alixxplay.com…'
+[INFO] [DIAG]     proxies[25] 'SG新加坡(v2clash.blog 2026-10.16更…'
+[INFO] [DIAG]     proxies[26] 'VLESS-3696b38bsg.murphyweb.sbs…'
+[INFO] [DIAG]     proxies[30] 'VLESS-ware.tunnelgate.org - 25…'
+[INFO] [DIAG]     proxies[35] 'KR%E9%9F%A9%E5%9B%BD%28v2clash…'
+[INFO] [DIAG]     proxies[36] 'VLESS-funagfrdfs.alixxplay.com… ＃1'
+[INFO] [DIAG]     proxies[37] 'VLESS-funagfrdfs.alixxplay.com… ＃2'
+[INFO] [DIAG]     proxies[38] 'VLESS-funagfrdfs.alixxplay.com… ＃3'
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q2.1】WebSocket 路径 URL 编码诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   含 ws-opts 的节点总数: 1171
+[INFO] [DIAG]   ├ path 含 "%" (URL编码): 0
+[INFO] [DIAG]   ├ path 不以 "/" 开头:     0
+[INFO] [DIAG]   └ path 为空字符串:         0
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q2.2】VLESS XUDP(Vision) 与传输层冲突诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   VLESS 节点总数: 1629
+[INFO] [DIAG]   XUDP(Vision) 节点总数: 492
+[INFO] [DIAG]   XUDP 节点的 network 分布:
+[INFO] [DIAG]     tcp: 472
+[INFO] [DIAG]     raw: 19
+[INFO] [DIAG]     xhttp: 1
+[WARN] [DIAG] ⚠️ 致命冲突: 20 个 XUDP 节点使用了非 TCP 传输！
+[WARN] [DIAG]     (xtls-rprx-vision 必须搭配 network=tcp，否则 mihomo 会直接握手失败)
+[INFO] [DIAG]   前 10 个示例:
+[INFO] [DIAG]     'VLESS-51.158.206.80 - 88ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-169.40.42.173 - 12ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-169.40.42.179 - 12ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-169.40.42.232 - 12ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-95.85.224.51 - 108ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-51.158.206.26 - 85ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-107.181.151.39 - 121ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-169.40.42.202 - 12ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-169.40.42.74 - 11ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     'VLESS-87.199.205.28 - 105ms': flow='xtls-rprx-vision', network='raw'
+[INFO] [DIAG]     ... 还有 10 个
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q2.3】VLESS UUID 默认值诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   VLESS 节点总数: 1629
+[INFO] [DIAG]   UUID=默认值(8888...) 的节点数: 10
+[WARN] [DIAG] ⚠️ 这些节点认证必然失败:
+[INFO] [DIAG]     proxies[686] 'VLESS-199.232.78.170 - 5ms'
+[INFO] [DIAG]     proxies[687] 'VLESS-199.232.78.160 - 5ms'
+[INFO] [DIAG]     proxies[1268] 'VLESS-rgiw5k0gg5-1492025789-di…'
+[INFO] [DIAG]     proxies[1289] 'VLESS-140.248.186.45 - 5ms'
+[INFO] [DIAG]     proxies[2750] 'FR 🇫🇷 ｜ @Raydikalx ｜ 51BF28 - …'
+[INFO] [DIAG]     proxies[3047] 'DE 🇩🇪 ｜ @Raydikalx ｜ 6257D3 - …'
+[INFO] [DIAG]     proxies[3406] 'VLESS-199.232.78.160 - 5ms_1'
+[INFO] [DIAG]     proxies[3499] 'VLESS-199.232.78.160 - 9ms'
+[INFO] [DIAG]     proxies[3548] 'VLESS-167.82.64.46 - 5ms_2'
+[INFO] [DIAG]     proxies[3554] 'VLESS-nasnet-162191099-direct….'
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q2.4】REALITY 字段完整性诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   REALITY 节点总数: 618
+[INFO] [DIAG]   public-key 长度分布:
+[INFO] [DIAG]     43: 618
+[WARN] [DIAG]   ⚠️ 缺少 client-fingerprint 的 REALITY 节点: 12
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q2.5】gRPC service-name 空值诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   含 grpc-opts 的节点总数: 0
+[INFO] [DIAG]   ✅ 所有 gRPC 节点都有 service-name
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q1.2】proxy-groups 引用 vs proxies 实际名 匹配诊断
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   proxy-groups 的总引用条目数: 13171
+[INFO] [DIAG]   精确匹配失败（缺失引用）: 0
+[INFO] [DIAG]   其中"近似匹配"（仅全角/半角不同）: 0
+[INFO] [DIAG]   ✅ 所有 proxy-groups 引用均能精确匹配到节点
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q1.3/1.4】节点引用使用统计
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]   proxies 中节点总数:        3709
+[INFO] [DIAG]   被 proxy-groups 引用的:    3709
+[INFO] [DIAG]   未被任何组引用:            0
+[INFO] [DIAG]   实际使用率: 100.0%
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG] 【Q1.3】各 proxy-group 的 proxies 长度分布
+[INFO] [DIAG] ==============================================================
+[INFO] [DIAG]     '🚀 选择代理' (type=select) -> 4 个引用  ← 极少
+[INFO] [DIAG]     '♻ 自动选择' (type=fallback) -> 3709 个引用
+[INFO] [DIAG]     '🔰 延迟最低' (type=url-test) -> 3709 个引用
+[INFO] [DIAG]     '✅ 手动选择' (type=select) -> 3709 个引用
+[INFO] [DIAG]     '🌐 突破锁区' (type=select) -> 2 个引用  ← 极少
+[INFO] [DIAG]     '❓ 疑似国内' (type=select) -> 3 个引用  ← 极少
+[INFO] [DIAG]     '🐟 漏网之鱼' (type=select) -> 2 个引用  ← 极少
+[INFO] [DIAG]     '🚨 病毒网站' (type=select) -> 2 个引用  ← 极少
+[INFO] [DIAG]     '⛔ 广告拦截' (type=select) -> 3 个引用  ← 极少
+[INFO] [DIAG]     '🗺️ 选择地区' (type=select) -> 12 个引用
+[INFO] [DIAG]     '🇯🇵 日本' (type=select) -> 43 个引用
+[INFO] [DIAG]     '🇺🇸 美国' (type=select) -> 1272 个引用
+[INFO] [DIAG]     '🇨🇳 台湾' (type=select) -> 3 个引用  ← 极少
+[INFO] [DIAG]     '🇨🇳 中国' (type=select) -> 8 个引用
+[INFO] [DIAG]     '🇭🇰 香港' (type=select) -> 20 个引用
+[INFO] [DIAG]     '🇨🇦 加拿大' (type=select) -> 242 个引用
+[INFO] [DIAG]     '🇫🇷 法国' (type=select) -> 150 个引用
+[INFO] [DIAG]     '🇸🇬 新加坡' (type=select) -> 50 个引用
+[INFO] [DIAG]     '🇬🇧 英国' (type=select) -> 45 个引用
+[INFO] [DIAG]     '🇰🇷 韩国' (type=select) -> 20 个引用
+[INFO] [DIAG]     '🇷🇺 俄罗斯' (type=select) -> 40 个引用
+[INFO] [DIAG]     '🇩🇪 德国' (type=select) -> 123 个引用
+[INFO] [DIAG] ==============================================================
+
+======================================================================
+汇总
+======================================================================
+FATAL: 0
+ERROR: 0
+WARN : 12
+INFO : 164
+DIAG : 0  （诊断信息，非错误）
+
+结论: 未发现会导致 Clash 拒绝加载的问题。
