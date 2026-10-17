@@ -28,12 +28,13 @@ check.py - Clash 节点文件校验工具
         - Q2.3 VLESS UUID 被替换为默认值
         - Q2.4 REALITY 字段完整性（public-key/short-id/fp）
         - Q2.5 grpc-opts.grpc-service-name 空值
-    13. 【本次新增】REALITY 字段 ERROR 级校验（check_reality_opts）
-        - public-key：必须是 43 位 base64url 字符串
-        - short-id：必须是十六进制字符串，长度偶数且 ≤ 16
-        - 命中即 FATAL/ERROR，能在 error_locations 里看到 proxies[N] 索引
-        - 目的：定位 mihomo 报 "invalid REALITY short ID"
-                / "invalid REALITY public key" 的具体节点
+    13. 【本次新增】short-id 引号检测（check_short_id_quoting）
+        - 扫描 YAML 原文，找出"裸写且形如科学计数法"的 short-id
+        - Go yaml.v3（mihomo 使用）会把 "473277e2" 解析为浮点数 47327700.0，
+          导致 mihomo 报 "invalid REALITY short ID"
+        - PyYAML 的浮点规则更严（指数必须带符号），safe_load 后无法发现
+        - 只有扫描 YAML 原文才能准确检测
+        - 输出 WARN 级，带具体行号和建议修改内容
 
 输出:
     错误日志分级为 [FATAL] / [ERROR] / [WARN] / [INFO] / [DIAG]
@@ -102,22 +103,6 @@ HOST_FORBIDDEN_SUBSTRINGS = ('://',)
 
 # preprocess/rebuilder 用来清洗 name 的全角替换字符集
 SANITIZE_CHARS = {'＃', '＆', '＊', '｜', '＞', '＜', '…'}
-
-# ============================================================================
-# 【本次新增】REALITY 字段校验相关常量
-# ============================================================================
-# REALITY public-key 合法字符集（base64url 无 padding）
-VALID_PUBLIC_KEY_CHARS = set(
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    'abcdefghijklmnopqrstuvwxyz'
-    '0123456789-_'
-)
-
-# REALITY public-key 标准长度（mihomo 严格校验）
-PUBLIC_KEY_LEN = 43
-
-# REALITY short-id 合法字符集（十六进制，大小写均可）
-VALID_SHORT_ID_CHARS = set('0123456789abcdefABCDEF')
 
 
 # ============================================================================
@@ -216,6 +201,68 @@ def check_yaml_parse(path, rep):
         return None, text
 
     return data, text
+
+
+# ============================================================================
+# 1.4【本次新增】short-id 引号检测（扫描 YAML 原文）
+# ----------------------------------------------------------------------------
+# 背景：
+#   某些 short-id 值（如 "473277e2"）在 YAML 里裸写时，Go yaml.v3（mihomo 使用）
+#   会按科学计数法解析成浮点数 47327700.0，mihomo 报 "invalid REALITY short ID"。
+#   PyYAML 的浮点规则更严（指数必须带符号），safe_load 后得到的是字符串，
+#   导致 check.py 通过 safe_load 的对象检查无法发现这个问题。
+#
+#   只有直接扫描 YAML 原文，才能判断 short-id 是否加引号。
+#
+# 检测规则：
+#   1. 匹配形如 "  short-id: 值" 的行
+#   2. 排除值已经带引号（'xxx' 或 "xxx"）的行
+#   3. 判断裸值是否形如 [0-9]+[eE][0-9]+（Go yaml.v3 会当科学计数法解析）
+#
+# 说明：
+#   - PyYAML 认为 "473277e2" 是字符串（指数必须带符号才识别为浮点）
+#   - Go yaml.v3 认为 "473277e2" 是浮点数 47327700.0（指数符号可选）
+#   - 这种跨语言 YAML 解析器差异，只有扫描原文才能准确检测
+# ============================================================================
+def check_short_id_quoting(text, rep):
+    """
+    扫描 YAML 原文，找出"裸写且形如科学计数法"的 short-id。
+
+    返回:
+        命中列表 [(行号, 原始值), ...]
+    """
+    # 匹配 "short-id: 值"，捕获缩进和值
+    # 排除了带引号的情况（引号内不允许出现）
+    pat = re.compile(r'^(\s*)short-id:\s*([^\s\'"#][^\s#]*?)\s*(?:#.*)?$')
+    # 科学计数法正则：Go yaml.v3 认为 [0-9]+e[0-9]+ 是浮点数
+    # （PyYAML 更严，要求指数带符号，因此不会命中）
+    sci_re = re.compile(r'^[0-9]+[eE][0-9]+$')
+
+    hits = []
+    for lineno, line in enumerate(text.splitlines(), 1):
+        m = pat.match(line)
+        if not m:
+            continue
+        value = m.group(2)
+        if sci_re.match(value):
+            hits.append((lineno, value))
+
+    if hits:
+        rep.warn('YAML',
+                 f'发现 {len(hits)} 处 short-id 裸写且形如科学计数法，'
+                 f'Go yaml.v3（mihomo 使用）会误判为浮点数，'
+                 f'导致 "invalid REALITY short ID"')
+        for lineno, value in hits[:20]:
+            rep.warn('YAML',
+                     f'  第 {lineno} 行: short-id: {value}  '
+                     f'← 建议改为 short-id: \'{value}\'')
+        if len(hits) > 20:
+            rep.info('YAML', f'  ... 还有 {len(hits) - 20} 处')
+    else:
+        rep.info('YAML',
+                 '✅ 未发现"裸写形如科学计数法"的 short-id')
+
+    return hits
 
 
 # ============================================================================
@@ -455,100 +502,6 @@ def check_h2_opts(proxy, loc, rep, node_name):
 
 
 # ============================================================================
-# 【本次新增】1.6 reality-opts 详细校验
-# ============================================================================
-def check_reality_opts(proxy, loc, rep, node_name):
-    """
-    校验 reality-opts 的详细字段。
-
-    mihomo 严格校验：
-        - public-key：必须是 43 位 base64url 字符串
-        - short-id：必须是十六进制字符串，长度偶数且 ≤ 16
-        - 否则会报：
-            * "invalid REALITY public key"
-            * "invalid REALITY short ID"
-
-    覆盖范围：
-        - vless / anytls 等支持 reality 的协议
-        - 仅当 reality-opts 是 dict 时才校验
-        - 其他协议若出现 reality-opts 也检查（防御性）
-    """
-    ro = proxy.get('reality-opts')
-    if ro is None:
-        return
-    if not isinstance(ro, dict):
-        rep.error('PROXY',
-                  f'reality-opts 不是字典: {_describe_value(ro)}',
-                  loc)
-        return
-
-    prefix = f"[节点: {node_name}] " if node_name else ""
-
-    # ---- public-key 校验 ----
-    pk = ro.get('public-key')
-    if pk is None:
-        rep.warn('PROXY',
-                 f'{prefix}reality-opts 缺少 public-key 字段',
-                 loc)
-    elif not isinstance(pk, str):
-        rep.error('PROXY',
-                  f'{prefix}reality-opts.public-key 不是字符串 '
-                  f'(mihomo 会报 invalid REALITY public key): '
-                  f'{_describe_value(pk)}',
-                  loc)
-    else:
-        # 长度必须为 43
-        if len(pk) != PUBLIC_KEY_LEN:
-            rep.error('PROXY',
-                      f'{prefix}reality-opts.public-key 长度必须为 {PUBLIC_KEY_LEN} '
-                      f'(mihomo 会报 invalid REALITY public key)，'
-                      f'实际 {len(pk)}: {pk!r}',
-                      loc)
-        # 字符集校验
-        invalid_chars = [c for c in pk if c not in VALID_PUBLIC_KEY_CHARS]
-        if invalid_chars:
-            rep.error('PROXY',
-                      f'{prefix}reality-opts.public-key 含非法字符 '
-                      f'(仅允许 A-Z a-z 0-9 - _): {invalid_chars[:5]!r}  '
-                      f'原值: {pk!r}',
-                      loc)
-
-    # ---- short-id 校验 ----
-    sid = ro.get('short-id')
-    if sid is not None:
-        if not isinstance(sid, str):
-            # 例如 YAML 里写成不带引号的 2351e1 被解析为浮点数
-            rep.error('PROXY',
-                      f'{prefix}reality-opts.short-id 必须是字符串 '
-                      f'(mihomo 会报 invalid REALITY short ID，'
-                      f'YAML 里请加双引号): {_describe_value(sid)}',
-                      loc)
-        elif sid:  # 非空字符串才检查格式
-            # 长度上限 16
-            if len(sid) > 16:
-                rep.error('PROXY',
-                          f'{prefix}reality-opts.short-id 长度必须 ≤ 16 '
-                          f'(mihomo 会报 invalid REALITY short ID)，'
-                          f'实际 {len(sid)}: {sid!r}',
-                          loc)
-            # 长度必须是偶数
-            if len(sid) % 2 != 0:
-                rep.error('PROXY',
-                          f'{prefix}reality-opts.short-id 长度必须为偶数 '
-                          f'(hex 解码要求，mihomo 会报 invalid REALITY short ID)，'
-                          f'实际 {len(sid)}: {sid!r}',
-                          loc)
-            # 必须是十六进制
-            bad_hex = [c for c in sid if c not in VALID_SHORT_ID_CHARS]
-            if bad_hex:
-                rep.error('PROXY',
-                          f'{prefix}reality-opts.short-id 必须是十六进制字符 '
-                          f'(mihomo 会报 invalid REALITY short ID)，'
-                          f'非法字符: {bad_hex[:5]!r}  原值: {sid!r}',
-                          loc)
-
-
-# ============================================================================
 # 2. 节点字段校验
 # ============================================================================
 def check_proxy(proxy, idx, name_set, rep):
@@ -639,8 +592,6 @@ def check_proxy(proxy, idx, name_set, rep):
     check_ws_opts(proxy, loc, rep, node_name)
     check_grpc_opts(proxy, loc, rep, node_name)
     check_h2_opts(proxy, loc, rep, node_name)
-    # 【本次新增】reality-opts 详细校验（ERROR 级，进入 FATAL/ERROR 计数）
-    check_reality_opts(proxy, loc, rep, node_name)
     # ---------------------------
 
     # name 重复
@@ -1425,6 +1376,13 @@ def main():
             print(f'\nYAML 无法解析，错误已写入 {output_file}')
             rep.summary()
             sys.exit(2)
+
+        # ---------- 1.5【本次新增】扫描 YAML 原文，检测裸写的 short-id ----------
+        # 目的：检测 "short-id: 473277e2" 这类裸值，Go yaml.v3（mihomo 使用）
+        #       会将其解析为科学计数法浮点数，导致 mihomo 报
+        #       "invalid REALITY short ID"
+        print('[1.5] 检查 short-id 引号问题...')
+        check_short_id_quoting(text, rep)
 
         if not isinstance(data, dict):
             rep.fatal('ROOT', f'根元素不是字典: {type(data).__name__}')
