@@ -149,6 +149,30 @@
 #            * _run_attribute_extractors 调用点改为 if self.enqueue(...): 才计数
 #            * parse_page 调用点忽略返回值（可选：调试时打印拒绝信息）
 # =============================================================================
+# 八、本次修改（订阅后缀直通 + 入队顺序调整）
+# -----------------------------------------------------------------------------
+# 【修改 R】parse_page() 里 is_node_link 命中后的分流：
+#    - 之前：所有 is_node_link 命中的 URL 统一 enqueue
+#    - 问题：request_count 达到 MAX_REQUESTS 后，enqueue 拒绝新 URL，
+#            导致 <a> / 页面文本里发现的 .yaml/.txt/.b64/.conf 等订阅链接
+#            连队列都进不去，被直接抛弃
+#    - 修复：has_subscription_suffix 命中的订阅后缀链接 → 直接 _process_url
+#            其余网页 URL → enqueue
+#    - 影响点：
+#        * parse_page() 里 <a href> 的 is_node_link 分支加订阅后缀判断
+#        * parse_page() 里页面文本的 is_node_link 分支加订阅后缀判断
+#    - 和 _run_attribute_extractors 的分流逻辑保持一致（Q1）
+#
+# 【修改 S】crawl() 调整入队顺序：
+#    - 之前：先处理 direct_urls，再入队 plain_pages / wildcard_map
+#    - 问题：direct_urls 不经过 enqueue，但会消耗 request_count，
+#            数量多时把 request_count 推到 MAX_REQUESTS 以上，
+#            后面的 plain_pages / wildcard_map 在 enqueue 时被闸门拦住
+#    - 修复：先入队 plain_pages / wildcard_map（此时 request_count=0，
+#            全部入队成功），再处理 direct_urls
+#    - 结果：direct_urls 即使把 request_count 推到 400 以上，
+#            已入队的普通页面仍会被主循环处理完（主循环不检查 request_count）
+# =============================================================================
 
 import os
 import sys
@@ -2565,8 +2589,13 @@ class Crawler:
                     continue
                 # ---- 【修改 F】命中后仅入队，由主循环统一走 _process_url ----
                 # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
+                # ---- 【修改 R】订阅后缀直通：.yaml/.txt/.b64/.conf 等直接处理，
+                #      不入队，避免被 MAX_REQUESTS 入队闸门拦住（与 _run_attribute_extractors 逻辑一致）
                 if depth < MAX_DEPTH:
-                    self.enqueue(full_url, depth + 1, patterns)
+                    if has_subscription_suffix(full_url):
+                        self._process_url(full_url, depth + 1, patterns)
+                    else:
+                        self.enqueue(full_url, depth + 1, patterns)
 
         text = soup.get_text()
         url_regex = re.compile(r'https?://[^\s<>"\'{}|\\^`\[\]]+', re.IGNORECASE)
@@ -2590,8 +2619,13 @@ class Crawler:
                     continue
                 # ---- 【修改 F】命中后仅入队 ----
                 # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
+                # ---- 【修改 R】订阅后缀直通：.yaml/.txt/.b64/.conf 等直接处理，
+                #      不入队，避免被 MAX_REQUESTS 入队闸门拦住（与 _run_attribute_extractors 逻辑一致）
                 if depth < MAX_DEPTH:
-                    self.enqueue(url, depth + 1, patterns)
+                    if has_subscription_suffix(url):
+                        self._process_url(url, depth + 1, patterns)
+                    else:
+                        self.enqueue(url, depth + 1, patterns)
 
         # ---- node_link_regex 前缀扩展 ----
         # 注意：
@@ -2614,8 +2648,13 @@ class Crawler:
         wildcard_map, direct_urls, plain_pages = self.process_sources(source_lines)
 
         # ---- 【修改 G】明确订阅起点直接走 _process_url ----
-        for url in direct_urls:
-            self._process_url(url, 1, None)
+        # ---- 【修改 S】调整入队顺序：先入队普通页面 + 通配符页，再处理 direct_urls ----
+        # 原因：direct_urls 直接 _process_url，不经过 enqueue 闸门，但会消耗 request_count。
+        #       如果 direct_urls 数量多，会先把 request_count 推到 MAX_REQUESTS 以上，
+        #       后面的 plain_pages / wildcard_map 在 enqueue 时被闸门拦住，连队列都进不去。
+        #       先让普通页面和通配符页在 request_count=0 时全部入队，
+        #       再处理 direct_urls；即使 request_count 超限，已入队的 URL
+        #       仍会被主循环处理完（主循环不检查 request_count）。
 
         for url in plain_pages:
             patterns = wildcard_map.pop(url, None)
@@ -2626,6 +2665,10 @@ class Crawler:
 
         for base_url, patterns in wildcard_map.items():
             self.enqueue(base_url, 1, patterns)
+
+        # ---- 再处理 direct_urls（直接订阅，不经过 enqueue 闸门） ----
+        for url in direct_urls:
+            self._process_url(url, 1, None)
 
         print(f"📋 Initial queue size: {len(self.queue)}")
 
