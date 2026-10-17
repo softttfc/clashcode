@@ -83,13 +83,13 @@ jobs:
 
       # # ---------- 修复配置文件格式（可选） ----------
       # - name: 生成标准格式文件
-      #   run: python ./repair.py list.metaspeed.yml list.metaspeedrp.yml
+      #   run: python ./repair.py crawclash.meta.yaml crawclash.metarp.yaml
       #   continue-on-error: true
 
       # ---------- 修复可预见错误（可选） ----------
-      # - name: 修复可预见错误
-      #   run: python ./rebuilder_pro2.py list.metaspeedrp.yml list.metaspeedrbd.yml
-      #   continue-on-error: true
+      - name: 修复可预见错误
+        run: python ./rebuilder_pro2.py crawclash.meta.yaml  crawclash.metarbd.yaml
+        continue-on-error: true
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
       # ---------- 校验节点文件（分别对 safe 和 rbd 校验，失败不中断） ----------
@@ -102,6 +102,16 @@ jobs:
           else
             echo "⚠️ 未找到 list.meta.safe.yml，跳过" > 错误日志safe.txt
           fi
+
+          
+          # 校验 crawclash.metarbd.yaml（预处理后、rebuilder 前）
+          if [ -f crawclash.metarbd.yaml ]; then
+            echo "开始校验 crawclash.metarbd.yaml ..."
+            python ./check.py crawclash.metarbd.yaml 错误日志crawclash.txt || true
+          else
+            echo "⚠️ 未找到 crawclash.metarbd.yaml，跳过" > 错误日志crawclash.txt
+          fi
+
 
           # 校验 list.metaspeedrbd.yml（rebuilder 后最终文件）
           if [ -f list.metaspeedrbd.yml ]; then
@@ -141,7 +151,13 @@ jobs:
             echo "========== check.py 校验报告: list.metaspeed.yml =========="
             cat 错误日志speed.txt
             echo "============================================================="
-          fi          
+          fi       
+          if [ -f 错误日志crawclash.txt ]; then
+            echo "========== check.py 校验报告: crawclash.metarbd.yaml =========="
+            cat 错误日志crawclash.txt
+            echo "============================================================="
+          fi             
+          
       # ---------- 将两份校验报告作为 artifact 上传 ----------
       - name: 上传校验报告
         if: always()
@@ -152,7 +168,8 @@ jobs:
             错误日志safe.txt
             错误日志rbd.txt
             错误日志rp.txt
-            错误日志speed.txt            
+            错误日志speed.txt  
+            错误日志crawclash.txt
           if-no-files-found: ignore
 
       # ---------- 提交并推送变更（不再拉取） ----------
@@ -174,6 +191,9 @@ jobs:
           fi
           if [ -f 错误日志rbd.txt ]; then
             git add 错误日志rbd.txt
+          fi
+          if [ -f 错误日志crawclash.txt ]; then
+            git add 错误日志crawclash.txt
           fi
 
           # 检查是否有变更需要提交
