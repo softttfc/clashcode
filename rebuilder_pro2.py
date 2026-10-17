@@ -44,6 +44,14 @@ Clash 配置文件修复工具 (rebuilder_pro1.py) - 最终完整版
         - 若 path 不以 '/' 开头，自动补 '/'
         - 目的：修复 mihomo 不解码 %2F 导致 WS 握手必然失败的问题
         - 幂等操作：已解码的 path 不会被二次修改
+    18.【本次新增】short-id 强制单引号输出：
+        - 某些 short-id 值（如 "473277e2"）是合法十六进制字符串，但裸写在
+          YAML 里会被 Go yaml.v3（mihomo 使用）解析为科学计数法浮点数，
+          导致 mihomo 报 "invalid REALITY short ID"。
+        - PyYAML 的浮点规则更严（指数必须带符号），所以 check.py 看不到问题。
+        - 本工具通过 QuotedStr 包装类，仅让 short-id 字段在 YAML 输出时
+          强制加单引号，其他字段（name/password/sni 等）完全不受影响。
+        - 修复后 YAML 输出：short-id: '473277e2'
 
 【用法】
     python rebuilder_pro1.py <输入文件> <输出文件>
@@ -113,6 +121,38 @@ class NoAliasDumper(yaml.SafeDumper):
 
 
 NoAliasDumper.add_representer(str, NoAliasDumper.represent_str)
+
+
+# ============================================================================
+# 【修复 W】强制加引号的字符串包装类
+# ----------------------------------------------------------------------------
+# 背景：
+#   某些 short-id 值（如 "473277e2"）是合法的十六进制字符串，但裸写在 YAML 里时，
+#   Go yaml.v3（mihomo 使用）会按科学计数法解析成浮点数 47327700.0，
+#   导致 mihomo 报 "invalid REALITY short ID"。
+#   PyYAML 的浮点规则更严（指数必须带符号），所以 check.py 看不到问题。
+#
+# 方案：
+#   用 QuotedStr 包装 short-id 的值，让 NoAliasDumper 输出时强制加单引号：
+#     short-id: 473277e2       ← 修改前（裸值，Go 解析为浮点数）
+#     short-id: '473277e2'     ← 修改后（mihomo 按字符串读取）
+#
+# 影响范围：
+#   仅 short-id 字段。其他字符串字段（name / password / sni / path 等）完全不变。
+#   单引号与双引号对 mihomo 完全等价（都是字符串标识），这里用单引号是为了
+#   与手动修改时的风格保持一致。
+# ============================================================================
+class QuotedStr(str):
+    """标记为强制加单引号输出的字符串。仅用于需要消除 YAML 类型歧义的字段。"""
+    pass
+
+
+def _represent_quoted_str(dumper, data):
+    """QuotedStr 的序列化器：永远输出单引号包裹的字符串"""
+    return dumper.represent_scalar('tag:yaml.org,2002:str', str(data), style="'")
+
+
+NoAliasDumper.add_representer(QuotedStr, _represent_quoted_str)
 
 
 # ============================================================================
@@ -647,6 +687,10 @@ def fix_node_group_name_conflicts(proxies, groups):
 #          - 若 path 含 '%' (URL 编码)，用 unquote 解码
 #          - 若 path 不以 '/' 开头，自动补 '/'
 #          - 幂等操作：已解码的 path 不会被二次修改
+#       9.【本次新增】short-id 强制单引号输出：
+#          - 用 QuotedStr 包装 short-id 值，YAML 输出时强制加单引号
+#          - 避免 Go yaml.v3 把 "473277e2" 解析成科学计数法浮点数
+#          - 仅影响 short-id 字段，其他字段完全不变
 #     说明：
 #       本函数在写入最终文件前调用，作为最后一道防线。
 #       原有 13 个修复函数已处理结构性引用问题，本函数只负责 YAML 语法安全
@@ -746,11 +790,21 @@ def sanitize_final_config(config):
                         # 超过 16 位截断
                         if len(sid_clean) > 16:
                             sid_clean = sid_clean[:16]
-                        if sid_clean != sid:
-                            if sid_clean:
-                                ro['short-id'] = sid_clean
-                            else:
-                                ro.pop('short-id', None)
+                        if sid_clean:
+                            # 【修复 W】无论内容是否变化，都用 QuotedStr 包装，
+                            # 强制 YAML 输出加单引号。
+                            # 原因：某些 short-id 值（如 "473277e2"）是合法十六进制字符串，
+                            # 但裸写在 YAML 里会被 Go yaml.v3（mihomo 使用）解析为
+                            # 科学计数法浮点数，导致 mihomo 报 "invalid REALITY short ID"。
+                            # PyYAML 的浮点规则更严（指数必须带符号），所以 check.py 看不到问题。
+                            # 加单引号后 mihomo 按字符串读取，内容不变，hex 解码正常。
+                            # 计数策略：仅在内容发生变化时计数，避免重复运行导致计数膨胀。
+                            if str(sid) != sid_clean:
+                                fixed += 1
+                            ro['short-id'] = QuotedStr(sid_clean)
+                        else:
+                            # 全部被过滤掉，删除该字段
+                            ro.pop('short-id', None)
                             fixed += 1
 
             # 4.1.6 ws-opts.headers.Host 清理
