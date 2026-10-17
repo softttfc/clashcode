@@ -172,6 +172,44 @@
 #            全部入队成功），再处理 direct_urls
 #    - 结果：direct_urls 即使把 request_count 推到 400 以上，
 #            已入队的普通页面仍会被主循环处理完（主循环不检查 request_count）
+#    - 注：本版本已被【修改 T】的"每源独立处理"逻辑取代，
+#          "普通页面优先于直接订阅"的语义在 sources 组装顺序中保留。
+# =============================================================================
+# 九、本次修改（每源独立配额 + 每源队列上限 + 全局硬上限）
+# -----------------------------------------------------------------------------
+# 【修改 T】MAX_REQUESTS 从"全局总请求数上限"改为"每源请求数上限"，并新增两参数：
+#    - MAX_REQUESTS_PER_SOURCE：每源请求数上限（一次性触发）
+#    - MAX_QUEUE_PER_SOURCE：每源队列占用上限（持续检查，必须 > 上一参数）
+#    - MAX_REQUESTS_TOTAL：全局总请求数硬上限（所有源累计，达到后跳过剩余源）
+#
+# 【修改 T】crawl() 重写：从"全局一个队列"改为"每个源独立处理"：
+#    - 旧逻辑：全局一个 queue + 一个 request_count，所有源混在一起。
+#              direct_urls 先跑，会挤占 plain_pages / wildcard_map 的入队配额。
+#    - 新逻辑：每个源独立处理，每源有自己的 queue 和 request_count。
+#              处理完一个源的所有 URL（含剩余队列）后，再切换到下一个源。
+#              visited_urls 跨源共享，不重复处理。
+#              MAX_REQUESTS_PER_SOURCE 控制每源请求数（一次性触发）。
+#              MAX_QUEUE_PER_SOURCE 控制每源队列占用（持续检查）。
+#              MAX_REQUESTS_TOTAL 控制全局总量（达到后跳过剩余源）。
+#    - 组装源（保持【修改 S】"普通页面优先于直接订阅"的语义）：
+#              plain_pages 带 wildcard 绑定 → wildcard_map 未绑定项 →
+#              direct_urls 独立源
+#    - 队列里的 URL 走完整 _process_url（含 parse_page），
+#      订阅后缀直通和协议链接直接解析不受上限影响，继续生效。
+#    - 全局硬上限在当前源 while 循环内也会检查，避免单源超发过多。
+#    - 被跳过或被全局上限中断的源都打印统计日志。
+#
+# 【修改 T】enqueue() 的双重检查：
+#    - request_count >= MAX_REQUESTS_PER_SOURCE → 永久拒绝（一次性触发）
+#    - len(queue) >= MAX_QUEUE_PER_SOURCE        → 暂时拒绝（消费到低于上限后恢复）
+#
+# 【修改 T】_process_url() 计数：
+#    - request_count += 1（每源计数，每源重置）
+#    - total_requests += 1（全局累计，永不重置）
+#    - 软上限日志阈值从 > 改为 >=（request_count=400 时也显示队列残留）
+#
+# 【修改 T】download_subscription()（legacy）同步加 total_requests 计数，
+#          日志引用 MAX_REQUESTS_PER_SOURCE。
 # =============================================================================
 
 import os
@@ -198,8 +236,24 @@ import hashlib
 #动态日期	以 +date 开头	格式化后按上述规则继续分类	+date https://example.com/%Y%m%d → 2026-08-15 → https://example.com/20260815
 # ======================== 全局配置（可调参数） ========================
 # 爬虫控制
-MAX_DEPTH = 4               # 爬取深度（从起始页算起）。增大可发现更多链接，但增加请求数。建议 2~5
-MAX_REQUESTS = 400         # 总请求数上限（含页面和订阅）。控制资源消耗，避免超时。建议 100~500
+MAX_DEPTH = 3               # 爬取深度（从起始页算起）。增大可发现更多链接，但增加请求数。建议 2~5
+
+MAX_REQUESTS_PER_SOURCE = 300    # 每个起点源的请求数上限（一次性触发）。
+                                  # 达到后停止入队，消费完剩余队列后结束该源。
+                                  # 建议 200~500；太大单源耗时长，太小节点覆盖不足。
+
+MAX_QUEUE_PER_SOURCE = 600       # 每个起点源的队列占用上限（持续检查）。
+                                  # 必须 > MAX_REQUESTS_PER_SOURCE，建议取 1.5~2 倍。
+                                  # 队列达到上限时暂时拒绝入队，消费到低于上限后恢复。
+                                  # 作用：防止单源派生过多链接时队列无限膨胀。
+
+MAX_REQUESTS_TOTAL = 8000        # 全局总请求数硬上限（所有源累计）。
+                                  # 达到后跳过 crawler.list 中剩余未处理的源。
+                                  # 建议 1500~3000，按 CI 时间预算调整：
+                                  #   - 源少（< 10）且时间充裕：3000~4000
+                                  #   - 源中等（10~50）：2000~3000
+                                  #   - 源多（> 50）或 CI 时间紧：1000~1500
+                                  # 单请求平均耗时 1~3 秒，2000 请求约 30~100 分钟。
 
     # ---- 订阅关键词（原有 + 扩展）----
 KEYWORDS = [
@@ -2243,7 +2297,10 @@ class Crawler:
         self.visited_urls = set()
         self.queue = deque()
         self.all_nodes = []
-        self.request_count = 0
+        # ---- 【修改 T】request_count 改为每源计数（每源重置），
+        #                 total_requests 为全局累计（永不重置） ----
+        self.request_count = 0          # 当前源的请求数（每源重置）
+        self.total_requests = 0         # 全局总请求数（跨源累计，永不重置）
 
     def process_sources(self, lines):
         wildcard_items = []
@@ -2309,16 +2366,25 @@ class Crawler:
         【修复 Q3】入队：URL 规范化 + 准入检查 + 返回 bool 表示是否成功入队
         返回:
             True  -> 成功加入队列
-            False -> 未加入（已访问 或 超出 MAX_REQUESTS 配额）
+            False -> 未加入（已访问 或 超出配额）
+
+        【修改 T】双重检查：
+          - request_count >= MAX_REQUESTS_PER_SOURCE → 永久拒绝（一次性触发）
+          - len(queue) >= MAX_QUEUE_PER_SOURCE        → 暂时拒绝（消费到低于上限后恢复）
         """
         # ---- 【修改 E】新增：URL 规范化 ----
         url = normalize_url(url)
         if url in self.visited_urls:
             return False
-        # ---- 【修复 Q2】enqueue 仍保留准入闸门 ----
-        # 达到 MAX_REQUESTS 后不再接受新 URL（防止队列无限增长）
+        # ---- 【修改 T】每源请求数上限：一次性触发 ----
+        # 达到 MAX_REQUESTS_PER_SOURCE 后永久拒绝新 URL，
         # 但已入队 URL 会继续处理完（软上限）
-        if self.request_count >= MAX_REQUESTS:
+        if self.request_count >= MAX_REQUESTS_PER_SOURCE:
+            return False
+        # ---- 【修改 T】每源队列上限：持续检查 ----
+        # 队列达到 MAX_QUEUE_PER_SOURCE 时暂时拒绝入队，
+        # 消费到低于上限后恢复放行（防止单源派生过多时队列无限膨胀）
+        if len(self.queue) >= MAX_QUEUE_PER_SOURCE:
             return False
         self.queue.append((url, depth, patterns))
         return True
@@ -2331,20 +2397,22 @@ class Crawler:
           [2] 当字段列表解析（parse_field_list_text）→ 成功则继续 [3]
           [3] 当网页解析（parse_page）→ 递归找关键词/通配符链接
 
-        深度由全局变量 MAX_DEPTH 控制；请求数由 MAX_REQUESTS 控制（软上限）。
+        深度由全局变量 MAX_DEPTH 控制；请求数由 MAX_REQUESTS_PER_SOURCE 控制（软上限）。
         """
         # ---- URL 规范化 + visited 检查 ----
         # 【修复 Q2】软上限：不再检查 request_count
-        # 达到 MAX_REQUESTS 后 enqueue 已拒绝新 URL，队列只出不进必然清空
+        # 达到 MAX_REQUESTS_PER_SOURCE 后 enqueue 已拒绝新 URL，队列只出不进必然清空
         # 已入队的 URL 必须处理完，不再丢节点
         url = normalize_url(url)
         if url in self.visited_urls:
             return
         self.visited_urls.add(url)
+        # ---- 【修改 T】request_count 每源计数，total_requests 全局累计 ----
         self.request_count += 1
-        # ---- 【新增】软上限后显示队列剩余（正常阶段不干扰） ----
-        _over = f" [queue: {len(self.queue)}]" if self.request_count > MAX_REQUESTS else ""
-        print(f"[{self.request_count}/{MAX_REQUESTS}] Processing: {url} (depth={depth}){_over}")
+        self.total_requests += 1
+        # ---- 【修改 T】软上限日志阈值 >= ：request_count 刚达上限时也显示队列残留 ----
+        _over = f" [queue: {len(self.queue)}]" if self.request_count >= MAX_REQUESTS_PER_SOURCE else ""
+        print(f"[{self.request_count}/{MAX_REQUESTS_PER_SOURCE}] Processing: {url} (depth={depth}){_over}")
 
         # ---- 抓取内容 ----
         try:
@@ -2480,7 +2548,7 @@ class Crawler:
 
             # ---- 2) 有订阅后缀：立即处理，不入队 ----
             # 【修复 Q1】后缀命中（.txt/.yaml/.yml/.b64/.base64/.conf）
-            # 直接 _process_url，避免排队占用槽位、避免被 MAX_REQUESTS 截断
+            # 直接 _process_url，避免排队占用槽位、避免被 MAX_REQUESTS_PER_SOURCE 截断
             if has_subscription_suffix(url):
                 print(f"  [ATTR] subscription (suffix), processing directly: {url[:80]}")
                 try:
@@ -2492,7 +2560,7 @@ class Crawler:
 
             # ---- 3) 无后缀网页 URL：走关键词过滤后入队 ----
             # 【修复 Q3】只有 enqueue 返回 True 时才计数和打印
-            # （enqueue 在超 MAX_REQUESTS 或已访问时返回 False，静默拒绝）
+            # （enqueue 在超 MAX_REQUESTS_PER_SOURCE 或已访问时返回 False，静默拒绝）
             if is_node_link(url):
                 if depth < MAX_DEPTH:
                     if self.enqueue(url, depth + 1, patterns):
@@ -2516,7 +2584,9 @@ class Crawler:
             return
         self.visited_urls.add(url)
         self.request_count += 1
-        print(f"[{self.request_count}/{MAX_REQUESTS}] Downloading subscription: {url}")
+        # ---- 【修改 T】legacy 同步累计全局计数，日志引用新参数名 ----
+        self.total_requests += 1
+        print(f"[{self.request_count}/{MAX_REQUESTS_PER_SOURCE}] Downloading subscription: {url}")
         try:
             content = fetch_binary(url)
             if content is None:
@@ -2647,42 +2717,83 @@ class Crawler:
     def crawl(self, source_lines):
         wildcard_map, direct_urls, plain_pages = self.process_sources(source_lines)
 
-        # ---- 【修改 G】明确订阅起点直接走 _process_url ----
-        # ---- 【修改 S】调整入队顺序：先入队普通页面 + 通配符页，再处理 direct_urls ----
-        # 原因：direct_urls 直接 _process_url，不经过 enqueue 闸门，但会消耗 request_count。
-        #       如果 direct_urls 数量多，会先把 request_count 推到 MAX_REQUESTS 以上，
-        #       后面的 plain_pages / wildcard_map 在 enqueue 时被闸门拦住，连队列都进不去。
-        #       先让普通页面和通配符页在 request_count=0 时全部入队，
-        #       再处理 direct_urls；即使 request_count 超限，已入队的 URL
-        #       仍会被主循环处理完（主循环不检查 request_count）。
+        # ---- 【修改 T】重写 crawl：每源独立处理 ----
+        # 旧逻辑：全局一个队列 + 全局一个 request_count，所有源混在一起。
+        #         direct_urls 先跑，会挤占 plain_pages / wildcard_map 的入队配额。
+        # 新逻辑：每个源独立处理，每源有自己的 queue 和 request_count。
+        #         处理完一个源的所有 URL（含剩余队列）后，再切换到下一个源。
+        #         visited_urls 跨源共享，不重复处理。
+        #         MAX_REQUESTS_PER_SOURCE 控制每源请求数（一次性触发）。
+        #         MAX_QUEUE_PER_SOURCE 控制每源队列占用（持续检查）。
+        #         MAX_REQUESTS_TOTAL 控制全局总量（达到后跳过剩余源）。
 
+        # 组装所有源（保持【修改 S】"普通页面优先于直接订阅"的语义）：
+        #   1) plain_pages 带 wildcard 绑定
+        #   2) wildcard_map 未绑定到普通页面的通配符 base_part
+        #   3) direct_urls 直接订阅（每个独立源）
+        sources = []
         for url in plain_pages:
             patterns = wildcard_map.pop(url, None)
-            if patterns:
-                self.enqueue(url, 1, patterns)
-            else:
-                self.enqueue(url, 1, None)
-
+            sources.append((url, patterns))
         for base_url, patterns in wildcard_map.items():
-            self.enqueue(base_url, 1, patterns)
-
-        # ---- 再处理 direct_urls（直接订阅，不经过 enqueue 闸门） ----
+            sources.append((base_url, patterns))
         for url in direct_urls:
-            self._process_url(url, 1, None)
+            sources.append((url, None))
 
-        print(f"📋 Initial queue size: {len(self.queue)}")
+        print(f"📋 Total sources: {len(sources)}")
 
-        # ---- 【修改 G】主循环统一走 _process_url ----
-        # 【修复 Q2】软上限：只处理队列，不检查 request_count
-        # MAX_REQUESTS 只控制 enqueue 准入；达到上限后队列只出不进，必然清空
-        # 已入队的 URL 全部处理完，不再丢节点
-        while self.queue:
-            url, depth, patterns = self.queue.popleft()
-            if url in self.visited_urls:
+        for source_url, patterns in sources:
+            # ---- 【修改 T】全局硬上限检查（切换源时） ----
+            if self.total_requests >= MAX_REQUESTS_TOTAL:
+                print(f"⛔ Global request limit ({MAX_REQUESTS_TOTAL}) reached, "
+                      f"skip remaining sources")
+                break
+
+            # ---- 重置当前源状态 ----
+            self.queue.clear()
+            self.request_count = 0
+            source_start = time.time()
+            source_start_nodes = len(self.all_nodes)
+
+            # ---- 起点入队 ----
+            # 注意：起点可能已被 visited_urls 拦截（被之前的源访问过），
+            #       此时 enqueue 返回 False，队列为空，直接跳过该源。
+            if not self.enqueue(source_url, 1, patterns):
+                # ---- 【修改 T】跳过源也打印统计（requests=0, nodes=+0） ----
+                print(f"⏭️  Skip source (visited or quota): {source_url} "
+                      f"(requests=0, nodes=+0)")
                 continue
-            self._process_url(url, depth, patterns)
 
-        print(f"🏁 Crawl finished. Total requests: {self.request_count}, Nodes collected: {len(self.all_nodes)}")
+            # ---- 消费当前源的全部 URL ----
+            # 达到 MAX_REQUESTS_PER_SOURCE 后 enqueue 拒绝新 URL，
+            # 但队列里的 URL 仍会走完整 _process_url（含 parse_page）。
+            # 订阅后缀直通和协议链接直接解析不受上限影响，继续生效。
+            try:
+                while self.queue:
+                    # ---- 【修改 T】全局硬上限检查（当前源消费过程中） ----
+                    # 避免单个源把 total_requests 推得远超 MAX_REQUESTS_TOTAL
+                    if self.total_requests >= MAX_REQUESTS_TOTAL:
+                        print(f"⛔ Global request limit ({MAX_REQUESTS_TOTAL}) reached "
+                              f"mid-source, stopping {source_url} "
+                              f"(queue_left={len(self.queue)})")
+                        self.queue.clear()
+                        break
+                    url, depth, pats = self.queue.popleft()
+                    if url in self.visited_urls:
+                        continue
+                    self._process_url(url, depth, pats)
+            except Exception as e:
+                print(f"❌ Source error: {source_url}: {e}")
+
+            # ---- 每源结束统计 ----
+            duration = time.time() - source_start
+            added_nodes = len(self.all_nodes) - source_start_nodes
+            print(f"✅ Source done: {source_url} "
+                  f"(requests={self.request_count}, nodes=+{added_nodes}, "
+                  f"queue_left={len(self.queue)}, duration={duration:.1f}s)")
+
+        print(f"🏁 Crawl finished. Total requests: {self.total_requests}, "
+              f"Nodes collected: {len(self.all_nodes)}")
 
     def dedupe_and_test(self):
         print("🔄 Deduplicating...")
