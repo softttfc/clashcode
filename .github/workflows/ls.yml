@@ -82,13 +82,13 @@ jobs:
       #   continue-on-error: true
 
       # # ---------- 修复配置文件格式（可选） ----------
-      # - name: 生成标准格式文件
-      #   run: python ./repair.py crawclash.meta.yaml crawclash.metarp.yaml
-      #   continue-on-error: true
+      - name: 生成标准格式文件
+        run: python ./repair.py crawclash.meta.yaml crawclash.metarp.yaml
+        continue-on-error: true
 
       # ---------- 修复可预见错误（可选） ----------
       - name: 修复可预见错误
-        run: python ./rebuilder_pro2.py crawclash.meta.yaml  crawclash.metarbd.yaml
+        run: python ./rebuilder_pro2.py crawclash.metarp.yaml  crawclash.metarbd.yaml
         continue-on-error: true
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
