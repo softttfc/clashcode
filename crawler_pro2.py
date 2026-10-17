@@ -211,6 +211,31 @@
 # 【修改 T】download_subscription()（legacy）同步加 total_requests 计数，
 #          日志引用 MAX_REQUESTS_PER_SOURCE。
 # =============================================================================
+# 十、本次修改（HTTP(S) 链接拼接说明文字的边界裁剪）
+# -----------------------------------------------------------------------------
+# 【修复 U】clean_url() 增加 HTTP(S) 链接的分层边界裁剪：
+#    - 问题：页面正文 soup.get_text() 提取时，"https://.../xxx.txt复制Clash"
+#            这类"URL + 锚文本/说明文字"拼接导致 404
+#    - 只对 http:// / https:// 链接处理：
+#        * 节点协议链接（vmess:// / vless:// 等）通常放在 <textarea>/<input>/
+#          <script> 里，DOM 提取天然干净，不拼接
+#        * vless/trojan 等协议含 ? 和 query 参数，强行裁剪容易误杀
+#        * ss:// / ssr:// 结构不统一，无法通用裁剪
+#    - 分层处理（按顺序）：
+#        L3: RFC 非法字符边界（中文/全角/空格）→ 截断
+#        L4: 订阅后缀边界（.txt/.yaml 等后跟非 ?#/）→ 截断
+#    - 保护措施：
+#        * 后缀后是 ? / # → 保留（合法 query/fragment）
+#        * 后缀后是 / → 保留（后缀在路径中间）
+#        * rfind 取最右侧后缀，避免路径中恰好含后缀字符串
+#        * .json 不在裁剪列表（.json-backup / .jsonl 可能误伤）
+#    - 影响点：只有 clean_url() 一个函数，函数签名不变，
+#              6 处调用点全不用改。
+#    - 潜在误杀（概率极低）：
+#        * URL 里未编码空格：本应编码成 %20，未编码的 URL 本身就是坏的
+#        * 中文路径：实际 URL 里中文已被 %XX 编码，不会到这里
+#        * .json-backup / .jsonl：已从后缀列表中移除 .json，避免误伤
+# =============================================================================
 
 import os
 import sys
@@ -418,9 +443,84 @@ _CONTAINER_URL_RE = re.compile(
 # ======================== 辅助函数（解析与导出） ========================
 
 def clean_url(url):
+    """
+    URL 清理 + http(s) 链接的分层边界裁剪。
+
+    【修复 U】处理 HTTP(S) 链接后拼接说明文字的问题。
+    场景：soup.get_text() 提取时，"https://.../xxx.txt复制Clash"
+          链接和锚文本/说明文字之间没有空格，被连在一起。
+    影响：has_subscription_suffix 判断时把中文当后缀一部分，404。
+
+    只对 http:// / https:// 链接处理，理由：
+      - 节点协议链接（vmess:// / vless:// 等）通常放在 <textarea>/<input>/
+        <script> 里，DOM 提取天然干净，不拼接
+      - vless/trojan 等协议含 ? 和 query 参数，强行裁剪容易误杀
+      - ss:// / ssr:// 结构不统一，无法通用裁剪
+
+    处理策略（按顺序）：
+      L3: RFC 非法字符边界
+          中文 / 全角 / 空格 → 截断（URL 里未编码这些字符是非法的）
+          例：https://a.com/xxx.txt复制Clash → https://a.com/xxx.txt
+      L4: 订阅后缀边界
+          订阅后缀后跟非 ?#/ 的字符 → 截断
+          例：https://a.com/xxx.txtCopy → https://a.com/xxx.txt
+          保护：后缀后是 ? 或 # 时保留（合法 query/fragment）
+                后缀后是 / 时保留（后缀在路径中间）
+                用 rfind（最右）避免路径中恰好含后缀字符串
+
+    不做额外裁剪的链接：
+      - 无订阅后缀的 http(s)：无法可靠区分"路径"和"拼接"，保守保留
+      - 非 http(s) 协议链接：不在本函数处理范围内
+
+    潜在误杀（概率极低）：
+      - URL 里未编码空格：本应编码成 %20，未编码的 URL 本身就是坏的
+      - 中文路径：实际 URL 里中文已被 %XX 编码，不会到这里
+      - .json-backup / .jsonl：已从后缀列表中移除 .json，避免误伤
+    """
     if not url:
         return url
-    return re.sub(r'[:,.?!;]+$', '', url.strip())
+    url = url.strip()
+    url = re.sub(r'[:,.?!;]+$', '', url)
+
+    # ---- 【修复 U】仅对 http:// / https:// 链接处理 ----
+    # 非 http(s) 协议链接（vmess:// / vless:// 等）直接返回原值，
+    # 保持原有行为，避免误伤 query 参数和 Base64 结构。
+    url_lower = url.lower()
+    if not url_lower.startswith(('http://', 'https://')):
+        return url
+
+    # ---- L3: RFC 非法字符边界（中文 / 全角 / 空格）----
+    # 中文：\u4e00-\u9fff
+    # CJK 标点：\u3000-\u303f
+    # 全角字符：\uff00-\uffef
+    # 空白：\s（含空格、制表、换行）
+    url = re.split(r'[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef\s]',
+                   url, maxsplit=1)[0]
+    if not url:
+        return url
+
+    # ---- L4: 订阅后缀边界 ----
+    # 用 rfind 取最右侧后缀作为边界，避免路径中间恰好含后缀字符串。
+    # 不含 .json：.json-backup / .jsonl 等可能误截；
+    #             .json 内容由 parse_subscription_content 兜底解析。
+    _SUB_SUFFIXES = ('.txt', '.yaml', '.yml', '.b64', '.base64', '.conf')
+    url_lower = url.lower()
+    for suffix in _SUB_SUFFIXES:
+        idx = url_lower.rfind(suffix)
+        if idx < 0:
+            continue
+        after = url[idx + len(suffix):]
+        if not after:
+            break                    # 后缀就是结尾，合法
+        if after[0] in '?#':
+            break                    # query/fragment，合法
+        if after[0] == '/':
+            break                    # 后缀在路径中间，合法
+        # 后缀后有内容 → 拼接，截断到后缀末尾
+        url = url[:idx + len(suffix)]
+        break
+
+    return url
 
 def safe_urljoin(base, url):
     if not url:
