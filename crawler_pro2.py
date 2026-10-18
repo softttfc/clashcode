@@ -236,6 +236,62 @@
 #        * 中文路径：实际 URL 里中文已被 %XX 编码，不会到这里
 #        * .json-backup / .jsonl：已从后缀列表中移除 .json，避免误伤
 # =============================================================================
+# 十一、本次修改（最后一层订阅直通 + URL/Last-Modified 日期过滤）
+# -----------------------------------------------------------------------------
+# 【修改 V】最后一层网页订阅直通（方案 B）：
+#    - 之前：depth >= MAX_DEPTH 时直接打印 "stop expanding"，不再调用
+#            parse_page / _run_attribute_extractors，导致最后一层页面里
+#            的 .yaml/.txt/.b64 订阅链接全部丢弃
+#    - 修复：给 parse_page() 和 _run_attribute_extractors() 增加 allow_expand 参数
+#            - allow_expand=True（中间层）：行为完全不变
+#            - allow_expand=False（最后一层）：仍然扫描页面，但只提取订阅后缀
+#              和协议链接；普通网页 URL 一律不入队
+#    - 影响点：
+#        * _process_url() 的 [3] else 分支改为调 parse_page(allow_expand=False) /
+#          _run_attribute_extractors(allow_expand=False)
+#        * parse_page() 签名加 allow_expand=True；5 处入队判断加 and allow_expand
+#        * _run_attribute_extractors() 签名加 allow_expand=True；1 处入队判断加条件
+#    - 保护措施：
+#        * 默认参数 allow_expand=True 保证向后兼容，中间层行为 100% 不变
+#        * 订阅后缀直通和协议链接直接解析在 allow_expand 判断之前，
+#          无论 True/False 行为一致
+#        * MAX_DEPTH 解耦：判断用 depth < MAX_DEPTH 和 else，改 3/4/5 都自动适配
+#
+# 【新增 W】URL 日期过滤（方案 1，零成本）：
+#    - 问题：早期网页里的节点大多已失效，爬取浪费请求配额
+#    - 修复：在 enqueue() 前判断 URL 是否含日期，太老直接拒绝入队
+#    - 日期模式（按 full > month > month-day 优先级）：
+#        * full（年-月-日）：/2026/08/15/、/20260815/、?date=2026-08-15
+#        * month（年月）：/2026/08/、/2026-08/
+#        * month-day（月日）：/08/15/、/08-15/（拼接当年 + 未来保护）
+#        * year（年）：删除（误判率高，一律放行）
+#    - 判断规则：
+#        * full：date < URL_DATE_MIN → 丢弃
+#        * month：该月最后一天 < URL_DATE_MIN → 丢弃（整月在窗口外才丢弃）
+#        * month-day：拼接当年 → 与 URL_DATE_MIN 比较；拼接结果在未来 → 放行
+#        * 无日期 / 日期非法 → 放行
+#    - 归档页判断：
+#        * /2024/09/27/（日归档）→ full，直接比较
+#        * /2024/09/（月归档）→ month，取最后一天比较
+#        * /2024/（年归档）→ 无匹配（year 模式已删除），放行
+#
+# 【新增 X】Last-Modified 日期过滤（方案 3，fetch 后）：
+#    - 问题：URL 不含日期的页面无法通过方案 1 判断
+#    - 修复：fetch 后看 Last-Modified，明确太老则跳过解析
+#    - 四条放行规则：
+#        * URL 含日期 → 放行（方案 1 已处理）
+#        * 订阅后缀 → 豁免（Last-Modified 老不代表订阅节点失效）
+#        * 无 Last-Modified header → 放行
+#        * Last-Modified 解析失败 → 放行
+#    - 只对"明确太老"的丢弃，其他情况一律放行（保守策略）
+#    - 新增 fetch_with_headers()，只 _process_url 使用；
+#      fetch_binary() 保持不动，其他调用点不受影响
+#
+# 【新增 Y】分三阶段上线的开关：
+#    - URL_DATE_FILTER_ENABLED：方案 1 总开关
+#    - URL_DATE_FILTER_LAST_MOD_ENABLED：方案 3 总开关
+#    - 灰度时设 False，观察后再开启
+# =============================================================================
 
 import os
 import sys
@@ -247,7 +303,7 @@ import json
 import socket
 import asyncio
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import deque
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
@@ -261,7 +317,7 @@ import hashlib
 #动态日期	以 +date 开头	格式化后按上述规则继续分类	+date https://example.com/%Y%m%d → 2026-08-15 → https://example.com/20260815
 # ======================== 全局配置（可调参数） ========================
 # 爬虫控制
-MAX_DEPTH = 3               # 爬取深度（从起始页算起）。增大可发现更多链接，但增加请求数。建议 2~5
+MAX_DEPTH = 4               # 爬取深度（从起始页算起）。增大可发现更多链接，但增加请求数。建议 2~5
 
 MAX_REQUESTS_PER_SOURCE = 300    # 每个起点源的请求数上限（一次性触发）。
                                   # 达到后停止入队，消费完剩余队列后结束该源。
@@ -279,6 +335,19 @@ MAX_REQUESTS_TOTAL = 8000        # 全局总请求数硬上限（所有源累计
                                   #   - 源中等（10~50）：2000~3000
                                   #   - 源多（> 50）或 CI 时间紧：1000~1500
                                   # 单请求平均耗时 1~3 秒，2000 请求约 30~100 分钟。
+
+# ======================== 【本次新增】网页日期过滤（方案 1 + 方案 3） ========================
+# 目的：只爬取最近 N 天内的网页，规避早期网页（节点大多已失效）
+# 分三阶段上线：
+#   阶段 1：URL_DATE_FILTER_ENABLED=False，观察会过滤多少 URL
+#   阶段 2：URL_DATE_FILTER_ENABLED=True，LAST_MOD_ENABLED=False
+#   阶段 3：LAST_MOD_ENABLED=True
+URL_DATE_FILTER_ENABLED = True          # 方案 1 总开关（灰度时设 False）
+URL_DATE_FILTER_LAST_MOD_ENABLED = True # 方案 3 总开关（灰度时设 False）
+URL_DATE_KEEP_DAYS = 15                 # 只保留最近 N 天内的网页
+
+# 运行时计算（模块级，import 时求值一次）
+URL_DATE_MIN = datetime.now() - timedelta(days=URL_DATE_KEEP_DAYS)
 
     # ---- 订阅关键词（原有 + 扩展）----
 KEYWORDS = [
@@ -718,6 +787,111 @@ def has_subscription_suffix(url):
     path = lower.split('?', 1)[0].split('#', 1)[0]
     return path.endswith(('.txt', '.yaml', '.yml', '.b64', '.base64', '.conf'))
 
+# ======================== 【本次新增】URL 日期识别与过滤（方案 1） ========================
+# 详见文件头【新增 W】说明
+# 模式优先级：full > month > month-day（year 模式已删除，避免误判）
+_URL_DATE_PATTERNS = [
+    # full（年-月-日）
+    (re.compile(r'/(\d{4})/(\d{2})/(\d{2})(?:/|$|\.)'), 'full'),
+    (re.compile(r'/(\d{4})-(\d{2})-(\d{2})(?:/|$|\.)'), 'full'),
+    (re.compile(r'/(\d{4})(\d{2})(\d{2})(?:/|$|\.)'), 'full'),
+    (re.compile(r'[?&]date=(\d{4})-(\d{2})-(\d{2})'), 'full'),
+    # month（年月）
+    (re.compile(r'/(\d{4})/(\d{2})(?:/|$|\.)'), 'month'),
+    (re.compile(r'/(\d{4})-(\d{2})(?:/|$|\.)'), 'month'),
+    # month-day（月日）
+    (re.compile(r'/(\d{2})/(\d{2})(?:/|$|\.)'), 'month-day'),
+    (re.compile(r'/(\d{2})-(\d{2})(?:/|$|\.)'), 'month-day'),
+]
+
+
+def url_date_info(url):
+    """
+    从 URL 提取日期信息。
+
+    返回:
+        ('full', datetime)     完整日期（年-月-日）
+        ('month', datetime)    年月（day=1）
+        ('month-day', (月, 日)) 月日（无年份）
+        None                   无日期 / 日期非法
+    """
+    if not url:
+        return None
+    for pat, kind in _URL_DATE_PATTERNS:
+        m = pat.search(url)
+        if not m:
+            continue
+        try:
+            if kind == 'full':
+                y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+                dt = datetime(y, mo, d)
+                return ('full', dt)
+            elif kind == 'month':
+                y, mo = int(m.group(1)), int(m.group(2))
+                dt = datetime(y, mo, 1)
+                return ('month', dt)
+            elif kind == 'month-day':
+                mo, d = int(m.group(1)), int(m.group(2))
+                if not (1 <= mo <= 12 and 1 <= d <= 31):
+                    continue
+                return ('month-day', (mo, d))
+        except (ValueError, TypeError):
+            continue   # 非法日期，尝试下一个模式
+    return None
+
+
+def _last_day_of_month(dt):
+    """返回 dt 所在月份的最后一天"""
+    if dt.month == 12:
+        return datetime(dt.year + 1, 1, 1) - timedelta(days=1)
+    return datetime(dt.year, dt.month + 1, 1) - timedelta(days=1)
+
+
+def _month_day_too_old(month, day):
+    """
+    月日模式：拼接当年 + 未来保护。
+
+    策略：
+        1. 拼接当年：datetime(now.year, month, day)
+        2. 未来保护：拼接结果 > now → 放行（可能是明年的预发布内容）
+        3. 非法日期（如 2 月 30 日）→ 放行
+        4. 否则与 URL_DATE_MIN 比较
+    """
+    now = datetime.now()
+    try:
+        candidate = datetime(now.year, month, day)
+    except ValueError:
+        return False   # 非法日期 → 放行
+    if candidate > now:
+        return False   # 未来 → 放行（保守）
+    return candidate < URL_DATE_MIN
+
+
+def is_url_too_old(url):
+    """
+    【方案 1】URL 日期过滤（零成本）。
+
+    判断规则：
+        - full（年-月-日）：date < URL_DATE_MIN → True（丢弃）
+        - month（年月）：该月最后一天 < URL_DATE_MIN → True（整月在窗口外才丢弃）
+        - month-day（月日）：拼接当年 + 未来保护 → < URL_DATE_MIN → True
+        - 无日期 / 日期非法 / 未来日期 → False（放行）
+    """
+    if not URL_DATE_FILTER_ENABLED:
+        return False
+    info = url_date_info(url)
+    if not info:
+        return False
+    kind, val = info
+    if kind == 'full':
+        return val < URL_DATE_MIN
+    if kind == 'month':
+        return _last_day_of_month(val) < URL_DATE_MIN
+    if kind == 'month-day':
+        month, day = val
+        return _month_day_too_old(month, day)
+    return False
+
 # ======================== 【新增 I】3 个独立提取器函数 ========================
 # 用途：从 HTML 属性 / 文本容器 / 脚本里提取 URL
 # 设计：每个提取器独立、纯函数、无副作用
@@ -842,6 +1016,57 @@ def fetch_binary(url, retries=FETCH_RETRIES, delay=FETCH_DELAY):
                 continue
             raise
     return None
+
+# ======================== 【本次新增】fetch_with_headers（方案 3 使用） ========================
+# 与 fetch_binary 行为一致，但额外返回 headers。
+# 仅 _process_url 使用；其他调用点（download_subscription、provider 下载）
+# 继续用 fetch_binary，不受影响。
+def fetch_with_headers(url, retries=FETCH_RETRIES, delay=FETCH_DELAY):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    }
+    for i in range(retries):
+        try:
+            resp = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+            resp.raise_for_status()
+            return resp.content, resp.headers
+        except Exception as e:
+            if i < retries - 1:
+                time.sleep(delay)
+                continue
+            raise
+    return None, {}
+
+
+# ======================== 【本次新增】Last-Modified 日期过滤（方案 3） ========================
+def is_too_old_by_last_modified(headers):
+    """
+    【方案 3】Last-Modified 日期过滤（fetch 后判断）。
+
+    四条放行规则（"有且明确太老时才过滤，其他情况一律放行"）：
+        1. 开关关闭 → 放行
+        2. 无 headers / 无 Last-Modified → 放行
+        3. Last-Modified 解析失败 → 放行
+        4. Last-Modified 明确 < URL_DATE_MIN → 返回 True（丢弃）
+
+    订阅后缀豁免（在调用方检查，不在本函数内）：
+        订阅文件的 Last-Modified 可能是创建时间，但节点列表是动态更新的，
+        不能按 Last-Modified 过滤。调用方需先排除 has_subscription_suffix。
+    """
+    if not URL_DATE_FILTER_LAST_MOD_ENABLED or not headers:
+        return False
+    from email.utils import parsedate_to_datetime
+    lm = headers.get('Last-Modified')
+    if not lm:
+        return False
+    try:
+        dt = parsedate_to_datetime(lm)
+        if dt.tzinfo is not None:
+            dt = dt.replace(tzinfo=None)
+        return dt < URL_DATE_MIN
+    except Exception:
+        return False
+
 
 # ======================== 协议解析函数 ========================
 
@@ -2476,6 +2701,10 @@ class Crawler:
         url = normalize_url(url)
         if url in self.visited_urls:
             return False
+        # ---- 【新增 W】方案 1：URL 日期过滤（零成本）----
+        # 命中"URL 含日期且太老"时直接拒绝入队，不消耗任何请求
+        if is_url_too_old(url):
+            return False
         # ---- 【修改 T】每源请求数上限：一次性触发 ----
         # 达到 MAX_REQUESTS_PER_SOURCE 后永久拒绝新 URL，
         # 但已入队 URL 会继续处理完（软上限）
@@ -2514,15 +2743,27 @@ class Crawler:
         _over = f" [queue: {len(self.queue)}]" if self.request_count >= MAX_REQUESTS_PER_SOURCE else ""
         print(f"[{self.request_count}/{MAX_REQUESTS_PER_SOURCE}] Processing: {url} (depth={depth}){_over}")
 
-        # ---- 抓取内容 ----
+        # ---- 【本次新增】抓取内容（改为带 headers，供方案 3 使用） ----
         try:
-            content = fetch_binary(url)
+            content, resp_headers = fetch_with_headers(url)
         except Exception as e:
             print(f"  -> fetch error: {e}")
             return
         if not content:
             print(f"  -> empty content")
             return
+
+        # ---- 【新增 X】方案 3：Last-Modified 日期过滤 ----
+        # 只对"URL 无日期 + 非订阅后缀"的普通网页生效
+        # 订阅后缀豁免：Last-Modified 老不代表订阅节点失效
+        if (URL_DATE_FILTER_ENABLED
+                and not url_date_info(url)
+                and not has_subscription_suffix(url)
+                and is_too_old_by_last_modified(resp_headers)):
+            lm = resp_headers.get('Last-Modified', '?')
+            print(f"  -> [DATE] skip too old (Last-Modified={lm}): {url}")
+            return
+
         try:
             text = content.decode('utf-8', errors='ignore')
         except Exception:
@@ -2553,21 +2794,32 @@ class Crawler:
         # ---- [3] 当网页继续爬 ----
         if depth < MAX_DEPTH:
             try:
-                self.parse_page(text, url, depth, patterns)
+                self.parse_page(text, url, depth, patterns, allow_expand=True)
             except Exception as e:
                 print(f"  -> page scan error: {e}")
 
             # ---- 【修改 K】新增：属性提取器（并行并集） ----
             try:
-                self._run_attribute_extractors(text, url, depth, patterns)
+                self._run_attribute_extractors(text, url, depth, patterns, allow_expand=True)
             except Exception as e:
                 print(f"  -> attr scan error: {e}")
             # ----------------------------------------
         else:
-            print(f"  -> depth limit reached ({MAX_DEPTH}), stop expanding")
+            # ---- 【修改 V】最后一层网页订阅直通（方案 B） ----
+            # 仍然扫描页面，但只提取订阅后缀链接和协议链接；
+            # 普通网页 URL 一律不入队（allow_expand=False）
+            print(f"  -> depth limit reached ({MAX_DEPTH}), extracting subscriptions only")
+            try:
+                self.parse_page(text, url, depth, patterns, allow_expand=False)
+            except Exception as e:
+                print(f"  -> page scan error: {e}")
+            try:
+                self._run_attribute_extractors(text, url, depth, patterns, allow_expand=False)
+            except Exception as e:
+                print(f"  -> attr scan error: {e}")
 
     # ======================== 【新增 J】属性提取器调度器 ========================
-    def _run_attribute_extractors(self, html, base_url, depth, patterns):
+    def _run_attribute_extractors(self, html, base_url, depth, patterns, allow_expand=True):
         """
         【新增 J】并行并集模式：
           - 3 个提取器（属性/文本容器/脚本）无条件全跑
@@ -2588,6 +2840,10 @@ class Crawler:
         【修复 Q3】enqueue 返回 bool 修正日志：
           - 之前 enqueue 被拒绝（超 400 或已访问）后仍无条件 queued += 1 + print
           - 现在只有 enqueue 返回 True 时才计数和打印
+
+        【修改 V】新增 allow_expand 参数：
+          - True（默认）：行为不变
+          - False：只处理协议链接和订阅后缀，普通网页 URL 一律不入队
 
         设计细节：
           - 每个提取器独立 try/except：单个失败不影响其他
@@ -2661,8 +2917,9 @@ class Crawler:
             # ---- 3) 无后缀网页 URL：走关键词过滤后入队 ----
             # 【修复 Q3】只有 enqueue 返回 True 时才计数和打印
             # （enqueue 在超 MAX_REQUESTS_PER_SOURCE 或已访问时返回 False，静默拒绝）
+            # 【修改 V】allow_expand=False 时跳过普通网页入队
             if is_node_link(url):
-                if depth < MAX_DEPTH:
+                if depth < MAX_DEPTH and allow_expand:
                     if self.enqueue(url, depth + 1, patterns):
                         queued += 1
                         print(f"  [ATTR] queued: {url[:100]}")
@@ -2711,7 +2968,13 @@ class Crawler:
         except Exception as e:
             print(f"  -> Error: {e}")
 
-    def parse_page(self, html, base_url, depth, patterns):
+    def parse_page(self, html, base_url, depth, patterns, allow_expand=True):
+        """
+        【修改 V】新增 allow_expand 参数：
+          - True（默认）：行为不变，所有发现的 URL 都正常处理
+          - False（最后一层）：仍然扫描页面，但普通网页 URL 一律不入队；
+            协议链接和订阅后缀不受影响，继续正常处理
+        """
         if patterns and not isinstance(patterns, list):
             patterns = [patterns]
 
@@ -2727,7 +2990,8 @@ class Crawler:
                 for pattern in patterns:
                     if pattern.match(url):
                         print(f"  Found wildcard-matched URL from text: {url}")
-                        if depth < MAX_DEPTH:
+                        # 【修改 V】allow_expand=False 时通配符匹配的普通网页不入队
+                        if depth < MAX_DEPTH and allow_expand:
                             self.enqueue(url, depth + 1, patterns)
                         break
 
@@ -2749,7 +3013,8 @@ class Crawler:
 
             if matched:
                 print(f"  Found wildcard-matched URL from href: {full_url}")
-                if depth < MAX_DEPTH:
+                # 【修改 V】allow_expand=False 时通配符匹配的普通网页不入队
+                if depth < MAX_DEPTH and allow_expand:
                     self.enqueue(full_url, depth + 1, patterns)
                 continue
 
@@ -2761,10 +3026,11 @@ class Crawler:
                 # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
                 # ---- 【修改 R】订阅后缀直通：.yaml/.txt/.b64/.conf 等直接处理，
                 #      不入队，避免被 MAX_REQUESTS 入队闸门拦住（与 _run_attribute_extractors 逻辑一致）
+                # 【修改 V】订阅后缀不受 allow_expand 影响（始终直通）
                 if depth < MAX_DEPTH:
                     if has_subscription_suffix(full_url):
                         self._process_url(full_url, depth + 1, patterns)
-                    else:
+                    elif allow_expand:
                         self.enqueue(full_url, depth + 1, patterns)
 
         text = soup.get_text()
@@ -2791,16 +3057,18 @@ class Crawler:
                 # 【修复 Q3】enqueue 返回 bool，此处不打印日志，直接忽略返回值
                 # ---- 【修改 R】订阅后缀直通：.yaml/.txt/.b64/.conf 等直接处理，
                 #      不入队，避免被 MAX_REQUESTS 入队闸门拦住（与 _run_attribute_extractors 逻辑一致）
+                # 【修改 V】订阅后缀不受 allow_expand 影响（始终直通）
                 if depth < MAX_DEPTH:
                     if has_subscription_suffix(url):
                         self._process_url(url, depth + 1, patterns)
-                    else:
+                    elif allow_expand:
                         self.enqueue(url, depth + 1, patterns)
 
         # ---- node_link_regex 前缀扩展 ----
         # 注意：
         #   1. 顺序：长前缀在前（ssr 在 ss 前，socks5h 在 socks5 前，socks5 在 socks 前）
         #   2. 不包含 http/https，避免网页 URL 污染
+        #   3. 协议链接直接解析，不受 allow_expand 影响
         node_link_regex = re.compile(
             r'(vmess|vless|ssr|ss|trojan|hysteria2|hy2|hysteria|tuic|'
             r'socks5h|socks5|socks)://[^\s<>"\'{}|\\^`\[\]]+',
