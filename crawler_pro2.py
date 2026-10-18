@@ -292,6 +292,24 @@
 #    - URL_DATE_FILTER_LAST_MOD_ENABLED：方案 3 总开关
 #    - 灰度时设 False，观察后再开启
 # =============================================================================
+# 十二、本次修改（L1 + L2：日期过滤日志优化，零业务影响）
+# -----------------------------------------------------------------------------
+# 【L1】enqueue() 日期拒绝时打印原因：
+#    - 原代码：is_url_too_old(url) 返回 False 时静默 return False
+#    - 新代码：增加 1 行 print(f"  -> [DATE] enqueue rejected (too old): {url}")
+#    - 影响：业务零影响，仅日志多一行，方便排查"为什么没入队"
+#
+# 【L2】parse_page() 两处 wildcard 分支：is_url_too_old 提前到 print 之前：
+#    - 原代码：先 print("Found wildcard-matched ...")，再判断 depth/allow_expand
+#      → 过期 URL 仍会打印，容易让人误以为"打印了 = 入队了"
+#    - 新代码：先 is_url_too_old(url)，过期直接 continue/break，不打印
+#    - 影响：业务零影响（过期 URL 本来就不会入队），仅日志更干净
+#    - 涉及两处：
+#        * <a href> wildcard 分支（+2 行）
+#        * 页面文本 wildcard 分支（+2 行）
+#
+# 总改动：5 行新增，零业务影响。
+# =============================================================================
 
 import os
 import sys
@@ -2696,6 +2714,8 @@ class Crawler:
         【修改 T】双重检查：
           - request_count >= MAX_REQUESTS_PER_SOURCE → 永久拒绝（一次性触发）
           - len(queue) >= MAX_QUEUE_PER_SOURCE        → 暂时拒绝（消费到低于上限后恢复）
+
+        【L1】日期拒绝时打印原因，方便排查"为什么没入队"
         """
         # ---- 【修改 E】新增：URL 规范化 ----
         url = normalize_url(url)
@@ -2704,6 +2724,8 @@ class Crawler:
         # ---- 【新增 W】方案 1：URL 日期过滤（零成本）----
         # 命中"URL 含日期且太老"时直接拒绝入队，不消耗任何请求
         if is_url_too_old(url):
+            # ---- 【L1】打印拒绝原因，方便排查 ----
+            print(f"  -> [DATE] enqueue rejected (too old): {url}")
             return False
         # ---- 【修改 T】每源请求数上限：一次性触发 ----
         # 达到 MAX_REQUESTS_PER_SOURCE 后永久拒绝新 URL，
@@ -2974,6 +2996,9 @@ class Crawler:
           - True（默认）：行为不变，所有发现的 URL 都正常处理
           - False（最后一层）：仍然扫描页面，但普通网页 URL 一律不入队；
             协议链接和订阅后缀不受影响，继续正常处理
+
+        【L2】wildcard 分支：日期过滤提前到 print 之前
+          - 过期 URL 直接跳过，不打印、不入队，避免"打印了 = 入队了"的误解
         """
         if patterns and not isinstance(patterns, list):
             patterns = [patterns]
@@ -2989,6 +3014,10 @@ class Crawler:
                     continue
                 for pattern in patterns:
                     if pattern.match(url):
+                        # ---- 【L2】日期过滤提前到 print 之前 ----
+                        # 过期 URL 不打印、不入队
+                        if is_url_too_old(url):
+                            break
                         print(f"  Found wildcard-matched URL from text: {url}")
                         # 【修改 V】allow_expand=False 时通配符匹配的普通网页不入队
                         if depth < MAX_DEPTH and allow_expand:
@@ -3012,6 +3041,10 @@ class Crawler:
                         break
 
             if matched:
+                # ---- 【L2】日期过滤提前到 print 之前 ----
+                # 过期 URL 不打印、不入队
+                if is_url_too_old(full_url):
+                    continue
                 print(f"  Found wildcard-matched URL from href: {full_url}")
                 # 【修改 V】allow_expand=False 时通配符匹配的普通网页不入队
                 if depth < MAX_DEPTH and allow_expand:
