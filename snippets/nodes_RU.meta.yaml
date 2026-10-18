@@ -129,38 +129,57 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- client-fingerprint: chrome
-  encryption: none
+- encryption: none
   flow: ''
-  name: 🇷🇺 RU VLESS-149 | free-nodes -...
-  network: ws
+  name: 🇷🇺 RU VLESS-151 | free-nodes -...
+  network: tcp
   port: 8443
   server: nl5.hap-plus.ru
-  tls: true
+  tls: false
   type: vless
   uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
-- name: 🇷🇺RU_1|2.6MB/s - 161ms
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇷🇺俄罗斯丨yoyapai.com_1 - 6ms
+  network: xhttp
+  port: 443
+  server: 104.18.32.47
+  tls: true
+  type: vless
+  uuid: a5a544bf-e4b3-4651-9ff4-de3461910d87
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺俄罗斯丨yoyapai.com_3 - 196ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: xSvlclDt9Oz7WKqoCCyuT3mEGnLwyp5ciOUClsZADH8
+    short-id: '!!str d4331052'
+  server: 217.177.74.229
+  tls: true
+  type: vless
+  uuid: 23e18cb4-9db3-4eb1-93d3-26c62095159d
+- client-fingerprint: qq
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺RU俄罗斯丨yoyapai.com_9 - 153ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Nb9IwEEhUHEbHSc6e5uYTjxDgN4ZExhDckM3OgYhj2o
+    short-id: '!!str 52ccb3687fe0b7ec'
+  server: 200.165.235.78
+  tls: true
+  type: vless
+  uuid: 238e492b-bc20-4380-92b6-135d39112ca4
+- name: 🇷🇺RU_1|2.6MB/s - 154ms
   port: 8443
   server: 87.242.85.187
   sni: 87.242.85.187
-  tls: true
-  type: http
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇷🇺RU_2|2.9MB/s - 598ms
-  network: tcp
-  port: 8443
-  server: rus.noooo.win
-  tls: true
-  type: vless
-  uuid: b3441cc7-1e5f-4eb6-8207-90788eeca21e
-- name: 🇷🇺RU_2|3.4MB/s - 155ms
-  port: 1446
-  server: 46.29.166.134
-  sni: 46.29.166.134
   tls: true
   type: http
 - alpn:
@@ -169,14 +188,32 @@ proxies:
   client-fingerprint: firefox
   encryption: none
   flow: ''
-  name: 🇷🇺RU_1|2.1MB/s - 1162ms
+  name: 🇷🇺RU_1|2.1MB/s - 147ms
   network: xhttp
   port: 2053
   server: 78.159.246.179
   tls: true
   type: vless
   uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
-- name: 🇷🇺RU_2|1.1MB/s - 162ms
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺RU_2|2.9MB/s - 671ms
+  network: tcp
+  port: 8443
+  server: rus.noooo.win
+  tls: true
+  type: vless
+  uuid: b3441cc7-1e5f-4eb6-8207-90788eeca21e
+- name: 🇷🇺RU_2|3.4MB/s - 163ms
+  port: 1446
+  server: 46.29.166.134
+  sni: 46.29.166.134
+  tls: true
+  type: http
+- name: 🇷🇺RU_2|1.1MB/s - 153ms
   port: 443
   server: 178.219.43.226
   sni: 178.219.43.226
@@ -185,7 +222,7 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇷🇺RU_1|1.0MB/s - 146ms
+  name: 🇷🇺RU_1|1.0MB/s - 148ms
   network: raw
   port: 443
   reality-opts:
@@ -201,7 +238,7 @@ proxies:
   client-fingerprint: firefox
   encryption: none
   flow: ''
-  name: 🇷🇺RU_1|2.1MB/s - 145ms
+  name: 🇷🇺RU_1|2.1MB/s - 146ms
   network: xhttp
   port: 2053
   server: 78.159.246.179
@@ -211,54 +248,16 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇷🇺RU_1|3.2MB/s - 184ms
+  name: 🇷🇺RU_1|3.2MB/s - 215ms
   network: tcp
   port: 443
   server: storage.fatcutecat.net
   tls: true
   type: vless
   uuid: 81ee7b74-7ccd-4ccb-8f4b-f1bd02f0491e
-- alpn:
-  - h3
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇷🇺俄罗斯丨yoyapai.com_1 - 12ms
-  network: xhttp
-  port: 443
-  server: 104.18.32.47
-  tls: true
-  type: vless
-  uuid: a5a544bf-e4b3-4651-9ff4-de3461910d87
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇷🇺俄罗斯丨yoyapai.com_3 - 200ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: xSvlclDt9Oz7WKqoCCyuT3mEGnLwyp5ciOUClsZADH8
-    short-id: '!!str d4331052'
-  server: 217.177.74.229
-  tls: true
-  type: vless
-  uuid: 23e18cb4-9db3-4eb1-93d3-26c62095159d
-- client-fingerprint: qq
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇷🇺RU俄罗斯丨yoyapai.com_9 - 155ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Nb9IwEEhUHEbHSc6e5uYTjxDgN4ZExhDckM3OgYhj2o
-    short-id: '!!str 52ccb3687fe0b7ec'
-  server: 200.165.235.78
-  tls: true
-  type: vless
-  uuid: 238e492b-bc20-4380-92b6-135d39112ca4
 - alterId: 0
   cipher: auto
-  name: RU俄罗斯(mibei77.com 米贝节点分享) - 26...
+  name: RU俄罗斯(mibei77.com 米贝节点分享) - 48...
   network: ws
   port: 10057
   server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
@@ -270,13 +269,13 @@ proxies:
       Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
     path: /
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 13 → tg@nicevpn123 - 102...
+  name: 🇷🇺 RU 13 → tg@nicevpn123 - 110...
   password: U6qnYRhfyDmn8sgn
   port: 9041
   server: 5.188.181.201
   type: ss
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 16 → tg@nicevpn123 - 106...
+  name: 🇷🇺 RU 16 → tg@nicevpn123 - 102...
   password: BwcAUZk8hUFAkDGN
   port: 9031
   server: 5.188.181.201
@@ -295,14 +294,14 @@ proxies:
       Host: 185.148.104.118
     path: /
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 23 → tg@nicevpn123 - 105...
+  name: 🇷🇺 RU 23 → tg@nicevpn123 - 103...
   password: S7KwUu7yBy58S3Ga
   port: 9042
   server: 5.188.181.201
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 31 → tg@nicevpn123 - 67m...
+  name: 🇷🇺 RU 31 → tg@nicevpn123 - 172...
   network: ws
   port: 80
   server: is3-vmess.sshmax.xyz
@@ -315,7 +314,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 32 → tg@nicevpn123 - 112...
+  name: 🇷🇺 RU 32 → tg@nicevpn123 - 99m...
   network: ws
   port: 80
   server: de1-vmess.greenssh.xyz
@@ -327,14 +326,14 @@ proxies:
       Host: de1-vmess.greenssh.xyz
     path: /
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 43 → tg@nicevpn123 - 102...
+  name: 🇷🇺 RU 43 → tg@nicevpn123 - 105...
   password: TN2YqghxeFDKZfLU
   port: 9037
   server: 5.188.181.201
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 70 → tg@nicevpn123 - 154...
+  name: 🇷🇺 RU 70 → tg@nicevpn123 - 176...
   network: ws
   port: 80
   server: 85.117.234.167
@@ -389,14 +388,17 @@ proxies:
   uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
 - client-fingerprint: chrome
   encryption: none
-  flow: ''
-  name: RU 🇷🇺 | @Raydikalx | C51149 - ...
-  network: xhttp
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | A12FF2 - ...
+  network: tcp
   port: 443
-  server: tg1.cdnphotos.org
+  reality-opts:
+    public-key: ZJlfiMh4ebjrTl2_kwAk_zXMAaCiwNS7yMd5XzlUgmI
+    short-id: '!!str '
+  server: 147.45.148.6
   tls: true
   type: vless
-  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
+  uuid: 8a9c586c-4b2c-49e5-9e78-97408bf58500
 - client-fingerprint: ios
   encryption: none
   flow: xtls-rprx-vision
@@ -412,17 +414,14 @@ proxies:
   uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
 - client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision
-  name: RU 🇷🇺 | @Raydikalx | A12FF2 - ...
-  network: tcp
+  flow: ''
+  name: RU 🇷🇺 | @Raydikalx | C51149 - ...
+  network: xhttp
   port: 443
-  reality-opts:
-    public-key: ZJlfiMh4ebjrTl2_kwAk_zXMAaCiwNS7yMd5XzlUgmI
-    short-id: '!!str '
-  server: 147.45.148.6
+  server: tg1.cdnphotos.org
   tls: true
   type: vless
-  uuid: 8a9c586c-4b2c-49e5-9e78-97408bf58500
+  uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -433,19 +432,6 @@ proxies:
   tls: true
   type: vless
   uuid: f04cc810-aaf2-4a7b-8cad-356cdd30d394
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: RU 🇷🇺 | @Raydikalx | 098616 - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234
-    short-id: '!!str 11ac376e18d20343'
-  server: m-vruvc.mvpstr.com
-  tls: true
-  type: vless
-  uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -459,6 +445,19 @@ proxies:
   tls: true
   type: vless
   uuid: 5d7e07ba-f460-4638-af79-bbcde67fcb6b
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 098616 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234
+    short-id: '!!str 11ac376e18d20343'
+  server: m-vruvc.mvpstr.com
+  tls: true
+  type: vless
+  uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
 - client-fingerprint: firefox
   encryption: none
   flow: ''
