@@ -1,6 +1,7 @@
 proxies:
 - client-fingerprint: chrome
-  name: '🇹🇼TW臺灣丨yoyapai.com #1'
+  name: 🇹🇼
+  network: tcp
   port: 443
   reality-opts:
     public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
@@ -13,28 +14,6 @@ proxies:
   udp: true
   uuid: 31a40f42-4ad6-4a32-a760-71102b459584
 - client-fingerprint: chrome
-  name: 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: ec74bb6a86c2
-  port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  tls: true
-  type: anytls
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 'TW台湾(v2clash.blog 2026-10.16更新... #2'
-  password: ec74bb6a86c2
-  port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  tls: true
-  type: anytls
-  udp: true
-- client-fingerprint: chrome
   name: '🇹🇼 🇨🇳 台湾 | TWN 2 #1'
   password: ec74bb6a86c2
   port: 443
@@ -44,10 +23,20 @@ proxies:
   tls: true
   type: anytls
   udp: true
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+  password: ec74bb6a86c2
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  tls: true
+  type: anytls
+  udp: true
 - alpn:
   - http/1.1
   client-fingerprint: chrome
-  name: 'TW台湾(v2clash.blog 2026-10.16更新... #4'
+  name: 'TW台湾(v2clash.blog 2026-10.18更新... #2'
   password: 0324fbc29561
   port: 443
   server: er8u54dh.df6h451rh.xin
@@ -56,7 +45,29 @@ proxies:
   tls: true
   type: anytls
   udp: true
-- name: '🇹🇼TW_1|429KB/s|R002-260618 01 #1'
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 'TW台湾(v2clash.blog 2026-10.18更新... #3'
+  password: ec74bb6a86c2
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  tls: true
+  type: anytls
+  udp: true
+- name: 🇹🇼TW_1｜1.6MB/s - 231ms
+  password: exaxgqkKkd0TAMrCxeonWg==
+  port: 1443
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  skip-cert-verify: false
+  sni: twmoon1-cdn-route.couldflare-cdn.com
+  tls: true
+  type: http
+  udp: true
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+- name: 🇹🇼TW_13
   network: ws
   port: 443
   server: 60.248.219.78
@@ -71,30 +82,25 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇨🇳 机场推荐:dafei.de 台湾 01
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  skip-cert-verify: false
-  sni: twmoon1-cdn-route.couldflare-cdn.com
-  tls: true
-  type: http
-  udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 ｜ @Raydikalx ｜ 9BE918 - ...
-  network: tcp
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇹🇼TW_35|299KB/s|F003-260618 [f... #1'
+  network: ws
   packet-encoding: xudp
-  port: 35034
-  server: 165.154.195.38
-  servername: ''
-  skip-cert-verify: true
-  sub_tag: M002-260618
-  tls: false
-  type: vmess
+  port: 443
+  server: 188.253.6.249
+  servername: vlso5.1d.mom
+  sub_tag: F003-260618
+  tls: true
+  type: vless
   udp: true
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+      User-Agent: Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/51.0.2704.106 Safari/537.36
+    path: /socks5=888:888@hkip.1d.mom:1080
   xudp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
@@ -109,17 +115,16 @@ proxies:
   type: vless
   udp: true
   uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-- name: '瑞典 #2'
+- name: 台湾(海外账号:shop.tgaaaa.co)_1
   password: 4ad3dbf5-2005-4d96-b56c-a0ca9905cab6
   port: 21223
   server: sweedenqfds777.qcloud.surf
   skip-cert-verify: true
   sni: sweedenqfds777.qcloud.surf
-  tls: false
   type: hysteria2
   udp: true
 - client-fingerprint: firefox
-  name: 台湾_2
+  name: 台湾(海外账号:shop.tgaaaa.co)_4
   network: ws
   port: 443
   server: 23.146.248.149
@@ -133,59 +138,713 @@ proxies:
     headers:
       Host: rnxq-1lpi3m.linmeisoft.com
     path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-- name: 🇨🇳 机场推荐:dafei.de 台湾 02
-  password: '!!str 111'
-  port: 1080
-  server: 106.107.236.110
-  type: socks5
-  username: '111'
 - client-fingerprint: firefox
-  encryption: none
-  flow: ''
-  name: TW 🇹🇼 ｜ @Raydikalx ｜ 2FF367 - ...
+  name: '🇹🇼TW_30|105KB/s|A004-260618 #1'
   network: tcp
   port: 24215
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-    short-id: '!!str '
-  security: reality
+  server: 61.230.160.34
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+- name: TW 🇹🇼 | @Raydikalx | 093BFC
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  type: hysteria2
+- name: TW 🇹🇼 | @Raydikalx | 6F5808
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  type: hysteria2
+- name: TW 🇹🇼 | @Raydikalx | 08727D
+  network: tcp
+  password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  port: 8443
+  server: official.taipeicitygovernment.kiev.ua
+  sni: 66.42.40.132
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 735D9F
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: 101.3.47.51
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 07C744
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: 101.3.47.52
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 559066
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: 210.203.60.190
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | D8191A
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: 210.203.60.192
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 34844B
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 220.128.135.193
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 61DFFD
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 60.250.152.229
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 5EC568
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 60.250.152.230
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 192C1B
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 60.250.152.234
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | A6889B
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 60.250.80.130
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | BB3495
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: 60.250.80.31
+  sni: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 5C9DAF
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a01.taipeicitygovernment.biz.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 2282BC
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a02.taipeicitygovernment.chernovtsy.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 4DEAEF
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a03.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 42A187
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a04.taipeicitygovernment.com.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 51AD67
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a05.taipeicitygovernment.co.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | C744B0
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a06.taipeicitygovernment.dp.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 4E46C8
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a07.taipeicitygovernment.if.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 5F55FB
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a09.taipeicitygovernment.kiev.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 5D48C5
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a10.taipeicitygovernment.kyiv.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 916734
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a11.taipeicitygovernment.net.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 71E93B
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 3462
+  server: a12.taipeicitygovernment.org.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | DCDBA5
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: taifo01a.kbservice.club
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 86BB5F
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: taifo02a.kbservice.club
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 4B16E8
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: taifo03a.kbservice.club
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 302166
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 443
+  server: taifo04a.kbservice.club
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 3D54F3
+  network: tcp
+  password: 736cd94d-7b94-3e44-8106-3419f64eaf09
+  port: 3462
+  server: a03.taipeicitygovernment.cn.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: '@Alirewa-1378'
+  network: tcp
+  password: 736cd94d-7b94-3e44-8106-3419f64eaf09
+  port: 3462
+  server: a12.taipeicitygovernment.org.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | F7FAD5
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 220.128.128.151
+  sni: official.taipeicitygovernment.net.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 182F0E
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 220.128.135.193
+  sni: official.taipeicitygovernment.net.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | AD48DC
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.152.229
+  sni: official.taipeicitygovernment.chernovtsy.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | A17D27
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.152.230
+  sni: official.taipeicitygovernment.ivano-frankivsk.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 71ACE2
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.80.130
+  sni: official.taipeicitygovernment.biz.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | CC27DB
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: 60.250.80.31
+  sni: official.taipeicitygovernment.biz.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 6E8F5F
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.biz.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 39422D
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.chernovtsy.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | DF0CC2
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 67F974
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.co.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | A2F17A
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.com.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 890271
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.dp.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 836C55
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.if.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | C20D8C
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.ivano-frankivsk.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 6A16D6
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kiev.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 17BB63
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.kyiv.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 9E21EB
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.net.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 63F193
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.org.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 40D25E
+  network: tcp
+  password: 96983eb4-cr8f1-316e-ab00-500014ed3d8b
+  port: 8443
+  server: official.taipeicitygovernment.cn.ua
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 542CFD
+  network: tcp
+  password: 9efd3f19-c7cb-4fa9-8d66-0598043597dc
+  port: 443
+  server: t2w2t2w2.bpca2026.top
+  sni: t2w2t2w2.bpca2026.top
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: TW 🇹🇼 | @Raydikalx | E1C4D2
+  network: tcp
+  password: b5a21d2a-6208-4e23-91ab-c2423c2ae362
+  port: 443
+  server: tw2.microsoft-orgwly.vip
+  sni: tls.microsoft-orgwly.vip
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 2EF7E5
+  network: tcp
+  password: ef23ddd0-14c5-39c2-9880-af55ce892363
+  port: 59623
+  server: t2.qifei.app
+  sni: t2.qifei.app
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | D94D0E
+  network: tcp
+  password: i99Cef
+  port: 28118
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 044017
+  network: tcp
+  password: i99Cef
+  port: 28119
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 526874
+  network: tcp
+  password: i99Cef
+  port: 28120
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 1949AB
+  network: tcp
+  password: i99Cef
+  port: 28121
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 418EF6
+  network: tcp
+  password: i99Cef
+  port: 28122
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 595785
+  network: tcp
+  password: i99Cef
+  port: 28123
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 7228C8
+  network: tcp
+  password: i99Cef
+  port: 28124
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 92832E
+  network: tcp
+  password: i99Cef
+  port: 28125
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | EFCF30
+  network: tcp
+  password: i99Cef
+  port: 28133
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 93181F
+  network: tcp
+  password: i99Cef
+  port: 28138
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | A7FB55
+  network: tcp
+  password: i99Cef
+  port: 28144
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 7059E2
+  network: tcp
+  password: i99Cef
+  port: 28145
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 8A94A9
+  network: tcp
+  password: i99Cef
+  port: 28150
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 09872E
+  network: tcp
+  password: i99Cef
+  port: 28152
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 48051E
+  network: tcp
+  password: i99Cef
+  port: 28153
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 9CA1A9
+  network: tcp
+  password: i99Cef
+  port: 28154
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 5CCEEF
+  network: tcp
+  password: i99Cef
+  port: 28155
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 4D87CD
+  network: tcp
+  password: i99Cef
+  port: 28157
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 833C94
+  network: tcp
+  password: i99Cef
+  port: 28158
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 6BFF7E
+  network: tcp
+  password: i99Cef
+  port: 28159
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | CF13E4
+  network: tcp
+  password: i99Cef
+  port: 28161
+  server: 211.20.156.191
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | F98B66
+  network: tcp
+  password: i99Cef
+  port: 28162
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | FC36C7
+  network: tcp
+  password: i99Cef
+  port: 28163
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 56B6E6
+  network: tcp
+  password: i99Cef
+  port: 28164
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | EBF0A9
+  network: tcp
+  password: i99Cef
+  port: 28165
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 885700
+  network: tcp
+  password: i99Cef
+  port: 28166
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 310A32
+  network: tcp
+  password: i99Cef
+  port: 28167
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | EE9ACF
+  network: tcp
+  password: i99Cef
+  port: 28169
+  server: 211.20.156.191
+  sni: ctldl.windowsupdate.com
+  type: trojan
+  udp: true
+- name: TW 🇹🇼 | @Raydikalx | 710838
+  network: ws
+  port: 443
+  server: 59.125.69.24
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- client-fingerprint: firefox
+  name: 🇹🇼TW_33
+  network: raw
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   server: 118.167.219.24
   servername: addons.mozilla.org
   tls: true
   type: vless
   udp: true
   uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: TW 🇹🇼 | @Raydikalx | 13F340
-  network: tcp
-  port: 32134
-  reality-opts:
-    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
-    short-id: '!!str 6c6c7c97'
-  server: 1.162.132.47
-  servername: buylite.music.apple.com
+- client-fingerprint: chrome
+  name: TW 🇹🇼 | @Raydikalx | A4F941
+  network: ws
+  port: 443
+  server: 151.242.189.40
+  servername: vlso5.1d.mom
   tls: true
   type: vless
   udp: true
-  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
-- name: '🇹🇼TW_3|484KB/s|A004-260618 #1'
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+    path: /socks5=888:888@hkip.1d.mom:1080
+- client-fingerprint: chrome
+  name: TW 🇹🇼 | @Raydikalx | D5CBB9
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- name: '🇹🇼TW_21|572KB/s|A004-260618 #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: vpn-tw-002.fastervpn.world
+  server: 103.115.109.49
   skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world%5Cu0026insecure%3D1%5Cu0026allowinsecure%3D1
+  sni: 103.115.109.49
   tls: false
   type: hysteria2
-- name: '🇹🇼TW_11|495KB/s|A004-260618 #1'
+- name: TW 🇹🇼 | @Raydikalx | 7BE9E7
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- name: TW 🇹🇼 | @Raydikalx | 16244C
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 160.187.100.109
   skip-cert-verify: true
-  sni: 127.0.0.1
-  tls: false
   type: hysteria2
-- name: '🇹🇼TW_22|496KB/s|C002-260622 #1'
+- name: 🇹🇼TW_22
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 160.187.100.109
@@ -193,7 +852,45 @@ proxies:
   sni: 160.187.100.109
   tls: false
   type: hysteria2
-- name: '🇹🇼TW_25|496KB/s|A004-260618 #1'
+- name: '🇹🇼TW_10|504KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 160.187.100.109
+  skip-cert-verify: true
+  sni: vpn-tw-002.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_20|573KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: css.rbxcdn.com
+  tls: false
+  type: hysteria2
+- name: '❓Other_40|212KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: TW 🇹🇼 | @Raydikalx | C5C6D9
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
+- name: TW 🇹🇼 | @Raydikalx | CCEAE8
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: t.me
+  type: hysteria2
+- name: '🇹🇼TW_17|592KB/s|A004-260618 #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: vpn-tw-002.fastervpn.world
@@ -201,7 +898,345 @@ proxies:
   sni: vk.com
   tls: false
   type: hysteria2
-- name: '🇹🇼TW_13|199KB/s|R002-260618 #1'
+- name: 🇹🇼TW_1
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-tw-002.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_18|142KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: whatsapp.com
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_14|586KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: TW
+  network: tcp
+  port: 794
+  server: 2.27.174.110
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 1D48F9
+  network: tcp
+  port: 31172
+  server: 202.153.4.171
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2bb735a0-b26e-4628-9f1a-23a6661b1275
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | F93DED
+  network: ws
+  port: 443
+  server: 24864168545164.d6f54hd1j.cc
+  servername: 24864168545164.d6f54hd1j.cc
+  tls: true
+  type: vmess
+  udp: true
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  ws-opts:
+    headers:
+      Host: 24864168545164.d6f54hd1j.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | F7660D
+  network: ws
+  port: 443
+  server: 24864168545164.oylfmxz.cn
+  servername: 24864168545164.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 24864168545164.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 4300A9
+  network: ws
+  port: 443
+  server: 654168416355441.d6f54hd1j.cc
+  servername: 654168416355441.d6f54hd1j.cc
+  tls: true
+  type: vmess
+  udp: true
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  ws-opts:
+    headers:
+      Host: 654168416355441.d6f54hd1j.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 82C740
+  network: ws
+  port: 443
+  server: 654168416355441.oylfmxz.cn
+  servername: 654168416355441.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 654168416355441.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 4968B8
+  network: ws
+  port: 443
+  server: 7dba81fc3a0b.oylfmxz.cn
+  servername: 7dba81fc3a0b.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 7dba81fc3a0b.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 62981A
+  network: ws
+  port: 443
+  server: 7dba81fc3a0b.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 4E82AD
+  network: ws
+  port: 443
+  server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+  servername: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 8818D4
+  network: ws
+  port: 443
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | A60569
+  network: ws
+  port: 443
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  servername: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 387389
+  network: ws
+  port: 443
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 6749E4
+  network: ws
+  port: 443
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | A1FA21
+  network: ws
+  port: 443
+  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 029D24
+  network: ws
+  port: 443
+  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
+  servername: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | F017DE
+  network: ws
+  port: 443
+  server: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
+  servername: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | F483D4
+  network: ws
+  port: 443
+  server: fujrdt.d6f54hd1j.cc
+  servername: fujrdt.d6f54hd1j.cc
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  ws-opts:
+    headers:
+      Host: fujrdt.d6f54hd1j.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 5C7CA9
+  network: ws
+  port: 52300
+  server: hi.northcluster.info
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6e571484-4166-4699-8f58-b34a1823691f
+  ws-opts:
+    path: /video
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 1232A6
+  network: ws
+  port: 52300
+  server: hi.northcluster.info
+  servername: hi.northcluster.info
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6e571484-4166-4699-8f58-b34a1823691f
+  ws-opts:
+    headers:
+      Host: hi.northcluster.info
+    path: /video
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 38AE0B
+  network: ws
+  port: 80
+  server: mdk.mdmekjll.best
+  servername: mdk.mdmekjll.best
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      Host: mdk.mdmekjll.best
+    path: /game/resources
+- name: 🇹🇼196823 | ⚡️Telegram = t.me/S...
+  port: 1080
+  server: 106.107.236.110
+  tls: false
+  type: socks5
+  username: MTExOjExMQ
+- name: '🇹🇼TW_8|577KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https%3A%2F%2Ft.me%2Fwangcai2
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_1|583KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https%3A%2F%2Ft.me%2Fwangcai2%F0%9F%87%A8%F0%9F%87%B3
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_12|239KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-tw-002.fastervpn.world%255cu0026insecure%253d1%255cu0026allowinsecure%253d1
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_19|594KB/s|C002-260622 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https%3A%2F%2Ft.me%2FWangCai2
+  tls: false
+  type: hysteria2
+- name: '🇹🇼TW_25|479KB/s|R002-260618 #1'
   network: ws
   port: 443
   server: 60.248.219.78
@@ -214,55 +1249,7 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: '%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530'
-- name: '🇹🇼TW_7|489KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_6|491KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: t.me
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_2|503KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https%3A%2F%2Ft.me%2Fwangcai2
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_24|507KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_15|467KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: t.me
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_23|492KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world%255cu0026insecure%253d1%255cu0026allowinsecure%253d1
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_14|503KB/s|A004-260618 #1'
+- name: '🇹🇼TW_22|534KB/s|A004-260618 #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
@@ -270,39 +1257,7 @@ proxies:
   sni: https
   tls: false
   type: hysteria2
-- name: '🇹🇼TW_20|514KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https%253a
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_8|492KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: https%3A%2F%2Ft.me%2Fwangcai2%F0%9F%87%A8%F0%9F%87%B3
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_1|497KB/s #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_10|501KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  tls: false
-  type: hysteria2
-- name: '🇹🇼TW_4|476KB/s|A004-260618 #1'
+- name: '🇹🇼TW_2|571KB/s|A004-260618 #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
@@ -310,44 +1265,23 @@ proxies:
   sni: https%253a%252f%252ft.me%252foneclickvpnkeys
   tls: false
   type: hysteria2
-- name: '🇹🇼TW_26|504KB/s|A004-260618 #1'
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: whatsapp.com
-  tls: false
-  type: hysteria2
-- name: 🇹🇼TW_2
+- name: '🇹🇼TW_3|505KB/s|A004-260618 #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
   skip-cert-verify: true
-  sni: 103.115.109.49
+  sni: https%3A
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  network: ws
+- name: '🇹🇼TW_4|580KB/s|A004-260618 #1'
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
-  server: 59.125.69.23
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
-  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
-  port: 47531
-  server: svip.skycon808.com
+  server: 103.115.109.49
   skip-cert-verify: true
-  sni: tw15.swiftrelay.cc
-  type: anytls
-  udp: true
-- name: 🇹🇼 029  | ⬇️ 29KB/s
+  sni: https%253a%252f%252ft.me%252fwangcai2
+  tls: false
+  type: hysteria2
+- name: '🇹🇼 🇨🇳 台湾 | TWN 3 #1'
   password: 0324fbc29561
   port: 443
   server: er8u54dh.df6h451rh.xin
@@ -355,17 +1289,64 @@ proxies:
   sni: px.ads.linkedin.com
   type: anytls
   udp: true
+- name: '🇹🇼 🇨🇳 台湾 | TWN 4 #1'
+  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+  port: 47531
+  server: svip.skycon808.com
+  skip-cert-verify: true
+  sni: tw15.swiftrelay.cc
+  type: anytls
+  udp: true
+- name: '🇹🇼 🇨🇳 台湾 | TWN 5 #1'
+  password: 0324fbc29561
+  port: 443
+  server: 98416548.df6h451rh.xin
+  skip-cert-verify: true
+  sni: images.ctfassets.net
+  type: anytls
+  udp: true
 - alterId: 0
   cipher: auto
-  name: 12,13｜台湾｜@ripaojiedian - 6ms
+  name: 🇭🇰_HK_中国香港-＞🇹🇼_TW_中国台湾 - 261ms
+  network: tcp
+  port: 2510
+  server: world.t.51guangtaobao.com
+  tls: false
+  type: vmess
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- alterId: 0
+  cipher: auto
+  name: TW2
   network: ws
   port: 443
-  server: 104.17.137.127
-  sni: tw.niskakowski.ggff.net
+  server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 56529ad8-61d2-4bfa-aa0b-a800719cb5fe
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: tw.niskakowski.ggff.net
-    path: /aa
+      host: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW3
+  network: ws
+  port: 443
+  server: 24864168545164.d6f54hd1j.cc
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  ws-opts:
+    headers:
+      host: 24864168545164.d6f54hd1j.cc
+    path: /
+- name: 🇹🇼TW_2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2
+  tls: false
+  type: hysteria2
