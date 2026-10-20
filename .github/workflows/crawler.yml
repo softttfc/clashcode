@@ -31,7 +31,7 @@ jobs:
       - name: Run crawler
         run: python crawler_pro2.py
         
-      - name: 生成 Meta 配置
+      - name: 生成 Meta 配置节点去重
         run: python config.py crawclash.yaml crawclash.meta.yaml 
         
       # ---------- 修复配置文件格式（可选） ----------
