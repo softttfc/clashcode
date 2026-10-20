@@ -1,17 +1,22 @@
 proxies:
-- name: 🇰🇷KR_1|1.4MB/s - 135ms_1
+- name: 🇰🇷 韩国_S7JAYE - 134ms
+  password: Og==
   port: 1080
   server: 14.36.232.55
   type: socks5
-  username: Og%3D%3D
-- name: 8%E5%85%83%E8%80%81%E7%89%8C%E...
-  port: 1090
-  server: 121.169.46.116
-  type: socks5
-  username: Og
+  username: Og==
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国 - 166ms
+  name: 🇰🇷 韩国_47AJIZ - 135ms
+  network: tcp
+  port: 123
+  server: 43.108.103.167
+  tls: false
+  type: vmess
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 170ms
   network: ws
   port: 443
   server: 8nTzyR5KNivfabaT.v.3dns.vip
@@ -22,14 +27,9 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /
-- name: KR%E9%9F%A9%E5%9B%BD%28v2clash...
-  port: 1080
-  server: 183.106.215.208
-  type: socks5
-  username: Og
 - encryption: none
   flow: ''
-  name: 🇰🇷KR韩國丨yoyapai.com - 41ms
+  name: 🇰🇷KR韩國丨yoyapai.com - 42ms
   network: ws
   port: 8880
   server: crimson-smoke-7818.397.workers.dev
@@ -61,26 +61,37 @@ proxies:
   skip-cert-verify: true
   sni: 154.90.62.70
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_6|172KB/s|M002-260618 01 ...
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇰🇷KR_1|1.3MB/s - 151ms
   network: ws
-  port: 80
-  server: 132.145.80.230
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 132.145.80.230
-    path: /
-- name: 🇰🇷 韩国_S7JAYE - 130ms
-  password: Og==
-  port: 1080
-  server: 14.36.232.55
-  type: socks5
-  username: Og==
-- name: KR%E9%9F%A9%E5%9B%BD%28mibei77...
+  port: 443
+  server: 144.24.90.178
+  tls: true
+  type: vless
+  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇰🇷KR_3|1018KB/s - 132ms
+  network: ws
+  port: 443
+  server: 131.186.26.94
+  tls: true
+  type: vless
+  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇰🇷KR_4|2.1MB/s - 133ms
+  network: ws
+  port: 443
+  server: 193.122.119.241
+  tls: true
+  type: vless
+  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
+- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -92,7 +103,7 @@ proxies:
     headers:
       Host: tjsp.hhxaf.cc.cd
     path: /
-- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
+- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #2'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -112,25 +123,29 @@ proxies:
   tls: false
   type: vmess
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343 - ...
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: KR 🇰🇷 | @Raydikalx | 749113 - ...
+  name: KR 🇰🇷 | @Raydikalx | 828755 - ...
   network: tcp
   port: 443
   reality-opts:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
     short-id: '!!str ca193e889d958f81'
   server: 64.176.231.183
+  tls: true
+  type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: KR 🇰🇷 | @Raydikalx | 238F97 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
+    short-id: '!!str ca193e889d958f81'
+  server: 158.247.199.164
   tls: true
   type: vless
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
@@ -173,16 +188,3 @@ proxies:
   tls: true
   type: vless
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 35AD74 - ...
-  network: ws
-  port: 20086
-  server: 183.109.131.75
-  tls: false
-  type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  ws-opts:
-    headers:
-      Host: 183.109.131.75
-    path: /

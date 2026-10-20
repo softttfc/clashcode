@@ -1,30 +1,31 @@
 proxies:
-- name: 🇸🇪SE_1|2.5MB/s - 163ms
-  port: 443
-  server: 146.70.242.146
-  sni: 146.70.242.146
-  tls: true
-  type: http
-- name: 🇸🇪SE_2|1.8MB/s - 157ms
+- name: 🇸🇪SE_1|100KB/s|R002-260618 01 ...
   port: 443
   server: 149.50.216.65
   sni: 149.50.216.65
   tls: true
   type: http
-- name: 🇸🇪SE_1|1.7MB/s - 156ms
+- name: 🇸🇪SE_1|1.5MB/s - 153ms
+  password: None
+  port: 443
+  server: 79.142.77.63
+  sni: 79.142.77.63
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|2.2MB/s - 159ms
   password: None
   port: 443
   server: 146.70.242.130
   sni: 146.70.242.130
   tls: true
   type: http
-- name: 🇸🇪SE_1|3.3MB/s - 167ms
+- name: 🇸🇪SE_2|2.2MB/s - 156ms_1
   port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
+  server: 146.70.242.146
+  sni: 146.70.242.146
   tls: true
   type: http
-- name: 🇸🇪SE_2|1.0MB/s - 167ms
+- name: 🇸🇪SE_2|1.0MB/s - 160ms
   port: 443
   server: 217.210.129.243
   sni: 217.210.129.243
@@ -35,7 +36,7 @@ proxies:
   client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇸🇪SE_1|2.1MB/s - 171ms
+  name: 🇸🇪SE_1|2.1MB/s - 174ms
   network: grpc
   port: 443
   server: 87.242.117.59
@@ -45,7 +46,7 @@ proxies:
 - client-fingerprint: qq
   encryption: none
   flow: ''
-  name: 🇸🇪SE_4|3.3MB/s - 197ms
+  name: 🇸🇪SE_4|3.3MB/s - 400ms
   network: grpc
   port: 23688
   reality-opts:
@@ -55,24 +56,17 @@ proxies:
   tls: true
   type: vless
   uuid: c19ecc7f-8312-4d9d-90c9-1a997d82d3c5
-- name: 🇸🇪SE_1|3.0MB/s - 146ms
-  password: None
-  port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
-  tls: true
-  type: http
-- name: 🇸🇪SE_3|2.4MB/s - 204ms
+- name: 🇸🇪SE_3|2.4MB/s - 198ms
   port: 10809
   server: 46.161.49.174
   type: http
 - cipher: aes-256-gcm
-  name: 🇸🇪SE_2|1.8MB/s - 10ms
+  name: 🇸🇪SE_2|1.8MB/s - 11ms
   password: 30e9c7aa-d86d-4f0d-a0d6-9d0ddf3f5e42
   port: 22043
   server: ruot.ayucloudservices.nl
   type: ss
-- name: SE 12 → tg@nicevpn123 - 8ms
+- name: SE 12 → tg@nicevpn123 - 9ms
   password: dGKXcHgs3P
   port: 80
   server: 185.146.173.66
@@ -80,7 +74,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 10ms
+  name: SE 20 → tg@nicevpn123 - 9ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -93,7 +87,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: SE 22 → tg@nicevpn123 - 10ms
+  name: SE 22 → tg@nicevpn123 - 9ms
   network: ws
   port: 443
   server: 185.146.173.59
@@ -104,32 +98,12 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: SE 🇸🇪 | @Raydikalx | C5267B - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: IwFiMbtqTA9Xhb3sVPbrfXPanaPLxMqg896uQUlNzAI
-    short-id: '!!str 29bbf531'
-  server: 178.236.251.175
-  tls: true
-  type: vless
-  uuid: a04c750d-3b71-493b-b2c1-6473ff1209dd
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: SE 🇸🇪 | @Raydikalx | DB2AC9 - ...
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: ib3Kd2S4Y5q_T9UOnOB9d5YCj8bP36lKy6kE75BZ7DQ
-    short-id: '!!str 6f4e398e3638a914'
-  server: 81.90.21.89
-  tls: true
-  type: vless
-  uuid: 89f84dc1-39e4-4302-a455-1e4b946883b0
+- name: SE 🇸🇪 | @Raydikalx | 43B056 - ...
+  password: humanity
+  port: 443
+  server: 192.145.30.27
+  sni: www.pleadcourt.org
+  type: trojan
 - name: SE 🇸🇪 | @Raydikalx | 081B0B - ...
   password: humanity
   port: 443
@@ -149,9 +123,3 @@ proxies:
   tls: true
   type: vless
   uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-- name: SE 🇸🇪 | @Raydikalx | 43B056 - ...
-  password: humanity
-  port: 443
-  server: 192.145.30.27
-  sni: www.pleadcourt.org
-  type: trojan
