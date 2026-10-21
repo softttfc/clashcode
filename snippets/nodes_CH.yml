@@ -1,37 +1,22 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: '瑞士 002 #1'
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
-  skip-cert-verify: true
-  type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇭CH_8
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  port: 8388
-  server: 132.243.175.144
-  type: ss
+- client-fingerprint: chrome
+  name: CH 🇨🇭 | @Raydikalx | D33792
+  network: ws
+  password: humanity
+  port: 2053
+  server: 91.245.225.79
+  sni: www.calmlunch.com
+  type: trojan
   udp: true
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - name: '[CH] Art.29 #1'
   network: ws
   password: humanity
   port: 443
   server: 185.18.250.245
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: 'ES 🇪🇸 | @Raydikalx | D6C206 #2'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.252
   skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
@@ -51,12 +36,17 @@ proxies:
   uuid: 389625c7-c891-4f61-9f98-478058744ada
 - alterId: 0
   cipher: auto
-  name: 未知37
+  name: 'کانال تلگرام : Free_VPN_CH@ #1'
   network: tcp
-  port: 9119
+  port: '9119'
   server: GR1-Public-IR.g2gstore.ir
   servername: ''
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   uuid: ae56511d-6b39-454b-847b-b711782d18cb
+- name: CH 🇨🇭 ｜ @Raydikalx ｜ D33792 - ...
+  password: humanity
+  port: 2053
+  server: 91.245.225.79
+  sni: www.calmlunch.com
+  type: trojan
