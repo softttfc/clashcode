@@ -87,8 +87,8 @@ jobs:
       #   continue-on-error: true
       - name: 去重
         run: |
-          # python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
-           python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
+           python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
+           # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
       - name: 验证（必选，数学证明）
         run: |
           pip install "pytest>=8.0,<9.0"
