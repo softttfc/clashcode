@@ -1,6 +1,20 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: '瑞士 001 #1'
+  network: ws
+  port: 443
+  server: www.apulnion.com
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7b8c370d-8610-4988-b0a7-cde74aa0713b
+  ws-opts:
+    headers:
+      Host: www.apulnion.com
+    path: /58a5342f7a/
 - client-fingerprint: chrome
-  name: CH 🇨🇭 | @Raydikalx | D33792
+  name: 'CH 🇨🇭 | @Raydikalx | D33792 #2'
   network: ws
   password: humanity
   port: 2053
@@ -12,6 +26,37 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
+- client-fingerprint: chrome
+  name: CH 🇨🇭 | @Raydikalx | 6E4325
+  network: tcp
+  password: Masir_Sefid
+  port: 443
+  server: 84.234.29.238
+  sni: store.steampowered.com
+  type: trojan
+  udp: true
+- name: CH 🇨🇭 | @Raydikalx | 6F7849
+  network: tcp
+  password: SoftNetConnect
+  port: 443
+  server: 83.228.224.161
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: CH 🇨🇭 | @Raydikalx | 95D641
+  network: ws
+  port: 443
+  server: 87.120.222.2
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
+  type: vmess
+  udp: true
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - name: '[CH] Art.29 #1'
   network: ws
   password: humanity
@@ -24,29 +69,3 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- alterId: 0
-  cipher: auto
-  name: 'کانال تلگرام : Free_VPN_CH@'
-  network: tcp
-  port: '4452'
-  server: x2.mehradservice.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 389625c7-c891-4f61-9f98-478058744ada
-- alterId: 0
-  cipher: auto
-  name: 'کانال تلگرام : Free_VPN_CH@ #1'
-  network: tcp
-  port: '9119'
-  server: GR1-Public-IR.g2gstore.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: ae56511d-6b39-454b-847b-b711782d18cb
-- name: CH 🇨🇭 ｜ @Raydikalx ｜ D33792 - ...
-  password: humanity
-  port: 2053
-  server: 91.245.225.79
-  sni: www.calmlunch.com
-  type: trojan

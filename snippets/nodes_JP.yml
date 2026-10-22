@@ -1,63 +1,5 @@
 proxies:
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_2
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: unsafe
-  name: 🇯🇵JP_11|405KB/s|M003-260806 [6...
-  network: ws
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: 188.114.98.0
-  skip-cert-verify: false
-  sni: nat11.outsidemyheart.space
-  sub_tag: M003-260806
-  type: trojan
-  udp: true
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G570M Build/NRD90M) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-    max-early-data: 2560
-    path: /w4e5yh0p945y3
-- cipher: aes-256-cfb
-  name: 🇨🇳_CN_中国->🇯🇵_JP_日本
-  password: 7eadc6dbe2ae
-  port: 65443
-  server: 121.46.230.137
-  skip-cert-verify: true
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵_JP_日本
-  network: http
-  port: 49432
-  server: 38.47.121.14
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-  port: 30806
-  server: v6.hdacd.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 🇯🇵JP_52
-  network: tcp
+- name: 日本_1
   password: Trojan@82164024
   port: 443
   server: jp.tronsg.com
@@ -65,40 +7,13 @@ proxies:
   sni: jp.tronsg.com
   type: trojan
   udp: true
-- alterId: 2
-  cipher: auto
-  client-fingerprint: chrome
-  name: '🇯🇵 018 '
-  network: tcp
-  port: 30806
-  server: v6.hdacd.com
-  skip-cert-verify: true
-  tls: false
-  type: vmess
+- cipher: aes-256-gcm
+  name: 🇯🇵 日本_J5JXKB - 238ms
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
+  type: ss
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
-- client-fingerprint: chrome
-  delay: 909
-  name: 🇯🇵JP_89
-  network: tcp
-  password: bad06c3525a6eaee1757b34776b83892
-  port: 12019
-  server: 4c2d5151.266nets.com
-  skip-cert-verify: true
-  sni: ixigua.com
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 日本(yudou789.top 玉豆免费节点)
-  port: 56738
-  server: 103.127.243.59
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5f49c80e-7770-4bd1-9c86-43c2068a3a26
 - name: 🇯🇵 日本|@stairnode
   password: BxceQaOe
   port: 3022
@@ -120,59 +35,6 @@ proxies:
   skip-cert-verify: false
   sni: www.nintendogames.net
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: '日本 001 #1'
-  network: ws
-  port: 80
-  server: 103.35.188.226
-  skip-cert-verify: true
-  type: vmess
-  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
-  ws-opts:
-    headers:
-      Host: 103.35.188.226
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '日本 002 #1'
-  network: tcp
-  port: 49499
-  server: 139.162.125.97
-  skip-cert-verify: true
-  type: vmess
-  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
-- alterId: 0
-  cipher: auto
-  name: '日本 003 #1'
-  network: tcp
-  port: 14935
-  server: 167.179.111.237
-  skip-cert-verify: true
-  type: vmess
-  uuid: e961894f-8e90-472f-98d3-09402e4be453
-- alterId: 0
-  cipher: auto
-  name: '日本 006 #1'
-  network: ws
-  port: 80
-  server: 3h-philippines1.09vpn.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-  ws-opts:
-    headers:
-      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    path: /vmess/
-- name: '🇭🇰_HK_中国香港->🇯🇵_JP_日本 #1'
-  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-  port: 20004
-  server: oplosgru-c.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  tls: false
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
   name: '🇯🇵 日本|@ripaojiedian #2'
@@ -205,108 +67,2196 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: null
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: null
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #2'
-  network: ws
-  port: '2083'
-  server: or.521166.xyz
-  servername: or.521166.xyz
-  tls: true
-  type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    path: /or3
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #10'
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: null
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: null
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: 未知35 4.2MB/s
+  name: 🇯🇵JP_1｜246KB/s｜S004-260618 [13...
   network: ws
   port: 80
   server: 168.138.43.75
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
-    path: /cctv13.m3u8
-- alpn:
-  - http/1.1
-  name: '🇯🇵JP_95|472KB/s|M003-260806 #1'
-  network: ws
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: 188.114.98.0
-  sni: nat11.outsidemyheart.space
-  type: trojan
-  ws-opts:
-    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
+    headers:
+      Host: 168.138.43.75
+    path: /
 - alterId: 0
   cipher: auto
-  name: '🇯🇵JP_90|357KB/s|C002-260622 #1'
-  network: raw
-  port: '18112'
-  server: oc.imfun.fun
+  name: '日本 005 #1'
+  network: ws
+  port: 443
+  server: fullaccesstojapannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstojapannetsubnode1.azurewebsites.net
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: '日本 006 #1'
+  network: ws
+  port: 80
+  server: 103.35.188.226
+  skip-cert-verify: true
+  type: vmess
+  uuid: 098e7cdd-03b4-435d-8c41-ea608fa637c2
+  ws-opts:
+    headers:
+      Host: 103.35.188.226
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: '日本 007 #1'
+  network: ws
+  port: 80
+  server: 3h-philippines1.09vpn.com
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
+  ws-opts:
+    headers:
+      Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: '日本 008 #1'
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '日本 009 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.u1.glados-config.net
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.u1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 010 #1'
+  network: ws
+  port: 443
+  server: 172.105.223.136
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  ws-opts:
+    headers:
+      Host: www.microsoft.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '日本 011 #1'
+  network: ws
+  port: 3331
+  server: f1f3227.v1.glados-config.net
+  skip-cert-verify: true
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  ws-opts:
+    headers:
+      Host: f1f3227.v1.glados-config.net
+    path: /s/f1f3227.fm.apple.com:111548
+- alterId: 0
+  cipher: auto
+  name: '日本 012 #1'
+  network: ws
+  port: 443
+  server: 124.156.225.184
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
+  ws-opts:
+    headers:
+      Host: azjp.pengui.xyz
+    path: /
+- alterId: 4
+  cipher: auto
+  name: '日本 013 #1'
+  network: ws
+  port: 443
+  server: 202.61.141.130
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: 202.61.141.130
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷_韩国_25 - 210ms
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  skip-cert-verify: true
   tls: false
   type: vmess
+  udp: true
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+  password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+  port: 20004
+  server: oplosgru-c.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  tls: false
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: '@npv_vpn11 #1489'
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  servername: ''
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: jp01.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵JP_38|463KB/s|C002-260622 #1'
+  network: ws
+  port: '80'
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    path: /cctv13.m3u8
+- name: JP 🇯🇵 | @Raydikalx | 7D91F6
+  network: tcp
+  password: '!str18844'
+  port: 443
+  server: 49.212.193.129
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 4654AD
+  network: tcp
+  password: '!str18844'
+  port: 443
+  server: 49.212.203.7
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | F278EA
+  network: tcp
+  password: '!str18844@zxcvbn'
+  port: 443
+  server: os-tr-2.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | ED4401
+  network: tcp
+  password: '!str18844@zxcvbn'
+  port: 443
+  server: os-tr-3.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | AF45EA
+  network: tcp
+  password: '!str18844@zxcvbn'
+  port: 443
+  server: os-tr-5.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 68383D
+  network: tcp
+  password: 18844@zxcvbn
+  port: 443
+  server: 153.121.52.154
+  sni: tk-tr-4.cats22.net
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | D56F9A
+  network: tcp
+  password: 18844@zxcvbn
+  port: 443
+  server: 49.212.203.7
+  sni: os-tr-2.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CBC837
+  network: tcp
+  password: 18844@zxcvbn
+  port: 443
+  server: 49.212.204.123
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7623F8
+  network: tcp
+  password: 18844@zxcvbn
+  port: 443
+  server: os-tr-5.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 40FBC6
+  network: tcp
+  password: 18844@zxcvbn
+  port: 443
+  server: tk-tr-4.cats22.net
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 0C8834
+  network: tcp
+  password: 3bcd9e33-8377-4b32-af33-217158577ff3
+  port: 443
+  server: 160.16.65.99
+  sni: kdlsupport.zendesk.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 393B13
+  network: tcp
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 161.33.3.222
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 542903
+  network: tcp
+  password: 4c3164ee-abcf-4091-abea-d1cd4937a68d
+  port: 443
+  server: 167.179.82.79
+  sni: jy.hhllfly.kdns.fr
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 764B89
+  network: tcp
+  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
+  port: 41300
+  server: mb2b.xmrthnode.com
+  sni: mpvideo.qpic.cn
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CC6CB3
+  network: tcp
+  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
+  port: 41302
+  server: mb2b.xmrthnode.com
+  sni: mpvideo.qpic.cn
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 661016
+  network: tcp
+  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
+  port: 41306
+  server: mb2b.xmrthnode.com
+  sni: mpvideo.qpic.cn
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 132B9F
+  network: tcp
+  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
+  port: 41307
+  server: mb2b.xmrthnode.com
+  sni: mpvideo.qpic.cn
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 6B3DA5
+  network: tcp
+  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
+  port: 41001
+  server: nb2b.xmrthnode.com
+  sni: mpvideo.qpic.cn
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 5799CE
+  network: tcp
+  password: 5c777277-17f2-4272-ae65-7bd00fa4fbaa
+  port: 443
+  server: 18.65.190.65
+  sni: wel-jp.optage.moe
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 4C980A
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 02.tokyometropolis.ivano-frankivsk.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 342E9D
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 03.tokyometropolis.kharkov.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | BBA12A
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 04.tokyometropolis.kherson.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3EBF21
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 05.tokyometropolis.kiev.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7E60B7
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 06.tokyometropolis.kyiv.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 13B167
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 07.tokyometropolis.odesa.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9AFB5C
+  network: tcp
+  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
+  port: 2053
+  server: 08.tokyometropolis.odessa.ua
+  sni: 45.32.28.232
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | B8B6E3
+  network: tcp
+  password: 7d0f1f83-0f2f-4b90-930e-de44ac233fef
+  port: 443
+  server: 20.210.234.145
+  sni: in.stablize.top
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 16FD6D
+  network: tcp
+  password: 8r<[9'l6hAO#8ZQi
+  port: 443
+  server: 64.176.36.61
+  sni: 64.176.36.61
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | EEBD57
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: 152.175.38.171
+  sni: official.tokyometropolis.odessa.ua
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 4DD6A4
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: 152.175.38.178
+  sni: official.tokyometropolis.chernigov.ua
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E80E4E
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: 152.175.38.59
+  sni: official.tokyometropolis.kiev.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #1143'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.chernigov.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #1121'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.ivano-frankivsk.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #910'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kharkov.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #1167'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kherson.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #510'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kiev.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #1040'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.kyiv.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #535'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odesa.ua
+  type: trojan
+  udp: true
+- name: 'nukcrow #703'
+  network: tcp
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  port: 2053
+  server: official.tokyometropolis.odessa.ua
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | DF89C2
+  network: tcp
+  password: 9995cc0e-2e9d-4c80-8c81-4fdbb6322a3a
+  port: 443
+  server: 20.89.130.227
+  sni: fscus.fscloud123456789.com
+  type: trojan
+  udp: true
+- name: 'nukcrow #811'
+  network: tcp
+  password: a196faa4-403e-4a8b-987a-d1789f379685
+  port: 49755
+  server: 139.162.100.58
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 3B773A
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: 54.65.167.167
+  sni: tough-robin.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 8F9645
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: awaited-lark.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 937089
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: fun-salmon.rooster465.autos
+  sni: fun-salmon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 69CCA1
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: harmless-imp.rooster465.autos
+  sni: harmless-imp.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | A799A8
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: immortal-woodcock.rooster465.autos
+  sni: immortal-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 641732
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: outgoing-ladybird.rooster465.autos
+  sni: outgoing-ladybird.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-329 ｜ free-nodes - 1...
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: premium-weevil.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | D05A1B
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: right-seahorse.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | C49FEC
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: shining-haddock.rooster465.autos
+  sni: shining-haddock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9A7E3B
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: superb-dory.rooster465.autos
+  sni: superb-dory.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 425ADC
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: whole-grub.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 5F6B91
+  network: tcp
+  password: AE62539071
+  port: 443
+  server: whole-perch.rooster465.autos
+  sni: whole-perch.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | BA9AFA
+  network: tcp
+  password: Aimer
+  port: 443
+  server: 185.184.223.47
+  sni: epme.ambercc.filegear-sg.me
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 56D64B
+  network: tcp
+  password: Bw5Mz7QkVp
+  port: 443
+  server: 64.176.37.227
+  sni: z-v2-082533.kailib.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | B49169
+  network: tcp
+  password: CF68213490
+  port: 443
+  server: 18.183.164.154
+  sni: noble-tahr.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 6BABEB
+  network: tcp
+  password: CF68213490
+  port: 443
+  server: 52.195.214.66
+  sni: glowing-marmoset.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-312 ｜ free-nodes - 1...
+  network: tcp
+  password: d050aca3-9df2-4461-90ec-92373c1d7636
+  port: 44184
+  server: v2jp.k1.ssnss.live
+  type: trojan
+  udp: true
+- name: 🇯🇵JP_1｜1.2MB/s - 135ms
+  network: tcp
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 45.32.52.173
+  skip-cert-verify: true
+  sni: 45.32.52.173
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | BF76A2
+  network: tcp
+  password: E_hUHrn0+6VeZO=v9=fLgoPDXZWGfcrejg
+  port: 443
+  server: 172.238.19.11
+  sni: 172.238.19.11
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7BE22C
+  network: tcp
+  password: E_hUHrn0+6VeZO=v9=fLgoPDXZWGfcrejg
+  port: 443
+  server: 172.238.19.11
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | C45270
+  network: tcp
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 156.231.141.39
+  sni: tjsp.hhxaf.cc.cd
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CA9F0E
+  network: tcp
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  port: 443
+  server: 172.237.13.221
+  sni: hhcm.hhxaf.cc.cd
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | C41336
+  network: tcp
+  password: ef23ddd0-14c5-39c2-9880-af55ce892363
+  port: 52492
+  server: t28.qifei.app
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 147D03
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: 3.112.44.90
+  sni: brave-tomcat.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7C9C0B
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: closing-falcon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 307BB5
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: faithful-panther.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 1BD802
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: fun-seagull.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 57AD2A
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: great-wasp.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9424C9
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: immortal-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 2A24C1
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: shining-haddock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3D086F
+  network: tcp
+  password: EQ30679154
+  port: 443
+  server: whole-perch.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | C6F5DF
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: 31.223.184.178
+  sni: tough-shark.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | B48D16
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: actual-chicken.rooster465.autos
+  sni: actual-chicken.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 96A5A0
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: adapted-quetzal.rooster465.autos
+  sni: adapted-quetzal.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 49F754
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: bright-quagga.rooster465.autos
+  sni: bright-quagga.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 29B266
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: classic-pug.rooster465.autos
+  sni: classic-pug.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3CF041
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: faithful-panther.rooster465.autos
+  sni: faithful-panther.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 017FA6
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: flowing-gobbler.rooster465.autos
+  sni: flowing-gobbler.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 52D074
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: free-tuna.rooster465.autos
+  sni: free-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | E8A972
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: fun-seagull.rooster465.autos
+  sni: fun-seagull.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | E26E0E
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: giving-bird.rooster465.autos
+  sni: giving-bird.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 43CF7D
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: great-wasp.rooster465.autos
+  sni: great-wasp.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 93FC62
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: growing-tuna.rooster465.autos
+  sni: growing-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0B22BC
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: harmless-imp.rooster465.autos
+  sni: harmless-imp.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | ADCFB9
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: humane-hawk.rooster465.autos
+  sni: humane-hawk.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | B52319
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: humorous-starling.rooster465.autos
+  sni: humorous-starling.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | DA31CC
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: magnetic-woodcock.rooster465.autos
+  sni: magnetic-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 458E51
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: outgoing-ladybird.rooster465.autos
+  sni: outgoing-ladybird.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | F8EAF3
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: picked-hippo.rooster465.autos
+  sni: picked-hippo.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 41B6E6
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: premium-lab.rooster465.autos
+  sni: premium-lab.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 2F9976
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: right-seahorse.rooster465.autos
+  sni: right-seahorse.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 681B2E
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: shining-haddock.rooster465.autos
+  sni: shining-haddock.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0EAA5C
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: steady-lemming.rooster465.autos
+  sni: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 01939D
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: stirred-sunbeam.rooster465.autos
+  sni: stirred-sunbeam.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | F102FB
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: true-alpaca.rooster465.autos
+  sni: true-alpaca.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0DD094
+  network: tcp
+  password: FC60532879
+  port: 443
+  server: wealthy-bengal.rooster465.autos
+  sni: wealthy-bengal.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 8CC442
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 18.179.31.199
+  sni: prompt-duckling.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9F0CD4
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 52.195.225.156
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9A8F64
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: 52.195.233.147
+  sni: touching-ostrich.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 45E2CE
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: actual-chicken.rooster465.autos
+  sni: actual-chicken.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-341 ｜ free-nodes - 1...
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: adapted-quetzal.rooster465.autos
+  sni: adapted-quetzal.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-346 ｜ free-nodes - 1...
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: bright-quagga.rooster465.autos
+  sni: bright-quagga.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-347 ｜ free-nodes - 1...
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: casual-stallion.rooster465.autos
+  sni: casual-stallion.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-350 ｜ free-nodes - 1...
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: classic-pug.rooster465.autos
+  sni: classic-pug.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 580FBD
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: closing-falcon.rooster465.autos
+  sni: closing-falcon.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-338 ｜ free-nodes - 1...
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: great-wasp.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 6116C2
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: premium-weevil.rooster465.autos
+  sni: premium-weevil.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CB6135
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: shining-haddock.rooster465.autos
+  sni: shining-haddock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 380B79
+  network: tcp
+  password: FH72359861
+  port: 443
+  server: steady-lemming.rooster465.autos
+  sni: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 65B61B
+  network: tcp
+  password: Fn9TZuYXiFYhsyp65T
+  port: 443
+  server: 45.80.191.177
+  sni: os-2.rise-fuji.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 1C84F8
+  network: tcp
+  password: Fn9TZuYXiFYhsyp65T
+  port: 443
+  server: os-2.rise-fuji.com
+  sni: os-2.rise-fuji.com
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 5A71EE
+  network: tcp
+  password: HK78346019
+  port: 443
+  server: awaited-lark.rooster465.autos
+  sni: awaited-lark.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 4B74E0
+  network: ws
+  password: HutaoCloud
+  port: 11543
+  server: 185.220.238.77
+  sni: 185.220.238.77
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 185.220.238.77
+    path: /api
+- name: JP 🇯🇵 | @Raydikalx | D7C253
+  network: tcp
+  password: i99Cef
+  port: 443
+  server: 45.76.51.23
+  sni: download.windowsupdate.com
+  type: trojan
+  udp: true
+- name: 'nukcrow #470'
+  network: tcp
+  password: IL37892054
+  port: 443
+  server: growing-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- name: 'nukcrow #468'
+  network: tcp
+  password: IL37892054
+  port: 443
+  server: outgoing-ladybird.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | F1E965
+  network: tcp
+  password: IL37892054
+  port: 443
+  server: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0C4F05
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: 31.223.184.178
+  sni: tough-shark.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 6448EE
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: 31.223.184.82
+  sni: stirring-bat.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 9B1708
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: 94.177.131.27
+  sni: optimum-bull.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | A7F15A
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: 95.85.94.165
+  sni: moved-osprey.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E27895
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: adapted-quetzal.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 259665
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: adjusted-labrador.rooster465.autos
+  sni: adjusted-labrador.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7A9E05
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: casual-stallion.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | BEA652
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: electric-rhino.rooster465.autos
+  sni: electric-rhino.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 132E68
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: flowing-gobbler.rooster465.autos
+  sni: flowing-gobbler.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 44349B
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: free-tuna.rooster465.autos
+  sni: free-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 81E4E3
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: fun-salmon.rooster465.autos
+  sni: fun-salmon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | BD329F
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: giving-bird.rooster465.autos
+  sni: giving-bird.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 32F68C
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: glowing-deer.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 0533B1
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: growing-tuna.rooster465.autos
+  sni: growing-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 216D34
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: harmless-imp.rooster465.autos
+  sni: harmless-imp.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 9B962F
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: humane-hawk.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 535224
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: immortal-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | D3273B
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: main-dragon.rooster465.autos
+  sni: main-dragon.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 338965
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: picked-hippo.rooster465.autos
+  sni: picked-hippo.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 61EFA2
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: premium-weevil.rooster465.autos
+  sni: premium-weevil.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 19FC5F
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: robust-toucan.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0734DF
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: shining-haddock.rooster465.autos
+  sni: shining-haddock.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | C10BCE
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: steady-lemming.rooster465.autos
+  sni: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E2C3E0
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: sterling-vervet.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | E4E8CA
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: stirred-sunbeam.rooster465.autos
+  sni: stirred-sunbeam.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 5A1271
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: wealthy-bengal.rooster465.autos
+  sni: wealthy-bengal.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 08A92A
+  network: tcp
+  password: IQ68037294
+  port: 443
+  server: whole-perch.rooster465.autos
+  sni: whole-perch.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 1D8BDC
+  network: tcp
+  password: JA96378052
+  port: 443
+  server: 52.195.11.84
+  sni: WangCai.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | B8C383
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: actual-chicken.rooster465.autos
+  sni: actual-chicken.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 26C7D1
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: adjusted-labrador.rooster465.autos
+  sni: adjusted-labrador.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 233EFB
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: bright-quagga.rooster465.autos
+  sni: bright-quagga.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CD7B0E
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: champion-alien.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | B141E7
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: glowing-deer.rooster465.autos
+  sni: glowing-deer.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | D59E2A
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: main-dragon.rooster465.autos
+  sni: main-dragon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | D24478
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: mutual-puma.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | E768E0
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: smart-pup.rooster465.autos
+  sni: smart-pup.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 53A2A9
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: steady-lemming.rooster465.autos
+  sni: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 614B9C
+  network: tcp
+  password: JT80563429
+  port: 443
+  server: wealthy-bengal.rooster465.autos
+  sni: wealthy-bengal.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 723BA0
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: 18.179.31.199
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 875292
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: 52.196.121.8
+  sni: thankful-mustang.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 81921E
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: 54.65.167.167
+  sni: tough-robin.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-287 ｜ free-nodes - 1...
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: adjusted-labrador.rooster465.autos
+  sni: adjusted-labrador.rooster465.autos
+  type: trojan
+  udp: true
+- name: 未知 TROJAN-301 ｜ free-nodes - 1...
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: learning-leopard.rooster465.autos
+  sni: learning-leopard.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 0E60AC
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: right-seahorse.rooster465.autos
+  sni: right-seahorse.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 13BA70
+  network: tcp
+  password: ND91608427
+  port: 443
+  server: smart-pup.rooster465.autos
+  sni: smart-pup.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | B20E26
+  network: tcp
+  password: NQ26071394
+  port: 443
+  server: 13.114.221.235
+  sni: amusing-grub.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E9626A
+  network: tcp
+  password: NQ26071394
+  port: 443
+  server: 54.238.186.195
+  sni: flexible-gannet.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E02E7A
+  network: tcp
+  password: owreRY1bmquS1WcYN2
+  port: 443
+  server: ty-3.tr202605.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | DC20A3
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 3.112.19.207
+  sni: amazed-burro.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | B43AFA
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: 54.249.187.217
+  sni: modest-amoeba.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 10641E
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: awaited-lark.rooster465.autos
+  sni: awaited-lark.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7C9665
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: bright-quagga.rooster465.autos
+  sni: bright-quagga.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | F9005E
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: champion-alien.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | FB4180
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: free-tuna.rooster465.autos
+  sni: free-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | AAA73D
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: humane-hawk.rooster465.autos
+  sni: humane-hawk.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 58D2CF
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: humorous-starling.rooster465.autos
+  sni: humorous-starling.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | DEB5D6
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: learning-leopard.rooster465.autos
+  sni: learning-leopard.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | F67070
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: main-dragon.rooster465.autos
+  sni: main-dragon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3E59D4
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: picked-hippo.rooster465.autos
+  sni: picked-hippo.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | E3B73F
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: robust-toucan.rooster465.autos
+  sni: robust-toucan.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 5A1D5E
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: steady-lemming.rooster465.autos
+  sni: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 95D4B5
+  network: tcp
+  password: PQ05174892
+  port: 443
+  server: sterling-vervet.rooster465.autos
+  sni: sterling-vervet.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3BBC94
+  network: tcp
+  password: PTTQuc24JKqW2hKVBf
+  port: 443
+  server: ty-4.rise-fuji.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | F7FF2E
+  network: tcp
+  password: q6UYkw9nUn6MYZz8Sp
+  port: 443
+  server: ty-1.tr202604.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 409B3F
+  network: tcp
+  password: q6UYkw9nUn6MYZz8Sp
+  port: 443
+  server: ty-2.tr202604.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 92FC48
+  network: tcp
+  password: TOZA9E6pyq4z3pFYeIeOC3ApaSDjR2wFueaO8uNDx0czDF3YCSwa3xjZ3qZAyB4YCKCZS
+  port: 443
+  server: 154.31.115.31
+  sni: swiftly.meijireform.com
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | DD79CF
+  network: tcp
+  password: ttfang
+  port: 443
+  server: 138.2.39.24
+  sni: ttfang.fange.me
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 7E90F7
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 13.114.99.222
+  sni: allowed-poodle.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 954C16
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 43.206.225.188
+  sni: 43.206.225.188
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 8599BB
+  network: tcp
+  password: UX82473651
+  port: 443
+  server: 54.65.177.190
+  sni: winning-marten.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 6B131A
+  network: tcp
+  password: WF42809561
+  port: 443
+  server: fun-seagull.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 905464
+  network: tcp
+  password: WF42809561
+  port: 443
+  server: picked-hippo.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 53EF59
+  network: tcp
+  password: WF42809561
+  port: 443
+  server: right-seahorse.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | ADA0A6
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: 31.223.184.82
+  sni: stirring-bat.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | FD59D7
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: casual-stallion.rooster465.autos
+  sni: casual-stallion.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 83D33F
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: closing-falcon.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 50D6B2
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: electric-rhino.rooster465.autos
+  sni: electric-rhino.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 067D16
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: flowing-gobbler.rooster465.autos
+  sni: flowing-gobbler.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | BB6156
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: free-tuna.rooster465.autos
+  sni: free-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 92BCC1
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: fun-seagull.rooster465.autos
+  sni: fun-seagull.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 838D9D
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: giving-bird.rooster465.autos
+  sni: giving-bird.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | E78ACD
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: glowing-deer.rooster465.autos
+  sni: glowing-deer.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 83A18C
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: great-wasp.rooster465.autos
+  sni: great-wasp.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | C229F5
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: growing-tuna.rooster465.autos
+  sni: growing-tuna.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 3560D2
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: harmless-imp.rooster465.autos
+  sni: harmless-imp.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 244DA0
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: immortal-woodcock.rooster465.autos
+  sni: immortal-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 273A79
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: magnetic-woodcock.rooster465.autos
+  sni: magnetic-woodcock.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 11935C
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: main-dragon.rooster465.autos
+  sni: main-dragon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 8CD1A1
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: premium-weevil.rooster465.autos
+  sni: premium-weevil.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 7C918C
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: right-seahorse.rooster465.autos
+  sni: right-seahorse.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 535C2D
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: sterling-vervet.rooster465.autos
+  sni: sterling-vervet.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 9B2772
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: stirred-sunbeam.rooster465.autos
+  sni: stirred-sunbeam.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 8AC29F
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: superb-dory.rooster465.autos
+  sni: superb-dory.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | B48587
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: wealthy-bengal.rooster465.autos
+  sni: wealthy-bengal.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 570ABD
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: whole-grub.rooster465.autos
+  sni: whole-grub.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 3DDBBA
+  network: tcp
+  password: WG39087154
+  port: 443
+  server: whole-perch.rooster465.autos
+  sni: whole-perch.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 4C5D4F
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: bright-quagga.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 2010BC
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: faithful-panther.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 20DACD
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: fun-salmon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 258315
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: main-dragon.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | CD5B67
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: mutual-puma.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 429E61
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: steady-lemming.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | 184A51
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: wealthy-bengal.rooster465.autos
+  type: trojan
+  udp: true
+- name: JP 🇯🇵 | @Raydikalx | D9B9CA
+  network: tcp
+  password: XG59623478
+  port: 443
+  server: whole-perch.rooster465.autos
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: JP 🇯🇵 | @Raydikalx | 74ACBD
+  network: tcp
+  password: xiubaixue000
+  port: 443
+  server: 160.251.136.55
+  sni: hakuiteam.duckdns.org
+  type: trojan
+  udp: true
+- name: 'nukcrow #479'
+  network: tcp
+  password: ZY07256934
+  port: 443
+  server: glowing-deer.rooster465.autos
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 'JP 🇯🇵 | @Raydikalx | BF7213 #1'
+  network: tcp
+  port: 18112
+  server: 161.33.185.151
+  tls: false
+  type: vmess
+  udp: true
   uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
 - alterId: 0
   cipher: auto
-  name: UN【机场推荐：https://a9a.xyz】238
+  name: 'JP 🇯🇵 | @Raydikalx | 7B4ED8 #1'
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  ws-opts:
+    path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: 'JP 🇯🇵 | @Raydikalx | F86A2B #1'
+  network: tcp
+  port: 18112
+  server: oc.imfun.fun
+  servername: oc.imfun.fun
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alterId: 0
+  cipher: auto
+  name: 未知 VMESS-483 ｜ free-nodes - 18...
   network: ws
   port: 2083
-  server: 162.159.135.234
-  servername: cdn.sfacg.uk
-  skip-cert-verify: true
+  server: or.521166.xyz
+  servername: or.521166.xyz
+  sni: or.521166.xyz
   tls: true
   type: vmess
   udp: true
   uuid: ac251237-576f-40c8-a543-554960c958b1
   ws-opts:
     headers:
-      Host: or3.sfacg.uk
+      Host: or.521166.xyz
     path: /or3
-- name: 'nukcrow #954'
-  network: ws
-  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  port: 443
-  server: jp3.998998.best
-  sni: nat11.outsidemyheart.space
-  type: trojan
-  ws-opts:
-    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
 - alterId: 0
   cipher: auto
-  name: 🇯🇵_日本_351
+  name: AutoAiVPN599261
+  network: ws
+  port: '10021'
+  server: 138.2.49.230
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a12e496e-f89a-434a-8011-108846f0e412
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | E6D44D
+  network: ws
+  port: 2083
+  server: 140.238.55.84
+  servername: or.521166.xyz
+  tls: true
+  type: vmess
+  udp: true
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  ws-opts:
+    headers:
+      Host: or.521166.xyz
+    path: /or3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 368E3D
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: 140.83.51.161
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    headers:
+      Host: 140.83.51.161
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 7D7435
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D59C7F
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: jp02.a0a.xyz
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    headers:
+      Host: jp02.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 4F9D7D
+  network: ws
+  port: 13118
+  server: 140.83.57.20
+  servername: sg.11160321.de5.net
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  ws-opts:
+    headers:
+      Host: sg.11160321.de5.net
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 445736
+  network: tcp
+  port: 18112
+  server: 150.230.97.23
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 3B0749
+  network: tcp
+  port: 55216
+  server: 155.248.176.44
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 154dbc39-0921-cf11-29bd-156c5000d763
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 3477B2
+  network: ws
+  port: 8080
+  server: 156.231.116.156
+  servername: images-na.ssl-images-amazon.com
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9ebecf5e-b160-43bd-806e-54cd994fc4c3
+  ws-opts:
+    headers:
+      Host: images-na.ssl-images-amazon.com
+    path: /image
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 56BDCB
+  network: tcp
+  port: 18112
+  server: 161.33.135.142
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | F79E1F
+  network: tcp
+  port: 18112
+  server: 168.110.60.104
+  servername: oc.imfun.fun
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵_日本_351 - 166ms
   network: ws
   port: 80
   server: 172.111.146.64
-  skip-cert-verify: true
+  servername: 172.111.146.64
   tls: false
   type: vmess
   udp: true
@@ -315,6 +2265,464 @@ proxies:
     headers:
       Host: 172.111.146.64
     path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 15C632
+  network: ws
+  port: 17577
+  server: 206.190.237.167
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 3ceb8486-fb82-462c-e989-89182fe660a5
+  ws-opts:
+    path: /3ceb8486
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | DDA3E3
+  network: ws
+  port: 443
+  server: 210.138.37.53
+  servername: DrBKg16eGf3FZlM3.v.3dns.vip
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: DrBKg16eGf3FZlM3.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | A27658
+  network: ws
+  port: 443
+  server: 212.135.211.242
+  servername: aus.lovehk.xyz
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
+  ws-opts:
+    headers:
+      Host: aus.lovehk.xyz
+    path: /Sydney3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 071DE1
+  network: ws
+  port: 443
+  server: 212.135.211.242
+  servername: aus.lovehk.xyz
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
+  ws-opts:
+    headers:
+      Host: aus.lovehk.xyz
+    path: /Sydney3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 8B42B1
+  network: tcp
+  port: 44573
+  server: 35.79.166.8
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 09acf9f3-3b90-4dbe-9c47-16a58bc1bf62
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | AB4065
+  network: ws
+  port: 8080
+  server: 45.192.206.6
+  servername: images-na.ssl-images-amazon.com
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9ebecf5e-b160-43bd-806e-54cd994fc4c3
+  ws-opts:
+    headers:
+      Host: images-na.ssl-images-amazon.com
+    path: /image
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 2DACEB
+  network: tcp
+  port: 4433
+  server: 45.32.57.118
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 05FF6E
+  network: ws
+  port: 8555
+  server: 54.168.242.25
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | C61C47
+  network: ws
+  port: 8555
+  server: 54.168.242.25
+  servername: a.189.cn
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    headers:
+      Host: a.189.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
+  network: ws
+  port: 23462
+  server: 64.176.51.214
+  servername: 64.176.51.214
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
+  ws-opts:
+    headers:
+      Host: 64.176.51.214
+    path: /a15206
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 4FD118
+  network: ws
+  port: 23462
+  server: 64.176.51.214
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
+  ws-opts:
+    path: /a15206
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 53D444
+  network: tcp
+  port: 444
+  server: 7gqt4-g01.jp04-3771-vm0.entry.fr0307a.art
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 45285F
+  network: ws
+  port: 8998
+  server: cc28.goingside.site
+  servername: cc28.goingside.site
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 4b019faa-38b0-473d-bc49-60bb68151c34
+  ws-opts:
+    headers:
+      Host: cc28.goingside.site
+    path: /
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | FF5D14
+  network: tcp
+  port: 11775
+  server: g03.jp02-e3-vm0.entry.fr0528.art
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a85150ba-dae3-3055-8984-700faca4d576
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | B7250A
+  network: tcp
+  port: 36011
+  server: gz1.polymarket.party
+  servername: gz1.polymarket.party
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 284FFD
+  network: tcp
+  port: 20401
+  server: gz1.polymarket.party
+  servername: gz1.polymarket.party
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 909ACC
+  network: ws
+  port: 23801
+  server: gz1.polymarket.party
+  servername: us4.australiacaregroup.site
+  tls: true
+  type: vmess
+  udp: true
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  ws-opts:
+    headers:
+      Host: us4.australiacaregroup.site
+    path: /vmess
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 821B75
+  network: tcp
+  port: 21584
+  server: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
+  servername: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D48DE2
+  network: ws
+  port: 443
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D917F3
+  network: ws
+  port: 47431
+  server: jp.6807251.xyz
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | ACDFE5
+  network: ws
+  port: 34228
+  server: jp.6807251.xyz
+  servername: a.189.cn
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    headers:
+      Host: a.189.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 69948B
+  network: ws
+  port: 62283
+  server: jp.6807251.xyz
+  servername: a.189.cn
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
+    headers:
+      Host: a.189.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D2CBEF
+  network: ws
+  port: 443
+  server: jp.vpn.taiaise.cn
+  servername: jp.vpn.taiaise.cn
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 060aede7-11ea-4032-b025-6c4168a5182e
+  ws-opts:
+    headers:
+      Host: jp.vpn.taiaise.cn
+    path: /jp
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 3812CF
+  network: tcp
+  port: 53225
+  server: jpaws.ccwink.photos
+  servername: gw.alicdn.com
+  tls: true
+  type: vmess
+  udp: true
+  uuid: a157bb84-dd84-4ad8-86b0-0656bc76e4d1
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本2|@ripaojiedian #3'
+  network: ws
+  port: 443
+  server: kQov7UKaDknXb8a3.v.3dns.vip
+  servername: kQov7UKaDknXb8a3.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: kQov7UKaDknXb8a3.v.3dns.vip
+    path: /ws-vmess
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 7652DE
+  network: tcp
+  port: 28786
+  server: ou44bxs-g04.jp06-jz-vm0.entry.fr0528.art
+  servername: ou44bxs-g04.jp06-jz-vm0.entry.fr0528.art
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | EF09A6
+  network: tcp
+  port: 28787
+  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
+  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | FCCC21
+  network: tcp
+  port: 11777
+  server: r8f4n-g05.jp02-e3-vm0.entry.fr0528.art
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 8ee65c79-4487-32ff-b896-62c8dce05921
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 161464
+  network: ws
+  port: 443
+  server: tokyo02.zgjok.com
+  servername: tokyo02.zgjok.com
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 3fe113f9-e564-4111-b8c7-11f597687689
+  ws-opts:
+    headers:
+      Host: tokyo02.zgjok.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 6006A2
+  network: tcp
+  port: 10001
+  server: tyo2.australiacaregroup.site
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D19DD4
+  network: ws
+  port: 443
+  server: UcKniXjfd2JOKBmx.v.3dns.vip
+  servername: UcKniXjfd2JOKBmx.v.3dns.vip
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: UcKniXjfd2JOKBmx.v.3dns.vip
+    path: /ws-vmess
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | C3EF80
+  network: tcp
+  port: 46482
+  server: vt50k-g01.jp05-6786-vm0.entry.fr0307a.art
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 845BD3
+  network: tcp
+  port: 28788
+  server: wo6ah0f-g06.jp06-jz-vm0.entry.fr0528.art
+  servername: wo6ah0f-g06.jp06-jz-vm0.entry.fr0528.art
+  tls: true
+  type: vmess
+  udp: true
+  uuid: a3b5a6fc-0b92-3b66-beda-eb2a49361a21
+- name: 🇯🇵JP_1｜3.6MB/s - 202ms
+  password: bad06c3525a6eaee1757b34776b83892
+  port: 12019
+  server: 4c2d5151.266nets.com
+  skip-cert-verify: true
+  sni: ixigua.com
+  type: trojan
+- name: 'nukcrow #1116'
+  network: ws
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  port: 443
+  server: jp3.998998.best
+  sni: nat11.outsidemyheart.space
+  type: trojan
+  ws-opts:
+    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
+- alpn:
+  - http/1.1
+  name: '🇯🇵JP_73|493KB/s|M003-260806 #1'
+  network: ws
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
+  port: 443
+  server: 188.114.98.0
+  sni: nat11.outsidemyheart.space
+  type: trojan
+  ws-opts:
+    path: '%2Fw4e5yh0p945y3%3Fed%3D2560'
+- alterId: 2
+  cipher: auto
+  name: '🇨🇳_CN_中国->🇯🇵_JP_日本 #1'
+  port: 30806
+  server: v6.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
   name: '🇯🇵 日本|@ripaojiedian #3'
@@ -332,21 +2740,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: '🇯🇵 日本2|@ripaojiedian #3'
-  network: ws
-  port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: '🇯🇵 日本3|@ripaojiedian #3'
   network: ws
   port: 443
@@ -360,38 +2753,36 @@ proxies:
     headers:
       Host: kneNaKHeSXnZH259.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_1｜1.4MB/s - 93ms
-  network: ws
+- alpn:
+  - http/1.1
+  name: 🇯🇵JP_88｜427KB/s｜M003-260806 [6...
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
   port: 443
-  server: cf85.mylastfree.ggff.net
-  tls: true
-  type: vmess
-  uuid: 7d8cede9-629b-4e7b-be78-fb5519eb115c
-  ws-opts:
-    headers:
-      Host: cf85.mylastfree.ggff.net
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_4｜69KB/s｜M003-260806 01 -...
-  network: http
-  port: 54291
-  server: 103.127.243.66
-  tls: false
-  type: vmess
-  uuid: c5856e0b-5ca6-49bf-8525-d02af9c37cf5
-- name: 🇯🇵JP_5｜193KB/s｜A004-260618 01 ...
-  password: UX82473651
+  server: 188.114.98.0
+  sni: nat11.outsidemyheart.space
+  type: trojan
+- name: 🇯🇵JP_36｜493KB/s｜S001-260618 [a...
+  password: 5504eaa8-1395-402f-8e0e-75ecd762e627
   port: 443
-  server: 54.65.177.190
-  skip-cert-verify: true
-  sni: winning-marten.rooster465.autos
+  server: jp3.998998.best
+  sni: nat11.outsidemyheart.space
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本 - 634ms
+  name: 🇯🇵JP_41｜556KB/s｜M001-260618 [e...
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  tls: false
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  ws-opts:
+    headers:
+      Host: 172.111.146.64
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本 - 213ms
   network: ws
   port: 443
   server: Z9FfBx3zs2q5O0BG.v.3dns.vip
@@ -404,7 +2795,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本2 - 634ms
+  name: 🇯🇵 日本2 - 206ms
   network: ws
   port: 443
   server: kQov7UKaDknXb8a3.v.3dns.vip
@@ -417,7 +2808,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本3 - 666ms
+  name: 🇯🇵 日本3 - 197ms
   network: ws
   port: 443
   server: kneNaKHeSXnZH259.v.3dns.vip
@@ -427,6 +2818,19 @@ proxies:
   ws-opts:
     headers:
       Host: kneNaKHeSXnZH259.v.3dns.vip
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_1｜1.4MB/s - 145ms
+  network: ws
+  port: 443
+  server: cf85.mylastfree.ggff.net
+  tls: true
+  type: vmess
+  uuid: 7d8cede9-629b-4e7b-be78-fb5519eb115c
+  ws-opts:
+    headers:
+      Host: cf85.mylastfree.ggff.net
     path: /
 - name: JP%E6%97%A5%E6%9C%AC%28mibei77...
   network: ws
@@ -441,7 +2845,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: JP日本(mibei77.com 米贝节点分享) - 115...
+  name: JP日本(mibei77.com 米贝节点分享) - 127...
   network: ws
   port: 33105
   server: cu1.ainivp.com
@@ -478,27 +2882,27 @@ proxies:
 - name: 'JP%E6%97%A5%E6%9C%AC%28mibei77... #3'
   password: aec8e5e3-bb81-4b22-8802-0b88c54997b3
   port: 10003
+  server: za.australiacaregroup.site
+  sni: za.australiacaregroup.site
+  type: trojan
+- name: 'JP%E6%97%A5%E6%9C%AC%28mibei77... #4'
+  password: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  port: 10003
   server: jp7.vatilon.cc
   sni: jp7.vatilon.cc
   type: trojan
 - alterId: 0
   cipher: auto
-  name: JP日本(mibei77.com 米贝节点分享) - 129...
+  name: JP日本(mibei77.com 米贝节点分享) - 160...
   network: tcp
   port: 10001
   server: jp7.vatilon.cc
   tls: false
   type: vmess
   uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- name: 'JP%E6%97%A5%E6%9C%AC%28mibei77... #4'
-  password: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-  port: 10003
-  server: za.australiacaregroup.site
-  sni: za.australiacaregroup.site
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 JP 12 → tg@nicevpn123 - 19m...
+  name: 🇯🇵 JP 12 → tg@nicevpn123 - 15m...
   network: ws
   port: 8443
   server: 45.85.119.65
@@ -510,35 +2914,20 @@ proxies:
       Host: 45.85.119.65
     path: /
 - cipher: aes-256-cfb
-  name: 🇯🇵 JP 34 → tg@nicevpn123 - 130...
+  name: 🇯🇵 JP 34 → tg@nicevpn123 - 133...
   password: amazonskr05
   port: 443
   server: 13.230.190.100
   type: ss
-- name: 🇯🇵 JP 50 → tg@nicevpn123 - 132...
+- cipher: aes-256-cfb
+  name: 🇯🇵 JP 41 → tg@nicevpn123 - 135...
+  password: amazonskr05
+  port: 443
+  server: 52.194.214.99
+  type: ss
+- name: 🇯🇵 JP 50 → tg@nicevpn123 - 136...
   password: d22c4619-9dd1-41b1-a00e-c565a09066c8
   port: 443
   server: 139.162.91.35
   skip-cert-verify: true
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 ｜ @Raydikalx ｜ 7B4ED8 - ...
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    headers:
-      Host: 172.111.146.64
-    path: /
-- name: 🇯🇵JP_57
-  network: tcp
-  password: Trojan@82164024
-  port: 443
-  server: 108.61.186.37
-  skip-cert-verify: true
-  sni: 108.61.186.37
   type: trojan
