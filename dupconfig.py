@@ -11,6 +11,16 @@
     --verbose            打印每个被改名节点的详情
     --debug-name NAME    只打印 name == NAME 的节点处理详情（可重复）
     --diagnose           在关键步骤打印重名统计
+用法	
+python dupconfig.py 源.yaml 输出.yaml	标准去重 + 名称唯一化 + 字段修复（不删节点）
+--keep best	多副本时保留"名字质量最好"的那条
+--clean	额外剔除 mihomo 无法使用的节点（减 1~3%）
+--dry-run	跑完整流程但不写文件（看统计）
+--diagnose	在 4 个关键阶段打印重名统计
+--debug-name "@xxx"	只打印指定节点的处理详情
+--verbose	打印每个被改名节点的详情
+--sort	按 identity 排序输出
+--no-clean-groups	不清洗 proxy-groups 引用
 
 处理流水线:
     1. 按 identity 去重（桥接 OpenRay）
