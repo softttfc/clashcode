@@ -10,9 +10,6 @@ check.py 校验报告
 [INFO] [YAML]   第 103845 行:     path: "/?ed=2048&Telegram\U0001F1E8\U0001F1F3 @VPNine1"
 [INFO] [YAML]   第 103861 行:     path: "/?ed=2048&Telegram\U0001F1E8\U0001F1F3 @WangCai2"
 [INFO] [YAML] ✅ 未发现"裸写形如科学计数法"的 short-id
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[1384]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[2520]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[2545]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3460]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3462]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3464]
@@ -34,13 +31,8 @@ check.py 校验报告
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3561]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3567]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[3568]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[3661]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[3674]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%0' @ proxies[3804]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[5815]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[6248]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[6825]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[6939]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[7121]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[7122]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[7123]
@@ -74,8 +66,6 @@ check.py 校验报告
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[10199]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[10200]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[10201]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%2' @ proxies[10400]
-[ERROR] [PROXY] ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%' @ proxies[10476]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[10637]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[11353]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[11362]
@@ -173,7 +163,6 @@ check.py 校验报告
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[16493]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[16502]
 [WARN] [PROXY] grpc-opts.grpc-service-name 为空字符串 @ proxies[16534]
-[ERROR] [PROXY] 节点名重复 '@AZARBAYJAB1' 出现在索引 [2693, 2694]，Clash 会因引用不明确而拒绝
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 节点特征诊断（用于定位"延迟测试全部失败"的原因）
 [INFO] [DIAG] ==============================================================
@@ -222,7 +211,7 @@ check.py 校验报告
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 【Q1.1】proxies 名称全角清洗字符诊断
 [INFO] [DIAG] ==============================================================
-[WARN] [DIAG] ⚠️ 发现 12455 个节点 name 含清洗字符 （＃ ＆ ＊ ｜ ＞ ＜ …）
+[WARN] [DIAG] ⚠️ 发现 12456 个节点 name 含清洗字符 （＃ ＆ ＊ ｜ ＞ ＜ …）
 [WARN] [DIAG]      说明上游脚本已对 proxies.name 做了 sanitize。若 proxy-groups 未同步，就会导致引用失配。
 [INFO] [DIAG]   前 10 个示例:
 [INFO] [DIAG]     proxies[0] 'JP日本 ＃13'
@@ -241,31 +230,9 @@ check.py 校验报告
 [INFO] [DIAG] 【Q2.1】WebSocket 路径 URL 编码诊断
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG]   含 ws-opts 的节点总数: 11148
-[INFO] [DIAG]   ├ path 含 "%" (URL编码): 10
+[INFO] [DIAG]   ├ path 含 "%" (URL编码): 0
 [INFO] [DIAG]   ├ path 不以 "/" 开头:     0
 [INFO] [DIAG]   └ path 为空字符串:         0
-[WARN] [DIAG] ⚠️ 发现 10 个节点 path 含 URL 编码，mihomo 不会自动解码，WS 握手必然失败！
-[INFO] [DIAG]   前 10 个示例:
-[INFO] [DIAG]     proxies[1384] '@vmesskhodam ＃4'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[2520] '@vmesskhodam ＃28'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[2545] '@vmesskhodam ＃32'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[3661] 'CA 🇨🇦 ｜ @Raydikalx ｜ C32FE5 ＃2'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[3674] 'CA 🇨🇦 ｜ @Raydikalx ｜ 01F473 ＃2'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[3804] 'CA 🇨🇦 ｜ @Raydikalx ｜ 59FD51 ＃2'
-[INFO] [DIAG]         path = '/%0'
-[INFO] [DIAG]     proxies[6248] 'CA 🇨🇦 ｜ @Raydikalx ｜ 1604F0'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[6939] 'CA 🇨🇦 ｜ @Raydikalx ｜ 6B2266'
-[INFO] [DIAG]         path = '/%'
-[INFO] [DIAG]     proxies[10400] '@npv_vpn11 ＃760'
-[INFO] [DIAG]         path = '/%2'
-[INFO] [DIAG]     proxies[10476] '@npv_vpn11 ＃1140'
-[INFO] [DIAG]         path = '/%'
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 
 [INFO] [DIAG] ==============================================================
@@ -340,7 +307,7 @@ check.py 校验报告
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 【Q1.2】proxy-groups 引用 vs proxies 实际名 匹配诊断
 [INFO] [DIAG] ==============================================================
-[INFO] [DIAG]   proxy-groups 的总引用条目数: 57803
+[INFO] [DIAG]   proxy-groups 的总引用条目数: 57797
 [INFO] [DIAG]   精确匹配失败（缺失引用）: 0
 [INFO] [DIAG]   其中"近似匹配"（仅全角/半角不同）: 0
 [INFO] [DIAG]   ✅ 所有 proxy-groups 引用均能精确匹配到节点
@@ -349,9 +316,9 @@ check.py 校验报告
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 【Q1.3/1.4】节点引用使用统计
 [INFO] [DIAG] ==============================================================
-[INFO] [DIAG]   proxies 中节点总数:        16758
-[INFO] [DIAG]   被 proxy-groups 引用的:    16758
-[INFO] [DIAG]   未被任何组引用:            0
+[INFO] [DIAG]   proxies 中节点总数:        16759
+[INFO] [DIAG]   被 proxy-groups 引用的:    16756
+[INFO] [DIAG]   未被任何组引用:            3
 [INFO] [DIAG]   实际使用率: 100.0%
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG] 
@@ -359,9 +326,9 @@ check.py 校验报告
 [INFO] [DIAG] 【Q1.3】各 proxy-group 的 proxies 长度分布
 [INFO] [DIAG] ==============================================================
 [INFO] [DIAG]     '🚀 选择代理' (type=select) -> 4 个引用  ← 极少
-[INFO] [DIAG]     '♻ 自动选择' (type=fallback) -> 16760 个引用
-[INFO] [DIAG]     '🔰 延迟最低' (type=url-test) -> 16760 个引用
-[INFO] [DIAG]     '✅ 手动选择' (type=select) -> 16760 个引用
+[INFO] [DIAG]     '♻ 自动选择' (type=fallback) -> 16758 个引用
+[INFO] [DIAG]     '🔰 延迟最低' (type=url-test) -> 16758 个引用
+[INFO] [DIAG]     '✅ 手动选择' (type=select) -> 16758 个引用
 [INFO] [DIAG]     '🌐 突破锁区' (type=select) -> 2 个引用  ← 极少
 [INFO] [DIAG]     '❓ 疑似国内' (type=select) -> 3 个引用  ← 极少
 [INFO] [DIAG]     '🐟 漏网之鱼' (type=select) -> 2 个引用  ← 极少
@@ -381,22 +348,20 @@ check.py 校验报告
 [INFO] [DIAG]     '🇷🇺 俄罗斯' (type=select) -> 102 个引用
 [INFO] [DIAG]     '🇩🇪 德国' (type=select) -> 648 个引用
 [INFO] [DIAG] ==============================================================
+[INFO] [PROXY] 3 个节点未被任何 proxy-group 引用（不影响加载）
 
 ======================================================================
 汇总
 ======================================================================
 FATAL: 0
-ERROR: 11
-WARN : 167
-INFO : 200
+ERROR: 0
+WARN : 166
+INFO : 180
 DIAG : 0  （诊断信息，非错误）
 
 ----------------------------------------------------------------------
 错误/警告定位汇总（按出现顺序）
 ----------------------------------------------------------------------
-  proxies[1384]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
-  proxies[2520]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
-  proxies[2545]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
   proxies[3460]: grpc-opts.grpc-service-name 为空字符串
   proxies[3462]: grpc-opts.grpc-service-name 为空字符串
   proxies[3464]: grpc-opts.grpc-service-name 为空字符串
@@ -418,13 +383,8 @@ DIAG : 0  （诊断信息，非错误）
   proxies[3561]: grpc-opts.grpc-service-name 为空字符串
   proxies[3567]: grpc-opts.grpc-service-name 为空字符串
   proxies[3568]: grpc-opts.grpc-service-name 为空字符串
-  proxies[3661]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
-  proxies[3674]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
-  proxies[3804]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%0'
   proxies[5815]: grpc-opts.grpc-service-name 为空字符串
-  proxies[6248]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
   proxies[6825]: grpc-opts.grpc-service-name 为空字符串
-  proxies[6939]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
   proxies[7121]: grpc-opts.grpc-service-name 为空字符串
   proxies[7122]: grpc-opts.grpc-service-name 为空字符串
   proxies[7123]: grpc-opts.grpc-service-name 为空字符串
@@ -458,8 +418,6 @@ DIAG : 0  （诊断信息，非错误）
   proxies[10199]: grpc-opts.grpc-service-name 为空字符串
   proxies[10200]: grpc-opts.grpc-service-name 为空字符串
   proxies[10201]: grpc-opts.grpc-service-name 为空字符串
-  proxies[10400]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%2'
-  proxies[10476]: ws-opts.path 含 URL 编码（mihomo 不会解码，WS 握手必然失败）: '/%'
   proxies[10637]: grpc-opts.grpc-service-name 为空字符串
   proxies[11353]: grpc-opts.grpc-service-name 为空字符串
   proxies[11362]: grpc-opts.grpc-service-name 为空字符串
@@ -558,6 +516,4 @@ DIAG : 0  （诊断信息，非错误）
   proxies[16502]: grpc-opts.grpc-service-name 为空字符串
   proxies[16534]: grpc-opts.grpc-service-name 为空字符串
 
-结论: 存在 FATAL/ERROR，这会导致 Clash Verge 报 "invalid yaml"。
-提示: 请根据 "错误/警告定位汇总" 部分定位到 proxies[N] 索引，
-      然后在 YAML 文件中查找对应的 - name: 节点。
+结论: 未发现会导致 Clash 拒绝加载的问题。
