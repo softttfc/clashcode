@@ -30,9 +30,27 @@ jobs:
 
       - name: Run crawler
         run: python crawler_pro2.py
-        
+     
+      - name: 去重，九层归一化逐层对照 identity
+        run: |
+           python dupconfig.py crawclash.yaml crawclash.dub.yaml --clean --keep best
+     
+   
+      - name: 验证 差分模糊测试（三层测试 + 数学证明）
+        run: |
+          pip install "pytest>=8.0,<9.0"
+          pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v        
+      
       - name: 生成 Meta 配置节点去重
-        run: python config.py crawclash.yaml crawclash.meta.yaml 
+        run: |
+          INPUT_FILE="crawclash.yaml"
+          if [ -f crawclash.dub.yaml ]; then
+            INPUT_FILE="crawclash.dub.yaml"
+            echo "✅ 使用预处理后的文件: $INPUT_FILE"
+          else
+            echo "⚠️ 未找到 crawclash.dub.yaml，回退使用原始文件: $INPUT_FILE"
+          fi
+           python config.py "$INPUT_FILE" crawclash.meta.yaml 
         
       # ---------- 修复配置文件格式（可选） ----------
       - name: 修复可预见错误1
