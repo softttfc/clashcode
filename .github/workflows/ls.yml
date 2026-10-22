@@ -99,10 +99,10 @@ jobs:
         run: python ./rebuilder_pro2.py list.metaspeedrpdu.yml  list.metaspeedrpdurbd.yml
         continue-on-error: true
 
-      #  # locate.py检查
-      # - name: locate.py检查
-      #   run: python locate.py
-      #   continue-on-error: true       
+       # locate.py检查
+      - name: locate.py检查
+        run: python locate.py  list.metaspeedrpdurbd.yml
+        continue-on-error: true       
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
       # ---------- 校验节点文件（分别对 safe 和 rbd 校验，失败不中断） ----------
