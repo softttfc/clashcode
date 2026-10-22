@@ -1,23 +1,11 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国_3KAN7O - 149ms
-  network: tcp
-  port: 123
-  server: 43.108.103.167
-  tls: false
-  type: vmess
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_1|67KB/s|C002-260622 01 -...
-  network: raw
-  port: 443
-  server: 140.238.2.250
-  tls: false
-  type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- name: 🇰🇷KR_3|223KB/s|A004-260618 01 ...
+- cipher: aes-256-cfb
+  name: 🇰🇷KR_8|512KB/s|M001-260618 [2f...
+  password: qwerREWQ@@
+  port: 4652
+  server: p141.panda001.net
+  type: ss
+- name: 🇰🇷KR_25|358KB/s|A004-260618 [9...
   password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
   port: 56127
   server: 154.90.62.70
@@ -26,20 +14,47 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR_6|172KB/s|M002-260618 01 ...
+  name: 🇰🇷KR_35|231KB/s|P002-260618 [d...
   network: ws
-  port: 80
-  server: 132.145.80.230
-  tls: false
+  port: 443
+  server: seoul02.zgjok.com
+  tls: true
   type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
   ws-opts:
     headers:
-      Host: 132.145.80.230
+      Host: seoul02.zgjok.com
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国 - 216ms
+  name: 🇰🇷KR_19|770KB/s|C002-260622 [e...
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR_40|441KB/s|M003-260806 [c...
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  tls: false
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR_5|747KB/s|C002-260622 [ac...
+  network: tcp
+  port: 80
+  server: 217.142.138.61
+  tls: false
+  type: vmess
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 221ms
   network: ws
   port: 443
   server: 8nTzyR5KNivfabaT.v.3dns.vip
@@ -50,6 +65,15 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国_3KAN7O - 156ms
+  network: tcp
+  port: 123
+  server: 43.108.103.167
+  tls: false
+  type: vmess
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
 - name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
@@ -75,19 +99,20 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 168118 - ...
-  network: tcp
+  name: KR 🇰🇷 | @Raydikalx | C1BBF7 - ...
+  network: ws
   port: 80
-  server: 217.142.138.61
+  server: 132.145.80.230
   tls: false
   type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343 - ...
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: 132.145.80.230
+    path: /
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | ED28A1 - ...
+  password: faBAoD54k87UJG7
+  port: 2376
+  server: 141.164.45.187
+  type: ss
