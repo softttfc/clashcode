@@ -85,10 +85,18 @@ jobs:
       # - name: 生成标准格式文件
       #   run: python ./repair.py crawclash.meta.yaml crawclash.metarp.yaml
       #   continue-on-error: true
+      - name: 去重
+        run: |
+          python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
 
+      - name: 验证（必选，数学证明）
+        run: |
+          pip install "pytest>=8.0,<9.0"
+          pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v
+    
       # ---------- 修复可预见错误（可选） ----------
       - name: 修复可预见错误
-        run: python ./rebuilder_pro2.py crawclash.meta.yaml  crawclash.metarbd.yaml
+        run: python ./rebuilder_pro2.py list.metaspeedrpdu.yml  list.metaspeedrpdurbd.yml
         continue-on-error: true
 
       #  # locate.py检查
@@ -116,7 +124,14 @@ jobs:
           else
             echo "⚠️ 未找到 crawclash.metarbd.yaml，跳过" > 错误日志crawclash.txt
           fi
-
+          
+          # 校验 list.metaspeedrpdurbd.yml
+          if [ -f list.metaspeedrpdurbd.yml ]; then
+            echo "开始校验 list.metaspeedrpdurbd.yml ..."
+            python ./check.py list.metaspeedrpdurbd.yml 错误日志durbd.txt || true
+          else
+            echo "⚠️ 未找到 list.metaspeedrpdurbd.yml，跳过" > 错误日志durbd.txt
+          fi
 
           # 校验 list.metaspeedrbd.yml（rebuilder 后最终文件）
           if [ -f list.metaspeedrbd.yml ]; then
@@ -142,6 +157,11 @@ jobs:
             cat 错误日志safe.txt
             echo "==========================================================="
           fi
+          if [ -f 错误日志durbd.txt ]; then
+            echo "========== check.py 校验报告: list.metaspeedrpdurbd.yml =========="
+            cat 错误日志durbd.txt
+            echo "============================================================="
+          fi          
           if [ -f 错误日志rbd.txt ]; then
             echo "========== check.py 校验报告: list.metaspeedrbd.yml =========="
             cat 错误日志rbd.txt
@@ -175,6 +195,7 @@ jobs:
             错误日志rp.txt
             错误日志speed.txt  
             错误日志crawclash.txt
+            错误日志durbd.txt
           if-no-files-found: ignore
 
       # ---------- 提交并推送变更（不再拉取） ----------
@@ -192,15 +213,8 @@ jobs:
           git add snippets/
           git add craw*
           # 把校验报告也纳入版本管理
-          if [ -f 错误日志safe.txt ]; then
-            git add 错误日志safe.txt
-          fi
-          if [ -f 错误日志rbd.txt ]; then
-            git add 错误日志rbd.txt
-          fi
-          if [ -f 错误日志crawclash.txt ]; then
-            git add 错误日志crawclash.txt
-          fi
+          git add 错误日志*
+
 
           # 检查是否有变更需要提交
           if git diff --staged --quiet; then
