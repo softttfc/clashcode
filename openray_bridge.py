@@ -190,17 +190,23 @@ def _to_ssr(proxy: dict) -> str | None:
 
 def _to_generic(proxy: dict, ptype: str) -> str | None:
     server, port = proxy["server"], int(proxy["port"])
+
+    # ---- userinfo：':' 是 URI 分隔符，必须保持不编码；username / password 各自 _q() ----
     if ptype in ("vless", "tuic", "juicity"):
-        user = proxy.get("uuid", "")
-        if ptype == "tuic":
-            pwd = proxy.get("password", "")
-            user = f"{user}:{pwd}" if pwd else user
+        uuid_val = str(proxy.get("uuid", ""))
+        if ptype in ("tuic", "juicity"):
+            pwd = str(proxy.get("password", ""))
+            userinfo = (_q(uuid_val) + ":" + _q(pwd)) if pwd else _q(uuid_val)
+        else:
+            userinfo = _q(uuid_val) if uuid_val else ""
     elif ptype in ("trojan", "hysteria2"):
-        user = proxy.get("password", "")
-    else:
-        user = ""
-    if ptype in ("vless", "trojan", "hysteria2", "tuic", "juicity") and not user:
+        userinfo = _q(str(proxy.get("password", "")))
+    else:  # hysteria v1：auth 走 query
+        userinfo = ""
+
+    if ptype in ("vless", "trojan", "hysteria2", "tuic", "juicity") and not userinfo:
         return None
+
     q = _extract_common_query(proxy, ptype)
     if ptype == "vless" and proxy.get("flow"):
         q["flow"] = proxy["flow"]
@@ -225,7 +231,7 @@ def _to_generic(proxy: dict, ptype: str) -> str | None:
             q["udp_relay_mode"] = proxy["udp-relay-mode"]
     qs = _query(q)
     name = _q(proxy.get("name", ""))
-    uri = f"{ptype}://{_q(user) if user else ''}@{server}:{port}{qs}"
+    uri = f"{ptype}://{userinfo}@{server}:{port}{qs}"
     return uri + (f"#{name}" if name else "")
 
 
