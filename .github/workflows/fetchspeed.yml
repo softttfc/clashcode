@@ -168,9 +168,7 @@ jobs:
           git add list*
           git add snippets/
           # 把校验报告也纳入版本管理
-          if [ -f 错误日志.txt ]; then
-            git add 错误日志.txt
-          fi
+          git add 错误日志*
 
           # 检查是否有变更需要提交
           if git diff --staged --quiet; then
