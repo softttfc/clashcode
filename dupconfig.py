@@ -33,7 +33,7 @@ python dupconfig.py 源.yaml 输出.yaml	标准去重 + 名称唯一化 + 字段
 处理流水线:
     1. 按 identity 去重（桥接 OpenRay）
     1.5 协议兼容性检查（--protocol-check 开启，会删节点）
-    2. 名称归一化 + 唯一化（'...' 替换 / NFC / 全角→半角 / strip / 同名加 ＃N）
+    2. 名称归一化 + 唯一化（'...' 替换 / NFC / 全角→半角 / strip / 同名加 #N）
     3. 同步 proxy-groups 引用（字符清洗导致的原名消失）
     4. 字段修复（ws path / security-tls 矛盾 / XUDP 传输层）
     5. 质量清洗（--clean 开启，会删节点）
@@ -73,13 +73,23 @@ FULLWIDTH_TRANS = str.maketrans(
     "#@&*|><",
 )
 
-# 唯一化后缀使用全角 ＃ 的理由：
-#   - rebuilder_pro2.py 会做 '#' → '＃'（半角转全角）
-#   - 如果 dupconfig 输出 ' #2'（半角），rebuilder 会变成 ' ＃2'（全角）
-#   - 如果 dupconfig 输出 ' ＃2'（全角），rebuilder 不会改（因为已经是全角）
-#   - 为了避免"dupconfig 输出唯一，但 rebuilder 处理后重名"的问题，
-#     dupconfig 直接用全角 ＃N 作为唯一化后缀
-UNIQUE_SUFFIX_OPEN = "＃"  # 全角
+# 唯一化后缀使用半角 # 的理由：
+#   - 旧版用全角 ＃ 后缀，产生"全角唯一化后缀 + 原始半角 #"的混合状态：
+#       原始数据:  未命名 #2（半角）
+#       唯一化:    未命名 ＃2（全角）
+#     dupconfig 输出里两者是不同字符串，看起来无重名。
+#   - rebuilder_pro2.py 的 sanitize_final_config 会做 '#' → '＃'（半角转全角），
+#     把混合状态塌缩成冲突：
+#       未命名 ＃2（全角后缀） → 未命名 ＃2（不变）
+#       未命名 #2（原始半角）  → 未命名 ＃2（转全角）  ← 撞了
+#     mihomo 立即拒载："proxy 未命名 ＃2 is the duplicate name"。
+#   - 现在改用半角 #N 作为唯一化后缀：
+#       * normalize_names 先做全角→半角，所有 # 在半角域内唯一化；
+#       * 输出里所有 # 都是半角，无混合状态；
+#       * rebuilder 转全角后，#2 → ＃2、#3 → ＃3，仍然唯一。
+#   - 这样 dupconfig 与 rebuilder 的字符处理方向一致，从源头消除冲突，
+#     不需要在 rebuilder 里额外加唯一化兜底。
+UNIQUE_SUFFIX_OPEN = "#"  # 半角
 
 
 # ============================================================================
@@ -150,7 +160,7 @@ def normalize_names(proxies, verbose=False, debug_names=None):
       4. strip（去首尾空白）
       5. 去不可见控制字符（保留内部空格）
       6. 空字符串 → '未命名'
-      7. 唯一化：后缀用全角 ' ＃N'（避免 rebuilder 的 #→＃ 再次冲突）
+      7. 唯一化：后缀用半角 ' #N'（与 rebuilder 的 #→＃ 配合，输出一致）
 
     返回 (renamed_count, name_map)
     """
@@ -263,7 +273,7 @@ def sync_group_references(config, name_map):
 def enforce_unique_names(config, debug_names=None):
     """
     最后一道保险：不管前面发生了什么，直接操作 config['proxies']，强制唯一化。
-    后缀同样用全角 ＃N，避免 rebuilder 的 #→＃ 再次冲突。
+    后缀用半角 #N，与 rebuilder 的 #→＃ 配合，确保输出一致。
     """
     proxies = config.get("proxies")
     if not isinstance(proxies, list):
