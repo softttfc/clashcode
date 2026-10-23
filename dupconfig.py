@@ -412,12 +412,16 @@ def clean_invalid_nodes(proxies):
         if not all(p.get(k) for k in ("name", "type", "server", "port")):
             dropped += 1
             continue
-        net = str(p.get("network") or "").lower()
-        if net == "grpc":
-            grpc = p.get("grpc-opts")
-            if isinstance(grpc, dict) and not grpc.get("grpc-service-name"):
-                dropped += 1
-                continue
+        # net = str(p.get("network") or "").lower()
+        # if net == "grpc":
+        #     grpc = p.get("grpc-opts")
+        #     if isinstance(grpc, dict) and not grpc.get("grpc-service-name"):
+        #         dropped += 1
+        #         continue
+        grpc = p.get("grpc-opts")
+        if isinstance(grpc, dict) and "grpc-service-name" in grpc and not grpc["grpc-service-name"]:
+            dropped += 1
+            continue        
         uuid = p.get("uuid")
         if isinstance(uuid, str) and uuid.lower() == DEFAULT_UUID:
             dropped += 1
