@@ -37,7 +37,24 @@ jobs:
         with:
           python-version: '3.x'
           cache: 'pip'
-
+      # ---------- 安装依赖 ----------
+      # 原有依赖安装保持不变；追加 psutil（dupconfig.py --verify-nodes 复用
+      # openray.validation.owned_listener 时需要通过 psutil 检查 PID 归属监听）。
+      # 说明：
+      #   - 如果 requirements.txt 已包含 -e . 或 openray 包，无需额外安装。
+      #   - 如果 tools/install_cores.py 报 ModuleNotFoundError: openray，
+      #     说明 openray 包未安装，需要在此追加 pip install -e .（前提是仓库根目录
+      #     有 pyproject.toml 或 setup.py）。          
+      # ---------- 安装 psutil ----------     
+      - name: 安装 psutil
+        run: pip install psutil
+        continue-on-error: true
+        
+      # ---------- 安装 mihomo 二进制 ----------        
+      - name: 安装 mihomo 二进制
+        run: python tools/install_cores.py --destination .tools mihomo
+        continue-on-error: true
+        
       # ---------- 安装依赖 ----------
       - name: 安装依赖
         run: pip install -r requirements.txt
@@ -48,6 +65,54 @@ jobs:
           DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
           echo "远程默认分支: $DEFAULT_BRANCH"
           git pull --rebase origin "$DEFAULT_BRANCH"
+
+      # ---------- 安装 mihomo 二进制（供 dupconfig.py --verify-nodes 使用） ----------
+      # 策略：优先使用仓库原生 tools/install_cores.py（版本与 SHA-256 来自
+      #       openray/assets/cores.lock.json），失败则回退到 wget + sha256sum。
+      # 前提：
+      #   1. openray 包可 import（install_cores.py 顶层 from openray.files import atomic_write）
+      #   2. openray/assets/cores.lock.json 存在
+      #   3. runner 是 amd64（ubuntu-latest 满足）
+      # 无论安装成功与否，后续“去重 + 协议检查 + mihomo 本地验证”步骤都会先
+      # 检查 .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes，避免误删节点。
+      - name: 安装 mihomo 二进制
+        run: |
+          set -e
+
+          # ---- 优先：仓库原生 install_cores.py ----
+          if [ -f tools/install_cores.py ] && [ -f openray/assets/cores.lock.json ]; then
+            echo "尝试使用仓库原生 tools/install_cores.py 安装 mihomo..."
+            if python tools/install_cores.py --destination .tools mihomo; then
+              if [ -x .tools/mihomo ]; then
+                echo "✅ 通过 tools/install_cores.py 安装成功: .tools/mihomo"
+                .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
+                exit 0
+              fi
+            fi
+            echo "⚠️ tools/install_cores.py 未产出 .tools/mihomo，回退到 wget"
+          else
+            echo "⚠️ 未找到 tools/install_cores.py 或 openray/assets/cores.lock.json，回退到 wget"
+          fi
+
+          # ---- 兜底：wget + sha256sum + gunzip（版本/校验值与 cores.lock.json 一致） ----
+          MI_VERSION="v1.19.16"
+          MI_ARCHIVE="mihomo-linux-amd64-${MI_VERSION}.gz"
+          MI_BIN="mihomo-linux-amd64-${MI_VERSION}"
+          MI_SHA256="d06f37a21df275bc36002b98ad35835caf9ac1b1c4cb3fad750fd2b3f94617fe"
+          MI_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MI_VERSION}/${MI_ARCHIVE}"
+
+          mkdir -p .tools
+          echo "下载: ${MI_URL}"
+          wget -q -O "/tmp/${MI_ARCHIVE}" "${MI_URL}"
+          echo "校验 SHA-256..."
+          echo "${MI_SHA256}  /tmp/${MI_ARCHIVE}" | sha256sum -c -
+          echo "解压..."
+          gunzip -f "/tmp/${MI_ARCHIVE}"
+          mv "/tmp/${MI_BIN}" ".tools/mihomo"
+          chmod +x .tools/mihomo
+          echo "✅ 通过 wget 安装成功: .tools/mihomo"
+          .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
+        continue-on-error: true
 
       # # ---------- 执行主抓取脚本 ----------
       # - name: 执行任务
@@ -85,23 +150,52 @@ jobs:
       # - name: 生成标准格式文件
       #   run: python ./repair.py crawclash.meta.yaml crawclash.metarp.yaml
       #   continue-on-error: true
-      - name: 去重
+      # - name: 去重
+      #   run: |
+      #      python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
+      #      # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
+
+       # 去重阶段现在包含两个可选增强：
+      #   1. --protocol-check：用 OpenRay render.supported_params 检查协议兼容性，
+      #      剔除协议级不兼容节点（纯函数检查，零出站）。
+      #   2. --verify-nodes：逐个启动 mihomo 验证节点加载有效性，剔除失败节点。
+      #      复用 OpenRay validation.CoreWorker + candidate_config，零出站：
+      #        - 无 proxy-groups / url-test / fallback
+      #        - 规则为 MATCH,<节点名>
+      #        - 绑定 127.0.0.1，随机 authentication token
+      #        - 只轮询本地端口 LISTEN，不发起任何外部请求
+      #      若 .tools/mihomo 不存在，自动跳过 --verify-nodes。
+      
+      - name: 去重 + 协议检查 + mihomo 本地验证
         run: |
-           python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
-           # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
+          set -e
+          if [ -x ".tools/mihomo" ]; then
+            echo "✅ 找到 .tools/mihomo，启用 --verify-nodes"
+            python dupconfig.py list.meta.yml list.meta.dub.yml \
+              --clean --keep best \
+              --protocol-check \
+              --verify-nodes --mihomo-bin .tools/mihomo \
+              --verify-workers 16 --verify-budget 1800
+          else
+            echo "⚠️ 未找到 .tools/mihomo，跳过 mihomo 本地验证（仅做去重 + 协议检查）"
+            python dupconfig.py list.meta.yml list.meta.dub.yml \
+              --clean --keep best \
+              --protocol-check
+          fi
+        continue-on-error: true        
       - name: 验证（必选，数学证明）
         run: |
           pip install "pytest>=8.0,<9.0"
           pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v
     
       # ---------- 修复可预见错误（可选） ----------
-      - name: 修复可预见错误
-        run: python ./rebuilder_pro2.py list.metaspeedrpdu.yml  list.metaspeedrpdurbd.yml
+      - name: 修复可预见错误list.meta.dubrbd.yml为测试文件
+        run: python ./rebuilder_pro2.py list.meta.dub.yml  list.meta.dubrbd.yml
         continue-on-error: true
 
        # locate.py检查
       - name: locate.py检查
-        run: python locate.py  list.metaspeedrpdurbd.yml
+        run: python locate.py  list.meta.dubrbd.yml
         continue-on-error: true       
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
@@ -125,12 +219,12 @@ jobs:
             echo "⚠️ 未找到 crawclash.metarbd.yaml，跳过" > 错误日志crawclash.txt
           fi
           
-          # 校验 list.metaspeedrpdurbd.yml
-          if [ -f list.metaspeedrpdurbd.yml ]; then
+          # 校验 list.meta.dubrbd.yml  测试文件
+          if [ -f list.meta.dubrbd.yml ]; then
             echo "开始校验 list.metaspeedrpdurbd.yml ..."
-            python ./check.py list.metaspeedrpdurbd.yml 错误日志durbd.txt || true
+            python ./check.py list.meta.dubrbd.yml 错误日志测试durbd.txt || true
           else
-            echo "⚠️ 未找到 list.metaspeedrpdurbd.yml，跳过" > 错误日志durbd.txt
+            echo "⚠️ 未找到 list.meta.dubrbd.yml，跳过" > 错误日志测试durbd.txt
           fi
 
           # 校验 list.metaspeedrbd.yml（rebuilder 后最终文件）
