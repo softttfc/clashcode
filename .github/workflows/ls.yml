@@ -50,15 +50,51 @@ jobs:
         run: pip install psutil
         continue-on-error: true
         
-      # ---------- 安装 mihomo 二进制 ----------        
-      - name: 安装 mihomo 二进制
-        run: python tools/install_cores.py --destination .tools mihomo
-        continue-on-error: true
+
         
       # ---------- 安装依赖 ----------
       - name: 安装依赖
         run: pip install -r requirements.txt
 
+      # ---------- 安装 mihomo 二进制 ----------        
+      - name: 安装 mihomo 二进制
+        run: python tools/install_cores.py --destination .tools mihomo
+        continue-on-error: true
+        
+      # # ---------- 安装 mihomo 二进制（供 dupconfig.py --verify-nodes 使用） ----------
+      # # 说明：
+      # #   - 不使用 tools/install_cores.py，避免 openray 包未安装导致的
+      # #     ModuleNotFoundError: No module named 'openray'。
+      # #   - 版本与 SHA-256 来自仓库 cores.lock.json 的 mihomo.linux.amd64 条目。
+      # #   - 只做本地下载 + 校验 + 解压，不启动核心、不发外部请求。
+      # #   - 失败不中断：后续“去重 + 协议检查 + mihomo 本地验证”步骤会先检测
+      # #     .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes。
+      # - name: 安装 mihomo 二进制
+      #   run: |
+      #     set -e
+      #     MI_VERSION="v1.19.16"
+      #     MI_ARCHIVE="mihomo-linux-amd64-${MI_VERSION}.gz"
+      #     MI_BIN="mihomo-linux-amd64-${MI_VERSION}"
+      #     MI_SHA256="d06f37a21df275bc36002b98ad35835caf9ac1b1c4cb3fad750fd2b3f94617fe"
+      #     MI_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MI_VERSION}/${MI_ARCHIVE}"
+
+      #     mkdir -p .tools
+      #     echo "下载: ${MI_URL}"
+      #     wget -q -O "/tmp/${MI_ARCHIVE}" "${MI_URL}"
+
+      #     echo "校验 SHA-256..."
+      #     echo "${MI_SHA256}  /tmp/${MI_ARCHIVE}" | sha256sum -c -
+
+      #     echo "解压..."
+      #     gunzip -f "/tmp/${MI_ARCHIVE}"
+      #     mv "/tmp/${MI_BIN}" ".tools/mihomo"
+      #     chmod +x .tools/mihomo
+
+      #     echo "✅ mihomo 已安装到 .tools/mihomo"
+      #     .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
+      #   continue-on-error: true
+
+        
       # ---------- 拉取远端最新代码（确保工作区干净） ----------
       - name: 拉取远端最新代码
         run: |
