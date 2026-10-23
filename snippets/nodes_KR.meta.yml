@@ -1,8 +1,19 @@
 proxies:
+- name: 'nukcrow #1346'
+  network: ws
+  port: 443
+  server: 123.111.169.70
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇰🇷 #1'
-  network: tcp
+  name: 🇰🇷韩国丨yoyapai.com
   port: 443
   reality-opts:
     public-key: fI-eoLmyyeYXgUHr2SWzHcwxkhxmDj2QBnivpUPYfVY
@@ -15,7 +26,7 @@ proxies:
   udp: true
   uuid: 5822b465-036b-4a3b-89d0-b3e52ae20815
 - client-fingerprint: chrome
-  name: 🇰🇷
+  name: 🇰🇷KR韩国丨yoyapai.com
   network: ws
   port: 25524
   server: 116.93.199.28
@@ -29,7 +40,7 @@ proxies:
     headers:
       Host: ylnhh.cc.cd
     path: /Telegram🇨🇳@WangCai2
-- name: '🇰🇷 #2'
+- name: 🇰🇷KR韩國丨yoyapai.com_1
   network: ws
   port: 8880
   server: crimson-smoke-7818.397.workers.dev
@@ -40,7 +51,7 @@ proxies:
   uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
   ws-opts:
     path: /pyip=ProxyIP.KR.CMLiussss.net
-- name: '🇰🇷 #3'
+- name: 🇰🇷KR韩國丨yoyapai.com
   network: ws
   port: 8880
   server: 104.17.144.29
@@ -53,11 +64,14 @@ proxies:
     headers:
       Host: spring-sound-8d8e.36-9ff.workers.dev
     path: /pyip=ProxyIP.KR.CMLiussss.net
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国_174
+- alpn:
+  - h3
+  - h2
+  client-fingerprint: chrome
+  name: 新西兰(v2clash.blog 2026-10.22更新)
   network: ws
   port: 443
-  server: 123.111.169.70
+  server: 185.71.230.237
   servername: snip.edgeoneai.cc.cd
   skip-cert-verify: true
   tls: true
@@ -68,6 +82,20 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /
+- name: 🇬🇪_格鲁吉亚_355
+  network: ws
+  port: 2053
+  server: 194.135.119.82
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
 - client-fingerprint: chrome
   name: KR【机场推荐：https://a9a.xyz】38
   network: ws
@@ -84,37 +112,7 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
 - client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #9'
-  network: ws
-  port: 443
-  server: 193.122.115.184
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: KR韩国(mibei77.com 米贝节点分享)_7
-  network: ws
-  port: 443
-  server: 141.164.44.60
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chrome
-- client-fingerprint: chrome
-  name: KR韩国(mibei77.com 米贝节点分享)_4
+  name: '🇰🇷 韩国 | KOR #2'
   network: ws
   port: 443
   server: 158.247.222.168
@@ -128,6 +126,31 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_115
+  network: ws
+  port: 443
+  server: 193.123.236.206
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇹🇼 043  | ⬇️ 72KB/s
+  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
+  port: 47531
+  server: svip.skycon808.com
+  skip-cert-verify: true
+  sni: tw15.swiftrelay.cc
+  tls: true
+  type: anytls
+  udp: true
 - name: 韩国(海外账号:shop.tgaaaa.co)
   obfs: salamander
   obfs-password: C0DD7bgChaltqnh/T2az6ijM
@@ -139,24 +162,6 @@ proxies:
   sni: rmgyvpn.rest
   type: hysteria2
   udp: true
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  name: 新西兰(mibei77.com 米贝节点分享)
-  network: ws
-  port: 443
-  server: 185.71.230.237
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
 - client-fingerprint: chrome
   name: 韩国(海外账号:shop.tgaaaa.co)_1
   network: ws
@@ -187,128 +192,34 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  name: KR韩国(v2clash.blog 2026-10.20更新...
+- alterId: 0
+  cipher: auto
+  name: '韩国 001 #1'
   network: ws
   port: 443
-  server: 52.79.188.223
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  server: 3.35.214.217
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 5282f68b-14ca-4325-a630-d911abf59c54
   ws-opts:
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: 3.35.214.217
     path: /
-- client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #1'
+- alterId: 0
+  cipher: auto
+  name: '韩国 002 #1'
   network: ws
-  port: 443
-  server: 43.202.32.50
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  port: 80
+  server: 193.122.119.64
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   ws-opts:
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: dm.toutiao.com
     path: /
-- client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #2'
-  network: ws
-  port: 443
-  server: 168.107.36.135
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #4'
-  network: ws
-  port: 443
-  server: 141.164.34.193
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #5'
-  network: ws
-  port: 443
-  server: 141.164.35.4
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #6'
-  network: ws
-  port: 443
-  server: 168.107.16.68
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-- client-fingerprint: chrome
-  name: 🇹🇼 043  | ⬇️ 72KB/s
-  password: 87c6ad7b-e450-44a8-8088-bc2234d43de1
-  port: 47531
-  server: svip.skycon808.com
-  skip-cert-verify: true
-  sni: tw15.swiftrelay.cc
-  tls: true
-  type: anytls
-  udp: true
-- alpn:
-  - h3
-  - h2
-  name: 'KR韩国(v2clash.blog 2026-10.20更新... #10'
-  network: ws
-  port: 443
-  server: 146.56.188.74
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
 - alterId: 0
   cipher: auto
   name: '韩国 003 #1'
@@ -351,9 +262,9 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国_23 - 190ms
+  name: '🇰🇷KR_15|761KB/s|C002-260622 #1'
   network: tcp
-  port: 80
+  port: '80'
   server: 217.142.138.61
   tls: false
   type: vmess
@@ -361,17 +272,7 @@ proxies:
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国_3KAN7O - 156ms
-  network: tcp
-  port: 123
-  server: 43.108.103.167
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 KR | 132.145.80.230
+  name: '🇰🇷KR_17|666KB/s|M002-260618 #1'
   network: ws
   port: '80'
   server: 132.145.80.230
@@ -384,10 +285,40 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_44|667KB/s|A004-260618 #1'
+  network: ws
+  port: '80'
+  server: 132.145.80.230
+  servername: 132.145.80.230
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: 132.145.80.230
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '@npv_vpn11 #1393'
+  network: ws
+  port: '80'
+  server: 132.145.80.230
+  servername: kr02.a0a.xyz
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: ''
+    path: /cctv13.m3u8
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇰🇷KR_32|625KB/s|A004-260618 #1'
-  network: tcp
+  name: 🇰🇷KR_29
+  network: raw
   port: 443
   reality-opts:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
@@ -398,309 +329,9 @@ proxies:
   type: vless
   udp: true
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-- cipher: aes-256-gcm
-  name: 'KR 🇰🇷 | @Raydikalx | 93F916 #1'
-  password: cdBIDV42DCwnfIN
-  port: 8119
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '🇰🇷KR_37|218KB/s|A001-260618 #1'
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ ED28A1 - ...
-  password: faBAoD54k87UJG7
-  port: 2376
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 'KR 🇰🇷 | @Raydikalx | 96864A #1'
-  password: RexnBgU7EV5ADxG
-  port: 7002
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 'KR 🇰🇷 | @Raydikalx | E48103 #1'
-  password: TEzjfAYq2IjtuoS
-  port: 6697
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: KR 🇰🇷 | @Raydikalx | F95186
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 'KR 🇰🇷 | @Raydikalx | AF28D7 #1'
-  password: Y6R9pAtvxxzmGC
-  port: 5001
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 'KR 🇰🇷 | @Raydikalx | B12A95 #1'
-  password: Y6R9pAtvxxzmGC
-  port: 8888
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: KR 🇰🇷 | @Raydikalx | 0749D7
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.215.61
-  type: ss
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | E38D2B
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 24505
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | C2B50C
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 24509
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 0F911B
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41011
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 8ECEFC
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41014
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 74340F
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41040
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | D895D5
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41300
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 65C1D6
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41303
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 94F406
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41305
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 3DF71D
-  network: tcp
-  password: 5bafc1f1-43bc-301c-bf57-53abbf20dabc
-  port: 41306
-  server: ktc1k.xmrthnode.com
-  sni: mpvideo.qpic.cn
-  type: trojan
-  udp: true
-- name: 'nukcrow #657'
-  network: tcp
-  password: 600421cf-11d7-429f-a65b-c30397f1bc03
-  port: 443
-  server: 158.247.222.240
-  skip-cert-verify: false
-  sni: kr.freeguard.org
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | C61D59
-  network: tcp
-  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
-  port: 2051
-  server: 01a.seoulcityhall.com.ua
-  sni: 45.32.28.232
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 8B028F
-  network: tcp
-  password: 6e1b9a65-884f-3aa9-9469-bf6ec0f08610
-  port: 2050
-  server: 02a.seoulcitygovernment.com.ua
-  sni: 45.32.28.232
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 528266
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: 123.140.124.24
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | 7E80B7
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: 123.140.124.25
-  sni: official.seoulcityhall.com.ua
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | F069E6
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: 123.140.124.25
-  sni: official.seoulcityhall.com.ua
-  type: trojan
-  udp: true
-- name: 'nukcrow #345'
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.seoulcitygovernment.com.ua
-  type: trojan
-  udp: true
-- name: 'nukcrow #464'
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 2053
-  server: official.seoulcityhall.com.ua
-  type: trojan
-  udp: true
-- name: 'nukcrow #354'
-  network: tcp
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  port: 8443
-  server: official.seoulcityhall.com.ua
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | E5ABC9
-  network: tcp
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 103.133.240.115
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  udp: true
-- name: KR 🇰🇷 | @Raydikalx | C5AB88
-  network: tcp
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 158.180.71.69
-  sni: hhcm.hhxaf.cc.cd
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇰🇷KR_4
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
-  skip-cert-verify: true
-  sni: 154.90.62.70
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | 059236
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 169f3aa8-6b52-4f3e-83d2-f96bac71e503
-  ws-opts:
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | AAD0C0
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 30e3c098-f963-40ed-aec7-67b692321801
-  ws-opts:
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | 49E069
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7ac5b110-1bba-4d68-b7cb-4c09434cf980
-  ws-opts:
-    headers:
-      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-    path: /@Marisa_kristi
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: KR 🇰🇷 | @Raydikalx | 9F453A
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
-    short-id: '!!str e04a526b0b09c765'
-  server: 43.203.215.61
-  servername: apuva-kr-appsync-realtime.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: AutoAiVPN160
-  network: tcp
-  port: 13672
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: '!!str 48050fab'
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '🇰🇷KR_16|223KB/s|C002-260622 #1'
+  name: 🇰🇷KR_20
   network: tcp
   port: 18967
   reality-opts:
@@ -713,35 +344,21 @@ proxies:
   udp: true
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | 9809AF
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  flow: xtls-rprx-vision
+  name: 🇰🇷KR_33
+  network: tcp
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '!!str 48050fab'
+  server: 3.39.4.109
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 90277316-feca-4762-99c3-79f75d7b473b
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@Marisa_kristi
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 - client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | 40BC47
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 967c38e8-ecce-4471-b248-635e5cd28358
-  ws-opts:
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: ❓Other_109
+  name: 🇰🇷KR_39
   network: raw
   port: 2053
   reality-opts:
@@ -753,66 +370,13 @@ proxies:
   type: vless
   udp: true
   uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | BDBB69
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: b50619d4-99a6-41e0-8086-7c145c5c7c48
-  ws-opts:
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-    path: /@Marisa_kristi
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | B81B65
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: fdfbe537-e958-4dca-9aeb-523df4602f92
-  ws-opts:
-    headers:
-      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-    path: /@Marisa_kristi
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_19｜770KB/s｜C002-260622 [e...
-  network: tcp
-  port: 443
-  server: 140.238.2.250
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_35｜231KB/s｜P002-260618 [d...
-  network: ws
-  port: 443
-  server: seoul02.zgjok.com
-  servername: ''
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  ws-opts:
-    headers:
-      Host: seoul02.zgjok.com
-    path: /
 - name: KR 🇰🇷 | @Raydikalx | A88C94
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
   skip-cert-verify: true
   type: hysteria2
-- name: 🇰🇷KR_7
+- name: '🇰🇷KR_32|781KB/s|A004-260618 #1'
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
@@ -820,7 +384,7 @@ proxies:
   sni: 132.226.226.189
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_19|800KB/s|R002-260618 #1'
+- name: 🇰🇷KR_23
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
@@ -828,13 +392,7 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: KR 🇰🇷 | @Raydikalx | 8BCD40
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152-69-231-175.liao.kdns.fr
-  skip-cert-verify: true
-  type: hysteria2
-- name: '🇰🇷KR_6|608KB/s|A004-260618 #1'
+- name: 🇰🇷KR_13
   password: 1beb216e3f60aea9555dae60d219a5ca
   port: 50160
   server: 152.69.231.175
@@ -848,7 +406,7 @@ proxies:
   server: 152.67.200.82
   skip-cert-verify: true
   type: hysteria2
-- name: '🇰🇷KR_13|551KB/s|R002-260618 #1'
+- name: 🇰🇷KR_17
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -856,7 +414,7 @@ proxies:
   sni: 152-67-200-82.liao.kdns.fr
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_25|579KB/s|A004-260618 #1'
+- name: '🇰🇷KR_20|523KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -864,7 +422,7 @@ proxies:
   sni: 152.67.200.82
   tls: false
   type: hysteria2
-- name: 🇰🇷KR_5
+- name: '🇰🇷KR_12|572KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -872,7 +430,7 @@ proxies:
   sni: css.rbxcdn.com
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_17|527KB/s|A004-260618 #1'
+- name: '🇰🇷KR_5|570KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -880,7 +438,7 @@ proxies:
   sni: speedtest.tinkoff.ru
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_18|586KB/s|A004-260618 #1'
+- name: '🇰🇷KR_6|407KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -888,15 +446,7 @@ proxies:
   sni: t.me
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_12|443KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: vk.com
-  tls: false
-  type: hysteria2
-- name: '🇰🇷KR_3|458KB/s|A004-260618 #1'
+- name: '🇰🇷KR_9|386KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -904,10 +454,34 @@ proxies:
   sni: whatsapp.com
   tls: false
   type: hysteria2
-- name: KR 🇰🇷 | @Raydikalx | C8855B
+- name: '🇰🇷KR_14|317KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: KR 🇰🇷 | @Raydikalx | CF9B2B
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 13.209.81.208
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+- name: KR 🇰🇷 | @Raydikalx | A8BAF2
   password: 9cfc9458e48c028ec03ff86ebc71c744
   port: 50160
   server: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+  type: hysteria2
+- name: '🇰🇷KR_38|607KB/s|A004-260618 #1'
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  port: 50160
+  server: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+  sni: 150-230-252-217.liao.kdns.fr
+  tls: false
   type: hysteria2
 - name: KR 🇰🇷 | @Raydikalx | 2177D2
   password: maintell
@@ -916,7 +490,7 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
 - auth: maintell
-  name: '🇰🇷KR_4|806KB/s|A001-260618 #1'
+  name: 🇰🇷KR_12
   password: maintell
   port: 2053
   server: 152.70.237.123
@@ -931,7 +505,63 @@ proxies:
   skip-cert-verify: true
   sni: vpn-kr-003.fastervpn.world
   type: hysteria2
-- name: 'nukcrow #813'
+- cipher: aes-256-cfb
+  name: '@SylphNet | 1405-08-01 #189'
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.133
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: '@SylphNet | 1405-08-01 #191'
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.134
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 93F916
+  password: cdBIDV42DCwnfIN
+  port: 8119
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 2B2332
+  password: KixLvKzwjekG00rm
+  port: 8000
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '❓Other_9|212KB/s|T001-260618 #1'
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 037DBF
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | F95186
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | AF28D7
+  password: Y6R9pAtvxxzmGC
+  port: 5001
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- name: 'nukcrow #773'
   network: tcp
   password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
   port: 56127
@@ -939,52 +569,41 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 未知 VLESS-197 ｜ free-nodes - 15...
+- name: 🇰🇷KR_25
   network: tcp
-  port: 2053
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sni: 154.90.62.70
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇰🇷_韩国_11
+  network: tcp
+  port: 443
   reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: '!!str 3c4041d3'
-  security: reality
-  server: 47.80.19.173
-  servername: gateway.icloud.com
+    public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
+    short-id: '!!str c8af1462debbc1'
+  server: kr2.oh-node.com
+  servername: www.coway.com
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+  uuid: 8c88c56d-5efb-4218-8753-0c2365dfe96a
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国_385 - 190ms
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  servername: 132.145.80.230
+  name: '🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷 #1'
+  network: tcp
+  port: '8888'
+  server: 146.56.112.110
+  servername: ''
   tls: false
   type: vmess
   udp: true
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 132.145.80.230
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: '@npv_vpn11 #1524'
-  network: ws
-  port: '80'
-  server: 132.145.80.230
-  servername: kr02.a0a.xyz
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: ''
-    path: /cctv13.m3u8
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - alterId: 0
   cipher: auto
   name: KR 🇰🇷 | @Raydikalx | 1642FE
@@ -1000,6 +619,43 @@ proxies:
     headers:
       Host: 152.67.218.38
     path: /
+- alterId: 0
+  cipher: auto
+  name: '@npv_vpn11 #1409'
+  network: ws
+  port: '20086'
+  server: 183.109.131.75
+  servername: ''
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  ws-opts:
+    headers:
+      Host: ''
+    path: /
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 6C9897
+  network: ws
+  port: 20086
+  server: 183.109.131.75
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  ws-opts:
+    path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_42|158KB/s|R002-260618 #1'
+  network: tcp
+  port: '123'
+  server: 43.108.103.167
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
 - alterId: 0
   cipher: auto
   name: KR 🇰🇷 | @Raydikalx | 0752C6
@@ -1032,7 +688,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 未知 VMESS-363 ｜ free-nodes - 99...
+  name: KR 🇰🇷 | @Raydikalx | 6EC259
   network: ws
   port: 443
   server: JBQ4dPDPuJFzj4KV.v.3dns.vip
@@ -1075,8 +731,15 @@ proxies:
     headers:
       Host: zwRcf79GExd13VGH.v.3dns.vip
     path: /ws-vmess
+- name: 'کره جنوبی 🇰🇷 | @GetXConfig | #...'
+  network: tcp
+  port: 443
+  server: 158.247.241.102
+  tls: false
+  type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
 - client-fingerprint: chrome
-  name: 'nukcrow #1093'
+  name: 🇰🇷KR_50
   network: ws
   port: 443
   server: 141.164.52.204
@@ -1088,40 +751,14 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2F'
-- client-fingerprint: chrome
-  name: 'KR韩国 #12'
-  network: ws
-  port: 443
-  server: 141.164.34.193
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_70|481KB/s|A001-260618 #1'
-  network: ws
-  port: 443
-  server: 13.125.9.223
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchrome'
 - alpn:
   - h3
   - h2
   client-fingerprint: chrome
-  name: 'KR韩国 #13'
+  name: 🇰🇷KR_55
   network: ws
   port: 443
-  server: 52.79.188.223
+  server: 146.56.188.74
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1129,16 +766,8 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- name: '🇰🇷KR_14|375KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: '🇰🇷KR_46|616KB/s|A004-260618 #1'
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchrome'
+- name: 🇰🇷KR_38
   password: 9cfc9458e48c028ec03ff86ebc71c744
   port: 50160
   server: 150-230-252-217.liao.kdns.fr
@@ -1147,118 +776,7 @@ proxies:
   tls: false
   type: hysteria2
 - client-fingerprint: chrome
-  name: 'nukcrow #1091'
-  network: ws
-  port: 443
-  server: 54.116.249.102
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: 'nukcrow #1148'
-  network: ws
-  port: 443
-  server: 144.24.71.172
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_51|482KB/s|K001-260618 #1'
-  network: ws
-  port: 443
-  server: 3.37.58.69
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchrome'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_67|580KB/s|A001-260618 #1'
-  network: ws
-  port: 443
-  server: 131.186.26.94
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchrome'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_41|295KB/s|A004-260618 #1'
-  network: ws
-  port: 16034
-  server: 220.71.172.2
-  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-  tls: true
-  type: vless
-  uuid: fdfbe537-e958-4dca-9aeb-523df4602f92
-  ws-opts:
-    headers:
-      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: chrome
-  name: KR韩国
-  network: ws
-  port: 443
-  server: 168.107.36.135
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_66|594KB/s|A001-260618 #1'
-  network: ws
-  port: 443
-  server: 193.122.115.184
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchrome'
-- client-fingerprint: chrome
-  name: '🇰🇷KR_69|542KB/s|K001-260618 #1'
-  network: ws
-  port: 8443
-  server: 141.164.34.161
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchrome'
-- name: '🇰🇷KR_5|592KB/s|A004-260618 #1'
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152-69-231-175.liao.kdns.fr
-  sni: 152-69-231-175.liao.kdns.fr
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  name: '🇰🇷KR_39|169KB/s|A001-260618 #1'
+  name: '🇰🇷KR_54|79KB/s|A001-260618 #1'
   network: ws
   port: 443
   server: 119.205.235.58
@@ -1270,18 +788,11 @@ proxies:
     headers:
       Host: cf3.schzyc.cc.cd
     path: '%2Fproxyip%3DProxyIP.CMLiussss.netfp%3Dchrome'
-- name: '🇰🇷KR_27|653KB/s|A004-260618 #1'
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152-69-231-175.liao.kdns.fr
-  sni: 127.0.0.1
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
-  name: '🇰🇷KR_33|564KB/s|M003-260806 #1'
+  name: '🇰🇷KR_61|487KB/s|A001-260618 #1'
   network: ws
   port: 443
-  server: 146.56.45.96
+  server: 13.125.9.223
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1289,17 +800,9 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
-- name: '🇰🇷KR_20|558KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
+    path: '%2Ffp%3Dchrome'
 - client-fingerprint: chrome
-  name: '🇰🇷KR_68|559KB/s|A001-260618 #1'
+  name: '🇰🇷KR_58|603KB/s|A001-260618 #1'
   network: ws
   port: 443
   server: 146.56.151.92
@@ -1312,36 +815,7 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40vpn748359672.opengw.net%3A1458%3Fed%3D2560fp%3Dchromefp%3Dchrome'
 - client-fingerprint: chrome
-  name: 'nukcrow #1145'
-  network: ws
-  port: 443
-  server: 43.164.132.109
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- name: '🇰🇷KR_44|667KB/s|A004-260618 #1'
-  password: 9cfc9458e48c028ec03ff86ebc71c744
-  port: 50160
-  server: 150-230-252-217.liao.kdns.fr
-  sni: 150-230-252-217.liao.kdns.fr
-  tls: false
-  type: hysteria2
-- alterId: 0
-  cipher: auto
-  name: '🇰🇷KR_8|296KB/s|A004-260618 #1'
-  network: none
-  port: '443'
-  server: 140.238.2.250
-  tls: false
-  type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- client-fingerprint: chrome
-  name: 'KR韩国 #2'
+  name: 🇰🇷KR_54
   network: ws
   port: 443
   server: 43.202.32.50
@@ -1353,33 +827,66 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2F'
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_6
-  password: qwerREWQ@@
-  port: 4652
-  server: 218.237.185.234
-  type: ss
-- client-fingerprint: android
-  name: '🇰🇷KR_38|230KB/s|F003-260618 #1'
+- client-fingerprint: chrome
+  name: 'KR韩国 #14'
   network: ws
   port: 443
-  server: 146.56.135.196
-  servername: proxy-1cu.pages.dev
+  server: 141.164.44.60
+  servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   ws-opts:
     headers:
-      Host: proxy-1cu.pages.dev
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_48
+  network: ws
+  port: 443
+  server: 54.116.249.102
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
     path: '%2F'
 - alpn:
   - h3
   - h2
   client-fingerprint: chrome
-  name: 'KR韩国 #15'
+  name: 🇰🇷KR_49
   network: ws
   port: 443
-  server: 146.56.188.74
+  server: 52.79.188.223
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_32
+  network: ws
+  port: 443
+  server: 146.56.45.96
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_61
+  network: ws
+  port: 8443
+  server: 141.164.34.161
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1389,7 +896,92 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchrome'
 - client-fingerprint: chrome
-  name: '🇰🇷KR_65|524KB/s|A001-260618 #1'
+  name: 'KR韩国 #13'
+  network: ws
+  port: 443
+  server: 193.123.236.206
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_42
+  network: ws
+  port: 443
+  server: 3.37.58.69
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443fp%3Dchrome'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_47
+  network: ws
+  port: 443
+  server: 141.164.56.22
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
+- name: 🇰🇷KR_7
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152-69-231-175.liao.kdns.fr
+  sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: '🇰🇷KR_37|191KB/s|T001-260618 #1'
+  network: ws
+  port: 8443
+  server: 123.111.169.70
+  servername: cf3.schzyc.cc.cd
+  tls: true
+  type: vless
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  ws-opts:
+    headers:
+      Host: cf3.schzyc.cc.cd
+    path: '%2Fproxyip%3DProxyIP.CMLiussss.netfp%3Dchrome'
+- client-fingerprint: chrome
+  name: '🇰🇷KR_60|536KB/s|K001-260618 #1'
+  network: ws
+  port: 443
+  server: 158.247.210.172
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_59
+  network: ws
+  port: 443
+  server: 131.186.26.94
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_57
   network: ws
   port: 443
   server: 64.176.230.50
@@ -1402,10 +994,10 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp%3Dchrome'
 - client-fingerprint: chrome
-  name: '🇰🇷KR_56|544KB/s|A001-260618 #1'
+  name: '🇰🇷KR_64|537KB/s|K001-260618 #1'
   network: ws
   port: 443
-  server: 141.164.56.22
+  server: 158.247.222.168
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1415,10 +1007,10 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp%3Dchrome'
 - client-fingerprint: chrome
-  name: 'nukcrow #1123'
+  name: 🇰🇷KR_44
   network: ws
   port: 443
-  server: 144.24.90.178
+  server: 141.164.34.193
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1427,17 +1019,11 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2F'
-- name: '%F0%9F%87%B0%F0%9F%87%B7KR_43%...'
-  port: 1080
-  server: 14.36.232.55
-  tls: false
-  type: socks5
-  username: Og%3D%3D
 - client-fingerprint: chrome
-  name: 'KR韩国 #4'
+  name: '🇰🇷KR_56|573KB/s|A001-260618 #1'
   network: ws
   port: 443
-  server: 141.164.44.60
+  server: 193.122.115.184
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1446,18 +1032,86 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2Ffp%3Dchrome'
-- name: 🇰🇷KR_1|4.1MB/s
-  port: 1080
-  server: 144.24.94.153
-  skip-cert-verify: true
-  type: http
 - client-fingerprint: chrome
-  name: KR【机场推荐：https://a9a.xyz】24
+  name: 🇰🇷KR_46
   network: ws
   port: 443
-  server: 123.111.169.70
+  server: 168.107.36.135
   servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 'nukcrow #1066'
+  network: ws
+  port: 443
+  server: 158.247.220.241
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- name: '🇰🇷KR_8|512KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_22|620KB/s|A004-260618 #1'
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152-69-231-175.liao.kdns.fr
+  sni: 152-69-231-175.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_3|562KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: vk.com
+  tls: false
+  type: hysteria2
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 43.202.58.174
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_54
+  network: ws
+  port: 443
+  server: 193.122.115.184
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_66
+  network: ws
+  port: 443
+  server: 141.164.44.60
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
   tls: true
   type: vless
   udp: true
@@ -1467,40 +1121,10 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: UN【机场推荐：https://a9a.xyz】82
+  name: 🇰🇷_韩国_72
   network: ws
   port: 443
-  server: 13.125.9.223
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: UN【机场推荐：https://a9a.xyz】85
-  network: ws
-  port: 443
-  server: 158.247.210.172
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国_70
-  network: ws
-  port: 443
-  server: 193.123.236.206
+  server: 54.116.249.102
   servername: snip.edgeoneai.cc.cd
   skip-cert-verify: true
   tls: true
@@ -1511,10 +1135,11 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /
-- name: 'nukcrow #1108'
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_73
   network: ws
   port: 443
-  server: 123.111.169.70
+  server: 141.164.56.22
   servername: snip.edgeoneai.cc.cd
   skip-cert-verify: true
   tls: true
@@ -1524,9 +1149,99 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: /fp=chromefp=chrome
+    path: /
 - client-fingerprint: chrome
-  name: 🇰🇷_韩国_299
+  name: 🇰🇷_韩国_82
+  network: ws
+  port: 443
+  server: 144.24.90.178
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_83
+  network: ws
+  port: 443
+  server: 168.107.36.135
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_84
+  network: ws
+  port: 443
+  server: 52.79.188.223
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_94
+  network: ws
+  port: 443
+  server: 141.164.34.193
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_96
+  network: ws
+  port: 443
+  server: 43.202.32.50
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_162
+  network: ws
+  port: 443
+  server: 43.164.139.71
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_222
   network: ws
   port: 443
   server: 158.247.220.241
@@ -1540,12 +1255,35 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷 KR | 115.161.136.145
-  password: '!!str 12242'
-  port: 10099
-  server: 115.161.136.145
-  type: ss
+- client-fingerprint: chrome
+  name: 🇰🇷_韩国_305
+  network: ws
+  port: 443
+  server: 123.111.169.70
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- name: 🇰🇷_韩国_307
+  network: ws
+  port: 443
+  server: 123.111.169.70
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromefp=chrome
 - alterId: 0
   cipher: auto
   name: '🇰🇷 韩国|@ripaojiedian #3'
@@ -1561,428 +1299,28 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
-- encryption: none
-  flow: ''
-  name: 🇰🇷KR韩国丨yoyapai.com_1 - 50ms
-  network: ws
-  port: 8880
-  server: crimson-smoke-7818.397.workers.dev
-  tls: false
-  type: vless
-  uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
-- encryption: none
-  flow: ''
-  name: 🇰🇷KR韩國丨yoyapai.com - 8ms
-  network: ws
-  port: 8880
-  server: 104.17.144.29
-  tls: false
-  type: vless
-  uuid: 81d55675-8570-4b40-9a77-3125339a0f86
 - client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享) - 194...
-  network: ws
-  port: 443
-  server: 123.111.169.70
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_1 - 1...
-  network: ws
-  port: 443
-  server: 146.56.151.92
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_2 - 1...
-  network: ws
-  port: 443
-  server: 193.122.115.184
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_3 - 1...
-  network: ws
-  port: 443
-  server: 141.164.44.60
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_4 - 1...
+  name: 'KR韩国 #8'
   network: ws
   port: 443
   server: 158.247.222.168
+  servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_9 - 1...
-  network: ws
-  port: 443
-  server: 185.71.230.237
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_47｜444KB/s｜A001-260618 [0...
-  network: ws
-  port: 443
-  server: 141.164.56.22
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_56｜263KB/s｜A001-260618 [0...
-  network: ws
-  port: 443
-  server: 43.164.132.109
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_52｜289KB/s｜F003-260618 [1...
-  network: ws
-  port: 443
-  server: 144.24.90.178
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_49｜415KB/s｜F003-260618 [1...
-  network: ws
-  port: 443
-  server: 52.79.188.223
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_57｜396KB/s｜A001-260618 [1...
-  network: ws
-  port: 443
-  server: 64.176.230.50
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_8｜512KB/s｜M001-260618 [2f...
-  password: qwerREWQ@@
-  port: 4652
-  server: p141.panda001.net
-  type: ss
-- name: KR%E9%9F%A9%E5%9B%BD%28mibei77...
-  port: 1090
-  server: 121.169.46.116
-  type: socks5
-  username: Og
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_61｜354KB/s｜K001-260618 [5...
-  network: ws
-  port: 8443
-  server: 141.164.34.161
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_44｜452KB/s｜F003-260618 [7...
-  network: ws
-  port: 443
-  server: 141.164.34.193
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_59｜280KB/s｜A001-260618 [7...
-  network: ws
-  port: 443
-  server: 131.186.26.94
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_42｜341KB/s｜K001-260618 [8...
-  network: ws
-  port: 443
-  server: 3.37.58.69
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_55｜330KB/s｜A001-260618 [b...
-  network: ws
-  port: 443
-  server: 146.56.188.74
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_48｜374KB/s｜F003-260618 [b...
-  network: ws
-  port: 443
-  server: 54.116.249.102
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_32｜515KB/s｜M003-260806 [b...
-  network: ws
-  port: 443
-  server: 146.56.45.96
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_54｜355KB/s｜F003-260618 [c...
-  network: ws
-  port: 443
-  server: 43.202.32.50
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_41｜364KB/s｜F003-260618 [d...
-  network: ws
-  port: 443
-  server: 144.24.71.172
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_46｜312KB/s｜F003-260618 [e...
-  network: ws
-  port: 443
-  server: 168.107.36.135
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_50｜346KB/s｜M003-260806 [f...
-  network: ws
-  port: 443
-  server: 141.164.52.204
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国 - 221ms
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_1｜1.3MB/s - 168ms
-  network: ws
-  port: 443
-  server: 144.24.90.178
-  tls: true
-  type: vless
-  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_3｜1018KB/s - 158ms
-  network: ws
-  port: 443
-  server: 131.186.26.94
-  tls: true
-  type: vless
-  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_4｜2.1MB/s - 157ms
-  network: ws
-  port: 443
-  server: 193.122.119.241
-  tls: true
-  type: vless
-  uuid: ed0b0682-5734-4a50-8728-db68d44a1b94
-- name: 🇰🇷 韩国_LM8EX7 - 1168ms
-  password: Og==
-  port: 1080
-  server: 14.36.232.55
-  type: socks5
-  username: Og==
-- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 152.67.210.234
-  skip-cert-verify: true
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tjsp.hhxaf.cc.cd
-    path: /
-- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #2'
-  network: ws
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  port: 443
-  server: 64.110.71.6
-  sni: tjsp.hhxaf.cc.cd
-  type: trojan
-  ws-opts:
-    headers:
-      Host: tjsp.hhxaf.cc.cd
-    path: /
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ C1BBF7 - ...
-  network: ws
-  port: 80
-  server: 132.145.80.230
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- name: '韩国 #1'
+  obfs: salamander
+  obfs-password: C0DD7bgChaltqnh%2FT2az6ijM
+  password: C0DD7bgChaltqnh/T2az6ijM
+  port: 20000
+  server: 130.162.134.218
+  sni: rmgyvpn.rest
   tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 132.145.80.230
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ F5063E - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
-    short-id: '!!str e04a526b0b09c765'
-  security: reality
-  server: 43.200.1.27
-  tls: true
-  type: vless
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  name: 'KR韩国 #1'
-  network: ws
-  port: 443
-  server: 185.71.230.237
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- client-fingerprint: chrome
-  name: 'KR韩国 #3'
-  network: ws
-  port: 443
-  server: 168.107.16.68
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
-- name: 'KR韩国 #7'
-  network: ws
-  port: 443
-  server: 193.122.115.184
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- name: 'KR韩国 #14'
-  network: ws
-  port: 443
-  server: 146.56.151.92
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40vpn748359672.opengw.net%3A1458%3Fed%3D2560fp%3Dchrome'
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 'KR韩国 #10'
-  network: ws
-  port: 443
-  server: 141.164.35.4
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
+  type: hysteria2
 - name: 韩国_1
   network: ws
   port: 16034
@@ -1995,12 +1333,58 @@ proxies:
     headers:
       Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
     path: /@marisa_kristi
-- name: 'KR韩国 #16'
-  obfs: salamander
-  obfs-password: C0DD7bgChaltqnh%2FT2az6ijM
-  password: C0DD7bgChaltqnh/T2az6ijM
-  port: 20000
-  server: 130.162.134.218
-  sni: rmgyvpn.rest
-  tls: false
-  type: hysteria2
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇰🇷KR_45
+  network: ws
+  port: 443
+  server: 141.164.35.4
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_31
+  network: ws
+  port: 8443
+  server: 134.185.100.238
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443'
+- client-fingerprint: chrome
+  name: 🇰🇷KR_56
+  network: ws
+  port: 443
+  server: 43.164.132.109
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2F'
+- name: KR【机场推荐：https://a9a.xyz】24
+  network: ws
+  port: 443
+  server: 123.111.169.70
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
