@@ -56,39 +56,7 @@ jobs:
       - name: 安装依赖
         run: pip install -r requirements.txt
 
-      # ---------- 安装 mihomo 二进制（供 dupconfig.py --verify-nodes 使用） ----------
-      # 说明：
-      #   - 不使用 tools/install_cores.py，避免 openray 包未安装导致的
-      #     ModuleNotFoundError: No module named 'openray'。
-      #   - 版本与 SHA-256 来自仓库 cores.lock.json 的 mihomo.linux.amd64 条目。
-      #   - 只做本地下载 + 校验 + 解压，不启动核心、不发外部请求。
-      #   - 失败不中断：后续“去重 + 协议检查 + mihomo 本地验证”步骤会先检测
-      #     .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes。
-      - name: 安装 mihomo 二进制
-        run: |
-          set -e
-          MI_VERSION="v1.19.16"
-          MI_ARCHIVE="mihomo-linux-amd64-${MI_VERSION}.gz"
-          MI_BIN="mihomo-linux-amd64-${MI_VERSION}"
-          MI_SHA256="d06f37a21df275bc36002b98ad35835caf9ac1b1c4cb3fad750fd2b3f94617fe"
-          MI_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MI_VERSION}/${MI_ARCHIVE}"
 
-          mkdir -p .tools
-          echo "下载: ${MI_URL}"
-          wget -q -O "/tmp/${MI_ARCHIVE}" "${MI_URL}"
-
-          echo "校验 SHA-256..."
-          echo "${MI_SHA256}  /tmp/${MI_ARCHIVE}" | sha256sum -c -
-
-          echo "解压..."
-          gunzip -f "/tmp/${MI_ARCHIVE}"
-          mv "/tmp/${MI_BIN}" ".tools/mihomo"
-          chmod +x .tools/mihomo
-
-          echo "✅ mihomo 已安装到 .tools/mihomo"
-          .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
-        continue-on-error: true
-        
 
         
       # ---------- 拉取远端最新代码（确保工作区干净） ----------
@@ -141,6 +109,8 @@ jobs:
       #      python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
       #      # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
 
+      
+
        # 去重阶段现在包含两个可选增强：
       #   1. --protocol-check：用 OpenRay render.supported_params 检查协议兼容性，
       #      剔除协议级不兼容节点（纯函数检查，零出站）。
@@ -151,7 +121,40 @@ jobs:
       #        - 绑定 127.0.0.1，随机 authentication token
       #        - 只轮询本地端口 LISTEN，不发起任何外部请求
       #      若 .tools/mihomo 不存在，自动跳过 --verify-nodes。
-      
+      # ---------- 安装 mihomo 二进制（供 dupconfig.py --verify-nodes 使用） ----------
+      # 说明：
+      #   - 不使用 tools/install_cores.py，避免 openray 包未安装导致的
+      #     ModuleNotFoundError: No module named 'openray'。
+      #   - 版本与 SHA-256 来自仓库 cores.lock.json 的 mihomo.linux.amd64 条目。
+      #   - 只做本地下载 + 校验 + 解压，不启动核心、不发外部请求。
+      #   - 失败不中断：后续“去重 + 协议检查 + mihomo 本地验证”步骤会先检测
+      #     .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes。
+      - name: 安装 mihomo 二进制
+        run: |
+          set -e
+          MI_VERSION="v1.19.16"
+          MI_ARCHIVE="mihomo-linux-amd64-${MI_VERSION}.gz"
+          MI_BIN="mihomo-linux-amd64-${MI_VERSION}"
+          MI_SHA256="d06f37a21df275bc36002b98ad35835caf9ac1b1c4cb3fad750fd2b3f94617fe"
+          MI_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MI_VERSION}/${MI_ARCHIVE}"
+
+          mkdir -p .tools
+          echo "下载: ${MI_URL}"
+          wget -q -O "/tmp/${MI_ARCHIVE}" "${MI_URL}"
+
+          echo "校验 SHA-256..."
+          echo "${MI_SHA256}  /tmp/${MI_ARCHIVE}" | sha256sum -c -
+
+          echo "解压..."
+          gunzip -f "/tmp/${MI_ARCHIVE}"
+          mv "/tmp/${MI_BIN}" ".tools/mihomo"
+          chmod +x .tools/mihomo
+
+          echo "✅ mihomo 已安装到 .tools/mihomo"
+          .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
+        continue-on-error: true
+              
+
       - name: 去重 + 协议检查 + mihomo 本地验证
         run: |
           set -e
