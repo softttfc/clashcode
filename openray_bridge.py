@@ -5,6 +5,7 @@ openray_bridge.py — Clash dict ↔ OpenRay URI/identity 桥接层
   1. clash_dict_to_uri()：16 协议无损转换
   2. identity_for_clash_proxy()：OpenRay identity + mihomo 扩展哈希
   3. dedup_by_identity()：按 identity 分组 + pick_best
+  4. clash_dict_to_proxy()：Clash dict → OpenRay Proxy（供协议检查 / mihomo 验证使用）
 
 九层归一化、语义去重、16 协议解析 —— 全部由 OpenRay domain.py 提供。
 本文件只负责"无损映射"和"扩展字段处理"。
@@ -317,6 +318,27 @@ def identity_for_clash_proxy(proxy: dict) -> str | None:
         return base_identity
     ext_json = json.dumps(extensions, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
     return hashlib.sha256(f"{base_identity}|{ext_json}".encode("utf-8")).hexdigest()
+
+
+def clash_dict_to_proxy(proxy: dict):
+    """Clash dict → OpenRay Proxy（薄封装 clash_dict_to_uri + parse_uri）。
+
+    设计目的：
+      - 供 dupconfig.py 的 --protocol-check 与 --verify-nodes 使用。
+      - 返回 None 表示"无法转换为 Proxy"（不是协议不兼容），
+        调用方应把 None 视为"无法检查"，保留节点 + 警告，而不是剔除。
+
+    依赖：
+      - openray.domain.parse_uri（已在文件顶部导入）
+      - clash_dict_to_uri（本文件）
+    """
+    uri = clash_dict_to_uri(proxy)
+    if uri is None:
+        return None
+    try:
+        return parse_uri(uri)
+    except (ParseError, UnicodeError):
+        return None
 
 
 def dedup_by_identity(proxies: list[dict], keep: str = "first") -> tuple[list[dict], dict]:
