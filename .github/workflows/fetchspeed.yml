@@ -37,7 +37,16 @@ jobs:
         with:
           python-version: '3.x'
           cache: 'pip'
-
+          
+      # ---------- 安装 psutil ----------     
+      - name: 安装 psutil
+        run: pip install psutil
+        continue-on-error: true
+        
+      # ---------- 安装 mihomo 二进制 ----------        
+      - name: 安装 mihomo 二进制
+        run: python tools/install_cores.py --destination .tools mihomo
+        continue-on-error: true
       # ---------- 安装依赖 ----------
       - name: 安装依赖
         run: pip install -r requirements.txt
