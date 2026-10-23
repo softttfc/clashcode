@@ -22,15 +22,25 @@ python dupconfig.py 源.yaml 输出.yaml	标准去重 + 名称唯一化 + 字段
 --sort	按 identity 排序输出
 --no-clean-groups	不清洗 proxy-groups 引用
 
+新增可选参数:
+    --protocol-check        用 OpenRay render.supported_params 检查协议兼容性并剔除不兼容节点
+    --verify-nodes          逐个启动 mihomo 验证节点加载有效性并剔除失败节点（零出站）
+    --verify-workers N      mihomo 验证并发数（默认 VERIFY_WORKERS）
+    --verify-budget SEC     mihomo 验证总预算秒数（默认 VERIFY_BUDGET_SECONDS）
+    --mihomo-bin PATH       mihomo 二进制路径（默认 VERIFY_MIHOMO_BIN）
+    --strict-verify         有节点被 --verify-nodes 剔除时返回非零码
+
 处理流水线:
     1. 按 identity 去重（桥接 OpenRay）
+    1.5 协议兼容性检查（--protocol-check 开启，会删节点）
     2. 名称归一化 + 唯一化（'...' 替换 / NFC / 全角→半角 / strip / 同名加 ＃N）
     3. 同步 proxy-groups 引用（字符清洗导致的原名消失）
     4. 字段修复（ws path / security-tls 矛盾 / XUDP 传输层）
     5. 质量清洗（--clean 开启，会删节点）
+    5.5 mihomo 本地加载验证（--verify-nodes 开启，会删节点）
     6. 最后一道保险：强制唯一化
     7. 清洗 proxy-groups 引用
-    8. 输出 YAML（有重名则 exit 2）
+    8. 输出 YAML（有重名则 exit 2；--strict-verify 触发则 exit 3）
 """
 
 import argparse
@@ -44,7 +54,11 @@ from urllib.parse import unquote
 import yaml
 
 try:
-    from openray_bridge import dedup_by_identity, identity_for_clash_proxy
+    from openray_bridge import (
+        clash_dict_to_proxy,
+        dedup_by_identity,
+        identity_for_clash_proxy,
+    )
 except ImportError:
     print("❌ 需要 openray_bridge.py + OpenRay 包（domain.py + render.py）", file=sys.stderr)
     sys.exit(1)
@@ -66,6 +80,27 @@ FULLWIDTH_TRANS = str.maketrans(
 #   - 为了避免"dupconfig 输出唯一，但 rebuilder 处理后重名"的问题，
 #     dupconfig 直接用全角 ＃N 作为唯一化后缀
 UNIQUE_SUFFIX_OPEN = "＃"  # 全角
+
+
+# ============================================================================
+# 协议检查与 mihomo 本地验证参数（集中定义，只改这里）
+# ============================================================================
+# 设计说明：
+#   - 这两个阶段默认关闭，避免无谓的额外耗时；需要时通过命令行开启。
+#   - 所有参数都是模块级只读常量；命令行只做覆盖，不会在运行时修改这些常量。
+#   - 零出站请求：
+#       * 协议检查是纯函数（openray.render.supported_params）。
+#       * mihomo 验证只在本地启动核心、等待 127.0.0.1:<port> 进入 LISTEN 状态，
+#         不通过代理端口发起任何外部请求。
+#   - 修改默认行为，只需改这里的值；不改代码逻辑。
+PROTOCOL_CHECK_ENABLED = False        # --protocol-check 默认关闭
+VERIFY_NODES_ENABLED = False          # --verify-nodes 默认关闭
+VERIFY_WORKERS = 16                   # 并发 worker 数（参考 OpenRay collector.yml 的 64，本地验证更轻）
+VERIFY_TIMEOUT = 10.0                 # 单节点端口就绪硬超时（秒）
+VERIFY_BUDGET_SECONDS = 1800          # 验证总预算（秒）；超预算停止并保留剩余节点
+VERIFY_MIHOMO_BIN = "mihomo"          # mihomo 二进制路径；可被 --mihomo-bin 覆盖
+VERIFY_TEMP_PREFIX = "dupverify-"     # 临时目录前缀
+VERIFY_STRICT = False                 # 有节点被剔除时是否返回非零码
 
 
 # ============================================================================
@@ -382,6 +417,198 @@ def clean_invalid_nodes(proxies):
 
 
 # ============================================================================
+# 4.5 协议兼容性检查（--protocol-check）
+#     依赖：openray.render.supported_params / Unsupported
+#     设计：纯函数检查，零出站请求。
+# ============================================================================
+def filter_by_protocol_compatibility(proxies):
+    """用 OpenRay 的 supported_params 检查协议兼容性。
+
+    返回 (valid, removed, unconvertible):
+      - valid: 通过检查 + 无法转换的节点（保留）
+      - removed: [(name, reason), ...] 协议不兼容被剔除
+      - unconvertible: [name, ...] 无法转换为 Proxy 的节点名（保留 + 警告）
+
+    设计要点：
+      - clash_dict_to_proxy 返回 None 时保留节点，只警告：
+        "无法转成 URI" 是桥接层的覆盖缺口，不等于协议不兼容，直接删会误杀。
+      - 只有 supported_params 明确抛 Unsupported 才删除。
+      - 逐条记录 name + reason，可审计。
+    """
+    if not isinstance(proxies, list):
+        return [], [], []
+
+    try:
+        from openray.render import supported_params, Unsupported
+    except ImportError as e:
+        print(f"❌ --protocol-check 需要 openray.render: {e}", file=sys.stderr)
+        return proxies, [], []
+
+    valid, removed, unconvertible = [], [], []
+    for p in proxies:
+        if not isinstance(p, dict):
+            unconvertible.append("<non-dict>")
+            valid.append(p)
+            continue
+        proxy = clash_dict_to_proxy(p)
+        if proxy is None:
+            # 转换失败 ≠ 协议不兼容：保留 + 警告，不误杀
+            unconvertible.append(p.get("name", "<unknown>"))
+            valid.append(p)
+            continue
+        try:
+            supported_params(proxy)
+            valid.append(p)
+        except Unsupported as e:
+            removed.append((p.get("name", "<unknown>"), str(e)))
+
+    return valid, removed, unconvertible
+
+
+# ============================================================================
+# 4.6 mihomo 本地加载验证（--verify-nodes）
+#     依赖：openray.validation.CoreWorker / candidate_config
+#     设计：零出站请求。
+#       CoreWorker._start 内部调用 candidate_config 生成最小 mihomo 配置：
+#         {"port": <reserved>, "bind-address": "127.0.0.1", "allow-lan": false,
+#          "authentication": ["openray:<token>"], "log-level": "silent",
+#          "mode": "rule", "proxies": [outbound], "rules": ["MATCH,<name>"]}
+#       无 proxy-groups、无 url-test、无 external-controller。
+#       只轮询本地 127.0.0.1:<port> 是否 LISTEN。
+# ============================================================================
+def _verify_one(proxy_dict, mihomo_bin, timeout):
+    """同步包装 CoreWorker.start，验证单个节点能否被 mihomo 加载并进入监听状态。
+
+    返回 (ok, msg)：
+      - ok=True：通过（或无法转换，保留节点）
+      - ok=False：mihomo 加载失败 / 端口未就绪 / 异常
+    """
+    import asyncio
+    import os
+    import shutil
+    import tempfile
+    import time
+    from pathlib import Path
+
+    # 规范化 mihomo 路径：绝对路径优先，其次 PATH 查找
+    if not os.path.isabs(mihomo_bin):
+        abs_candidate = os.path.abspath(mihomo_bin)
+        if os.path.isfile(abs_candidate):
+            mihomo_bin = abs_candidate
+        else:
+            found = shutil.which(mihomo_bin)
+            if found:
+                mihomo_bin = found
+            else:
+                return False, f"找不到 mihomo 二进制: {mihomo_bin}"
+
+    proxy = clash_dict_to_proxy(proxy_dict)
+    if proxy is None:
+        return True, "无法转换为 OpenRay Proxy，跳过验证保留节点"
+
+    async def _run():
+        with tempfile.TemporaryDirectory(prefix=VERIFY_TEMP_PREFIX) as tmp:
+            root = Path(tmp)
+            try:
+                from openray.config import Settings
+                from openray.validation import CoreWorker
+            except ImportError as e:
+                return False, f"缺少 openray.validation/config: {e}"
+
+            settings = Settings(
+                root=root,
+                database=root / "state.sqlite3",
+                sources=root / "sources.txt",
+            )
+            worker = CoreWorker(settings, root / "worker")
+            try:
+                deadline = time.monotonic() + timeout
+                await worker.start(proxy, "mihomo", mihomo_bin, deadline, False)
+                return True, "端口就绪"
+            except TimeoutError:
+                return False, f"端口未在 {timeout}s 内 LISTEN"
+            except Exception as e:
+                return False, f"{type(e).__name__}: {e}"
+            finally:
+                try:
+                    await worker.stop()
+                except Exception:
+                    pass
+
+    try:
+        return asyncio.run(_run())
+    except Exception as e:
+        return False, f"验证异常: {type(e).__name__}: {e}"
+
+
+def verify_and_filter_proxies(proxies, workers, budget_seconds, mihomo_bin, timeout):
+    """并发验证；返回 (verified, failed)。
+
+    failed 是 [(name, reason), ...]，逐条可审计。
+    预算用尽时保留剩余节点，不阻塞后续流程。
+    """
+    import concurrent.futures
+    import time
+
+    if not isinstance(proxies, list) or not proxies:
+        return [], []
+
+    verified, failed = [], []
+    dict_proxies = [p for p in proxies if isinstance(p, dict)]
+    # 保留非 dict（正常输入不会有，但保持与 clean_invalid_nodes 一致的容错）
+    verified.extend(p for p in proxies if not isinstance(p, dict))
+
+    if not dict_proxies:
+        return verified, failed
+
+    start = time.monotonic()
+    budget_exhausted = False
+
+    pool = concurrent.futures.ThreadPoolExecutor(max_workers=workers)
+    fut_map = {pool.submit(_verify_one, p, mihomo_bin, timeout): p for p in dict_proxies}
+    not_done = set(fut_map.keys())
+
+    try:
+        while not_done:
+            elapsed = time.monotonic() - start
+            if elapsed >= budget_seconds:
+                budget_exhausted = True
+                break
+            remaining = budget_seconds - elapsed
+            done, not_done = concurrent.futures.wait(
+                not_done,
+                timeout=remaining,
+                return_when=concurrent.futures.FIRST_COMPLETED,
+            )
+            for fut in done:
+                p = fut_map[fut]
+                try:
+                    ok, msg = fut.result()
+                except Exception as e:
+                    ok, msg = False, f"线程异常: {type(e).__name__}: {e}"
+                if ok:
+                    verified.append(p)
+                else:
+                    failed.append((p.get("name", "<unknown>"), msg))
+    finally:
+        if budget_exhausted:
+            # 不阻塞：取消未开始的 future；已开始的允许在进程退出时被 join
+            pool.shutdown(wait=False, cancel_futures=True)
+        else:
+            pool.shutdown(wait=True)
+
+    if budget_exhausted:
+        # 保留未完成节点，避免预算不足导致的误删
+        for fut in not_done:
+            verified.append(fut_map[fut])
+        print(f"⏱️ 验证预算 {budget_seconds:.0f}s 用尽："
+              f"已验证 {len(fut_map) - len(not_done)}，"
+              f"保留剩余 {len(not_done)} 个节点")
+
+    return verified, failed
+
+
+# ============================================================================
 # 5. proxy-groups 引用清洗
 # ============================================================================
 def cleanup_groups(config, valid_names):
@@ -428,9 +655,34 @@ def main():
                         help="只打印指定 name 的处理详情（可重复指定）")
     parser.add_argument("--diagnose", action="store_true",
                         help="在关键步骤打印重名统计")
+    # ---- 协议检查与 mihomo 本地验证（默认值集中定义在模块头部） ----
+    parser.add_argument("--protocol-check", action="store_true",
+                        default=PROTOCOL_CHECK_ENABLED,
+                        help="用 OpenRay supported_params 检查协议兼容性并剔除不兼容节点")
+    parser.add_argument("--verify-nodes", action="store_true",
+                        default=VERIFY_NODES_ENABLED,
+                        help="逐个启动 mihomo 验证节点加载有效性，剔除失败节点（零出站）")
+    parser.add_argument("--verify-workers", type=int, default=VERIFY_WORKERS,
+                        help=f"mihomo 验证并发数（默认 {VERIFY_WORKERS}）")
+    parser.add_argument("--verify-budget", type=float, default=VERIFY_BUDGET_SECONDS,
+                        help=f"mihomo 验证总预算秒数（默认 {VERIFY_BUDGET_SECONDS}）")
+    parser.add_argument("--mihomo-bin", default=VERIFY_MIHOMO_BIN,
+                        help=f"mihomo 二进制路径（默认 {VERIFY_MIHOMO_BIN}）")
+    parser.add_argument("--strict-verify", action="store_true",
+                        default=VERIFY_STRICT,
+                        help="有节点被 --verify-nodes 剔除时返回非零码")
     args = parser.parse_args()
 
+    # ---- 参数校验 ----
+    if args.verify_workers < 1 or args.verify_workers > 64:
+        print("❌ --verify-workers 必须在 1..64", file=sys.stderr)
+        return 1
+    if args.verify_budget <= 0:
+        print("❌ --verify-budget 必须 > 0", file=sys.stderr)
+        return 1
+
     debug_names = set(args.debug_name)
+    strict_verify_triggered = False
 
     # ---------- 读文件 ----------
     if not args.source.is_file():
@@ -475,6 +727,20 @@ def main():
     if args.diagnose:
         diagnose_duplicates(deduped, "identity 去重后", debug_names)
 
+    # ---------- 1.5 协议兼容性检查（可选，零出站） ----------
+    if args.protocol_check:
+        before = len(deduped)
+        deduped, proto_removed, unconvertible = filter_by_protocol_compatibility(deduped)
+        if proto_removed:
+            print(f"🔬 协议检查: 剔除 {len(proto_removed)} 个协议不兼容节点")
+            for name, reason in proto_removed[:20]:
+                print(f"    ❌ {name}: {reason}")
+            if len(proto_removed) > 20:
+                print(f"    ... 还有 {len(proto_removed) - 20} 个")
+        if unconvertible:
+            print(f"⚠️  协议检查: {len(unconvertible)} 个节点无法转换为 Proxy，保留（仅警告）")
+        print(f"📊 协议检查: {before} → {len(deduped)}")
+
     # ---------- 2. 名称归一化 + 唯一化 ----------
     renamed, name_map = normalize_names(
         deduped,
@@ -508,6 +774,26 @@ def main():
         if dropped:
             print(f"🧹 清洗: 剔除 {dropped} 个不可用节点")
 
+    # ---------- 5.5 mihomo 本地加载验证（可选，零出站） ----------
+    if args.verify_nodes:
+        before = len(deduped)
+        deduped, verify_failed = verify_and_filter_proxies(
+            deduped,
+            workers=args.verify_workers,
+            budget_seconds=args.verify_budget,
+            mihomo_bin=args.mihomo_bin,
+            timeout=VERIFY_TIMEOUT,
+        )
+        if verify_failed:
+            print(f"🧪 mihomo 验证: 剔除 {len(verify_failed)} 个加载失败节点")
+            for name, reason in verify_failed[:20]:
+                print(f"    ❌ {name}: {reason}")
+            if len(verify_failed) > 20:
+                print(f"    ... 还有 {len(verify_failed) - 20} 个")
+            if args.strict_verify:
+                strict_verify_triggered = True
+        print(f"📊 mihomo 验证: {before} → {len(deduped)}")
+
     # ---------- 6. 排序 ----------
     if args.sort:
         deduped.sort(key=lambda p: identity_for_clash_proxy(p) or "")
@@ -537,6 +823,8 @@ def main():
 
     if args.dry_run:
         print("🔍 dry-run：不写文件")
+        if strict_verify_triggered:
+            return 3
         return 0
 
     with args.output.open("w", encoding="utf-8") as f:
@@ -557,6 +845,11 @@ def main():
         for name, count in list(dup.items())[:10]:
             print(f"    {name!r} × {count}", file=sys.stderr)
         return 2
+
+    # ---------- 10. --strict-verify 触发非零码 ----------
+    if strict_verify_triggered:
+        print("\n❌ --strict-verify: 有节点在 mihomo 验证中被剔除", file=sys.stderr)
+        return 3
 
     return 0
 
