@@ -1,23 +1,16 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇮🇹 意大利_6EEC60 - 102ms
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.90
+  type: ss
 - name: 🇪🇪EE_2|723KB/s|R002-260618 [0a...
   port: 443
   server: 95.153.32.2
   sni: 95.153.32.2
   tls: true
   type: http
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇪🇪EE_17|3.0MB/s|S004-260618 [4...
-  network: xhttp
-  port: 34451
-  server: ee-2e06d85dc0.shamanapp.online
-  tls: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
 - name: 🇪🇪EE_11|469KB/s|R002-260618 [6...
   port: 9443
   server: 192.159.101.174
@@ -40,32 +33,55 @@ proxies:
   sni: 95.153.31.66
   tls: true
   type: http
-- name: 🇪🇪EE_1|2.6MB/s|K001-260618 - 1...
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_1|1.0MB/s - 105ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: JOoD5ze_pwrMnQoAIRVieQM8SPJjiLJEw1fwx57iYgk
+    short-id: '!!str bbd20b213341644c'
+  server: 64.188.78.60
+  tls: true
+  type: vless
+  uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
+- name: 🇪🇪EE_1|1.7MB/s - 103ms
   port: 9443
   server: 95.153.32.2
   sni: 95.153.32.2
   tls: true
   type: http
-- name: 🇪🇪EE_2|3.0MB/s - 154ms
-  password: 9jkvAVV-9ufV6IGd
-  port: 51320
-  server: chalo-ru.nexorcdn.com
-  sni: chalo-ru.nexorcdn.com
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_1|3.0MB/s - 121ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 2LWgemfg0df7tGt4icLbRG-Cz7QNPVr3g7xIdwbTTHQ
+    short-id: '!!str caa05b44ba5b7b3d'
+  server: 45.139.27.9
   tls: true
-  type: http
-  username: ef37886e2aacd6fa622e3de3810299c2
-- name: 🇪🇪EE_4|2.3MB/s - 151ms
-  password: 9jkvAVV-9ufV6IGd
-  port: 36774
-  server: chalo-ru.nexorcdn.com
-  sni: chalo-ru.nexorcdn.com
+  type: vless
+  uuid: 6eca8bc3-c4e1-48d1-bf15-1eb016dd6272
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_5|2.2MB/s - 114ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: JOoD5ze_pwrMnQoAIRVieQM8SPJjiLJEw1fwx57iYgk
+    short-id: '!!str bbd20b213341644c'
+  server: l415ng0o.himoy.space
   tls: true
-  type: http
-  username: ef37886e2aacd6fa622e3de3810299c2
+  type: vless
+  uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇪🇪EE_3|3.4MB/s - 178ms
+  name: 🇪🇪EE_3|3.4MB/s - 128ms
   network: grpc
   port: 443
   server: lalibobi.online
@@ -75,42 +91,91 @@ proxies:
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: EE 🇪🇪 | @Raydikalx | E9229E - ...
+  name: EE 🇪🇪 | @Raydikalx | 6FF856 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: 13nLTYkdBEFR-A4CfK2beOx-5LKEsXh1QHPq8Kt52BQ
-    short-id: '!!str 7271129440ade8fa'
-  server: 138.124.4.224
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: '!!str afee962d'
+  server: 194.26.141.223
   tls: true
   type: vless
-  uuid: 9c794bb7-54fe-4acd-844a-a26209af36c3
-- name: EE 🇪🇪 | @Raydikalx | D446FA - ...
-  password: humanity
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | CFD554 - ...
+  network: tcp
   port: 443
-  server: 38.180.163.250
-  sni: www.pleadcourt.org
-  type: trojan
+  reality-opts:
+    public-key: Pb37t99NiJqm-lsTi4tucPFqRXIsek-5G5dqjIqVfxE
+    short-id: '!!str 15c87d0b99c0d132'
+  server: 31.59.218.43
+  tls: true
+  type: vless
+  uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | 0332E0 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Pb37t99NiJqm-lsTi4tucPFqRXIsek-5G5dqjIqVfxE
+    short-id: '!!str 15c87d0b99c0d132'
+  server: tlokexcm.himoy.space
+  tls: true
+  type: vless
+  uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: EE 🇪🇪 | @Raydikalx | 9AE1C3 - ...
-  network: ws
-  port: 8443
-  server: 45.80.108.7
+  name: PL 🇵🇱 | @Raydikalx | BFEEAC - ...
+  network: grpc
+  port: 56229
+  reality-opts:
+    public-key: PQLbmvCHSAwuq_Ka1W-6gQxQA_vIjItozo3Jbqkg9Xk
+    short-id: '!!str a411cc'
+  server: 83.168.69.15
   tls: true
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-- client-fingerprint: chrome
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: EE 🇪🇪 | @Raydikalx | EBDB2A - ...
+  name: EE 🇪🇪 | @Raydikalx | 281A9B - ...
   network: tcp
-  port: 8443
+  port: 443
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 150.241.101.80
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: '!!str afee962d'
+  server: ee1.mycloud1.org
   tls: true
   type: vless
-  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | E21992 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw
+    short-id: '!!str '
+  server: 79.98.37.106
+  tls: true
+  type: vless
+  uuid: 846cedee-2a52-0001-a0b9-11850ead6a8b
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | 961459 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw
+    short-id: '!!str '
+  server: ee-central.v8x2b.lol
+  tls: true
+  type: vless
+  uuid: 846cedee-2a52-0001-a0b9-11850ead6a8b

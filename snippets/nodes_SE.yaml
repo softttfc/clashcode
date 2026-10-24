@@ -1,26 +1,7 @@
 proxies:
-- name: SE 12 → tg@nicevpn123 - 10ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 8ms
-  network: ws
-  port: 443
-  server: 185.146.173.129
-  tls: true
-  type: vmess
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-  ws-opts:
-    headers:
-      Host: 185.146.173.129
-    path: /
-- alterId: 0
-  cipher: auto
-  name: SE 22 → tg@nicevpn123 - 11ms
+  name: SE 22 → tg@nicevpn123 - 2ms
   network: ws
   port: 443
   server: 185.146.173.59
@@ -31,3 +12,22 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
+- alterId: 0
+  cipher: auto
+  name: SE 20 → tg@nicevpn123 - 1ms
+  network: ws
+  port: 443
+  server: 185.146.173.129
+  tls: true
+  type: vmess
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  ws-opts:
+    headers:
+      Host: 185.146.173.129
+    path: /
+- name: SE 12 → tg@nicevpn123 - 2ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
