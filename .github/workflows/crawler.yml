@@ -14,23 +14,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0            # 获取完整历史，用于分支信息
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.10'
-      # ---------- 安装依赖 ----------
-      - name: 安装依赖
-        run: pip install -r requirements.txt
-    
-      # - name: Install dependencies
-      #   run: |
-      #     pip install requests beautifulsoup4 pyyaml requests-file aioquic
-          
+          python-version: '3.x'
+
       # ---------- 安装依赖 ----------
       # 原有依赖安装保持不变；追加 psutil（dupconfig.py --verify-nodes 复用
       # openray.validation.owned_listener 时需要通过 psutil 检查 PID 归属监听）。
@@ -43,7 +36,21 @@ jobs:
       - name: 安装 psutil
         run: pip install psutil
         continue-on-error: true
-
+   
+      # ---------- 安装依赖 ----------
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+    
+      # - name: Install dependencies
+      #   run: |
+      #     pip install requests beautifulsoup4 pyyaml requests-file aioquic
+          
+      # ---------- 拉取远端最新代码（确保工作区干净） ----------
+      - name: 拉取远端最新代码
+        run: |
+          DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+          echo "远程默认分支: $DEFAULT_BRANCH"
+          git pull --rebase origin "$DEFAULT_BRANCH"
         
       - name: Run crawler
         run: python crawler_pro2.py
