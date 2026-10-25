@@ -1,8 +1,30 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 878ms
+  network: ws
+  port: 443
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /
+- encryption: none
+  flow: ''
+  name: 🇰🇷_KR_韩国_1 - 427ms
+  network: ws
+  port: 10333
+  server: 121.175.77.73
+  tls: true
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇰🇷 韩国_B8F308 - 183ms
+  name: 🇰🇷 韩国_B8F308 - 128ms
   network: tcp
   port: 443
   reality-opts:
@@ -12,15 +34,19 @@ proxies:
   tls: true
   type: vless
   uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国_3KAN7O - 177ms
-  network: tcp
-  port: 123
-  server: 43.108.103.167
+- name: 🇰🇷KR_1|4.1MB/s - 134ms
+  port: 1080
+  server: 144.24.94.153
+  type: http
+- encryption: none
+  flow: ''
+  name: 🇰🇷KR韩国丨yoyapai.com_1 - 18ms
+  network: ws
+  port: 8880
+  server: crimson-smoke-7818.397.workers.dev
   tls: false
-  type: vmess
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+  type: vless
+  uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
 - encryption: none
   flow: ''
   name: 🇰🇷KR韩國丨yoyapai.com - 1ms
@@ -32,13 +58,23 @@ proxies:
   uuid: 81d55675-8570-4b40-9a77-3125339a0f86
 - encryption: none
   flow: ''
-  name: 🇰🇷KR韩国丨yoyapai.com_1 - 16ms
+  name: KR韩国(mibei77.com 米贝节点分享)_1 - 1...
   network: ws
-  port: 8880
-  server: crimson-smoke-7818.397.workers.dev
-  tls: false
+  port: 443
+  server: 146.56.151.92
+  tls: true
   type: vless
-  uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: KR韩国(mibei77.com 米贝节点分享) - 132...
+  network: ws
+  port: 443
+  server: 123.111.169.70
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - alpn:
   - h3
   - h2
@@ -54,29 +90,10 @@ proxies:
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - encryption: none
   flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_1 - 1...
-  network: ws
-  port: 443
-  server: 146.56.151.92
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- encryption: none
-  flow: ''
   name: KR韩国(mibei77.com 米贝节点分享)_2 - 1...
   network: ws
   port: 443
   server: 193.122.115.184
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享) - 197...
-  network: ws
-  port: 443
-  server: 123.111.169.70
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -86,16 +103,6 @@ proxies:
   network: ws
   port: 443
   server: 141.164.44.60
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: KR韩国(mibei77.com 米贝节点分享)_4 - 1...
-  network: ws
-  port: 443
-  server: 158.247.222.168
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -119,16 +126,6 @@ proxies:
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_52|289KB/s|F003-260618 [1...
-  network: ws
-  port: 443
-  server: 144.24.90.178
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - alpn:
   - h3
   - h2
@@ -139,6 +136,16 @@ proxies:
   network: ws
   port: 443
   server: 52.79.188.223
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇰🇷KR_52|289KB/s|F003-260618 [1...
+  network: ws
+  port: 443
+  server: 144.24.90.178
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -226,16 +233,6 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇰🇷KR_32|515KB/s|M003-260806 [b...
-  network: ws
-  port: 443
-  server: 146.56.45.96
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
   name: 🇰🇷KR_48|374KB/s|F003-260618 [b...
   network: ws
   port: 443
@@ -243,15 +240,16 @@ proxies:
   tls: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_40|441KB/s|M003-260806 [c...
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇰🇷KR_32|515KB/s|M003-260806 [b...
+  network: ws
+  port: 443
+  server: 146.56.45.96
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -313,38 +311,6 @@ proxies:
   tls: false
   type: vmess
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- encryption: none
-  flow: ''
-  name: 🇰🇷_KR_韩国_1 - 475ms
-  network: ws
-  port: 10333
-  server: 121.175.77.73
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国 - 719ms
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇰🇷KR_1|1.1MB/s - 178ms
-  network: ws
-  port: 443
-  server: 158.247.220.241
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
@@ -370,7 +336,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 183...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 132...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -381,22 +347,16 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | D518F1 - ...
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 132.145.80.230
-    path: /
-- cipher: chacha20-ietf-poly1305
-  name: KR 🇰🇷 | @Raydikalx | 1B12D7 - ...
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 54.180.151.244
-  type: ss
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: KR 🇰🇷 | @Raydikalx | B37B15 - ...
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: '!!str 3c4041d3'
+  server: 47.80.19.173
+  tls: true
+  type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
