@@ -1,13 +1,62 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇷🇺 RU俄羅斯丨yoyapai.com
+  password: 7e1dd4c55bf85da5
+  port: 30129
+  server: 212.192.13.91
+  skip-cert-verify: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇷🇺_RU俄羅斯丨yoyapai.com
+  password: 895b4b796a357570
+  port: 10910
+  server: 176.32.35.51
+  skip-cert-verify: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇷🇺_RU俄羅斯丨yoyapai.com_1
+  password: 895b4b796a357570
+  port: 10916
+  server: 176.32.35.51
+  skip-cert-verify: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇷🇺_RU俄羅斯丨yoyapai.com_2
+  password: bdb313adf74c2ede
+  port: 20188
+  server: 195.133.5.207
+  skip-cert-verify: false
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: '俄罗斯 004 #1'
-  network: tcp
-  port: 2020
-  server: 95.181.162.100
-  skip-cert-verify: true
+  name: 🇷🇺RU俄罗斯
+  network: ws
+  port: 443
+  server: renderer-stream-2-62.mirra.now
+  skip-cert-verify: false
+  tls: true
   type: vmess
-  uuid: 67744e32-4a46-4805-d42c-70391bdb8dc5
+  udp: true
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #34'
+  network: ws
+  password: humanity
+  port: 2053
+  server: 185.114.72.31
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - alterId: 0
   cipher: auto
   name: '俄罗斯 005 #1'
@@ -21,54 +70,92 @@ proxies:
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     path: /
-- cipher: aes-256-gcm
-  name: '🇷🇺 俄罗斯 | RUS #1 #1'
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  port: 18443
-  server: 176.32.33.153
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: '@npv_vpn11 #1148'
-  network: tcp
-  port: 24212
-  server: 158.160.180.165
-  servername: ''
-  tls: true
+  name: '俄罗斯 006 #1'
+  network: ws
+  port: 80
+  server: 195.54.174.18
+  skip-cert-verify: true
   type: vmess
+  uuid: 6d6f413f-3dc2-4d02-8d35-8b45e39feb72
+  ws-opts:
+    headers:
+      Host: 195.54.174.18
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '俄罗斯 007 #1'
+  network: http
+  port: 26743
+  server: 194.87.248.27
+  skip-cert-verify: true
+  type: vmess
+  uuid: 59952a8e-b712-4190-d85e-f9aadd65faa0
+- alterId: 64
+  cipher: auto
+  name: '俄罗斯 008 #1'
+  network: http
+  port: 37672
+  server: 176.119.159.245
+  skip-cert-verify: true
+  type: vmess
+  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
+- alterId: 0
+  cipher: auto
+  name: 🇹🇷139866 | ⚡️Telegram = t.me/S...
+  network: tcp
+  port: '22324'
+  server: 5.188.190.252
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: '@Tarkahodeh 🇬🇱 #1'
+  network: tcp
+  port: '22324'
+  server: 89.223.95.77
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- cipher: aes-256-gcm
+  name: RU 🇷🇺 ｜ @Raydikalx ｜ 367F6A - ...
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+  port: 18443
+  server: 195.133.23.50
+  type: ss
   udp: true
-  uuid: c58c1205-b308-416f-8503-c04557abf93d
+- cipher: aes-256-gcm
+  name: RU 🇷🇺 ｜ @Raydikalx ｜ 6668CE - ...
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+  port: 18443
+  server: 46.17.43.227
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: '[RU] Art.29 #4'
   password: VVlAff77CnAU43Aoc5j15Y
   port: 5112
   server: 90.156.203.62
   type: ss
-- alpn:
-  - h2
-  - http/1.1
-  alterId: '0'
+- alterId: 0
   cipher: auto
-  name: 🇷🇺RU_2|2.8MB/s
-  network: tcp
+  name: 🇷🇺_俄罗斯_175
   port: 24212
   server: 158.160.180.165
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
   uuid: c58c1205-b308-416f-8503-c04557abf93d
-  xudp: true
-- cipher: aes-256-gcm
-  name: 🇷🇺RU_7
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-  port: 18443
-  server: 46.17.44.216
-  type: ss
 - alterId: 0
   cipher: auto
-  name: RU俄罗斯(mibei77.com 米贝节点分享) - 63...
+  name: RU俄罗斯(mibei77.com 米贝节点分享) - 24...
   network: ws
   port: 10057
   server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
@@ -79,53 +166,9 @@ proxies:
     headers:
       Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
     path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 13 → tg@nicevpn123 - 101...
-  password: U6qnYRhfyDmn8sgn
-  port: 9041
-  server: 5.188.181.201
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 16 → tg@nicevpn123 - 108...
-  password: BwcAUZk8hUFAkDGN
-  port: 9031
-  server: 5.188.181.201
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 22 → tg@nicevpn123 - 6ms
-  network: ws
-  port: 443
-  server: 185.148.104.118
-  tls: true
-  type: vmess
-  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
-  ws-opts:
-    headers:
-      Host: 185.148.104.118
-    path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 23 → tg@nicevpn123 - 103...
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 5.188.181.201
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU 31 → tg@nicevpn123 - 198...
-  network: ws
-  port: 80
-  server: is3-vmess.sshmax.xyz
-  tls: false
-  type: vmess
-  uuid: a8d33442-de64-4980-a779-540c1eedbc25
-  ws-opts:
-    headers:
-      Host: is3-vmess.sshmax.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU 32 → tg@nicevpn123 - 106...
+  name: 🇷🇺 RU 32 → tg@nicevpn123 - 35m...
   network: ws
   port: 80
   server: de1-vmess.greenssh.xyz
@@ -136,15 +179,9 @@ proxies:
     headers:
       Host: de1-vmess.greenssh.xyz
     path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 43 → tg@nicevpn123 - 104...
-  password: TN2YqghxeFDKZfLU
-  port: 9037
-  server: 5.188.181.201
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 70 → tg@nicevpn123 - 161...
+  name: 🇷🇺 RU 70 → tg@nicevpn123 - 201...
   network: ws
   port: 80
   server: 85.117.234.167
@@ -155,3 +192,41 @@ proxies:
     headers:
       Host: 85.117.234.167
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 22 → tg@nicevpn123 - 1ms
+  network: ws
+  port: 443
+  server: 185.148.104.118
+  tls: true
+  type: vmess
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  ws-opts:
+    headers:
+      Host: 185.148.104.118
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 31 → tg@nicevpn123 - 127...
+  network: ws
+  port: 80
+  server: is3-vmess.sshmax.xyz
+  tls: false
+  type: vmess
+  uuid: a8d33442-de64-4980-a779-540c1eedbc25
+  ws-opts:
+    headers:
+      Host: is3-vmess.sshmax.xyz
+    path: /
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 30 → tg@nicevpn123 - 133...
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 5.188.181.201
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇷🇺RU_6
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+  port: 18443
+  server: 46.17.44.216
+  type: ss
