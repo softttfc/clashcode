@@ -1,8 +1,71 @@
 proxies:
+- name: 🇸🇪SE_1|1.3MB/s - 164ms
+  port: 9443
+  server: 146.70.242.146
+  sni: 146.70.242.146
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|3.3MB/s - 161ms
+  password: None
+  port: 443
+  server: 146.70.242.130
+  sni: 146.70.242.130
+  tls: true
+  type: http
+- name: 🇸🇪SE_1|3.3MB/s - 163ms
+  port: 443
+  server: 149.50.216.65
+  sni: 149.50.216.65
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|1.0MB/s - 165ms
+  password: None
+  port: 443
+  server: 79.142.77.63
+  sni: 79.142.77.63
+  tls: true
+  type: http
+- name: 🇸🇪SE_1|3.3MB/s - 164ms
+  port: 443
+  server: 146.70.242.146
+  sni: 146.70.242.146
+  tls: true
+  type: http
+- name: 🇸🇪SE_4|1.9MB/s - 154ms
+  port: 443
+  server: 217.210.129.243
+  sni: 217.210.129.243
+  tls: true
+  type: http
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_1|2.8MB/s - 174ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: '!!str afee962d'
+  server: se1.mycloud1.org
+  tls: true
+  type: vless
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_1|1.5MB/s - 167ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 5984Ah0pkfSVekU5xafQ1trZZN7MyNCJ-3KfCo-O6A4
+  server: 196.247.163.10
+  tls: true
+  type: vless
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇸🇪 瑞典_549ECE - 181ms
+  name: 🇸🇪SE_2|2.4MB/s - 159ms
   network: tcp
   port: 443
   reality-opts:
@@ -12,35 +75,23 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- name: 🇸🇪 瑞典_FD843F - 198ms
-  port: 1080
-  server: 171.25.158.95
-  type: socks5
-  username: Og==
-- name: 🇸🇪SE_3|2.0MB/s - 164ms
-  password: None
-  port: 443
-  server: 149.50.216.65
-  sni: 149.50.216.65
-  tls: true
-  type: http
-- name: 🇸🇪SE_2|2.0MB/s - 160ms
-  password: None
-  port: 443
-  server: 146.70.242.130
-  sni: 146.70.242.130
-  tls: true
-  type: http
-- name: 🇸🇪SE_1|1.0MB/s - 162ms
-  port: 9443
-  server: 146.70.242.146
-  sni: 146.70.242.146
-  tls: true
-  type: http
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇸🇪SE_1|1.1MB/s - 185ms
+  name: 🇸🇪SE_2|1.2MB/s - 191ms
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4
+    short-id: '!!str a1b2c3d4e5f6a7b8'
+  server: toggle.skelmoridianservice.com
+  tls: true
+  type: vless
+  uuid: 26dd886d-3eae-4eda-a92d-dc5d5e7e036e
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇸🇪SE_1|1.1MB/s - 200ms
   network: grpc
   port: 443
   reality-opts:
@@ -50,18 +101,16 @@ proxies:
   tls: true
   type: vless
   uuid: 2c7332d6-01e0-462e-843f-8253d7e1b920
-- name: 🇸🇪SE_1|1021KB/s - 153ms
+- client-fingerprint: random
+  encryption: none
+  flow: ''
+  name: 🇸🇪SE_1|1.9MB/s - 4ms
+  network: ws
   port: 443
-  server: 217.210.129.243
-  sni: 217.210.129.243
+  server: ct.877774.xyz
   tls: true
-  type: http
-- name: 🇸🇪SE_1|1.4MB/s - 170ms
-  port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
-  tls: true
-  type: http
+  type: vless
+  uuid: fffd4cb3-d5e2-4a11-936e-b8da5b240b8d
 - encryption: none
   flow: ''
   name: 🇸🇪SE_10|2.0MB/s|A004-260618 [1...
@@ -111,16 +160,6 @@ proxies:
   tls: true
   type: vless
   uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_13|372KB/s|F003-260618 [f...
-  network: ws
-  port: 443
-  server: 109.122.194.61
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
 - name: SE 12 → tg@nicevpn123 - 1ms
   password: dGKXcHgs3P
   port: 80
@@ -142,7 +181,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: SE 22 → tg@nicevpn123 - 1ms
+  name: SE 22 → tg@nicevpn123 - 2ms
   network: ws
   port: 443
   server: 185.146.173.59
@@ -166,16 +205,13 @@ proxies:
   tls: true
   type: vless
   uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
-- client-fingerprint: safari
+- client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision
-  name: SE 🇸🇪 | @Raydikalx | 53AE2B - ...
-  network: tcp
-  port: 10444
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: '!!str 8debcf36f1cc69ff'
-  server: 193.188.21.253
+  flow: ''
+  name: SE 🇸🇪 | @Raydikalx | 3F69F8 - ...
+  network: ws
+  port: 444
+  server: 109.120.155.155
   tls: true
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  uuid: 99ab6748-3d57-4562-9451-843c15960b9b

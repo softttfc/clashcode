@@ -1,14 +1,34 @@
 proxies:
-- cipher: aes-256-gcm
-  name: 🇨🇦_CA_加拿大_1 - 67ms
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 51.79.85.185
-  type: ss
+- name: 🇨🇦CA_2|2.6MB/s - 70ms
+  password: None
+  port: 443
+  server: 206.223.183.13
+  sni: 206.223.183.13
+  tls: true
+  type: http
+- name: 🇨🇦CA_1|2.4MB/s - 70ms
+  port: 443
+  server: 206.223.161.47
+  sni: 206.223.161.47
+  tls: true
+  type: http
+- name: 🇨🇦CA_3|1.1MB/s - 69ms
+  password: None
+  port: 443
+  server: 206.223.183.16
+  sni: 206.223.183.16
+  tls: true
+  type: http
+- name: 🇨🇦CA_3|2.9MB/s - 58ms
+  port: 9443
+  server: 198.44.157.19
+  sni: 198.44.157.19
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇨🇦 加拿大_DDFACE - 257ms
+  name: 🇨🇦CA_1|1.5MB/s - 259ms
   network: tcp
   port: 2093
   reality-opts:
@@ -17,43 +37,72 @@ proxies:
   server: 213.152.165.203
   tls: true
   type: vless
-  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
-- encryption: none
-  flow: ''
-  name: 🇨🇦 加拿大_7A8CFB - 2ms
-  network: ws
-  port: 8080
-  server: 172.64.150.43
-  tls: false
+  uuid: 28d7a636-fd0b-489e-bf99-baa5b1bf9f15
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_2|1019KB/s - 254ms
+  network: tcp
+  port: 2093
+  reality-opts:
+    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+    short-id: '!!str 8a9725533854a7e8'
+  server: 213.152.165.201
+  tls: true
   type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: 🇨🇦 加拿大_3LUG3Y - 76ms
-  password: Og==
-  port: 40000
-  server: 38.49.210.79
-  type: socks5
-  username: Og==
-- name: 🇨🇦CA_1|1.8MB/s - 58ms
+  uuid: 28d7a636-fd0b-489e-bf99-baa5b1bf9f15
+- name: 🇨🇦CA_5|1.3MB/s - 70ms
+  port: 443
+  server: 206.223.183.21
+  sni: 206.223.183.21
+  tls: true
+  type: http
+- name: 🇨🇦CA_3|2.2MB/s - 65ms
   port: 9443
   server: 149.88.98.81
   sni: 149.88.98.81
   tls: true
   type: http
-- name: 🇨🇦CA_2|2.3MB/s - 71ms
-  password: None
-  port: 443
-  server: 206.223.183.16
-  sni: 206.223.183.16
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_1|1.0MB/s - 266ms
+  network: tcp
+  port: 2093
+  reality-opts:
+    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+    short-id: '!!str 8a9725533854a7e8'
+  server: 213.152.165.200
   tls: true
-  type: http
-- name: 🇨🇦CA_2|3.2MB/s - 70ms
-  password: None
+  type: vless
+  uuid: 28d7a636-fd0b-489e-bf99-baa5b1bf9f15
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦CA_1|1.1MB/s - 21ms
+  network: ws
   port: 443
-  server: 206.223.183.13
-  sni: 206.223.183.13
+  server: www.windowsmsidownloads.com
   tls: true
-  type: http
-- name: 🇨🇦CA_1|2.7MB/s - 57ms
+  type: vmess
+  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
+  ws-opts:
+    headers:
+      Host: www.windowsmsidownloads.com
+    path: /
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇦CA_1|1.7MB/s - 304ms
+  network: tcp
+  port: 2093
+  reality-opts:
+    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+    short-id: '!!str 8a9725533854a7e8'
+  server: 67.159.47.236
+  tls: true
+  type: vless
+  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
+- name: 🇨🇦CA_1|2.7MB/s - 58ms
   port: 9443
   server: 198.44.157.27
   sni: 198.44.157.27
@@ -61,8 +110,18 @@ proxies:
   type: http
 - client-fingerprint: chrome
   encryption: none
+  flow: ''
+  name: 🇨🇦CA_3|2.1MB/s - 61ms
+  network: ws
+  port: 443
+  server: 40.233.99.248
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+- client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇨🇦CA_2|1000KB/s - 248ms
+  name: 🇨🇦CA_2|1000KB/s - 246ms
   network: tcp
   port: 2093
   reality-opts:
@@ -75,7 +134,7 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇨🇦CA_1|1.3MB/s - 303ms
+  name: 🇨🇦CA_1|1.3MB/s - 317ms
   network: tcp
   port: 2093
   reality-opts:
@@ -85,32 +144,239 @@ proxies:
   tls: true
   type: vless
   uuid: 0b418782-e023-447e-ba99-e66b84ff118d
-- name: 🇨🇦CA_5|1.4MB/s - 70ms
-  port: 443
-  server: 206.223.183.21
-  sni: 206.223.183.21
-  tls: true
-  type: http
-- name: 🇨🇦CA_3|2.8MB/s - 58ms
-  port: 9443
-  server: 198.44.157.19
-  sni: 198.44.157.19
-  tls: true
-  type: http
-- name: 🇨🇦CA_6|1.1MB/s - 2040ms
+- name: 🇨🇦CA_6|1.1MB/s - 10ms
   port: 1080
   server: 149.248.18.106
   type: socks5
-- name: 🇨🇦CA_2|2.2MB/s - 70ms
-  port: 443
-  server: 206.223.161.47
-  sni: 206.223.161.47
-  tls: true
-  type: http
+  username: Og%3D%3D
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_1 - 1ms
+  network: ws
+  port: 2082
+  server: 190.93.246.178
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇱🇺_LU_卢森堡->🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 188.42.88.198
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇳🇱_NL_荷兰->🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 45.131.208.116
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_1 - 5ms
+  network: ws
+  port: 2082
+  server: 190.93.246.120
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_2 - 2ms
+  network: ws
+  port: 2082
+  server: 190.93.246.196
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_3 - 1ms
+  network: ws
+  port: 2082
+  server: 190.93.247.221
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_4 - 1ms
+  network: ws
+  port: 2082
+  server: 190.93.247.170
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_2 - 1ms
+  network: ws
+  port: 2082
+  server: 190.93.247.23
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇱🇹_LT_立陶宛->🇨🇦_CA_加拿大_2 - 1ms
+  network: ws
+  port: 2082
+  server: 185.148.107.11
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇱🇹_LT_立陶宛->🇨🇦_CA_加拿大_1 - 1ms
+  network: ws
+  port: 2082
+  server: 89.117.112.181
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇩🇰_DK_丹麦->🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 195.85.59.158
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 205.233.181.63
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_1 - 1ms...
+  network: ws
+  port: 2082
+  server: 190.93.247.139
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大_3 - 1ms...
+  network: ws
+  port: 2082
+  server: 190.93.247.127
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇳🇱_NL_荷兰->🇨🇦_CA_加拿大_3 - 1ms
+  network: ws
+  port: 2082
+  server: 45.131.4.208
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇳🇱_NL_荷兰->🇨🇦_CA_加拿大_4 - 2ms
+  network: ws
+  port: 2082
+  server: 185.193.30.187
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: CA加拿大丨yoyapai.com - 2ms
+  name: CA加拿大丨yoyapai.com - 1ms
   network: ws
   port: 443
   server: 162.159.8.42
@@ -120,7 +386,7 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇨🇦CA加拿大丨yoyapai.com_2 - 1ms
+  name: 🇨🇦CA加拿大丨yoyapai.com_2 - 2ms
   network: ws
   port: 443
   server: 104.26.2.173
@@ -136,16 +402,10 @@ proxies:
   tls: false
   type: vless
   uuid: f4e6476f-40d0-40cb-841f-cc2f6909ff20
-- name: 🇨🇦CA加拿大丨yoyapai.com_5 - 2ms
+- name: 🇨🇦CA加拿大丨yoyapai.com_5 - 1ms
   password: humanity
   port: 443
   server: 104.18.152.225
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com_7 - 1ms
-  password: humanity
-  port: 443
-  server: 104.18.152.77
   sni: www.ignitelimit.com
   type: trojan
 - encryption: none
@@ -181,16 +441,28 @@ proxies:
   server: 104.16.174.117
   sni: www.ignitelimit.com
   type: trojan
+- name: 🇨🇦CA加拿大丨yoyapai.com_12 - 1ms
+  password: humanity
+  port: 443
+  server: 104.18.152.208
+  sni: www.ignitelimit.com
+  type: trojan
+- name: 🇨🇦CA加拿大丨yoyapai.com_7 - 1ms
+  password: humanity
+  port: 443
+  server: 104.18.152.77
+  sni: www.ignitelimit.com
+  type: trojan
 - name: 🇨🇦CA加拿大丨yoyapai.com_8 - 1ms
   password: humanity
   port: 443
   server: 104.18.152.140
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com_12 - 1ms
+- name: 🇨🇦CA加拿大丨yoyapai.com_13 - 1ms
   password: humanity
   port: 443
-  server: 104.18.152.208
+  server: 104.16.73.213
   sni: www.ignitelimit.com
   type: trojan
 - name: 🇨🇦CA加拿大丨yoyapai.com_14 - 1ms
@@ -205,19 +477,13 @@ proxies:
   server: 104.18.152.187
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com_13 - 1ms
-  password: humanity
-  port: 443
-  server: 104.16.73.213
-  sni: www.ignitelimit.com
-  type: trojan
 - name: 🇨🇦CA加拿大丨yoyapai.com_16 - 1ms
   password: humanity
   port: 443
   server: 104.16.174.37
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com_18 - 2ms
+- name: 🇨🇦CA加拿大丨yoyapai.com_18 - 1ms
   password: humanity
   port: 443
   server: 104.16.174.101
@@ -226,7 +492,7 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇨🇦CA加拿大丨yoyapai.com_19 - 1ms
+  name: 🇨🇦CA加拿大丨yoyapai.com_19 - 10ms
   network: ws
   port: 2087
   server: 172.67.79.160
@@ -235,7 +501,7 @@ proxies:
   uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
 - encryption: none
   flow: ''
-  name: 🇨🇦CA加拿大丨yoyapai.com_20 - 29ms
+  name: 🇨🇦CA加拿大丨yoyapai.com_20 - 31ms
   network: ws
   port: 8080
   server: www.iplocation.net
@@ -244,7 +510,7 @@ proxies:
   uuid: 5c4ce4e3-d4cd-43ff-8eb0-9aa553410bff
 - alterId: 0
   cipher: auto
-  name: 🇨🇦CA加拿大 - 712ms
+  name: 🇨🇦CA加拿大 - 367ms
   network: ws
   port: 443
   server: hk2.998998.best
@@ -255,6 +521,12 @@ proxies:
     headers:
       Host: hk2.998998.best
     path: /
+- cipher: aes-256-gcm
+  name: 🇨🇦CA_12|126KB/s|A004-260618 [1...
+  password: zDNVedRFPQexG9v
+  port: 445
+  server: 51.222.12.127
+  type: ss
 - cipher: rc4-md5
   name: 🇨🇦CA_1|1.3MB/s|A004-260618 [1a...
   password: 14fFPrbezE3HDZzsMOr6
@@ -266,6 +538,12 @@ proxies:
   password: Y6R9pAtvxxzmGC
   port: 5000
   server: 51.222.200.165
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇨🇦CA_29|221KB/s|A004-260618 [2...
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 51.79.85.185
   type: ss
 - alterId: 0
   cipher: auto
@@ -366,7 +644,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 CA 19 → tg@nicevpn123 - 1ms
+  name: 🇨🇦 CA 19 → tg@nicevpn123 - 2ms
   network: ws
   port: 8080
   server: 23.227.39.24
@@ -383,29 +661,9 @@ proxies:
   server: 23.227.60.186
   skip-cert-verify: true
   type: trojan
-- name: 🇨🇦 CA 13 → tg@nicevpn123 - 2ms
-  password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
-  port: 443
-  server: 23.227.38.11
-  skip-cert-verify: true
-  sni: syndication-statutes-wanted-logo.trycloudflare.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 CA 23 → tg@nicevpn123 - 1ms
-  network: ws
-  port: 8080
-  server: 23.227.38.44
-  tls: false
-  type: vmess
-  uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
-  ws-opts:
-    headers:
-      Host: 23.227.38.44
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 CA 45 → tg@nicevpn123 - 2ms
+  name: 🇨🇦 CA 45 → tg@nicevpn123 - 1ms
   network: ws
   port: 8080
   server: 23.227.38.23
@@ -415,6 +673,19 @@ proxies:
   ws-opts:
     headers:
       Host: 23.227.38.23
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 CA 23 → tg@nicevpn123 - 2ms
+  network: ws
+  port: 8080
+  server: 23.227.38.44
+  tls: false
+  type: vmess
+  uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
+  ws-opts:
+    headers:
+      Host: 23.227.38.44
     path: /
 - alterId: 0
   cipher: auto
@@ -429,80 +700,13 @@ proxies:
     headers:
       Host: 23.227.38.22
     path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 4D6095 - ...
-  network: ws
+- name: 🇨🇦 CA 13 → tg@nicevpn123 - 1ms
+  password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
   port: 443
-  server: nomino.11hi8itbaf.workers.dev
-  tls: true
-  type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  ws-opts:
-    headers:
-      Host: nomino.11hi8itbaf.workers.dev
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 43453A - ...
-  network: ws
-  port: 2087
-  server: 104.17.165.248
-  tls: true
-  type: vless
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 5EF94E - ...
-  network: ws
-  port: 8080
-  server: 104.21.70.21
-  tls: false
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 1D6331 - ...
-  network: ws
-  port: 2053
-  server: 104.26.15.138
-  tls: true
-  type: vless
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 4B2186 - ...
-  network: ws
-  port: 443
-  server: 104.24.54.160
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 08EB5F - ...
-  network: ws
-  port: 443
-  server: store.ubi.com
-  tls: true
-  type: vless
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 5D8148 - ...
-  network: ws
-  port: 443
-  server: cf.090227.xyz
-  tls: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  ws-opts:
-    headers:
-      Host: cf.090227.xyz
-    path: /
+  server: 23.227.38.11
+  skip-cert-verify: true
+  sni: syndication-statutes-wanted-logo.trycloudflare.com
+  type: trojan
 - alterId: 0
   cipher: auto
   name: CA 🇨🇦 | @Raydikalx | 68D797 - ...
@@ -516,34 +720,65 @@ proxies:
     headers:
       Host: 172.66.0.1
     path: /
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | F1218F - ...
-  network: ws
-  port: 443
-  server: 104.17.189.78
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 9B62FF - ...
+  name: CA 🇨🇦 | @Raydikalx | EB402A - ...
+  network: ws
+  port: 443
+  server: 104.17.182.41
+  tls: true
+  type: vless
+  uuid: f6a015b4-4783-4f2a-a01b-39f281ba5d07
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 9A6FCB - ...
+  network: ws
+  port: 443
+  server: 104.17.215.31
+  tls: true
+  type: vless
+  uuid: f6a015b4-4783-4f2a-a01b-39f281ba5d07
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 507EAF - ...
   network: ws
   port: 2083
-  server: 104.18.42.54
+  server: 188.114.97.3
   tls: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-- encryption: none
+- client-fingerprint: chrome
+  encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 28A56D - ...
+  name: CA 🇨🇦 | @Raydikalx | 4C0277 - ...
   network: ws
   port: 443
-  server: 789156.xyz
+  server: 104.21.88.77
   tls: true
   type: vless
-  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
+  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | C88B8F - ...
+  network: ws
+  port: 443
+  server: 188.114.97.6
+  tls: true
+  type: vless
+  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 62663E - ...
+  network: ws
+  port: 443
+  server: 172.67.153.156
+  tls: true
+  type: vless
+  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -559,54 +794,6 @@ proxies:
   uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
 - client-fingerprint: chrome
   encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | D2012A - ...
-  network: ws
-  port: 443
-  server: 104.24.31.89
-  tls: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | F89577 - ...
-  network: ws
-  port: 443
-  server: mybb.com
-  tls: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | B4C2B7 - ...
-  network: ws
-  port: 443
-  server: 104.18.176.145
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 5F18C1 - ...
-  network: ws
-  port: 443
-  server: 104.25.88.220
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 133CC7 - ...
-  network: ws
-  port: 443
-  server: 172.67.67.178
-  tls: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-- client-fingerprint: chrome
-  encryption: none
   flow: xtls-rprx-vision
   name: CA 🇨🇦 | @Raydikalx | 221781 - ...
   network: tcp
@@ -618,35 +805,18 @@ proxies:
   tls: true
   type: vless
   uuid: e17150a9-f949-467b-94ea-4d50e4c84186
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 26E40D - ...
-  network: ws
-  port: 443
-  server: 162.159.192.125
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 074A7C - ...
-  network: ws
-  port: 443
-  server: 104.24.2.147
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 62663E - ...
+  name: CA 🇨🇦 | @Raydikalx | BD240A - ...
   network: ws
   port: 443
-  server: 172.67.153.156
+  server: mybb.com
   tls: true
   type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-- encryption: none
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+- client-fingerprint: ios
+  encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | C3DB79 - ...
   network: ws
@@ -658,6 +828,45 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 3C9F9D - ...
+  network: ws
+  port: 443
+  server: ccs2g.pai50288.uk
+  tls: true
+  type: vless
+  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 5EF94E - ...
+  network: ws
+  port: 8080
+  server: 104.21.70.21
+  tls: false
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 34F81E - ...
+  network: ws
+  port: 443
+  server: 104.19.145.193
+  tls: true
+  type: vless
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | B889D8 - ...
+  network: ws
+  port: 443
+  server: 104.17.169.222
+  tls: true
+  type: vless
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
   name: CA 🇨🇦 | @Raydikalx | B0D74B - ...
   network: ws
   port: 443
@@ -665,7 +874,549 @@ proxies:
   tls: true
   type: vless
   uuid: 5b374761-e26c-4117-8af8-5c637992fcbf
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | A33BEA - ...
+  network: ws
+  port: 443
+  server: 172.66.1.65
+  tls: true
+  type: vless
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 828603 - ...
+  network: ws
+  port: 443
+  server: 104.19.50.221
+  tls: true
+  type: vless
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | C9020F - ...
+  network: ws
+  port: 443
+  server: 104.21.46.14
+  tls: true
+  type: vless
+  uuid: ea50b1a3-3a98-4c5e-a150-48ada40d68d7
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 1D6331 - ...
+  network: ws
+  port: 2053
+  server: 104.26.15.138
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 395DC4 - ...
+  network: ws
+  port: 443
+  server: 104.17.213.236
+  tls: true
+  type: vless
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 0B1522 - ...
+  network: ws
+  port: 443
+  server: www.shopify.com
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 18A499 - ...
+  network: ws
+  port: 2083
+  server: 104.17.167.185
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | C9F20E - ...
+  network: ws
+  port: 443
+  server: guanwang.awsno.com
+  tls: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    headers:
+      Host: guanwang.awsno.com
+    path: /
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 43453A - ...
+  network: ws
+  port: 2087
+  server: 104.17.165.248
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | 4D6095 - ...
+  network: ws
+  port: 443
+  server: nomino.11hi8itbaf.workers.dev
+  tls: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    headers:
+      Host: nomino.11hi8itbaf.workers.dev
+    path: /
+- name: CA 🇨🇦 | @Raydikalx | E3EA2D - ...
+  password: humanity
+  port: 443
+  server: 172.67.200.219
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | C89678 - ...
+  password: humanity
+  port: 443
+  server: 104.17.121.43
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 196E72 - ...
+  password: humanity
+  port: 443
+  server: 162.159.91.211
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 47366D - ...
+  password: humanity
+  port: 443
+  server: 104.27.201.80
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 328365 - ...
+  password: humanity
+  port: 443
+  server: 104.18.25.120
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 93D519 - ...
+  password: humanity
+  port: 443
+  server: 104.17.121.9
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | CB7CC6 - ...
+  password: humanity
+  port: 443
+  server: 104.25.124.54
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | D75A2C - ...
+  password: humanity
+  port: 443
+  server: 104.16.122.175
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | F21A49 - ...
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 9E1B7C - ...
+  password: humanity
+  port: 443
+  server: 108.162.194.134
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 40C985 - ...
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.trusteeforward.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | DA0B9C - ...
+  password: humanity
+  port: 443
+  server: 172.64.145.133
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 1DB02C - ...
+  password: humanity
+  port: 443
+  server: 172.67.231.254
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | C41A56 - ...
+  password: humanity
+  port: 443
+  server: 104.18.24.120
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | F2F929 - ...
+  password: humanity
+  port: 443
+  server: 172.64.190.13
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 180650 - ...
+  password: humanity
+  port: 443
+  server: 104.17.147.22
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 234D06 - ...
+  password: humanity
+  port: 443
+  server: 104.27.203.207
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 0B02EB - ...
+  password: humanity
+  port: 443
+  server: 172.64.150.28
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | B32A27 - ...
+  password: humanity
+  port: 443
+  server: 104.18.9.83
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 9A9CCD - ...
+  password: humanity
+  port: 443
+  server: 104.17.121.71
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 74B5FF - ...
+  password: humanity
+  port: 443
+  server: 104.21.13.204
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 5D836C - ...
+  password: humanity
+  port: 443
+  server: 104.20.61.103
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 07D9B2 - ...
+  password: humanity
+  port: 443
+  server: 104.17.44.17
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 05ECA0 - ...
+  password: humanity
+  port: 443
+  server: 172.67.217.240
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | F3A4FF - ...
+  password: humanity
+  port: 443
+  server: 104.18.45.38
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | A9BF9C - ...
+  password: xhl549341
+  port: 443
+  server: 104.18.43.174
+  sni: tro.baiyi.cloudns.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 748BB1 - ...
+  password: humanity
+  port: 443
+  server: 188.114.96.3
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 661B1A - ...
+  password: humanity
+  port: 443
+  server: 104.16.6.70
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 446744 - ...
+  password: humanity
+  port: 443
+  server: 162.159.133.152
+  sni: www.pleadcourt.org
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | FB9F41 - ...
+  password: humanity
+  port: 443
+  server: 104.25.108.234
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 82D1D2 - ...
+  password: humanity
+  port: 443
+  server: 104.16.72.2
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 0E6145 - ...
+  password: humanity
+  port: 443
+  server: 104.16.71.213
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 5D1251 - ...
+  password: humanity
+  port: 443
+  server: www.speedtest.net
+  sni: www.calmlunch.com
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 24780A - ...
+  network: ws
+  port: 80
+  server: 188.114.98.112
+  tls: false
+  type: vless
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 08EB5F - ...
+  network: ws
+  port: 443
+  server: store.ubi.com
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
 - encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 28A56D - ...
+  network: ws
+  port: 443
+  server: 789156.xyz
+  tls: true
+  type: vless
+  uuid: 5f11c240-89df-494c-9c81-8b619023bb58
+- name: CA 🇨🇦 | @Raydikalx | AE6904 - ...
+  password: humanity
+  port: 443
+  server: 104.18.8.83
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | CF2AEC - ...
+  password: humanity
+  port: 443
+  server: 104.19.64.105
+  sni: www.calmlunch.com
+  type: trojan
+- client-fingerprint: randomized
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 234B94 - ...
+  network: ws
+  port: 2096
+  server: 172.66.44.124
+  tls: true
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+- name: CA 🇨🇦 | @Raydikalx | FEA7B7 - ...
+  password: humanity
+  port: 443
+  server: 104.21.103.254
+  sni: www.calmlunch.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 15A731 - ...
+  password: humanity
+  port: 443
+  server: chat.openai.com
+  sni: www.calmlunch.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | 5D7454 - ...
+  network: ws
+  port: 8443
+  server: 172.67.167.78
+  tls: true
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  ws-opts:
+    headers:
+      Host: 172.67.167.78
+    path: /
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 775357 - ...
+  network: ws
+  port: 443
+  server: 172.66.47.132
+  tls: true
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | C7986A - ...
+  network: ws
+  port: 8443
+  server: 104.21.57.84
+  tls: true
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  ws-opts:
+    headers:
+      Host: 104.21.57.84
+    path: /
+- name: CA 🇨🇦 | @Raydikalx | 24F8FF - ...
+  password: humanity
+  port: 443
+  server: 172.66.1.36
+  sni: www.pleadcourt.org
+  type: trojan
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 5F18C1 - ...
+  network: ws
+  port: 443
+  server: 104.25.88.220
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 815648 - ...
+  network: ws
+  port: 443
+  server: 104.24.18.119
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | F39115 - ...
+  network: ws
+  port: 2096
+  server: sinavm7.soft10.ir
+  tls: true
+  type: vless
+  uuid: 6fdef8d7-4c49-4e6e-93ec-c24ef7c41802
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: RS 🇷🇸 | @Raydikalx | CA9941 - ...
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs
+    short-id: '!!str 861ac7d66953e55f'
+  server: 150.40.126.22
+  tls: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 4B2186 - ...
+  network: ws
+  port: 443
+  server: 104.24.54.160
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 173DC3 - ...
+  network: ws
+  port: 443
+  server: 104.21.70.21
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: RS 🇷🇸 | @Raydikalx | ECAC9A - ...
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY
+    short-id: '!!str ed0cd5cc2e26e6e7'
+  server: 150.40.126.18
+  tls: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+- alterId: 0
+  cipher: auto
+  name: KZ 🇰🇿 | @Raydikalx | 112CAC - ...
+  network: ws
+  port: 80
+  server: 3h-kazakhstan1.09vpn.com
+  tls: false
+  type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  ws-opts:
+    headers:
+      Host: 3h-kazakhstan1.09vpn.com
+    path: /
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | B4C2B7 - ...
+  network: ws
+  port: 443
+  server: 104.18.176.145
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 66D45E - ...
+  network: ws
+  port: 443
+  server: 104.18.45.38
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | D9E52E - ...
+  network: ws
+  port: 443
+  server: 104.18.37.127
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | B773FC - ...
+  network: ws
+  port: 443
+  server: 172.67.184.45
+  tls: true
+  type: vless
+  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | F1EC39 - ...
+  network: ws
+  port: 443
+  server: 104.19.164.155
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- client-fingerprint: chrome
+  encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | 879053 - ...
   network: ws
@@ -683,44 +1434,6 @@ proxies:
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 3C9F9D - ...
-  network: ws
-  port: 443
-  server: ccs2g.pai50288.uk
-  tls: true
-  type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 0740A5 - ...
-  network: ws
-  port: 443
-  server: 104.18.32.87
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 22B43E - ...
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  tls: true
-  type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 3A912B - ...
-  network: ws
-  port: 443
-  server: 104.18.153.10
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | 0611F1 - ...
@@ -730,54 +1443,60 @@ proxies:
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- name: CA 🇨🇦 | @Raydikalx | 9A9CCD - ...
-  password: humanity
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | D64A2B - ...
+  network: ws
   port: 443
-  server: 104.17.121.71
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 355D36 - ...
-  password: humanity
+  server: 104.18.81.30
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 776306 - ...
+  network: ws
+  port: 2086
+  server: 172.67.155.136
+  tls: false
+  type: vless
+  uuid: 73796e63-0000-4000-8000-000000000007
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 37C1C9 - ...
+  network: ws
+  port: 2095
+  server: 104.21.64.198
+  tls: false
+  type: vless
+  uuid: 73796e63-0000-4000-8000-000000000008
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 8B2A7E - ...
+  network: ws
   port: 443
-  server: 188.114.98.0
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | CF2AEC - ...
-  password: humanity
+  server: 104.18.0.181
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 26E40D - ...
+  network: ws
   port: 443
-  server: 104.19.64.105
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 74B5FF - ...
-  password: humanity
+  server: 162.159.192.125
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 89816F - ...
+  network: ws
   port: 443
-  server: 104.21.13.204
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 832341 - ...
-  password: humanity
-  port: 443
-  server: 104.18.9.83
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | E3EA2D - ...
-  password: humanity
-  port: 443
-  server: 172.67.200.219
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 196E72 - ...
-  password: humanity
-  port: 443
-  server: 162.159.91.211
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 0B02EB - ...
-  password: humanity
-  port: 443
-  server: 172.64.150.28
-  sni: www.calmlunch.com
-  type: trojan
+  server: 104.19.102.174
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | FCCFFD - ...
@@ -787,434 +1506,6 @@ proxies:
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- name: CA 🇨🇦 | @Raydikalx | 1DB02C - ...
-  password: humanity
-  port: 443
-  server: 172.67.231.254
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 93D519 - ...
-  password: humanity
-  port: 443
-  server: 104.17.121.9
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 05ECA0 - ...
-  password: humanity
-  port: 443
-  server: 172.67.217.240
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 180650 - ...
-  password: humanity
-  port: 443
-  server: 104.17.147.22
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | FEA7B7 - ...
-  password: humanity
-  port: 443
-  server: 104.21.103.254
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 748BB1 - ...
-  password: humanity
-  port: 443
-  server: 188.114.96.3
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | F1CD8B - ...
-  password: humanity
-  port: 443
-  server: 104.18.8.83
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 0E6145 - ...
-  password: humanity
-  port: 443
-  server: 104.16.71.213
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 4BE185 - ...
-  password: humanity
-  port: 443
-  server: www.calmlunch.com
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 15A731 - ...
-  password: humanity
-  port: 443
-  server: chat.openai.com
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 82D1D2 - ...
-  password: humanity
-  port: 443
-  server: 104.16.72.2
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | D75A2C - ...
-  password: humanity
-  port: 443
-  server: 104.16.122.175
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 868668 - ...
-  password: humanity
-  port: 443
-  server: 104.17.121.43
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 5D1251 - ...
-  password: humanity
-  port: 443
-  server: www.speedtest.net
-  sni: www.calmlunch.com
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 661B1A - ...
-  password: humanity
-  port: 443
-  server: 104.16.6.70
-  sni: www.pleadcourt.org
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | DA0B9C - ...
-  password: humanity
-  port: 443
-  server: 172.64.145.133
-  sni: www.pleadcourt.org
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 234D06 - ...
-  password: humanity
-  port: 443
-  server: 104.27.203.207
-  sni: www.pleadcourt.org
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 70B7CF - ...
-  password: humanity
-  port: 443
-  server: 104.17.44.17
-  sni: www.pleadcourt.org
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | F9B127 - ...
-  network: ws
-  port: 2053
-  server: 104.21.3.133
-  tls: true
-  type: vless
-  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 3FB990 - ...
-  network: ws
-  port: 443
-  server: 104.16.10.234
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 7A088C - ...
-  network: ws
-  port: 443
-  server: 104.16.215.234
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- name: CA 🇨🇦 | @Raydikalx | F3A4FF - ...
-  password: humanity
-  port: 443
-  server: 104.18.45.38
-  sni: www.pleadcourt.org
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | F2F929 - ...
-  password: humanity
-  port: 443
-  server: 172.64.190.13
-  sni: www.pleadcourt.org
-  type: trojan
-- name: CA 🇨🇦 | @Raydikalx | 446744 - ...
-  password: humanity
-  port: 443
-  server: 162.159.133.152
-  sni: www.pleadcourt.org
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | FF8F53 - ...
-  network: ws
-  port: 2053
-  server: 172.67.130.187
-  tls: true
-  type: vless
-  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | AB0180 - ...
-  network: ws
-  port: 443
-  server: courses.mftplus.qzz.io
-  tls: true
-  type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-- name: CA 🇨🇦 | @Raydikalx | 1FF304 - ...
-  password: humanity
-  port: 443
-  server: 172.66.1.36
-  sni: www.pleadcourt.org
-  type: trojan
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 420B80 - ...
-  network: ws
-  port: 443
-  server: 104.21.6.186
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | B76C9D - ...
-  network: ws
-  port: 2083
-  server: 172.67.130.187
-  tls: true
-  type: vless
-  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 74FCE7 - ...
-  network: ws
-  port: 443
-  server: 104.21.35.17
-  tls: true
-  type: vless
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | E73876 - ...
-  network: ws
-  port: 2052
-  server: eu02.123450908.xyz
-  tls: false
-  type: vless
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 815648 - ...
-  network: ws
-  port: 443
-  server: 104.24.18.119
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 20696C - ...
-  network: ws
-  port: 443
-  server: 104.21.70.21
-  tls: true
-  type: vless
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 861FD7 - ...
-  network: ws
-  port: 443
-  server: jp5.998998.best
-  tls: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  ws-opts:
-    headers:
-      Host: jp5.998998.best
-    path: /
-- name: CA 🇨🇦 | @Raydikalx | 328365 - ...
-  password: humanity
-  port: 443
-  server: 104.18.25.120
-  sni: www.pleadcourt.org
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | FFAFFF - ...
-  network: ws
-  port: 443
-  server: 104.24.31.89
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: CA 🇨🇦 | @Raydikalx | 9E1B7C - ...
-  password: humanity
-  port: 443
-  server: 108.162.194.134
-  sni: www.pleadcourt.org
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 26112B - ...
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  tls: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 775357 - ...
-  network: ws
-  port: 443
-  server: 172.66.47.132
-  tls: true
-  type: vless
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 7CB80F - ...
-  network: ws
-  port: 443
-  server: 188.114.98.0
-  tls: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-- name: CA 🇨🇦 | @Raydikalx | C41A56 - ...
-  password: humanity
-  port: 443
-  server: 104.18.24.120
-  sni: www.pleadcourt.org
-  type: trojan
-- name: NL 🇳🇱 | @Raydikalx | 887CA5 - ...
-  password: humanity
-  port: 443
-  server: 95.85.32.57
-  sni: www.pleadcourt.org
-  type: trojan
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 76F5D4 - ...
-  network: ws
-  port: 443
-  server: 104.27.46.35
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: CA 🇨🇦 | @Raydikalx | 7C9E18 - ...
-  password: 9d033eb1-22c7-4ae9-9d59-783e40c8eec3
-  port: 8443
-  server: www.visa.com.sg
-  sni: au5.yang-1989.xyz
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: MD 🇲🇩 | @Raydikalx | 67CAC5 - ...
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg
-    short-id: '!!str 8e07337954f9823f'
-  server: md4.univesalsrv.com
-  tls: true
-  type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-- client-fingerprint: random
-  encryption: none
-  flow: ''
-  name: RS 🇷🇸 | @Raydikalx | ECAC9A - ...
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: upIzyaSbVz2ZK6KfGtXmPl_-sCwn8XLDyFDH5CsL9iY
-    short-id: '!!str ed0cd5cc2e26e6e7'
-  server: 150.40.126.18
-  tls: true
-  type: vless
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | D06334 - ...
-  network: ws
-  port: 443
-  server: 104.16.10.185
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | E08020 - ...
-  network: ws
-  port: 443
-  server: 104.16.111.195
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | A1E89D - ...
-  network: ws
-  port: 443
-  server: 104.16.111.193
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 1D32B9 - ...
-  network: ws
-  port: 443
-  server: 172.67.167.179
-  tls: true
-  type: vless
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 09E0B6 - ...
-  network: ws
-  port: 443
-  server: 104.16.10.84
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | CF55CC - ...
-  network: ws
-  port: 443
-  server: 104.21.6.186
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 8F743E - ...
-  network: ws
-  port: 443
-  server: 104.19.95.153
-  tls: true
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | B773FC - ...
-  network: ws
-  port: 443
-  server: 172.67.184.45
-  tls: true
-  type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000045
 - encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | FFCF2F - ...
@@ -1224,28 +1515,15 @@ proxies:
   tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 41C324 - ...
-  network: ws
-  port: 443
-  server: 666.cf.cname.vvhan.com
-  tls: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  ws-opts:
-    headers:
-      Host: 666.cf.cname.vvhan.com
-    path: /
 - encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 7B9590 - ...
+  name: CA 🇨🇦 | @Raydikalx | 3B9544 - ...
   network: ws
-  port: 443
-  server: 188.114.97.6
-  tls: true
+  port: 2095
+  server: 172.67.155.136
+  tls: false
   type: vless
-  uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
+  uuid: 73796e63-0000-4000-8000-000000000008
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -1258,19 +1536,40 @@ proxies:
   uuid: fa45096d-bed0-ad80-c773-23c30000001b
 - encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 890F83 - ...
+  name: CA 🇨🇦 | @Raydikalx | 1923CC - ...
   network: ws
   port: 443
-  server: 104.18.45.38
+  server: 162.159.228.224
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- name: CA 🇨🇦 | @Raydikalx | D7B491 - ...
-  password: humanity
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 2DD28D - ...
+  network: ws
+  port: 2086
+  server: 104.21.64.198
+  tls: false
+  type: vless
+  uuid: 73796e63-0000-4000-8000-000000000007
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | F1502D - ...
+  network: ws
   port: 443
-  server: 104.27.201.80
-  sni: www.pleadcourt.org
-  type: trojan
+  server: 104.16.10.2
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | A1E89D - ...
+  network: ws
+  port: 443
+  server: 104.16.111.193
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | 57D11B - ...
@@ -1282,159 +1581,90 @@ proxies:
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 5F26A6 - ...
+  name: CA 🇨🇦 | @Raydikalx | 8F743E - ...
   network: ws
   port: 443
-  server: 104.16.10.135
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | F5FE35 - ...
-  network: ws
-  port: 443
-  server: 104.21.33.59
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 950346 - ...
-  network: ws
-  port: 443
-  server: 104.19.48.107
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 861C59 - ...
-  network: ws
-  port: 443
-  server: 104.16.10.56
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | A05104 - ...
-  network: ws
-  port: 443
-  server: vpn.kovira.site
-  tls: true
-  type: vless
-  uuid: 22e6604e-0481-411f-8028-ffbd65f624b6
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 161FA2 - ...
-  network: ws
-  port: 443
-  server: 104.16.111.202
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | C7986A - ...
-  network: ws
-  port: 8443
-  server: 104.21.57.84
-  tls: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    headers:
-      Host: 104.21.57.84
-    path: /
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 929E2C - ...
-  network: ws
-  port: 443
-  server: 104.16.10.63
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 404682 - ...
-  network: ws
-  port: 443
-  server: 104.17.169.13
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 15EFED - ...
-  network: ws
-  port: 2083
-  server: 104.21.0.1
-  tls: true
-  type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    headers:
-      Host: 104.21.0.1
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 173DC3 - ...
-  network: ws
-  port: 443
-  server: 104.21.70.21
+  server: 104.19.95.153
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-- cipher: aes-256-gcm
-  name: CA 🇨🇦 | @Raydikalx | 3BF7F6 - ...
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 51.222.155.32
-  type: ss
-- client-fingerprint: chrome
-  encryption: none
+- encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | D9E52E - ...
+  name: CA 🇨🇦 | @Raydikalx | F51A5D - ...
   network: ws
   port: 443
-  server: 104.18.37.127
+  server: 104.17.50.227
   tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
 - encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | F1502D - ...
+  name: CA 🇨🇦 | @Raydikalx | 0740A5 - ...
   network: ws
   port: 443
-  server: 104.16.10.2
+  server: 104.18.32.87
   tls: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: CA 🇨🇦 | @Raydikalx | 785C2A - ...
+  name: CA 🇨🇦 | @Raydikalx | F40DD9 - ...
+  network: ws
+  port: 443
+  server: 104.21.108.4
+  tls: true
+  type: vless
+  uuid: fa45096d-bed0-ad80-c773-23c300000018
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | D06334 - ...
+  network: ws
+  port: 443
+  server: 104.16.10.185
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: IN 🇮🇳 | @Raydikalx | 550CAF - ...
+  network: tcp
+  port: 40443
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: '!!str 68a8'
+  server: 5.253.42.164
+  tls: true
+  type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 420B80 - ...
+  network: ws
+  port: 443
+  server: 104.21.6.186
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | CF55CC - ...
+  network: ws
+  port: 443
+  server: 104.21.6.186
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | B52280 - ...
   network: ws
   port: 443
   server: 104.24.0.1
   tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: IR 🇮🇷 | @Raydikalx | F2ECAC - ...
-  network: tcp
-  port: 40287
-  server: ec399da3859ff592.tunvi.w-ert.org
-  tls: true
-  type: vless
-  uuid: d5274258-2b2b-497d-b063-c53c6b24ff1e
 - encryption: none
   flow: ''
   name: CA 🇨🇦 | @Raydikalx | 7B7020 - ...
@@ -1446,6 +1676,43 @@ proxies:
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
 - encryption: none
   flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 7A088C - ...
+  network: ws
+  port: 443
+  server: 104.16.215.234
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 6EB934 - ...
+  network: ws
+  port: 443
+  server: 172.67.217.240
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | E08020 - ...
+  network: ws
+  port: 443
+  server: 104.16.111.195
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- client-fingerprint: firefox
+  encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 955519 - ...
+  network: ws
+  port: 443
+  server: 172.67.217.240
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- encryption: none
+  flow: ''
   name: CA 🇨🇦 | @Raydikalx | E6D6D0 - ...
   network: ws
   port: 443
@@ -1453,3 +1720,43 @@ proxies:
   tls: true
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 001FED - ...
+  network: ws
+  port: 443
+  server: 104.17.50.53
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | 3A912B - ...
+  network: ws
+  port: 443
+  server: 104.18.153.10
+  tls: true
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+- encryption: none
+  flow: ''
+  name: CA 🇨🇦 | @Raydikalx | F5FE35 - ...
+  network: ws
+  port: 443
+  server: 104.21.33.59
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦199991 | ⚡️Telegram = t.me/S...
+  network: ws
+  port: 2095
+  server: dash.mobiza.ir
+  tls: false
+  type: vmess
+  uuid: 6e330a8b-953c-460d-8940-96525cac50d5
+  ws-opts:
+    headers:
+      Host: dash.mobiza.ir
+    path: /

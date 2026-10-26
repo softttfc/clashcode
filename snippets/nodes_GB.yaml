@@ -1,7 +1,40 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB VMESS-385 | free-nodes - 55...
+  name: 🇬🇧GB_2|2.8MB/s - 49ms
+  network: ws
+  port: 443
+  server: www.ubuntuupdates.com
+  tls: true
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  ws-opts:
+    headers:
+      Host: www.ubuntuupdates.com
+    path: /
+- alpn:
+  - h2
+  - http/1.1
+  - h3
+  name: 🇬🇧GB_2|1.6MB/s - 1ms
+  password: 8yup05o4lz0csoxb
+  port: 2083
+  server: 216.24.57.225
+  skip-cert-verify: true
+  sni: fin.netvia.ir
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇬🇧GB_1|1.4MB/s - 1ms
+  password: xwhfg0wu1wxv377f
+  port: 2087
+  server: 216.24.57.225
+  skip-cert-verify: true
+  sni: neo.xnetaro.ir
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: GB VMESS-385 | free-nodes - 15...
   network: ws
   port: 2083
   server: cdn.sfacg.uk
@@ -12,42 +45,6 @@ proxies:
     headers:
       Host: or3.sfacg.uk
     path: /or3
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧_GB_英国_1 - 138ms
-  password: Y3bjXCJbTPlRdyTqFAYGDZ
-  port: 443
-  server: 78.129.140.11
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  - h3
-  name: '%F0%9F%87%AC%F0%9F%87%A7GB_2%7...'
-  network: ws
-  password: 8yup05o4lz0csoxb
-  port: 2083
-  server: 216.24.57.225
-  skip-cert-verify: true
-  sni: fin.netvia.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 216.24.57.225
-    path: /YaujaGsyr
-- alpn:
-  - http/1.1
-  name: '%F0%9F%87%AC%F0%9F%87%A7GB_1%7...'
-  network: ws
-  password: xwhfg0wu1wxv377f
-  port: 2087
-  server: 216.24.57.225
-  skip-cert-verify: true
-  sni: neo.xnetaro.ir
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 216.24.57.225
-    path: /wss
 - cipher: rc4-md5
   name: 🇬🇧GB_10|5.8MB/s|A004-260618 [0...
   password: 14fFPrbezE3HDZzsMOr6
@@ -121,7 +118,7 @@ proxies:
   skip-cert-verify: true
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 27 → tg@nicevpn123 - 136...
+  name: 🇬🇧 GB 27 → tg@nicevpn123 - 135...
   password: Bog0ELmMM9DSxDdQ
   port: 443
   server: 52.56.201.59
@@ -132,3 +129,25 @@ proxies:
   server: 57.128.183.108
   sni: www.pleadcourt.org
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | A26980 - ...
+  network: ws
+  port: 80
+  server: 57.129.132.223
+  tls: false
+  type: vmess
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  ws-opts:
+    headers:
+      Host: 57.129.132.223
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧...
+  network: tcp
+  port: 16116
+  server: zfd-hkv2.kunlun01dns.com
+  tls: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
