@@ -2,7 +2,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-  name: '🇨🇭 #1'
+  name: 🇨🇭
   network: grpc
   port: 2096
   reality-opts:
@@ -16,7 +16,7 @@ proxies:
   uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭
+  name: '🇨🇭 #3'
   network: tcp
   port: 8443
   reality-opts:
@@ -46,7 +46,7 @@ proxies:
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: '🇨🇭 #3'
+  name: '🇨🇭 #1'
   network: tcp
   port: 8443
   reality-opts:
@@ -59,30 +59,7 @@ proxies:
   type: vless
   udp: true
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- client-fingerprint: chrome
-  name: 瑞士(v2clash.blog 2026-10.24更新)
-  network: ws
-  port: 443
-  server: 146.70.233.51
-  servername: snip.edgeoneai.cc.cd
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chrome
-- name: 🇨🇭CH_1｜2.4MB/s - 158ms
-  password: None
-  port: 9443
-  server: 149.88.27.33
-  skip-cert-verify: true
-  sni: 149.88.27.33
-  tls: true
-  type: http
-- name: 🇨🇭CH_1｜3.2MB/s - 156ms
+- name: 🇨🇭CH_1｜3.8MB/s - 154ms
   password: None
   port: 9443
   server: 37.120.213.210
@@ -91,7 +68,25 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+- name: 🇨🇭CH_2｜2.0MB/s - 157ms
+  password: ''
+  port: 9443
+  server: 149.88.27.33
+  skip-cert-verify: true
+  sni: 149.88.27.33
+  sub_tag: K001-260618
+  tls: true
+  type: http
+  udp: true
+  username: ''
+- name: 🇨🇭CH_1|1.1MB/s
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -116,6 +111,22 @@ proxies:
   type: vmess
   uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
 - client-fingerprint: chrome
+  name: '💎 @MDvpnSEC #3'
+  network: ws
+  port: 443
+  server: 138.124.36.67
+  servername: snip.edgeoneai.cc.cd
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇫🇮139761 | ⚡️Telegram = t.me/S...
   network: tcp
@@ -139,42 +150,14 @@ proxies:
   udp: true
   uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
 - cipher: chacha20-ietf-poly1305
-  name: 🇨🇭CH_8
+  name: 🇨🇭CH_6
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
   port: 8388
   server: 132.243.175.144
   type: ss
   udp: true
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇨🇭CH_6
-  network: raw
-  port: 443
-  reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: '!!str 19253fae84102271'
-  server: 45.90.59.15
-  servername: www.cloudflare.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
 - client-fingerprint: chrome
-  name: CH 🇨🇭 | @Raydikalx | D33792
-  network: ws
-  password: humanity
-  port: 2053
-  server: 91.245.225.79
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- client-fingerprint: chrome
-  name: 🇨🇭CH_28
+  name: 🇨🇭CH_13
   network: raw
   port: 2053
   reality-opts:
@@ -186,17 +169,7 @@ proxies:
   type: vless
   udp: true
   uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-- name: 🇨🇭CH_7
-  obfs: salamander
-  obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-  password: 3a702d4d1de4949005d8431220e040fb
-  port: 443
-  server: 152.67.75.161
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 'nukcrow #470'
+- name: '[CH] Art.29'
   network: ws
   password: humanity
   port: 443
@@ -208,164 +181,19 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: 'nukcrow #456'
+- name: 'nukcrow #439'
   network: ws
   password: humanity
   port: 443
   server: 185.18.250.252
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- encryption: none
-  flow: ''
-  name: VLESS-v2.drsachi.com - 212ms
-  network: tcp
-  port: 443
-  server: v2.drsachi.com
-  tls: false
-  type: vless
-  uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
-- encryption: none
-  flow: ''
-  name: VLESS-support.zoom.us - 2ms
-  network: tcp
-  port: 8443
-  server: support.zoom.us
-  tls: false
-  type: vless
-  uuid: 4ad4cca0-de98-4f52-acf1-b3af164578df
-- encryption: none
-  flow: ''
-  name: VLESS-v2.drsachi.com - 169ms
-  network: tcp
-  port: 8443
-  server: v2.drsachi.com
-  tls: false
-  type: vless
-  uuid: 4ad4cca0-de98-4f52-acf1-b3af164578df
-- name: 🇨🇭CH_31
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21054
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: '🇨🇭CH_30|674KB/s|B007-260618 #1'
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21090
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: '🇨🇭CH_18|123KB/s|B007-260618 #1'
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21000
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: '🇨🇭CH_21|332KB/s|B007-260618 #1'
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21021
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_2
-  password: 84a506ca5aca505696a454d828420b3f
-  port: 50160
-  server: 140.238.213.114
-  skip-cert-verify: true
-  sni: 140.238.213.114
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_17
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33013
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_24
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21084
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_39
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33187
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_25
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21154
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
 - name: 🇨🇭CH_23
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21067
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_11
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21047
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_16
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33117
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_13
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -375,105 +203,15 @@ proxies:
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_33
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21158
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_36
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21086
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_21
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21161
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: '🇨🇭CH_7|4.0MB/s|R002-260618 #1'
+- name: 🇨🇭CH_5
   password: 84a506ca5aca505696a454d828420b3f
   port: 50160
   server: 140.238.213.114
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: 140.238.213.114
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_32
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21113
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_38
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33195
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_34
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33133
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: '🇨🇭CH_31|153KB/s|B007-260618 #1'
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33152
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_30
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21016
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_37
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33042
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_19
+- name: 🇨🇭CH_35
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -483,21 +221,21 @@ proxies:
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_26
+- name: 🇨🇭CH_24
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 8444
+  port: 21147
   server: 208.69.78.217
   skip-cert-verify: true
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_18
+- name: 🇨🇭CH_30
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33141
+  port: 33195
   server: 208.69.78.217
   skip-cert-verify: true
   sni: vpn.local
@@ -507,17 +245,27 @@ proxies:
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33174
+  port: 21054
   server: 208.69.78.217
   skip-cert-verify: true
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_35
+- name: 🇨🇭CH_28
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33171
+  port: 33133
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_12
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21000
   server: 208.69.78.217
   skip-cert-verify: true
   sni: vpn.local
@@ -527,38 +275,259 @@ proxies:
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33092
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_10
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
   port: 33130
   server: 208.69.78.217
   skip-cert-verify: true
   sni: vpn.local
   tls: false
   type: hysteria2
-- name: 🇨🇭CH_2|1.1MB/s|K001-260618
-  port: 9443
-  server: 149.88.27.33
+- name: 🇨🇭CH_41
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21154
+  server: 208.69.78.217
   skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇨🇭CH_1｜1.7MB/s - 162ms
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_21
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21046
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_19
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21016
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_18
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21047
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: ❓Other_23
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33044
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_39
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21067
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_29
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33171
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_36
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21161
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_37
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33174
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_11
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 8444
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_34
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21090
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_31
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33013
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_33
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21086
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_26
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33042
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_38
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33187
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_27
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33117
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_20
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21021
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_32
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33141
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_24|309KB/s|B007-260618
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33152
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_25
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21158
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_16|229KB/s|B007-260618
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21113
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_44
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 21084
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_2|2.4MB/s
   password: None
   port: 443
   server: 31.7.62.50
   skip-cert-verify: true
-  sni: 31.7.62.50
   tls: true
   type: http
+- name: 'CH_speednode_0006 #1'
+  password: None
+  port: 9443
+  server: 149.88.27.33
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: ES 🇪🇸 ｜ @Raydikalx ｜ D6C206 - ...
+  password: humanity
+  port: 443
+  server: 185.18.250.252
+  skip-cert-verify: true
+  sni: www.calmlunch.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: 🇨🇭 CH | 45.195.137.5
@@ -617,23 +586,39 @@ proxies:
   tls: false
   type: vmess
   uuid: 389625c7-c891-4f61-9f98-478058744ada
-- name: 🇨🇭CH_2|2.7MB/s
+- name: 🇨🇭CH_1|3.0MB/s
   password: None
   port: 9443
   server: 149.88.27.46
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇨🇭CH_2｜1.4MB/s - 159ms
+- name: 🇨🇭CH_2｜1.8MB/s - 155ms
   port: 9443
   server: 149.88.27.46
   sni: 149.88.27.46
   tls: true
   type: http
+- name: 🇨🇭CH_3｜1.1MB/s - 159ms
+  port: 443
+  server: 31.7.62.50
+  sni: 31.7.62.50
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 🇨🇭CH_4｜1.3MB/s - 153ms
+  name: 🇨🇭CH_4｜2.0MB/s - 172ms
+  network: ws
+  port: 443
+  server: 80.211.170.53
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇨🇭CH_4｜1.3MB/s - 157ms
   network: ws
   port: 443
   server: 4.232.64.201
@@ -643,23 +628,63 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: 瑞士(mibei77.com 米贝节点分享) - 148ms
-  network: ws
-  port: 443
-  server: 138.124.36.67
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: CH 🇨🇭 ｜ @Raydikalx ｜ C8D95A - ...
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 14A3C3 - ...
   network: ws
   port: 7443
   server: 116.204.164.5
   tls: true
   type: vless
-  uuid: 32404bf4-fdba-4c77-b6be-e29b8ed54808
+  uuid: 8a7f35a6-6aad-4f42-80ab-86d06f32e0a7
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 3C12DB - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.30
+  tls: true
+  type: vless
+  uuid: d5f29a64-da5d-4f99-b3c4-ae92cc39ad5f
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 4B77A2 - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.27
+  tls: true
+  type: vless
+  uuid: 3e438472-0f1e-4bbf-be5a-67d034afd8c0
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 33B82E - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.60
+  tls: true
+  type: vless
+  uuid: c676be7d-b481-4bba-88d0-65855e09dc67
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ ACF27B - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.17
+  tls: true
+  type: vless
+  uuid: 9dd5bcab-4a60-4f97-a7a4-77e98eabf9c4
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 1FE4B3 - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.5
+  tls: true
+  type: vless
+  uuid: d25fa7ff-f71e-4cc2-88e6-a340b86fdebf
 - encryption: none
   flow: ''
   name: CH 🇨🇭 ｜ @Raydikalx ｜ F39C23 - ...
@@ -672,71 +697,54 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: ''
-  name: CH 🇨🇭 ｜ @Raydikalx ｜ ACF27B - ...
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ BE1B8F - ...
   network: ws
   port: 7443
-  server: 116.204.164.17
+  server: 116.204.164.27
   tls: true
   type: vless
-  uuid: 9dd5bcab-4a60-4f97-a7a4-77e98eabf9c4
+  uuid: 7d4f5f0d-293f-4612-98d6-01fa0c1954b4
 - client-fingerprint: chrome
-  name: '瑞士 #2'
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 9BA7C8 - ...
   network: ws
-  port: 443
-  server: 146.70.233.51
-  servername: snip.edgeoneai.cc.cd
+  port: 7443
+  server: 116.204.164.60
   tls: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2Ffp%3Dchrome'
+  uuid: cd099367-1052-42f4-8961-4d1e09144cf9
 - client-fingerprint: chrome
-  name: '瑞士 #1'
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 42C818 - ...
   network: ws
-  port: 443
-  server: 91.245.225.69
-  servername: snip.edgeoneai.cc.cd
+  port: 7443
+  server: 116.204.164.30
   tls: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: '%2F'
-- name: 🇨🇭CH_12
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21046
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_20
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 33044
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
-- name: 🇨🇭CH_14
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  port: 21147
-  server: 208.69.78.217
-  skip-cert-verify: true
-  sni: vpn.local
-  tls: false
-  type: hysteria2
+  uuid: 329aa1be-ee6d-4d92-a8ef-c2ddac7583b1
+- encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ B40616 - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.5
+  tls: true
+  type: vless
+  uuid: b303691b-d577-4465-93c8-dd6a33dc8c85
 - client-fingerprint: chrome
-  name: 🇨🇭CH_43
+  encryption: none
+  flow: ''
+  name: CH 🇨🇭 ｜ @Raydikalx ｜ 1FE939 - ...
+  network: ws
+  port: 7443
+  server: 116.204.164.5
+  tls: true
+  type: vless
+  uuid: d430d61d-5404-4f5b-9eaf-3266b059969b
+- client-fingerprint: chrome
+  name: 🇨🇭CH_45
   network: ws
   port: 443
   server: 2.59.219.220
@@ -748,3 +756,26 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: '%2F'
+- name: 🇨🇭CH_43
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  port: 33092
+  server: 208.69.78.217
+  skip-cert-verify: true
+  sni: vpn.local
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 瑞士
+  network: ws
+  port: 443
+  server: 146.70.233.51
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: '%2Ffp%3Dchrome'
