@@ -84,15 +84,15 @@ from urllib.parse import quote
 # -------------------- 超时与并发设置 --------------------
 # TCP 连通性测试超时（秒）
 # 建议范围: 1~3，数值越小淘汰越快，但可能误判网络抖动
-CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 3))
+CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 2))
 
 # HTTP 延迟测试超时（秒）
 # 建议范围: 2~5，数值越大越能测出高延迟节点，但耗时增加
-DELAY_TIMEOUT = float(os.environ.get("DELAY_TIMEOUT", 4))
+DELAY_TIMEOUT = float(os.environ.get("DELAY_TIMEOUT", 2))
 
 # QUIC 握手测试超时（秒）
 # 建议范围: 2~5，过短易误判，过长拖慢 CI
-QUIC_TIMEOUT = float(os.environ.get("QUIC_TIMEOUT", 3))
+QUIC_TIMEOUT = float(os.environ.get("QUIC_TIMEOUT", 2))
 
 # 并发测试线程数
 # 建议范围: 10~50，取决于网络环境和系统资源，过大可能触发防火墙限制
