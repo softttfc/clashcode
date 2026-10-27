@@ -1,19 +1,7 @@
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG_1|5.1MB/s - 168ms
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 13.215.227.70
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG_1|1.8MB/s - 169ms
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  port: 2377
-  server: 18.143.63.164
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 新加坡 - 186ms
+  name: 🇸🇬 新加坡 - 995ms
   network: ws
   port: 443
   server: ASaqYIDZa9WDQ9Kq.v.3dns.vip
@@ -24,6 +12,18 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬SG_1|5.1MB/s - 178ms
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  port: 2377
+  server: 13.215.227.70
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬SG_1|1.8MB/s - 175ms
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  port: 2377
+  server: 18.143.63.164
+  type: ss
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG_9|921KB/s|A004-260618 [00...
@@ -107,6 +107,28 @@ proxies:
   type: trojan
 - name: SG%E6%96%B0%E5%8A%A0%E5%9D%A1%...
   network: ws
+  password: e7TTceggMwUMg%2BaFN%3AF4
+  port: 443
+  server: 172.66.47.18
+  sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 172.66.47.18
+    path: /tr/SIeRkg2QvR2Zcpu0SeEMow?ed=2560
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #1'
+  network: ws
+  password: '!!str 123456'
+  port: 443
+  server: 104.16.246.173
+  sni: now-pages-sub-em4.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.16.246.173
+    path: /?ed=2560
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #2'
+  network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
   server: 168.138.165.174
@@ -118,31 +140,43 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
     path: /
 - cipher: aes-128-gcm
-  name: 🇸🇬 新加坡_81M8ER - 87ms
+  name: 🇸🇬 新加坡_81M8ER - 149ms
   password: 85590bd2-807b-49b9-af20-1101c18b9eda
   port: 40022
   server: ruot.ayucloudservices.nl
   type: ss
-- name: 🇸🇬 SG 16 → tg@nicevpn123 - 168...
+- name: 🇸🇬 SG 27 → tg@nicevpn123 - 177...
+  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
+  port: 443
+  server: 139.162.49.215
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 SG 16 → tg@nicevpn123 - 178...
   password: yR7hP9aw5L
   port: 443
   server: 134.209.105.33
   skip-cert-verify: true
   sni: aka.ms
   type: trojan
-- name: 🇸🇬 SG 27 → tg@nicevpn123 - 169...
-  password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
+- name: 🇸🇬 SG 29 → tg@nicevpn123 - 39m...
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
   port: 443
-  server: 139.162.49.215
+  server: sg2-full.privateip.net
   skip-cert-verify: true
   type: trojan
-- name: 🇸🇬 SG 39 → tg@nicevpn123 - 40m...
+- name: 🇸🇬 SG 39 → tg@nicevpn123 - 36m...
   password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
   port: 443
   server: sg3-full.privateip.net
   skip-cert-verify: true
   type: trojan
-- name: 🇸🇬 SG 7 → tg@nicevpn123 - 170m...
+- name: 🇸🇬 SG 33 → tg@nicevpn123 - 175...
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
+  port: 443
+  server: 139.162.39.206
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 SG 7 → tg@nicevpn123 - 177m...
   password: I4bO2YDEgs
   port: 443
   server: 188.166.252.91
@@ -150,54 +184,14 @@ proxies:
   sni: aka.ms
   type: trojan
 - cipher: aes-256-cfb
-  name: 🇸🇬 SG 40 → tg@nicevpn123 - 170...
+  name: 🇸🇬 SG 40 → tg@nicevpn123 - 177...
   password: amazonskr05
   port: 443
   server: 13.250.57.60
   type: ss
-- name: 🇸🇬 SG 33 → tg@nicevpn123 - 170...
-  password: 557340ab-4ae8-4593-989f-a8053bec73b6
-  port: 443
-  server: 139.162.39.206
-  skip-cert-verify: true
-  type: trojan
-- name: 🇸🇬 SG 29 → tg@nicevpn123 - 50m...
-  password: 557340ab-4ae8-4593-989f-a8053bec73b6
-  port: 443
-  server: sg2-full.privateip.net
-  skip-cert-verify: true
-  type: trojan
-- name: SG 🇸🇬 | @Raydikalx | 900FE1 - ...
-  password: humanity
-  port: 443
-  server: 154.81.141.42
-  sni: www.pleadcourt.org
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | CF0750 - ...
-  network: tcp
-  port: 59121
-  server: 129.226.157.220
-  tls: false
-  type: vmess
-  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 9DDCC3 - ...
-  network: ws
-  port: 443
-  server: 8.219.97.17
-  tls: true
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: 8.219.97.17
-    path: /
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 1C3F85 - ...
+  name: SG 🇸🇬 | @Raydikalx | 0F0D25 - ...
   network: ws
   port: 443
   server: wjofHsQtEuEywxEq.v.3dns.vip
@@ -210,7 +204,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5F9B5A - ...
+  name: SG 🇸🇬 | @Raydikalx | 0462D3 - ...
   network: ws
   port: 443
   server: wjofhsqteueywxeq.v.3dns.vip
