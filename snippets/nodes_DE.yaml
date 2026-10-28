@@ -44,14 +44,6 @@ proxies:
   skip-cert-verify: true
   sni: de-bots4.h1cloud.net
   type: trojan
-- alpn:
-  - http/1.1
-  name: 🇩🇪DE_134|759KB/s|M003-260806 [...
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  port: 443
-  server: de10.dedushka.top
-  sni: de10.dedushka.top
-  type: trojan
 - cipher: chacha20-ietf-poly1305
   name: 🇩🇪DE_107|311KB/s|B007-260618 [...
   password: NcAXc0UZI6yQJE1p8QmOv8
@@ -65,6 +57,14 @@ proxies:
   port: 443
   server: de6.dedushka.top
   sni: de6.dedushka.top
+  type: trojan
+- alpn:
+  - http/1.1
+  name: 🇩🇪DE_134|759KB/s|M003-260806 [...
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  port: 443
+  server: de10.dedushka.top
+  sni: de10.dedushka.top
   type: trojan
 - cipher: rc4-md5
   name: 🇩🇪DE_22|6.7MB/s|A004-260618 [3...
@@ -100,6 +100,19 @@ proxies:
   server: de9.dedushka.top
   sni: de9.dedushka.top
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE_206|3.8MB/s|M003-260806 [...
+  network: ws
+  port: 33744
+  server: de-d21e56c13c.shamanapp.online
+  tls: false
+  type: vmess
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  ws-opts:
+    headers:
+      Host: de-d21e56c13c.shamanapp.online
+    path: /
 - name: 🇩🇪DE_149|624KB/s|A004-260618 [...
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   port: 443
@@ -177,19 +190,25 @@ proxies:
   skip-cert-verify: true
   sni: de7.dedushka.top
   type: trojan
-- name: DE%E5%BE%B7%E5%9B%BD%28mibei77...
-  password: SoftNetConnect
-  port: 443
-  server: 185.204.169.164
-  sni: www.yahoo.com
+- name: 🇩🇪DE_10|1.3MB/s - 147ms
+  password: Pass-Client-1
+  port: 8446
+  server: 171.22.119.74
+  skip-cert-verify: true
   type: trojan
-- name: 'DE%E5%BE%B7%E5%9B%BD%28mibei77... #1'
+- name: DE%E5%BE%B7%E5%9B%BD%28mibei77...
   password: SoftNetConnect
   port: 8443
   server: 185.204.169.164
   sni: www.yahoo.com
   type: trojan
-- name: 🇩🇪 DE 10 → tg@nicevpn123 - 71m...
+- name: 'DE%E5%BE%B7%E5%9B%BD%28mibei77... #1'
+  password: SoftNetConnect
+  port: 443
+  server: 185.204.169.164
+  sni: www.yahoo.com
+  type: trojan
+- name: 🇩🇪 DE 10 → tg@nicevpn123 - 24m...
   password: 8ea03cb9-e073-4904-8081-f43cb43fddac
   port: 443
   server: de-full.privateip.net
@@ -197,7 +216,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 DE 16 → tg@nicevpn123 - 133...
+  name: 🇩🇪 DE 16 → tg@nicevpn123 - 135...
   network: ws
   port: 80
   server: 92.223.124.36
@@ -208,18 +227,75 @@ proxies:
     headers:
       Host: 92.223.124.36
     path: /
-- name: 🇩🇪 DE 17 → tg@nicevpn123 - 12m...
-  password: ea630804-4d5d-4180-a464-a360e3793dc2
-  port: 443
-  server: de-full.privateip.net
-  skip-cert-verify: true
-  type: trojan
 - name: 🇩🇪 DE 3 → tg@nicevpn123 - 140m...
   password: 0fe4bbdb-2854-4cc5-986c-f62dbb900bc5
   port: 443
   server: 141.94.115.231
   skip-cert-verify: true
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 DE 42 → tg@nicevpn123 - 9ms
+  network: ws
+  port: 443
+  server: 185.135.9.208
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: 185.135.9.208
+    path: /
+- name: 🇩🇪 DE 17 → tg@nicevpn123 - 11m...
+  password: ea630804-4d5d-4180-a464-a360e3793dc2
+  port: 443
+  server: de-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+- name: 🇩🇪 DE 35 → tg@nicevpn123 - 15m...
+  password: 0fe4bbdb-2854-4cc5-986c-f62dbb900bc5
+  port: 443
+  server: fr-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+- name: 🇩🇪 DE 23 → tg@nicevpn123 - 143...
+  password: 4b1b3f03-6493-44a9-afcf-0ccf7c754154
+  port: 443
+  server: 194.195.123.173
+  skip-cert-verify: true
+  type: trojan
+- name: 🇩🇪 DE 5 → tg@nicevpn123 - 11ms
+  password: c55c7930-858b-45f5-9ac3-d66b805a4569
+  port: 443
+  server: fr-full.privateip.net
+  skip-cert-verify: true
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 DE 37 → tg@nicevpn123 - 10m...
+  network: ws
+  port: 443
+  server: fr-full.privateip.net
+  tls: true
+  type: vmess
+  uuid: 774ab107-9adc-444a-a2e6-7ce4ced41a70
+  ws-opts:
+    headers:
+      Host: fr-full.privateip.net
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 DE 26 → tg@nicevpn123 - 24m...
+  network: ws
+  port: 443
+  server: fr-full.privateip.net
+  tls: true
+  type: vmess
+  uuid: 19e84929-f022-406a-ae78-7d0a11c0dd14
+  ws-opts:
+    headers:
+      Host: fr-full.privateip.net
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇩🇪 DE 25 → tg@nicevpn123 - 10m...
@@ -233,47 +309,9 @@ proxies:
     headers:
       Host: de-full.privateip.net
     path: /
-- name: 🇩🇪 DE 23 → tg@nicevpn123 - 155...
-  password: 4b1b3f03-6493-44a9-afcf-0ccf7c754154
-  port: 443
-  server: 194.195.123.173
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇩🇪 DE 26 → tg@nicevpn123 - 72m...
-  network: ws
-  port: 443
-  server: fr-full.privateip.net
-  tls: true
-  type: vmess
-  uuid: 19e84929-f022-406a-ae78-7d0a11c0dd14
-  ws-opts:
-    headers:
-      Host: fr-full.privateip.net
-    path: /
-- name: 🇩🇪 DE 35 → tg@nicevpn123 - 14m...
-  password: 0fe4bbdb-2854-4cc5-986c-f62dbb900bc5
-  port: 443
-  server: fr-full.privateip.net
-  skip-cert-verify: true
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 DE 37 → tg@nicevpn123 - 13m...
-  network: ws
-  port: 443
-  server: fr-full.privateip.net
-  tls: true
-  type: vmess
-  uuid: 774ab107-9adc-444a-a2e6-7ce4ced41a70
-  ws-opts:
-    headers:
-      Host: fr-full.privateip.net
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 DE 43 → tg@nicevpn123 - 16m...
+  name: 🇩🇪 DE 43 → tg@nicevpn123 - 11m...
   network: ws
   port: 443
   server: de-full.privateip.net
@@ -284,40 +322,16 @@ proxies:
     headers:
       Host: de-full.privateip.net
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 DE 42 → tg@nicevpn123 - 12m...
-  network: ws
+- name: DE 🇩🇪 | @Raydikalx | 526D68 - ...
+  password: humanity
   port: 443
-  server: 185.135.9.208
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: 185.135.9.208
-    path: /
-- name: 🇩🇪 DE 5 → tg@nicevpn123 - 12ms
-  password: c55c7930-858b-45f5-9ac3-d66b805a4569
-  port: 443
-  server: fr-full.privateip.net
-  skip-cert-verify: true
-  type: trojan
-- name: DE 🇩🇪 | @Raydikalx | 674C8A - ...
-  password: etZzUmNNgX
-  port: 26594
-  server: 2.26.11.111
+  server: 45.80.111.7
+  sni: www.calmlunch.com
   type: trojan
 - name: SC 🇸🇨 | @Raydikalx | 8DEF76 - ...
   password: humanity
   port: 443
   server: 45.130.125.190
-  sni: www.calmlunch.com
-  type: trojan
-- name: DE 🇩🇪 | @Raydikalx | 526D68 - ...
-  password: humanity
-  port: 443
-  server: 45.80.111.7
   sni: www.calmlunch.com
   type: trojan
 - name: DE 🇩🇪 | @Raydikalx | 15F711 - ...
@@ -326,18 +340,27 @@ proxies:
   server: 45.128.76.242
   sni: www.trusteeforward.com
   type: trojan
-- name: DE 🇩🇪 | @Raydikalx | 345AFA - ...
-  password: zgRfB1MMJDJ65rwKSnGCZuzLpTiUSfgzHmTb26ye7mM=
-  port: 2127
-  server: lm10.ehsanazizi-speed-server.com
-  sni: lm10.ehsanazizi-speed-server.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 756915 - ...
-  network: tcp
-  port: 80
-  server: turknew.net-flowa.com
-  tls: false
-  type: vmess
-  uuid: cd96479e-9c39-4a7f-ba0c-806a83af19ca
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | C2001B - ...
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  port: 1354
+  server: dns22.m3hrzd.ir
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | 8AE6B1 - ...
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  port: 1345
+  server: dns22.m3hrzd.ir
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | 98D9D0 - ...
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  port: 1349
+  server: dns22.m3hrzd.ir
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | 24CE8E - ...
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  port: 1348
+  server: dns22.m3hrzd.ir
+  type: ss
