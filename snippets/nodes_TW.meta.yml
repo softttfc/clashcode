@@ -1,7 +1,6 @@
 proxies:
 - client-fingerprint: chrome
-  name: 🇹🇼
-  network: tcp
+  name: 🇹🇼TW臺灣丨yoyapai.com
   port: 443
   reality-opts:
     public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
@@ -9,10 +8,26 @@ proxies:
   server: 34.80.248.240
   servername: www.cloudflare.com
   skip-cert-verify: false
+  sni: www.cloudflare.com
   tls: true
   type: vless
   udp: true
   uuid: 31a40f42-4ad6-4a32-a760-71102b459584
+- allowInsecure: '1'
+  client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN 3
+  packet-encoding: ''
+  packetEncoding: none
+  password: 0324fbc29561
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  servername: px.ads.linkedin.com
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  sub-tag: P002-260618
+  tls: true
+  type: anytls
+  udp: true
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -20,6 +35,7 @@ proxies:
   password: 0324fbc29561
   port: 443
   server: er8u54dh.df6h451rh.xin
+  servername: px.ads.linkedin.com
   skip-cert-verify: true
   sni: px.ads.linkedin.com
   tls: true
@@ -32,79 +48,11 @@ proxies:
   password: 0324fbc29561
   port: 443
   server: 684616s4.df6h451rh.xin
+  servername: px.ads.linkedin.com
   skip-cert-verify: true
   sni: px.ads.linkedin.com
   tls: true
   type: anytls
-  udp: true
-- allowInsecure: '1'
-  client-fingerprint: chrome
-  name: 🇹🇼 005  | ⬇️ 364KB/s
-  packet-encoding: ''
-  packetEncoding: none
-  password: 0324fbc29561
-  port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  sub-tag: P002-260618
-  tls: true
-  type: anytls
-  udp: true
-- client-fingerprint: chrome
-  delay: 1527
-  name: 'nukcrow #378'
-  network: tcp
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  port: 24999
-  server: tjtw.m2k699.com
-  skip-cert-verify: false
-  sni: tjtw.m2k699.com
-  sub_tag: A004-260618
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: TW 🇹🇼 ｜ @Raydikalx ｜ 7FB7BB - ...
-  network: tcp
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  port: 24999
-  server: 188.253.7.44
-  skip-cert-verify: false
-  sni: tjtw.m2k699.com
-  sub_tag: A004-260618
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: 🇹🇼TW_38
-  network: tcp
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  port: 24999
-  server: tjtw.m2k699.com
-  servername: www.itunes.com
-  skip-cert-verify: true
-  sni: www.itunes.com
-  sub_tag: C002-260622
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇹🇼TW_22｜176KB/s [909a8d192827]...
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  sni: twmoon1-cdn-route.couldflare-cdn.com
-  tls: true
-  type: http
-  udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-- name: 'nukcrow #660'
-  network: tcp
-  password: 00a72bf349e6479b
-  port: 20031
-  server: kw119.zxmm.eu.org
-  skip-cert-verify: true
-  sni: kw119.zxmm.eu.org
-  sub_tag: C001-260618
-  type: trojan
   udp: true
 - alterId: 0
   cipher: auto
@@ -150,484 +98,453 @@ proxies:
     headers:
       Host: rnxq-1lpi3m.linmeisoft.com
     path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-- name: TW 🇹🇼 | @Raydikalx | 093BFC
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | D607AC
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: 103.115.109.49
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | 7BE9E7
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 103.115.109.49
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | 16244C
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | AA0672
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: 160.187.100.109
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | B0FA06
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 160.187.100.109
-  skip-cert-verify: true
-  sni: vpn-tw-002.fastervpn.world
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | 3DECAF
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | B1CCCC
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: css.rbxcdn.com
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | CCEAE8
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
-- name: 🇹🇼TW_7
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: vk.com
-  tls: false
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | 742DAF
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: whatsapp.com
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | E55AC1
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-- name: TW 🇹🇼 | @Raydikalx | 964B87
-  network: tcp
+- name: 🇹🇼TW_22｜176KB/s [909a8d192827]...
+  password: exaxgqkKkd0TAMrCxeonWg==
+  port: 1443
+  server: twmoon1-cdn-route.couldflare-cdn.com
+  sni: twmoon1-cdn-route.couldflare-cdn.com
+  tls: true
+  type: http
+  udp: true
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #3'
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   port: 24999
-  server: tjtw.m2k699.com
+  server: 188.253.7.44
   type: trojan
-  udp: true
-- client-fingerprint: firefox
-  name: '@npv_vpn11 #450'
-  network: tcp
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+  network: ws
   port: 443
-  reality-opts:
-    public-key: EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8
-    short-id: '!!str 1ed136481e0ede74'
-  server: 128.14.230.225
-  servername: as1.cdn77.icu
+  server: 59.125.69.22
+  servername: tse1.mm.bing.net
   tls: true
   type: vless
   udp: true
-  uuid: 1506f2e0-ae12-4718-b5ab-c5609161300e
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: tse1.mm.bing.net
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN 2 #1'
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: TW 🇹🇼 | @Raydikalx | E76E33
-  network: tcp
-  port: 9443
+  name: 🇹🇼_台湾
+  port: 35501
   reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: '!!str b390142456517acc'
-  server: 83.147.14.168
-  servername: www.amazon.com
+    public-key: MRbSjXaWW6gjV3ZiwsSqq9emSyjRHa4bc229bJCxiS4
+    short-id: '!!str af3d450224d2e8b2'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
   tls: true
   type: vless
   udp: true
-  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
 - client-fingerprint: chrome
-  name: 🇹🇼 🇨🇳 台湾 | TWN 3
-  network: ws
-  port: 443
-  server: 59.125.69.23
-  servername: ty986gfazs.cainiaohub.xyz
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (2)
+  port: 35503
+  reality-opts:
+    public-key: nDfTdosTrjY7J61KmFGkSERzF-hxK_vS3GS5QcA9ZiQ
+    short-id: '!!str 0d10e91f9ea0a534'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
   tls: true
   type: vless
   udp: true
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 224E00
-  network: tcp
-  port: 794
-  server: 2.27.174.110
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 1D48F9
-  network: tcp
-  port: 31172
-  server: 202.153.4.171
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 2bb735a0-b26e-4628-9f1a-23a6661b1275
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F93DED
-  network: ws
-  port: 443
-  server: 24864168545164.d6f54hd1j.cc
-  servername: 24864168545164.d6f54hd1j.cc
-  tls: true
-  type: vmess
-  udp: true
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
-  ws-opts:
-    headers:
-      Host: 24864168545164.d6f54hd1j.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F7660D
-  network: ws
-  port: 443
-  server: 24864168545164.oylfmxz.cn
-  servername: 24864168545164.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 24864168545164.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 4300A9
-  network: ws
-  port: 443
-  server: 654168416355441.d6f54hd1j.cc
-  servername: 654168416355441.d6f54hd1j.cc
-  tls: true
-  type: vmess
-  udp: true
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
-  ws-opts:
-    headers:
-      Host: 654168416355441.d6f54hd1j.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 82C740
-  network: ws
-  port: 443
-  server: 654168416355441.oylfmxz.cn
-  servername: 654168416355441.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 654168416355441.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 6A8944
-  network: ws
-  port: 443
-  server: 654168416355441.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 4968B8
-  network: ws
-  port: 443
-  server: 7dba81fc3a0b.oylfmxz.cn
-  servername: 7dba81fc3a0b.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 7dba81fc3a0b.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 62981A
-  network: ws
-  port: 443
-  server: 7dba81fc3a0b.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 93A9B3
-  network: ws
-  port: 443
-  server: 9641684.sdf65h4.top
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 4E82AD
-  network: ws
-  port: 443
-  server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
-  servername: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW
-  network: ws
-  port: 443
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | A60569
-  network: ws
-  port: 443
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
-  servername: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 387389
-  network: ws
-  port: 443
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 6749E4
-  network: ws
-  port: 443
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | A1FA21
-  network: ws
-  port: 443
-  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 029D24
-  network: ws
-  port: 443
-  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-  servername: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F017DE
-  network: ws
-  port: 443
-  server: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
-  servername: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F483D4
-  network: ws
-  port: 443
-  server: fujrdt.d6f54hd1j.cc
-  servername: fujrdt.d6f54hd1j.cc
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
-  ws-opts:
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 5C7CA9
-  network: ws
-  port: 52300
-  server: hi.northcluster.info
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6e571484-4166-4699-8f58-b34a1823691f
-  ws-opts:
-    path: /video
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 1232A6
-  network: ws
-  port: 52300
-  server: hi.northcluster.info
-  servername: hi.northcluster.info
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6e571484-4166-4699-8f58-b34a1823691f
-  ws-opts:
-    headers:
-      Host: hi.northcluster.info
-    path: /video
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 38AE0B
-  network: ws
-  port: 80
-  server: mdk.mdmekjll.best
-  servername: mdk.mdmekjll.best
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  ws-opts:
-    headers:
-      Host: mdk.mdmekjll.best
-    path: /game/resources
-- name: '🇹🇼[www.v2nodes.com] vless-TW-1... #2'
-  network: ws
-  port: 443
-  server: 60.248.219.78
-  servername: ty986gfazs.cainiaohub.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
 - client-fingerprint: chrome
-  name: 🇹🇼 🇨🇳 台湾 | TWN
-  network: ws
-  port: 443
-  server: 59.125.69.24
-  servername: ty986gfazs.cainiaohub.xyz
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (3)
+  port: 35505
+  reality-opts:
+    public-key: dKYlBW5SGefmMdS_aTzyf6eTmtlEGEMYYWYdXXgRrTE
+    short-id: '!!str 035392c036ac8851'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
   tls: true
   type: vless
   udp: true
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: 0324fbc29561
-  port: 443
-  server: 684616s4.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  udp: true
-- name: '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  network: ws
-  port: 443
-  server: 60.248.219.78
-  servername: ty986gfazs.cainiaohub.xyz
-  skip-cert-verify: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (4)
+  port: 35507
+  reality-opts:
+    public-key: _4Y_cJjsIv75tJ3OaS2UvBFlMCl_y8LVw8_HuhWmblM
+    short-id: '!!str 16a58a3c75a2962c'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
   tls: true
   type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: '%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530'
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (5)
+  port: 35509
+  reality-opts:
+    public-key: ms3mib9j50-KgYsGgQpAx9BfLpXQVL96gSlbbQY5vRo
+    short-id: '!!str 9a45ef8ff905cca8'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (6)
+  port: 35511
+  reality-opts:
+    public-key: e-vrm2S4ByiZNO56uhpUDPPRWsb2hug-ltDNokdieSY
+    short-id: '!!str 9779cd6732e77f1e'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (7)
+  port: 35513
+  reality-opts:
+    public-key: 6mUgjCN0nEp3iSabXk2qVaaBN_dLlO8Sr0JcwSMBoHw
+    short-id: '!!str 6056f9ac2ee8b66e'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (8)
+  port: 35514
+  reality-opts:
+    public-key: jDmpUxfrP31xPDxXvqkeXB9BLbp39v8KZVUBsJ0hJC8
+    short-id: '!!str e39ce443cc14fe2d'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (9)
+  port: 35515
+  reality-opts:
+    public-key: xCiLTycT6IOnho-vajsWBIuAgXDmCglLoNnbj0LtHVI
+    short-id: '!!str 0a47a77d9880094a'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (10)
+  port: 35516
+  reality-opts:
+    public-key: Ek_XRWm4b7kpVFG5pwlWKqzJBl4H_vL8CSwWEj-ALUg
+    short-id: '!!str f86c0012656247fe'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (11)
+  port: 35517
+  reality-opts:
+    public-key: SANUzqHNKJtmzSyZFGymc0Cg7bL-qXGRHqzgqRGTQTk
+    short-id: '!!str 4570d061b4d5cd95'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (12)
+  port: 35518
+  reality-opts:
+    public-key: 6MbfYwvW3pztx5BuzmMaSyx5qiGmoXXF_nRl3JzD-E0
+    short-id: '!!str 57e9e26cd8995193'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (13)
+  port: 35520
+  reality-opts:
+    public-key: 4XRvPlggl4ZArpT-RspIXbf2-k-g5UFhl_n4ay-7X2c
+    short-id: '!!str 824badcc7cfcad1e'
+  server: aaaa1.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (14)
+  port: 35502
+  reality-opts:
+    public-key: gG2M1Ae4tkUxn5gThU164nyDV2a_lgiFysLD70ftwGs
+    short-id: '!!str 372dea9a47ad3839'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (15)
+  port: 35504
+  reality-opts:
+    public-key: fv2rCTwEmGHoNe7TAx_B1or6Q3UH-Xc-VoAdCf4onwQ
+    short-id: '!!str 13b61e0b366a8587'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (16)
+  port: 35506
+  reality-opts:
+    public-key: Gd2XCYD-PGA4qPI_GnhYiehFZYKfoWJzT8jwVjFPFiA
+    short-id: '!!str 9044789203b5a079'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (17)
+  port: 35508
+  reality-opts:
+    public-key: SpAdQP1GUXTlBDWvVoX0GDu7tW0j03lNkITlcTHchRo
+    short-id: '!!str 02361d126077445b'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (18)
+  port: 35510
+  reality-opts:
+    public-key: QR8ak3sX9FQGiOniCSnHj3Z6a96TTq53vqgndtj1fBA
+    short-id: '!!str b6ece624415b98cc'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (19)
+  port: 35512
+  reality-opts:
+    public-key: u7w0BqQ6UT0Hx2ozpbJw62RWlbqI4CJVMdwcSxuMfEM
+    short-id: '!!str 5d883a684a405ad4'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (20)
+  port: 35522
+  reality-opts:
+    public-key: 6mUgjCN0nEp3iSabXk2qVaaBN_dLlO8Sr0JcwSMBoHw
+    short-id: '!!str 6056f9ac2ee8b66e'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (21)
+  port: 35519
+  reality-opts:
+    public-key: JNM0pj1XCUaKkQTCQF2a1HkT-um88OPNZVvThcOPelg
+    short-id: '!!str 9d803011d2efebe0'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (22)
+  port: 35521
+  reality-opts:
+    public-key: rat64hgk6JteW99I73Os-B-XJRFSvddkKBu-5zVo-Gg
+    short-id: '!!str c6cc277fdf998478'
+  server: aaaa2.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (23)
+  port: 35801
+  reality-opts:
+    public-key: MRbSjXaWW6gjV3ZiwsSqq9emSyjRHa4bc229bJCxiS4
+    short-id: '!!str af3d450224d2e8b2'
+  server: ftaaa.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (24)
+  port: 35802
+  reality-opts:
+    public-key: _4Y_cJjsIv75tJ3OaS2UvBFlMCl_y8LVw8_HuhWmblM
+    short-id: '!!str 16a58a3c75a2962c'
+  server: ftaaa.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (25)
+  port: 35803
+  reality-opts:
+    public-key: e-vrm2S4ByiZNO56uhpUDPPRWsb2hug-ltDNokdieSY
+    short-id: '!!str 9779cd6732e77f1e'
+  server: ftaaa.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (26)
+  port: 35804
+  reality-opts:
+    public-key: 6MbfYwvW3pztx5BuzmMaSyx5qiGmoXXF_nRl3JzD-E0
+    short-id: '!!str 57e9e26cd8995193'
+  server: ftaaa.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (27)
+  port: 35500
+  reality-opts:
+    public-key: CdUmcU2yeoME6_6I1eEd9F86vZ7Lwf4_IWDZ2Ct5jlE
+    short-id: '!!str 237e5c2bd93735e8'
+  server: ntcaaa.yeurl.cc
+  servername: www.bing.com
+  skip-cert-verify: false
+  sni: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94bdc044-265c-40ef-a274-14714c71cc0c
 - alpn:
   - h2
   grpc-opts:
@@ -646,6 +563,37 @@ proxies:
   server: 106.107.236.110
   type: socks5
   username: '111'
+- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  password: 0324fbc29561
+  port: 443
+  server: 684616s4.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
+- client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN 4
+  network: ws
+  port: 443
+  server: 59.125.69.23
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- encryption: none
+  flow: ''
+  name: 🇹🇼TW_11｜222KB/s｜R002-260618 [a...
+  network: ws
+  port: 443
+  server: 60.248.219.78
+  tls: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -656,21 +604,55 @@ proxies:
   tls: true
   type: vless
   uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+- name: TW%E5%8F%B0%E6%B9%BE%28mibei77...
+  network: ws
+  password: d9fa9bde-de15-4a5d-bee2-88db7599bfd8
+  port: 2053
+  server: 172.64.229.88
+  sni: 17931084844379.206352.xyz
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 17931084844933.206352.xyz
+    path: /agraeabtegrrh
+- name: 'TW%E5%8F%B0%E6%B9%BE%28mibei77... #1'
+  network: ws
+  password: d9fa9bde-de15-4a5d-bee2-88db7599bfd8
+  port: 2087
+  server: 162.159.140.116
+  sni: 17931084844658.206352.xyz
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 17931084849861.206352.xyz
+    path: /agraeabtegrrh
+- alterId: 0
+  cipher: auto
+  name: TW
+  network: ws
+  port: 80
+  server: mdk.mdmekjll.best
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      host: mdk.mdmekjll.best
+    path: /game/resources
 - alterId: 0
   cipher: auto
   name: TW2
   network: ws
   port: 443
-  server: 24864168545164.oylfmxz.cn
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
-    headers:
-      host: 24864168545164.oylfmxz.cn
     path: /
-- name: 🇹🇼TW_32
+- name: 🇹🇼TW_2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 103.115.109.49
@@ -678,43 +660,15 @@ proxies:
   sni: https%3A
   tls: false
   type: hysteria2
-- name: 科技网络 🇹🇼
-  network: ws
-  port: 10004
-  server: 114.34.202.224
-  servername: gaosir.unfeeling.sbs
-  tls: true
-  type: vless
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: freecodes%2F%3Fed%3D2560
-- name: '科技网络 🇹🇼 #1'
-  network: ws
-  port: 81
-  server: 210.61.97.241
-  servername: gaosir.unfeeling.sbs
-  tls: true
-  type: vless
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: Telegram%40freecodes%2F%3Fed%3D2560
-- name: '科技网络 🇹🇼 #2'
-  network: ws
-  port: 443
-  server: 167.179.27.92
-  servername: gaosir.unfeeling.sbs
-  tls: true
-  type: vless
-  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
-  ws-opts:
-    headers:
-      Host: gaosir.unfeeling.sbs
-    path: Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2%2F%3Fed%3D2560
-- name: 🇹🇼TW_15
+- name: 🇹🇼TW_41
+  network: tcp
+  password: 00a72bf349e6479b
+  port: 20031
+  server: kw119.zxmm.eu.org
+  skip-cert-verify: true
+  sni: kw119.zxmm.eu.org
+  type: trojan
+- name: 🇹🇼TW_28
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 160.187.100.109
@@ -722,3 +676,23 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
+- name: 🇹🇼TW_14
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-tw-002.fastervpn.world
+  skip-cert-verify: true
+  sni: vk.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇹🇼
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: qvekI7tKB1NDnZA6JcS_24aV4n8mlCbI3SFvkRr22wg
+    short-id: '!!str d74a6321deec9f31'
+  server: 34.80.248.240
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 31a40f42-4ad6-4a32-a760-71102b459584
