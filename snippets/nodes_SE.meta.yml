@@ -1,10 +1,4 @@
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 瑞典_7FEDFD - 303ms
-  password: MODziWLa9qMuW-4yPa0rfw
-  port: 8388
-  server: msk2.rvpn.app
-  type: ss
 - client-fingerprint: chrome
   name: 🇸🇪瑞典丨yoyapai.com
   network: ws
@@ -21,13 +15,16 @@ proxies:
     headers:
       Host: edge.yzkvm.top
     path: /
-- client-fingerprint: firefox
+- client-fingerprint: edge
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇸🇪SE瑞典丨yoyapai.com (2)
+  name: 🇸🇪SE瑞典丨yoyapai.com - 124ms
+  network: tcp
   port: 443
   reality-opts:
     public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
     short-id: '!!str afee962d'
+  security: reality
   server: 91.242.228.29
   servername: se1.mycloud1.org
   skip-cert-verify: false
@@ -36,17 +33,181 @@ proxies:
   type: vless
   udp: true
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- name: 🇸🇪SE_1|209KB/s|P002-260618 [86...
-  password: None
+- allowInsecure: '1'
+  client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  packet-encoding: ''
+  packetEncoding: none
+  password: 0324fbc29561
   port: 443
-  server: 79.142.77.63
+  server: er8u54dh.df6h451rh.xin
+  servername: px.ads.linkedin.com
   skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  sub-tag: P002-260618
+  tls: true
+  type: anytls
+  udp: true
+- encryption: none
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  network: ws
+  packet-encoding: xudp
+  port: 14430
+  server: 5.178.109.174
+  servername: 5.178.109.174
   sub_tag: P002-260618
+  tls: false
+  type: vless
+  udp: true
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    headers:
+      Host: 5.178.109.174
+    path: /vless
+  xudp: true
+- name: 🇸🇪SE_1｜3.0MB/s - 142ms
+  port: 443
+  server: 146.70.242.146
+  skip-cert-verify: true
+  sni: 146.70.242.146
+  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
 - client-fingerprint: chrome
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #12'
+  encryption: none
+  name: 'nukcrow #1137'
+  network: ws
+  packet-encoding: xudp
+  port: 444
+  server: 109.120.155.155
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  sub_tag: C002-260622
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
+  ws-opts:
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+    path: /@Marisa_kristi
+  xudp: true
+- name: 🇸🇪SE_1|2.1MB/s
+  port: 443
+  server: 146.70.242.130
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇪SE_1｜1.1MB/s - 141ms
+  port: 443
+  server: 217.210.129.243
+  skip-cert-verify: true
+  sni: 217.210.129.243
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇪SE_8|393KB/s|M003-260806 [c3...
+  network: ws
+  packet-encoding: xudp
+  port: 43788
+  server: 89.22.224.146
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
+  ws-opts:
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/48.0.2564.109 Safari/537.36
+    path: /@Marisa_kristi
+  xudp: true
+- name: 🇸🇪SE_2｜2.5MB/s - 130ms
+  port: 443
+  server: 79.142.77.63
+  skip-cert-verify: true
+  sni: 79.142.77.63
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇸🇪 机场推荐:dafei.de 瑞典 02
+  port: 39811
+  server: 176.111.37.5
+  type: http
+- name: 🇸🇪 机场推荐:dafei.de 瑞典 03
+  password: None
+  port: 443
+  server: 149.50.216.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇪SE_1｜1.2MB/s - 125ms
+  password: None
+  port: 443
+  server: 146.70.242.130
+  skip-cert-verify: true
+  sni: 146.70.242.130
+  tls: true
+  type: http
+  udp: true
+- auth: a0052f4f-4c63-0002-a16f-ab2d5d718cd3
+  name: '🇸🇪 瑞典 | SWE #3 #1'
+  password: a0052f4f-4c63-0002-a16f-ab2d5d718cd3
+  port: 443
+  server: 192.142.23.46
+  skip-cert-verify: true
+  sni: diffoscope.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: qq
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 ｜ @Raydikalx ｜ 837B22 - ...
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
+    short-id: '!!str 0e7741edc378622f'
+  security: reality
+  server: 31.172.65.4
+  servername: www.bing.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
+- client-fingerprint: chrome
+  name: SE 🇸🇪 | @Raydikalx | 1FE54B
+  network: ws
+  password: humanity
+  port: 8443
+  server: 77.221.138.199
+  sni: www.calmlunch.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: 'Telegram 🆔@cnetvpn 🇸🇪 #3'
+  obfs: salamander
+  obfs-password: fuw2k1ddrouwxr3u
+  password: vz86jgszv4zszchv
+  port: 52062
+  server: giftcard.gateway-stream.com
+  skip-cert-verify: false
+  sni: giftcard.gateway-stream.com
+  tls: false
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
   network: ws
   port: 443
   server: 146.75.57.238
@@ -59,30 +220,103 @@ proxies:
     headers:
       Host: looaloooibamoooijji.global.ssl.fastly.net.
     path: /
-- client-fingerprint: chrome
-  name: '瑞典 002 #1'
+- alterId: 64
+  cipher: auto
+  name: 瑞典 004
   network: ws
   port: 443
-  server: 146.75.59.186
-  servername: firefox.com
+  server: 148.135.38.107
+  skip-cert-verify: true
   tls: true
-  type: vless
-  udp: true
-  uuid: 46cb8a26-0712-4e85-89bf-2538a2788652
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
-      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-    path: /
+      Host: www.13861936.xyz
+    path: /path/1704363182493
+- alterId: 64
+  cipher: auto
+  name: 瑞典 005
+  network: ws
+  port: 443
+  server: 148.135.9.156
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.30121911.xyz
+    path: /path/1704363182493
+- alterId: 64
+  cipher: auto
+  name: 瑞典 006
+  network: ws
+  port: 443
+  server: 148.135.14.99
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.20414124.xyz
+    path: /path/1704188270531
+- alterId: 64
+  cipher: auto
+  name: 瑞典 007
+  network: ws
+  port: 443
+  server: 148.135.31.171
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.72672771.xyz
+    path: /path/1703924658447
+- alterId: 64
+  cipher: auto
+  name: 瑞典 008
+  network: ws
+  port: 443
+  server: 148.135.33.140
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.31270022.xyz
+    path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 (3) - 179ms
-  network: tcp
+  name: 瑞典 009
+  network: ws
   port: 80
-  server: 217.142.138.61
+  server: 185.146.173.25
   skip-cert-verify: true
-  tls: false
   type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  uuid: e3cb5c38-1168-46ad-aec4-62ffd3614690
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.safari-df.ir.
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 瑞典 010
+  network: ws
+  port: 31002
+  server: 37.120.209.126
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: dc0cf22d-e35c-4b77-8924-977f6844909b
+  ws-opts:
+    headers:
+      Host: www.68547476.xyz
+    path: /path/191019072927
 - name: MTN
   network: ws
   port: 80
@@ -98,7 +332,7 @@ proxies:
     headers:
       Host: digi--v2raycncfs.RadioTeHran.oRG.
     path: /Digiv2ray-
-- name: '@npv_vpn11 #430'
+- name: '@npv_vpn11 #412'
   network: ws
   port: 2095
   server: 185.146.173.37
@@ -114,7 +348,7 @@ proxies:
       Host: V2ray-_-_-_-_-_-_-_-_-ShhProxy.TelegramChannelJoinBede.com.
     path: /
 - client-fingerprint: chrome
-  name: '瑞典 006 #1'
+  name: 瑞典 013
   network: xhttp
   port: 443
   server: 146.75.57.111
@@ -125,7 +359,7 @@ proxies:
   type: vless
   udp: true
   uuid: 0632a4e7-d55a-4d17-a47b-9958b471be90
-- name: '@npv_vpn11 #431'
+- name: '@npv_vpn11 #419'
   network: ws
   port: 80
   server: 185.146.173.37
@@ -140,7 +374,7 @@ proxies:
     headers:
       Host: 1.v.v.V-_-_-V2ray-_-_-V.v.v.mv.speedtest.net.www.Zula.ir.check-host.net.2.cakesfoodapp.COM.
     path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
-- name: '瑞典 008 #1'
+- name: 瑞典 016
   network: ws
   port: 443
   server: 146.75.56.210
@@ -150,25 +384,10 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: 38e2e635-f6a7-4924-8ddd-39ad1f625722
+  uuid: 5b5a8a8e-d9ca-4787-ab69-4c76fac089ae
   ws-opts:
     headers:
       Host: germanyi.global.ssl.fastly.net.
-    path: /
-- name: '@Hope_Net-join-us-on-Telegram #20'
-  network: ws
-  port: 8080
-  server: 185.146.173.37
-  servername: xn--047h.iman-v2ray.sbs.
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  type: vless
-  udp: true
-  uuid: 4cac189c-5611-4cfa-9946-bf1b2b3d152c
-  ws-opts:
-    headers:
-      Host: xn--047h.iman-v2ray.sbs.
     path: /
 - name: AutoAiVPN705889
   network: ws
@@ -215,280 +434,6 @@ proxies:
     headers:
       Host: 3.V.v.V.v.V.v.V-_-_-V2ray-_-_-V.v.V.v.arV2ray.Host.
     path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
-- alterId: 64
-  cipher: auto
-  name: '瑞典 013 #1'
-  network: ws
-  port: 443
-  server: 148.135.38.107
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.13861936.xyz
-    path: /path/1704363182493
-- alterId: 64
-  cipher: auto
-  name: '瑞典 014 #1'
-  network: ws
-  port: 443
-  server: 148.135.9.156
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.30121911.xyz
-    path: /path/1704363182493
-- alterId: 64
-  cipher: auto
-  name: '瑞典 015 #1'
-  network: ws
-  port: 443
-  server: 148.135.14.99
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.20414124.xyz
-    path: /path/1704188270531
-- alterId: 64
-  cipher: auto
-  name: '瑞典 016 #1'
-  network: ws
-  port: 443
-  server: 148.135.31.171
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.72672771.xyz
-    path: /path/1703924658447
-- alterId: 64
-  cipher: auto
-  name: '瑞典 017 #1'
-  network: ws
-  port: 443
-  server: 148.135.33.140
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.31270022.xyz
-    path: /path/1704188270531
-- alterId: 0
-  cipher: auto
-  name: '瑞典 018 #1'
-  network: ws
-  port: 80
-  server: 185.146.173.25
-  skip-cert-verify: true
-  type: vmess
-  uuid: e3cb5c38-1168-46ad-aec4-62ffd3614690
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.safari-df.ir.
-    path: /
-- alterId: 64
-  cipher: auto
-  name: '瑞典 019 #1'
-  network: ws
-  port: 31002
-  server: 37.120.209.126
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: dc0cf22d-e35c-4b77-8924-977f6844909b
-  ws-opts:
-    headers:
-      Host: www.68547476.xyz
-    path: /path/191019072927
-- client-fingerprint: safari
-  flow: xtls-rprx-vision
-  name: SE 🇸🇪 | @Raydikalx | 53AE2B
-  network: tcp
-  port: 10444
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: '!!str 8debcf36f1cc69ff'
-  server: 193.188.21.253
-  servername: video.yandex.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-- client-fingerprint: chrome
-  name: SE 🇸🇪 | @Raydikalx | 1FE54B
-  network: ws
-  password: humanity
-  port: 8443
-  server: 77.221.138.199
-  sni: www.calmlunch.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- client-fingerprint: chrome
-  name: '@npv_vpn11 #1693'
-  network: xhttp
-  port: 443
-  reality-opts:
-    public-key: fwQbdsfHEnx2pzokCnyN698SUq5fkQKngnsyPGjmeDg
-  server: 13.143.180.50
-  servername: mirror.timeweb.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9ea8b000-58ce-4f71-b108-989dd4f248f1
-  ws-opts:
-    path: /ubuntu
-  xhttp-opts:
-    host: mirror.timeweb.ru
-    mode: auto
-    path: /ubuntu
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 'US美国 #45'
-  network: xhttp
-  packet-encoding: xudp
-  port: 61374
-  reality-opts:
-    public-key: QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI
-  server: se-2.pythonsetupbib.online
-  servername: se-2.pythonsetupbib.online
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  ws-opts:
-    headers:
-      Host: se-2.pythonsetupbib.online
-    path: '%2F'
-  xhttp-opts:
-    host: se-2.pythonsetupbib.online
-    mode: packet-up
-    path: /
-    reuse-settings:
-      max-connections: '3'
-    x-padding-bytes: 100-500
-- client-fingerprint: chrome
-  name: 🇩🇪DE_151｜1.3MB/s｜C002-260622 [...
-  network: tcp
-  password: happybirthdaydaniel
-  port: 25267
-  server: de-bots4.h1cloud.net
-  skip-cert-verify: true
-  sni: de-bots4.h1cloud.net
-  type: trojan
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇧🇬BG_13
-  password: uvKNudV-N8AUCrykPiyznA
-  port: 56134
-  server: location8.cpanel-host10.ir
-  type: ss
-- name: 'nukcrow #400'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
-  type: trojan
-- name: '🇪🇺  @MDvpnSEC #3'
-  port: 2087
-  server: iran2.panelsaz.com
-  tls: false
-  type: vless
-  uuid: 1b71cb74-16f8-4ea0-9acf-d03a3d66dff6
-  ws-opts:
-    path: '%2Fupl'
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: '@npv_vpn11 #20'
-  network: tcp
-  port: 8080
-  reality-opts:
-    public-key: sQ_YHzotqhVJoUDAZl5kTzUqVN6ksh-MTikz_ixsZWc
-    short-id: '!!str 2b30'
-  server: 2607:5300:205:200::8aeb
-  servername: icloud.com
-  tls: true
-  type: vless
-  uuid: 20b98028-53c9-4f76-9bc9-b6b16b8a9152
-  ws-opts:
-    headers:
-      Host: '%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET'
-- name: '@MDvpnSEC 📍🇪🇺 #3'
-  port: 443
-  server: cdn.8211992.xyz
-  tls: false
-  type: vless
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  ws-opts:
-    path: '%2Fapi%2Fv1%2Fguests%2Fprofiles%2F5de14443985f%2F'
-- client-fingerprint: chrome
-  flow: ''
-  name: '🇸🇪202382 | ⚡️Telegram = t.me/S... #1'
-  network: tcp
-  port: 25387
-  reality-opts:
-    public-key: _nrnGiJUdyeLv2afSwe6P4j02AMayY34WFMjUJp5Kwc
-    short-id: '!!str 9608a9c65d315d52'
-  server: 136.148.212.185
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-- name: 🇩🇪202463 | ⚡️Telegram = t.me/S...
-  port: 443
-  server: lvi.su
-  servername: lvi.su
-  tls: false
-  type: vless
-  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
-  ws-opts:
-    path: '%2Fvpn-relay%3Ftoken%3D27fede42482b3c29d4c1c9640876c250%26pool%3Dwhitelist2'
-- name: 🇸🇪202428 | ⚡️Telegram = t.me/S...
-  network: ws
-  port: 2096
-  server: 191.44.114.179
-  tls: false
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '@npv_vpn11 #1585'
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: WEHGKyXsOD5i2kNCJ3GrjeNZQBsrzH76OrPDJ7x2YwY
-  server: 191.44.114.179
-  servername: www.wikipedia.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-- name: 'Telegram 🆔@cnetvpn 🇸🇪 #3'
-  obfs: salamander
-  obfs-password: fuw2k1ddrouwxr3u
-  password: vz86jgszv4zszchv
-  port: 52062
-  server: giftcard.gateway-stream.com
-  skip-cert-verify: false
-  sni: giftcard.gateway-stream.com
-  tls: false
-  type: hysteria2
 - cipher: chacha20-ietf-poly1305
   name: 🇸🇪🇮🇷 Tunnel (جمنای)
   password: BTim1LDuYDa_sy8bcYQX8CBM1b9SUnAC
@@ -521,7 +466,7 @@ proxies:
       Host: filimo.com
     path: /
 - client-fingerprint: chrome
-  name: '🚀 @MDvpnSEC 💥 #5'
+  name: '🚀 @MDvpnSEC 💥 #4'
   network: ws
   port: 443
   server: cdn.8211992.xyz
@@ -534,6 +479,22 @@ proxies:
     headers:
       Host: mao.kipfelmaomao.de5.net
     path: /api/v1/guests/profiles/5de14443985f/
+- client-fingerprint: chrome
+  name: 'از التماس کردن خسته شدم خودت م... #5'
+  network: xhttp
+  port: 437
+  reality-opts:
+    public-key: W_0O5fiA1zi8nXHksSKSTLzwLPyjECWNES5-gDAbQRY
+    short-id: '!!str 197fe3f584bc15f3'
+  server: nzidam.zelmuro.ir
+  servername: play.google.com
+  tls: true
+  type: vless
+  uuid: 3a24f714-5585-4103-9291-6ae21f11c10d
+  ws-opts:
+    headers:
+      Host: ''
+    path: ''
 - client-fingerprint: chrome
   name: 🇸🇪| Sweden
   network: ws
@@ -572,19 +533,6 @@ proxies:
   tls: true
   type: vless
   uuid: ecad47b0-249e-4f6f-adff-e3c8f02b1897
-- name: '🇪🇺  @MDvpnSEC #21'
-  network: ws
-  port: 443
-  server: 199.232.78.159
-  servername: cdn.akamai.steamstatic.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  ws-opts:
-    headers:
-      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-    path: /?Telegram---Lent_Gc---PLent_Gc---Lent_Gc---Lent_Gc
 - client-fingerprint: ''
   flow: xtls-rprx-vision
   name: 🇸🇪139845 | ⚡️Telegram = t.me/S...
@@ -598,65 +546,45 @@ proxies:
   tls: true
   type: vless
   uuid: fc1b3bda-b226-452a-8c5c-b0e36a1f8f88
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇪SE_12|90KB/s|A004-260618 #1'
+  password: MODziWLa9qMuW-4yPa0rfw
+  port: 8388
+  server: 159.194.251.76
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇪SE_8|252KB/s|M003-260806 #1'
+  password: MODziWLa9qMuW-4yPa0rfw
+  port: 8388
+  server: msk2.rvpn.app
+  type: ss
 - client-fingerprint: chrome
-  name: '🇸🇪SE_8|393KB/s|M003-260806 #1'
-  network: ws
-  port: 43788
-  server: 89.22.224.146
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  tls: true
-  type: vless
-  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
-  ws-opts:
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: chrome
-  name: '🇸🇪SE_6|535KB/s|C002-260622 #1'
-  network: ws
-  port: 444
-  server: 109.120.155.155
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  tls: true
-  type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
-  ws-opts:
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: random
-  name: '🇸🇪[www.v2nodes.com] vless-SE-9... #1'
+  name: 🇸🇪_瑞典 (2)
   network: ws
   port: 443
-  server: 157.22.128.7
-  servername: free.cndyw.ggff.net
+  server: 172.234.107.222
+  servername: indigostar.click
+  skip-cert-verify: true
+  sni: indigostar.click
   tls: true
   type: vless
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  udp: true
+  uuid: dbda40e2-25b5-416c-8d35-56d07e8dcdbc
   ws-opts:
-    headers:
-      Host: free.cndyw.ggff.net
-    path: pyip=bpb.yousef.isegaro.com
-- name: 🇸🇪SE_1｜2.8MB/s - 151ms
-  port: 443
-  server: 146.70.242.146
+    path: /ws
+- name: 🇸🇪_瑞典
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  servername: 5.178.109.174
   skip-cert-verify: true
-  sni: 146.70.242.146
-  tls: true
-  type: http
-- name: 🇸🇪SE_2|2.5MB/s
-  port: 443
-  server: 149.50.216.65
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_1｜2.5MB/s｜R002-260618 [b1...
-  port: 443
-  server: 217.210.129.243
-  skip-cert-verify: true
-  sni: 217.210.129.243
-  tls: true
-  type: http
+  sni: 5.178.109.174
+  tls: false
+  type: vless
+  udp: true
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    path: /vless
 - client-fingerprint: chrome
   name: '🇸🇪 SE | VLESS | @hope_net #1 [...'
   network: ws
@@ -937,131 +865,55 @@ proxies:
     headers:
       Host: V2ray-_-_-_-_-_-ShhProxy.TelegramChannelJoinBede.com.
     path: ''
-- alterId: 0
-  cipher: none
-  name: 🇸🇪_SE_瑞典 - 9ms
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: 🇸🇪 瑞典 | SWE 2
   network: ws
-  port: 80
-  server: 185.146.173.92
-  tls: false
-  type: vmess
-  uuid: 3a71b42c-66d2-44ad-8a80-668d4f4339ea
+  port: 443
+  server: cdn1.ir53.indevs.in
+  servername: cdn1.ir53.indevs.in
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1320b10b-9680-40b5-99a1-12a0a8b3134a
   ws-opts:
     headers:
-      Host: Nl2.vmess.site
-    path: /vmess#DONT-FORGET-TO-SUPPORT-SSHMAX.NET-TO-KEEP-THIS-SERVER-ALIVE
-- encryption: none
-  flow: ''
-  name: 🇸🇪SE_10｜2.0MB/s｜A004-260618 [1...
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  tls: false
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_7｜605KB/s｜M002-260618 [30...
-  network: ws
-  port: 43788
-  server: 89.22.224.146
-  tls: true
-  type: vless
-  uuid: 49a6eeaf-7dbf-4aa5-ba21-b36cd47e724e
-- name: 🇸🇪SE_14｜737KB/s｜R002-260618 [3...
-  port: 9443
-  server: 146.70.242.146
-  sni: 146.70.242.146
-  tls: true
-  type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_11｜343KB/s｜A004-260618 [5...
-  network: ws
-  port: 43788
-  server: 89.22.224.146
-  tls: true
-  type: vless
-  uuid: acc10ba5-a222-44b3-8a1a-4f247ffc6466
-- name: 🇸🇪SE_3｜1.0MB/s - 153ms
-  password: None
+      Host: cdn1.ir53.indevs.in
+    path: /varzesh3.com
+- name: 🇸🇪 瑞典_FD843F - 131ms
+  port: 1080
+  server: 171.25.158.95
+  type: socks5
+  username: Og==
+- name: 🇸🇪SE_2｜1.5MB/s - 134ms
   port: 443
   server: 149.50.216.65
   sni: 149.50.216.65
   tls: true
   type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_12｜648KB/s｜K001-260618 [7...
-  network: ws
-  port: 8443
-  server: 109.120.133.26
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- name: 🇸🇪SE_2｜1.6MB/s - 153ms
-  port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
+- name: 🇸🇪SE_1｜2.6MB/s - 139ms
+  port: 9443
+  server: 146.70.242.146
+  sni: 146.70.242.146
   tls: true
   type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_8｜446KB/s｜M002-260618 [cf...
-  network: ws
-  port: 4433
-  server: 83.147.216.223
-  tls: true
-  type: vless
-  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
-- name: 🇸🇪SE_1｜2.7MB/s - 157ms
-  password: None
-  port: 443
-  server: 146.70.242.130
-  sni: 146.70.242.130
-  tls: true
-  type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇸🇪SE_13｜372KB/s｜F003-260618 [f...
-  network: ws
-  port: 443
-  server: 109.122.194.61
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-- name: 🇸🇪 瑞典_FD843F - 256ms
-  port: 1080
-  server: 171.25.158.95
-  type: socks5
-  username: Og==
-- name: SE 12 → tg@nicevpn123 - 8ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 9ms
+  name: 🇸🇪_SE_瑞典 - 13ms
   network: ws
-  port: 443
-  server: 185.146.173.129
-  tls: true
+  port: 80
+  server: 185.146.173.167
+  tls: false
   type: vmess
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  uuid: b1fecac5-0eb0-440c-ba9b-a937b34881d6
   ws-opts:
     headers:
-      Host: 185.146.173.129
+      Host: 185.146.173.167
     path: /
 - alterId: 0
   cipher: auto
-  name: SE 22 → tg@nicevpn123 - 9ms
+  name: SE 22 → tg@nicevpn123 - 12ms
   network: ws
   port: 443
   server: 185.146.173.59
@@ -1072,16 +924,34 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: SE 🇸🇪 ｜ @Raydikalx ｜ 3750F9 - ...
+- name: SE 12 → tg@nicevpn123 - 9ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: SE 20 → tg@nicevpn123 - 6ms
   network: ws
-  port: 444
-  server: 109.120.155.155
+  port: 443
+  server: 185.146.173.129
   tls: true
+  type: vmess
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  ws-opts:
+    headers:
+      Host: 185.146.173.129
+    path: /
+- encryption: none
+  flow: ''
+  name: SE 🇸🇪 ｜ @Raydikalx ｜ 35BA6A - ...
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  tls: false
   type: vless
-  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
 - client-fingerprint: chrome
   encryption: none
   flow: ''
@@ -1093,7 +963,17 @@ proxies:
   type: vless
   uuid: 99ab6748-3d57-4562-9451-843c15960b9b
 - client-fingerprint: chrome
-  name: 🇸🇪
+  encryption: none
+  flow: ''
+  name: SE 🇸🇪 ｜ @Raydikalx ｜ 3750F9 - ...
+  network: ws
+  port: 444
+  server: 109.120.155.155
+  tls: true
+  type: vless
+  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
+- client-fingerprint: chrome
+  name: '🇸🇪 #1'
   network: ws
   port: 8443
   server: 193.232.178.149

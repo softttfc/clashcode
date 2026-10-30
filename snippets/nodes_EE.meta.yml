@@ -54,7 +54,16 @@ proxies:
   type: vless
   udp: true
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- name: 🇪🇪EE_2|2.0MB/s
+- name: 🇪🇪EE_1｜2.3MB/s - 146ms
+  port: 9443
+  server: 192.159.101.174
+  skip-cert-verify: true
+  sni: 192.159.101.174
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇪🇪EE_2|2.7MB/s
   password: None
   port: 9443
   server: 95.153.31.66
@@ -64,44 +73,115 @@ proxies:
   type: http
   udp: true
   username: ''
-- name: 🇪🇪EE_1|497KB/s|R002-260618 [ff...
-  password: 9jkvAVV-9ufV6IGd
-  port: 41560
-  server: chalo-ru.nexorcdn.com
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇪🇪EE_6|686KB/s|B007-260618 [99...
+  network: ws
+  packet-encoding: xudp
+  port: 4433
+  server: 83.147.216.223
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  sub_tag: B007-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
+  ws-opts:
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.67 Safari/537.36
+    path: /@Marisa_kristi
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  name: 'nukcrow #370'
+  network: ws
+  packet-encoding: xudp
+  port: 444
+  server: 109.120.155.155
+  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+  sub_tag: M003-260806
+  tls: true
+  type: vless
+  udp: true
+  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
+  ws-opts:
+    headers:
+      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
+    path: /@Marisa_kristi
+  xudp: true
+- name: 🇪🇪EE_2｜1.7MB/s - 149ms
+  password: None
+  port: 443
+  server: 95.153.32.2
   skip-cert-verify: true
-  sni: chalo-ru.nexorcdn.com
-  sub_tag: R002-260618
+  sni: 95.153.32.2
+  sub_tag: K001-260618
   tls: true
   type: http
   udp: true
-  username: ef37886e2aacd6fa622e3de3810299c2
-- name: 🇺🇸 US | 85.9.194.75
+  username: ''
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 'DE德国 #14'
   network: tcp
-  port: 443
-  server: 85.9.194.75
-  skip-cert-verify: false
-  tfo: false
-  tls: false
+  port: 25895
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: '!!str a73f0410d728c823'
+  server: ee.h1cloud.net
+  servername: www.samsung.com
+  tls: true
   type: vless
   udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  xudp: true
+- client-fingerprint: firefox
+  encryption: none
+  name: '以色列 #4'
+  network: tcp
+  port: 25895
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: '!!str a73f0410d728c823'
+  server: 79.182.39.232
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  xudp: true
+- name: 🇪🇪EE_2｜2.0MB/s - 130ms
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  sni: 95.153.31.66
+  tls: true
+  type: http
 - client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇳🇱NL_41
+  name: NL 🇳🇱 ｜ @Raydikalx ｜ 2A97EE - ...
   network: tcp
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '!!str 01'
+  security: reality
   server: 51.158.206.34
   servername: fuck.rkn
   tls: true
   type: vless
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  ws-opts:
+    headers:
+      Host: /%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇳🇱NL_71
+  name: 🇳🇱NL_45
   network: raw
   port: 23576
   reality-opts:
@@ -114,32 +194,50 @@ proxies:
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇳🇱NL_10
-  network: raw
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 51.158.206.86
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  ws-opts:
-    headers:
-      Host: /%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- name: IL 🇮🇱 ｜ @Raydikalx ｜ 60EE8A - ...
+  name: IL 🇮🇱 ｜ @Raydikalx ｜ 7C445A - ...
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 64.176.163.182
+  servername: exploreeducationsectoropportunitiestodayandadvancecareers.com
   skip-cert-verify: true
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
+  tls: true
   type: trojan
   udp: true
+- client-fingerprint: safari
+  encryption: none
+  flow: xtls-rprx-vision
+  name: PL 🇵🇱 ｜ @Raydikalx ｜ 5EE46A - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: '!!str fa3ea655619a3e78'
+  security: reality
+  server: 82.118.22.161
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  ws-opts:
+    headers:
+      Host: www.cloudflare.com
 - client-fingerprint: chrome
+  name: 'nukcrow #1701'
+  network: tcp
+  port: 27591
+  reality-opts:
+    public-key: LY0H47MWx87_L_JBzxFAuTzKZB53U7MrZQK8-dNnMxM
+    short-id: '!!str 6c5c7900406a1ae7'
+  server: 79.182.39.37
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+- client-fingerprint: qq
   encryption: none
   flow: xtls-rprx-vision
   name: EE 🇪🇪 ｜ @Raydikalx ｜ 11FD6D - ...
@@ -155,10 +253,10 @@ proxies:
   type: vless
   udp: true
   uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-- client-fingerprint: safari
+- client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: GunService
-  name: 🇹🇷TR_4
+  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #5'
   network: grpc
   port: 8444
   reality-opts:
@@ -170,6 +268,45 @@ proxies:
   type: vless
   udp: true
   uuid: a346c521-7a7f-452b-9356-a4893feb5982
+- client-fingerprint: chrome
+  name: '🇪🇪 爱沙尼亚 | EST #2'
+  network: xhttp
+  port: 34451
+  server: ee-2e06d85dc0.shamanapp.online
+  servername: ee-2e06d85dc0.shamanapp.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
+  ws-opts:
+    headers:
+      Host: ee-2e06d85dc0.shamanapp.online
+    path: /ShamanXHTTP2026
+  xhttp-opts:
+    host: ee-2e06d85dc0.shamanapp.online
+    mode: stream-up
+    path: /ShamanXHTTP2026
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: NL 🇳🇱 ｜ @Raydikalx ｜ 009EE8 - ...
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '!!str 01'
+  security: reality
+  server: 51.158.206.86
+  servername: fuck.rkn
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  ws-opts:
+    headers:
+      Host: Copy_Shode_az_Chanel0111Net
 - client-fingerprint: chrome
   name: EE 🇪🇪 | @Raydikalx | 3EFF12
   network: ws
@@ -183,16 +320,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇹🇭TH_17|153KB/s|A004-260618 #1'
-  network: tcp
-  password: 5t6i121em5lkmsmk
-  port: 33079
-  server: th001.zestapp778.com
-  skip-cert-verify: true
-  sni: th001.zestapp778.com
-  type: trojan
-  udp: true
-- name: 🇫🇷FR_68
+- name: '🇫🇷FR_18|902KB/s|M003-260806 #1'
   network: ws
   password: humanity
   port: 443
@@ -215,6 +343,16 @@ proxies:
   tls: true
   type: vless
   uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
+- name: 🇺🇸 US | 85.9.194.75
+  network: tcp
+  port: 443
+  server: 85.9.194.75
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇪🇪139885 | ⚡️Telegram = t.me/S...
@@ -243,53 +381,28 @@ proxies:
     headers:
       Host: fdghyt.com
     path: /vpn-wss/fluxor/59011/
+- name: '🇪🇪EE_5|2.0MB/s|M003-260806 #1'
+  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
+  port: 443
+  server: 13.143.239.127
+  sni: nl1.obxodvpn.us
+  tls: false
+  type: hysteria2
 - client-fingerprint: chrome
-  name: '🇪🇪EE_5|873KB/s|M003-260806 #1'
-  network: ws
-  port: 444
-  server: 109.120.155.155
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  tls: true
-  type: vless
-  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
-  ws-opts:
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-    path: '%2F%40Marisa_kristi'
-- client-fingerprint: chrome
-  name: '🇪🇪EE_6|686KB/s|B007-260618 #1'
-  network: ws
-  port: 4433
-  server: 83.147.216.223
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  tls: true
-  type: vless
-  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
-  ws-opts:
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-    path: '%2F%40Marisa_kristi'
-- name: 🇪🇪EE_1｜1.3MB/s - 151ms
-  port: 9443
-  server: 95.153.32.2
-  skip-cert-verify: true
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- client-fingerprint: firefox
-  name: 🇪🇪_爱沙尼亚 (2)
-  port: 25895
+  flow: xtls-rprx-vision
+  name: 🇪🇪_爱沙尼亚
+  port: 443
   reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: '!!str a73f0410d728c823'
-  server: ee.h1cloud.net
-  servername: www.samsung.com
-  skip-cert-verify: false
-  sni: www.samsung.com
+    public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
+    short-id: '!!str 4a7b1c8d'
+  server: 146.19.143.218
+  servername: tau1.freerunet.online
+  skip-cert-verify: true
+  sni: tau1.freerunet.online
   tls: true
   type: vless
   udp: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -307,57 +420,17 @@ proxies:
   type: vless
   udp: true
   uuid: 5131b5e9-2c3c-44a0-8f18-0641f3f21cac
-- name: 🇪🇪EE_3|3.6MB/s
-  password: None
-  port: 443
+- name: 🇪🇪EE_2｜1.2MB/s - 136ms
+  port: 9443
   server: 95.153.32.2
   skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇪🇪EE_3｜3.6MB/s - 158ms
-  port: 443
-  server: 95.153.32.2
   sni: 95.153.32.2
   tls: true
   type: http
-- name: 🇪🇪EE_11｜469KB/s｜R002-260618 [6...
-  port: 9443
-  server: 192.159.101.174
-  sni: 192.159.101.174
-  tls: true
-  type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇪🇪EE_14｜544KB/s｜M002-260618 [8...
-  network: ws
-  port: 4433
-  server: 83.147.216.223
-  tls: true
-  type: vless
-  uuid: 55889b09-e315-4640-9404-e10834e7728e
-- name: 🇪🇪EE_3｜3.1MB/s - 157ms
-  port: 9443
-  server: 95.153.31.66
-  sni: 95.153.31.66
-  tls: true
-  type: http
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: 🇪🇪EE_1｜1.3MB/s - 29ms
-  network: ws
-  port: 8443
-  server: est.luxes.network
-  tls: true
-  type: vless
-  uuid: a9e5d7ed-ce1a-48eb-9767-4de54fcfaba7
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚_D250E5 - 309ms
+  name: 🇪🇪 爱沙尼亚_D250E5 - 177ms
   network: tcp
   port: 443
   reality-opts:
@@ -368,11 +441,37 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- name: EE 🇪🇪 ｜ @Raydikalx ｜ D446FA - ...
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: 🇪🇪EE_1｜1.3MB/s - 44ms
+  network: ws
+  port: 8443
+  server: est.luxes.network
+  tls: true
+  type: vless
+  uuid: a9e5d7ed-ce1a-48eb-9767-4de54fcfaba7
+- client-fingerprint: chrome
+  encryption: none
+  flow: ''
+  name: MD 🇲🇩 ｜ @Raydikalx ｜ FEEBF9 - ...
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY
+    short-id: '!!str 221ba6174224ca5b'
+  security: reality
+  server: md1.univesalsrv.com
+  tls: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+- name: EE 🇪🇪 ｜ @Raydikalx ｜ 3EFF12 - ...
   password: humanity
   port: 443
-  server: 38.180.163.250
-  sni: www.pleadcourt.org
+  server: 185.36.141.81
+  sni: www.calmlunch.com
   type: trojan
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
@@ -387,9 +486,22 @@ proxies:
   tls: true
   type: vless
   uuid: 2acc3742-c568-11f1-9902-a337233c6cda
-- client-fingerprint: firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: '🇪🇪 #2'
+  network: tcp
+  port: 443
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇪🇪 #3'
   network: tcp
   port: 2053
   reality-opts:
@@ -400,28 +512,3 @@ proxies:
   tls: true
   type: vless
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_6
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: USSepsAbvP9LpByHLV2xD2H8dq8GAJ6G0fINEqD4PAw
-  server: 79.98.37.106
-  servername: ee-central.v8x2b.lol
-  tls: true
-  type: vless
-  uuid: 846cedee-2a52-0001-a0b9-11850ead6a8b
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇪🇪 #3'
-  network: tcp
-  port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
