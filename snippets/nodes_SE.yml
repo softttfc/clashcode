@@ -1,20 +1,23 @@
 proxies:
-- client-fingerprint: chrome
-  name: SE 🇸🇪 | @Raydikalx | 1FE54B
-  network: ws
-  password: humanity
-  port: 8443
-  server: 77.221.138.199
-  sni: www.calmlunch.com
-  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: RU 🇷🇺 ｜ @Raydikalx ｜ E00835 - ...
+  password: MODziWLa9qMuW-4yPa0rfw
+  port: 8388
+  server: msk2.rvpn.app
+  sub_tag: M003-260806
+  type: ss
   udp: true
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
+- cipher: chacha20-ietf-poly1305
+  name: RU 🇷🇺 ｜ @Raydikalx ｜ BC0B2C - ...
+  password: MODziWLa9qMuW-4yPa0rfw
+  port: 8388
+  server: 159.194.251.76
+  sub_tag: A004-260618
+  type: ss
+  udp: true
 - alterId: 64
   cipher: auto
-  name: 瑞典 004
+  name: '瑞典 001 #1'
   network: ws
   port: 443
   server: 148.135.38.107
@@ -28,7 +31,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: 瑞典 005
+  name: '瑞典 002 #1'
   network: ws
   port: 443
   server: 148.135.9.156
@@ -42,7 +45,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: 瑞典 006
+  name: '瑞典 003 #1'
   network: ws
   port: 443
   server: 148.135.14.99
@@ -56,7 +59,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 瑞典 007
+  name: '瑞典 004 #1'
   network: ws
   port: 443
   server: 148.135.31.171
@@ -70,7 +73,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: 瑞典 008
+  name: '瑞典 005 #1'
   network: ws
   port: 443
   server: 148.135.33.140
@@ -84,7 +87,16 @@ proxies:
     path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: 瑞典 009
+  name: '瑞典 007 #1'
+  network: tcp
+  port: 35500
+  server: 148.135.184.84
+  skip-cert-verify: true
+  type: vmess
+  uuid: 744847f4-8549-4bab-a8e4-6b410d271c16
+- alterId: 0
+  cipher: auto
+  name: '瑞典 008 #1'
   network: ws
   port: 80
   server: 185.146.173.25
@@ -97,7 +109,7 @@ proxies:
     path: /
 - alterId: 64
   cipher: auto
-  name: 瑞典 010
+  name: '瑞典 009 #1'
   network: ws
   port: 31002
   server: 37.120.209.126
@@ -109,59 +121,191 @@ proxies:
     headers:
       Host: www.68547476.xyz
     path: /path/191019072927
+- name: SE 🇸🇪 ｜ @Raydikalx ｜ A7EA6C - ...
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 70.34.207.14
+  skip-cert-verify: false
+  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | C2B3A3
+  network: tcp
+  port: 12809
+  server: 13.48.205.27
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 413abec9-e07c-424e-8c0a-da234bef870e
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 8CF965
+  network: ws
+  port: 443
+  server: 185.146.173.59
+  servername: hms02.fxiaomi.sbs
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a
+  ws-opts:
+    headers:
+      Host: hms02.fxiaomi.sbs
+    path: /link
+- alterId: 0
+  cipher: auto
+  name: AutoAiVPN395114
+  network: ws
+  port: '443'
+  server: 185.146.173.59
+  servername: obdii.cfd
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: obdii.cfd
+    path: /linkws
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | CD2072
+  network: tcp
+  port: 41353
+  server: 77.221.141.134
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 655f6f7a-a288-39e1-9e82-b60cd4e81529
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 72E4B5
+  network: ws
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
+  ws-opts:
+    headers:
+      Host: defe.sync-bridge.ir
+    path: /channel@VPNine1
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | BCC710
+  network: ws
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
+  ws-opts:
+    headers:
+      Host: defe.sync-bridge.ir
+    path: /channel@aws_443
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 05B511
+  network: ws
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  udp: true
+  uuid: e9f12253-bc99-4ea6-8ad0-00e407abe269
+  ws-opts:
+    headers:
+      Host: defe.sync-bridge.ir
+    path: /channel@VPNine1
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | DA4D02
+  network: ws
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  udp: true
+  uuid: e9f12253-bc99-4ea6-8ad0-00e407abe269
+  ws-opts:
+    headers:
+      Host: defe.sync-bridge.ir
+    path: /channel@aws_443
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 5F374A
+  network: tcp
+  port: 10045
+  server: family.bucket.x9.kfc-520.com
+  servername: family.bucket.x9.kfc-520.com
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 1dc73529-f030-3ac5-ad64-f7666b9a51bc
+- client-fingerprint: chrome
+  name: SE 🇸🇪 | @Raydikalx | 1FE54B
+  network: ws
+  password: humanity
+  port: 8443
+  server: 77.221.138.199
+  sni: www.calmlunch.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- cipher: aes-256-gcm
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1560... #3'
+  password: AxIYWtskJWIIaefW
+  port: 8388
+  server: 70.34.212.124
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇦🇪SERDNS
+  password: CNL3mxdfZKiPKizL
+  port: 443
+  server: 20.223.236.165
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇸🇪🇮🇷 Tunnel (جمنای)
   password: BTim1LDuYDa_sy8bcYQX8CBM1b9SUnAC
   port: 8711
   server: tun2.banet.online
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇪SE_12|90KB/s|A004-260618 #1'
-  password: MODziWLa9qMuW-4yPa0rfw
-  port: 8388
-  server: 159.194.251.76
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇪SE_8|252KB/s|M003-260806 #1'
-  password: MODziWLa9qMuW-4yPa0rfw
-  port: 8388
-  server: msk2.rvpn.app
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇸🇪_SE_瑞典 - 13ms
+- name: 🇸🇪瑞典
   network: ws
-  port: 80
-  server: 185.146.173.167
-  tls: false
-  type: vmess
-  uuid: b1fecac5-0eb0-440c-ba9b-a937b34881d6
-  ws-opts:
-    headers:
-      Host: 185.146.173.167
-    path: /
-- alterId: 0
-  cipher: auto
-  name: SE 22 → tg@nicevpn123 - 12ms
-  network: ws
+  password: humanity
   port: 443
-  server: 185.146.173.59
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-opts:
-    headers:
-      Host: 185.146.173.59
-    path: /
-- name: SE 12 → tg@nicevpn123 - 9ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
+  server: 77.221.139.114
+  servername: www.cordweave.com
   skip-cert-verify: true
+  sni: www.cordweave.com
+  tls: true
   type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 6ms
+  name: SE 20 → tg@nicevpn123 - 18ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -172,3 +316,28 @@ proxies:
     headers:
       Host: 185.146.173.129
     path: /
+- alterId: 0
+  cipher: auto
+  name: SE 22 → tg@nicevpn123 - 17ms
+  network: ws
+  port: 443
+  server: 185.146.173.59
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: 185.146.173.59
+    path: /
+- name: SE 12 → tg@nicevpn123 - 18ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
+- name: SE 🇸🇪 ｜ @Raydikalx ｜ 43B056 - ...
+  password: humanity
+  port: 443
+  server: 192.145.30.27
+  sni: www.pleadcourt.org
+  type: trojan
