@@ -1,9 +1,15 @@
 proxies:
 - cipher: chacha20-ietf-poly1305
-  name: 英国_2AD7DA - 144ms
+  name: 英国_46FFA3 - 152ms
   password: uvKNudV-N8AUCrykPiyznA
   port: 56137
   server: 177.202.111.19
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧_GB_英国_1 - 115ms
+  password: Y3bjXCJbTPlRdyTqFAYGDZ
+  port: 443
+  server: 78.129.140.11
   type: ss
 - cipher: rc4-md5
   name: 🇬🇧GB_1|247KB/s|A004-260618 [07...
@@ -17,19 +23,13 @@ proxies:
   port: 8080
   server: 98.98.142.161
   type: ss
-- name: GB%E8%8B%B1%E5%9B%BD%28mibei77...
-  password: 0ldyjdhd-vpnjantit.com
-  port: 4443
-  server: 46.29.142.57
-  sni: hu2.vpnjantit.com
-  type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 27 → tg@nicevpn123 - 107...
+  name: 🇬🇧 GB 27 → tg@nicevpn123 - 118...
   password: Bog0ELmMM9DSxDdQ
   port: 443
   server: 52.56.201.59
   type: ss
-- name: 🇬🇧 GB 23 → tg@nicevpn123 - 101...
+- name: 🇬🇧 GB 23 → tg@nicevpn123 - 119...
   password: 1d7692c0-f51c-11ee-91eb-1239d0255272
   port: 443
   server: 51.38.65.155
@@ -53,15 +53,22 @@ proxies:
   port: 19999
   server: 82.110.60.9
   type: ss
-- name: GB 🇬🇧 | @Raydikalx | D54942 - ...
-  password: 5t6i121em5lkmsmk
-  port: 29813
-  server: en001.zestapp778.com
-  sni: en001.zestapp778.com
-  type: trojan
 - name: GB 🇬🇧 | @Raydikalx | DA2BBB - ...
   password: humanity
   port: 443
   server: 138.68.131.253
   sni: www.pleadcourt.org
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 360227 - ...
+  network: ws
+  port: 80
+  server: 57.129.132.223
+  tls: false
+  type: vmess
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  ws-opts:
+    headers:
+      Host: 57.129.132.223
+    path: /

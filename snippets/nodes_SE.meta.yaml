@@ -1,41 +1,51 @@
 proxies:
-- name: 🇸🇪 瑞典_FD843F - 131ms
-  port: 1080
-  server: 171.25.158.95
-  type: socks5
-  username: Og==
-- name: 🇸🇪SE_1|1.2MB/s - 125ms
+- name: 🇸🇪SE_1|3.6MB/s - 136ms
   password: None
   port: 443
   server: 146.70.242.130
   sni: 146.70.242.130
   tls: true
   type: http
-- name: 🇸🇪SE_2|2.5MB/s - 130ms
+- name: 🇸🇪SE_2|2.1MB/s - 134ms
+  password: None
   port: 443
   server: 79.142.77.63
   sni: 79.142.77.63
   tls: true
   type: http
-- name: 🇸🇪SE_1|3.0MB/s - 142ms
-  port: 443
-  server: 146.70.242.146
-  sni: 146.70.242.146
-  tls: true
-  type: http
-- name: 🇸🇪SE_1|1.1MB/s - 141ms
+- name: 🇸🇪SE_1|1.1MB/s - 142ms
   port: 443
   server: 217.210.129.243
   sni: 217.210.129.243
   tls: true
   type: http
-- name: 🇸🇪SE_2|1.5MB/s - 134ms
+- name: 🇸🇪SE_1|1.7MB/s - 136ms_1
+  password: None
+  port: 443
+  server: 146.70.242.146
+  sni: 146.70.242.146
+  tls: true
+  type: http
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_4|2.2MB/s - 134ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
+    short-id: '!!str ecb6f8fb31668176'
+  server: 171.25.158.163
+  tls: true
+  type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+- name: 🇸🇪SE_2|1.5MB/s - 142ms
   port: 443
   server: 149.50.216.65
   sni: 149.50.216.65
   tls: true
   type: http
-- name: 🇸🇪SE_1|2.6MB/s - 139ms
+- name: 🇸🇪SE_1|2.6MB/s - 136ms
   port: 9443
   server: 146.70.242.146
   sni: 146.70.242.146
@@ -44,7 +54,7 @@ proxies:
 - client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇸🇪SE瑞典丨yoyapai.com - 124ms
+  name: 🇸🇪SE瑞典丨yoyapai.com - 133ms
   network: tcp
   port: 443
   reality-opts:
@@ -57,39 +67,7 @@ proxies:
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
 - alterId: 0
   cipher: auto
-  name: 🇸🇪_SE_瑞典 - 13ms
-  network: ws
-  port: 80
-  server: 185.146.173.167
-  tls: false
-  type: vmess
-  uuid: b1fecac5-0eb0-440c-ba9b-a937b34881d6
-  ws-opts:
-    headers:
-      Host: 185.146.173.167
-    path: /
-- alterId: 0
-  cipher: auto
-  name: SE 22 → tg@nicevpn123 - 12ms
-  network: ws
-  port: 443
-  server: 185.146.173.59
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-opts:
-    headers:
-      Host: 185.146.173.59
-    path: /
-- name: SE 12 → tg@nicevpn123 - 9ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: SE 20 → tg@nicevpn123 - 6ms
+  name: SE 20 → tg@nicevpn123 - 18ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -100,28 +78,53 @@ proxies:
     headers:
       Host: 185.146.173.129
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: SE 🇸🇪 | @Raydikalx | C3C7E8 - ...
-  network: tcp
-  port: 1443
-  reality-opts:
-    public-key: PUj1la__ltNjv_ASE5n4HJY7GiRs--N-0aYhkcAApCI
-    short-id: '!!str 7b6803a79bba5c52'
-  server: se.peregrine-sub.net
+- alterId: 0
+  cipher: auto
+  name: SE 22 → tg@nicevpn123 - 17ms
+  network: ws
+  port: 443
+  server: 185.146.173.59
   tls: true
-  type: vless
-  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: 185.146.173.59
+    path: /
+- name: SE 12 → tg@nicevpn123 - 18ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
+- name: SE 🇸🇪 | @Raydikalx | A7EA6C - ...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 70.34.207.14
+  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
+  type: trojan
 - encryption: none
   flow: ''
-  name: SE 🇸🇪 | @Raydikalx | 35BA6A - ...
+  name: SE 🇸🇪 | @Raydikalx | 19CF1C - ...
   network: ws
   port: 14430
   server: 5.178.109.174
   tls: false
   type: vless
   uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | 644696 - ...
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
+    short-id: '!!str 0e7741edc378622f'
+  server: 31.172.65.4
+  tls: true
+  type: vless
+  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -135,36 +138,22 @@ proxies:
   tls: true
   type: vless
   uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
-- client-fingerprint: qq
+- client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: SE 🇸🇪 | @Raydikalx | 837B22 - ...
+  name: SE 🇸🇪 | @Raydikalx | C3C7E8 - ...
   network: tcp
-  port: 8443
+  port: 1443
   reality-opts:
-    public-key: wRvUAKwcHc4pBNVouIcVjQkVD9aCRR-AmtcFyBV36lU
-    short-id: '!!str 0e7741edc378622f'
-  server: 31.172.65.4
+    public-key: PUj1la__ltNjv_ASE5n4HJY7GiRs--N-0aYhkcAApCI
+    short-id: '!!str 7b6803a79bba5c52'
+  server: se.peregrine-sub.net
   tls: true
   type: vless
-  uuid: 9c6e83fc-b755-4ad4-9b0a-14b610153d8f
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: SE 🇸🇪 | @Raydikalx | 3F69F8 - ...
-  network: ws
-  port: 444
-  server: 109.120.155.155
-  tls: true
-  type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: SE 🇸🇪 | @Raydikalx | 3750F9 - ...
-  network: ws
-  port: 444
-  server: 109.120.155.155
-  tls: true
-  type: vless
-  uuid: c325206e-0f0c-4472-9d76-43e9b9b2ef63
+  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
+- name: SE 🇸🇪 | @Raydikalx | 43B056 - ...
+  password: humanity
+  port: 443
+  server: 192.145.30.27
+  sni: www.pleadcourt.org
+  type: trojan
