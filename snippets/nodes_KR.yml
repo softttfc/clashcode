@@ -1,33 +1,72 @@
 proxies:
+- name: KR韩国(v2clash.blog 2026-10.31更新...
+  network: ws
+  password: humanity
+  port: 443
+  server: 141.164.56.22
+  servername: www.cordweave.com
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: KR韩国(mibei77.com 米贝节点分享) (2)(v...
+  network: ws
+  password: humanity
+  port: 8443
+  server: 141.164.34.161
+  servername: www.cordweave.com
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  sub_tag: F003-260618
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: KR韩国(mibei77.com 米贝节点分享) (3)(v...
+  network: ws
+  password: humanity
+  port: 443
+  server: 54.116.249.102
+  servername: www.cordweave.com
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  sub_tag: F003-260618
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
+- client-fingerprint: chrome
+  name: KR韩国(mibei77.com 米贝节点分享) (4)(v...
+  network: ws
+  password: humanity
+  port: 443
+  server: 103.218.173.218
+  servername: www.cordweave.com
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  sub_tag: F003-260618
+  tls: true
+  type: trojan
+  udp: true
+  ws-opts:
+    path: /assignment
 - cipher: aes-256-gcm
-  name: '🇰🇷KR_20|372KB/s|M001-260618 #1'
+  name: 🇰🇷KR_26
   password: KixLvKzwjekG00rm
   port: 8000
   server: 141.164.45.187
   sub_tag: M001-260618
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: '@npv_vpn11 - 86ms'
-  network: ws
-  packet-encoding: xudp
-  port: 443
-  server: nickgus.cc.cd
-  servername: nickgus.cc.cd
-  skip-cert-verify: false
-  sub_tag: A004-260618
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 56eee791-99e8-4e11-9d27-539b46c14368
-  ws-opts:
-    headers:
-      Host: nickgus.cc.cd
-    path: /photos
-  xudp: true
 - client-fingerprint: chrome
-  name: 🇰🇷KR_39
+  name: 🇰🇷KR_33
   network: tcp
   password: 5t6i121em5lkmsmk
   port: 48851
@@ -37,47 +76,26 @@ proxies:
   sub_tag: A004-260618
   type: trojan
   udp: true
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: 🇰🇷_韩国 (4) - 133ms
-  network: tcp
-  packet-encoding: xudp
-  port: 8888
-  server: 146.56.112.110
-  servername: ''
-  skip-cert-verify: true
-  sub_tag: M003-260806
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR_32|595KB/s|M003-260806 [c...
-  network: ws
+  name: '@npv_vpn11 - 1182ms'
+  network: tcp
   packet-encoding: xudp
-  port: 80
-  server: 132.145.80.230
-  servername: 'null'
+  port: 800
+  server: 129.154.61.196
+  servername: ''
   skip-cert-verify: false
-  sub_tag: M003-260806
+  sub_tag: R002-260618
   tls: false
   type: vmess
   udp: true
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 'null'
-    path: /cctv13.m3u8
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
   xudp: true
 - alpn:
   - ''
   alterId: 0
   cipher: auto
-  name: '🇰🇷KR_18|316KB/s|P002-260618 #1'
+  name: '🇰🇷KR_22|376KB/s|P002-260618 #1'
   network: ws
   port: '443'
   server: seoul02.zgjok.com
@@ -92,22 +110,29 @@ proxies:
     headers:
       Host: seoul02.zgjok.com
     path: /
+- cipher: aes-256-gcm
+  name: 🇰🇷KR_22|389KB/s|M002-260618 [e...
+  password: Y6R9pAtvxxzmGC
+  port: 5001
+  server: 141.164.45.187
+  sub_tag: M002-260618
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
-  name: 🇰🇷KR_25|183KB/s|R002-260618 [f...
-  network: http
-  port: 123
-  server: 43.108.103.167
-  sub_tag: R002-260618
+  name: '韩国 001 #1'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  skip-cert-verify: false
   tls: false
   type: vmess
-  udp: true
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
-- name: '韩国 003 #1'
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /
+- name: '韩国 004 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -120,7 +145,7 @@ proxies:
     headers:
       Host: hhcm.hhxaf.cc.cd
     path: /
-- name: '韩国 004 #1'
+- name: '韩国 005 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -134,7 +159,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 005 #1'
+  name: '韩国 006 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -146,7 +171,7 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 006 #1'
+  name: '韩国 007 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -158,7 +183,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 007 #1'
+  name: '韩国 008 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -171,7 +196,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 008 #1'
+  name: '韩国 009 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -183,7 +208,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 009 #1'
+  name: '韩国 010 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -195,7 +220,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 010 #1'
+  name: '韩国 011 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -207,7 +232,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 011 #1'
+  name: '韩国 012 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 8443
@@ -219,7 +244,7 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 012 #1'
+  name: '韩国 013 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -231,7 +256,7 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 013 #1'
+  name: '韩国 014 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -243,7 +268,7 @@ proxies:
       Host: hhcm.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 014 #1'
+  name: '韩国 015 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -255,7 +280,7 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
     path: /
 - client-fingerprint: chrome
-  name: '韩国 015 #1'
+  name: '韩国 016 #1'
   network: ws
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   port: 443
@@ -266,21 +291,6 @@ proxies:
     headers:
       Host: hhcm.hhxaf.cc.cd
     path: /
-- alterId: 0
-  cipher: auto
-  name: '❓Other_25|236KB/s|M002-260618 #1'
-  network: ws
-  port: '80'
-  server: 132.145.80.230
-  servername: kr02.a0a.xyz
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: kr02.a0a.xyz
-    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: '韩国 017 #1'
@@ -294,69 +304,113 @@ proxies:
     headers:
       Host: mizban888.servecounterstrike.com
     path: /
+- alterId: 1
+  cipher: auto
+  name: '韩国 018 #1'
+  network: ws
+  port: 8888
+  server: 54.180.96.67
+  skip-cert-verify: true
+  type: vmess
+  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
+  ws-opts:
+    headers:
+      Host: 54.180.96.67
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 (3) - 128ms
-  network: tcp
+  name: '韩国 019 #1'
+  network: ws
   port: 443
-  server: 140.238.2.250
-  servername: null
-  tls: false
+  server: fullaccesstokoreannetsubnode1.azurewebsites.net
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- cipher: aes-256-gcm
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ 921AB4 - ...
-  password: e4FCWrgpkji3QY
-  port: 9101
-  server: 141.164.45.187
-  type: ss
-  udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷_韩国 (2) - 657ms
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
+    path: /ws
+- client-fingerprint: firefox
+  name: KR 🇰🇷 ｜ @Raydikalx ｜ 6FD10F - ...
   network: tcp
-  port: 800
-  server: 129.154.61.196
-  servername: ''
-  tls: false
-  type: vmess
+  password: 5t6i121em5lkmsmk
+  port: 48851
+  server: 158.247.255.150
+  sni: kr002.zestapp778.com
+  type: trojan
   udp: true
-  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
-- alterId: 0
-  cipher: auto
-  name: 日本 V2CROSS.COM - 143ms
-  network: tcp
-  port: 123
-  server: 43.108.103.167
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
 - cipher: aes-256-cfb
-  name: KR 🇰🇷 | @Raydikalx | FBAF15
+  name: '@SylphNet | 1405-08-10 #114'
   password: 1234!@#$
   port: 1774
   server: 49.254.204.133
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: '@SylphNet | 1405-08-09 #199'
-  password: 1234!@#$
-  port: 1774
-  server: 49.254.204.134
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇰🇷KR-211.178.105.134-0153
+  name: 🇰🇷KR-211.178.105.134-0234
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
   type: ss
   udp: true
+- cipher: aes-256-gcm
+  name: '>>@shadowproxy66::XX #2'
+  password: lGqs95QkFHo2NV
+  port: 5498
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 37341B
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #3'
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇰🇷KR-141.164.45.187-6025
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇰🇷KR-141.164.45.187-0235
+  password: TEzjfAYq2IjtuoS
+  port: 6697
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '🇰🇷KR_30|82KB/s|B007-260618 #1'
+  password: Y6R9pAtvxxzmGC
+  port: 9090
+  server: 141.164.45.187
+  type: ss
+  udp: true
+- name: 'KR 🇰🇷 | @Raydikalx | 6F462A #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 43.164.132.109
+  sni: www.cordweave.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.cordweave.com
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 (8) - 132ms
+  name: '@npv_vpn11 #584'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -371,7 +425,7 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: '@npv_vpn11 #2919'
+  name: '@npv_vpn11 #749'
   network: ws
   port: '80'
   server: 132.145.80.230
@@ -384,6 +438,17 @@ proxies:
     headers:
       Host: ''
     path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 ｜ @Raydikalx ｜ E9F97A - ...
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  servername: null
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
 - alterId: 0
   cipher: auto
   name: KR 🇰🇷 | @Raydikalx | 1642FE
@@ -425,23 +490,21 @@ proxies:
     path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 (5) - 126ms
+  name: KR 🇰🇷 ｜ @Raydikalx ｜ 168118 - ...
   network: tcp
   port: 80
   server: 217.142.138.61
-  servername: ''
   tls: false
   type: vmess
   udp: true
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - alterId: 0
   cipher: auto
-  name: 未知137
+  name: KR 🇰🇷 | @Raydikalx | 5D260D
   network: tcp
   port: 80
   server: 43.155.199.22
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
@@ -535,107 +598,98 @@ proxies:
     headers:
       Host: zwRcf79GExd13VGH.v.3dns.vip
     path: /ws-vmess
-- cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #3'
-  password: TEzjfAYq2IjtuoS
-  port: 6697
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ FAC912 - ...
-  password: Y6R9pAtvxxzmGC
-  port: 9090
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇰🇷KR-218.237.185.234-0158
-  password: qwerREWQ@@
-  port: 4652
-  server: p141.panda001.net
-  type: ss
-- name: 🇰🇷KR-121.78.213.3-0069
-  password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S
-  port: 443
-  server: 121.78.213.3
-  sni: httah.freetrade.link
-  type: trojan
-- cipher: aes-256-gcm
-  name: '🇰🇷KR_22|389KB/s|M002-260618 #1'
-  password: Y6R9pAtvxxzmGC
-  port: 5001
-  server: 141.164.45.187
-  type: ss
-- name: 韩国
-  network: ws
-  password: humanity
-  port: 443
-  server: 54.116.249.102
-  servername: www.cordweave.com
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 韩国 (2)
-  network: ws
-  password: humanity
-  port: 443
-  server: 103.218.173.218
-  servername: www.cordweave.com
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  tls: true
-  type: trojan
-  udp: true
-  ws-opts:
-    path: /assignment
-- name: 🇰🇷韩国 01
+- name: KR 🇰🇷 | @Raydikalx | 83D0D1
   network: ws
   password: humanity
   port: 8443
   server: 141.164.34.161
-  servername: www.cordweave.com
-  skip-cert-verify: true
   sni: www.cordweave.com
-  tls: true
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.cordweave.com
     path: /assignment
-- name: 🇰🇷韩国 02
+- name: '🇰🇷 韩国 | KOR #4'
   network: ws
   password: humanity
   port: 443
-  server: 43.164.132.109
-  servername: www.cordweave.com
+  server: 64.110.82.71
   skip-cert-verify: true
   sni: www.cordweave.com
-  tls: true
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.cordweave.com
     path: /assignment
-- name: 🇰🇷韩国 03
+- name: KR 🇰🇷 | @Raydikalx | FB1D9A
+  network: ws
+  password: humanity
+  port: 443
+  server: 54.116.249.102
+  sni: www.cordweave.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.cordweave.com
+    path: /assignment
+- name: KR 🇰🇷 | @Raydikalx | 9F8E71
   network: ws
   password: humanity
   port: 443
   server: 141.164.56.22
-  servername: www.cordweave.com
-  skip-cert-verify: true
   sni: www.cordweave.com
-  tls: true
   type: trojan
   udp: true
   ws-opts:
+    headers:
+      Host: www.cordweave.com
     path: /assignment
 - cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #2'
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
   password: Y6R9pAtvxxzmGC
   port: 8888
   server: 141.164.45.187
   type: ss
+- cipher: aes-256-cfb
+  name: 🇰🇷KR-218.237.185.234-0238
+  password: qwerREWQ@@
+  port: 4652
+  server: p141.panda001.net
+  type: ss
+- name: 'nukcrow #477'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sni: 154.90.62.70
+  type: trojan
+- name: KR 🇰🇷 ｜ @Raydikalx ｜ 713DBA - ...
+  network: tcp
+  password: dc9e33c7a6df4164
+  port: 20039
+  server: 168.110.119.243
+  sni: ikr100a.zxom.eu.org
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_27|285KB/s|A004-260618 #1'
+  network: none
+  port: '443'
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- name: '🇰🇷 韩国 | KOR #5'
+  password: humanity
+  port: 443
+  server: 64.110.82.71
+  skip-cert-verify: true
+  sni: www.cordweave.com
+  type: trojan
 - alterId: 0
   cipher: auto
   name: '🇰🇷 韩国|@ripaojiedian #3'
@@ -651,9 +705,16 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
+- name: '%F0%9F%87%B0%F0%9F%87%B7_KR_%E...'
+  password: 3637190e-4ce3-41cd-9425-f5676345b38c
+  port: 12308
+  server: 3.34.91.121
+  skip-cert-verify: true
+  sni: kr02.ulifeai.com
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国 - 1024ms
+  name: 🇰🇷 韩国 - 1012ms
   network: ws
   port: 443
   server: 8nTzyR5KNivfabaT.v.3dns.vip
@@ -666,20 +727,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR_1｜3.3MB/s - 581ms
-  network: ws
-  port: 443
-  server: StMONzfjYcGgEOmG.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 0b80814e-7b96-4ec2-bbe2-fd17435e33b4
-  ws-opts:
-    headers:
-      Host: StMONzfjYcGgEOmG.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 145...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 163...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -690,17 +738,15 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- cipher: aes-256-gcm
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ F95186 - ...
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 141.164.45.187
-  type: ss
-- name: 🇰🇷KR_19
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
-  skip-cert-verify: true
-  sni: 154.90.62.70
+- name: KR 🇰🇷 ｜ @Raydikalx ｜ FB1D9A - ...
+  password: humanity
+  port: 443
+  server: 54.116.249.102
+  sni: www.cordweave.com
+  type: trojan
+- name: KR 🇰🇷 ｜ @Raydikalx ｜ 4A9A8D - ...
+  password: humanity
+  port: 443
+  server: 103.218.173.218
+  sni: www.cordweave.com
   type: trojan
