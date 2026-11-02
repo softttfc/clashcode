@@ -1,29 +1,22 @@
 proxies:
 - alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: db
-  name: 🇹🇼TW_37
-  network: grpc
-  password: 0a9f1f5a397bd427
+  - http/1.1
+  client-fingerprint: unsafe
+  name: YFZ 133 @Outline_Vpn
+  network: ws
+  password: humanity
   port: 443
-  server: 125.227.86.45
-  skip-cert-verify: true
-  sni: TG.freecodes
-  sub_tag: R002-260618
+  server: 188.114.98.0
+  servername: www.pleadcourt.org
+  skip-cert-verify: false
+  sni: www.pleadcourt.org
+  tls: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼_TW_中国台湾
-  network: ws
-  port: 443
-  server: 654168416355441.oylfmxz.cn
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: www.pleadcourt.org
+    path: /assignment
 - grpc-opts:
     grpc-service-name: ''
   name: TW 🇹🇼 | @Raydikalx | 98C5EE
@@ -170,15 +163,18 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 93A9B3
+  name: TW4
   network: ws
   port: 443
   server: 9641684.sdf65h4.top
+  skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
   uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
   ws-opts:
+    headers:
+      host: 9641684.sdf65h4.top
     path: /
 - alterId: 0
   cipher: auto
@@ -197,10 +193,11 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 8818D4
+  name: TW5
   network: ws
   port: 443
   server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
@@ -224,10 +221,11 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 387389
+  name: TW3
   network: ws
   port: 443
   server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  skip-cert-verify: true
   tls: true
   type: vmess
   udp: true
@@ -308,12 +306,11 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: TW2
+  name: TW 🇹🇼 | @Raydikalx | 5C7CA9
   network: ws
   port: 52300
   server: hi.northcluster.info
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: 6e571484-4166-4699-8f58-b34a1823691f
@@ -334,49 +331,26 @@ proxies:
     headers:
       Host: hi.northcluster.info
     path: /video
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG_123|296KB/s|C002-260622 #1'
-  network: ws
-  port: '80'
-  server: mdk.mdmekjll.best
-  servername: mdk.mdmekjll.best
-  tls: false
-  type: vmess
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼TW_25
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: '🇹🇼 🇨🇳 台湾 | TWN #5'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 45502
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
   udp: true
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  ws-opts:
-    headers:
-      Host: mdk.mdmekjll.best
-    path: /game/resources
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-211.72.35.110-0057
-  network: ws
-  port: 443
-  server: 211.72.35.110
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: e87f326f-55ac-487f-a3d1-57c592bb663a
-  ws-opts:
-    headers:
-      Host: woidenca1.jsworld.eu.org
-    path: /nishikata3
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-220.130.80.179-0056
-  network: ws
-  port: 443
-  server: 220.130.80.179
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: ceb8a7f4-a45b-48a7-8f8e-ca7124a5ebee
-  ws-opts:
-    headers:
-      Host: v2ray2.udpgw.com
-    path: /howdy
 - name: TW台湾(mibei77.com 米贝节点分享) (2) -...
   password: d9fa9bde-de15-4a5d-bee2-88db7599bfd8
   port: 2053
@@ -407,12 +381,39 @@ proxies:
   name: TW
   network: ws
   port: 443
-  server: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+  server: 654168416355441.d6f54hd1j.cc
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
   ws-opts:
     headers:
-      host: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
+      host: 654168416355441.d6f54hd1j.cc
     path: /
+- alterId: 0
+  cipher: auto
+  name: TW2
+  network: ws
+  port: 80
+  server: mdk.mdmekjll.best
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      host: mdk.mdmekjll.best
+    path: /game/resources
+- alpn:
+  - http/1.1
+  name: 'TW台湾 #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.pleadcourt.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.pleadcourt.org
+    path: '%2Fassignment'
