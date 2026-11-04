@@ -29,9 +29,11 @@ python dupconfig.py 源.yaml 输出.yaml	标准去重 + 名称唯一化 + 字段
     --verify-budget SEC     mihomo 验证总预算秒数（默认 VERIFY_BUDGET_SECONDS）
     --mihomo-bin PATH       mihomo 二进制路径（默认 VERIFY_MIHOMO_BIN）
     --strict-verify         有节点被 --verify-nodes 剔除时返回非零码
+    --merge-by-render       L2：合并渲染等价的节点（会丢失 BEHAVIOR_FIELDS 差异，见函数注释）
 
 处理流水线:
     1. 按 identity 去重（桥接 OpenRay）
+    1.2 L2 渲染等价去重（--merge-by-render 开启，可选）
     1.5 协议兼容性检查（--protocol-check 开启，会删节点）
     2. 名称归一化 + 唯一化（'...' 替换 / NFC / 全角→半角 / strip / 同名加 #N）
     3. 同步 proxy-groups 引用（字符清洗导致的原名消失）
@@ -111,6 +113,126 @@ VERIFY_BUDGET_SECONDS = 1800          # 验证总预算（秒）；超预算停�
 VERIFY_MIHOMO_BIN = "mihomo"          # mihomo 二进制路径；可被 --mihomo-bin 覆盖
 VERIFY_TEMP_PREFIX = "dupverify-"     # 临时目录前缀
 VERIFY_STRICT = False                 # 有节点被剔除时是否返回非零码
+
+
+# ============================================================================
+# 【本次新增 C3】L2 渲染等价去重（--merge-by-render 开启）
+# -----------------------------------------------------------------------------
+# 目的：
+#   在 L1（identity 去重）之上，进一步合并「identity 不同，但在当前
+#   render.py 输出中逐字节相同」的节点。
+#
+# 典型场景：
+#   - 仅 BEHAVIOR_FIELDS 不同的节点（ip-version / tfo / udp / packet-encoding 等）
+#   - 这些字段在 identity 中使节点不同（L1 不合并）
+#   - 但 clash_proxy 不输出这些字段，所以渲染相同（L2 可以合并）
+#
+# 代价（重要）：
+#   - 合并后保留一个 dict，另一个的 BEHAVIOR_FIELDS 差异丢失
+#   - 由于 dupconfig 最终输出原始 dict（不经过 render），产物中只保留
+#     被 pick 策略选中的那个副本的扩展字段
+#   - 因此仅在用户明确「不关心 BEHAVIOR_FIELDS 差异」时启用
+#
+# 设计要点：
+#   - key 用 clash_proxy 输出（排除 name / tag，因为这两个含 identity）
+#   - pick 策略跟随 --keep（first / best），与 L1 一致
+#   - 合并时打印诊断，让用户知情：合并了多少组、扩展字段差异是什么
+# ============================================================================
+def dedup_by_render_equivalence(proxies, keep="first", verbose=False):
+    """L2：渲染等价去重。返回 (去重后列表, 合并数)。
+
+    仅在 --merge-by-render 开启时调用。若 openray.render 不可用，安全降级。
+    """
+    if not isinstance(proxies, list) or not proxies:
+        return proxies, 0
+
+    # 安全降级：openray.render 不可用时，跳过 L2（不阻塞主流程）
+    try:
+        import json as _json
+        from openray.render import clash_proxy as _clash_proxy, Unsupported as _Unsupported
+    except ImportError as e:
+        print(f"⚠️  --merge-by-render 需要 openray.render: {e}（跳过 L2）", file=sys.stderr)
+        return proxies, 0
+
+    # 计算渲染 key（排除 name / tag，因为它们嵌入了 identity，会导致 key 永不相等）
+    def render_key(p):
+        proxy = clash_dict_to_proxy(p)
+        if proxy is None:
+            return None
+        try:
+            ob = _clash_proxy(proxy)
+        except (_Unsupported, ValueError, KeyError):
+            return None
+        return _json.dumps(
+            {k: v for k, v in ob.items() if k not in ("name", "tag")},
+            sort_keys=True, ensure_ascii=False,
+        )
+
+    # 按渲染 key 分桶（非 dict / 不可渲染的节点单独分桶，保留不合并）
+    groups = {}
+    for p in proxies:
+        if not isinstance(p, dict):
+            groups.setdefault(("non-dict", id(p)), [p])
+            continue
+        rk = render_key(p)
+        if rk is None:
+            groups.setdefault(("unrenderable", id(p)), [p])
+            continue
+        groups.setdefault(("render", rk), []).append(p)
+
+    multi_groups = [g for g in groups.values() if len(g) > 1]
+    if not multi_groups:
+        return proxies, 0
+
+    total_merged = sum(len(g) - 1 for g in multi_groups)
+
+    # 诊断：打印合并了多少组、扩展字段差异（最多展示 5 组）
+    print(f"⚠️  L2 渲染等价去重：合并 {len(multi_groups)} 组，减少 {total_merged} 个节点")
+    try:
+        from openray_bridge import BEHAVIOR_FIELDS
+    except ImportError:
+        BEHAVIOR_FIELDS = ()
+    shown = 0
+    for group in multi_groups:
+        if shown >= 5:
+            break
+        exts = [
+            {k: p.get(k) for k in BEHAVIOR_FIELDS if p.get(k) not in (None, "", [], {})}
+            for p in group
+        ]
+        # 只展示"扩展字段确实不同"的组
+        if len({tuple(sorted(e.items(), key=lambda x: x[0])) for e in exts}) > 1:
+            print(f"    · {len(group)} 个节点合并，扩展字段差异：")
+            for p, ext in zip(group[:3], exts[:3]):
+                print(f"        - {p.get('name', '?')}: {ext}")
+            if len(group) > 3:
+                print(f"        ... 还有 {len(group) - 3} 个")
+            shown += 1
+
+    # pick 策略（与 dedup_by_identity 一致）
+    def pick(candidates):
+        if keep == "best":
+            def score(p):
+                name = str(p.get("name", ""))
+                s = 0
+                if any(0x1F1E6 <= ord(c) <= 0x1F1FF for c in name):
+                    s += 10
+                if 5 <= len(name) <= 30:
+                    s += 5
+                for w in ("订阅", "加入", "频道", "telegram", "@", "http"):
+                    if w in name.lower():
+                        s -= 20
+                return s
+            return max(candidates, key=score)
+        return candidates[0]
+
+    result = []
+    for candidates in groups.values():
+        if len(candidates) == 1:
+            result.append(candidates[0])
+        else:
+            result.append(pick(candidates))
+    return result, total_merged
 
 
 # ============================================================================
@@ -685,6 +807,11 @@ def main():
     parser.add_argument("--strict-verify", action="store_true",
                         default=VERIFY_STRICT,
                         help="有节点被 --verify-nodes 剔除时返回非零码")
+    # ---- 【本次新增 C3】L2 渲染等价去重 ----
+    parser.add_argument("--merge-by-render", action="store_true",
+                        default=False,
+                        help="L2：合并渲染等价的节点（会丢失 BEHAVIOR_FIELDS 差异，"
+                             "仅在不关心 ip-version/tfo/udp 等扩展字段时启用）")
     args = parser.parse_args()
 
     # ---- 参数校验 ----
@@ -740,6 +867,21 @@ def main():
 
     if args.diagnose:
         diagnose_duplicates(deduped, "identity 去重后", debug_names)
+
+    # ---------- 【本次新增 C3】1.2 L2 渲染等价去重（--merge-by-render 开启） ----------
+    # 在 L1 之后执行：L1 合并 identity 相同的节点（无信息丢失），
+    # L2 合并 identity 不同但渲染相同的节点（有信息丢失，需显式开启）。
+    if args.merge_by_render:
+        before_l2 = len(deduped)
+        deduped, l2_merged = dedup_by_render_equivalence(
+            deduped, keep=args.keep, verbose=args.verbose,
+        )
+        if l2_merged:
+            print(f"🔬 L2 合并: {l2_merged} 个（{before_l2} → {len(deduped)}）")
+            stats["duplicates"] += l2_merged
+            stats["unique"] -= l2_merged
+        if args.diagnose:
+            diagnose_duplicates(deduped, "L2 去重后", debug_names)
 
     # ---------- 1.5 协议兼容性检查（可选，零出站） ----------
     if args.protocol_check:
@@ -869,4 +1011,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
