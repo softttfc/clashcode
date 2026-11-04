@@ -1,4 +1,32 @@
 proxies:
+- name: 🇹🇼TW_1|1.6MB/s - 202ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 45502
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 🇹🇼TW_2|1.1MB/s - 144ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 47786
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 🇹🇼TW_1|3.0MB/s - 141ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 54815
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 🇹🇼TW_2|1.4MB/s - 139ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 22003
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - name: TW台湾(mibei77.com 米贝节点分享) (2) -...
   password: d9fa9bde-de15-4a5d-bee2-88db7599bfd8
   port: 2053
@@ -25,16 +53,16 @@ proxies:
   server: 162.159.140.116
   sni: 17931084844658.206352.xyz
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 38AE0B - ...
+- alpn:
+  - http/1.1
+  name: TW%E5%8F%B0%E6%B9%BE%28v2clash...
   network: ws
-  port: 80
-  server: mdk.mdmekjll.best
-  tls: false
-  type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  password: humanity
+  port: 443
+  server: 188.114.98.0
+  sni: www.pleadcourt.org
+  type: trojan
   ws-opts:
     headers:
-      Host: mdk.mdmekjll.best
-    path: /
+      Host: www.pleadcourt.org
+    path: /assignment

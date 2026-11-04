@@ -1,60 +1,66 @@
 proxies:
+- cipher: chacha20-ietf-poly1305
+  name: 🇭🇰 HK SS-20 | free-nodes - 217...
+  password: 28789988-887e-4e41-83cd-27bbfb7999ad
+  port: 40006
+  server: xunlinknode.csdjhajkshdjkas.com
+  type: ss
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇭🇰 HK VLESS-51 | free-nodes - ...
+  name: 🇭🇰 HK VLESS-40 | free-nodes - ...
+  network: tcp
+  port: 443
+  server: s151.wagahaha.xyz
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇭🇰 HK VLESS-64 | free-nodes - ...
+  network: tcp
+  port: 443
+  server: s299.freessr.bid
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇭🇰 HK VLESS-75 | free-nodes - ...
   network: tcp
   port: 443
   server: 212.192.15.191
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇭🇰 HK VLESS-20 | free-nodes - ...
-  network: tcp
+- alterId: 0
+  cipher: auto
+  name: 香港_2275E9 - 157ms
+  network: ws
   port: 443
-  server: s151.gogocs.xyz
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
   tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇭🇰 HK VLESS-44 | free-nodes - ...
-  network: tcp
-  port: 443
-  server: s299.kukuss.top
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- client-fingerprint: firefox
-  encryption: none
-  flow: ''
-  name: 香港_E37BBE - 199ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-    short-id: '!!str '
-  server: a736eb68-tmb1c0-tpkh0c-1r7od.hk2.hyhuawei.com
-  tls: true
-  type: vless
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: 6jdvarazgu3qqr6q.v.3dns.vip
+    path: /
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 香港_B76D9D - 302ms
+  name: 香港_782412 - 330ms
   network: tcp
   port: 2091
   reality-opts:
@@ -64,87 +70,80 @@ proxies:
   tls: true
   type: vless
   uuid: 6a26029d-5639-473a-9234-3e80d0633d7d
+- name: 🇭🇰HK_1|1.6MB/s - 158ms
+  port: 3128
+  server: 119.28.24.235
+  sni: 119.28.24.235
+  tls: true
+  type: http
+- name: 🇭🇰HK_1|3.4MB/s - 211ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 44837
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 🇭🇰HK_1|3.1MB/s - 214ms
+  port: 31343
+  server: 120.232.204.58
+  sni: 120.232.204.58
+  tls: true
+  type: http
+- name: 🇭🇰HK_1|3.7MB/s - 193ms
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 43638
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇭🇰HK_2|2.1MB/s - 210ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
+    short-id: '!!str '
+  server: a736eb68-tmb1c0-tpkh0c-1r7od.hk2.hyhuawei.com
+  tls: true
+  type: vless
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
 - alterId: 0
   cipher: auto
-  name: 香港_21058C - 1214ms
+  name: 🇭🇰HK_1|1.3MB/s - 265ms
   network: ws
-  port: 36703
-  server: 47.244.120.197
+  port: 53617
+  server: az-1.linkaa.xyz
   tls: false
   type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
   ws-opts:
     headers:
-      Host: 47.244.120.197
+      Host: az-1.linkaa.xyz
     path: /
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港_513900 - 303ms
+  name: 🇭🇰HK_1|1.1MB/s - 322ms
   network: tcp
   port: 2091
   reality-opts:
     public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
     short-id: '!!str 08a4b1f473932632'
-  server: 213.152.165.203
+  server: 213.152.180.104
   tls: true
   type: vless
-  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+  uuid: 847a6dbf-c3b7-40c1-841c-2047c6418842
+- name: '%F0%9F%87%AD%F0%9F%87%B0HK_1%7...'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 53004
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇭🇰 香港4 - 230ms
-  network: ws
-  port: 443
-  server: aZW0eunYVdvRe73k.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: aZW0eunYVdvRe73k.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港3 - 247ms
-  network: ws
-  port: 443
-  server: ADncdOvLHR4M1P36.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: ADncdOvLHR4M1P36.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港5 - 675ms
-  network: ws
-  port: 443
-  server: syJ2gGUgMwBwQwQx.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: syJ2gGUgMwBwQwQx.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港2 - 245ms
-  network: ws
-  port: 443
-  server: kBONDXW9liFCi4h4.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kBONDXW9liFCi4h4.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK香港 (3) - 114ms
+  name: 🇭🇰HK香港 (3) - 163ms
   network: ws
   port: 443
   server: yg1.ygkkk.dpdns.org
@@ -158,90 +157,219 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 香港_2275E9 - 238ms
+  name: 🇭🇰 香港2 - 199ms
   network: ws
   port: 443
-  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  server: kBONDXW9liFCi4h4.v.3dns.vip
   tls: true
   type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: 6jdvarazgu3qqr6q.v.3dns.vip
+      Host: kBONDXW9liFCi4h4.v.3dns.vip
     path: /
-- name: 🇭🇰HK_1|1.7MB/s - 175ms
-  port: 3128
-  server: 119.28.24.235
-  sni: 119.28.24.235
-  tls: true
-  type: http
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK_1|1.3MB/s - 268ms
+  name: 🇭🇰 香港3 - 200ms
   network: ws
-  port: 53617
-  server: az-1.linkaa.xyz
-  tls: false
+  port: 443
+  server: ADncdOvLHR4M1P36.v.3dns.vip
+  tls: true
   type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: az-1.linkaa.xyz
+      Host: ADncdOvLHR4M1P36.v.3dns.vip
     path: /
-- name: 🇭🇰HK_1|1.4MB/s - 233ms
-  port: 31343
-  server: 120.232.204.58
-  sni: 120.232.204.58
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港4 - 203ms
+  network: ws
+  port: 443
+  server: aZW0eunYVdvRe73k.v.3dns.vip
   tls: true
-  type: http
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: aZW0eunYVdvRe73k.v.3dns.vip
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港5 - 193ms
+  network: ws
+  port: 443
+  server: syJ2gGUgMwBwQwQx.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: syJ2gGUgMwBwQwQx.v.3dns.vip
+    path: /
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇭🇰HK_1|1.1MB/s - 310ms
+  name: 🇭🇰 香港_513900 - 340ms
   network: tcp
   port: 2091
   reality-opts:
     public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
     short-id: '!!str 08a4b1f473932632'
-  server: 213.152.180.104
+  server: 213.152.165.203
   tls: true
   type: vless
-  uuid: 847a6dbf-c3b7-40c1-841c-2047c6418842
-- name: 🇭🇰 HK 10 → tg@nicevpn123 - 156...
+  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+- name: HK%E9%A6%99%E6%B8%AF%28v2clash...
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.41.167
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.18.41.167
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #1'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.47.138
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.18.47.138
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #2'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.151.23
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 172.64.151.23
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.33.121
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.18.33.121
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #4'
+  network: ws
+  password: humanity
+  port: 443
+  server: 103.219.195.65
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 103.219.195.65
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #5'
+  network: ws
+  password: humanity
+  port: 443
+  server: 47.57.181.17
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 47.57.181.17
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #6'
+  network: ws
+  password: humanity
+  port: 443
+  server: 103.69.128.221
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 103.69.128.221
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #7'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.39.55
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.18.39.55
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.196.235.64
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 45.196.235.64
+    path: /assignment
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #9'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.46.59
+  sni: www.cordweave.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 104.18.46.59
+    path: /assignment
+- name: 🇭🇰 HK 10 → tg@nicevpn123 - 55m...
   password: 507ca9a0-2d8e-4b65-8763-82dfbdbd599f
   port: 443
   server: chjs.lydurlclub.top
   skip-cert-verify: true
   type: trojan
-- name: 🇭🇰 HK 9 → tg@nicevpn123 - 148m...
+- name: 🇭🇰 HK 9 → tg@nicevpn123 - 68ms
   password: 507ca9a0-2d8e-4b65-8763-82dfbdbd599f
   port: 443
   server: hkjs.lydurlclub.top
   skip-cert-verify: true
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 8E5095 - ...
-  network: tcp
-  port: 52080
-  server: 47.242.81.94
-  tls: false
-  type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
 - client-fingerprint: chrome
   encryption: none
-  flow: ''
-  name: HK 🇭🇰 | @Raydikalx | 6CB524 - ...
+  name: HK 🇭🇰 | @Raydikalx | 88C522 - ...
   network: tcp
-  port: 11907
-  server: 195.58.144.56
+  port: 443
+  reality-opts:
+    public-key: npOtPP-gIOAg3Ltra8XJpvpIm3l4FtDKxqrUtSrPOT0
+    short-id: '!!str f76d89d0'
+  server: 182.16.62.14
   tls: true
   type: vless
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-- client-fingerprint: random
+  uuid: 5bfa133a-76d4-425c-b8d4-72cd2ff18198
+- client-fingerprint: firefox
+  encryption: none
+  name: HK 🇭🇰 | @Raydikalx | E5E7D7 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: T239VP3HbJ2KJCur7hDHJtrs6eKmKQfU_X1Xg6NmPgI
+    short-id: '!!str '
+  server: 210.0.244.157
+  tls: true
+  type: vless
+  uuid: f3ff9bac-2904-4f38-bae1-54ab1a72891b
+- client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: HK 🇭🇰 | @Raydikalx | DF69BC - ...
+  name: HK 🇭🇰 | @Raydikalx | BBD633 - ...
   network: tcp
   port: 443
   reality-opts:
@@ -251,20 +379,19 @@ proxies:
   tls: true
   type: vless
   uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 4641D1 - ...
-  network: ws
+- client-fingerprint: firefox
+  encryption: none
+  name: HK 🇭🇰 | @Raydikalx | 82D481 - ...
+  network: tcp
   port: 443
-  server: 8.217.254.88
+  reality-opts:
+    public-key: HhYjpNgNw0X_Qrjv9R5aHfV92hHbZmlY1u12DMTPrVw
+    short-id: '!!str '
+  server: 210.0.244.227
   tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8.217.254.88
-    path: /
-- client-fingerprint: chrome
+  type: vless
+  uuid: ebc368f4-c13c-4bd2-849b-4d245615728f
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
   name: HK 🇭🇰 | @Raydikalx | 7234B8 - ...
@@ -277,6 +404,27 @@ proxies:
   tls: true
   type: vless
   uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+- encryption: none
+  name: HK 🇭🇰 | @Raydikalx | 47F90E - ...
+  network: ws
+  port: 2087
+  server: 38.207.178.173
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 3AB476 - ...
+  network: ws
+  port: 443
+  server: 47.243.167.44
+  tls: true
+  type: vmess
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  ws-opts:
+    headers:
+      Host: 47.243.167.44
+    path: /
 - client-fingerprint: random
   encryption: none
   flow: xtls-rprx-vision
@@ -290,162 +438,11 @@ proxies:
   tls: true
   type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-- name: HK 🇭🇰 | @Raydikalx | E811F1 - ...
-  password: humanity
-  port: 443
-  server: 219.76.13.177
-  sni: www.pleadcourt.org
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 7BBD87 - ...
-  password: humanity
-  port: 443
-  server: 207.57.123.112
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | E05BB4 - ...
-  password: humanity
-  port: 443
-  server: 103.69.128.221
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 0E0811 - ...
-  password: humanity
-  port: 443
-  server: 207.57.123.77
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 6F9C9D - ...
-  password: humanity
-  port: 443
-  server: 103.219.195.65
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 45F0F5 - ...
-  password: humanity
-  port: 443
-  server: 45.196.235.64
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 0A002E - ...
-  password: humanity
-  port: 443
-  server: 68.64.180.218
-  sni: www.cordweave.com
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 3DFCFC - ...
-  network: ws
-  port: 443
-  server: 47.243.167.44
-  tls: true
-  type: vmess
-  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
-  ws-opts:
-    headers:
-      Host: 47.243.167.44
-    path: /
-- name: HK 🇭🇰 | @Raydikalx | E41C42 - ...
-  password: humanity
-  port: 8443
-  server: 207.57.132.189
-  sni: www.cordweave.com
-  type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 90F65F - ...
-  password: humanity
-  port: 443
-  server: 38.207.177.204
-  sni: www.cordweave.com
-  type: trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: ''
-  name: HK 🇭🇰 | @Raydikalx | 7173EC - ...
-  network: ws
-  port: 443
-  server: 103.143.81.178
-  tls: true
-  type: vless
-  uuid: fa45096d-bed0-ad80-c773-23c30000001b
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | DDC429 - ...
-  network: ws
-  port: 443
-  server: 8.218.195.61
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: 8.218.195.61
-    path: /
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 7B0191 - ...
-  network: ws
-  port: 443
-  server: 47.243.65.243
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: 47.243.65.243
-    path: /
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: HK 🇭🇰 | @Raydikalx | D07A38 - ...
+  name: 🇭🇰HK-🚀@VPNine1 - 359ms
   network: tcp
-  port: 443
-  reality-opts:
-    public-key: Di20k-Yrc4tfKGcSYCLp88xDaYMsIrIa_6go-QvAVCw
-    short-id: '!!str 6717a9ae'
-  server: 189.24.79.229
-  tls: true
-  type: vless
-  uuid: ee29ce31-ee5e-479b-900c-97c50e0f1218
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 730370 - ...
-  network: tcp
-  port: 52080
-  server: 154.37.223.56
-  tls: false
-  type: vmess
-  uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 7C4052 - ...
-  network: ws
-  port: 443
-  server: qtkdr8jxe3wefxjm.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: qtkdr8jxe3wefxjm.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 05C1FE - ...
-  network: ws
-  port: 443
-  server: euu1yalfmcqvljex.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
-  ws-opts:
-    headers:
-      Host: euu1yalfmcqvljex.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰...
-  network: tcp
-  port: 21021
+  port: 21019
   server: dog-hk.kunlun01dns.com
   tls: false
   type: vmess
