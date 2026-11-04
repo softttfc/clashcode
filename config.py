@@ -66,6 +66,27 @@
 #     需同步改为 snippets/xxx.yaml，否则 Clash Verge 无法找到片段文件。
 #   - 若已有 snippets/example.yml，建议重命名为 snippets/example.yaml，
 #     脚本会优先读取 .yaml，找不到时回退到 .yml（向后兼容）。
+#
+# 九、本次修改说明（None 字段健壮性修复）
+# -----------------------------------------------------------------------------
+#   本次修改针对 CI 报错：
+#       AttributeError: 'NoneType' object has no attribute 'endswith'
+#       at clash_data: if ret['flow'].endswith('-udp443')
+#
+#   根因：上游 YAML 中部分 vless 节点写入 flow: null，PyYAML 解析为 None，
+#         'flow' in ret 为 True 但 ret['flow'] is None，直接调用 .endswith() 崩溃。
+#
+#   修复思路（4 步 + 批量报告）：
+#     1) __init__ 统一清洗 dict 中所有 None 字段（一次清洗、全线免疫）
+#        语义依据：Clash Meta(Go yaml) 中 null 与字段缺失等价，删除不改变行为
+#     2) 新增 _invalid_reason() 判字段合法性（静默，返回原因字符串）
+#     3) supports_clash 前置调用 _invalid_reason，先字段后语义
+#     4) isfake 的 except 由 return False 改为 return True（保守丢弃而非误放行）
+#     5) clash_data 中 flow 加 isinstance 防御（最后一道闸门）
+#     6) load_nodes_from_yaml 新增批量报告，输出"丢弃节点清单 + 原因汇总"
+#
+#   对正常节点的影响：零（所有改动只在"字段为空/非法/类型异常"路径触发）
+#   对异常节点的影响：从"崩溃 CI / 静默污染产物" → "干净丢弃 + 日志可查"
 # =============================================================================
 
 import sys
@@ -207,6 +228,29 @@ BANNED_WORDS = b64decodes(
 # 请求超时
 FETCH_TIMEOUT = (6, 15)
 
+# 【本次新增】各协议的必填字段表（用于 Node._invalid_reason 判定）
+# 依据 Clash Meta(Go yaml) 零值语义：
+#   - null / "" / 字段缺失 三者在内核侧等价，均视为"未提供"
+#   - 表中字段必须非空（None 或纯空白串均判非法）
+#   - 可选字段（如 vless 的 flow、ss 的 plugin-opts）不在此表
+# 说明：
+#   - hysteria2 的 port 可由 port / ports 二者任一提供，因此不在必填表中，
+#     由 _invalid_reason 内单独判断（若两者皆无才判非法）
+#   - ssr 除 server/port/cipher/password 外，protocol/obfs 缺省会致内核启动失败，
+#     因此一并要求
+REQUIRED_FIELDS: Dict[str, tuple] = {
+    'vmess':     ('server', 'port', 'uuid'),
+    'vless':     ('server', 'port', 'uuid'),
+    'ss':        ('server', 'port', 'cipher', 'password'),
+    'ssr':       ('server', 'port', 'cipher', 'password', 'protocol', 'obfs'),
+    'trojan':    ('server', 'port', 'password'),
+    'hysteria2': ('server', 'password'),          # port 由 port/ports 二选一
+    'tuic':      ('server', 'port', 'uuid', 'password'),
+    'http':      ('server', 'port'),
+    'socks5':    ('server', 'port'),
+    'https':     ('server', 'port'),
+}
+
 
 # =============================================================================
 # HTTP 会话
@@ -268,15 +312,26 @@ class Node:
 
     def __init__(self, data: Union[DATA_TYPE, str]) -> None:
         if isinstance(data, dict):
-            self.data: Node.DATA_TYPE = data
-            self.type = data['type']
+            # 【本次修改】统一清洗 dict 中值为 None 的字段
+            # 语义依据：Clash Meta(Go yaml) 中 null 与字段缺失等价，删除不改变行为
+            # 收益：一次清洗，flow/server/uuid/password/sni 等所有字段同时免疫下游
+            #       的 str()/endswith()/len() 等 AttributeError
+            # 影响：self.data 不再是传入 data 的同一引用（当前代码库无调用点依赖此引用）
+            self.data: Node.DATA_TYPE = {k: v for k, v in data.items() if v is not None}
+            # 【本次修改】改用 self.data 取值（清洗后），若 type 本身为 None
+            # 会在清洗中被删 → 此处 KeyError → 由 load_nodes_from_yaml 捕获并丢弃
+            self.type = self.data['type']
         elif isinstance(data, str):
             self.load_url(data)
         else:
             raise TypeError(f"Got {type(data)}")
 
-        if not self.data['name']:
+        # 【本次修改】使用 .get() 而非 [] 索引，兼容 name 字段整体缺失的情况
+        # 注意：name=None 已在 dict 清洗阶段被删除，此处主要防御 name 键不存在
+        if not self.data.get('name'):
             self.data['name'] = "未命名"
+        # 【本次修改】password=None 已在上面被清洗删除，此处 'password' in data 为 False，
+        # 不会发生 str(None)="None" 把空密码洗白成字符串 "None" 的隐性 bug
         if 'password' in self.data:
             self.data['password'] = str(self.data['password'])
         self.data['type'] = self.type
@@ -732,12 +787,52 @@ class Node:
                     return True
                 if self.data['server'].endswith(domain):
                     return True
-            if 'sni' in self.data and 'google.com' in self.data['sni'].lower():
+            # 【本次修改】sni 是可选字段，显式判非空，避免 None.lower() 崩溃
+            # 说明：sni=None 已在 __init__ 统一清洗时被删除，此处主要防御空字符串
+            if self.data.get('sni') and 'google.com' in self.data['sni'].lower():
                 self.data['sni'] = 'www.bing.com'
         except Exception:
-            print("无法验证的节点！", file=sys.stderr)
+            # 【本次修改】异常时从"保守放行"改为"保守丢弃"
+            # 原 return False 会把"数据坏"误判为"节点正常"，导致脏数据流入产物
+            # 现 return True 表示"视为假节点丢弃"，避免隐性失败
+            # 正常情况下空字段已由 _invalid_reason 前置拦截，此处异常仅可能来自代码 bug，
+            # 因此日志前缀加 ❌ 以便区分"正常丢弃"和"bug 导致丢弃"
+            print(f"❌ isfake 意外异常: {self.data.get('name', '?')}", file=sys.stderr)
             traceback.print_exc(file=sys.stderr)
+            return True
         return False
+
+    def _invalid_reason(self) -> Optional[str]:
+        """
+        【本次新增】返回节点非法的原因字符串；返回 None 表示合法。
+
+        设计要点：
+          - 静默，不打印日志（由 load_nodes_from_yaml 统一汇总，避免每节点打 N 次）
+          - 只做"字段合法性"判断，不做"假节点"语义判断（后者归 isfake）
+          - 应先于 isfake 调用，使 isfake 内的异常只可能是代码 bug
+            （见 supports_clash 中的注释）
+
+        检查内容：
+          1. REQUIRED_FIELDS 表中各协议的必填字段是否非空（None / 纯空白串均判非法）
+          2. port 是否为合法整数且在 1-65535 范围内
+          3. hysteria2 特判：若提供 ports（端口跳跃段）则允许缺 port
+        """
+        # 1. 必填字段非空检查
+        for k in REQUIRED_FIELDS.get(self.type, ('server', 'port')):
+            v = self.data.get(k)
+            if v is None or (isinstance(v, str) and not v.strip()):
+                return f"{k} 为空"
+        # 2. hysteria2 特判：ports 存在时可跳过 port 校验
+        if self.type == 'hysteria2' and self.data.get('ports'):
+            return None
+        # 3. port 合法性检查（值类型 + 范围）
+        try:
+            p = int(self.data['port'])
+            if not (0 < p < 65536):
+                return f"port 越界({p})"
+        except (ValueError, TypeError, KeyError):
+            return f"port 非法({self.data.get('port')})"
+        return None
 
     # ---------- V2Ray URL 生成（保留，兼容性） ----------
 
@@ -925,11 +1020,19 @@ class Node:
         if 'cipher' in ret and not ret['cipher']:
             ret['cipher'] = 'auto'
         # vless flow 去除 udp443 后缀
+        # 【本次修改】增加 isinstance(flow, str) 防御：
+        #   - flow=None 已在 __init__ 统一清洗时被删除，正常情况不会进入此分支
+        #   - 保留此防御作为"最后一道闸门"，防止未来新增路径绕过清洗
+        # 语义：flow=None / 非字符串 → 视为无流控 → 删除该字段，交给下游按普通模式处理
         if self.type == 'vless' and 'flow' in ret:
-            if ret['flow'].endswith('-udp443'):
-                ret['flow'] = ret['flow'][:-7]
-            elif ret['flow'].endswith('!'):
-                ret['flow'] = ret['flow'][:-1]
+            flow = ret['flow']
+            if isinstance(flow, str) and flow:
+                if flow.endswith('-udp443'):
+                    ret['flow'] = flow[:-7]
+                elif flow.endswith('!'):
+                    ret['flow'] = flow[:-1]
+            else:
+                ret.pop('flow', None)
         # alpn 字符串转列表
         if 'alpn' in ret and isinstance(ret['alpn'], str):
             ret['alpn'] = ret['alpn'].replace(' ', '').split(',')
@@ -944,6 +1047,14 @@ class Node:
 
     def supports_clash(self, meta=False) -> bool:
         """判断节点是否被 Clash / Clash Meta 支持"""
+        # 【本次修改】前置字段合法性检查。顺序不可换：
+        #   1) 先 _invalid_reason（字段是否缺失/非法）
+        #   2) 再 isfake（是否假节点）
+        # 原因：isfake 内部依赖 server/port 等字段。若字段先非法进入 isfake，
+        # 会抛异常走 except，日志会显示"isfake 意外异常"而非"port 为空"，
+        # 造成归因错乱。先做字段检查后，isfake 内的异常只可能是代码 bug。
+        if self._invalid_reason() is not None:
+            return False
         if self.isfake:
             return False
         if 'obfs' in self.data and 'obfs-password' not in self.data:
@@ -1170,15 +1281,30 @@ def load_nodes_from_yaml(input_file: str) -> Dict[int, Node]:
     Node.gNames = set()
     merged: Dict[int, Node] = {}
 
+    # 【本次新增】丢弃节点清单（name, reason），循环结束后统一汇总
+    # 目的：避免每个被丢节点都打一次日志（尤其 _invalid_reason 会被调用多次），
+    #       同时让"这版比上版少了 N 个节点"有据可查
+    dropped: List[tuple] = []
+
     for p in proxies:
         if not isinstance(p, dict):
-            print(f"⚠️ 跳过非字典节点: {p}", file=sys.stderr)
+            # 【本次修改】纳入批量报告
+            dropped.append((str(p)[:30], "非字典项"))
             continue
         try:
             node = Node(p)
         except Exception:
+            # 【本次修改】纳入批量报告（同时保留原 stderr 输出便于排查）
+            dropped.append((str(p.get('name', 'unknown'))[:30], "解析异常"))
             print(f"⚠️ 解析节点失败: {p.get('name', 'unknown')}", file=sys.stderr)
             traceback.print_exc(file=sys.stderr)
+            continue
+        # 【本次新增】字段合法性检查：非法节点直接丢弃
+        # 说明：此处 _invalid_reason 的作用是"尽早丢弃"，减少后续 format_name/hash
+        #       等计算；supports_clash 内也会前置调用 _invalid_reason，作为"最后闸门"
+        reason = node._invalid_reason()
+        if reason is not None:
+            dropped.append((str(node.data.get('name', '?'))[:30], reason))
             continue
         try:
             node.format_name()
@@ -1191,6 +1317,20 @@ def load_nodes_from_yaml(input_file: str) -> Dict[int, Node]:
             merged[hashn] = node
         else:
             merged[hashn].update(node)
+
+    # 【本次新增】批量报告丢弃原因汇总
+    # 输出结构：
+    #   📊 共丢弃 N 个节点：
+    #     - <原因>: <数量> 个
+    #     · <节点名> (<原因>)          # 明细仅在数量 <= 10 时输出
+    if dropped:
+        from collections import Counter
+        print(f"\n📊 共丢弃 {len(dropped)} 个节点：")
+        for reason, cnt in Counter(r for _, r in dropped).most_common():
+            print(f"  - {reason}: {cnt} 个")
+        if len(dropped) <= 10:
+            for name, reason in dropped:
+                print(f"    · {name}  ({reason})")
 
     print(f"🔀 去重后共 {len(merged)} 个节点")
     return merged
