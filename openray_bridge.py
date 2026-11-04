@@ -29,10 +29,58 @@ SCHEME_ALIASES = {
     "socks5h": "socks5",
 }
 
+# 原有 9 个 mihomo 扩展字段（保留为向后兼容别名，被 BEHAVIOR_FIELDS 引用）
 MIHOMO_EXTENSIONS = (
     "ip-version", "routing-mark", "dialer-proxy", "interface-name",
     "tfo", "mptcp", "smux", "udp-over-tcp", "udp-over-tcp-version",
 )
+
+# ============================================================================
+# 【本次修改 C1】BEHAVIOR_FIELDS：覆盖所有影响 mihomo 行为的顶层字段
+# -----------------------------------------------------------------------------
+# 原 MIHOMO_EXTENSIONS 只覆盖 9 个扩展字段，遗漏了以下既不在 URI 编码范围、
+# 也不在 MIHOMO_EXTENSIONS 中的行为字段：
+#   - udp              : mihomo 是否允许 UDP 转发
+#   - packet-encoding  : 数据包编码方式（xudp / packetaddr / none）
+#   - xudp             : packet-encoding 的旧字段名（mihomo 兼容旧写法）
+#   - multiplex        : 旧的多路复用字段（等价 smux）
+# 遗漏导致 P3：「identity 相同但行为不同」的误合并——例如 udp: true 和
+# udp: false 的两个节点 identity 相同，但 mihomo 行为完全不同（UDP 转发
+# 是否启用）。
+#
+# 本次将这些字段并入 BEHAVIOR_FIELDS，确保 identity 覆盖所有行为字段。
+# MIHOMO_EXTENSIONS 保留为向后兼容别名（不改变其值，避免破坏已有测试）。
+# ============================================================================
+BEHAVIOR_FIELDS = MIHOMO_EXTENSIONS + (
+    "udp",              # mihomo: 是否允许 UDP 转发
+    "packet-encoding",  # mihomo: xudp / packetaddr / none
+    "xudp",             # 旧字段名，mihomo 兼容（等价 packet-encoding）
+    "multiplex",        # 旧字段名，等价 smux
+)
+
+# ============================================================================
+# 【本次修改 C2】EXT_NORMALIZE：对语义等价的写法做归一化
+# -----------------------------------------------------------------------------
+# 归一化目的：让「语义相同但写法不同」的扩展字段得到同一 identity，
+# 消除 P2 假重复：
+#   - ip-version: "4" 与 "ipv4"  → mihomo 语义相同，应得同一 identity
+#   - tfo: true 与 "true" 与 1    → mihomo 语义相同，应得同一 identity
+#
+# 归一化只处理「值等价」的情况，不处理「值不同」：
+#   - ip-version: ipv4 vs ipv6    → 语义不同，仍应得不同 identity（正确）
+#
+# 未在表中的字段（如 routing-mark / dialer-proxy / smux）保持原值，
+# 因为它们的值语义不具备简单归一化规则（smux 是对象、routing-mark 是整数）。
+# ============================================================================
+EXT_NORMALIZE = {
+    # mihomo 同时接受 "4"/"ipv4" 与 "6"/"ipv6"（可能为字符串或整数）
+    "ip-version":   lambda v: {"4": "ipv4", "6": "ipv6"}.get(str(v).lower(), str(v).lower()),
+    # mihomo 布尔字段同时接受 true / "true" / 1 / "1" / yes / on
+    "tfo":          lambda v: str(v).lower() in {"1", "true", "yes", "on"},
+    "mptcp":        lambda v: str(v).lower() in {"1", "true", "yes", "on"},
+    "udp":          lambda v: str(v).lower() in {"1", "true", "yes", "on"},
+    "udp-over-tcp": lambda v: str(v).lower() in {"1", "true", "yes", "on"},
+}
 
 
 def _b64(s: str) -> str:
@@ -301,7 +349,16 @@ def clash_dict_to_uri(proxy: dict) -> str | None:
 
 
 def identity_for_clash_proxy(proxy: dict) -> str | None:
-    """Clash dict → identity（OpenRay identity + mihomo 扩展哈希）。"""
+    """Clash dict → identity（OpenRay identity + 行为字段哈希）。
+
+    【本次修改 C1+C2】
+      - 用 BEHAVIOR_FIELDS 替代原 MIHOMO_EXTENSIONS，覆盖所有影响
+        mihomo 行为的顶层字段（含 udp / packet-encoding / xudp / multiplex）。
+        这样 udp: true 与 udp: false 会得到不同 identity，消除 P3 误合并。
+      - 对每个字段应用 EXT_NORMALIZE（若存在归一化器），使语义等价的写法
+        （如 "4" 与 "ipv4"）得到同一 identity，消除 P2 假重复。
+      - 无归一化器的字段（如 routing-mark / dialer-proxy / smux）保留原值。
+    """
     uri = clash_dict_to_uri(proxy)
     if uri is None:
         return None
@@ -311,9 +368,14 @@ def identity_for_clash_proxy(proxy: dict) -> str | None:
         return None
     base_identity = parsed.identity
     extensions = {}
-    for key in MIHOMO_EXTENSIONS:
-        if proxy.get(key) not in (None, "", [], {}):
-            extensions[key] = proxy[key]
+    # 【本次修改 C1】用 BEHAVIOR_FIELDS 替代 MIHOMO_EXTENSIONS
+    for key in BEHAVIOR_FIELDS:
+        v = proxy.get(key)
+        if v in (None, "", [], {}):
+            continue
+        # 【本次修改 C2】若该字段有归一化器，应用之
+        normalizer = EXT_NORMALIZE.get(key)
+        extensions[key] = normalizer(v) if normalizer else v
     if not extensions:
         return base_identity
     ext_json = json.dumps(extensions, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
