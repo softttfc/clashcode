@@ -398,7 +398,7 @@ MAX_QUEUE_PER_SOURCE = 450       # 每个起点源的队列占用上限（持续
                                   # 队列达到上限时暂时拒绝入队，消费到低于上限后恢复。
                                   # 作用：防止单源派生过多链接时队列无限膨胀。
 
-MAX_REQUESTS_TOTAL = 8000        # 全局总请求数硬上限（所有源累计）。
+MAX_REQUESTS_TOTAL = 10000        # 全局总请求数硬上限（所有源累计）。
                                   # 达到后跳过 crawler.list 中剩余未处理的源。
                                   # 建议 1500~3000，按 CI 时间预算调整：
                                   #   - 源少（< 10）且时间充裕：3000~4000
@@ -434,7 +434,7 @@ KEYWORDS = [
     '.json',            # Clash.Meta / sing-box
     '.conf',            # Clash / Surge
     # ---- 配置类型 / 客户端 ----
-  #  'clash', 'mihomo',
+    'clash', 'mihomo',
     '订阅链接','clashnode',
    # 'singbox', 'sing-box',
    # 'v2ray', 'xray',
@@ -461,7 +461,7 @@ FETCH_DELAY = 2             # 重试间隔（秒）。建议 0.5~2
 CONNECT_TIMEOUT = 1         # TCP 握手超时（秒）。增大可减少网络波动误判，但延长总验证时间。建议 3~10
 TEST_RETRIES = 2            # 测通失败后的重试次数。建议 1~3
 TEST_WORKERS = 10           # 测通并发线程数。增大可加快验证，但可能因资源竞争导致失败率上升。建议 5~20
-MAX_DELAY = 2000            # 节点最大可接受延迟（毫秒），超过则丢弃。调低可提高质量，但可能减少节点数。建议 2000~5000
+MAX_DELAY = 1000            # 节点最大可接受延迟（毫秒），超过则丢弃。调低可提高质量，但可能减少节点数。建议 2000~5000
 
 # QUIC 握手测试超时（秒），用于 hysteria / hysteria2 / tuic 等 UDP 协议
 # 建议范围: 2~5，过短易误判，过长拖慢 CI
