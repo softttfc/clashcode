@@ -190,7 +190,7 @@ jobs:
 
       # ---------- 修复配置文件格式（可选） ----------
       - name: 生成标准格式文件
-        run: python ./repair.py list.metaspeed.yml list.metaspeedrp.yml
+        run: python ./repair_pro.py list.metaspeed.yml list.metaspeedrp.yml --keep best
         continue-on-error: true
 
       # ---------- 修复可预见错误（可选） ----------
