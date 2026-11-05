@@ -164,7 +164,8 @@ jobs:
               --clean --keep best \
               --protocol-check \
               --verify-nodes --mihomo-bin .tools/mihomo \
-              --verify-workers 16 --verify-budget 1800
+              --verify-workers 16 --verify-budget 1800 \
+              --merge-by-render
           else
             echo "⚠️ 未找到 .tools/mihomo，跳过 mihomo 本地验证（仅做去重 + 协议检查）"
             python dupconfig.py list.meta.yml list.meta.dub.yml \
