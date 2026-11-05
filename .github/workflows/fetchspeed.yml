@@ -152,6 +152,7 @@ jobs:
             python dupconfig.py list.meta.yml list.meta.dub.yml \
               --clean --keep best \
               --protocol-check \
+              --merge-by-render \
               --verify-nodes --mihomo-bin .tools/mihomo \
               --verify-workers 16 --verify-budget 1800
           else
