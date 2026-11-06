@@ -1,5 +1,13 @@
 proxies:
-- name: 🇪🇪EE_1|1.4MB/s
+- name: 🇪🇪EE_1｜1.9MB/s - 159ms
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  sni: 95.153.32.2
+  tls: true
+  type: http
+  udp: true
+- name: 🇪🇪EE_1|2.9MB/s
   password: None
   port: 9443
   server: 95.153.31.66
@@ -7,26 +15,73 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇺🇸 US | 85.9.194.75
+- name: 🇪🇪EE_1|210KB/s|K001-260618
+  password: None
+  port: 9443
+  server: 192.159.101.174
+  skip-cert-verify: true
+  sub_tag: K001-260618
+  tls: true
+  type: http
+  udp: true
+  username: ''
+- encryption: none
+  name: 🇪🇪EE_12
   network: tcp
-  port: 443
-  server: 85.9.194.75
-  skip-cert-verify: false
-  tfo: false
+  packet-encoding: xudp
+  port: 16443
+  server: 45.86.60.174
+  sub_tag: M003-260806
   tls: false
   type: vless
   udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  xudp: true
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: '🇳🇱NL_59 #1'
+  name: 🇪🇪EE_15
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: '!!str 1a2b3c4d'
+  server: 31.77.236.114
+  servername: files.porsche.com
+  sub_tag: S004-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  xudp: true
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 ｜ @Raydikalx ｜ D4EBC1 - ...
+  network: tcp
+  packet-encoding: xudp
+  port: 443
+  reality-opts:
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: '!!str 41ae8e266bc3346f'
+  security: reality
+  server: 45.86.60.190
+  servername: ee2.japancase.site
+  sub_tag: B007-260618
+  tls: true
+  type: vless
+  udp: true
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+  xudp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇳🇱NL_103
   network: tcp
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '!!str 01'
-  security: reality
   server: 51.158.206.34
   servername: fuck.rkn
   tls: true
@@ -34,15 +89,13 @@ proxies:
   udp: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - client-fingerprint: chrome
-  encryption: none
   flow: xtls-rprx-vision
-  name: 🇳🇱NL_78
+  name: 🇳🇱NL_119
   network: tcp
   port: 23576
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '!!str 01'
-  security: reality
   server: 51.158.206.86
   servername: fuck.rkn
   skip-cert-verify: true
@@ -53,47 +106,37 @@ proxies:
   ws-opts:
     headers:
       Host: Copy_Shode_az_Chanel0111Net
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇳🇱NL_12
-  network: raw
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '!!str 01'
-  server: 51.158.206.29
-  servername: fuck.rkn
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  ws-opts:
-    headers:
-      Host: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇲🇽MX_12
+  name: EE 🇪🇪 ｜ @Raydikalx ｜ 5CF4B1 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: TefL2KtNcNLPmUY8TKlu5pA7ffipqgmbBN6gpyzyklk
+    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
   security: reality
-  server: 147.78.1.253
-  servername: www.apple.com
+  server: 163.245.52.17
+  servername: ee.frgcdn.xyz
   tls: true
   type: vless
   udp: true
-  uuid: 39a390af-1f90-4c0e-89e4-4e2023732e4b
-- cipher: aes-256-gcm
-  name: ES 🇪🇸 ｜ @Raydikalx ｜ 4EE568 - ...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.71.167
-  type: ss
+  uuid: 43a26f1a-99b7-4b17-98c7-b836fb466999
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇪🇪EE_14
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
+    short-id: '!!str 7a3f9e2b1c8d4f6a'
+  server: ee.frgcdn.xyz
+  servername: ee.frgcdn.xyz
+  tls: true
+  type: vless
   udp: true
-- name: 🇮🇱IL_2
+  uuid: 43a26f1a-99b7-4b17-98c7-b836fb466999
+- name: 🇮🇱IL_3
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -102,396 +145,88 @@ proxies:
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
   type: trojan
   udp: true
-- name: EE 🇪🇪 | @Raydikalx | 5971C2
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: 217.60.182.79
-  skip-cert-verify: true
-  sni: cabinet.wwwinternetvideo.click
-  type: hysteria2
-- name: EE 🇪🇪 | @Raydikalx | 3743DD
-  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
-  port: 443
-  server: cabinet.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: cabinet.wwwinternetvideo.click
-  type: hysteria2
-- name: '🇹🇭TH_2 #1'
-  network: tcp
-  password: 5t6i121em5lkmsmk
-  port: 33079
-  server: th001.zestapp778.com
-  skip-cert-verify: true
-  sni: th001.zestapp778.com
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  encryption: none
+- client-fingerprint: safari
   flow: xtls-rprx-vision
-  name: 🇵🇱PL_3
-  network: raw
+  name: 🇵🇱PL_13
+  network: tcp
   port: 443
   reality-opts:
     public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
     short-id: '!!str fa3ea655619a3e78'
-  security: reality
   server: 82.118.22.161
   servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
   uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: EE 🇪🇪 ｜ @Raydikalx ｜ D680CC - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
-    short-id: '!!str 2e82d7ac'
-  security: reality
-  server: 185.225.205.53
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '@npv_vpn11 #973'
+  name: EE 🇪🇪 ｜ @Raydikalx ｜ FCFE99 - ...
   network: tcp
   port: 443
   reality-opts:
     public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
     short-id: '!!str 1a2b3c4d'
-  server: 31.77.236.114
+  security: reality
+  server: 31.77.236.113
   servername: files.porsche.com
   tls: true
   type: vless
   udp: true
   uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-- client-fingerprint: chrome
-  name: 'vpnsal #30'
-  network: xhttp
-  port: 56261
+- client-fingerprint: ios
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 ｜ @Raydikalx ｜ 48A4CD - ...
+  network: tcp
+  port: 443
   reality-opts:
-    public-key: l0-zdwMIQVnlzi6s9aWF9ntecqRkCFf091RZ_Mv8B1E
-    short-id: '!!str 163d8ed90592'
-  server: iproxyland.beshdash.ir
-  servername: www.nvidia.com
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: '!!str 41ae8e266bc3346f'
+  security: reality
+  server: ee2.japancase.site
+  servername: ee2.japancase.site
   tls: true
   type: vless
   udp: true
-  uuid: 6324c880-9fe5-49f9-9e19-85c7961310e6
-  ws-opts:
-    path: /
-  xhttp-opts:
-    host: www.nvidia.com
-    mode: auto
-    path: /
-    x-padding-bytes: 100-1000
-- name: '@VPsave #73'
-  network: ws
-  port: 80
-  server: tanl.vudfaro.ir
-  tls: false
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  name: IN 🇮🇳 | @Raydikalx | 0EE023
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM
+    short-id: '!!str df7b054cfc29800c'
+  server: in1.japancase.site
+  servername: in1.japancase.site
+  tls: true
   type: vless
   udp: true
-  uuid: 7df4f23f-b361-412a-883a-54dfdb5b8c8f
-  ws-opts:
-    path: /
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '@npv_vpn11 #802'
+  name: '[EE] Art.29'
   network: tcp
   port: 443
   reality-opts:
-    public-key: oOp4xgD1R9MGm17qYp4XIHiq1dAfTaknr39UvhOv8Gc
-    short-id: '!!str ab55ed2e71e8f58e'
-  server: 217.12.194.226
-  servername: www.cloudflare.com
-  skip-cert-verify: true
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  server: 64.188.78.218
+  servername: static.paner-145.online
   tls: true
   type: vless
-  udp: true
-  uuid: b8cff836-8a21-4b72-a77d-231c8678c711
-- grpc-opts:
-    grpc-service-name: ''
-  name: MD 🇲🇩 | @Raydikalx | B2EE3B
-  network: grpc
-  port: 8880
-  server: 185.236.232.123
+  uuid: aa09ada3-ad33-4668-9c1a-6af275272567
+- name: 🇺🇸 US | 85.9.194.75
+  network: tcp
+  port: 443
+  server: 85.9.194.75
+  skip-cert-verify: false
+  tfo: false
   tls: false
   type: vless
   udp: true
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-- alterId: 0
-  cipher: auto
-  name: IT 🇮🇹 | @Raydikalx | D0BEEA
-  network: tcp
-  port: 22324
-  server: 89.41.172.85
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: PL 🇵🇱 | @Raydikalx | FA5EE0
-  network: tcp
-  port: 2086
-  server: 178.95.176.16
-  tls: false
-  type: vmess
-  udp: true
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | 7D1EEB
-  network: tcp
-  port: 21898
-  server: 185.19.33.102
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 8f3742cf-2a65-416f-824b-5b34ed79edf6
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | BEE421
-  network: tcp
-  port: 22636
-  server: 185.19.33.150
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 213a2396-f6aa-4acd-a929-c461919fdec2
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | FEE48B
-  network: tcp
-  port: 22636
-  server: 185.19.33.150
-  tls: false
-  type: vmess
-  udp: true
-  uuid: fb0768f8-451e-4e3c-be82-aef01e3bbf46
-- alterId: 0
-  cipher: auto
-  name: EE 🇪🇪 | @Raydikalx | 09EC58
-  network: ws
-  port: 443
-  server: 185.4.73.45
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  udp: true
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: LV 🇱🇻 | @Raydikalx | A875EE
-  network: tcp
-  port: 2083
-  server: 188.130.154.174
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 74c17cae-bf8b-4cda-8cdd-cf7983bf0a49
-- alterId: 0
-  cipher: auto
-  name: AL 🇦🇱 | @Raydikalx | 5EE977
-  network: ws
-  port: 80
-  server: 45.15.170.237
-  servername: pelang.org
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | 94C8EE
-  network: tcp
-  port: 2044
-  server: 53f3167b1b943c53.vira-ai.dns.8.8.8.8.ir-service.connectoo.my.id
-  servername: www.tesla.com
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 6bf2145c-75ea-48bc-b10a-84265c8d0973
-- alterId: 0
-  cipher: auto
-  name: EE 🇪🇪 | @Raydikalx | D66A49
-  network: ws
-  port: 443
-  server: 64.188.82.159
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  udp: true
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: ES 🇪🇸 | @Raydikalx | 3B31AB
-  network: ws
-  port: 443
-  server: 82259754d625.oylfmxz.cn
-  servername: 82259754d625.oylfmxz.cn
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 82259754d625.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | EE8178
-  network: tcp
-  port: 5065
-  server: 94.139.179.124
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 9cb5e799-f308-4d52-b761-9b4e9c2ff842
-- alterId: 0
-  cipher: auto
-  name: TR 🇹🇷 | @Raydikalx | 8549EE
-  network: tcp
-  port: 5384
-  server: dashboard.afrastore.top
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 63a01857-93c1-490b-95f5-991bd79116c5
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | 99FBEE
-  network: tcp
-  port: 5381
-  server: dashboard.ojestore.top
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 63ad66f6-b7a6-4df0-bf15-0c82a047b7e3
-- alterId: 0
-  cipher: auto
-  name: FI 🇫🇮 | @Raydikalx | 71EE19
-  network: tcp
-  port: 39458
-  server: fintest3.povrak.ir
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 5551d2e8-d3d4-42d2-95c8-fb780b4f6e6d
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | 0CBEEB
-  network: tcp
-  port: 443
-  server: irc.jahancloud.cfd
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 24b73122-9c73-45ae-871d-1837e427a9bf
-- alterId: 0
-  cipher: auto
-  name: LV 🇱🇻 | @Raydikalx | 9EE900
-  network: tcp
-  port: 51401
-  server: lito.1.povrak.ir
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | F2AEE6
-  network: tcp
-  port: 7088
-  server: nekonkor.velmor.xyz
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 1c46e7ee-ba01-4d3d-8625-7752253f70ac
-- alterId: 0
-  cipher: auto
-  name: '@npv_vpn11 #981'
-  network: ws
-  port: '8080'
-  server: octpus2.gsmonline.ir
-  servername: ''
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 08e70d4f-c41e-4907-8205-9a7d3c73028a
-  ws-opts:
-    headers:
-      Host: snapp.ir
-    path: /
-- alterId: 0
-  cipher: aes-128-gcm
-  name: IR 🇮🇷 | @Raydikalx | 9EED75
-  network: tcp
-  port: 1027
-  server: s1.connect.bloroxy.net
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | EE5C14
-  network: tcp
-  port: 443
-  server: tlash.jahannetface.sbs
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 7c12b328-75d8-4dd8-9670-21122f24f0c5
-- alterId: 0
-  cipher: auto
-  name: Global 🌐 | @Raydikalx | B0EED0
-  network: ws
-  port: 80
-  server: us65.netfilx.live
-  servername: us65.netfilx.live
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
-  ws-opts:
-    headers:
-      Host: us65.netfilx.live
-    path: /
-- alterId: 32
-  cipher: auto
-  name: Global 🌐 | @Raydikalx | 41F080
-  network: ws
-  port: 56830
-  server: vpnu.loungers.cc
-  servername: vpnu.loungers.cc
-  tls: true
-  type: vmess
-  udp: true
-  uuid: d2e92a19-f50c-426e-cd15-03ece7f4f3b1
-  ws-opts:
-    headers:
-      Host: vpnu.loungers.cc
-    path: /ws/x-ui
+  uuid: 88888888-8888-8888-8888-888888888888
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇪🇪139885 | ⚡️Telegram = t.me/S...
@@ -520,44 +255,46 @@ proxies:
     headers:
       Host: fdghyt.com
     path: /vpn-wss/fluxor/59011/
-- name: 🇩🇪DE_67
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+- name: 🇪🇪EE_1｜1.3MB/s - 157ms
   port: 443
-  server: steel7.hadsvpn.com
-  sni: steel7.hadsvpn.com
-  tls: false
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚 | EST 2
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: ee.frgcdn.xyz
-  servername: ee.frgcdn.xyz
+  server: 95.153.32.2
+  sni: 95.153.32.2
   tls: true
-  type: vless
-  uuid: 43a26f1a-99b7-4b17-98c7-b836fb466999
+  type: http
+- name: 🇪🇪EE_2｜3.2MB/s - 151ms
+  port: 9443
+  server: 95.153.31.66
+  sni: 95.153.31.66
+  tls: true
+  type: http
+- name: 🇪🇪EE_1｜2.5MB/s - 166ms
+  port: 9443
+  server: 192.159.101.174
+  sni: 192.159.101.174
+  tls: true
+  type: http
 - client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 4GpOXPkTdvuF1mgBH6n9AFYRvGEh7K2ETgE8asmNASY
-    short-id: '!!str 38146bd64aece7a5'
-  server: 147.45.245.17
-  servername: defs-64.topp-con.xyz
+  encryption: none
+  name: 🇪🇪EE_2｜1.4MB/s - 156ms
+  network: ws
+  port: 2083
+  server: 5.1.40.6
   tls: true
   type: vless
-  udp: true
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇪🇪EE_1｜1.5MB/s - 163ms
+  network: grpc
+  port: 443
+  server: 87.232.116.20
+  tls: true
+  type: vless
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚_D250E5 - 126ms
+  name: 🇪🇪 爱沙尼亚_D250E5 - 225ms
   network: tcp
   port: 443
   reality-opts:
@@ -568,94 +305,7 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- name: 🇪🇪EE_1｜1.2MB/s - 114ms
-  port: 9443
-  server: 95.153.31.66
-  sni: 95.153.31.66
-  tls: true
-  type: http
-- name: 🇪🇪EE_1｜1022KB/s - 117ms
-  port: 443
-  server: 95.153.32.2
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- name: 🇪🇪EE_1｜1.0MB/s - 117ms
-  port: 9443
-  server: 192.159.101.174
-  sni: 192.159.101.174
-  tls: true
-  type: http
-- name: 🇪🇪EE_3｜1.3MB/s - 116ms
-  password: None
-  port: 9443
-  server: 95.153.32.2
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇪🇪EE_2｜1.4MB/s - 118ms
-  network: ws
-  port: 2083
-  server: 5.1.40.6
-  tls: true
-  type: vless
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇪🇪
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: uqLRHVERHP974FJk39ltiV8pkcGAWYKJfOJ1nMALahU
-    short-id: '!!str 984f'
-  server: fr5.wizard.select
-  servername: fr5.wizard.select
-  tls: true
-  type: vless
-  uuid: 2acc3742-c568-11f1-9902-a337233c6cda
-- client-fingerprint: firefox
-  name: 🇪🇪EE_5
-  network: xhttp
-  port: 443
-  reality-opts:
-    public-key: nNoxOT_HzUZkKbHiK34iSfF89wlXAXBdlkquGVqGUDk
-    short-id: '!!str f4e0550a'
-  server: 31.76.55.162
-  servername: est1.dnsfire.fun
-  tls: true
-  type: vless
-  uuid: c29fa587-b10d-445d-b7e3-eaa6d1bd1330
-  ws-opts:
-    path: '%2Ffwlink%2F'
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: '🇪🇪 #1'
-  network: tcp
-  port: 443
-  server: 138.124.100.128
-  servername: ee4.fast-connect-service.site
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: qq
-  flow: xtls-rprx-vision
-  name: 🇪🇪EE_4
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
-    short-id: '!!str 2e82d7ac'
-  server: 185.225.205.53
-  servername: addons.mozilla.org
-  tls: true
-  type: vless
-  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
-- name: '🇪🇪 #2'
+- name: 🇪🇪
   network: tcp
   password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   port: 449
@@ -663,22 +313,9 @@ proxies:
   skip-cert-verify: false
   sni: russiapower.accesscam.org
   type: trojan
-- client-fingerprint: chrome
-  name: 🇪🇪EE_12
-  network: ws
-  port: 4433
-  server: 83.147.216.223
-  servername: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-  tls: true
-  type: vless
-  uuid: b491331e-3be5-4097-8bc1-fa86de978c29
-  ws-opts:
-    headers:
-      Host: bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev
-    path: '%2F%40Marisa_kristi'
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: '🇪🇪 #3'
+  name: '🇪🇪 #1'
   network: tcp
   port: 2053
   reality-opts:
@@ -690,24 +327,28 @@ proxies:
   type: vless
   uuid: 629f88a6-b20b-4489-a22f-4d8b418c0488
 - client-fingerprint: firefox
-  name: 🇪🇪EE_16
+  flow: xtls-rprx-vision
+  name: '🇪🇪 #2'
   network: tcp
-  port: 57043
-  server: 179.253.179.109
-  servername: 87.121.86.24
+  port: 443
+  reality-opts:
+    public-key: uqLRHVERHP974FJk39ltiV8pkcGAWYKJfOJ1nMALahU
+    short-id: '!!str 984f'
+  server: fr5.wizard.select
+  servername: fr5.wizard.select
   tls: true
   type: vless
-  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
-- client-fingerprint: chrome
-  name: 🇪🇪EE_2
-  network: ws
-  port: 444
-  server: 109.120.155.155
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  uuid: 2acc3742-c568-11f1-9902-a337233c6cda
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: '🇪🇪 #3'
+  network: tcp
+  port: 443
+  server: 138.124.100.128
+  servername: ee4.fast-connect-service.site
+  skip-cert-verify: false
   tls: true
   type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
-  ws-opts:
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-    path: '%2F%40Marisa_kristi'
+  uuid: 88888888-8888-8888-8888-888888888888
