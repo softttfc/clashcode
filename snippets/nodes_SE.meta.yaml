@@ -1,21 +1,61 @@
 proxies:
+- name: 🇸🇪[www.v2nodes.com] trojan-SE-...
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  sni: connect-se.mimowhat.online
+  type: trojan
+- name: 🇸🇪SE_1|1.7MB/s - 151ms
+  password: None
+  port: 443
+  server: 146.70.242.146
+  sni: 146.70.242.146
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|1.3MB/s - 154ms
+  password: None
+  port: 443
+  server: 149.50.216.65
+  sni: 149.50.216.65
+  tls: true
+  type: http
+- name: 🇸🇪SE_3|1.0MB/s - 157ms
+  port: 443
+  server: 146.70.242.130
+  sni: 146.70.242.130
+  tls: true
+  type: http
+- name: 🇸🇪SE_5|1.0MB/s - 147ms
+  port: 443
+  server: 79.142.77.63
+  sni: 79.142.77.63
+  tls: true
+  type: http
 - client-fingerprint: firefox
   encryption: none
-  flow: xtls-rprx-vision
-  name: 瑞典_7AFA28 - 116ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-    short-id: '!!str '
-  server: 13.143.180.142
+  name: 🇸🇪SE_1|3.6MB/s - 156ms
+  network: grpc
+  port: 48115
+  server: 138.124.86.230
   tls: true
   type: vless
-  uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+- name: 🇸🇪SE_4|1.3MB/s - 148ms
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
+  port: 443
+  server: 121.127.33.130
+  sni: likejennie.pages.dev
+  type: trojan
+- name: 🇸🇪SE_1|1.0MB/s - 145ms
+  port: 443
+  server: 217.210.129.243
+  sni: 217.210.129.243
+  tls: true
+  type: http
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 瑞典_70339D - 128ms
+  name: 瑞典_70339D - 172ms
   network: tcp
   port: 443
   reality-opts:
@@ -25,41 +65,62 @@ proxies:
   tls: true
   type: vless
   uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 瑞典_C10CCE - 375ms
+  name: 瑞典_7AFA28 - 168ms
   network: tcp
   port: 443
   reality-opts:
-    public-key: TyuIIquHoesD9YwMQJHda0YZ3Hy9Dh123dQ00iGK0QY
+    public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
     short-id: '!!str '
-  server: swedenafteraventura.space
+  server: 13.143.180.142
   tls: true
   type: vless
-  uuid: 50a87e21-f0e2-4b53-a787-91adfe748f63
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 瑞典_4F9952 - 120ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
-    short-id: '!!str 51079f144d661484'
-  server: 13.143.180.104
-  tls: true
-  type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-- name: 🇸🇪 瑞典_FD843F - 268ms
+  uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
+- name: 🇸🇪 瑞典_FD843F - 304ms
   port: 1080
   server: 171.25.158.95
   type: socks5
   username: Og==
+- alterId: 0
+  cipher: none
+  name: 🇸🇪_SE_瑞典 - 8ms
+  network: ws
+  port: 80
+  server: 185.146.173.92
+  tls: false
+  type: vmess
+  uuid: 3a71b42c-66d2-44ad-8a80-668d4f4339ea
+  ws-opts:
+    headers:
+      Host: Nl2.vmess.site.
+    path: /vmess#DONT-FORGET-TO-SUPPORT-SSHMAX.NET-TO-KEEP-THIS-SERVER-ALIVE
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪_SE_瑞典 - 10ms
+  network: ws
+  port: 80
+  server: 185.146.173.167
+  tls: false
+  type: vmess
+  uuid: b1fecac5-0eb0-440c-ba9b-a937b34881d6
+  ws-opts:
+    headers:
+      Host: 185.146.173.167
+    path: /
+- encryption: none
+  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  tls: false
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
 - client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇸🇪SE瑞典丨yoyapai.com - 115ms
+  name: 🇸🇪SE瑞典丨yoyapai.com - 151ms
   network: tcp
   port: 443
   reality-opts:
@@ -70,51 +131,58 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- name: 🇸🇪SE_3|3.7MB/s - 106ms
-  port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
-  tls: true
-  type: http
-- name: 🇸🇪SE_1|1.2MB/s - 116ms
-  password: None
-  port: 443
+- name: 🇸🇪SE_9|644KB/s|R002-260618 [35...
+  port: 9443
   server: 146.70.242.146
   sni: 146.70.242.146
   tls: true
   type: http
-- name: 🇸🇪SE_1|1.2MB/s - 110ms
+- name: 🇸🇪SE_10|2.8MB/s|M003-260806 [4...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 146.70.242.130
-  sni: 146.70.242.130
-  tls: true
-  type: http
-- name: 🇸🇪SE_4|1.3MB/s - 103ms
-  password: f426d3c9-fb43-43c0-868b-898dfa451a74
-  port: 443
-  server: 121.127.33.130
-  sni: likejennie.pages.dev
+  server: 70.34.207.14
+  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
   type: trojan
-- name: 🇸🇪SE_1|1.0MB/s - 103ms
-  port: 443
-  server: 217.210.129.243
-  sni: 217.210.129.243
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪SE_19|2.6MB/s|B007-260618 [4...
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
   tls: true
-  type: http
-- client-fingerprint: firefox
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
   encryption: none
-  flow: xtls-rprx-vision
-  name: 🇸🇪SE_4|2.2MB/s - 104ms
+  name: 🇸🇪SE_13|1.4MB/s|M003-260806 [5...
   network: tcp
   port: 443
-  reality-opts:
-    public-key: Dt6OmhEDOi-Y204u5jWdQsHIgof7g8i52NUnTGc-yjM
-    short-id: '!!str ecb6f8fb31668176'
-  server: 171.25.158.163
+  server: 194.104.94.141
   tls: true
   type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-- name: SE 12 → tg@nicevpn123 - 6ms
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪SE_14|2.4MB/s|M003-260806 [e...
+  network: tcp
+  port: 443
+  server: se3.shtil.io
+  tls: true
+  type: vless
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
+- cipher: aes-256-gcm
+  name: 🇸🇪SE_18|2.1MB/s|M003-260806 [e...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
+- name: SE 12 → tg@nicevpn123 - 9ms
   password: dGKXcHgs3P
   port: 80
   server: 185.146.173.66
@@ -122,7 +190,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 22 → tg@nicevpn123 - 5ms
+  name: SE 22 → tg@nicevpn123 - 14ms
   network: ws
   port: 443
   server: 185.146.173.59
@@ -135,7 +203,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 5ms
+  name: SE 20 → tg@nicevpn123 - 9ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -146,38 +214,57 @@ proxies:
     headers:
       Host: 185.146.173.129
     path: /
-- cipher: aes-256-gcm
-  name: SE 🇸🇪 | @Raydikalx | 6B785C - ...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 138.199.55.243
-  type: ss
+- name: SE 🇸🇪 | @Raydikalx | DB41D1 - ...
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  sni: connect-se.mimowhat.online
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 913FEF - ...
+  name: SE 🇸🇪 | @Raydikalx | B239B4 - ...
   network: tcp
   port: 1270
-  server: 138.199.55.230
+  server: 62.93.166.184
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- encryption: none
-  name: SE 🇸🇪 | @Raydikalx | 35BA6A - ...
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  tls: false
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
 - client-fingerprint: chrome
   encryption: none
-  name: SE 🇸🇪 | @Raydikalx | 8C47CB - ...
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | FEF35C - ...
   network: tcp
-  port: 5500
+  port: 443
   reality-opts:
-    public-key: boqqUp4qxwRfu_Wp3QB4m1rLyeWh2NA7C7uEV3nq_go
-    short-id: '!!str a4e971ae'
-  server: mein-1.octavia.dpdns.org
+    public-key: vzRgIP8Mvd9V6krwKxw5EwwzvC4uiaW3wo0Y2ri2_Wc
+    short-id: '!!str '
+  server: 88.216.223.100
   tls: true
   type: vless
-  uuid: e1acad9b-e14e-4995-b2d6-5721823cb0a7
+  uuid: 3bb97d46-789b-4229-88f6-9beb222a4137
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | 4003AA - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: vzRgIP8Mvd9V6krwKxw5EwwzvC4uiaW3wo0Y2ri2_Wc
+    short-id: '!!str '
+  server: smart.bachidze.com
+  tls: true
+  type: vless
+  uuid: 3bb97d46-789b-4229-88f6-9beb222a4137
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | 45265C - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
+    short-id: '!!str 41ae8e266bc3346f'
+  server: 193.233.252.43
+  tls: true
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
