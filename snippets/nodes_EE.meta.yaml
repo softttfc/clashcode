@@ -1,31 +1,40 @@
 proxies:
-- name: 🇪🇪EE_1|1.3MB/s - 157ms
-  port: 443
-  server: 95.153.32.2
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- name: 🇪🇪EE_2|3.2MB/s - 151ms
-  port: 9443
-  server: 95.153.31.66
-  sni: 95.153.31.66
-  tls: true
-  type: http
-- name: 🇪🇪EE_1|1.9MB/s - 159ms
-  port: 9443
-  server: 95.153.32.2
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- name: 🇪🇪EE_1|2.5MB/s - 166ms
+- name: 🇪🇪EE_1|2.5MB/s - 167ms
   port: 9443
   server: 192.159.101.174
   sni: 192.159.101.174
   tls: true
   type: http
+- encryption: none
+  name: 🇪🇪EE_12|2.5MB/s|M003-260806 [8...
+  network: tcp
+  port: 16443
+  server: 45.86.60.174
+  tls: false
+  type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+- name: 🇪🇪EE_1|1.2MB/s - 170ms
+  port: 9443
+  server: 95.153.31.66
+  sni: 95.153.31.66
+  tls: true
+  type: http
+- name: 🇪🇪EE_6|1.0MB/s|K001-260618 [e3...
+  password: None
+  port: 443
+  server: 95.153.32.2
+  sni: 95.153.32.2
+  tls: true
+  type: http
+- name: 🇪🇪EE_1|1.7MB/s - 171ms
+  port: 9443
+  server: 95.153.32.2
+  sni: 95.153.32.2
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
-  name: 🇪🇪EE_1|1.3MB/s - 237ms
+  name: 🇪🇪EE_1|1.3MB/s - 194ms
   network: tcp
   port: 25895
   reality-opts:
@@ -37,26 +46,8 @@ proxies:
   uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
 - client-fingerprint: firefox
   encryption: none
-  name: 🇪🇪EE_2|1.4MB/s - 156ms
-  network: ws
-  port: 2083
-  server: 5.1.40.6
-  tls: true
-  type: vless
-  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇪🇪EE_1|1.5MB/s - 163ms
-  network: grpc
-  port: 443
-  server: 87.232.116.20
-  tls: true
-  type: vless
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-- client-fingerprint: firefox
-  encryption: none
   flow: xtls-rprx-vision
-  name: 🇪🇪 爱沙尼亚_D250E5 - 225ms
+  name: 🇪🇪 爱沙尼亚_D250E5 - 205ms
   network: tcp
   port: 443
   reality-opts:
@@ -66,47 +57,19 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- encryption: none
-  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
-  network: tcp
-  port: 16443
-  server: 45.86.60.174
-  tls: false
-  type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-- encryption: none
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
-  network: tcp
-  port: 443
-  server: 185.225.205.53
-  tls: false
-  type: vless
-  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: EE 🇪🇪 | @Raydikalx | 5CF4B1 - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: RO5YMxxtJmZo2w370qG-seJ41toowHPbz6i2uXJ2gG0
-    short-id: '!!str 7a3f9e2b1c8d4f6a'
-  server: 163.245.52.17
-  tls: true
-  type: vless
-  uuid: 43a26f1a-99b7-4b17-98c7-b836fb466999
 - client-fingerprint: chrome
   encryption: none
-  name: PL 🇵🇱 | @Raydikalx | 704EEE - ...
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | 9940C1 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
-    short-id: '!!str 2f49bccf11150ef2'
-  server: tg.riotvpn.eu
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: 185.215.184.85
   tls: true
   type: vless
-  uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -120,6 +83,19 @@ proxies:
   tls: true
   type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: EE 🇪🇪 | @Raydikalx | 82E221 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: ee.subv.ru
+  tls: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
 - client-fingerprint: ios
   encryption: none
   flow: xtls-rprx-vision
@@ -133,16 +109,16 @@ proxies:
   tls: true
   type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-- client-fingerprint: firefox
+- client-fingerprint: ios
   encryption: none
   flow: xtls-rprx-vision
-  name: EE 🇪🇪 | @Raydikalx | FCFE99 - ...
+  name: IN 🇮🇳 | @Raydikalx | 0EE023 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: '!!str 1a2b3c4d'
-  server: 31.77.236.113
+    public-key: lDBwW08dYwPP-7dVxYQ_clzfFwsDHLlclz9K2cEV6DM
+    short-id: '!!str df7b054cfc29800c'
+  server: in1.japancase.site
   tls: true
   type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
