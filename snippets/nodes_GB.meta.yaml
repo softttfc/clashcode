@@ -1,15 +1,94 @@
 proxies:
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 英国_DD8AF9 - 82ms
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec
+    short-id: '!!str 17a35165f9d25923'
+  server: 5.104.74.22
+  tls: true
+  type: vless
+  uuid: 72dd8678-1ac5-4357-9f7e-97e367e2a835
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 英国_4C0253 - 88ms
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: '!!str 7da3ba09a037e956'
+  server: 212.69.135.26
+  tls: true
+  type: vless
+  uuid: e1b32562-91ba-404f-946e-d4c41293a67b
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 英国_78CB3B - 88ms
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
+    short-id: '!!str 7da3ba09a037e956'
+  server: 212.69.135.27
+  tls: true
+  type: vless
+  uuid: 857e5668-88b9-45cd-a600-79e55c04d8a8
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 英国_0B2B52 - 88ms
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
+    short-id: '!!str dbef98744832b751'
+  server: 5.104.74.70
+  tls: true
+  type: vless
+  uuid: a3d15e40-fa6b-4d11-af0b-24815c4b82fb
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 英国_88A5A4 - 148ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 52fsWySqEpUvCt-jbEy2rYjVIZBYwoqsGfmSef8_UgI
+    short-id: '!!str 97a15f5af85c4a30'
+  server: ru11.oshost.network
+  tls: true
+  type: vless
+  uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
+- encryption: none
+  name: 英国_96D16E - 202ms
+  network: tcp
+  port: 41432
+  server: rabin.142.251.153.7.savfasf.ir
+  tls: false
+  type: vless
+  uuid: 09931b77-0f40-4734-9b36-5df6e2308e4e
+- cipher: chacha20-ietf-poly1305
+  name: 英国_2AD7DA - 107ms
+  password: uvKNudV-N8AUCrykPiyznA
+  port: 56137
+  server: 177.202.111.19
+  type: ss
 - cipher: aes-256-gcm
   name: 🇬🇧[www.v2nodes.com] ss-GB-1616...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 198.244.201.129
   type: ss
-- cipher: aes-128-gcm
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  password: shadowsocks
-  port: 443
-  server: 158.173.24.73
+- cipher: aes-256-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 198.244.202.215
   type: ss
 - cipher: aes-256-gcm
   name: 🇬🇧[www.v2nodes.com] ss-GB-1615...
@@ -35,35 +114,21 @@ proxies:
   port: 19999
   server: 38.114.120.221
   type: ss
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇬🇧 GB VLESS-87 | free-nodes - ...
-  network: tcp
+- cipher: aes-128-gcm
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1451...
+  password: shadowsocks
   port: 443
-  server: s148.okgg.top
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇬🇧 GB VLESS-100 | free-nodes -...
-  network: tcp
+  server: 158.173.24.73
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇬🇧[www.v2nodes.com] ss-GB-9184...
+  password: shadowsocks
   port: 443
-  server: 193.142.59.180
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  server: 141.98.101.181
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 英国 伦敦DigitalOcean数据中心 - 28ms
+  name: 英国 伦敦DigitalOcean数据中心 - 14ms
   network: ws
   port: 443
   server: cg1c16.waimaojd.com
@@ -76,7 +141,7 @@ proxies:
     path: /api/v1/graphql
 - client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧GB英国丨yoyapai.com (2) - 156ms
+  name: 🇬🇧GB英国丨yoyapai.com (2) - 206ms
   network: ws
   port: 8443
   server: 91.110.174.210
@@ -86,7 +151,7 @@ proxies:
   uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
 - client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧GB英國丨yoyapai.com - 7ms
+  name: 🇬🇧GB英國丨yoyapai.com - 3ms
   network: ws
   port: 443
   server: 162.159.152.4
@@ -95,20 +160,14 @@ proxies:
   type: vless
   uuid: f2a73750-3087-48ff-a763-1348c15dce68
 - encryption: none
-  name: 🇬🇧GB英国丨yoyapai.com (4) - 4ms
+  name: 🇬🇧GB英国丨yoyapai.com (4) - 2ms
   network: ws
   port: 8880
   server: 89.117.112.30
   tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- cipher: rc4-md5
-  name: 🇬🇧GB_1|5.5MB/s|A004-260618 [07...
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.61.18
-  type: ss
-- name: 🇬🇧GB_4|1.7MB/s - 137ms
+- name: 🇬🇧GB_4|2.3MB/s - 80ms
   port: 443
   server: 212.102.63.31
   sni: 212.102.63.31
@@ -126,14 +185,14 @@ proxies:
   tls: true
   type: vless
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-- name: 🇬🇧GB_4|1.9MB/s - 134ms
+- name: 🇬🇧GB_3|1.7MB/s - 75ms
   password: None
   port: 443
   server: 212.102.63.1
   sni: 212.102.63.1
   tls: true
   type: http
-- name: 🇬🇧GB_5|2.1MB/s - 141ms
+- name: 🇬🇧GB_19|1.2MB/s|R002-260618 [2...
   port: 443
   server: 37.120.233.50
   sni: 37.120.233.50
@@ -156,7 +215,7 @@ proxies:
   tls: false
   type: vless
   uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-- name: 🇬🇧GB_3|2.0MB/s - 136ms
+- name: 🇬🇧GB_3|2.7MB/s - 80ms
   port: 443
   server: 212.102.63.61
   sni: 212.102.63.61
@@ -175,13 +234,7 @@ proxies:
   sni: 37.120.233.34
   tls: true
   type: http
-- cipher: aes-128-gcm
-  name: 🇬🇧GB_11|4.6MB/s|A004-260618 [7...
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.181
-  type: ss
-- name: 🇬🇧GB_2|1.6MB/s - 136ms
+- name: 🇬🇧GB_2|1.6MB/s - 81ms
   port: 9443
   server: 84.17.50.214
   sni: 84.17.50.214
@@ -229,13 +282,13 @@ proxies:
   tls: true
   type: vless
   uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-- name: 🇬🇧GB_2|1.5MB/s - 138ms
+- name: 🇬🇧GB_2|1.8MB/s - 77ms
   port: 443
   server: 185.164.138.156
   sni: 185.164.138.156
   tls: true
   type: http
-- name: 🇬🇧GB_7|3.1MB/s - 145ms
+- name: 🇬🇧GB_7|3.1MB/s - 80ms
   port: 443
   server: 37.120.233.18
   sni: 37.120.233.18
@@ -254,7 +307,7 @@ proxies:
   sni: 84.17.50.193
   tls: true
   type: http
-- name: 🇬🇧GB_1|1.8MB/s - 136ms
+- name: 🇬🇧GB_1|1.8MB/s - 81ms
   port: 9443
   server: 84.233.178.33
   sni: 84.233.178.33
@@ -277,13 +330,13 @@ proxies:
   tls: true
   type: vless
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-- name: 🇬🇧GB_3|2.4MB/s - 138ms
-  port: 8084
-  server: 81.85.4.216
+- name: 🇬🇧GB_5|3.4MB/s - 84ms
+  port: 8081
+  server: 81.85.1.221
   type: http
 - client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧GB_1|1.4MB/s - 244ms
+  name: 🇬🇧GB_1|1.4MB/s - 176ms
   network: ws
   port: 443
   server: www.sarzaminaryan.ir
@@ -292,14 +345,14 @@ proxies:
   uuid: 57e089a8-0cd1-48d0-b572-105c4804f6b8
 - client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧GB_4|1.2MB/s - 169ms
+  name: 🇬🇧GB_4|1.2MB/s - 173ms
   network: ws
   port: 443
   server: www.agahiya.ir
   tls: true
   type: vless
   uuid: 57e089a8-0cd1-48d0-b572-105c4804f6b8
-- name: 🇬🇧GB_3|2.0MB/s - 182ms
+- name: 🇬🇧GB_3|2.0MB/s - 110ms
   password: 62f2374c-891b-11ef-a3f6-f23c9164ca5d
   port: 443
   server: 3d329aa8-t9zts0-tpaqgu-1smhu.uk.oshuawei.com
@@ -307,98 +360,24 @@ proxies:
   tls: true
   type: http
   username: 62f2374c-891b-11ef-a3f6-f23c9164ca5d
-- name: 🇬🇧GB_2|2.0MB/s - 143ms
+- name: 🇬🇧GB_2|2.0MB/s - 80ms
   port: 9443
   server: 37.120.233.34
   sni: 37.120.233.34
   tls: true
   type: http
-- name: 🇬🇧GB_8|2.7MB/s - 198ms
-  password: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
-  port: 443
-  server: 5b33bfe4-tdups0-tf8z9r-1pr35.uk.oshuawei.com
-  sni: 5b33bfe4-tdups0-tf8z9r-1pr35.uk.oshuawei.com
-  tls: true
-  type: http
-  username: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
 - client-fingerprint: chrome
   encryption: none
-  name: 🇬🇧 英国 | GBR - 172ms
+  name: '🇬🇧 英国 | GBR #1 - 1ms'
   network: ws
-  port: 50818
-  server: 34.39.80.57
-  tls: true
-  type: vless
-  uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国 | GBR 2 - 157ms
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ
-    short-id: '!!str 2bf10fc0a85601e5'
-  server: 82.148.255.201
-  tls: true
-  type: vless
-  uuid: 49fdd350-6ffb-4343-b467-14e269bb95de
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 英国_3A0603 - 140ms
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8
-    short-id: '!!str 7da3ba09a037e956'
-  server: 212.69.135.26
-  tls: true
-  type: vless
-  uuid: c1b25259-727d-438a-bc7b-bc74f7b9917d
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 英国_235A73 - 193ms
-  network: tcp
   port: 443
-  reality-opts:
-    public-key: oAX7soFKfN3xURgCD26trmjeF-e-eEjW3pBVXuuvW0k
-    short-id: '!!str 77a8c8c8'
-  server: prime.jarbook.net
+  server: 146.75.59.186
   tls: true
   type: vless
-  uuid: 95d0e214-eab0-4701-93ed-fea4f1b56062
-- encryption: none
-  name: 英国_96D16E - 388ms
-  network: tcp
-  port: 41432
-  server: rabin.142.251.153.7.savfasf.ir
-  tls: false
-  type: vless
-  uuid: 09931b77-0f40-4734-9b36-5df6e2308e4e
-- cipher: chacha20-ietf-poly1305
-  name: 英国_2AD7DA - 176ms
-  password: uvKNudV-N8AUCrykPiyznA
-  port: 56137
-  server: 177.202.111.19
-  type: ss
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇬🇧 英国_9C23B9 - 142ms
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: '!!str '
-  server: 51.77.108.218
-  tls: true
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
+  uuid: a953509f-af22-42d5-a34c-aa29405369b0
 - alterId: 0
   cipher: auto
-  name: GB英国(mibei77.com 米贝节点分享) - 167...
+  name: GB英国(v2clash.blog 2026-11.7更新)...
   network: ws
   port: 12007
   server: yg2.needss.top
@@ -409,18 +388,18 @@ proxies:
     headers:
       Host: yg2.needss.top
     path: /
-- name: 🇬🇧 GB 23 → tg@nicevpn123 - 141...
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧 GB 27 → tg@nicevpn123 - 80m...
+  password: Bog0ELmMM9DSxDdQ
+  port: 443
+  server: 52.56.201.59
+  type: ss
+- name: 🇬🇧 GB 23 → tg@nicevpn123 - 76m...
   password: 1d7692c0-f51c-11ee-91eb-1239d0255272
   port: 443
   server: 51.38.65.155
   skip-cert-verify: true
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧 GB 27 → tg@nicevpn123 - 137...
-  password: Bog0ELmMM9DSxDdQ
-  port: 443
-  server: 52.56.201.59
-  type: ss
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -434,88 +413,10 @@ proxies:
   tls: true
   type: vless
   uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-- client-fingerprint: firefox
+- client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | A8EAA3 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.70
-  tls: true
-  type: vless
-  uuid: e2cfbfd7-462b-40ca-bb17-d07f0265558d
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | E153E8 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.144
-  tls: true
-  type: vless
-  uuid: a2c7856f-718d-47fc-980d-7ee15000225b
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 17ACF7 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.70
-  tls: true
-  type: vless
-  uuid: 176b50a0-cce0-416d-bc4c-6694271985dd
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | A24B2F - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.156
-  tls: true
-  type: vless
-  uuid: c198b804-c850-4c95-8584-0f8787cfdbfd
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 22A24D - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.152
-  tls: true
-  type: vless
-  uuid: 1af63f5f-22e5-4ded-8e5c-fefc5d71cc50
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | D9A2AF - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.156
-  tls: true
-  type: vless
-  uuid: 12d10a58-f8ee-4184-8f11-286e8f835133
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | F1CC04 - ...
+  name: GB 🇬🇧 | @Raydikalx | 12D6B7 - ...
   network: tcp
   port: 8443
   reality-opts:
@@ -524,7 +425,7 @@ proxies:
   server: 5.104.74.27
   tls: true
   type: vless
-  uuid: 79fbf773-1340-472c-9ec2-91ddc93bd547
+  uuid: a941243b-4b25-465f-ba2c-1dc4e1d16217
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -541,42 +442,16 @@ proxies:
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | F22669 - ...
+  name: GB 🇬🇧 | @Raydikalx | 17ACF7 - ...
   network: tcp
   port: 8443
   reality-opts:
     public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
     short-id: '!!str dbef98744832b751'
-  server: 5.104.74.136
+  server: 5.104.74.70
   tls: true
   type: vless
-  uuid: 61c2f0f4-81fd-4ff6-9e7c-d7545f85fa1f
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 3F874F - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.140
-  tls: true
-  type: vless
-  uuid: ac5d41cb-fb2a-4028-8099-b8d2f274f35d
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | F5F668 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.26
-  tls: true
-  type: vless
-  uuid: 0083a0f5-4418-44c2-a9ec-6dce0c26fb94
+  uuid: 176b50a0-cce0-416d-bc4c-6694271985dd
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -590,110 +465,19 @@ proxies:
   tls: true
   type: vless
   uuid: b7063bfc-d4a4-4816-a132-6a2b4e3c8a5d
-- client-fingerprint: ios
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 7052EC - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.128
-  tls: true
-  type: vless
-  uuid: 62864307-d1a7-4d77-bee8-996ffae8e614
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 52B780 - ...
+  name: GB 🇬🇧 | @Raydikalx | 431F73 - ...
   network: tcp
   port: 8443
   reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.156
+    public-key: DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ
+    short-id: '!!str 2bf10fc0a85601e5'
+  server: 82.148.255.201
   tls: true
   type: vless
-  uuid: 7680925a-c518-41c5-a6b7-e8ce9f899951
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 6199F2 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.144
-  tls: true
-  type: vless
-  uuid: 7eebb99d-15c3-4209-8c8f-157430cd2a20
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 12D6B7 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.27
-  tls: true
-  type: vless
-  uuid: a941243b-4b25-465f-ba2c-1dc4e1d16217
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 8D757C - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: '!!str 428ef87fd47a3a32'
-  server: fduknew.titun.su
-  tls: true
-  type: vless
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-- client-fingerprint: ios
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | CFC4DF - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.27
-  tls: true
-  type: vless
-  uuid: 1b8a6692-d057-41f8-a108-7a02daefcfd6
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 08ABF2 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec
-    short-id: '!!str 17a35165f9d25923'
-  server: 5.104.74.69
-  tls: true
-  type: vless
-  uuid: 29d09c2e-f354-4ffb-9e3e-9b06065103ea
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 6D5317 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
-    short-id: '!!str dbef98744832b751'
-  server: 5.104.74.25
-  tls: true
-  type: vless
-  uuid: 7ea09162-0f21-485e-b576-dcedc8b6587b
+  uuid: 49fdd350-6ffb-4343-b467-14e269bb95de
 - alterId: 0
   cipher: auto
   name: GB 🇬🇧 | @Raydikalx | 025B20 - ...
@@ -710,54 +494,16 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 8A0796 - ...
-  network: tcp
-  port: 1412
-  reality-opts:
-    public-key: bNpg56GtTArrVyrnonNlMA-3JyYIAFATdgsH_wn0gmc
-    short-id: '!!str 4ea6a183'
-  server: engnode.barnikle1.me
-  tls: true
-  type: vless
-  uuid: 109852f2-4591-498c-9a96-f1d9206ce804
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | 1BDC93 - ...
+  name: GB 🇬🇧 | @Raydikalx | F1EDD5 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: QFYzek1TNFeZxhHP3gH-42RUYDGw0ZiigeDcUOFL2Vs
-    short-id: '!!str bd44ae7c721b8252'
-  server: gb1.japancase.site
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: '!!str fd8cf7e1173f0edb'
+  server: 83.147.18.3
   tls: true
   type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: GB 🇬🇧 | @Raydikalx | E6E632 - ...
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg
-    short-id: '!!str 00f7359d92c884cc'
-  server: 82.148.225.244
-  tls: true
-  type: vless
-  uuid: 0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852
-- client-fingerprint: chrome
-  encryption: none
-  name: GB 🇬🇧 | @Raydikalx | 2A0028 - ...
-  network: grpc
-  port: 8445
-  reality-opts:
-    public-key: ndIKnA3ySMv5vBJ-OfP8IhFWVu7mtK0nzhgSil1NaVg
-    short-id: '!!str 00f7359d92c884cc'
-  server: 82.148.225.244
-  tls: true
-  type: vless
-  uuid: 0fdb1df7-b3b6-4d29-9fd6-2b92fc80b852
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -771,3 +517,95 @@ proxies:
   tls: true
   type: vless
   uuid: 6228ee5b-fe07-4ee5-8300-386cd004eb84
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: GB 🇬🇧 | @Raydikalx | 1BDC93 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: QFYzek1TNFeZxhHP3gH-42RUYDGw0ZiigeDcUOFL2Vs
+    short-id: '!!str bd44ae7c721b8252'
+  server: gb1.japancase.site
+  tls: true
+  type: vless
+  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
+- client-fingerprint: chrome
+  encryption: none
+  name: GB 🇬🇧 | @Raydikalx | E516B3 - ...
+  network: grpc
+  port: 8444
+  reality-opts:
+    public-key: DvNpCmas0_0MO91s70vlkAxZxnnIt1NE0zqCC4trURQ
+    short-id: '!!str 2bf10fc0a85601e5'
+  server: 82.148.255.201
+  tls: true
+  type: vless
+  uuid: 49fdd350-6ffb-4343-b467-14e269bb95de
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: GB 🇬🇧 | @Raydikalx | 2A9A5B - ...
+  network: tcp
+  port: 8080
+  reality-opts:
+    public-key: vKnJBC8MN4hGDqu7_C6luBwjVnhq9Wjb6BWkuK_8_z0
+    short-id: '!!str dee5ab9e'
+  server: 51.38.127.93
+  tls: true
+  type: vless
+  uuid: 261cdc0d-9a73-4b75-b61b-e99980e3d668
+- client-fingerprint: chrome
+  encryption: none
+  name: GB 🇬🇧 | @Raydikalx | 3A0195 - ...
+  network: ws
+  port: 443
+  server: 51.38.71.147
+  tls: true
+  type: vless
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: GB 🇬🇧 | @Raydikalx | 4BBD0C - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: 50.7.227.77
+  tls: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+- name: GB 🇬🇧 | @Raydikalx | C2C4C7 - ...
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20123
+  server: 217.217.222.230
+  sni: hk.catxstar.com
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: GB 🇬🇧 | @Raydikalx | 8D757C - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: fduknew.titun.su
+  tls: true
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧...
+  network: ws
+  port: 80
+  server: 188.114.96.19
+  tls: false
+  type: vmess
+  uuid: af4be52a-aab3-4db1-a6bb-c23700dcb9c2
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560

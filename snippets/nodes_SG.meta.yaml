@@ -1,9 +1,61 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬_SG_新加坡 - 223ms
+  network: ws
+  port: 443
+  server: 128.199.128.117
+  sni: sg.dalxy.eu.org
+  tls: true
+  type: vmess
+  uuid: a88a71fa-ed7c-48d3-89e0-74a00d605d88
+  ws-opts:
+    headers:
+      Host: sg.dalxy.eu.org
+    path: /a88a71fa-ed7c-48d3-89e0-74a00d605d88-vm
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 新加坡_5DB0AF - 261ms
+  network: tcp
+  port: 2089
+  reality-opts:
+    public-key: oRmj7gTi5H2oIClNYxxgOjqp8-j5kFYtGFU8CNuMj34
+    short-id: '!!str deccc6fac1ddb0ff'
+  server: 213.152.180.55
+  tls: true
+  type: vless
+  uuid: 38d3d211-cc9f-491a-a8ab-9a5be57bb712
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 新加坡_BB464A - 468ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: iE4sTz-Q2Frkm7WM32P1wm4at49Wpaj5vo-2FsLcN1M
+    short-id: '!!str 8854f17e2a5af2d8'
+  server: snp.bsh-net.ru
+  tls: true
+  type: vless
+  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+- cipher: aes-256-gcm
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1616...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 51.79.228.131
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 15.235.182.183
+  type: ss
 - cipher: aes-256-gcm
   name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.107.74
+  server: 15.235.164.133
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #1'
@@ -13,6 +65,12 @@ proxies:
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #2'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 149.88.107.74
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.107.47
@@ -28,23 +86,40 @@ proxies:
   port: 8886
   server: 139.180.146.200
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬_SG_新加坡 - 168ms
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇬 新加坡|07|BGP - 21ms
+  network: ws
+  port: 2053
+  server: cf01.564895.xyz
+  tls: true
+  type: vless
+  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇬 SG2@ripaojiedian - 218ms
   network: ws
   port: 443
-  server: 128.199.128.117
-  sni: sg.dalxy.eu.org
+  server: 206.54.46.241
   tls: true
-  type: vmess
-  uuid: a88a71fa-ed7c-48d3-89e0-74a00d605d88
-  ws-opts:
-    headers:
-      Host: sg.dalxy.eu.org
-    path: /a88a71fa-ed7c-48d3-89e0-74a00d605d88-vm
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇬 SG1@ripaojiedian - 217ms
+  network: ws
+  port: 443
+  server: 206.54.46.225
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
 - client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com - 165ms
+  name: 🇸🇬SG新加坡丨yoyapai.com - 114ms
   network: ws
   port: 443
   server: 43.174.195.1
@@ -53,7 +128,7 @@ proxies:
   type: vless
   uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
 - encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (2) - 1ms
+  name: 🇸🇬SG新加坡丨yoyapai.com (2) - 2ms
   network: ws
   port: 8880
   server: 45.40.149.50
@@ -62,7 +137,7 @@ proxies:
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
 - client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (5) - 169m...
+  name: 🇸🇬SG新加坡丨yoyapai.com (5) - 220m...
   network: ws
   port: 443
   server: 47.131.189.221
@@ -70,14 +145,6 @@ proxies:
   tls: true
   type: vless
   uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
-- encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (9) - 1ms
-  network: ws
-  port: 8880
-  server: 172.65.90.53
-  tls: false
-  type: vless
-  uuid: 30a2a9a6-6a03-4353-a7fb-63831d64f718
 - encryption: none
   name: 🇸🇬SG新加坡丨yoyapai.com (8) - 2ms
   network: ws
@@ -87,7 +154,15 @@ proxies:
   type: vless
   uuid: adcce8be-9de7-41bd-abcd-52939cec108b
 - encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (10) - 1ms
+  name: 🇸🇬SG新加坡丨yoyapai.com (9) - 2ms
+  network: ws
+  port: 8880
+  server: 172.65.90.53
+  tls: false
+  type: vless
+  uuid: 30a2a9a6-6a03-4353-a7fb-63831d64f718
+- encryption: none
+  name: 🇸🇬SG新加坡丨yoyapai.com (10) - 2ms
   network: ws
   port: 8880
   server: 172.64.94.251
@@ -96,7 +171,16 @@ proxies:
   uuid: fb5058f5-a9ed-424e-9ed7-33d455438286
 - client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (11) - 169...
+  name: 🇸🇬SG新加坡丨yoyapai.com (12) - 1ms
+  network: ws
+  port: 443
+  server: 104.21.28.176
+  tls: true
+  type: vless
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG新加坡丨yoyapai.com (11) - 219...
   network: ws
   port: 443
   server: 103.25.202.102
@@ -104,20 +188,11 @@ proxies:
   tls: true
   type: vless
   uuid: a853e120-3570-462b-aec1-e8f3d4f92d24
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬SG新加坡丨yoyapai.com (12) - 2ms
-  network: ws
-  port: 443
-  server: 104.21.28.176
-  tls: true
-  type: vless
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
 - alpn:
   - http/1.1
   client-fingerprint: firefox
   encryption: none
-  name: SG新加坡(mibei77.com 米贝节点分享) - 17...
+  name: SG新加坡(mibei77.com 米贝节点分享) - 22...
   network: ws
   port: 443
   server: 85.137.51.53
@@ -171,6 +246,12 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+- name: 🇸🇬SG_42|378KB/s|R002-260618 [1...
+  port: 9443
+  server: 152.233.9.239
+  sni: 152.233.9.239
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_73|391KB/s|M003-260806 [1...
@@ -180,12 +261,6 @@ proxies:
   tls: true
   type: vless
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-- name: 🇸🇬SG_42|378KB/s|R002-260618 [1...
-  port: 9443
-  server: 152.233.9.239
-  sni: 152.233.9.239
-  tls: true
-  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_71|297KB/s|M003-260806 [1...
@@ -195,10 +270,6 @@ proxies:
   tls: true
   type: vless
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-- name: 🇸🇬SG_82|793KB/s|K001-260618 [1...
-  port: 9090
-  server: 146.190.80.158
-  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_52|540KB/s|F003-260618 [1...
@@ -208,6 +279,10 @@ proxies:
   tls: true
   type: vless
   uuid: aff1ffd0-594c-44c9-9f79-4096fde005ea
+- name: 🇸🇬SG_82|793KB/s|K001-260618 [1...
+  port: 9090
+  server: 146.190.80.158
+  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_112|422KB/s|X001-260618 [...
@@ -261,7 +336,7 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- name: 🇸🇬SG_2|1.1MB/s - 167ms
+- name: 🇸🇬SG_2|1.1MB/s - 218ms
   port: 443
   server: 156.146.56.97
   sni: 156.146.56.97
@@ -276,6 +351,12 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+- cipher: rc4-md5
+  name: 🇸🇬SG_8|675KB/s|A004-260618 [38...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.235.122
+  type: ss
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_99|412KB/s|M003-260806 [3...
@@ -285,12 +366,6 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-- cipher: rc4-md5
-  name: 🇸🇬SG_8|675KB/s|A004-260618 [38...
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.235.122
-  type: ss
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_80|146KB/s|M003-260806 [3...
@@ -300,12 +375,6 @@ proxies:
   tls: true
   type: vless
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-- cipher: rc4-md5
-  name: 🇸🇬SG_60|888KB/s|A004-260618 [3...
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.236
-  type: ss
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_104|411KB/s|M003-260806 [...
@@ -324,21 +393,18 @@ proxies:
   tls: true
   type: vless
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+- cipher: rc4-md5
+  name: 🇸🇬SG_60|888KB/s|A004-260618 [3...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.236
+  type: ss
 - cipher: aes-256-gcm
   name: 🇸🇬SG_87|947KB/s|M003-260806 [4...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.73
   type: ss
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇬SG_23|359KB/s|B007-260618 [4...
-  network: ws
-  port: 443
-  server: 216.173.67.59
-  tls: true
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_54|539KB/s|A004-260618 [4...
@@ -348,6 +414,15 @@ proxies:
   tls: true
   type: vless
   uuid: 3f87daa8-3af8-40a0-b655-127911e008dc
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_23|359KB/s|B007-260618 [4...
+  network: ws
+  port: 443
+  server: 216.173.67.59
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_103|282KB/s|M003-260806 [...
@@ -379,12 +454,6 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-- name: 🇸🇬SG_39|636KB/s [61dec4b6ad88]...
-  port: 9443
-  server: 149.88.99.209
-  sni: 149.88.99.209
-  tls: true
-  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_115|715KB/s|X001-260618 [...
@@ -403,6 +472,12 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+- name: 🇸🇬SG_39|636KB/s [61dec4b6ad88]...
+  port: 9443
+  server: 149.88.99.209
+  sni: 149.88.99.209
+  tls: true
+  type: http
 - name: 🇸🇬SG_77|526KB/s|K001-260618 [7...
   password: None
   port: 443
@@ -410,16 +485,16 @@ proxies:
   sni: 154.26.139.24
   tls: true
   type: http
+- name: 🇸🇬SG_46|845KB/s|P002-260618 [7...
+  port: 9090
+  server: 128.199.113.85
+  type: http
 - cipher: rc4-md5
   name: 🇸🇬SG_20|328KB/s|A004-260618 [7...
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 128.199.172.224
   type: ss
-- name: 🇸🇬SG_46|845KB/s|P002-260618 [7...
-  port: 9090
-  server: 128.199.113.85
-  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_114|282KB/s|X001-260618 [...
@@ -438,12 +513,6 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-- cipher: rc4-md5
-  name: 🇸🇬SG_11|893KB/s|A004-260618 [7...
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.45
-  type: ss
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_51|325KB/s|F003-260618 [7...
@@ -453,6 +522,18 @@ proxies:
   tls: true
   type: vless
   uuid: 8199228b-e84b-42a2-9268-e400391e483a
+- name: 🇸🇬SG_49|810KB/s|A004-260618 [7...
+  password: sshs8_6481354771
+  port: 2087
+  server: 86.38.247.109
+  sni: ul-singapore1.09vpn.com
+  type: trojan
+- cipher: rc4-md5
+  name: 🇸🇬SG_11|893KB/s|A004-260618 [7...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.45
+  type: ss
 - cipher: rc4-md5
   name: 🇸🇬SG_5|276KB/s|A004-260618 [7f...
   password: 14fFPrbezE3HDZzsMOr6
@@ -477,12 +558,6 @@ proxies:
   tls: true
   type: vless
   uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-- cipher: rc4-md5
-  name: 🇸🇬SG_2|825KB/s|B007-260618 [9e...
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.4
-  type: ss
 - client-fingerprint: chrome
   encryption: none
   name: 🇸🇬SG_117|756KB/s|X001-260618 [...
@@ -501,6 +576,12 @@ proxies:
   tls: true
   type: vless
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+- cipher: rc4-md5
+  name: 🇸🇬SG_2|825KB/s|B007-260618 [9e...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.4
+  type: ss
 - cipher: rc4-md5
   name: 🇸🇬SG_18|881KB/s|A004-260618 [9...
   password: 14fFPrbezE3HDZzsMOr6
@@ -554,15 +635,6 @@ proxies:
   uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
 - client-fingerprint: chrome
   encryption: none
-  name: 🇸🇬SG_122|265KB/s|M003-260806 [...
-  network: ws
-  port: 443
-  server: 103.25.202.25
-  tls: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-- client-fingerprint: chrome
-  encryption: none
   name: 🇸🇬SG_94|546KB/s|M003-260806 [d...
   network: ws
   port: 8443
@@ -605,7 +677,7 @@ proxies:
   tls: true
   type: vless
   uuid: 0ef68b97-f878-4cea-b756-c56ea3632851
-- name: 🇸🇬SG_2|1.7MB/s - 168ms
+- name: 🇸🇬SG_2|1.7MB/s - 218ms
   port: 9090
   server: 128.199.254.13
   type: http
@@ -614,7 +686,16 @@ proxies:
   server: 47.236.168.243
   type: socks5
   username: ODg4ODo4ODg4
-- name: 🇸🇬SG_1|2.7MB/s|K001-260618 - 1...
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇬SG_1|1.1MB/s - 2ms
+  network: ws
+  port: 8443
+  server: cf.090227.xyz
+  tls: true
+  type: vless
+  uuid: 889fa37f-6bce-4674-8a49-1cc435e11de7
+- name: 🇸🇬SG_1|2.7MB/s|K001-260618 - 2...
   port: 9090
   server: 159.223.41.216
   type: http
@@ -626,138 +707,79 @@ proxies:
   tls: false
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-- name: 🇸🇬SG_2|3.6MB/s - 172ms
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 47966
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-- name: 🇸🇬SG_1|3.8MB/s - 189ms
+- name: 🇸🇬SG_1|3.8MB/s - 234ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 37212
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇸🇬SG_1|4.1MB/s - 190ms
+- name: 🇸🇬SG_2|3.6MB/s - 221ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 42338
+  port: 47966
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇸🇬SG_2|3.5MB/s - 177ms
+- name: 🇸🇬SG_3|1.5MB/s - 85ms
+  port: 14872
+  server: 45.74.31.42
+  type: socks5
+  username: Og%3D%3D
+- name: '%F0%9F%87%B8%F0%9F%87%ACSG_2%7...'
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 15589
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- encryption: none
-  name: 🇸🇬[www.v2nodes.com] vless-SG -...
-  network: ws
-  port: 80
-  server: 104.18.109.147
-  tls: false
-  type: vless
-  uuid: c29d39bd-92a4-45db-bb61-56013998617c
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #...'
-  network: ws
-  port: 443
-  server: 172.64.147.154
-  tls: true
-  type: vless
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-- encryption: none
-  name: 🇸🇬[www.v2nodes.com] vless-SG-1...
-  network: ws
-  port: 8880
-  server: 89.117.112.40
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- name: '%F0%9F%87%B8%F0%9F%87%ACSG_1%7...'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 42338
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - client-fingerprint: firefox
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  name: 🇸🇬[www.v2nodes.com] vless-SG-1...
   network: tcp
   port: 443
   server: 45.76.155.179
   tls: true
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇸🇬 新加坡|07|BGP - 11ms
-  network: ws
-  port: 2053
-  server: cf01.564895.xyz
-  tls: true
-  type: vless
-  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇸🇬 SG2@ripaojiedian - 180ms
-  network: ws
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 206.54.46.241
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇸🇬 SG1@ripaojiedian - 172ms
-  network: ws
-  port: 443
-  server: 206.54.46.225
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬 新加坡 - 568ms
-  network: ws
-  port: 443
-  server: ASaqYIDZa9WDQ9Kq.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
-    path: /
-- client-fingerprint: chrome
+  server: 15.235.184.127
+  type: trojan
+- client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: 新加坡_5DB0AF - 321ms
+  name: 🇸🇬 新加坡 | SGP - 227ms
   network: tcp
-  port: 2089
+  port: 13212
   reality-opts:
-    public-key: oRmj7gTi5H2oIClNYxxgOjqp8-j5kFYtGFU8CNuMj34
-    short-id: '!!str deccc6fac1ddb0ff'
-  server: 213.152.180.55
+    public-key: 4VguZbm-S2NkLpi7gLDsQMv2eDXP2LucxsvTiEt98yY
+    short-id: '!!str 961f7127a015ba'
+  server: dddz-3-z.473221.xyz
   tls: true
   type: vless
-  uuid: 38d3d211-cc9f-491a-a8ab-9a5be57bb712
-- client-fingerprint: chrome
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: 新加坡_BB464A - 519ms
+  name: 🇸🇬 新加坡 | SGP 3 - 247ms
   network: tcp
-  port: 443
+  port: 13239
   reality-opts:
-    public-key: iE4sTz-Q2Frkm7WM32P1wm4at49Wpaj5vo-2FsLcN1M
-    short-id: '!!str 8854f17e2a5af2d8'
-  server: snp.bsh-net.ru
+    public-key: NJgrmuV1CFhj7PeKJoQfDQVagDcFITkfrM-a7sa_mWw
+    short-id: '!!str 8591c4d31f59a60d'
+  server: dddz-1-x.473221.xyz
   tls: true
   type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
 - name: SG%E6%96%B0%E5%8A%A0%E5%9D%A1%...
   network: ws
   password: '!!str 521314'
@@ -773,38 +795,24 @@ proxies:
 - name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #1'
   password: IQ68037294
   port: 443
+  server: full-mackerel.rooster465.autos
+  sni: full-mackerel.rooster465.autos
+  type: trojan
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #2'
+  password: IQ68037294
+  port: 443
   server: apt-midge.rooster465.autos
   sni: apt-midge.rooster465.autos
   type: trojan
-- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #2'
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #3'
   password: IQ68037294
   port: 443
   server: giving-bird.rooster465.autos
   sni: giving-bird.rooster465.autos
   type: trojan
-- name: 🇸🇬 SG 16 → tg@nicevpn123 - 168...
-  password: yR7hP9aw5L
-  port: 443
-  server: 134.209.105.33
-  skip-cert-verify: true
-  sni: aka.ms
-  type: trojan
-- name: 🇸🇬 SG 7 → tg@nicevpn123 - 168m...
-  password: I4bO2YDEgs
-  port: 443
-  server: 188.166.252.91
-  skip-cert-verify: true
-  sni: aka.ms
-  type: trojan
-- name: 🇸🇬 SG 33 → tg@nicevpn123 - 171...
-  password: 557340ab-4ae8-4593-989f-a8053bec73b6
-  port: 443
-  server: 139.162.39.206
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇬 SG 37 → tg@nicevpn123 - 147...
+  name: 🇸🇬 SG 37 → tg@nicevpn123 - 198...
   network: ws
   port: 80
   server: 8.217.85.14
@@ -815,26 +823,38 @@ proxies:
     headers:
       Host: 8.217.85.14
     path: /
-- name: 🇸🇬 SG 27 → tg@nicevpn123 - 169...
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 40 → tg@nicevpn123 - 224...
+  password: amazonskr05
+  port: 443
+  server: 13.250.57.60
+  type: ss
+- name: 🇸🇬 SG 27 → tg@nicevpn123 - 220...
   password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
   port: 443
   server: 139.162.49.215
   skip-cert-verify: true
   type: trojan
-- cipher: aes-256-cfb
-  name: 🇸🇬 SG 40 → tg@nicevpn123 - 173...
-  password: amazonskr05
+- name: 🇸🇬 SG 7 → tg@nicevpn123 - 220m...
+  password: I4bO2YDEgs
   port: 443
-  server: 13.250.57.60
-  type: ss
-- encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 92C096 - ...
-  network: tcp
-  port: 10443
-  server: 178.94.25.73
-  tls: false
-  type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  server: 188.166.252.91
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
+- name: 🇸🇬 SG 33 → tg@nicevpn123 - 220...
+  password: 557340ab-4ae8-4593-989f-a8053bec73b6
+  port: 443
+  server: 139.162.39.206
+  skip-cert-verify: true
+  type: trojan
+- name: 🇸🇬 SG 16 → tg@nicevpn123 - 219...
+  password: yR7hP9aw5L
+  port: 443
+  server: 134.209.105.33
+  skip-cert-verify: true
+  sni: aka.ms
+  type: trojan
 - alterId: 0
   cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 77AF8A - ...
@@ -844,18 +864,23 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- encryption: none
-  name: SG 🇸🇬 | @Raydikalx | AA9F76 - ...
-  network: ws
-  port: 14430
-  server: 178.94.25.73
-  tls: false
-  type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-- client-fingerprint: ios
+- client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: SG 🇸🇬 | @Raydikalx | 06ADB4 - ...
+  name: SG 🇸🇬 | @Raydikalx | D79E2B - ...
+  network: tcp
+  port: 43113
+  reality-opts:
+    public-key: EK3prcfF8VKm3CoTXWQguRj67LxGbkPIpKmEUKsMKGs
+    short-id: '!!str ff2c978a0b'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: qq
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | E1BB9A - ...
   network: tcp
   port: 41688
   reality-opts:
@@ -867,28 +892,16 @@ proxies:
   uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
 - client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 6E2A07 - ...
+  name: SG 🇸🇬 | @Raydikalx | 2FE620 - ...
   network: tcp
-  port: 21003
+  port: 21001
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: '!!str f3602a3a1cf928b7'
+    short-id: '!!str a51c3ccb2320024a'
   server: 103.106.229.177
   tls: true
   type: vless
   uuid: 67952583-8572-42e1-943d-0602794f885b
-- client-fingerprint: chrome
-  encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 868C10 - ...
-  network: tcp
-  port: 21003
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str bab49aa4c2a88d27'
-  server: 103.106.229.37
-  tls: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
 - client-fingerprint: chrome
   encryption: none
   name: SG 🇸🇬 | @Raydikalx | 4AE7BB - ...
@@ -903,12 +916,12 @@ proxies:
   uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
 - client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 5F51FD - ...
+  name: SG 🇸🇬 | @Raydikalx | 8202B0 - ...
   network: tcp
-  port: 21004
+  port: 21001
   reality-opts:
     public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str 2df2bd9d8366cef1'
+    short-id: '!!str ab39fc68ab3dee81'
   server: 103.106.229.37
   tls: true
   type: vless
@@ -927,12 +940,36 @@ proxies:
   uuid: 67952583-8572-42e1-943d-0602794f885b
 - client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 2FE620 - ...
+  name: SG 🇸🇬 | @Raydikalx | 868C10 - ...
   network: tcp
-  port: 21001
+  port: 21003
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str bab49aa4c2a88d27'
+  server: 103.106.229.37
+  tls: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  encryption: none
+  name: SG 🇸🇬 | @Raydikalx | 5F51FD - ...
+  network: tcp
+  port: 21004
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str 2df2bd9d8366cef1'
+  server: 103.106.229.37
+  tls: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  encryption: none
+  name: SG 🇸🇬 | @Raydikalx | 6E2A07 - ...
+  network: tcp
+  port: 21003
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: '!!str a51c3ccb2320024a'
+    short-id: '!!str f3602a3a1cf928b7'
   server: 103.106.229.177
   tls: true
   type: vless
@@ -949,31 +986,31 @@ proxies:
   tls: true
   type: vless
   uuid: 67952583-8572-42e1-943d-0602794f885b
-- client-fingerprint: safari
+- client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: SG 🇸🇬 | @Raydikalx | 6F14EC - ...
+  name: SG 🇸🇬 | @Raydikalx | 39A1D4 - ...
   network: tcp
-  port: 10444
+  port: 34761
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: '!!str 8debcf36f1cc69ff'
-  server: 178.94.25.73
+    public-key: h1l2o1aPlR4WewN4YxtTYugJucyxhjvOHbfEHCHPEiU
+    short-id: '!!str 867357bc81a4'
+  server: dddz-1-x.473221.xyz
   tls: true
   type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-- client-fingerprint: chrome
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: random
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 8202B0 - ...
+  name: SG 🇸🇬 | @Raydikalx | 812ADF - ...
   network: tcp
-  port: 21001
+  port: 21003
   reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str ab39fc68ab3dee81'
-  server: 103.106.229.37
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: '!!str f3602a3a1cf928b7'
+  server: 510.150333.xyz
   tls: true
   type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+  uuid: 67952583-8572-42e1-943d-0602794f885b
 - client-fingerprint: random
   encryption: none
   name: SG 🇸🇬 | @Raydikalx | 6CC823 - ...
@@ -982,18 +1019,6 @@ proxies:
   reality-opts:
     public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
     short-id: '!!str 2df2bd9d8366cef1'
-  server: 511.150333.xyz
-  tls: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  encryption: none
-  name: SG 🇸🇬 | @Raydikalx | B55B31 - ...
-  network: tcp
-  port: 21002
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str 3ab8d93dd9b1a5be'
   server: 511.150333.xyz
   tls: true
   type: vless
@@ -1012,54 +1037,6 @@ proxies:
   uuid: 67952583-8572-42e1-943d-0602794f885b
 - client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | E2CC77 - ...
-  network: tcp
-  port: 21003
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str bab49aa4c2a88d27'
-  server: 511.150333.xyz
-  tls: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 6998DB - ...
-  network: tcp
-  port: 21001
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: '!!str a51c3ccb2320024a'
-  server: 510.150333.xyz
-  tls: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-- client-fingerprint: random
-  encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 812ADF - ...
-  network: tcp
-  port: 21003
-  reality-opts:
-    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
-    short-id: '!!str f3602a3a1cf928b7'
-  server: 510.150333.xyz
-  tls: true
-  type: vless
-  uuid: 67952583-8572-42e1-943d-0602794f885b
-- client-fingerprint: chrome
-  encryption: none
-  name: SG 🇸🇬 | @Raydikalx | C9CFFA - ...
-  network: tcp
-  port: 21001
-  reality-opts:
-    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
-    short-id: '!!str ab39fc68ab3dee81'
-  server: 511.150333.xyz
-  tls: true
-  type: vless
-  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
-- client-fingerprint: chrome
-  encryption: none
   name: SG 🇸🇬 | @Raydikalx | 56E419 - ...
   network: tcp
   port: 21002
@@ -1072,22 +1049,105 @@ proxies:
   uuid: 67952583-8572-42e1-943d-0602794f885b
 - client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | 38FDAB - ...
-  network: ws
-  port: 627
-  server: 142.91.101.39
+  name: SG 🇸🇬 | @Raydikalx | 6998DB - ...
+  network: tcp
+  port: 21001
+  reality-opts:
+    public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
+    short-id: '!!str a51c3ccb2320024a'
+  server: 510.150333.xyz
   tls: true
   type: vless
-  uuid: 2949e720-4588-4edc-8642-ff2b7b368c78
-- client-fingerprint: firefox
+  uuid: 67952583-8572-42e1-943d-0602794f885b
+- client-fingerprint: chrome
   encryption: none
-  name: SG 🇸🇬 | @Raydikalx | E62C9A - ...
-  network: ws
-  port: 627
-  server: 142.91.101.39
+  name: SG 🇸🇬 | @Raydikalx | E2CC77 - ...
+  network: tcp
+  port: 21003
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str bab49aa4c2a88d27'
+  server: 511.150333.xyz
   tls: true
   type: vless
-  uuid: a32f3ec6-d776-450e-9d97-9e2deb6c8421
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: chrome
+  encryption: none
+  name: SG 🇸🇬 | @Raydikalx | 5D3CC3 - ...
+  network: tcp
+  port: 21001
+  reality-opts:
+    public-key: HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU
+    short-id: '!!str ab39fc68ab3dee81'
+  server: 511.150333.xyz
+  tls: true
+  type: vless
+  uuid: 41b1c169-5905-4d98-b6a6-56896c25737c
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | B228E7 - ...
+  network: tcp
+  port: 43117
+  reality-opts:
+    public-key: sx45rPTYcCjQaHYudo1gfNFWYN4mQ4SCwGHfdGU-Hwc
+    short-id: '!!str 1f34079b44529536'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | A50CDD - ...
+  network: tcp
+  port: 35761
+  reality-opts:
+    public-key: vSubgJVUq5nLAQIAmUoSxRUxY8Vt90w6E7GVbxUYaUI
+    short-id: '!!str e38aadffc74edfce'
+  server: dddz-2-y.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | AB2A41 - ...
+  network: tcp
+  port: 43115
+  reality-opts:
+    public-key: lOvD2OqP7J9WEDZ4q5G6Dx7XKt2eAN4CFgcNhPN-EGI
+    short-id: '!!str f3a2231b4371'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | B3869E - ...
+  network: tcp
+  port: 34760
+  reality-opts:
+    public-key: FKkMWruW5ySd0t091irE_09B9o9AipV8ztZftd4Odwc
+    short-id: '!!str ab58b04c4a4407'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | 12F4C6 - ...
+  network: tcp
+  port: 43116
+  reality-opts:
+    public-key: rLU2xJNZPFvtHy49MygD-nta6OpJEbjarjAZ5vHwpVE
+    short-id: '!!str 29ad689280e2f0ec'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
 - client-fingerprint: firefox
   encryption: none
   name: SG 🇸🇬 | @Raydikalx | F9A842 - ...
@@ -1100,17 +1160,43 @@ proxies:
   tls: true
   type: vless
   uuid: f46182d1-e13b-47d3-97e2-fa5426a93e7c
-- encryption: none
-  name: SG 🇸🇬 | @Raydikalx | CCB1A0 - ...
-  network: ws
-  port: 443
-  server: 43.156.62.218
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | BBBF12 - ...
+  network: tcp
+  port: 33161
+  reality-opts:
+    public-key: 9WulHOrPZIMdOVwTo-9Z2puTD8GNlt6ctR3hpemHgxc
+    short-id: '!!str e5086b3dc5'
+  server: dddz-2-y.473221.xyz
   tls: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: SG 🇸🇬 | @Raydikalx | E9C28A - ...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SG 🇸🇬 | @Raydikalx | 26A7F9 - ...
+  network: tcp
+  port: 33170
+  reality-opts:
+    public-key: e-3jHS8LUXVi0ZWuwUAxd7OjFznKPr3N0B-H4SuW0yk
+    short-id: '!!str c732f5c7529fa4'
+  server: dddz-1-x.473221.xyz
+  tls: true
+  type: vless
+  uuid: 65ec84f5-0dd4-4582-8b4f-592e50b22116
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬209646 | ⚡️Telegram = t.me/S...
+  network: ws
   port: 443
-  server: 15.235.184.127
-  sni: exploredigitaljobplatformandfindonlinework.com
-  type: trojan
+  server: uiuxertste-production.up.railway.app
+  sni: uiuxertste-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: 16ef0b0d-4921-4d76-a5d7-95b2e33d44a7
+  ws-opts:
+    headers:
+      Host: uiuxertste-production.up.railway.app
+    path: /api/vH_3Ns

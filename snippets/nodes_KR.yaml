@@ -1,4 +1,10 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 141.164.45.187
+  type: ss
 - name: 🇰🇷[www.v2nodes.com] trojan-KR-...
   password: 5t6i121em5lkmsmk
   port: 48851
@@ -6,12 +12,19 @@ proxies:
   skip-cert-verify: true
   sni: kr002.zestapp778.com
   type: trojan
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_30|82KB/s|M001-260618 [2f...
-  password: qwerREWQ@@
-  port: 4652
-  server: p141.panda001.net
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 251ms
+  network: ws
+  port: 443
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /
 - cipher: aes-256-cfb
   name: 🇰🇷KR_33|294KB/s|A004-260618 [6...
   password: qwerREWQ@@
@@ -34,15 +47,6 @@ proxies:
   skip-cert-verify: true
   sni: 154.90.62.70
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_37|630KB/s|R002-260618 [9...
-  network: tcp
-  port: 800
-  server: 129.154.61.196
-  tls: false
-  type: vmess
-  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
 - cipher: aes-256-cfb
   name: 🇰🇷KR_28|82KB/s|A004-260618 [a2...
   password: qwerREWQ@@
@@ -80,33 +84,20 @@ proxies:
   tls: false
   type: vmess
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- name: 🇰🇷KR_1|1.6MB/s - 141ms
+- name: 🇰🇷KR_1|1.6MB/s - 551ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 18572
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇰🇷KR_1|3.5MB/s - 140ms
+- name: 🇰🇷KR_1|3.5MB/s - 525ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 29628
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国 - 158ms
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /
 - name: KR%E9%9F%A9%E5%9B%BD%28mibei77...
   network: ws
   password: '!!str 521314'
@@ -121,7 +112,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: KR韩国(mibei77.com 米贝节点分享) - 77m...
+  name: KR韩国(mibei77.com 米贝节点分享) - 25m...
   network: ws
   port: 8443
   server: tg.hrmp.kdns.fr
@@ -132,9 +123,15 @@ proxies:
     headers:
       Host: tg.hrmp.kdns.fr
     path: /tirexvmess
+- cipher: aes-256-cfb
+  name: 🇰🇷 KR 31 → tg@nicevpn123 - 184...
+  password: amazonskr05
+  port: 443
+  server: 54.180.133.185
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 136...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 183...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -154,9 +151,33 @@ proxies:
   tls: false
   type: vmess
   uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+- name: KR 🇰🇷 | @Raydikalx | 1FAA65 - ...
+  password: 5t6i121em5lkmsmk
+  port: 48851
+  server: 158.247.220.26
+  sni: kr002.zestapp778.com
+  type: trojan
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 96864A - ...
+  password: RexnBgU7EV5ADxG
+  port: 7002
+  server: 141.164.45.187
+  type: ss
 - name: KR 🇰🇷 | @Raydikalx | 6FD10F - ...
   password: 5t6i121em5lkmsmk
   port: 48851
   server: 158.247.255.150
   sni: kr002.zestapp778.com
   type: trojan
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | B12A95 - ...
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 2B2332 - ...
+  password: KixLvKzwjekG00rm
+  port: 8000
+  server: 141.164.45.187
+  type: ss

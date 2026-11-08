@@ -1,4 +1,10 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 141.164.45.187
+  type: ss
 - name: 🇰🇷[www.v2nodes.com] trojan-KR-...
   password: 5t6i121em5lkmsmk
   port: 48851
@@ -6,6 +12,41 @@ proxies:
   skip-cert-verify: true
   sni: kr002.zestapp778.com
   type: trojan
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR1@ripaojiedian - 181ms
+  network: ws
+  port: 443
+  server: 109.61.127.247
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR2@ripaojiedian - 194ms
+  network: ws
+  port: 28017
+  server: 121.154.67.134
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 251ms
+  network: ws
+  port: 443
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /
 - encryption: none
   name: 🇰🇷KR韩国丨yoyapai.com (2) - 13ms
   network: ws
@@ -22,12 +63,6 @@ proxies:
   tls: false
   type: vless
   uuid: 81d55675-8570-4b40-9a77-3125339a0f86
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_30|82KB/s|M001-260618 [2f...
-  password: qwerREWQ@@
-  port: 4652
-  server: p141.panda001.net
-  type: ss
 - cipher: aes-256-cfb
   name: 🇰🇷KR_33|294KB/s|A004-260618 [6...
   password: qwerREWQ@@
@@ -50,15 +85,6 @@ proxies:
   skip-cert-verify: true
   sni: 154.90.62.70
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_37|630KB/s|R002-260618 [9...
-  network: tcp
-  port: 800
-  server: 129.154.61.196
-  tls: false
-  type: vmess
-  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
 - cipher: aes-256-cfb
   name: 🇰🇷KR_28|82KB/s|A004-260618 [a2...
   password: qwerREWQ@@
@@ -96,26 +122,25 @@ proxies:
   tls: false
   type: vmess
   uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- name: 🇰🇷KR_2|1.3MB/s - 132ms
-  password: T2clM0QlM0Q6
+- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
   port: 1090
   server: 121.169.46.116
   type: socks5
-  username: T2clM0QlM0Q6
-- name: 🇰🇷KR_1|1.1MB/s - 130ms
+  username: Og
+- name: 🇰🇷KR_2|1.4MB/s - 182ms
   password: VDJjbE0wUWxNMFE2Og
   port: 1090
   server: 121.169.46.116
   type: socks5
   username: VDJjbE0wUWxNMFE2Og
-- name: 🇰🇷KR_1|1.6MB/s - 141ms
+- name: 🇰🇷KR_1|1.6MB/s - 551ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 18572
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇰🇷KR_2|1.4MB/s - 259ms
+- name: 🇰🇷KR_2|1.4MB/s - 223ms
   password: bb85e074-b0c2-11ea-ad28-f23c913c8d2b
   port: 31433
   server: 783f6643-tcev40-th02zb-m0b9.kr.oshuawei.com
@@ -123,18 +148,13 @@ proxies:
   tls: true
   type: http
   username: bb85e074-b0c2-11ea-ad28-f23c913c8d2b
-- name: 🇰🇷KR_1|3.5MB/s - 140ms
+- name: 🇰🇷KR_1|3.5MB/s - 525ms
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 29628
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 'KR%E9%9F%A9%E5%9B%BD%28mibei77... #1'
-  port: 1090
-  server: 121.169.46.116
-  type: socks5
-  username: Og
 - encryption: none
   name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   network: ws
@@ -143,41 +163,6 @@ proxies:
   tls: false
   type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR2@ripaojiedian - 143ms
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR1@ripaojiedian - 130ms
-  network: ws
-  port: 443
-  server: 109.61.127.247
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国 - 158ms
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /
 - name: KR%E9%9F%A9%E5%9B%BD%28mibei77...
   network: ws
   password: '!!str 521314'
@@ -192,7 +177,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: KR韩国(mibei77.com 米贝节点分享) - 77m...
+  name: KR韩国(mibei77.com 米贝节点分享) - 25m...
   network: ws
   port: 8443
   server: tg.hrmp.kdns.fr
@@ -203,9 +188,15 @@ proxies:
     headers:
       Host: tg.hrmp.kdns.fr
     path: /tirexvmess
+- cipher: aes-256-cfb
+  name: 🇰🇷 KR 31 → tg@nicevpn123 - 184...
+  password: amazonskr05
+  port: 443
+  server: 54.180.133.185
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 136...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 183...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -225,9 +216,54 @@ proxies:
   tls: false
   type: vmess
   uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+- name: KR 🇰🇷 | @Raydikalx | 1FAA65 - ...
+  password: 5t6i121em5lkmsmk
+  port: 48851
+  server: 158.247.220.26
+  sni: kr002.zestapp778.com
+  type: trojan
+- client-fingerprint: firefox
+  encryption: none
+  name: KR 🇰🇷 | @Raydikalx | 3B1003 - ...
+  network: tcp
+  port: 37095
+  server: 158.247.220.26
+  tls: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 96864A - ...
+  password: RexnBgU7EV5ADxG
+  port: 7002
+  server: 141.164.45.187
+  type: ss
 - name: KR 🇰🇷 | @Raydikalx | 6FD10F - ...
   password: 5t6i121em5lkmsmk
   port: 48851
   server: 158.247.255.150
   sni: kr002.zestapp778.com
   type: trojan
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | B12A95 - ...
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: KR 🇰🇷 | @Raydikalx | 2B2332 - ...
+  password: KixLvKzwjekG00rm
+  port: 8000
+  server: 141.164.45.187
+  type: ss
+- client-fingerprint: chrome
+  encryption: none
+  name: KR 🇰🇷 | @Raydikalx | 629042 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: v5HjgwMvPEsrpqwtgEytMQ3xs-1Cdv2gOCiGMZ2vimc
+    short-id: '!!str 68307e'
+  server: 43.108.85.54
+  tls: true
+  type: vless
+  uuid: e15db5c2-2dca-49fc-857b-aa37a7ba1c79
