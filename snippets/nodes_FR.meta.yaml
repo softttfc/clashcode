@@ -1,4 +1,15 @@
 proxies:
+- name: v2go%20%7C%20%F0%9F%87%AB%F0%9...
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.8.83
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - name: '%F0%9F%87%AB%F0%9F%87%B7_FR_%E...'
   network: ws
   password: humanity
@@ -11,167 +22,8 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: v2go%20%7C%20%F0%9F%87%AB%F0%9...
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.8.83
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: FR%E6%B3%95%E5%9B%BD%28v2clash...
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20123
-  server: sclass-00.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: 🇫🇷FR_1|2.7MB/s - 104ms
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 21191
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- name: 🇫🇷FR_2|3.0MB/s - 115ms
-  port: 443
-  server: 82.66.235.221
-  sni: 82.66.235.221
-  tls: true
-  type: http
-- name: 🇫🇷FR_3|1.3MB/s - 143ms
-  port: 8090
-  server: 83.206.1.225
-  sni: 83.206.1.225
-  tls: true
-  type: http
-- name: 🇫🇷FR_4|4.7MB/s - 121ms
-  password: 'null'
-  port: 443
-  server: 82.66.235.221
-  sni: 82.66.235.221
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇫🇷FR_4|2.4MB/s|R002-260618 - 1...
-  port: 443
-  server: 103.82.101.43
-  sni: 76d1d3ecadca44efa2339867d7dfc9a1-8e928736d0f8dbdc.apache-iv.com
-  tls: true
-  type: http
-- name: 🇫🇷FR_6|2.0MB/s - 123ms
-  port: 443
-  server: 149.102.245.65
-  sni: 149.102.245.65
-  tls: true
-  type: http
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷FR_1|1.7MB/s - 105ms
-  network: grpc
-  port: 443
-  server: 200.102.183.50
-  tls: true
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷FR_1|3.1MB/s - 107ms
-  network: grpc
-  port: 80
-  server: 200.102.183.57
-  tls: true
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- name: 🇫🇷FR_1|1.7MB/s - 108ms
-  port: 9443
-  server: 138.199.47.247
-  sni: 138.199.47.247
-  tls: true
-  type: http
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇫🇷FR_6|3.9MB/s - 133ms
-  network: tcp
-  port: 8080
-  reality-opts:
-    public-key: GrojMfNyeTIhlsJvwgixlJMDwBGfU_L-WVCJhWMDRj0
-    short-id: '!!str 00d91a61fd'
-    support-x25519mlkem768: true
-  server: 51.83.61.102
-  tls: true
-  type: vless
-  uuid: 475f40ea-4459-445b-b2c6-3ca731551570
-- name: 🇫🇷FR_2|2.6MB/s - 105ms
-  port: 9443
-  server: 213.139.9.142
-  sni: 213.139.9.142
-  tls: true
-  type: http
-- name: 🇫🇷FR_4|2.9MB/s - 134ms
-  password: None
-  port: 8081
-  server: 31.32.19.111
-  sni: 31.32.19.111
-  tls: true
-  type: http
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷FR_1|3.2MB/s - 129ms
-  network: grpc
-  port: 8447
-  reality-opts:
-    public-key: Pe1-DgXHoB_IGysYKHHhjppQD88mHkzYkqISdSXQxT4
-    short-id: '!!str 732ef4f5320b5e19'
-  server: 212.69.86.159
-  tls: true
-  type: vless
-  uuid: 52030136-eee3-4675-baae-a50f17b2bb8b
-- name: 🇫🇷FR_5|3.6MB/s - 107ms
-  port: 3128
-  server: 54.36.150.233
-  type: http
-- name: 🇫🇷FR_2|1009KB/s - 107ms
-  port: 8090
-  server: 80.124.109.22
-  sni: 80.124.109.22
-  tls: true
-  type: http
-- name: 🇫🇷FR_6|3.1MB/s - 103ms
-  port: 443
-  server: 103.82.101.44
-  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
-  tls: true
-  type: http
-- name: 🇫🇷FR_5|1.1MB/s - 118ms
-  port: 443
-  server: 84.235.228.156
-  sni: 84.235.228.156
-  tls: true
-  type: http
-- name: 🇫🇷FR_3|2.2MB/s - 112ms
-  password: 'null'
-  port: 6103
-  server: 87.98.174.157
-  sni: 87.98.174.157
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇫🇷FR_5|1.5MB/s - 111ms
-  port: 443
-  server: 141.94.16.4
-  sni: 141.94.16.4
-  tls: true
-  type: http
 - encryption: none
-  name: 🇫🇷FR法国丨yoyapai.com - 6ms
+  name: 🇫🇷FR法国丨yoyapai.com - 3ms
   network: ws
   port: 8080
   server: 104.21.70.21
@@ -179,19 +31,17 @@ proxies:
   tls: false
   type: vless
   uuid: a8b1d666-d3ba-4b17-90c4-ba7514c74f78
-- client-fingerprint: chrome
-  encryption: none
-  name: FR法國丨yoyapai.com (2) - 187ms
+- encryption: none
+  name: 🇫🇷FR法国丨yoyapai.com (2) - 1ms
   network: ws
-  port: 443
-  server: cloudflare-ip.mofashi.ltd
-  sni: t1s1.rittbo.kdns.fr
-  tls: true
+  port: 8880
+  server: 216.24.57.40
+  tls: false
   type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
 - client-fingerprint: chrome
   encryption: none
-  name: FR法國丨yoyapai.com - 297ms
+  name: FR法國丨yoyapai.com - 270ms
   network: ws
   port: 443
   server: cf.130519.xyz
@@ -201,17 +51,7 @@ proxies:
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
 - client-fingerprint: chrome
   encryption: none
-  name: FR法國丨yoyapai.com (3) - 284ms
-  network: ws
-  port: 443
-  server: cf.877774.xyz
-  sni: t1s1.rittbo.kdns.fr
-  tls: true
-  type: vless
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- client-fingerprint: chrome
-  encryption: none
-  name: FR法國丨yoyapai.com (4) - 105ms
+  name: FR法國丨yoyapai.com (4) - 27ms
   network: ws
   port: 443
   server: store.ubi.com
@@ -219,57 +59,85 @@ proxies:
   tls: true
   type: vless
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-- name: FR法国丨yoyapai.com - 6ms
+- client-fingerprint: chrome
+  encryption: none
+  name: FR法國丨yoyapai.com (2) - 480ms
+  network: ws
+  port: 443
+  server: cloudflare-ip.mofashi.ltd
+  sni: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- client-fingerprint: chrome
+  encryption: none
+  name: FR法國丨yoyapai.com (3) - 411ms
+  network: ws
+  port: 443
+  server: cf.877774.xyz
+  sni: t1s1.rittbo.kdns.fr
+  tls: true
+  type: vless
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+- name: FR法国丨yoyapai.com - 2ms
   password: humanity
   port: 443
   server: 104.16.174.36
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷法国丨yoyapai.com (3) - 6ms
+- name: 🇫🇷法国丨yoyapai.com (3) - 1ms
   password: humanity
   port: 443
   server: 104.18.152.152
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷法国丨yoyapai.com (2) - 16ms
+- name: 🇫🇷法国丨yoyapai.com (2) - 9ms
   password: humanity
   port: 443
   server: www.speedtest.org
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷法国丨yoyapai.com - 7ms
+- name: 🇫🇷法国丨yoyapai.com - 2ms
   password: humanity
   port: 443
   server: 104.18.152.73
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷法国丨yoyapai.com (5) - 6ms
+- name: 🇫🇷法国丨yoyapai.com (5) - 2ms
   password: humanity
   port: 443
   server: 104.18.152.133
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷法国丨yoyapai.com (4) - 6ms
+- name: 🇫🇷法国丨yoyapai.com (4) - 2ms
   password: humanity
   port: 443
   server: 104.18.22.63
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷FR法國丨yoyapai.com (3) - 5ms
+- name: 🇫🇷FR法國丨yoyapai.com (3) - 2ms
   password: humanity
   port: 443
   server: 104.17.111.4
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇫🇷FR法國丨yoyapai.com (2) - 6ms
+- name: 🇫🇷FR法國丨yoyapai.com (2) - 2ms
   password: humanity
   port: 443
   server: 104.26.15.137
   sni: www.ignitelimit.com
   type: trojan
+- encryption: none
+  name: 🇫🇷法國丨yoyapai.com - 1ms
+  network: ws
+  port: 8880
+  server: 94.140.0.100
+  tls: false
+  type: vless
+  uuid: 78e6619e-e82a-cd8d-b482-0973d8498305
 - client-fingerprint: chrome
   encryption: none
-  name: 🇫🇷FR法國丨yoyapai.com (4) - 6ms
+  name: 🇫🇷FR法國丨yoyapai.com (4) - 1ms
   network: ws
   port: 443
   server: 104.19.87.194
@@ -277,30 +145,14 @@ proxies:
   tls: true
   type: vless
   uuid: 407ecce0-dc85-465f-89f5-e520e9378baf
-- encryption: none
-  name: 🇫🇷法國丨yoyapai.com - 19ms
-  network: ws
-  port: 8880
-  server: 94.140.0.100
-  tls: false
-  type: vless
-  uuid: 78e6619e-e82a-cd8d-b482-0973d8498305
-- name: 🇫🇷FR法国丨yoyapai.com (3) - 6ms
+- name: 🇫🇷FR法国丨yoyapai.com (3) - 1ms
   password: humanity
   port: 443
   server: 104.18.152.207
   sni: www.ignitelimit.com
   type: trojan
 - encryption: none
-  name: 🇫🇷FR法國丨yoyapai.com (5) - 6ms
-  network: ws
-  port: 8880
-  server: 104.17.64.70
-  tls: false
-  type: vless
-  uuid: 220046c3-0081-4c22-a648-83a52bc3a0d5
-- encryption: none
-  name: 🇫🇷FR法國丨yoyapai.com (6) - 6ms
+  name: 🇫🇷FR法國丨yoyapai.com (6) - 1ms
   network: ws
   port: 8880
   server: 104.27.82.154
@@ -308,7 +160,15 @@ proxies:
   type: vless
   uuid: fb5058f5-a9ed-424e-9ed7-33d455438286
 - encryption: none
-  name: 🇫🇷FR法国丨yoyapai.com (8) - 6ms
+  name: 🇫🇷FR法國丨yoyapai.com (5) - 2ms
+  network: ws
+  port: 8880
+  server: 104.17.64.70
+  tls: false
+  type: vless
+  uuid: 220046c3-0081-4c22-a648-83a52bc3a0d5
+- encryption: none
+  name: 🇫🇷FR法国丨yoyapai.com (8) - 2ms
   network: ws
   port: 8880
   server: 80.93.202.40
@@ -316,7 +176,7 @@ proxies:
   type: vless
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
 - encryption: none
-  name: 🇫🇷FR法国丨yoyapai.com (9) - 7ms
+  name: 🇫🇷FR法国丨yoyapai.com (9) - 2ms
   network: ws
   port: 8880
   server: 45.142.120.30
@@ -327,7 +187,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: 🇫🇷FR法国丨yoyapai.com (10) - 13ms
+  name: 🇫🇷FR法国丨yoyapai.com (10) - 1ms
   network: ws
   port: 443
   server: 199.232.78.160
@@ -335,6 +195,46 @@ proxies:
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
+- client-fingerprint: qq
+  encryption: none
+  name: FR法国(mibei77.com 米贝节点分享) (4) -...
+  network: ws
+  port: 2053
+  server: 154.211.8.152
+  sni: proxy-1cu.pages.dev
+  tls: true
+  type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: FR法国(mibei77.com 米贝节点分享) (7) -...
+  network: tcp
+  port: 2087
+  reality-opts:
+    public-key: Y8U3PhV0K8jT4PBHq-rhCA4eUtOXa1CNB9waCvZbZSc
+    short-id: '!!str 42'
+  server: 213.199.57.127
+  sni: blog.api.www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: 0f82d566-1273-43c5-a73c-229997b3b4b0
+- name: FR法国(mibei77.com 米贝节点分享) (2) -...
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20123
+  server: sclass-00.catcat321.com
+  sni: hk.catxstar.com
+  type: trojan
+- client-fingerprint: random
+  encryption: none
+  name: FR法国(mibei77.com 米贝节点分享) (5) -...
+  network: ws
+  port: 2083
+  server: 103.116.7.67
+  sni: proxy-1cu.pages.dev
+  tls: true
+  type: vless
+  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
 - cipher: aes-256-gcm
   name: 🇫🇷FR_69|4.2MB/s|M003-260806 [0...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -355,12 +255,12 @@ proxies:
   tls: false
   type: vless
   uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-- cipher: aes-256-gcm
-  name: 🇫🇷FR_70|4.9MB/s|M003-260806 [2...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 79.137.99.183
-  type: ss
+- name: 🇫🇷FR_43|1.5MB/s|R002-260618 [1...
+  port: 9443
+  server: 213.139.9.142
+  sni: 213.139.9.142
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇫🇷FR_87|3.9MB/s|M003-260806 [1...
@@ -371,11 +271,36 @@ proxies:
   type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
 - cipher: aes-256-gcm
+  name: 🇫🇷FR_70|4.9MB/s|M003-260806 [2...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 79.137.99.183
+  type: ss
+- name: 🇫🇷FR_34|1.8MB/s|R002-260618 [3...
+  port: 443
+  server: 103.82.101.43
+  sni: 76d1d3ecadca44efa2339867d7dfc9a1-8e928736d0f8dbdc.apache-iv.com
+  tls: true
+  type: http
+- name: 🇫🇷FR_40|1.1MB/s|R002-260618 [4...
+  port: 8090
+  server: 83.206.1.225
+  sni: 83.206.1.225
+  tls: true
+  type: http
+- cipher: aes-256-gcm
   name: 🇫🇷FR_66|1.8MB/s|M003-260806 [5...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.27
   type: ss
+- name: 🇫🇷FR_50|1.6MB/s|P002-260618 [5...
+  password: None
+  port: 443
+  server: 149.102.245.65
+  sni: 149.102.245.65
+  tls: true
+  type: http
 - name: 🇫🇷FR_52|162KB/s|R002-260618 [5...
   port: 443
   server: fan.132031.xyz
@@ -436,6 +361,13 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- name: 🇫🇷FR_51|3.8MB/s|K001-260618 [9...
+  password: None
+  port: 443
+  server: 82.66.235.221
+  sni: 82.66.235.221
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇫🇷FR_85|2.9MB/s|M003-260806 [a...
@@ -445,6 +377,12 @@ proxies:
   tls: true
   type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+- name: 🇫🇷FR_28|5.6MB/s|R002-260618 [a...
+  port: 443
+  server: 172.64.69.89
+  sni: 172.64.69.89
+  tls: true
+  type: http
 - client-fingerprint: chrome
   encryption: none
   name: 🇫🇷FR_86|3.2MB/s|M003-260806 [a...
@@ -462,10 +400,30 @@ proxies:
   tls: true
   type: http
   username: 'null'
+- name: 🇫🇷FR_13|5.0MB/s|R002-260618 [b...
+  password: 'null'
+  port: 6103
+  server: 87.98.174.157
+  sni: 87.98.174.157
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇫🇷FR_16|3.9MB/s|R002-260618 [b...
+  port: 443
+  server: 141.94.16.4
+  sni: 141.94.16.4
+  tls: true
+  type: http
 - name: 🇫🇷FR_27|2.6MB/s|R002-260618 [b...
   port: 443
   server: 130.180.211.56
   sni: 130.180.211.56
+  tls: true
+  type: http
+- name: 🇫🇷FR_49|310KB/s|R002-260618 [b...
+  port: 443
+  server: 84.235.228.156
+  sni: 84.235.228.156
   tls: true
   type: http
 - name: 🇫🇷FR_63|653KB/s|R002-260618 [c...
@@ -482,6 +440,18 @@ proxies:
   port: 19999
   server: 167.17.64.22
   type: ss
+- name: 🇫🇷FR_26|1.1MB/s|R002-260618 [d...
+  port: 8081
+  server: 31.32.19.111
+  sni: 31.32.19.111
+  tls: true
+  type: http
+- name: 🇫🇷FR_9|820KB/s|R002-260618 [df...
+  port: 443
+  server: 103.82.101.44
+  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
+  tls: true
+  type: http
 - cipher: aes-256-gcm
   name: 🇫🇷FR_68|2.0MB/s|M003-260806 [e...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -494,6 +464,24 @@ proxies:
   sni: 62.210.27.111
   tls: true
   type: http
+- name: 🇫🇷FR_72|1.1MB/s|R002-260618 [e...
+  port: 9443
+  server: 138.199.47.247
+  sni: 138.199.47.247
+  tls: true
+  type: http
+- name: 🇫🇷FR_4|729KB/s|R002-260618 [e9...
+  port: 8090
+  server: 80.124.109.22
+  sni: 80.124.109.22
+  tls: true
+  type: http
+- name: 🇫🇷FR_29|82KB/s|R002-260618 [eb...
+  port: 443
+  server: 62.210.147.2
+  sni: 62.210.147.2
+  tls: true
+  type: http
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR_78|1.1MB/s|M003-260806 [e...
@@ -503,12 +491,6 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- name: 🇫🇷FR_29|82KB/s|R002-260618 [eb...
-  port: 443
-  server: 62.210.147.2
-  sni: 62.210.147.2
-  tls: true
-  type: http
 - alpn:
   - h3
   - h2
@@ -531,23 +513,65 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- name: '%F0%9F%87%AB%F0%9F%87%B7_FR_%E... #1'
-  password: '!!str 3763495894587285504'
+- cipher: aes-256-gcm
+  name: 🇫🇷FR_1|2.7MB/s - 140ms
+  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
+  port: 21191
+  server: c17b957c5a76ec76.lebufflonfermegroup.us
+  type: ss
+- name: 🇫🇷FR_4|4.7MB/s - 95ms
+  password: 'null'
   port: 443
-  server: maximum-ant.treefrog761.one
-  sni: maximum-ant.treefrog761.one
-  type: trojan
-- name: FR_speednode_0051 - 6ms
+  server: 82.66.235.221
+  sni: 82.66.235.221
+  tls: true
+  type: http
+  username: 'null'
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇫🇷FR_1|1.7MB/s - 87ms
+  network: grpc
+  port: 443
+  server: 200.102.183.50
+  tls: true
+  type: vless
+  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇫🇷FR_1|3.1MB/s - 92ms
+  network: grpc
+  port: 80
+  server: 200.102.183.57
+  tls: true
+  type: vless
+  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇫🇷FR_6|3.9MB/s - 89ms
+  network: tcp
+  port: 8080
+  reality-opts:
+    public-key: GrojMfNyeTIhlsJvwgixlJMDwBGfU_L-WVCJhWMDRj0
+    short-id: '!!str 00d91a61fd'
+    support-x25519mlkem768: true
+  server: 51.83.61.102
+  tls: true
+  type: vless
+  uuid: 475f40ea-4459-445b-b2c6-3ca731551570
+- name: 🇫🇷FR_5|3.6MB/s - 85ms
+  port: 3128
+  server: 54.36.150.233
+  type: http
+- name: FR_speednode_0051 - 2ms
   password: Aimer
   port: 443
   server: 141.11.203.168
   sni: epgc.aimercc.dpdns.org
-  type: trojan
-- name: 🇫🇷 FR TROJAN-26 | free-nodes -...
-  password: humanity
-  port: 443
-  server: chatgpt.com
-  sni: www.gossipglove.com
   type: trojan
 - encryption: none
   name: 🇫🇷 FR VLESS-25 | free-nodes - ...
@@ -557,8 +581,14 @@ proxies:
   tls: true
   type: vless
   uuid: ff188c84-49a9-4cc6-b3f7-4f8bdc7571ec
+- name: 🇫🇷 FR TROJAN-26 | free-nodes -...
+  password: humanity
+  port: 443
+  server: chatgpt.com
+  sni: www.gossipglove.com
+  type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷 FR SS-104 | free-nodes - 11...
+  name: 🇫🇷 FR SS-104 | free-nodes - 88...
   password: jP4Z9J3S6tAldCaSdCtaZR7gZtV7rQg0
   port: 443
   server: 64.31.63.92
@@ -596,24 +626,15 @@ proxies:
   type: vless
   uuid: 938f3d53-66b0-4d54-b518-287c27bf1ef0
 - encryption: none
-  name: 🇫🇷 FR VLESS-34 | free-nodes - ...
+  name: 🇫🇷 FR VLESS-43 | free-nodes - ...
   network: ws
   port: 80
   server: OV-France1.09vpn.com
   tls: false
   type: vless
   uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  network: ws
-  port: 443
-  server: 199.232.78.120
-  tls: true
-  type: vless
-  uuid: 14fcb437-5561-413c-9eff-55424855e7d7
 - encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 2166
   server: 89.187.7.4
@@ -621,21 +642,18 @@ proxies:
   type: vless
   uuid: e1862eef-e3f2-4e27-b0a5-ddf8df384af9
 - cipher: chacha20-ietf-poly1305
-  name: '🇫🇷 法国 | FRA #1 - 324ms'
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
   password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
   port: 1352
   server: dns24.m3hrzd.ir
   type: ss
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷 法国 | FRA 5 - 14ms
-  network: ws
-  port: 443
-  server: 199.232.78.120
-  tls: true
-  type: vless
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-- name: FR_speednode_0012 - 112ms
+- cipher: chacha20-ietf-poly1305
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
+  password: 29irqk0paakcx19v
+  port: 8080
+  server: 51.83.61.102
+  type: ss
+- name: FR_speednode_0012 - 87ms
   port: 443
   server: 82.65.162.76
   sni: 82.65.162.76
@@ -654,7 +672,7 @@ proxies:
     path: /assignment
 - alterId: 0
   cipher: auto
-  name: 🇫🇷 FR 48 → tg@nicevpn123 - 6ms
+  name: 🇫🇷 FR 48 → tg@nicevpn123 - 1ms
   network: ws
   port: 8880
   server: 94.140.0.110
@@ -665,23 +683,17 @@ proxies:
     headers:
       Host: 94.140.0.110
     path: /
-- name: 🇫🇷 FR 17 → tg@nicevpn123 - 125...
+- name: 🇫🇷 FR 17 → tg@nicevpn123 - 89m...
   password: fc1e07b5-840b-4446-8232-94b0606f2e0d
   port: 443
   server: 193.70.112.90
   skip-cert-verify: true
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷 FR 33 → tg@nicevpn123 - 119...
+  name: 🇫🇷 FR 33 → tg@nicevpn123 - 84m...
   password: LE6Ee6PELhVu
   port: 443
   server: 92.243.24.236
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: FR 🇫🇷 | @Raydikalx | 33397E - ...
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: FR 🇫🇷 | @Raydikalx | D6482C - ...
@@ -689,14 +701,6 @@ proxies:
   port: 8080
   server: 51.77.144.182
   type: ss
-- encryption: none
-  name: FR 🇫🇷 | @Raydikalx | 314D4A - ...
-  network: ws
-  port: 80
-  server: 152.228.162.19
-  tls: false
-  type: vless
-  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -713,16 +717,32 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: FR 🇫🇷 | @Raydikalx | 43C1C4 - ...
+  name: FR 🇫🇷 | @Raydikalx | 8554CE - ...
   network: tcp
-  port: 443
+  port: 2083
   reality-opts:
-    public-key: yr_opKG6DGTppNDXkk-DhGSYJZXbb9o-caexk2FZO38
-    short-id: '!!str 8f3c6e2a1b5d4f09'
-  server: 138.124.251.98
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: '!!str 0123456789abcdef'
+  server: 20.19.83.143
   tls: true
   type: vless
-  uuid: 1d1eda2e-0bd7-4478-877b-1c5425c6c4dd
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+- encryption: none
+  name: FR 🇫🇷 | @Raydikalx | 314D4A - ...
+  network: ws
+  port: 80
+  server: 152.228.162.19
+  tls: false
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+- encryption: none
+  name: FR 🇫🇷 | @Raydikalx | 554FB2 - ...
+  network: ws
+  port: 80
+  server: 152.228.162.19
+  tls: false
+  type: vless
+  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -749,14 +769,6 @@ proxies:
   tls: true
   type: vless
   uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- encryption: none
-  name: FR 🇫🇷 | @Raydikalx | 554FB2 - ...
-  network: ws
-  port: 80
-  server: 152.228.162.19
-  tls: false
-  type: vless
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -771,6 +783,14 @@ proxies:
   type: vless
   uuid: 664f65f4-33b3-03ef-b9e5-68192d1d428e
 - encryption: none
+  name: FR 🇫🇷 | @Raydikalx | 08DCDF - ...
+  network: ws
+  port: 80
+  server: ov-france1.09vpn.com
+  tls: false
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+- encryption: none
   name: FR 🇫🇷 | @Raydikalx | A4F7D7 - ...
   network: ws
   port: 80
@@ -778,6 +798,19 @@ proxies:
   tls: false
   type: vless
   uuid: 5ce84688-f535-46ad-a512-37b17becf6ea
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: FR 🇫🇷 | @Raydikalx | 113330 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: KOgPteoWEwtVtykS2FGV5NHdZw6197VzbITPGkUJDBQ
+    short-id: '!!str '
+  server: 200.102.183.45
+  tls: true
+  type: vless
+  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
 - alterId: 0
   cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 597666 - ...
@@ -817,29 +850,3 @@ proxies:
   tls: true
   type: vless
   uuid: 664f65f4-33b3-03f0-b9e5-68192d1d428e
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: FR 🇫🇷 | @Raydikalx | F899C3 - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: cH5ij6-s09W0Dx3Bnxhh4fHeVnjM_TrS1rZWfdgBPi8
-    short-id: '!!str 0268c715cf2f61e7'
-  server: 200.102.183.45
-  tls: true
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: FR 🇫🇷 | @Raydikalx | 328B13 - ...
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: sp_KKjJjc7cyVd8jkaPNfRtB9UxyZT6CfF62uYqcMlI
-    short-id: '!!str 69828f96b0fcc801'
-  server: 200.102.183.80
-  tls: true
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e

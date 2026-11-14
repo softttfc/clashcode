@@ -1,47 +1,31 @@
 proxies:
-- name: 🇨🇭CH_1|2.7MB/s - 127ms
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇭_CH_瑞士 - 92ms
+  network: tcp
   port: 443
-  server: 31.7.62.50
-  sni: 31.7.62.50
+  reality-opts:
+    public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
+    short-id: '!!str 10a5c8e2f4b7d936'
+  server: 199.68.196.79
   tls: true
-  type: http
-- name: 🇨🇭CH_3|1.4MB/s - 128ms
-  password: None
-  port: 9443
-  server: 37.120.213.210
-  sni: 37.120.213.210
-  tls: true
-  type: http
-- name: 🇨🇭CH_1|2.1MB/s - 120ms
-  port: 9443
-  server: 149.88.27.33
-  sni: 149.88.27.33
-  tls: true
-  type: http
-- name: 🇨🇭CH_1|1.4MB/s|K001-260618 - 1...
-  password: None
-  port: 9443
-  server: 149.88.27.46
-  sni: 149.88.27.46
-  tls: true
-  type: http
+  type: vless
+  uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇨🇭CH_1|2.7MB/s - 177ms
+  name: 🇨🇭CH瑞士丨yoyapai.com (4) - 218ms
   network: tcp
-  port: 2058
+  port: 443
   reality-opts:
-    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
-    short-id: '!!str 937255313d6ce673'
-  server: 82.146.42.160
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: '!!str 428ef87fd47a3a32'
+  server: prvtch.titun.su
+  sni: perevodchiki.su
   tls: true
   type: vless
-  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
-- name: 🇨🇭CH_2|4.2MB/s - 124ms
-  port: 10230
-  server: 147.161.246.39
-  type: http
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
 - name: 🇨🇭CH_62|507KB/s|M003-260806 [0...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -49,6 +33,19 @@ proxies:
   skip-cert-verify: true
   sni: cdn.yourultimateprofessionalcareerhub.com
   type: trojan
+- name: 🇨🇭CH_3|1.4MB/s - 96ms
+  password: None
+  port: 9443
+  server: 37.120.213.210
+  sni: 37.120.213.210
+  tls: true
+  type: http
+- name: 🇨🇭CH_1|2.1MB/s - 96ms
+  port: 9443
+  server: 149.88.27.33
+  sni: 149.88.27.33
+  tls: true
+  type: http
 - name: 🇨🇭CH_52|538KB/s|M003-260806 [4...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -67,17 +64,17 @@ proxies:
   port: 19999
   server: 23.166.88.127
   type: ss
-- name: 🇨🇭CH_50|503KB/s|M003-260806 [9...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.222
-  sni: yourultimateprofessionalcareerhub.com
-  type: trojan
 - name: 🇨🇭CH_56|702KB/s|M003-260806 [9...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.208
   sni: resources.yourultimateprofessionalcareerhub.com
+  type: trojan
+- name: 🇨🇭CH_50|503KB/s|M003-260806 [9...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.222
+  sni: yourultimateprofessionalcareerhub.com
   type: trojan
 - cipher: aes-256-gcm
   name: 🇨🇭CH_60|4.5MB/s|M003-260806 [9...
@@ -85,6 +82,20 @@ proxies:
   port: 19999
   server: 79.127.184.104
   type: ss
+- name: 🇨🇭CH_53|1.1MB/s|K001-260618 [9...
+  password: None
+  port: 9443
+  server: 149.88.27.46
+  sni: 149.88.27.46
+  tls: true
+  type: http
+- name: 🇨🇭CH_48|227KB/s|M003-260806 [9...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.29
+  skip-cert-verify: true
+  sni: learn.yourultimateprofessionalcareerhub.com
+  type: trojan
 - cipher: aes-256-gcm
   name: 🇨🇭CH_57|961KB/s|M003-260806 [a...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -104,6 +115,49 @@ proxies:
   server: 208.69.78.158
   sni: api.yourultimateprofessionalcareerhub.com
   type: trojan
+- name: 🇨🇭CH_42|488KB/s|P002-260618 [c...
+  password: None
+  port: 443
+  server: 31.7.62.50
+  sni: 31.7.62.50
+  tls: true
+  type: http
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_1|2.7MB/s - 123ms
+  network: tcp
+  port: 2058
+  reality-opts:
+    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
+    short-id: '!!str 937255313d6ce673'
+  server: 82.146.42.160
+  tls: true
+  type: vless
+  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
+- name: 🇨🇭CH_2|4.2MB/s - 95ms
+  port: 10230
+  server: 147.161.246.39
+  type: http
+- name: 🇨🇭[www.v2nodes.com] trojan-CH-...
+  password: b7795ce8-3863-4292-adfc-9c0a7b847774
+  port: 443
+  server: t2w2t2w2.bpca2026.top
+  skip-cert-verify: true
+  sni: t2w2t2w2.bpca2026.top
+  type: trojan
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇨🇭 瑞士 | CHE - 93ms
+  network: tcp
+  port: 443
+  server: 194.87.109.106
+  tls: true
+  type: vless
+  uuid: d9274255-edf4-4944-bc62-6ef35cd2de40
 - client-fingerprint: chrome
   encryption: none
   name: CH 🇨🇭 | @Raydikalx | A19323 - ...
@@ -113,6 +167,18 @@ proxies:
   tls: true
   type: vless
   uuid: 9dd38d60-e683-47c6-bd53-d71bdfee78f3
+- client-fingerprint: firefox
+  encryption: none
+  name: CH 🇨🇭 | @Raydikalx | 8FDF35 - ...
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: rS6r3PZQHZp31tnOmJAuCme4xJgsak_JsZ5hTPwpuiY
+    short-id: '!!str 8b8dd8a1c0c468d3'
+  server: 193.228.128.230
+  tls: true
+  type: vless
+  uuid: de404269-a97c-4f49-9efb-43509c2afa09
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -126,3 +192,8 @@ proxies:
   tls: true
   type: vless
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+- name: '%F0%9F%87%A8%F0%9F%87%AD%20Swi...'
+  port: 1085
+  server: 95.38.170.222
+  type: socks5
+  username: Og
