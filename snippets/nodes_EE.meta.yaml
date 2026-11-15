@@ -1,22 +1,35 @@
 proxies:
 - encryption: none
-  name: 🇪🇪EE_6|613KB/s|P002-260618 [2d...
+  name: 🇪🇪[www.v2nodes.com] vless-EE-1...
   network: tcp
   port: 16443
   server: 45.86.60.174
   tls: false
   type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+- name: 🇪🇪EE_1|1.4MB/s - 168ms
+  port: 9443
+  server: 95.153.31.66
+  sni: 95.153.31.66
+  tls: true
+  type: http
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇪🇪 爱沙尼亚 | EST - 171ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
+    short-id: '!!str 1a2b3c4d'
+  server: 13.143.176.250
+  tls: true
+  type: vless
+  uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45
 - name: 🇪🇪EE_2|1.1MB/s|K001-260618 [59...
   port: 9443
   server: 95.153.32.2
   sni: 95.153.32.2
-  tls: true
-  type: http
-- name: 🇪🇪EE_3|597KB/s|R002-260618 [98...
-  port: 9443
-  server: 95.153.31.66
-  sni: 95.153.31.66
   tls: true
   type: http
 - name: 🇪🇪EE_1|676KB/s|K001-260618 [ea...
@@ -26,31 +39,33 @@ proxies:
   sni: 192.159.101.174
   tls: true
   type: http
-- name: 🇪🇪EE_2|1.7MB/s - 103ms
-  port: 443
-  server: 95.153.32.2
-  sni: 95.153.32.2
-  tls: true
-  type: http
-- client-fingerprint: firefox
+- cipher: chacha20-ietf-poly1305
+  name: NL 🇳🇱 | @Raydikalx | 094EE3 - ...
+  password: _c43uV0__ztFhshnuY4RvhVOC2FgxCjA
+  port: 8044
+  server: 185.4.115.146
+  type: ss
+- client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision
-  name: EE 🇪🇪 | @Raydikalx | CC47BA - ...
+  name: EE 🇪🇪 | @Raydikalx | 49FD5E - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: ql7l6Vw5DFt5ZJeGE6ZxsM1kcIvZabxQVr8zkoPJoUE
-    short-id: '!!str 8691df964f0bebcb'
-  server: 201.4.73.21
+    public-key: kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI
+    short-id: '!!str 8956c57cb4c4f8d2'
+  server: f0d7aft.nl13.h1clayd.click
   tls: true
   type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- alterId: 0
-  cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | EEA209 - ...
-  network: tcp
-  port: 26032
-  server: 123466.ru
-  tls: false
-  type: vmess
-  uuid: 804334e2-04ca-434c-8311-3ccee8218175
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+- client-fingerprint: edge
+  encryption: none
+  name: EE 🇪🇪 | @Raydikalx | 7099AE - ...
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA
+    short-id: '!!str 6d289ff0f47c0aac'
+  server: 961ec0g.nl13.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
