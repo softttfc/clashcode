@@ -1,62 +1,13 @@
 proxies:
-- cipher: aes-256-gcm
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1559...
-  password: cdBIDV42DCwnfIN
-  port: 8118
-  server: 51.79.85.185
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1558...
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 51.222.200.165
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1555...
-  password: 575hiopq2h28yao6
-  port: 8080
-  server: 15.235.121.109
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1546...
-  password: Y6R9pAtvxxzmGC
-  port: 5601
-  server: 51.222.155.113
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
-  password: g5MeD6Ft3CWlJId
-  port: 5003
-  server: 51.222.155.32
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1559... #1'
-  password: zDNVedRFPQexG9v
-  port: 445
-  server: 51.222.141.125
-  type: ss
-- name: 🇨🇦[www.v2nodes.com] trojan-CA-...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.152
-  type: trojan
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #1'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.93
-  sni: connectingpeoplewithgreatjobs.com
-  type: trojan
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.74
-  type: trojan
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.79
-  sni: blog.connectingpeoplewithgreatjobs.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: qilan.de | CA CoreForge 4 1117...
+  network: tcp
+  port: 18000
+  server: 23.162.200.198
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
   name: qilan.de | CA VMESS 5587994 | ...
@@ -67,94 +18,480 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: qilan.de | CA CoreForge 4 1117...
-  network: tcp
-  port: 18000
-  server: 23.162.200.198
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- cipher: rc4-md5
+  name: qilan.de | CA 3624479 | 3.6MB/...
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.197.141.58
+  type: ss
+- cipher: aes-256-gcm
+  name: qilan.de | CA 249830 | 2.7MB/S...
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 51.222.200.165
+  type: ss
 - cipher: aes-128-gcm
   name: qilan.de | CA 279577 | 2.5MB/S...
   password: shadowsocks
   port: 443
   server: 149.22.95.183
   type: ss
-- name: 🇨🇦CA加拿大丨yoyapai.com (6) - 6ms
+- alterId: 0
+  cipher: auto
+  name: 🇱🇹_LT_立陶宛->🇨🇦_CA_加拿大 - 4ms
+  network: ws
+  port: 2082
+  server: 185.148.107.11
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇺🇦_UA_乌克兰->🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 31.43.179.32
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇪🇸_ES_西班牙->🇨🇦_CA_加拿大 - 2ms
+  network: ws
+  port: 2082
+  server: 185.238.228.210
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大 - 12ms
+  network: ws
+  port: 2082
+  server: 190.93.247.170
+  sni: ip18.6929198.xyz
+  tls: false
+  type: vmess
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- cipher: aes-256-gcm
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  password: Y6R9pAtvxxzmGC
+  port: 5601
+  server: 51.222.155.113
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1559...
+  password: cdBIDV42DCwnfIN
+  port: 8118
+  server: 51.79.85.185
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇨🇦[www.v2nodes.com] ss-CA-1557...
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 51.222.136.236
+  type: ss
+- name: 🇨🇦[www.v2nodes.com] trojan-CA-...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.147.93
+  type: trojan
+- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #1'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.147.74
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 018 - 9ms
+  network: ws
+  port: 2052
+  server: 104.19.54.19
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.19
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 019 - 5ms
+  network: ws
+  port: 2052
+  server: 104.19.54.10
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.10
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 014 - 3ms
+  network: ws
+  port: 8080
+  server: 104.16.58.159
+  tls: false
+  type: vmess
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  ws-opts:
+    headers:
+      Host: 104.16.58.159
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 016 - 3ms
+  network: ws
+  port: 8080
+  server: 104.19.172.136
+  tls: false
+  type: vmess
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  ws-opts:
+    headers:
+      Host: oiictw.yydsii.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 017 - 3ms
+  network: ws
+  port: 2052
+  server: 104.16.67.38
+  tls: false
+  type: vmess
+  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+  ws-opts:
+    headers:
+      Host: 104.16.67.38
+    path: /glweidf.sbs/linkws
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 015 - 9ms
+  network: ws
+  port: 8080
+  server: 172.67.199.59
+  tls: false
+  type: vmess
+  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  ws-opts:
+    headers:
+      Host: 172.67.199.59
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 020 - 1ms
+  network: ws
+  port: 2052
+  server: 104.19.54.16
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.16
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 022 - 1ms
+  network: ws
+  port: 2052
+  server: 104.19.54.31
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 027 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.82
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 024 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.35
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.35
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 025 - 1ms
+  network: ws
+  port: 2052
+  server: 104.19.54.61
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 021 - 3ms
+  network: ws
+  port: 2052
+  server: 104.19.54.20
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.20
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 026 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.90
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: 104.19.54.90
+    path: /?ed=2048&Telegram🇨🇳@WangCai2
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 033 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.98
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 023 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.4
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 030 - 7ms
+  network: ws
+  port: 2052
+  server: 104.19.54.120
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 034 - 12ms
+  network: ws
+  port: 2052
+  server: 104.19.54.163
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 028 - 4ms
+  network: ws
+  port: 2052
+  server: 104.19.54.65
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 029 - 3ms
+  network: ws
+  port: 2052
+  server: 104.19.54.113
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 035 - 5ms
+  network: ws
+  port: 2052
+  server: 104.19.54.131
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 032 - 1ms
+  network: ws
+  port: 2052
+  server: 104.19.54.234
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 031 - 2ms
+  network: ws
+  port: 2052
+  server: 104.19.54.193
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 加拿大 036 - 5ms
+  network: ws
+  port: 2052
+  server: 104.19.54.140
+  tls: false
+  type: vmess
+  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
+  ws-opts:
+    headers:
+      Host: hk2.wish.ml
+    path: /?ed=2048
+- name: 🇨🇦CA加拿大丨yoyapai.com (6) - 2ms
   password: humanity
   port: 443
   server: 104.18.152.219
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (5) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (5) - 3ms
   password: humanity
   port: 443
   server: 104.18.152.225
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (7) - 5ms
-  password: humanity
-  port: 443
-  server: 104.18.152.77
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (10) - 4ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (10) - 2ms
   password: humanity
   port: 443
   server: 104.18.152.204
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (8) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (8) - 2ms
   password: humanity
   port: 443
   server: 104.18.152.140
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (9) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (7) - 4ms
   password: humanity
   port: 443
-  server: 104.16.174.44
+  server: 104.18.152.77
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (11) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (11) - 2ms
   password: humanity
   port: 443
   server: 104.16.174.117
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (12) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (9) - 2ms
+  password: humanity
+  port: 443
+  server: 104.16.174.44
+  sni: www.ignitelimit.com
+  type: trojan
+- name: 🇨🇦CA加拿大丨yoyapai.com (12) - 2ms
   password: humanity
   port: 443
   server: 104.18.152.208
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (15) - 5ms
-  password: humanity
-  port: 443
-  server: 104.18.152.187
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (13) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (13) - 3ms
   password: humanity
   port: 443
   server: 104.16.73.213
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (14) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (14) - 3ms
   password: humanity
   port: 443
   server: 104.18.152.229
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (16) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (15) - 2ms
+  password: humanity
+  port: 443
+  server: 104.18.152.187
+  sni: www.ignitelimit.com
+  type: trojan
+- name: 🇨🇦CA加拿大丨yoyapai.com (16) - 2ms
   password: humanity
   port: 443
   server: 104.16.174.37
   sni: www.ignitelimit.com
   type: trojan
-- name: 🇨🇦CA加拿大丨yoyapai.com (18) - 5ms
+- name: 🇨🇦CA加拿大丨yoyapai.com (18) - 8ms
   password: humanity
   port: 443
   server: 104.16.174.101
@@ -162,7 +499,7 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇨🇦CA加拿大 - 40ms
+  name: 🇨🇦CA加拿大 - 152ms
   network: ws
   port: 443
   server: hk2.998998.best
@@ -210,7 +547,7 @@ proxies:
   port: 19999
   server: 158.51.121.221
   type: ss
-- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #1'
+- name: CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%...
   network: ws
   password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
   port: 8443
@@ -223,7 +560,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA VMESS-14 | free-nodes - 5ms
+  name: CA VMESS-14 | free-nodes - 2ms
   network: ws
   port: 443
   server: www.shopify.com
@@ -235,375 +572,6 @@ proxies:
     headers:
       Host: guanwang.awsno.com
     path: /hls/cctv5phd.m3u8
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 014 - 5ms
-  network: ws
-  port: 8080
-  server: 104.16.58.159
-  tls: false
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: 104.16.58.159
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 015 - 5ms
-  network: ws
-  port: 8080
-  server: 172.67.199.59
-  tls: false
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: 172.67.199.59
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 020 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.16
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.16
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 016 - 5ms
-  network: ws
-  port: 8080
-  server: 104.19.172.136
-  tls: false
-  type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-  ws-opts:
-    headers:
-      Host: oiictw.yydsii.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 019 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.10
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.10
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 021 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.20
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.20
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 018 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.19
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.19
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 026 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.90
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.90
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 024 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.35
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: 104.19.54.35
-    path: /?ed=2048&Telegram🇨🇳@WangCai2
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 022 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.31
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 017 - 5ms
-  network: ws
-  port: 2052
-  server: 104.16.67.38
-  tls: false
-  type: vmess
-  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-  ws-opts:
-    headers:
-      Host: 104.16.67.38
-    path: /glweidf.sbs/linkws
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 028 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.65
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 025 - 6ms
-  network: ws
-  port: 2052
-  server: 104.19.54.61
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 023 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.4
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 029 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.113
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 031 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.193
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 034 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.163
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 036 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.140
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 027 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.82
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 032 - 4ms
-  network: ws
-  port: 2052
-  server: 104.19.54.234
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 030 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.120
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 033 - 4ms
-  network: ws
-  port: 2052
-  server: 104.19.54.98
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 加拿大 035 - 5ms
-  network: ws
-  port: 2052
-  server: 104.19.54.131
-  tls: false
-  type: vmess
-  uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
-  ws-opts:
-    headers:
-      Host: hk2.wish.ml
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 加拿大 V2CROSS.COM - 5ms
-  network: ws
-  port: 443
-  server: 130.250.137.199
-  sni: ous3.dean52.top
-  tls: true
-  type: vmess
-  uuid: f08369d1-5ee7-4b16-d786-30bce12fc33c
-  ws-opts:
-    headers:
-      Host: ous3.dean52.top
-    path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
-- alterId: 0
-  cipher: auto
-  name: 🇪🇸_ES_西班牙->🇨🇦_CA_加拿大 - 5ms
-  network: ws
-  port: 2082
-  server: 185.238.228.210
-  sni: ip18.6929198.xyz
-  tls: false
-  type: vmess
-  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-  ws-opts:
-    headers:
-      Host: ip18.6929198.xyz
-    path: /github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 🇺🇦_UA_乌克兰->🇨🇦_CA_加拿大 - 5ms
-  network: ws
-  port: 2082
-  server: 31.43.179.32
-  sni: ip18.6929198.xyz
-  tls: false
-  type: vmess
-  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-  ws-opts:
-    headers:
-      Host: ip18.6929198.xyz
-    path: /github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 🇱🇹_LT_立陶宛->🇨🇦_CA_加拿大 - 5ms
-  network: ws
-  port: 2082
-  server: 185.148.107.11
-  sni: ip18.6929198.xyz
-  tls: false
-  type: vmess
-  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-  ws-opts:
-    headers:
-      Host: ip18.6929198.xyz
-    path: /github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: 🇨🇷_CR_哥斯达黎加->🇨🇦_CA_加拿大 - 5ms
-  network: ws
-  port: 2082
-  server: 190.93.247.170
-  sni: ip18.6929198.xyz
-  tls: false
-  type: vmess
-  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-  ws-opts:
-    headers:
-      Host: ip18.6929198.xyz
-    path: /github.com/Alvin9999
 - name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #2'
   network: ws
   password: pH%5B%5DS%5BBh%3A_%3AD6T4k
@@ -623,17 +591,6 @@ proxies:
   type: trojan
 - name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #3'
   network: ws
-  password: '!!str 521314'
-  port: 443
-  server: 103.133.1.27
-  sni: hhtj.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hhtj.hhllfly.kdns.fr
-    path: /pyip=Telegram-WangCai2🇨🇳
-- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #4'
-  network: ws
   password: '!!str 666'
   port: 443
   server: 104.18.39.216
@@ -643,7 +600,7 @@ proxies:
     headers:
       Host: gdurt.ia6o.2s1.hh.penqiask.ccwu.cc
     path: /glasspanel/guest000_0_5de14443985f/
-- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #5'
+- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #4'
   network: ws
   password: '!!str 666'
   port: 443
@@ -654,7 +611,7 @@ proxies:
     headers:
       Host: gdurt.ia6o.2s1.hh.penqiask.ccwu.cc
     path: /glasspanel/guest000_0_5de14443985f/
-- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #6'
+- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #5'
   network: ws
   password: '!!str 666'
   port: 443
@@ -665,30 +622,20 @@ proxies:
     headers:
       Host: gdurt.ia6o.2s1.hh.penqiask.ccwu.cc
     path: /glasspanel/guest000_0_5de14443985f/
-- alterId: 0
-  cipher: auto
-  name: CA加拿大(mibei77.com 米贝节点分享) - 88...
+- name: 'CA%E5%8A%A0%E6%8B%BF%E5%A4%A7%... #6'
   network: ws
+  password: '!!str 521314'
   port: 443
-  server: mtckundigepwu3up.v.3dns.vip
-  sni: mTCKUNDiGePwU3uP.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  server: 103.133.1.27
+  sni: hhtj.hhllfly.kdns.fr
+  type: trojan
   ws-opts:
     headers:
-      Host: mTCKUNDiGePwU3uP.v.3dns.vip
-    path: /ws-vmess
-- name: 🇨🇦 CA 13 → tg@nicevpn123 - 5ms
-  password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
-  port: 443
-  server: 23.227.38.11
-  skip-cert-verify: true
-  sni: syndication-statutes-wanted-logo.trycloudflare.com
-  type: trojan
+      Host: hhtj.hhllfly.kdns.fr
+    path: /pyip=Telegram-WangCai2🇨🇳
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 CA 19 → tg@nicevpn123 - 5ms
+  name: 🇨🇦 CA 19 → tg@nicevpn123 - 2ms
   network: ws
   port: 8080
   server: 23.227.39.24
@@ -699,12 +646,26 @@ proxies:
     headers:
       Host: 23.227.39.24
     path: /
-- name: 🇨🇦 CA 10 → tg@nicevpn123 - 5ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 23.227.60.186
+- name: 🇨🇦 CA 13 → tg@nicevpn123 - 2ms
+  password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
+  port: 443
+  server: 23.227.38.11
   skip-cert-verify: true
+  sni: syndication-statutes-wanted-logo.trycloudflare.com
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇨🇦 CA 23 → tg@nicevpn123 - 5ms
+  network: ws
+  port: 8080
+  server: 23.227.38.44
+  tls: false
+  type: vmess
+  uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
+  ws-opts:
+    headers:
+      Host: 23.227.38.44
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇨🇦 CA 45 → tg@nicevpn123 - 5ms
@@ -718,9 +679,15 @@ proxies:
     headers:
       Host: 23.227.38.23
     path: /
+- name: 🇨🇦 CA 10 → tg@nicevpn123 - 4ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 23.227.60.186
+  skip-cert-verify: true
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 CA 61 → tg@nicevpn123 - 5ms
+  name: 🇨🇦 CA 61 → tg@nicevpn123 - 2ms
   network: ws
   port: 8080
   server: 23.227.38.22
@@ -731,37 +698,6 @@ proxies:
     headers:
       Host: 23.227.38.22
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦 CA 23 → tg@nicevpn123 - 6ms
-  network: ws
-  port: 8080
-  server: 23.227.38.44
-  tls: false
-  type: vmess
-  uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
-  ws-opts:
-    headers:
-      Host: 23.227.38.44
-    path: /
-- name: CA 🇨🇦 | @Raydikalx | FB5613 - ...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.89
-  sni: www.connectingpeoplewithgreatjobs.com
-  type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: CA 🇨🇦 | @Raydikalx | C6F198 - ...
-  password: 3h3hb2gptqz6suyt
-  port: 8080
-  server: 198.100.154.175
-  type: ss
-- name: CA 🇨🇦 | @Raydikalx | BD1919 - ...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.201
-  sni: resources.connectingpeoplewithgreatjobs.com
-  type: trojan
 - cipher: chacha20-ietf-poly1305
   name: CA 🇨🇦 | @Raydikalx | 9A93C9 - ...
   password: kxhnt5jtykd328cg
@@ -774,17 +710,24 @@ proxies:
   port: 8080
   server: 54.39.96.233
   type: ss
-- name: CA 🇨🇦 | @Raydikalx | 6CB1D6 - ...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | BE6BD0 - ...
+  network: ws
   port: 443
-  server: 216.152.147.85
-  sni: cdn.connectingpeoplewithgreatjobs.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: CA 🇨🇦 | @Raydikalx | 9D1584 - ...
-  password: zDNVedRFPQexG9v
-  port: 445
-  server: 51.222.12.127
+  server: nomino.11hi8itbaf.workers.dev
+  tls: true
+  type: vmess
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    headers:
+      Host: nomino.11hi8itbaf.workers.dev
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: CA 🇨🇦 | @Raydikalx | C6F198 - ...
+  password: 3h3hb2gptqz6suyt
+  port: 8080
+  server: 198.100.154.175
   type: ss
 - alterId: 0
   cipher: auto
@@ -799,32 +742,42 @@ proxies:
     headers:
       Host: 172.67.137.158
     path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 4D6095 - ...
-  network: ws
+- name: CA 🇨🇦 | @Raydikalx | FB5613 - ...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: nomino.11hi8itbaf.workers.dev
-  tls: true
-  type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  ws-opts:
-    headers:
-      Host: nomino.11hi8itbaf.workers.dev
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 1834F1 - ...
-  network: ws
+  server: 216.152.147.89
+  sni: www.connectingpeoplewithgreatjobs.com
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | BD1919 - ...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.147.201
+  sni: resources.connectingpeoplewithgreatjobs.com
+  type: trojan
+- cipher: aes-256-gcm
+  name: CA 🇨🇦 | @Raydikalx | 9D1584 - ...
+  password: zDNVedRFPQexG9v
+  port: 445
+  server: 51.222.12.127
+  type: ss
+- name: CA 🇨🇦 | @Raydikalx | 26BEBB - ...
+  password: krOXKzNRRIROWi
   port: 8443
-  server: 188.114.96.3
-  tls: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    headers:
-      Host: 188.114.96.3
-    path: /
+  server: 104.16.96.80
+  sni: kaMran06-v3QDLI.KAMRaN-06.WOrKErs.dEV
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 2C39D3 - ...
+  password: krOXKzNRRIROWi
+  port: 8443
+  server: 104.16.94.80
+  sni: kaMran06-v3QDLI.KAMRaN-06.WOrKErs.dEV
+  type: trojan
+- name: CA 🇨🇦 | @Raydikalx | 568809 - ...
+  password: krOXKzNRRIROWi
+  port: 8443
+  server: 104.16.95.80
+  sni: kaMran06-v3QDLI.KAMRaN-06.WOrKErs.dEV
+  type: trojan
 - alterId: 0
   cipher: auto
   name: KZ 🇰🇿 | @Raydikalx | 112CAC - ...
@@ -840,85 +793,27 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 5201A1 - ...
-  network: ws
-  port: 443
-  server: 104.17.157.87
-  tls: true
-  type: vmess
-  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
-  ws-opts:
-    headers:
-      Host: 104.17.157.87
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | B0BC4C - ...
-  network: ws
-  port: 443
-  server: 104.20.22.176
-  tls: true
-  type: vmess
-  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
-  ws-opts:
-    headers:
-      Host: 104.20.22.176
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 946B2B - ...
-  network: ws
-  port: 443
-  server: 104.25.200.220
-  tls: true
-  type: vmess
-  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
-  ws-opts:
-    headers:
-      Host: 104.25.200.220
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 84E37F - ...
-  network: ws
-  port: 443
-  server: 104.19.36.106
-  tls: true
-  type: vmess
-  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
-  ws-opts:
-    headers:
-      Host: 104.19.36.106
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 5D7454 - ...
+  name: CA 🇨🇦 | @Raydikalx | D39A6C - ...
   network: ws
   port: 8443
-  server: 172.67.167.78
+  server: 172.66.0.1
   tls: true
   type: vmess
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   ws-opts:
     headers:
-      Host: 172.67.167.78
+      Host: 172.66.0.1
     path: /
-- cipher: aes-256-gcm
-  name: CA 🇨🇦 | @Raydikalx | BEBFBB - ...
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 51.79.49.116
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦...
+  name: CA 🇨🇦 | @Raydikalx | A72B09 - ...
   network: ws
-  port: 16641
-  server: 162.19.192.89
-  tls: false
+  port: 8443
+  server: 104.18.32.47
+  tls: true
   type: vmess
-  uuid: 9d5c15a3-166c-4d65-8a0b-d7a7a7c8863a
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   ws-opts:
     headers:
-      Host: 7d56482dc5251e2efaca623dcbc64e3d.mobgslb.tbcache.com
+      Host: 104.18.32.47
     path: /

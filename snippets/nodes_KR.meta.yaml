@@ -1,19 +1,4 @@
 proxies:
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇰🇷[www.v2nodes.com] vless-KR-3...
-  network: ws
-  port: 8443
-  server: 64.110.79.66
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  password: '!!str 12242'
-  port: 10099
-  server: 115.161.136.145
-  type: ss
 - alterId: 0
   cipher: auto
   name: qilan.de | KR VMESS 4075821 | ...
@@ -32,8 +17,49 @@ proxies:
   tls: false
   type: vmess
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR1@ripaojiedian - 162ms
+  network: ws
+  port: 443
+  server: 109.61.127.247
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR2@ripaojiedian - 178ms
+  network: ws
+  port: 28017
+  server: 121.154.67.134
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国 - 242ms
+  network: ws
+  port: 443
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '!!str 12242'
+  port: 10099
+  server: 115.161.136.145
+  type: ss
 - encryption: none
-  name: 🇰🇷KR韩国丨yoyapai.com (2) - 36ms
+  name: 🇰🇷KR韩国丨yoyapai.com (2) - 22ms
   network: ws
   port: 8880
   server: crimson-smoke-7818.397.workers.dev
@@ -41,7 +67,7 @@ proxies:
   type: vless
   uuid: d6bdda67-168d-4501-a2c1-ef01070cb327
 - encryption: none
-  name: 🇰🇷KR韩國丨yoyapai.com - 6ms
+  name: 🇰🇷KR韩國丨yoyapai.com - 2ms
   network: ws
   port: 8880
   server: 104.17.144.29
@@ -57,6 +83,23 @@ proxies:
   tls: true
   type: vless
   uuid: 46d221fa-e9b4-748c-4eae-019a88e42991
+- encryption: none
+  name: 🇰🇷KR_37|493KB/s|A001-260618 [0...
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  tls: false
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇰🇷KR_49|572KB/s|M003-260806 [1...
+  network: ws
+  port: 8443
+  server: 64.110.79.66
+  tls: true
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
 - cipher: aes-256-cfb
   name: 🇰🇷KR_1|216KB/s|M001-260618 [2f...
   password: qwerREWQ@@
@@ -111,101 +154,37 @@ proxies:
     headers:
       Host: seoul02.zgjok.com
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR_5|776KB/s|C002-260622 [ac...
-  network: tcp
-  port: 80
-  server: 217.142.138.61
-  tls: false
-  type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- name: 🇰🇷KR_1|4.0MB/s - 121ms
-  port: 80
-  server: 211.188.60.84
-  type: http
-- name: 🇰🇷KR_2|2.1MB/s - 122ms
-  port: 80
-  server: 211.188.69.153
-  type: http
-- name: 🇰🇷KR_3|2.8MB/s - 123ms
-  port: 80
-  server: 211.188.55.218
-  type: http
-- name: 🇰🇷KR_1|3.7MB/s - 123ms
-  port: 80
-  server: 211.188.53.248
-  type: http
-- name: 🇰🇷KR_4|1.5MB/s - 121ms
-  port: 80
-  server: 211.188.59.191
-  type: http
-- name: 🇰🇷KR_5|2.4MB/s - 146ms
-  port: 80
-  server: 211.188.38.254
-  type: http
-- name: 🇰🇷KR_1|1.3MB/s - 144ms
+- name: 🇰🇷KR_1|1.5MB/s|R002-260618 - 2...
   port: 443
   server: 152.69.230.221
   sni: 152.69.230.221
   tls: true
   type: http
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR2@ripaojiedian - 135ms
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR1@ripaojiedian - 130ms
-  network: ws
-  port: 443
-  server: 109.61.127.247
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷 韩国 - 402ms
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /
-- name: KR%E9%9F%A9%E5%9B%BD%28mibei77...
-  network: ws
-  password: '!!str 521314'
-  port: 443
-  server: 118.218.10.159
-  skip-cert-verify: true
-  sni: hhtj.hhllfly.kdns.fr
-  type: trojan
-  ws-opts:
-    headers:
-      Host: hhtj.hhllfly.kdns.fr
-    path: /
+- name: 🇰🇷KR_2|4.9MB/s - 167ms
+  port: 80
+  server: 211.188.55.218
+  type: http
+- name: 🇰🇷KR_1|3.7MB/s - 166ms
+  port: 80
+  server: 211.188.53.248
+  type: http
+- name: 🇰🇷KR_2|4.6MB/s - 169ms
+  port: 80
+  server: 211.188.60.84
+  type: http
+- name: 🇰🇷KR_4|1.5MB/s - 173ms
+  port: 80
+  server: 211.188.59.191
+  type: http
 - cipher: aes-256-cfb
-  name: 🇰🇷 KR 31 → tg@nicevpn123 - 126...
+  name: 🇰🇷 KR 31 → tg@nicevpn123 - 176...
   password: amazonskr05
   port: 443
   server: 54.180.133.185
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 126...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 176...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -216,9 +195,16 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: KR 🇰🇷 | @Raydikalx | 8F395A - ...
-  password: '!!str 12242'
-  port: 10099
-  server: glance.asuscomm.com
-  type: ss
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: KR 🇰🇷 | @Raydikalx | B37B15 - ...
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: '!!str 3c4041d3'
+  server: 47.80.19.173
+  tls: true
+  type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
