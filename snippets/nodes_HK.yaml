@@ -1,17 +1,46 @@
 proxies:
+- name: '🇭🇰 香港 | HKG #1 - 146ms'
+  password: '!!str 12012'
+  port: 12012
+  server: 47.242.93.89
+  skip-cert-verify: true
+  sni: ali-hk.b-gfw.cfd
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: qilan.de | HK VMESS 1241598 | ...
+  name: '🇭🇰 香港 | HKG #2 - 359ms'
   network: ws
-  port: 44867
+  port: 443
+  server: cdns.doon.eu.org
+  tls: true
+  type: vmess
+  uuid: 8614bde7-34cf-4413-8360-e96f1b960528
+  ws-opts:
+    headers:
+      Host: cdns.doon.eu.org
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰 香港 | HKG 2 - 146ms
+  network: ws
+  port: 23026
   server: 47.244.120.197
   tls: false
   type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   ws-opts:
     headers:
       Host: 47.244.120.197
-    path: /arki
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_1|3.7MB/s - 254ms
+  network: tcp
+  port: 16113
+  server: zfd-hkv1.kunlun01dns.com
+  tls: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
 - alterId: 0
   cipher: auto
   name: qilan.de | HK VMESS 1329088 | ...
@@ -26,127 +55,9 @@ proxies:
     headers:
       Host: www.pubgmobile.com
     path: /
-- alterId: 0
-  cipher: auto
-  name: qilan.de | HK 𔒰 ＳＥＧＡＲＯ-838 | 4...
-  network: tcp
-  port: 21014
-  server: dog-jp.kunlun01dns.com
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港3 - 263ms
-  network: ws
-  port: 443
-  server: ADncdOvLHR4M1P36.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: ADncdOvLHR4M1P36.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港4 - 268ms
-  network: ws
-  port: 443
-  server: aZW0eunYVdvRe73k.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: aZW0eunYVdvRe73k.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港5 - 266ms
-  network: ws
-  port: 443
-  server: syJ2gGUgMwBwQwQx.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: syJ2gGUgMwBwQwQx.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港2 - 265ms
-  network: ws
-  port: 443
-  server: kBONDXW9liFCi4h4.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kBONDXW9liFCi4h4.v.3dns.vip
-    path: /
-- cipher: aes-128-gcm
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1599...
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 40010
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 40011
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇭🇰[www.v2nodes.com] ss-HK-1621... #1'
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-  port: 8388
-  server: 209.248.57.105
-  type: ss
 - alterId: 2
   cipher: auto
-  name: 香港 电讯盈科有限公司 - 16ms
-  network: ws
-  port: 80
-  server: c5765779-sv2sg0-syu0n5-1hd7v.hk3.p5pv.com
-  tls: false
-  type: vmess
-  uuid: f73c64bc-9e8c-11ec-bd7c-f23c913c8d2b
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 香港 电讯盈科有限公司 - 33ms
-  network: ws
-  port: 80
-  server: 4c2c02b9-sv2sg0-sv75lj-1swf9.hk3.p5pv.com
-  tls: false
-  type: vmess
-  uuid: 2bb1edc8-fa5d-11ef-9dd9-f23c9164ca5d
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 香港 电讯盈科有限公司 - 29ms
-  network: ws
-  port: 80
-  server: 266007c7-sv4n40-syu0n5-1hd7v.hk3.p5pv.com
-  tls: false
-  type: vmess
-  uuid: f73c64bc-9e8c-11ec-bd7c-f23c913c8d2b
-  ws-opts:
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 香港 电讯盈科有限公司 - 31ms
+  name: 香港 电讯盈科有限公司 - 26ms
   network: ws
   port: 80
   server: 8ae4848c-szjwg0-t44yvp-155d9.hk3.p5pv.com
@@ -159,7 +70,46 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 香港 电讯盈科有限公司 - 22ms
+  name: 香港 电讯盈科有限公司 - 53ms
+  network: ws
+  port: 80
+  server: 4c2c02b9-sv2sg0-sv75lj-1swf9.hk3.p5pv.com
+  tls: false
+  type: vmess
+  uuid: 2bb1edc8-fa5d-11ef-9dd9-f23c9164ca5d
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 香港 电讯盈科有限公司 - 51ms
+  network: ws
+  port: 80
+  server: 457a1492-sv4n40-t6kzbp-1h5u7.hk3.p5pv.com
+  tls: false
+  type: vmess
+  uuid: e3fdbd22-8c17-11ee-ace4-f23c913c8d2b
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 香港 电讯盈科有限公司 - 54ms
+  network: ws
+  port: 80
+  server: 266007c7-sv4n40-syu0n5-1hd7v.hk3.p5pv.com
+  tls: false
+  type: vmess
+  uuid: f73c64bc-9e8c-11ec-bd7c-f23c913c8d2b
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 香港 电讯盈科有限公司 - 58ms
   network: ws
   port: 80
   server: 749bd19a-sv4n40-svq7uu-1gevg.hk3.p5pv.com
@@ -172,7 +122,7 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 香港 电讯盈科有限公司 - 18ms
+  name: 香港 电讯盈科有限公司 - 7ms
   network: ws
   port: 80
   server: fb6f1580-sv2sg0-svpmdc-nx3b.hk3.p5pv.com
@@ -185,20 +135,20 @@ proxies:
     path: /
 - alterId: 2
   cipher: auto
-  name: 香港 电讯盈科有限公司 - 12ms
+  name: 香港 电讯盈科有限公司 - 41ms
   network: ws
   port: 80
-  server: 457a1492-sv4n40-t6kzbp-1h5u7.hk3.p5pv.com
+  server: c5765779-sv2sg0-syu0n5-1hd7v.hk3.p5pv.com
   tls: false
   type: vmess
-  uuid: e3fdbd22-8c17-11ee-ace4-f23c913c8d2b
+  uuid: f73c64bc-9e8c-11ec-bd7c-f23c913c8d2b
   ws-opts:
     headers:
       Host: broadcastlv.chat.bilibili.com
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK香港 (3) - 81ms
+  name: 🇭🇰HK香港 (3) - 91ms
   network: ws
   port: 443
   server: yg1.ygkkk.dpdns.org
@@ -212,16 +162,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK香港 (5) - 265ms
-  network: tcp
-  port: 21010
-  server: dog-us.kunlun01dns.com
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK香港 (4) - 213ms
+  name: 🇭🇰HK香港 (4) - 250ms
   network: tcp
   port: 21016
   server: dog-jp.kunlun01dns.com
@@ -230,7 +171,16 @@ proxies:
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK香港 (6) - 222ms
+  name: 🇭🇰HK香港 (5) - 302ms
+  network: tcp
+  port: 21010
+  server: dog-us.kunlun01dns.com
+  tls: false
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK香港 (6) - 213ms
   network: tcp
   port: 21011
   server: dog-us.kunlun01dns.com
@@ -263,43 +213,24 @@ proxies:
     headers:
       Host: 162.19.192.89
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK_1|3.7MB/s - 265ms
-  network: tcp
-  port: 16113
-  server: zfd-hkv1.kunlun01dns.com
-  tls: false
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-- name: 🇭🇰 HK 10 → tg@nicevpn123 - 128...
-  password: 507ca9a0-2d8e-4b65-8763-82dfbdbd599f
-  port: 443
-  server: chjs.lydurlclub.top
-  skip-cert-verify: true
-  type: trojan
-- name: 🇭🇰 HK 9 → tg@nicevpn123 - 132m...
+- name: 🇭🇰 HK 9 → tg@nicevpn123 - 53ms
   password: 507ca9a0-2d8e-4b65-8763-82dfbdbd599f
   port: 443
   server: hkjs.lydurlclub.top
   skip-cert-verify: true
   type: trojan
-- name: HK 🇭🇰 | @Raydikalx | 83CC15 - ...
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20103
-  server: sclass-00.catcat321.com
-  sni: hk.catxstar.com
+- name: 🇭🇰 HK 10 → tg@nicevpn123 - 50m...
+  password: 507ca9a0-2d8e-4b65-8763-82dfbdbd599f
+  port: 443
+  server: chjs.lydurlclub.top
+  skip-cert-verify: true
   type: trojan
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 6A0ADC - ...
-  network: ws
-  port: 57278
-  server: 156.239.224.107
+  name: HK 🇭🇰 | @Raydikalx | 8E5095 - ...
+  network: tcp
+  port: 52080
+  server: 47.242.81.94
   tls: false
   type: vmess
-  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
-  ws-opts:
-    headers:
-      Host: 156.239.224.107
-    path: /
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146

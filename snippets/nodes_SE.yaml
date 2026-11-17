@@ -1,4 +1,10 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
   password: 2e555e46dbc421452416834962fd014f
@@ -28,9 +34,15 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- name: SE 12 → tg@nicevpn123 - 2ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 6ms
+  name: SE 20 → tg@nicevpn123 - 1ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -43,7 +55,7 @@ proxies:
     path: /
 - alterId: 64
   cipher: auto
-  name: SE 17 → tg@nicevpn123 - 44ms
+  name: SE 17 → tg@nicevpn123 - 10ms
   network: ws
   port: 443
   server: 148.135.33.228
@@ -54,12 +66,6 @@ proxies:
     headers:
       Host: 148.135.33.228
     path: /
-- name: SE 12 → tg@nicevpn123 - 5ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
   name: SE 22 → tg@nicevpn123 - 2ms
@@ -73,9 +79,3 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
-- cipher: aes-128-gcm
-  name: SE 🇸🇪 | @Raydikalx | 830C96 - ...
-  password: 517403753b63fd4fac88986bf98b11e0
-  port: 18501
-  server: 194.59.250.52
-  type: ss

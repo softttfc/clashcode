@@ -1,17 +1,19 @@
 proxies:
-- client-fingerprint: chrome
+- client-fingerprint: firefox
   encryption: none
-  flow: xtls-rprx-vision
-  name: 瑞典_B9C718 - 98ms
-  network: tcp
-  port: 43000
-  reality-opts:
-    public-key: U_dxFnbfesmgSwL-SlpvGYFbpY5vlJ1kb52knlCXkkI
-    short-id: '!!str 8cfe1563'
-  server: 5.83.158.96
+  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  network: grpc
+  port: 48115
+  server: 138.124.86.230
   tls: true
   type: vless
-  uuid: 0809eed6-5204-49b8-8312-b82a10024022
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+- cipher: aes-256-gcm
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
   password: 2e555e46dbc421452416834962fd014f
@@ -23,10 +25,103 @@ proxies:
   port: 443
   server: 95.143.196.97
   type: trojan
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | SWE 4 - 152ms
+  network: tcp
+  port: 43000
+  reality-opts:
+    public-key: U_dxFnbfesmgSwL-SlpvGYFbpY5vlJ1kb52knlCXkkI
+    short-id: '!!str 8cfe1563'
+  server: 178.18.158.17
+  tls: true
+  type: vless
+  uuid: 0809eed6-5204-49b8-8312-b82a10024022
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | SWE - 174ms
+  network: tcp
+  port: 443
+  server: 84.32.154.74
+  tls: true
+  type: vless
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪 瑞典 | SWE 6 - 173ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
+    short-id: '!!str 2a67748b0d641e16'
+  server: 195.72.62.7
+  tls: true
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪 瑞典 | SWE 3 - 166ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: '!!str a7c92e4b10d6f835'
+  server: 88.216.60.73
+  tls: true
+  type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪 瑞典 | SWE 5 - 157ms
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: '!!str a7c92e4b10d6f835'
+  server: 88.216.214.159
+  tls: true
+  type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪SE_1|2.8MB/s - 183ms
+  network: grpc
+  port: 8443
+  reality-opts:
+    public-key: 9OYY5pqE32-AqAkHK9Pv2TNoaAFwFFRMJKT4_ccSil4
+    short-id: '!!str 08'
+  server: sweden.dance-tonic.rutube.info
+  tls: true
+  type: vless
+  uuid: 0ed9418b-e687-4c2d-8869-7e368c44887e
+- name: 🇸🇪SE_2|1.7MB/s|R002-260618 - 1...
+  port: 443
+  server: 146.70.242.130
+  sni: 146.70.242.130
+  tls: true
+  type: http
+- name: 🇸🇪SE_1|3.3MB/s|R002-260618 - 1...
+  port: 9443
+  server: 146.70.242.146
+  sni: 146.70.242.146
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|1.9MB/s|R002-260618 - 1...
+  port: 443
+  server: 79.142.77.63
+  sni: 79.142.77.63
+  tls: true
+  type: http
 - client-fingerprint: edge
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇸🇪SE瑞典丨yoyapai.com - 122ms
+  name: 🇸🇪SE瑞典丨yoyapai.com - 171ms
   network: tcp
   port: 443
   reality-opts:
@@ -37,25 +132,11 @@ proxies:
   tls: true
   type: vless
   uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
-- encryption: none
-  name: 🇸🇪SE_3|1.4MB/s|A004-260618 [19...
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  tls: false
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
 - name: 🇸🇪SE_5|727KB/s|P002-260618 [30...
   password: None
   port: 443
   server: 146.70.242.146
   sni: 146.70.242.146
-  tls: true
-  type: http
-- name: 🇸🇪SE_13|1.3MB/s|R002-260618 [3...
-  port: 443
-  server: 146.70.242.130
-  sni: 146.70.242.130
   tls: true
   type: http
 - alterId: 0
@@ -67,15 +148,6 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇸🇪SE_16|3.1MB/s|A001-260618 [7...
-  network: grpc
-  port: 48115
-  server: 138.124.86.230
-  tls: true
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
 - alterId: 0
   cipher: auto
   name: 🇸🇪SE_17|2.6MB/s|B007-260618 [8...
@@ -85,6 +157,12 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- name: 🇸🇪SE_1|1.2MB/s|R002-260618 [b1...
+  port: 443
+  server: 217.210.129.243
+  sni: 217.210.129.243
+  tls: true
+  type: http
 - name: 🇸🇪SE_4|881KB/s|P002-260618 [f5...
   password: None
   port: 443
@@ -92,41 +170,15 @@ proxies:
   sni: 149.50.216.65
   tls: true
   type: http
-- name: 🇸🇪SE_12|771KB/s|R002-260618 [f...
-  port: 443
-  server: 79.142.77.63
-  sni: 79.142.77.63
-  tls: true
-  type: http
-- encryption: none
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
-  network: tcp
-  port: 443
-  server: 150.241.79.124
-  tls: false
-  type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇸🇪 瑞典 | SWE 2 - 142ms
-  network: grpc
-  port: 8443
-  reality-opts:
-    public-key: 9OYY5pqE32-AqAkHK9Pv2TNoaAFwFFRMJKT4_ccSil4
-    short-id: '!!str 08'
-  server: sweden.dance-tonic.rutube.info
-  tls: true
-  type: vless
-  uuid: 0ed9418b-e687-4c2d-8869-7e368c44887e
-- name: 🇸🇪SE_1|2.9MB/s|R002-260618 - 1...
-  port: 9443
-  server: 146.70.242.146
-  sni: 146.70.242.146
-  tls: true
-  type: http
+- name: SE 12 → tg@nicevpn123 - 2ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 6ms
+  name: SE 20 → tg@nicevpn123 - 1ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -139,7 +191,7 @@ proxies:
     path: /
 - alterId: 64
   cipher: auto
-  name: SE 17 → tg@nicevpn123 - 44ms
+  name: SE 17 → tg@nicevpn123 - 10ms
   network: ws
   port: 443
   server: 148.135.33.228
@@ -150,12 +202,6 @@ proxies:
     headers:
       Host: 148.135.33.228
     path: /
-- name: SE 12 → tg@nicevpn123 - 5ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
   name: SE 22 → tg@nicevpn123 - 2ms
@@ -169,12 +215,42 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
-- cipher: aes-128-gcm
-  name: SE 🇸🇪 | @Raydikalx | 830C96 - ...
-  password: 517403753b63fd4fac88986bf98b11e0
-  port: 18501
-  server: 194.59.250.52
-  type: ss
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | E3CC03 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: AeJxuSro-bcBjd1ooUaXfWhROvGleu8OcoZSZutRT1I
+    short-id: '!!str 67106660'
+  server: 185.153.55.12
+  tls: true
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | DA5374 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: eiTR0q65sQ8SUwFSxHY1IXHKkNb-_QTQnambcVxnUFU
+    short-id: '!!str 51057fb54d2364f4'
+  server: 185.231.101.94
+  tls: true
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | 11B842 - ...
+  network: tcp
+  port: 443
+  server: app.streamru10.net
+  tls: true
+  type: vless
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
 - encryption: none
   name: SE 🇸🇪 | @Raydikalx | 0843AE - ...
   network: ws
@@ -186,25 +262,13 @@ proxies:
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: SE 🇸🇪 | @Raydikalx | 5EA78A - ...
+  name: SE 🇸🇪 | @Raydikalx | C2B320 - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4
-    short-id: '!!str '
-  server: 31.77.18.220
+    public-key: 453QgfqoHVVQ-M7xjfH-bUu0HXz1mdWGuR3vNoBoeCM
+    short-id: '!!str 4e1682'
+  server: 143.246.195.46
   tls: true
   type: vless
-  uuid: 4f51ca84-43ea-4087-b8a2-938e0ccbe27a
-- client-fingerprint: edge
-  encryption: none
-  name: SE 🇸🇪 | @Raydikalx | FF8473 - ...
-  network: grpc
-  port: 443
-  reality-opts:
-    public-key: BLhS7fE4Yh6kAADw7yRIn2PzKun-JDagJHJNOePYRSY
-    short-id: '!!str bee802ae4ab66496'
-  server: 136.148.213.149
-  tls: true
-  type: vless
-  uuid: 4618cebd-e1e9-45c3-be98-d9d6e3ee8bef
+  uuid: 5311859f-0b5d-4c26-a8bf-2648f113e4ea

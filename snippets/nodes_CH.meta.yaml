@@ -1,8 +1,37 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1616...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.166.88.127
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇨🇭[www.v2nodes.com] ss-CH-1615...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 186.190.215.251
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇨🇭[www.v2nodes.com] ss-CH-1615... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 79.127.184.104
+  type: ss
+- name: 🇨🇭[www.v2nodes.com] trojan-CH-...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.33
+  sni: courses.yourultimateprofessionalcareerhub.com
+  type: trojan
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.158
+  type: trojan
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 瑞士_648C80 - 307ms
+  name: 瑞士_648C80 - 348ms
   network: tcp
   port: 443
   reality-opts:
@@ -12,30 +41,37 @@ proxies:
   tls: true
   type: vless
   uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-- cipher: aes-256-gcm
-  name: 🇨🇭[www.v2nodes.com] ss-CH-1616...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 23.166.88.127
-  type: ss
-- name: 🇨🇭[www.v2nodes.com] trojan-CH-...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- client-fingerprint: edge
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇨🇭CH_1|3.4MB/s - 152ms
+  network: tcp
   port: 443
-  server: 208.69.78.158
-  type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.33
-  sni: courses.yourultimateprofessionalcareerhub.com
-  type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
-  password: b7795ce8-3863-4292-adfc-9c0a7b847774
-  port: 443
-  server: t2w2t2w2.bpca2026.top
-  skip-cert-verify: true
-  sni: t2w2t2w2.bpca2026.top
-  type: trojan
+  reality-opts:
+    public-key: 3fcmILwQG2sbwo58XW9Z1lziNQXmAFwUglFuXQFePRI
+    short-id: '!!str 95da6299f1'
+  server: 91.214.190.127
+  tls: true
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+- name: 🇨🇭CH_2|1.8MB/s - 162ms
+  port: 9443
+  server: 149.88.27.46
+  sni: 149.88.27.46
+  tls: true
+  type: http
+- name: 🇨🇭CH_2|3.2MB/s|R002-260618 - 1...
+  port: 9443
+  server: 37.120.213.210
+  sni: 37.120.213.210
+  tls: true
+  type: http
+- name: 🇨🇭CH_3|1.1MB/s|K001-260618 - 1...
+  port: 9443
+  server: 149.88.27.33
+  sni: 149.88.27.33
+  tls: true
+  type: http
 - name: 🇨🇭CH_62|507KB/s|M003-260806 [0...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -43,19 +79,6 @@ proxies:
   skip-cert-verify: true
   sni: cdn.yourultimateprofessionalcareerhub.com
   type: trojan
-- name: 🇨🇭CH_3|1.3MB/s|R002-260618 [3a...
-  port: 9443
-  server: 37.120.213.210
-  sni: 37.120.213.210
-  tls: true
-  type: http
-- name: 🇨🇭CH_40|981KB/s|P002-260618 [4...
-  password: None
-  port: 9443
-  server: 149.88.27.33
-  sni: 149.88.27.33
-  tls: true
-  type: http
 - cipher: aes-256-gcm
   name: 🇨🇭CH_59|3.8MB/s|M003-260806 [7...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -74,13 +97,6 @@ proxies:
   server: 208.69.78.208
   sni: resources.yourultimateprofessionalcareerhub.com
   type: trojan
-- name: 🇨🇭CH_53|1.1MB/s|K001-260618 [9...
-  password: None
-  port: 9443
-  server: 149.88.27.46
-  sni: 149.88.27.46
-  tls: true
-  type: http
 - name: 🇨🇭CH_48|227KB/s|M003-260806 [9...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -95,44 +111,7 @@ proxies:
   skip-cert-verify: true
   sni: www.yourultimateprofessionalcareerhub.com
   type: trojan
-- name: 🇨🇭CH_42|488KB/s|P002-260618 [c...
-  password: None
-  port: 443
-  server: 31.7.62.50
-  sni: 31.7.62.50
-  tls: true
-  type: http
-- client-fingerprint: edge
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇨🇭 瑞士 | CHE - 122ms
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 3fcmILwQG2sbwo58XW9Z1lziNQXmAFwUglFuXQFePRI
-    short-id: '!!str 95da6299f1'
-  server: 91.214.190.127
-  tls: true
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-- alpn:
-  - http
-  client-fingerprint: chrome
-  encryption: none
-  name: 🇨🇭 瑞士 | CHE 2 - 134ms
-  network: ws
-  port: 443
-  server: 193.233.219.98
-  tls: true
-  type: vless
-  uuid: 265ecca2-4733-49de-b2c9-ed7f0e999655
-- name: 🇨🇭CH_3|1.5MB/s - 109ms
-  port: 9377
-  server: 45.74.31.41
-  type: socks5
-  username: Og%3D%3D
-- client-fingerprint: chrome
-  encryption: none
+- encryption: none
   name: CH 🇨🇭 | @Raydikalx | A19323 - ...
   network: tcp
   port: 443
