@@ -1,41 +1,29 @@
 proxies:
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
-  network: grpc
-  port: 443
-  server: 201.24.121.243
-  tls: true
-  type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
-  network: grpc
-  port: 443
-  server: 201.24.116.192
-  tls: true
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  password: VVlAff77CnAU43Aoc5j15Y
-  port: 5112
-  server: 90.156.203.62
-  type: ss
-- name: 🇷🇺RU_1|2.9MB/s|R002-260618 - 1...
+- name: 🇷🇺RU_1|2.2MB/s|R002-260618 - 1...
   port: 1446
   server: 46.29.166.134
   sni: 46.29.166.134
   tls: true
   type: http
-- name: 🇷🇺RU_2|1.4MB/s|P002-260618 - 1...
+- name: 🇷🇺RU_1|1.9MB/s|P002-260618 - 1...
   password: 'null'
   port: 1446
   server: 46.29.166.134
   sni: 46.29.166.134
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇷🇺RU_3|3.4MB/s|R002-260618 - 1...
+  port: 443
+  server: 178.219.43.226
+  sni: 178.219.43.226
+  tls: true
+  type: http
+- name: 🇷🇺RU_1|2.0MB/s|R002-260618 - 1...
+  password: 'null'
+  port: 443
+  server: 178.219.43.226
+  sni: 178.219.43.226
   tls: true
   type: http
   username: 'null'
@@ -47,15 +35,15 @@ proxies:
   tls: true
   type: http
   username: 'null'
-- cipher: aes-128-gcm
-  name: 🇷🇺[www.v2nodes.com] ss-RU-1617...
-  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
-  port: 13108
-  server: 38.60.223.125
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  password: VVlAff77CnAU43Aoc5j15Y
+  port: 5112
+  server: 90.156.203.62
   type: ss
 - client-fingerprint: chrome
   encryption: none
-  name: 🇷🇺俄羅斯丨yoyapai.com - 154ms
+  name: 🇷🇺俄羅斯丨yoyapai.com - 97ms
   network: ws
   port: 443
   server: 109.120.176.37
@@ -66,7 +54,7 @@ proxies:
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇷🇺俄罗斯丨yoyapai.com (4) - 229ms
+  name: 🇷🇺俄罗斯丨yoyapai.com (4) - 166ms
   network: tcp
   port: 443
   reality-opts:
@@ -80,7 +68,7 @@ proxies:
 - client-fingerprint: qq
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇷🇺RU俄罗斯丨yoyapai.com (10) - 192...
+  name: 🇷🇺RU俄罗斯丨yoyapai.com (10) - 126...
   network: tcp
   port: 443
   reality-opts:
@@ -91,12 +79,105 @@ proxies:
   tls: true
   type: vless
   uuid: 238e492b-bc20-4380-92b6-135d39112ca4
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇷🇺RU_12|1.6MB/s|M003-260806 [4...
+  network: grpc
+  port: 443
+  server: vps3.nemnogogo.com
+  tls: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- cipher: aes-128-gcm
+  name: 🇷🇺RU_8|1.6MB/s|M003-260806 [4e...
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+  port: 13108
+  server: 38.60.223.125
+  type: ss
 - name: 🇷🇺RU_4|1.5MB/s|R002-260618 [5a...
   port: 8443
   server: 87.242.85.187
   sni: 87.242.85.187
   tls: true
   type: http
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  network: grpc
+  port: 443
+  server: 201.24.121.243
+  tls: true
+  type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-55 | free-nodes - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ux7dvaHVn6eJ0d8zFNkWlB97ZmfLozzH7R_8qL0873A
+  server: 185.72.144.43
+  tls: true
+  type: vless
+  uuid: 88f2c5cc-a287-4be9-be28-56c2729d3782
+- name: RU_speednode_0184 - 6ms
+  password: tg-fq521free
+  port: 443
+  server: 45.67.215.95
+  sni: torjan.xn--xhq44j.eu.org
+  type: trojan
+- name: RU_speednode_0181 - 8ms
+  password: Aimer
+  port: 2053
+  server: 77.232.140.114
+  sni: epgc.aimercc.dpdns.org
+  type: trojan
+- encryption: none
+  name: '[Vless] RU_speednode_0025 - 6m...'
+  network: ws
+  port: 2096
+  server: 188.42.145.253
+  tls: false
+  type: vless
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+- name: 15|RU_speednode_0077 - 6ms
+  password: 6884d714-d3c4-4b49-aa20-767ea92837d6
+  port: 443
+  server: 45.67.215.196
+  sni: icecream.955850.xyz
+  type: trojan
+- name: 15|RU_speednode_0075 - 6ms
+  password: 6884d714-d3c4-4b49-aa20-767ea92837d6
+  port: 443
+  server: 45.67.215.5
+  sni: icecream.955850.xyz
+  type: trojan
+- name: 15|RU_speednode_0078 - 5ms
+  password: 6884d714-d3c4-4b49-aa20-767ea92837d6
+  port: 443
+  server: 45.67.215.234
+  sni: icecream.955850.xyz
+  type: trojan
+- name: 15|RU_speednode_0079 - 6ms
+  password: 6884d714-d3c4-4b49-aa20-767ea92837d6
+  port: 443
+  server: 45.67.215.153
+  sni: icecream.955850.xyz
+  type: trojan
+- client-fingerprint: random
+  encryption: none
+  name: 🇷🇺 RU VLESS-109 | free-nodes -...
+  network: ws
+  port: 443
+  server: tr3.wba-pn.ru
+  tls: true
+  type: vless
+  uuid: af2a0c18-b08c-471f-baa3-259ac2ce3a85
 - name: RU%E4%BF%84%E7%BD%97%E6%96%AF%...
   network: ws
   password: '!!str 521314'
@@ -110,40 +191,26 @@ proxies:
       Host: hhtj.hhllfly.kdns.fr
     path: /pyip=Telegram-WangCai2🇨🇳
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 16 → tg@nicevpn123 - 133...
+  name: 🇷🇺 RU 16 → tg@nicevpn123 - 76m...
   password: BwcAUZk8hUFAkDGN
   port: 9031
   server: 5.188.181.201
   type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 23 → tg@nicevpn123 - 76m...
+  password: S7KwUu7yBy58S3Ga
+  port: 9042
+  server: 5.188.181.201
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 30 → tg@nicevpn123 - 74m...
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 5.188.181.201
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇷🇺 RU 32 → tg@nicevpn123 - 214...
-  network: ws
-  port: 80
-  server: de1-vmess.greenssh.xyz
-  tls: false
-  type: vmess
-  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
-  ws-opts:
-    headers:
-      Host: de1-vmess.greenssh.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU 31 → tg@nicevpn123 - 109...
-  network: ws
-  port: 80
-  server: is3-vmess.sshmax.xyz
-  tls: false
-  type: vmess
-  uuid: a8d33442-de64-4980-a779-540c1eedbc25
-  ws-opts:
-    headers:
-      Host: is3-vmess.sshmax.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU 22 → tg@nicevpn123 - 1ms
+  name: 🇷🇺 RU 22 → tg@nicevpn123 - 5ms
   network: ws
   port: 443
   server: 185.148.104.118
@@ -154,19 +221,20 @@ proxies:
     headers:
       Host: 185.148.104.118
     path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 23 → tg@nicevpn123 - 136...
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 5.188.181.201
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 30 → tg@nicevpn123 - 133...
-  password: GeregetR8cvQHzYr
-  port: 9030
-  server: 5.188.181.201
-  type: ss
-- client-fingerprint: chrome
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 31 → tg@nicevpn123 - 74m...
+  network: ws
+  port: 80
+  server: is3-vmess.sshmax.xyz
+  tls: false
+  type: vmess
+  uuid: a8d33442-de64-4980-a779-540c1eedbc25
+  ws-opts:
+    headers:
+      Host: is3-vmess.sshmax.xyz
+    path: /
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
   name: RU 🇷🇺 | @Raydikalx | 77BE9F - ...
@@ -182,6 +250,19 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 200227 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: Y2uyTCt5ofoFht6Xl-55dBPCBUiYi1fFTVcmZtoiqFw
+    short-id: '!!str '
+  server: 185.231.204.244
+  tls: true
+  type: vless
+  uuid: 42a64b9a-ab79-4094-8656-30366a7c2ea3
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
   name: RU 🇷🇺 | @Raydikalx | 96B587 - ...
   network: tcp
   port: 8443
@@ -192,6 +273,19 @@ proxies:
   tls: true
   type: vless
   uuid: 2ae0670d-0bdf-409e-9a55-4e970252d378
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 9C79BA - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: zICjcFkqI720WzWpHXRLjSFYmcu4Hd0jk1iDEo1nUAU
+    short-id: '!!str c27a26812e5d2208'
+  server: 109.71.245.99
+  tls: true
+  type: vless
+  uuid: f09ca6e3-c547-4f91-95f5-77f34c4282ac
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -207,6 +301,32 @@ proxies:
   uuid: e75ad2eb-6c1f-45ce-8023-f5f10875df66
 - client-fingerprint: chrome
   encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 530EB2 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g
+    short-id: '!!str '
+  server: 147.45.108.45
+  tls: true
+  type: vless
+  uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | AEF4C1 - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: '!!str d1579a8745398e34'
+  server: 83.217.201.82
+  tls: true
+  type: vless
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+- client-fingerprint: firefox
+  encryption: none
   name: RU 🇷🇺 | @Raydikalx | F82E71 - ...
   network: grpc
   port: 443
@@ -214,37 +334,79 @@ proxies:
   tls: true
   type: vless
   uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- client-fingerprint: firefox
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 2D4649 - ...
+  network: grpc
+  port: 443
+  server: 201.24.116.192
+  tls: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: RU 🇷🇺 | @Raydikalx | 11B311 - ...
+  name: RU 🇷🇺 | @Raydikalx | 264AEB - ...
   network: tcp
   port: 443
   reality-opts:
-    public-key: HyPCaHlGMjE2h7D4F6dtyFHeXDEAHIUg9fXJgADc5H0
-    short-id: '!!str 134a7678ec2a3285'
-  server: 201.34.137.8
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: '!!str 64c1fe36c7846400'
+  server: 104.171.133.209
   tls: true
   type: vless
-  uuid: d651c9ab-b844-4420-b3d0-20d201ef5f55
-- client-fingerprint: firefox
-  encryption: none
-  name: RU 🇷🇺 | @Raydikalx | 468C09 - ...
-  network: grpc
-  port: 443
-  server: 188.225.73.41
-  tls: true
-  type: vless
-  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
 - client-fingerprint: chrome
   encryption: none
-  name: RU 🇷🇺 | @Raydikalx | 552792 - ...
+  name: RU 🇷🇺 | @Raydikalx | 02E3C6 - ...
   network: grpc
-  port: 9096
-  reality-opts:
-    public-key: JASBooze12B0nAaLU2QMWkeAqXwh4GmhfPD_O9YteT0
-    short-id: '!!str 6ba85179e30d4fc2'
-  server: 138.16.206.147
+  port: 443
+  server: pebble.gerqix.online
   tls: true
   type: vless
-  uuid: 6a5b48fe-9a99-4509-9bad-8ad9b44bd56e
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+- client-fingerprint: firefox
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 864FE4 - ...
+  network: ws
+  port: 443
+  server: 31.177.111.134
+  tls: true
+  type: vless
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
+- client-fingerprint: edge
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | ED6287 - ...
+  network: grpc
+  port: 443
+  server: luminexorizon.ink
+  tls: true
+  type: vless
+  uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | C823EC - ...
+  network: ws
+  port: 443
+  server: reedbed.filnex.baby
+  tls: true
+  type: vless
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 7E4971 - ...
+  network: ws
+  port: 443
+  server: rivulet.filnex.baby
+  tls: true
+  type: vless
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | CD955F - ...
+  network: ws
+  port: 443
+  server: clover.filnex.baby
+  tls: true
+  type: vless
+  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
