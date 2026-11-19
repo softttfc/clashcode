@@ -1,46 +1,28 @@
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  password: 2e555e46dbc421452416834962fd014f
-  port: 8388
-  server: 62.182.193.228
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
-  port: 8388
-  server: 70.34.212.124
-  type: ss
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇸🇪SE_18|805KB/s|M003-260806 [1...
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.97
-  sni: connect-se.mimowhat.online
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: 🇸🇪SE_14|2.4MB/s|B007-260618 [4...
+  name: 🇸🇪SE_1|400KB/s|B007-260618 [4f...
   network: tcp
   port: 1270
   server: 138.199.55.230
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇸🇪SE_17|2.6MB/s|B007-260618 [8...
-  network: tcp
-  port: 1270
-  server: 62.93.166.184
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- cipher: aes-256-gcm
+  name: 🇸🇪SE_2|220KB/s|M003-260806 [ed...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
+- name: SE 12 → tg@nicevpn123 - 7ms
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
 - alterId: 64
   cipher: auto
-  name: SE 17 → tg@nicevpn123 - 53ms
+  name: SE 17 → tg@nicevpn123 - 52ms
   network: ws
   port: 443
   server: 148.135.33.228
@@ -51,15 +33,9 @@ proxies:
     headers:
       Host: 148.135.33.228
     path: /
-- name: SE 12 → tg@nicevpn123 - 6ms
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
 - alterId: 0
   cipher: auto
-  name: SE 20 → tg@nicevpn123 - 5ms
+  name: SE 20 → tg@nicevpn123 - 16ms
   network: ws
   port: 443
   server: 185.146.173.129
@@ -83,3 +59,24 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | B239B4 - ...
+  network: tcp
+  port: 1270
+  server: 62.93.166.184
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- name: SE 🇸🇪 | @Raydikalx | 19D6DC - ...
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  sni: connect-se.mimowhat.online
+  type: trojan
+- name: SE 🇸🇪 | @Raydikalx | 22BF10 - ...
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.32
+  sni: connect-se.mimowhat.online
+  type: trojan
