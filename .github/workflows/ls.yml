@@ -1,11 +1,10 @@
 # .github/workflows/fetch.yml
 name: 测试
-
 on:
   workflow_dispatch:                          # 允许手动触发
-#  schedule:
-    # Runs at 02:00
-    # - cron: '0 2 * * *'
+  schedule:
+    # Runs at 03:00  10：00
+    - cron: '0 3 * * *'
   push:
     # 仅当以下文件被修改时才触发
     paths:
@@ -15,7 +14,7 @@ on:
       - '.github/workflows/fetch.yml'
 
 jobs:
-  test:
+  fetch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -51,14 +50,10 @@ jobs:
         continue-on-error: true
         
 
-        
       # ---------- 安装依赖 ----------
       - name: 安装依赖
         run: pip install -r requirements.txt
 
-
-
-        
       # ---------- 拉取远端最新代码（确保工作区干净） ----------
       - name: 拉取远端最新代码
         run: |
@@ -66,72 +61,55 @@ jobs:
           echo "远程默认分支: $DEFAULT_BRANCH"
           git pull --rebase origin "$DEFAULT_BRANCH"
 
+      # ---------- 执行主抓取脚本 ----------
+      - name: 执行任务
+        run: python ./fetch_pro3.py
 
-
-      # # ---------- 执行主抓取脚本 ----------
-      # - name: 执行任务
-      #   run: python ./fetch_pro3.py
-
-      # # ---------- 预处理测速文件（新增，失败不中断） ----------
-      # # 调用 preprocess_speed.py 对 list.meta.yml 做安全化处理：
-      # #   1. 清理节点名中的 YAML 危险字符（...、#、&、* 等）
-      # #   2. 保证节点名唯一，避免测速结果按 name 错配
-      # #   3. 清理 network 字段污染（# URL fragment）
-      # #   4. 修复 VLESS security 与 reality-opts 字段冲突
-      # #   5. IPv6 server 去方括号
-      # #   6. 使用 NoAliasDumper 输出，禁止锚点/别名
-      # # 失败不中断：若本步骤失败，speed_pro1.py 会自动回退到原始文件
+      # ---------- 预处理测速文件（新增，失败不中断） ----------
+      # 调用 preprocess_speed.py 对 list.meta.yml 做安全化处理：
+      #   1. 清理节点名中的 YAML 危险字符（...、#、&、* 等）
+      #   2. 保证节点名唯一，避免测速结果按 name 错配
+      #   3. 清理 network 字段污染（# URL fragment）
+      #   4. 修复 VLESS security 与 reality-opts 字段冲突
+      #   5. IPv6 server 去方括号
+      #   6. 使用 NoAliasDumper 输出，禁止锚点/别名
+      # 失败不中断：若本步骤失败，speed_pro1.py 会自动回退到原始文件
       # - name: 预处理测速文件
       #   run: python ./preprocess_speed.py list.meta.yml list.meta.safe.yml
       #   continue-on-error: true
 
-      # # ---------- 测速（可选，失败不中断） ----------
-      # # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
-      # # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。
-      # - name: 测试节点连通性延迟性
-      #   run: |
-      #     INPUT_FILE="list.meta.yml"
-      #     if [ -f list.meta.safe.yml ]; then
-      #       INPUT_FILE="list.meta.safe.yml"
-      #       echo "✅ 使用预处理后的文件: $INPUT_FILE"
-      #     else
-      #       echo "⚠️ 未找到 list.meta.safe.yml，回退使用原始文件: $INPUT_FILE"
-      #     fi
-      #     python ./speed_pro1.py --delay "$INPUT_FILE" list.metaspeed.yml
-      #   continue-on-error: true
-
-      # # ---------- 修复配置文件格式（可选） ----------
-      # - name: 生成标准格式文件
-      #   run: python ./repair_pro.py crawclash.meta.yaml crawclash.metarp.yaml --keep best
-      #   continue-on-error: true
-      # - name: 去重
-      #   run: |
-      #      python dupconfig.py list.metaspeedrp.yml list.metaspeedrpdu.yml --keep best
-      #      # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
 
       
-
-       # 去重阶段现在包含两个可选增强：
-      #   1. --protocol-check：用 OpenRay render.supported_params 检查协议兼容性，
-      #      剔除协议级不兼容节点（纯函数检查，零出站）。
-      #   2. --verify-nodes：逐个启动 mihomo 验证节点加载有效性，剔除失败节点。
-      #      复用 OpenRay validation.CoreWorker + candidate_config，零出站：
-      #        - 无 proxy-groups / url-test / fallback
-      #        - 规则为 MATCH,<节点名>
-      #        - 绑定 127.0.0.1，随机 authentication token
-      #        - 只轮询本地端口 LISTEN，不发起任何外部请求
-      #      若 .tools/mihomo 不存在，自动跳过 --verify-nodes。
+      
       # ---------- 安装 mihomo 二进制（供 dupconfig.py --verify-nodes 使用） ----------
-      # 说明：
-      #   - 不使用 tools/install_cores.py，避免 openray 包未安装导致的
-      #     ModuleNotFoundError: No module named 'openray'。
-      #   - 版本与 SHA-256 来自仓库 cores.lock.json 的 mihomo.linux.amd64 条目。
-      #   - 只做本地下载 + 校验 + 解压，不启动核心、不发外部请求。
-      #   - 失败不中断：后续“去重 + 协议检查 + mihomo 本地验证”步骤会先检测
-      #     .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes。
+      # 策略：优先使用仓库原生 tools/install_cores.py（版本与 SHA-256 来自
+      #       openray/assets/cores.lock.json），失败则回退到 wget + sha256sum。
+      # 前提：
+      #   1. openray 包可 import（install_cores.py 顶层 from openray.files import atomic_write）
+      #   2. openray/assets/cores.lock.json 存在
+      #   3. runner 是 amd64（ubuntu-latest 满足）
+      # 无论安装成功与否，后续“去重 + 协议检查 + mihomo 本地验证”步骤都会先
+      # 检查 .tools/mihomo 是否存在，不存在则自动跳过 --verify-nodes，避免误删节点。
       - name: 安装 mihomo 二进制
         run: |
           set -e
+
+          # ---- 优先：仓库原生 install_cores.py ----
+          if [ -f tools/install_cores.py ] && [ -f openray/assets/cores.lock.json ]; then
+            echo "尝试使用仓库原生 tools/install_cores.py 安装 mihomo..."
+            if python tools/install_cores.py --destination .tools mihomo; then
+              if [ -x .tools/mihomo ]; then
+                echo "✅ 通过 tools/install_cores.py 安装成功: .tools/mihomo"
+                .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
+                exit 0
+              fi
+            fi
+            echo "⚠️ tools/install_cores.py 未产出 .tools/mihomo，回退到 wget"
+          else
+            echo "⚠️ 未找到 tools/install_cores.py 或 openray/assets/cores.lock.json，回退到 wget"
+          fi
+
+          # ---- 兜底：wget + sha256sum + gunzip（版本/校验值与 cores.lock.json 一致） ----
           MI_VERSION="v1.19.16"
           MI_ARCHIVE="mihomo-linux-amd64-${MI_VERSION}.gz"
           MI_BIN="mihomo-linux-amd64-${MI_VERSION}"
@@ -141,20 +119,30 @@ jobs:
           mkdir -p .tools
           echo "下载: ${MI_URL}"
           wget -q -O "/tmp/${MI_ARCHIVE}" "${MI_URL}"
-
           echo "校验 SHA-256..."
           echo "${MI_SHA256}  /tmp/${MI_ARCHIVE}" | sha256sum -c -
-
           echo "解压..."
           gunzip -f "/tmp/${MI_ARCHIVE}"
           mv "/tmp/${MI_BIN}" ".tools/mihomo"
           chmod +x .tools/mihomo
-
-          echo "✅ mihomo 已安装到 .tools/mihomo"
+          echo "✅ 通过 wget 安装成功: .tools/mihomo"
           .tools/mihomo -v || echo "⚠️ mihomo -v 未通过，但文件已就位"
         continue-on-error: true
-              
 
+
+
+      # 去重阶段现在包含两个可选增强：
+      #   1. --protocol-check：用 OpenRay render.supported_params 检查协议兼容性，
+      #      剔除协议级不兼容节点（纯函数检查，零出站）。
+      #   2. --verify-nodes：逐个启动 mihomo 验证节点加载有效性，剔除失败节点。
+      #      复用 OpenRay validation.CoreWorker + candidate_config，零出站：
+      #        - 无 proxy-groups / url-test / fallback
+      #        - 规则为 MATCH,<节点名>
+      #        - 绑定 127.0.0.1，随机 authentication token
+      #        - 只轮询本地端口 LISTEN，不发起任何外部请求
+      #      --verify-workers 16 mihomo 验证阶段的并发线程数。   --verify-budget 1800  mihomo 验证阶段的总时间预算，单位秒。1800 = 30 分钟
+      #      若 .tools/mihomo 不存在，自动跳过 --verify-nodes。
+      
       - name: 去重 + 协议检查 + mihomo 本地验证
         run: |
           set -e
@@ -163,63 +151,66 @@ jobs:
             python dupconfig.py list.meta.yml list.meta.dub.yml \
               --clean --keep best \
               --protocol-check \
+              --merge-by-render \
               --verify-nodes --mihomo-bin .tools/mihomo \
-              --verify-workers 16 --verify-budget 1800 \
-              --merge-by-render
+              --verify-workers 16 --verify-budget 1800
           else
             echo "⚠️ 未找到 .tools/mihomo，跳过 mihomo 本地验证（仅做去重 + 协议检查）"
             python dupconfig.py list.meta.yml list.meta.dub.yml \
               --clean --keep best \
               --protocol-check
           fi
-        continue-on-error: true        
-      - name: 验证（必选，数学证明）
+        continue-on-error: true      
+      # - name: 去重，九层归一化逐层对照 identity
+      #   run: |
+      #      python dupconfig.py list.meta.yml list.meta.dub.yml --clean --keep best
+      #      # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
+
+      # ---------- 验证 差分模糊测试（三层测试 + 数学证明） ----------      
+      - name: 验证 差分模糊测试（三层测试 + 数学证明）
         run: |
           pip install "pytest>=8.0,<9.0"
           pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v
-          
-       # locate.py检查
-      - name: locate.py检查
-        run: python locate.py  list.meta.dub.yml
-        continue-on-error: true           
-        
+
+      # ---------- 测速（可选，失败不中断） ----------
+      # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
+      # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。         
+      # - name: 测试节点连通性延迟性
+      #   run: |
+      #     INPUT_FILE="list.meta.yml"
+      #     if [ -f list.meta.dub.yml ]; then
+      #       INPUT_FILE="list.meta.dub.yml"
+      #       echo "✅ 使用预处理后的文件: $INPUT_FILE"
+      #     else
+      #       echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
+      #     fi
+      #     python ./speed_pro1.py --delay "$INPUT_FILE" list.metaspeed.yml
+      #   continue-on-error: true
+
+      # ---------- 修复配置文件格式（可选） ----------
+      - name: 生成标准格式文件
+        run: python ./repair_pro.py list.metaspeed.yml list.metaspeedrp.yml --keep best
+        continue-on-error: true
+
       # ---------- 修复可预见错误（可选） ----------
-      - name: 修复可预见错误list.meta.dubrbd.yml为测试文件
-        run: python ./rebuilder_pro2.py list.meta.dub.yml  list.meta.dubrbd.yml
+      - name: 修复可预见错误
+        run: python ./rebuilder_pro2.py list.metaspeedrp.yml list.metaspeedrbd.yml
         continue-on-error: true
 
        # locate.py检查
       - name: locate.py检查
-        run: python locate.py  list.meta.dubrbd.yml
-        continue-on-error: true       
+        run: python locate.py  list.metaspeedrbd.yml
+        continue-on-error: true    
 
       # ---------- 校验节点文件（方案 B：宽松模式，失败不中断） ----------
-      # ---------- 校验节点文件（分别对 safe 和 rbd 校验，失败不中断） ----------
       - name: 校验节点文件
         run: |
-          # 校验 list.meta.safe.yml（预处理后、rebuilder 前）
-          if [ -f list.meta.safe.yml ]; then
-            echo "开始校验 list.meta.safe.yml ..."
-            python ./check.py list.meta.safe.yml 错误日志safe.txt || true
+          # 校验 list.meta.dub.yml（预处理后、rebuilder 前）
+          if [ -f list.meta.dub.yml ]; then
+            echo "开始校验 list.meta.dub.yml ..."
+            python ./check.py list.meta.dub.yml 错误日志dub.txt || true
           else
-            echo "⚠️ 未找到 list.meta.safe.yml，跳过" > 错误日志safe.txt
-          fi
-
-          
-          # 校验 crawclash.metarbd.yaml（预处理后、rebuilder 前）
-          if [ -f crawclash.metarbd.yaml ]; then
-            echo "开始校验 crawclash.metarbd.yaml ..."
-            python ./check.py crawclash.metarbd.yaml 错误日志crawclash.txt || true
-          else
-            echo "⚠️ 未找到 crawclash.metarbd.yaml，跳过" > 错误日志crawclash.txt
-          fi
-          
-          # 校验 list.meta.dubrbd.yml  测试文件
-          if [ -f list.meta.dubrbd.yml ]; then
-            echo "开始校验 list.metaspeedrpdurbd.yml ..."
-            python ./check.py list.meta.dubrbd.yml 错误日志测试durbd.txt || true
-          else
-            echo "⚠️ 未找到 list.meta.dubrbd.yml，跳过" > 错误日志测试durbd.txt
+            echo "⚠️ 未找到 list.meta.dub.yml，跳过" > 错误日志dub.txt
           fi
 
           # 校验 list.metaspeedrbd.yml（rebuilder 后最终文件）
@@ -246,11 +237,6 @@ jobs:
             cat 错误日志safe.txt
             echo "==========================================================="
           fi
-          if [ -f 错误日志durbd.txt ]; then
-            echo "========== check.py 校验报告: list.metaspeedrpdurbd.yml =========="
-            cat 错误日志durbd.txt
-            echo "============================================================="
-          fi          
           if [ -f 错误日志rbd.txt ]; then
             echo "========== check.py 校验报告: list.metaspeedrbd.yml =========="
             cat 错误日志rbd.txt
@@ -265,13 +251,7 @@ jobs:
             echo "========== check.py 校验报告: list.metaspeed.yml =========="
             cat 错误日志speed.txt
             echo "============================================================="
-          fi       
-          if [ -f 错误日志crawclash.txt ]; then
-            echo "========== check.py 校验报告: crawclash.metarbd.yaml =========="
-            cat 错误日志crawclash.txt
-            echo "============================================================="
-          fi             
-          
+          fi          
       # ---------- 将两份校验报告作为 artifact 上传 ----------
       - name: 上传校验报告
         if: always()
@@ -282,9 +262,7 @@ jobs:
             错误日志safe.txt
             错误日志rbd.txt
             错误日志rp.txt
-            错误日志speed.txt  
-            错误日志crawclash.txt
-            错误日志durbd.txt
+            错误日志speed.txt            
           if-no-files-found: ignore
 
       # ---------- 提交并推送变更（不再拉取） ----------
@@ -300,10 +278,8 @@ jobs:
           # 添加所有需要跟踪的文件
           git add list*
           git add snippets/
-          git add craw*
           # 把校验报告也纳入版本管理
           git add 错误日志*
-
 
           # 检查是否有变更需要提交
           if git diff --staged --quiet; then
