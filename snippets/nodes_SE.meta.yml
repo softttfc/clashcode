@@ -275,38 +275,6 @@ proxies:
   ws-opts:
     headers:
       Host: api-svc-mgr.galioncc.com
-- name: 'SE 🇸🇪 | @Raydikalx | 256847 #2'
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  tls: false
-  type: vless
-  udp: true
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  ws-opts:
-    path: /vless
-- name: 'SE 🇸🇪 | @Raydikalx | 0843AE #1'
-  network: ws
-  port: 14430
-  server: 193.188.21.253
-  servername: 193.188.21.253
-  tls: false
-  type: vless
-  udp: true
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  ws-opts:
-    headers:
-      Host: 193.188.21.253
-    path: /vless
-- client-fingerprint: chrome
-  name: SE 🇸🇪 ｜ @Raydikalx ｜ 7F07F4 - ...
-  network: tcp
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.97
-  sni: connect-se.mimowhat.online
-  type: trojan
-  udp: true
 - name: SE 🇸🇪 | @Raydikalx | 903A3D
   password: a0052f4f-4c63-0002-a16f-ab2d5d718cd3
   port: 443
@@ -318,6 +286,14 @@ proxies:
   port: 443
   server: promo.betust.net
   type: hysteria2
+- name: '@Alirewa-1298'
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.32
+  sni: connect-se.mimowhat.online
+  type: trojan
+  udp: true
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: '@npv_vpn11 #1166'
@@ -383,6 +359,16 @@ proxies:
   ws-opts:
     headers:
       Host: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- name: SE 🇸🇪 | @Raydikalx | 256847
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  tls: false
+  type: vless
+  udp: true
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    path: /vless
 - client-fingerprint: qq
   flow: xtls-rprx-vision
   name: SE 🇸🇪 | @Raydikalx | 837B22
@@ -577,20 +563,25 @@ proxies:
   udp: true
   uuid: 753c6310-c4f9-42ab-a675-a3f0c44b8f4a
 - client-fingerprint: chrome
-  name: 'Channel id: @ConfigV2RayNG 🇫🇮 #2'
-  network: ws
-  port: 2096
+  name: SE 🇸🇪 ｜ @Raydikalx ｜ 7F07F4 - ...
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  sni: connect-se.mimowhat.online
+  type: trojan
+  udp: true
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | C17047
+  network: tcp
+  port: 2053
   server: 81.90.21.163
-  servername: stb71e5.rumedia-cdn.com
-  skip-cert-verify: false
+  servername: 81.90.21.163
   tls: true
   type: vless
   udp: true
   uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  ws-opts:
-    headers:
-      Host: stb71e5.rumedia-cdn.com
-    path: /cdn/v3/live
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
   name: '[SE] Art.29'
@@ -619,6 +610,17 @@ proxies:
   type: vless
   uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
 - client-fingerprint: firefox
+  name: '[SE] Art.29 #3'
+  network: ws
+  port: 2096
+  server: 81.90.21.200
+  servername: stadc07.rumedia-cdn.com
+  tls: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  ws-opts:
+    path: /cdn/v3/live
+- client-fingerprint: firefox
   encryption: none
   name: 🇸🇪SE_5
   network: tcp
@@ -636,7 +638,28 @@ proxies:
     headers:
       Host: ns-api-gw.galioncc.com
     path: '%2F'
-- name: 🇸🇪220314 | ⚡️Telegram = t.me/L...
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: CA 🇨🇦 ｜ @Raydikalx ｜ 06E2FF - ...
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: a9O5evb8g385KJm77j9SKlB7MvHzUBGes6c8BAxyO1U
+    short-id: '!!str 5fd3245e96291c37'
+  security: reality
+  server: 150.241.83.223
+  tls: true
+  type: vless
+  uuid: bae8ddd3-84c6-4684-ad58-8e50ea90bcb5
+- name: 🇸🇪220574 | ⚡️Telegram = t.me/S...
+  network: xhttp
+  port: 443
+  server: 122.8.92.8
+  tls: false
+  type: vless
+  uuid: d236da5f-198e-72dc-5a24-f37b5e90a159
+- name: '🇸🇪220314 | ⚡️Telegram = t.me/L... #2'
   obfs: salamander
   obfs-password: yew4ada1rrbq11fq
   password: yjg6ygy6u97387j2
@@ -694,6 +717,18 @@ proxies:
   tls: true
   type: vless
   uuid: 27f1eba3-0d5f-47c3-8dfa-f734f3aeccdf
+- client-fingerprint: firefox
+  name: '@npv_vpn11 #2484'
+  network: xhttp
+  port: 8443
+  reality-opts:
+    public-key: U5tAMw8tNpVZZPxiTYPPsEnr5iCz8nJ2nzy1aHVUm0c
+    short-id: '!!str 3e7fba04443f849e'
+  server: 88.216.130.203
+  servername: swcdn-7f3a.cachenova-cdn.cc
+  tls: true
+  type: vless
+  uuid: 2cbba076-cadf-4f45-9335-ab1dc46c8d04
 - client-fingerprint: chrome
   encryption: none
   name: VLESS-websaitiran.zorfel.ir - ...
@@ -911,6 +946,17 @@ proxies:
   tls: true
   type: vless
   uuid: fc1b3bda-b226-452a-8c5c-b0e36a1f8f88
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇸🇪 瑞典 ｜ SWE 8 - 167ms
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.32
+  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  type: trojan
 - name: '🇸🇪SE_13|114KB/s|M003-260806 #1'
   password: 769f34f0-1500-488f-b414-03bc90666502
   port: 443
@@ -930,17 +976,6 @@ proxies:
     headers:
       Host: 5.178.109.174
     path: '%2Fvless'
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇸🇪 瑞典 ｜ SWE 8 - 167ms
-  network: tcp
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.32
-  skip-cert-verify: true
-  sni: connect-se.mimowhat.online
-  type: trojan
 - flow: xtls-rprx-vision
   name: 🇸🇪_瑞典
   port: 443
@@ -1243,7 +1278,7 @@ proxies:
     x-padding-bytes: 100-500
 - client-fingerprint: chrome
   encryption: none
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #11'
   network: ws
   port: 443
   server: 87.242.94.43

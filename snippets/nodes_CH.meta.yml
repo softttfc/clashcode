@@ -1,14 +1,6 @@
 proxies:
-- name: 🇨🇭CH_1｜1.8MB/s - 162ms
-  port: 9443
-  server: 37.120.213.210
-  skip-cert-verify: true
-  sni: 37.120.213.210
-  tls: true
-  type: http
-  udp: true
 - client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+  name: '瑞士 001 #1'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -24,7 +16,7 @@ proxies:
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
   network: grpc
   port: 48115
   server: 138.124.86.230
@@ -143,6 +135,15 @@ proxies:
   udp: true
   uuid: b6606cb0-e15d-4813-94af-985028c4b9f3
 - cipher: aes-256-gcm
+  name: 🇨🇭CH_10
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 186.190.215.251
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
   name: 🇨🇭CH_1
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -159,39 +160,12 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: 🇨🇭CH_10
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 186.190.215.251
-  skip-cert-verify: false
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
   name: CH 🇨🇭 ｜ @Raydikalx ｜ 0055CE - ...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: leviko-ch4470.shopingggg.ir
   type: ss
   udp: true
-- client-fingerprint: chrome
-  name: AutoAiVPN2611901
-  network: xhttp
-  port: 33055
-  reality-opts:
-    public-key: 1rvxGeCvBMccFM2LKGJ4SqezdkMxS4ZZagHR1MGdCgo
-    short-id: '!!str 77'
-  server: 85.208.69.43
-  servername: yandex.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: ce8faf30-b1d6-4a53-95a0-8520dc609db3
-  ws-opts:
-    path: '%2F'
-  xhttp-opts:
-    host: yandex.ru
-    path: /
 - name: CH 🇨🇭 | @Raydikalx | 601822
   password: 84a506ca5aca505696a454d828420b3f
   port: 50160
@@ -340,16 +314,19 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 未知 VMESS-14 | free-nodes - 104...
+- cipher: aes-256-gcm
+  name: 🇨🇭220563 | ⚡️Telegram = t.me/S...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: leviko-ch0140.shopingggg.ir
+  type: ss
+- name: 🇨🇭220481 | ⚡️Telegram = t.me/S...
   network: tcp
-  port: 42831
-  server: 179.43.140.24
-  servername: ''
+  port: 443
+  server: 179.43.152.212
   tls: false
-  type: vmess
-  uuid: a925a98c-ad7a-40c6-9fdf-130a1de69416
+  type: vless
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: '⚡️ @Nap_v2ray 🇨🇭 #1'
@@ -402,14 +379,6 @@ proxies:
   tls: true
   type: vless
   uuid: 7f89560c-b9f0-4c56-b3e0-1b1bdafe0b08
-- name: '🇨🇭CH_16|2.6MB/s|A004-260618 #1'
-  password: 84a506ca5aca505696a454d828420b3f
-  port: 50160
-  server: 140.238.213.114
-  skip-cert-verify: true
-  sni: 140.238.213.114
-  tls: false
-  type: hysteria2
 - name: '🇨🇭CH_2|3.2MB/s|R002-260618 #1'
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
@@ -420,6 +389,21 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
+- name: '🇨🇭CH_16|2.6MB/s|A004-260618 #1'
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: 140.238.213.114
+  tls: false
+  type: hysteria2
+- name: 🇨🇭CH_1｜1.8MB/s - 162ms
+  port: 9443
+  server: 37.120.213.210
+  skip-cert-verify: true
+  sni: 37.120.213.210
+  tls: true
+  type: http
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
@@ -473,6 +457,15 @@ proxies:
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: 未知 VMESS-14 | free-nodes - 104...
+  network: tcp
+  port: 42831
+  server: 179.43.140.24
+  tls: false
+  type: vmess
+  uuid: a925a98c-ad7a-40c6-9fdf-130a1de69416
 - name: 🇨🇭CH_5｜266KB/s [2579f7044e34] ...
   port: 9443
   server: 149.88.27.46

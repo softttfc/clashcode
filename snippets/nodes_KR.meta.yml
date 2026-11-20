@@ -269,6 +269,19 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
+- name: 'KR 🇰🇷 | @Raydikalx | C98ACA #2'
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  servername: 152.69.226.63
+  tls: false
+  type: vless
+  udp: true
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    headers:
+      Host: 152.69.226.63
+    path: /
 - name: KR 🇰🇷 | @Raydikalx | A88C94
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
@@ -379,7 +392,7 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: '@SylphNet | 1405-08-29 #123'
+  name: '@SylphNet | 1405-08-29 #79'
   password: 1234!@#$
   port: 1774
   server: 49.254.204.134
@@ -675,18 +688,24 @@ proxies:
       Host: zwRcf79GExd13VGH.v.3dns.vip
     path: /ws-vmess
 - cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  name: South Korea_Gwangjin-gu_ss_116...
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
+  name: South Korea_Incheon_ss_11126
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
   server: 43.203.123.202
   type: ss
   udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '[🇰🇷]t.me/ConfigsHub'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.201.150.9
+  type: ss
 - name: 🇰🇷VEGAAS_VPN
   network: ws
   port: 443
@@ -708,12 +727,12 @@ proxies:
   skip-cert-verify: true
   sni: 154.90.62.70
   type: trojan
-- name: '🇰🇷KR_33|477KB/s|A004-260618 #1'
+- name: '🇰🇷KR_1|297KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
-  sni: 152.67.200.82
+  sni: whatsapp.com
   tls: false
   type: hysteria2
 - name: '🇰🇷KR_31|621KB/s|M003-260806 #1'
@@ -724,12 +743,20 @@ proxies:
   sni: 152.69.231.175
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_39|783KB/s|M003-260806 #1'
-  password: maintell
-  port: 2053
-  server: 152.70.237.123
+- name: '🇰🇷KR_33|477KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
   skip-cert-verify: true
-  sni: bing.comsocks5%3A%2F%2F152.70.237.238%3A3128
+  sni: 152.67.200.82
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_26|631KB/s|M003-260806 #1'
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  port: 50160
+  server: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+  sni: 127.0.0.1
   tls: false
   type: hysteria2
 - name: '🇰🇷KR_14|650KB/s|M003-260806 #1'
@@ -740,12 +767,30 @@ proxies:
   sni: 152-69-231-175.liao.kdns.fr
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_26|631KB/s|M003-260806 #1'
-  password: 9cfc9458e48c028ec03ff86ebc71c744
+- name: '🇰🇷KR_5|639KB/s|A004-260618 #1'
+  password: 1beb216e3f60aea9555dae60d219a5ca
   port: 50160
-  server: 150-230-252-217.liao.kdns.fr
+  server: 152-69-231-175.liao.kdns.fr
   skip-cert-verify: true
   sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_21|95KB/s|A004-260618 #1'
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  servername: 152.69.226.63
+  tls: false
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    path: '%2F'
+- name: '🇰🇷KR_39|783KB/s|M003-260806 #1'
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: bing.comsocks5%3A%2F%2F152.70.237.238%3A3128
   tls: false
   type: hysteria2
 - client-fingerprint: chrome
@@ -761,38 +806,19 @@ proxies:
   tls: true
   type: vless
   uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-- name: '🇰🇷KR_1|297KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: whatsapp.com
-  tls: false
-  type: hysteria2
-- name: '🇰🇷KR_5|639KB/s|A004-260618 #1'
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152-69-231-175.liao.kdns.fr
-  skip-cert-verify: true
-  sni: 127.0.0.1
-  tls: false
-  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #5'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.203.227.42
+  type: ss
+  udp: true
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #4'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 43.203.123.202
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1 #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 43.200.255.222
+  server: 43.203.227.42
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -823,23 +849,6 @@ proxies:
   port: 10099
   server: glance.asuscomm.com
   type: ss
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #4'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 43.203.227.42
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #5'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.227.42
-  type: ss
-  udp: true
 - encryption: none
   name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
   network: ws
