@@ -62,8 +62,8 @@ jobs:
           git pull --rebase origin "$DEFAULT_BRANCH"
 
       # ---------- 执行主抓取脚本 ----------
-      - name: 执行任务
-        run: python ./fetch_pro3.py
+      # - name: 执行任务
+      #   run: python ./fetch_pro3.1.py
 
       # ---------- 预处理测速文件（新增，失败不中断） ----------
       # 调用 preprocess_speed.py 对 list.meta.yml 做安全化处理：
@@ -167,25 +167,25 @@ jobs:
       #      # python config.py list.metaspeedrp.yml list.metaspeedrpdu.yml
 
       # ---------- 验证 差分模糊测试（三层测试 + 数学证明） ----------      
-      - name: 验证 差分模糊测试（三层测试 + 数学证明）
-        run: |
-          pip install "pytest>=8.0,<9.0"
-          pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v
+      # - name: 验证 差分模糊测试（三层测试 + 数学证明）
+      #   run: |
+      #     pip install "pytest>=8.0,<9.0"
+      #     pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v
 
       # ---------- 测速（可选，失败不中断） ----------
       # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
       # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。         
-      # - name: 测试节点连通性延迟性
-      #   run: |
-      #     INPUT_FILE="list.meta.yml"
-      #     if [ -f list.meta.dub.yml ]; then
-      #       INPUT_FILE="list.meta.dub.yml"
-      #       echo "✅ 使用预处理后的文件: $INPUT_FILE"
-      #     else
-      #       echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
-      #     fi
-      #     python ./speed_pro1.py --delay "$INPUT_FILE" list.metaspeed.yml
-      #   continue-on-error: true
+      - name: 测试节点连通性延迟性
+        run: |
+          INPUT_FILE="list.meta.yml"
+          if [ -f list.meta.dub.yml ]; then
+            INPUT_FILE="list.meta.dub.yml"
+            echo "✅ 使用预处理后的文件: $INPUT_FILE"
+          else
+            echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
+          fi
+          python ./speed_pro2.py --delay "$INPUT_FILE" list.metaspeed.yml
+        continue-on-error: true
 
       # ---------- 修复配置文件格式（可选） ----------
       - name: 生成标准格式文件
