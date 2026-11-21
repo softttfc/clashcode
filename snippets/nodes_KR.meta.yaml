@@ -1,12 +1,26 @@
 proxies:
-- encryption: none
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR1@ripaojiedian - 132ms
   network: ws
-  port: 25555
-  server: 152.69.226.63
-  tls: false
+  port: 443
+  server: 109.61.127.247
+  tls: true
   type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR2@ripaojiedian - 146ms
+  network: ws
+  port: 28017
+  server: 121.154.67.134
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
 - name: 🇰🇷[www.v2nodes.com] trojan-KR-...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -14,28 +28,19 @@ proxies:
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   type: trojan
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR2@ripaojiedian - 144ms
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR1@ripaojiedian - 134ms
-  network: ws
+- name: 🇰🇷KR_1|1.8MB/s - 134ms
+  port: 80
+  server: 211.188.59.191
+  type: http
+- alterId: 0
+  cipher: auto
+  name: qilan.de | KR VMESS 4075821 | ...
+  network: tcp
   port: 443
-  server: 109.61.127.247
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
 - alterId: 0
   cipher: auto
   name: qilan.de | KR VMESS 7490992 | ...
@@ -46,32 +51,16 @@ proxies:
   type: vmess
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - encryption: none
-  name: 🇰🇷KR韩國丨yoyapai.com - 6ms
+  name: 🇰🇷KR韩國丨yoyapai.com - 12ms
   network: ws
   port: 8880
   server: 104.17.144.29
   tls: false
   type: vless
   uuid: 81d55675-8570-4b40-9a77-3125339a0f86
-- name: 🇰🇷KR_1|1.8MB/s - 136ms
-  port: 80
-  server: 211.188.59.191
-  type: http
-- name: 🇰🇷KR_1|1.5MB/s|R002-260618 - 1...
-  port: 443
-  server: 152.69.230.221
-  sni: 152.69.230.221
-  tls: true
-  type: http
-- cipher: aes-256-cfb
-  name: 🇰🇷 KR 31 → tg@nicevpn123 - 120...
-  password: amazonskr05
-  port: 443
-  server: 54.180.133.185
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 120...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 134...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -82,12 +71,9 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 7E8798 - ...
-  network: tcp
-  port: 800
-  server: 129.154.61.196
-  tls: false
-  type: vmess
-  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+- cipher: aes-256-cfb
+  name: 🇰🇷 KR 31 → tg@nicevpn123 - 137...
+  password: amazonskr05
+  port: 443
+  server: 54.180.133.185
+  type: ss

@@ -1,15 +1,21 @@
 proxies:
-- cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
+- name: 🇯🇵 日本2 - 131ms
+  password: d050aca3-9df2-4461-90ec-92373c1d7636
+  port: 44184
+  server: v2jp.k1.ssnss.live
+  skip-cert-verify: true
+  type: trojan
 - cipher: aes-256-gcm
   name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
   type: ss
 - cipher: aes-128-gcm
   name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
@@ -23,19 +29,28 @@ proxies:
   port: 443
   server: 149.22.87.241
   type: ss
-- name: 日本2|@ripaojiedian - 126ms
-  password: d050aca3-9df2-4461-90ec-92373c1d7636
-  port: 44184
-  server: v2jp.k1.ssnss.live
-  skip-cert-verify: true
-  type: trojan
-- name: 🇳🇬 尼日利亚 | NGA 2 - 118ms
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20051
-  server: sclass-b1.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 173ms
+  network: tcp
+  port: 30806
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 · proxy_p...
+  network: ws
+  port: 16617
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: b49af8c9-0cf1-4212-8ed8-35b70d9f2cf4
+  ws-opts:
+    headers:
+      Host: 3416cbe57b7c52733721859d4e23be39.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
   name: qilan.de | JP OpenRay 87 | 2.4...
@@ -49,18 +64,9 @@ proxies:
     headers:
       Host: 168.138.43.75
     path: /cctv13.m3u8
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 - 188ms
-  network: tcp
-  port: 30806
-  server: v6.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 JP 12 → tg@nicevpn123 - 6ms
+  name: 🇯🇵 JP 12 → tg@nicevpn123 - 13m...
   network: ws
   port: 8443
   server: 45.85.119.65
@@ -71,18 +77,18 @@ proxies:
     headers:
       Host: 45.85.119.65
     path: /
-- name: 🇯🇵 JP 50 → tg@nicevpn123 - 119...
+- cipher: aes-256-cfb
+  name: 🇯🇵 JP 46 → tg@nicevpn123 - 108...
+  password: amazonskr05
+  port: 443
+  server: 54.238.23.117
+  type: ss
+- name: 🇯🇵 JP 50 → tg@nicevpn123 - 112...
   password: d22c4619-9dd1-41b1-a00e-c565a09066c8
   port: 443
   server: 139.162.91.35
   skip-cert-verify: true
   type: trojan
-- cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 494FE5 - ...
-  password: YKwDz3mFpT9vGcL8nBs5dHrA2sxM
-  port: 8388
-  server: 64.176.57.251
-  type: ss
 - cipher: aes-128-gcm
   name: JP 🇯🇵 | @Raydikalx | 66A632 - ...
   password: Bwlqh7GcFB
