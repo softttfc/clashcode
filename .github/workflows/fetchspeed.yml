@@ -185,7 +185,7 @@ jobs:
           else
             echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
           fi
-          python ./speed_pro1.py --delay "$INPUT_FILE" list.metaspeed.yml
+          python ./speed_pro2.py --delay "$INPUT_FILE" list.metaspeed.yml
         continue-on-error: true
 
       # ---------- 修复配置文件格式（可选） ----------
@@ -281,6 +281,7 @@ jobs:
           git add snippets/
           # 把校验报告也纳入版本管理
           git add 错误日志*
+          git add speed_state.json
 
           # 检查是否有变更需要提交
           if git diff --staged --quiet; then
