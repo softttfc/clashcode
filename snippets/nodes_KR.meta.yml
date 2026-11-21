@@ -1,4 +1,9 @@
 proxies:
+- name: 🇰🇷KR_1|1.7MB/s
+  port: 1080
+  server: 183.106.215.208
+  type: socks5
+  udp: true
 - client-fingerprint: chrome
   ech-opts:
     _dns: https://dns.alidns.com/dns-query
@@ -196,7 +201,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-132.145.80.230-1029
+  name: 🇰🇷KR-132.145.80.230-1047
   network: ws
   port: 80
   server: 132.145.80.230
@@ -222,73 +227,40 @@ proxies:
     headers:
       Host: mizban888.servecounterstrike.com
     path: /
-- alterId: 1
-  cipher: auto
+- flow: ''
   name: '韩国 018 #1'
   network: ws
-  port: 8888
-  server: 54.180.96.67
+  port: 11181
+  server: 125.187.120.122
+  servername: kejiland.freewarp.eu.org
   skip-cert-verify: true
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 54.180.96.67
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '韩国 019 #1'
-  network: ws
-  port: 443
-  server: fullaccesstokoreannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
+  tfo: false
   tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  type: vless
+  udp: true
+  uuid: b65f4df7-f6af-42b2-877a-cef33f21675e
   ws-opts:
     headers:
-      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
-    path: /ws
+      Host: kejiland.freewarp.eu.org
+    path: /snippets/ip=proxyip.fxxk.dedyn.io:443?ed=2560
 - name: '🇰🇷[www.v2nodes.com] trojan-KR-... #4'
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
+  servername: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  tls: true
   type: trojan
   udp: true
-- client-fingerprint: chrome
-  name: AutoAiVPN1259522
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  tls: false
-  type: vless
-  udp: true
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  ws-opts:
-    path: /
-- name: 'KR 🇰🇷 | @Raydikalx | C98ACA #2'
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  servername: 152.69.226.63
-  tls: false
-  type: vless
-  udp: true
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  ws-opts:
-    headers:
-      Host: 152.69.226.63
-    path: /
 - name: KR 🇰🇷 | @Raydikalx | A88C94
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
   skip-cert-verify: true
   type: hysteria2
-- name: '🇰🇷KR_32|767KB/s|A004-260618 #1'
+- name: '🇰🇷KR_20|764KB/s|A004-260618 #1'
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
@@ -296,7 +268,7 @@ proxies:
   sni: 132.226.226.189
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_23|663KB/s|R002-260618 #1'
+- name: '🇰🇷KR_16|698KB/s|R002-260618 #1'
   password: 1671a252e2a97dc2bda4e515475931da
   port: 50160
   server: 132.226.226.189
@@ -310,7 +282,7 @@ proxies:
   server: 152.69.231.175
   skip-cert-verify: true
   type: hysteria2
-- name: '🇰🇷KR_10|427KB/s|R002-260618 #1'
+- name: '🇰🇷KR_7|480KB/s|R002-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -324,7 +296,7 @@ proxies:
   server: 152.67.200.82
   skip-cert-verify: true
   type: hysteria2
-- name: '🇰🇷KR_20|428KB/s|A004-260618 #1'
+- name: '🇰🇷KR_26|513KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -332,15 +304,15 @@ proxies:
   sni: css.rbxcdn.com
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_30|668KB/s|A004-260618 #1'
+- name: '🇰🇷KR_12|591KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: google.com
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_29|611KB/s|A004-260618 #1'
+- name: '🇰🇷KR_8|377KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -348,7 +320,7 @@ proxies:
   sni: t.me
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_19|605KB/s|A004-260618 #1'
+- name: '🇰🇷KR_5|242KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
@@ -356,12 +328,13 @@ proxies:
   sni: vk.com
   tls: false
   type: hysteria2
-- name: KR 🇰🇷 | @Raydikalx | 706B1E
+- name: '🇰🇷KR_32|458KB/s|A004-260618 #1'
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
   port: 50160
   server: 152.67.200.82
   skip-cert-verify: true
   sni: www.bing.com
+  tls: false
   type: hysteria2
 - name: KR 🇰🇷 | @Raydikalx | 2177D2
   password: maintell
@@ -369,7 +342,7 @@ proxies:
   server: 152.70.237.123
   skip-cert-verify: true
   type: hysteria2
-- name: ❓Other_30
+- name: ❓Other_12
   password: maintell
   port: 2053
   server: 152.70.237.123
@@ -385,27 +358,20 @@ proxies:
   sni: vpn-kr-003.fastervpn.world
   type: hysteria2
 - cipher: aes-256-cfb
-  name: KR 🇰🇷 | @Raydikalx | FBAF15
+  name: '@SylphNet | 1405-08-30 #154'
   password: 1234!@#$
   port: 1774
   server: 49.254.204.133
   type: ss
   udp: true
 - cipher: aes-256-cfb
-  name: '@SylphNet | 1405-08-29 #79'
-  password: 1234!@#$
-  port: 1774
-  server: 49.254.204.134
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: 🇰🇷KR-211.178.105.134-0235
+  name: 🇰🇷KR-211.178.105.134-0177
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
   type: ss
   udp: true
-- name: '@npv_vpn11 #631'
+- name: '@npv_vpn11 #770'
   network: tcp
   password: 5t6i121em5lkmsmk
   port: 48851
@@ -414,6 +380,40 @@ proxies:
   sni: kr002.zestapp778.com
   type: trojan
   udp: true
+- client-fingerprint: chrome
+  name: AutoAiVPN1259522
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  tls: false
+  type: vless
+  udp: true
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    path: /
+- name: 'KR 🇰🇷 | @Raydikalx | 788A14 #1'
+  network: ws
+  port: 25555
+  server: leviko-kr7255.shopingggg.ir
+  tls: false
+  type: vless
+  udp: true
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    path: /
+- name: 'KR 🇰🇷 | @Raydikalx | 92745C #1'
+  network: ws
+  port: 25555
+  server: leviko-kr7255.shopingggg.ir
+  servername: leviko-kr7255.shopingggg.ir
+  tls: false
+  type: vless
+  udp: true
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    headers:
+      Host: leviko-kr7255.shopingggg.ir
+    path: /
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: AutoAiVPN160
@@ -471,7 +471,7 @@ proxies:
   uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 ｜ @Raydikalx ｜ 7E8798 - ...
+  name: 🇰🇷_韩国 (3) - 139ms
   network: tcp
   port: 800
   server: 129.154.61.196
@@ -481,12 +481,11 @@ proxies:
   uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 - 174ms
+  name: 🇰🇷_韩国 (5) - 123ms
   network: ws
   port: 80
   server: 132.145.80.230
-  servername: ''
-  skip-cert-verify: false
+  servername: 132.145.80.230
   sni: kr02.a0a.xyz
   tls: false
   type: vmess
@@ -498,11 +497,12 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: '@npv_vpn11 #2015'
+  name: '@npv_vpn11 #2245'
   network: ws
-  port: '80'
+  port: 80
   server: 132.145.80.230
-  servername: kr02.a0a.xyz
+  servername: null
+  skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
@@ -513,10 +513,11 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 (2) - 175ms
+  name: 🇰🇷_韩国 (2) - 121ms
   network: tcp
   port: 443
   server: 140.238.2.250
+  servername: ''
   tls: false
   type: vmess
   udp: true
@@ -550,12 +551,11 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 未知142
+  name: KR 🇰🇷 | @Raydikalx | 6C9897
   network: ws
   port: 20086
   server: 183.109.131.75
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
   udp: true
   uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
@@ -563,7 +563,18 @@ proxies:
     path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
 - alterId: 0
   cipher: auto
-  name: '@npv_vpn11 #61'
+  name: '@npv_vpn11 #1867'
+  network: tcp
+  port: '80'
+  server: 217.142.138.61
+  servername: ''
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+- alterId: 0
+  cipher: auto
+  name: '@npv_vpn11 #180'
   network: tcp
   port: '123'
   server: 43.108.103.167
@@ -596,6 +607,22 @@ proxies:
   ws-opts:
     headers:
       Host: chuncheon02.zgjok.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW VMESS-15 | free-nodes - 295...
+  network: ws
+  port: 16616
+  server: dp8yk.xiaoyan.io
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
@@ -644,7 +671,7 @@ proxies:
     path: /henis01
 - alterId: 0
   cipher: auto
-  name: '🇰🇷KR_3|84KB/s|P002-260618 #1'
+  name: '🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷 #1'
   network: ws
   port: '443'
   server: seoul02.zgjok.com
@@ -688,24 +715,18 @@ proxies:
       Host: zwRcf79GExd13VGH.v.3dns.vip
     path: /ws-vmess
 - cipher: chacha20-ietf-poly1305
-  name: South Korea_Gwangjin-gu_ss_116...
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #2'
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: South Korea_Incheon_ss_11126
+  name: '🇰🇷 韩国 | KOR #1 #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 43.203.123.202
+  server: 15.165.75.243
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: '[🇰🇷]t.me/ConfigsHub'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.201.150.9
-  type: ss
 - name: 🇰🇷VEGAAS_VPN
   network: ws
   port: 443
@@ -719,7 +740,7 @@ proxies:
     headers:
       Host: lookoreaboijji.global.ssl.fastly.net.
     path: /
-- name: '🇰🇷KR_38|418KB/s|M003-260806 #1'
+- name: '🇰🇷KR_36|520KB/s|M003-260806 #1'
   network: tcp
   password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
   port: 56127
@@ -727,15 +748,7 @@ proxies:
   skip-cert-verify: true
   sni: 154.90.62.70
   type: trojan
-- name: '🇰🇷KR_1|297KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: whatsapp.com
-  tls: false
-  type: hysteria2
-- name: '🇰🇷KR_31|621KB/s|M003-260806 #1'
+- name: '🇰🇷KR_21|518KB/s|C002-260622 #1'
   password: 1beb216e3f60aea9555dae60d219a5ca
   port: 50160
   server: 152.69.231.175
@@ -743,15 +756,20 @@ proxies:
   sni: 152.69.231.175
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_33|477KB/s|A004-260618 #1'
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: 152.67.200.82
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_3|106KB/s|M003-260806 #1'
+  network: ws
+  port: '80'
+  server: 132.145.80.230
   tls: false
-  type: hysteria2
-- name: '🇰🇷KR_26|631KB/s|M003-260806 #1'
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: 'null'
+    path: /cctv13.m3u8
+- name: '🇰🇷KR_2|618KB/s|M003-260806 #1'
   password: 9cfc9458e48c028ec03ff86ebc71c744
   port: 50160
   server: 150-230-252-217.liao.kdns.fr
@@ -759,15 +777,16 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_14|650KB/s|M003-260806 #1'
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152.69.231.175
-  skip-cert-verify: true
-  sni: 152-69-231-175.liao.kdns.fr
+- alterId: 0
+  cipher: auto
+  name: '🇰🇷KR_33|486KB/s|C002-260622 #1'
+  network: raw
+  port: '443'
+  server: 140.238.2.250
   tls: false
-  type: hysteria2
-- name: '🇰🇷KR_5|639KB/s|A004-260618 #1'
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- name: '🇰🇷KR_13|551KB/s|A004-260618 #1'
   password: 1beb216e3f60aea9555dae60d219a5ca
   port: 50160
   server: 152-69-231-175.liao.kdns.fr
@@ -775,17 +794,51 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
-- name: '🇰🇷KR_21|95KB/s|A004-260618 #1'
+- name: '🇰🇷KR_38|183KB/s|M003-260806 #1'
+  network: ws
+  port: 25555
+  server: leviko-kr7255.shopingggg.ir
+  tls: false
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    headers:
+      Host: leviko-kr7255.shopingggg.ir
+    path: '%2F'
+- name: '🇰🇷KR_22|523KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: 152.67.200.82
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_14|304KB/s|A001-260618 #1'
   network: ws
   port: 25555
   server: 152.69.226.63
-  servername: 152.69.226.63
   tls: false
   type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: '%2F'
-- name: '🇰🇷KR_39|783KB/s|M003-260806 #1'
+- name: '🇰🇷KR_24|528KB/s|A004-260618 #1'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_28|571KB/s|M003-260806 #1'
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152.69.231.175
+  skip-cert-verify: true
+  sni: 152-69-231-175.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_37|766KB/s|M003-260806 #1'
   password: maintell
   port: 2053
   server: 152.70.237.123
@@ -793,36 +846,43 @@ proxies:
   sni: bing.comsocks5%3A%2F%2F152.70.237.238%3A3128
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: AutoAiVPN2461834
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
-    short-id: '!!str 3c4041d3'
-  server: 47.80.19.173
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #5'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.227.42
-  type: ss
-  udp: true
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #4'
+  name: '🇰🇷 韩国 | KOR #1 #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 43.203.227.42
+  server: 3.36.53.31
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.36.53.31
+  type: ss
+  udp: true
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  name: '🇰🇷 韩国 | KOR #2 #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 15.165.75.243
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷_韩国
+  port: 80
+  server: 217.142.138.61
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - alterId: 0
   cipher: auto
   name: 🇰🇷_韩国 (2)
@@ -836,76 +896,56 @@ proxies:
 - alterId: 0
   cipher: auto
   name: 🇰🇷_韩国 (3)
-  port: 8888
-  server: 146.56.112.110
+  port: 800
+  server: 129.154.61.196
   skip-cert-verify: false
   tls: false
   type: vmess
   udp: true
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
 - cipher: chacha20-ietf-poly1305
   name: 🇰🇷 KR | 115.161.136.145
   password: '!!str 12242'
   port: 10099
   server: glance.asuscomm.com
   type: ss
-- encryption: none
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
 - alpn:
   - http/1.1
   client-fingerprint: firefox
   encryption: none
-  name: 🇰🇷 KR2@ripaojiedian - 144ms
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR1@ripaojiedian - 134ms
+  name: 🇰🇷 KR1@ripaojiedian - 132ms
   network: ws
   port: 443
   server: 109.61.127.247
   tls: true
   type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  name: 🇰🇷 KR2@ripaojiedian - 146ms
+  network: ws
+  port: 28017
+  server: 121.154.67.134
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+- name: 🇰🇷KR_1｜1.8MB/s - 134ms
+  port: 80
+  server: 211.188.59.191
+  type: http
 - encryption: none
-  name: 🇰🇷KR韩國丨yoyapai.com - 6ms
+  name: 🇰🇷KR韩國丨yoyapai.com - 12ms
   network: ws
   port: 8880
   server: 104.17.144.29
   tls: false
   type: vless
   uuid: 81d55675-8570-4b40-9a77-3125339a0f86
-- name: 🇰🇷KR_1｜1.8MB/s - 136ms
-  port: 80
-  server: 211.188.59.191
-  type: http
-- name: 🇰🇷KR_1｜1.5MB/s｜R002-260618 - 1...
-  port: 443
-  server: 152.69.230.221
-  sni: 152.69.230.221
-  tls: true
-  type: http
-- cipher: aes-256-cfb
-  name: 🇰🇷 KR 31 → tg@nicevpn123 - 120...
-  password: amazonskr05
-  port: 443
-  server: 54.180.133.185
-  type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 KR 47 → tg@nicevpn123 - 120...
+  name: 🇰🇷 KR 47 → tg@nicevpn123 - 134...
   network: ws
   port: 80
   server: 52.78.50.117
@@ -916,6 +956,12 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
+- cipher: aes-256-cfb
+  name: 🇰🇷 KR 31 → tg@nicevpn123 - 137...
+  password: amazonskr05
+  port: 443
+  server: 54.180.133.185
+  type: ss
 - client-fingerprint: chrome
   name: 🇰🇷
   network: ws
