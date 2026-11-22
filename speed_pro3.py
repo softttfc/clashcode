@@ -36,6 +36,30 @@
 #
 # 说明: 以上均为连通性/探测层修复。原有各处注释、说明(A1/A2/A4/A5 等)全部保留。
 # =============================================================================
+# 本次修改备注(v2.5, 基于 speed_pro3.py)
+# -----------------------------------------------------------------------------
+# BUG-A(高危: bridge 导入失败时增量状态库被清空覆盖):
+#   当 openray_bridge 导入失败(BRIDGE_OK=False)时, compute_base_identity 对每个
+#   节点均返回 None -> ident_of 所有值为 None -> pool_ids 为空集 -> PRUNE_STATE
+#   裁剪时 state 被过滤为空字典 -> save_state 把空字典覆盖写回 speed_state.json。
+#   后果: 辛苦攒下的增量库被不可逆清空, 下轮退化为全量重测。
+#   修复: 回写状态库的条件从 `if INCREMENT_ENABLED:` 改为
+#         `if INCREMENT_ENABLED and BRIDGE_OK:`, 使"bridge 不可用"时根本不碰
+#         状态库(既然无法计算 identity, 就没有资格裁剪或覆盖)。
+#         同时增加 else 分支日志, 明确告知本轮状态库未被修改。
+#
+#   修改后分析(不产生新问题):
+#   - BRIDGE_OK=True 时: 条件等价于原来, 行为完全不变。
+#   - BRIDGE_OK=False 时: 原代码在步骤1/2中因 iid 全为 None 已全部 continue(什么
+#     也没写入 state), 步骤3裁剪把 state 清成空集后写盘。修复后整段跳过, 状态库
+#     保持上轮完好数据不动。这正是期望行为——"没有身份信息"等于"没有资格修改库"。
+#   - PRUNE_STATE=0 + BRIDGE_OK=False: 原代码会把未修改的 state 原样写回(无损害
+#     但多余的 IO); 修复后跳过写盘, 同样安全。
+#   - 无新增变量、无新增导入、不影响测速三阶段逻辑、不影响输出订阅内容。
+#
+# 说明: 仅修改一处条件守卫 + 新增 else 日志。原有全部注释、说明一字未删。
+# =============================================================================
+# =============================================================================
 # =============================================================================
 # 配置总览(所有开关与参数集中在此, 方便阅读和定义)
 # =============================================================================
@@ -801,7 +825,10 @@ def main():
     final_proxies = inherit_alive + tested_alive
 
     # ---------- 回写状态库 ----------
-    if INCREMENT_ENABLED:
+    # BUG-A 修复: 加 and BRIDGE_OK 守卫 -- bridge 不可用时没有身份键,
+    # 既无法写入新记录, 也无资格裁剪; 跳过整段避免 pool_ids 为空集时
+    # PRUNE 把全部记录过滤后覆盖写空字典.
+    if INCREMENT_ENABLED and BRIDGE_OK:
         # 1) 本轮实测过的节点: 测通记 alive, 测不通记 dead(下轮起直接丢弃, 不再重连)
         alive_ids = {id(p) for p in tested_alive}
         for p in to_test:
@@ -836,6 +863,9 @@ def main():
         save_state(STATE_FILE, state)
         _prune_note = ", 已裁剪至当前池" if PRUNE_STATE else ""
         print(f"\n[增量] 状态库已更新: {STATE_FILE} ({len(state)} 条记录{_prune_note})")
+    elif INCREMENT_ENABLED and not BRIDGE_OK:
+        # BUG-A 修复: bridge 不可用时不碰状态库, 保留上轮完好数据
+        print("\n[增量] 状态库未修改(BRIDGE_OK=False, 无法计算身份键, 不执行裁剪/覆盖)")
 
     # ---------- 输出 ----------
     config["proxies"] = final_proxies
