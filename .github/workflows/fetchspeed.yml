@@ -189,7 +189,7 @@ jobs:
           else
             echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
           fi
-          python ./speed_pro2.py --delay "$INPUT_FILE" list.metaspeed.yml
+          python ./speed_pro3.py --delay "$INPUT_FILE" list.metaspeed.yml
         continue-on-error: true
 
       # ---------- 修复配置文件格式（可选） ----------
