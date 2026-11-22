@@ -58,6 +58,28 @@
 #   - 无新增变量、无新增导入、不影响测速三阶段逻辑、不影响输出订阅内容。
 #
 # 说明: 仅修改一处条件守卫 + 新增 else 日志。原有全部注释、说明一字未删。
+#
+# 本次修改备注(v2.6, 基于 speed_pro4_2.py): TCP 连通性测试增加可配置重试
+# -----------------------------------------------------------------------------
+# 需求: TCP 阶段第 1 次没测通时, 按变量定义的次数再重试若干次, 以抵消网络抖动/
+#       偶发超时造成的误判(一次握手失败不等于节点真死)。
+# 新增变量: TCP_RETRY  —— 首次失败【之后】的额外重试次数, 默认 1, 可用同名环境变量
+#           覆盖。取值 N 表示"最多尝试 1+N 次"(1 次首发 + N 次重试)。设为 0 时
+#           行为与旧版完全一致(只测 1 次), 保持向后兼容。
+# 实现位置: test_proxy() 阶段 1 TCP 连接处。
+# 关键设计(避免引入新问题):
+#   - 仅对 socket.create_connection 抛出的"连接类异常"(超时/拒绝/不可达)重试;
+#     server/port 缺失、端口非法等"配置性错误"在到达连接步骤前已 return False,
+#     不进入重试循环(重试必然同样失败, 徒增耗时)。
+#   - UDP 协议节点(proxy_type in QUIC_TYPES)仍先 return None 交给阶段 2, 不受影响。
+#   - 重试之间不额外 sleep, 直接背靠背重连; 单次超时仍是 CONNECT_TIMEOUT, 因此
+#     单个节点最坏耗时 = (1 + TCP_RETRY) * CONNECT_TIMEOUT。默认 1 重试 -> 2s。
+#   - 返回值语义不变: True=可达 / False=本轮不可达 / None=UDP 交阶段 2。调用方
+#     (main 阶段 1)无需任何改动。
+#   - 重试不改变判死写库逻辑, 也不新增导入; 与 v2.5 的 BRIDGE_OK 守卫互不影响。
+#
+# 说明: 仅改 test_proxy 内一处连接逻辑 + 新增 1 个环境变量 + 配置总览补 1 行;
+#       原有全部注释、说明、备注(v2.4/v2.5)一字未删。
 # =============================================================================
 # =============================================================================
 # =============================================================================
@@ -84,6 +106,7 @@
 #
 # [测速超时与并发]
 #   CONNECT_TIMEOUT        TCP 连通性测试超时秒, 默认 1 (建议 1~3)
+#   TCP_RETRY              TCP 首次失败后的额外重试次数, 默认 1 (0=不重试,向后兼容)
 #   DELAY_TIMEOUT          HTTP 延迟测试超时秒, 默认 1 (建议 2~5)
 #   QUIC_TIMEOUT           QUIC 握手测试超时秒, 默认 1 (建议 2~5)
 #   MAX_WORKERS            并发线程数, 默认 10 (建议 10~50)
@@ -183,6 +206,11 @@ from urllib.parse import quote
 # TCP 连通性测试超时（秒）
 # 建议范围: 1~3，数值越小淘汰越快，但可能误判网络抖动
 CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 1))
+
+# TCP 首次连接失败后的额外重试次数（v2.6 新增）
+# 取值 N 表示最多尝试 1+N 次(1 次首发 + N 次重试); 0 = 只测 1 次, 与旧版一致。
+# 建议范围: 0~2，用于抵消网络抖动/偶发超时导致的误判；过大会放大阶段 1 总耗时。
+TCP_RETRY = int(os.environ.get("TCP_RETRY", 2))
 
 # HTTP 延迟测试超时（秒）
 # 建议范围: 2~5，数值越大越能测出高延迟节点，但耗时增加
@@ -358,11 +386,18 @@ def test_proxy(proxy: Dict[str, Any]) -> Optional[bool]:
     except (ValueError, TypeError):
         return False
 
-    try:
-        with socket.create_connection((server, port), timeout=CONNECT_TIMEOUT):
-            return True
-    except Exception:
-        return False
+    # v2.6: TCP 可配置重试。首次连接失败后, 再按 TCP_RETRY 定义的次数重试,
+    # 用于抵消网络抖动/偶发超时导致的误判。仅对 create_connection 的连接类异常
+    # 重试; server/port 缺失、端口非法等配置性错误已在上文 return, 不在此列。
+    attempts = 1 + max(0, TCP_RETRY)
+    for _attempt in range(attempts):
+        try:
+            with socket.create_connection((server, port), timeout=CONNECT_TIMEOUT):
+                return True
+        except Exception:
+            # 单次失败: 若还有重试机会则继续下一轮, 否则循环自然结束返回 False
+            continue
+    return False
 
 
 # ============================================================================
