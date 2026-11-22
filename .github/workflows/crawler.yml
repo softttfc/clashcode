@@ -156,7 +156,7 @@ jobs:
           else
             echo "⚠️ 未找到 crawclash.dub.yaml，回退使用原始文件: $INPUT_FILE"
           fi
-          python ./speed_pro2.py --delay "$INPUT_FILE" crawclash.dubsp.yaml
+          python ./speed_pro3.py --delay "$INPUT_FILE" crawclash.dubsp.yaml
         continue-on-error: true
       
       - name: 生成 Meta 配置节点去重
