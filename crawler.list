@@ -2,6 +2,15 @@
 #普通页面	不含 *，且非直接订阅	作为爬取起点（深度=1），可绑定通配符	https://example.com/index → 入队，patterns 可能来自通配符绑定
 #通配符项	含 *	不单独入队，而是与普通页面绑定；若无法绑定则自身作为起点	https://example.com/api/*/list → 
 #             可能绑定到 https://example.com/api/v2/list（若存在），否则自身 https://example.com/api/ 作为起点
+#1   https://x.com/blog/        ← 普通页，rstrip('/') 后 = https://x.com/blog
+#    https://x.com/blog/*       ← 通配符，base_part = https://x.com/blog/ → rstrip → https://x.com/blog
+#2、 https://x.com/api/v1
+#    https://x.com/api/v2/list
+#    https://x.com/api/*        ← base_part = https://x.com/api
+#3、https://x.com/             ← 普通页，rstrip('/') 后 = https://x.com
+#   https://x.com/内部工具/*/file.tar.gz   ← base_part = https://x.com/内部工具
+#4、https://y.com/             ← 只有一个站点的普通页
+#   https://x.com/api/*        ← base_part = https://x.com/api
 #动态日期	以 +date 开头	格式化后按上述规则继续分类	+date https://example.com/%Y%m%d → 2026-08-15 → https://example.com/20260815
 
 
