@@ -424,6 +424,7 @@ KEYWORDS = [
     'subscri',          # subscribe / subscription / subscriptions / subscribing
     'subscribe',        # 显式列出，可读性
     'feed',             # RSS / feed
+    'archives',
     # ---- 节点关键词 ----
    # 'node',             # node / nodes
     #'server',           # server / servers
