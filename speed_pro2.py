@@ -125,7 +125,7 @@ CONNECT_TIMEOUT = float(os.environ.get("CONNECT_TIMEOUT", 1))
 
 # HTTP 延迟测试超时（秒）
 # 建议范围: 2~5，数值越大越能测出高延迟节点，但耗时增加
-DELAY_TIMEOUT = float(os.environ.get("DELAY_TIMEOUT", 1))
+DELAY_TIMEOUT = float(os.environ.get("DELAY_TIMEOUT", 2))
 
 # QUIC 握手测试超时（秒）
 # 建议范围: 2~5，过短易误判，过长拖慢 CI
