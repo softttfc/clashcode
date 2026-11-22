@@ -177,6 +177,10 @@ jobs:
       # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
       # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。         
       - name: 测试节点连通性延迟性
+        env:
+          INCREMENT: "1"                # 开启增量；"0" 退回全量
+          STATE_FILE: "speed_state.json" # 状态库路径（相对仓库根目录）
+          PRUNE_STATE: "1"              # 开启自动瘦身；"0" 保留全部历史     
         run: |
           INPUT_FILE="list.meta.yml"
           if [ -f list.meta.dub.yml ]; then
@@ -186,10 +190,6 @@ jobs:
             echo "⚠️ 未找到 list.meta.dub.yml，回退使用原始文件: $INPUT_FILE"
           fi
           python ./speed_pro2.py --delay "$INPUT_FILE" list.metaspeed.yml
-       env:
-          INCREMENT: "1"                # 开启增量；"0" 退回全量
-          STATE_FILE: "speed_state.json" # 状态库路径（相对仓库根目录）
-          PRUNE_STATE: "1"              # 开启自动瘦身；"0" 保留全部历史     
         continue-on-error: true
 
       # ---------- 修复配置文件格式（可选） ----------
