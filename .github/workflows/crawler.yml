@@ -141,8 +141,8 @@ jobs:
           pytest tests/test_bridge_lossless.py tests/test_bridge_equivalence.py tests/test_yaml_identity.py -v        
 
       # ---------- 测速（可选，失败不中断） ----------
-      # 优先使用预处理后的 list.meta.safe.yml；若不存在（预处理失败），
-      # 回退到原始 list.meta.yml，保证测速步骤不会因缺少输入文件而报错。         
+      # 优先使用预处理后的 crawclash.dub.yaml；若不存在（预处理失败），
+      # 回退到原始 crawclash.yaml，保证测速步骤不会因缺少输入文件而报错。         
       - name: 测试节点连通性延迟性
         env:
           INCREMENT: "1"                # 开启增量；"0" 退回全量
