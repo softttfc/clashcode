@@ -3,22 +3,7 @@ proxies:
   - h3
   auth: 57beeeb0-03fc-4fc9-94da-7604488a7134
   down: 200
-  name: '🇭🇰 香港 | HKG #1'
-  obfs: salamander
-  obfs-password: aemx2gndpgrt1qau
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: 66hk.mateflora.com
-  skip-cert-verify: true
-  sni: 66hk.mateflora.com
-  type: hysteria2
-  udp: true
-  up: 100
-- alpn:
-  - h3
-  auth: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  down: 200
-  name: 🇭🇰 香港 | HKG 3
+  name: '🇭🇰HK_1|1.4MB/s #1'
   obfs: salamander
   obfs-password: o5qgnpl75wayhkn5
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
@@ -29,6 +14,88 @@ proxies:
   type: hysteria2
   udp: true
   up: 100
+- name: '🇭🇰HK_2|1.0MB/s #1'
+  password: ''
+  port: 8443
+  server: 38.76.140.254
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: ''
+  x-toolall-mihomo: true
+- name: 🇭🇰HK_27|165KB/s|R002-260618 [1...
+  port: 443
+  server: fan.240104.xyz
+  skip-cert-verify: true
+  sni: fan.240104.xyz
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇭🇰HK_20|684KB/s|R002-260618 [2...
+  password: pLBgZ2mOWDopvTI6CUWu5ZkI
+  port: 31003
+  server: 2.26.204.46
+  sub_tag: R002-260618
+  type: socks5
+  udp: true
+  username: socks
+- name: 🇭🇰HK_7|93KB/s|R002-260618 [4a0...
+  password: 'null'
+  port: 443
+  server: fan.240104.xyz
+  sni: fan.240104.xyz
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
+- name: 🇭🇰HK_33|124KB/s|R002-260618 [a...
+  port: 443
+  server: 202.85.53.25
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇭🇰HK_23|654KB/s|P002-260618 [a...
+  port: 3128
+  server: 119.28.24.235
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_26|889KB/s|M003-260806 [c...
+  network: none
+  packet-encoding: xudp
+  port: 50376
+  server: 206.237.11.17
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9091fd64-7e8e-4b7a-8ae7-84474f234926
+  xudp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 节点日期：2026-11-22
+  network: tcp
+  port: 47396
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: '!!str fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
 - alterId: 0
   cipher: auto
   name: 🇭🇰_香港 (11) - 235ms
@@ -151,63 +218,35 @@ proxies:
     headers:
       Host: 6JDvArazgU3qQR6Q.v.3dns.vip
     path: /ws-vmess
-- cipher: aes-256-gcm
-  name: 🇫🇮FI_6
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-  port: 40647
-  server: 213.176.92.148
-  skip-cert-verify: false
-  tls: false
-  type: ss
-  udp: true
-- name: '美国 #20'
-  network: tcp
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20123
-  server: sclass-00.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-- name: '🇭🇰[www.v2nodes.com] trojan-HK-... #2'
+- name: 🇭🇰_香港 (7)
   password: '!!str 12012'
   port: 12012
   server: 47.242.93.89
   servername: ali-hk.b-gfw.cfd
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: ali-hk.b-gfw.cfd
   tls: true
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰223640 | ⚡️Telegram = t.me/L...
-  network: raw
-  port: '21041'
-  server: dog-hk.kunlun01dns.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰223639 | ⚡️Telegram = t.me/L...
+- cipher: chacha20-ietf-poly1305
+  name: 🇭🇰224345 | ⚡️Telegram = t.me/S...
+  password: tjwRqQvteAjt3xFmbZTA
+  port: 8389
+  server: 84.17.37.55
+  type: ss
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: AutoAiVPN2007632
   network: tcp
-  port: '21022'
-  server: dog-hk.kunlun01dns.com
-  servername: null
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰223636 | ⚡️Telegram = t.me/L...
-  network: tcp
-  port: '16112'
-  server: zfd-hkv2.kunlun01dns.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  port: 35193
+  reality-opts:
+    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
+    short-id: '!!str e8daed2d'
+  server: 156.226.168.221
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇭🇰HK-🚀@VPNine1
@@ -334,7 +373,7 @@ proxies:
   type: vless
   udp: true
   uuid: 8b17beac-b143-447d-aa68-14cbb121a602
-- name: '🇭🇰 香港 | HKG 2 #1'
+- name: 🇭🇰 香港 | HKG 2
   password: 2902c46c8493
   port: 443
   server: ibsdsf.df6h451rh.xin
@@ -387,23 +426,6 @@ proxies:
   udp: true
   uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   ws-opts:
-    path: /arki
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_香港 (12) - 201ms
-  network: ws
-  port: 44867
-  server: 47.244.120.197
-  servername: 47.244.120.197
-  skip-cert-verify: false
-  sni: 47.244.120.197
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  ws-opts:
-    headers:
-      Host: 47.244.120.197
     path: /arki
 - alterId: 0
   cipher: auto
@@ -512,32 +534,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-- client-fingerprint: random
-  grpc-opts:
-    grpc-service-name: glush.de3.v1
-  name: '[HK] Art.29'
-  network: grpc
-  port: 443
-  server: luminexorizon.ink
-  servername: luminexorizon.ink
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: glush.de3.v1
-  name: '[HK] Art.29 #1'
-  network: grpc
-  port: 443
-  server: 104.171.139.81
-  servername: luminexorizon.ink
-  tls: true
-  type: vless
-  uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
 - alterId: 0
   cipher: auto
   name: 🇭🇰 004  | ⬇️ 3KB/s
@@ -802,14 +798,38 @@ proxies:
     headers:
       Host: EX1oGt73NzPQKAc2.v.3dns.vip
     path: /ws-vmess
-- name: 🇭🇰HK_2|1.1MB/s
-  port: 5001
-  server: 219.78.223.199
+- client-fingerprint: chrome
+  name: '🇭🇰 香港 | HKG 2 #1'
+  network: ws
+  port: 443
+  server: 45.133.73.167
+  servername: zmxoo.de5.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
+  ws-opts:
+    headers:
+      Host: zmxoo.de5.net
+    path: /html/order/torrent
+- name: '🇭🇰 香港 | HKG 3 #1'
+  password: 0324fbc29561
+  port: 443
+  server: 5641sdds.df6h451rh.xin
   skip-cert-verify: true
-  type: socks5
+  sni: images.ctfassets.net
+  type: anytls
+- name: '🇭🇰 香港 | HKG 4 #1'
+  password: c698e777-2ede-446c-aa76-04ea46070e43
+  port: 57180
+  server: turn.gosthk.site
+  skip-cert-verify: true
+  sni: turn.gosthk.site
+  type: anytls
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | HKG 5
+  name: 🇭🇰 香港|@ripaojiedian
   network: tcp
   port: 11103
   reality-opts:
@@ -825,7 +845,7 @@ proxies:
   uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | HKG 4
+  name: 🇭🇰 香港2|@ripaojiedian
   network: tcp
   port: 11107
   reality-opts:
@@ -855,27 +875,6 @@ proxies:
   type: vless
   udp: true
   uuid: 27c26119-090b-4ae3-80d2-e9f08a575862
-- client-fingerprint: chrome
-  name: '🇭🇰 香港 | HKG 2 #2'
-  network: ws
-  port: 443
-  server: 43.161.194.94
-  servername: 260509.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  ws-opts:
-    headers:
-      Host: 260509.pages.dev
-    path: /?ed=2560
-- name: 🇭🇰 香港 | HKG 6
-  password: 0324fbc29561
-  port: 443
-  server: 5641sdds.df6h451rh.xin
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
 - alterId: 0
   cipher: auto
   name: HK
