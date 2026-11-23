@@ -1,77 +1,40 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: '@OutlineReleasedKey #21'
-  network: tcp
-  packet-encoding: xudp
-  port: '1270'
-  server: 138.199.55.230
-  servername: xmfhlpy.com
-  skip-cert-verify: true
-  sub_tag: B007-260618
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  xudp: true
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: 未知128
-  network: tcp
-  packet-encoding: xudp
-  port: 1270
-  server: 62.93.166.184
-  servername: xmfhlpy.com
-  skip-cert-verify: true
-  sub_tag: B007-260618
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  xudp: true
 - cipher: aes-256-gcm
   name: 🇸🇪SE_2
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 138.199.55.243
-  sub_tag: M003-260806
+  skip-cert-verify: false
+  tls: false
   type: ss
   udp: true
 - alterId: 0
   cipher: auto
-  name: AutoAiVPN395114
-  network: ws
-  port: '443'
-  server: 185.146.173.59
-  servername: obdii.cfd
+  name: 欧洲 004
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
+  servername: xmfhlpy.com
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-opts:
-    headers:
-      Host: obdii.cfd
-    path: /linkws
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪 https://t.me/NeTnewz
-  password: YA8iioq5Gsh1lLnhdDCLYBSMZgcecslQ
-  port: 2027
-  server: ser2.plasmoon.ir
-  type: ss
+  udp: true
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇰🇷_韩国 - 173ms
+  name: 西班牙 002
   network: tcp
-  port: 80
-  server: 217.142.138.61
+  port: 1270
+  server: 62.93.166.184
+  servername: xmfhlpy.com
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  udp: true
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 64
   cipher: auto
-  name: 瑞典 012
+  name: 瑞典 011
   network: ws
   port: 443
   server: 148.135.38.107
@@ -85,7 +48,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: 瑞典 013
+  name: 瑞典 012
   network: ws
   port: 443
   server: 148.135.9.156
@@ -99,7 +62,7 @@ proxies:
     path: /path/1704363182493
 - alterId: 64
   cipher: auto
-  name: 瑞典 014
+  name: 瑞典 013
   network: ws
   port: 443
   server: 148.135.14.99
@@ -113,7 +76,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 64
   cipher: auto
-  name: 瑞典 015
+  name: 瑞典 014
   network: ws
   port: 443
   server: 148.135.31.171
@@ -127,7 +90,7 @@ proxies:
     path: /path/1703924658447
 - alterId: 64
   cipher: auto
-  name: 瑞典 016
+  name: 瑞典 015
   network: ws
   port: 443
   server: 148.135.33.140
@@ -141,7 +104,7 @@ proxies:
     path: /path/1704188270531
 - alterId: 0
   cipher: auto
-  name: 瑞典 017
+  name: 瑞典 016
   network: ws
   port: 80
   server: 185.146.173.25
@@ -154,7 +117,7 @@ proxies:
     path: /
 - alterId: 64
   cipher: auto
-  name: 瑞典 018
+  name: 瑞典 017
   network: ws
   port: 31002
   server: 37.120.209.126
@@ -166,27 +129,23 @@ proxies:
     headers:
       Host: www.68547476.xyz
     path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_香港 (11)
-  network: ws
-  port: 35043
-  server: 156.245.232.239
-  servername: ''
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '@MDvpnSEC 🌹 #13'
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇸🇪SE_9
   network: tcp
-  port: '3022'
-  server: web.qivzuma.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: cd6b0091-b4c8-4ed2-bad9-5631b5afbd50
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
+  sni: connect-se.mimowhat.online
+  type: trojan
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇸🇪SE_17
+  network: tcp
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: leviko-se6097.shopingggg.ir
+  sni: connect-se.mimowhat.online
+  type: trojan
