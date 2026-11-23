@@ -13,7 +13,7 @@
 #   - 按地区分类的节点片段：snippets/nodes_*.yml
 #   - 规则片段：snippets/rules_*.yml
 #   - 统计信息：list_result.csv
-#
+# 
 # 支持的节点协议包括：
 #   vmess、ss、ssr、trojan、vless、hysteria2、tuic、http、https、socks5 等。
 #
@@ -62,7 +62,7 @@
 # - 若节点数为 0，检查 sources.list、网络、local_proxy.conf。
 # - 若分类节点为空，检查 config.yml 中 NoMoreWalls.categories 关键词。
 # - 若代理组冲突，查看 [DEBUG] 输出的冲突组名。
-#
+# -超时定义 FETCH_TIMEOUT = (2, 100)
 # =============================================================================
 #!/usr/bin/env python3
 # ========== User Configs Begin ==========
@@ -154,7 +154,7 @@ CLASH_SSR_PROTOCOL = "origin auth_sha1_v4 auth_aes128_md5 auth_aes128_sha1 auth_
 FAKE_IPS = "8.8.8.8; 8.8.4.4; 4.2.2.2; 4.2.2.1; 114.114.114.114; 127.0.0.1; 0.0.0.0".split('; ')
 FAKE_DOMAINS = ".google.com .github.com".split()
 
-FETCH_TIMEOUT = (2, 60)
+FETCH_TIMEOUT = (2, 100)
 
 BANNED_WORDS = b64decodes('5rOV6L2uIOi9ruWtkCDova4g57uDIOawlCDlip8g5L2/5YqyIOWKsiDliqrlipsg5Yqg5rK5IOWlsyDmnYMg6L+Q5YqoIG9uZ3RhaXdhbg==').split()
 
