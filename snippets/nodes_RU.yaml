@@ -17,12 +17,6 @@ proxies:
   port: 9031
   server: 5.188.181.201
   type: ss
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 23 → tg@nicevpn123
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 5.188.181.201
-  type: ss
 - alterId: 0
   cipher: auto
   name: 🇷🇺 RU 22 → tg@nicevpn123
@@ -35,6 +29,31 @@ proxies:
   ws-opts:
     headers:
       Host: 185.148.104.118
+    path: /
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 23 → tg@nicevpn123
+  password: S7KwUu7yBy58S3Ga
+  port: 9042
+  server: 5.188.181.201
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 30 → tg@nicevpn123
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 5.188.181.201
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺 RU 32 → tg@nicevpn123
+  network: ws
+  port: 80
+  server: de1-vmess.greenssh.xyz
+  tls: false
+  type: vmess
+  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
+  ws-opts:
+    headers:
+      Host: de1-vmess.greenssh.xyz
     path: /
 - alterId: 0
   cipher: auto
@@ -49,28 +68,22 @@ proxies:
     headers:
       Host: is3-vmess.sshmax.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU 32 → tg@nicevpn123
-  network: ws
-  port: 80
-  server: de1-vmess.greenssh.xyz
-  tls: false
-  type: vmess
-  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
-  ws-opts:
-    headers:
-      Host: de1-vmess.greenssh.xyz
-    path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 30 → tg@nicevpn123
-  password: GeregetR8cvQHzYr
-  port: 9030
-  server: 5.188.181.201
-  type: ss
 - cipher: aes-256-cfb
   name: 🇷🇺 RU 43 → tg@nicevpn123
   password: TN2YqghxeFDKZfLU
   port: 9037
   server: 5.188.181.201
   type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+  network: ws
+  port: 40045
+  server: 45.130.147.178
+  tls: false
+  type: vmess
+  uuid: 9265c002-22a5-4dbd-a9bb-292f1c47eb68
+  ws-opts:
+    headers:
+      Host: 45.130.147.178
+    path: /

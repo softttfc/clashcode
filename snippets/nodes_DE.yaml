@@ -13,33 +13,6 @@ proxies:
       Host: 168.110.63.247
     path: /vless
 - cipher: aes-256-gcm
-  name: qilan.de | DE 3764339 | 2.5MB/...
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 213.202.208.199
-  type: ss
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  name: 🇩🇪DE_8|1.8MB/s
-  password: XnjwEJbEbqBt8bjlrKZPwg
-  port: 443
-  server: 8.6.112.0
-  sni: cf.lunex-vpn.xyz
-  type: trojan
-- name: '%F0%9F%87%A9%F0%9F%87%AA_DE_%E...'
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.80.111.7
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 45.80.111.7
-    path: /assignment
-- cipher: aes-256-gcm
   name: 🇩🇪DE_2|226KB/s|M003-260806 [05...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -81,6 +54,23 @@ proxies:
   port: 19999
   server: 57.129.83.85
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪DE_3|3.9MB/s
+  password: PhILhWBzyd28Q2ngasMt5E6l1Os4uCjv
+  port: 443
+  server: P1.shoppingturbo.com
+  type: ss
+- name: '%F0%9F%87%A9%F0%9F%87%AA_DE_%E...'
+  network: ws
+  password: humanity
+  port: 443
+  server: 45.80.111.7
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 45.80.111.7
+    path: /assignment
 - alterId: 0
   cipher: auto
   name: 🇩🇪 DE 16 → tg@nicevpn123
@@ -113,12 +103,6 @@ proxies:
     headers:
       Host: 185.135.9.208
     path: /
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | A76A05
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.176.204.18
-  type: ss
 - cipher: chacha20-ietf-poly1305
   name: NL 🇳🇱 | @Raydikalx | E6DED9
   password: oZIoA69Q8yhcQV8ka3Pa3A
@@ -126,38 +110,11 @@ proxies:
   server: 82.38.31.35
   type: ss
 - cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | 84D55C
+  name: DE 🇩🇪 | @Raydikalx | A76A05
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 23.157.88.43
+  server: 185.176.204.18
   type: ss
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | 8AC01E
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.108.119.83
-  type: ss
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | E3AA60
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.108.117.111
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: DE 🇩🇪 | @Raydikalx | 0E543D
-  password: NcAXc0UZI6yQJE1p8QmOv8
-  port: 8388
-  server: 57.129.113.16
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | FBF92D
-  network: tcp
-  port: 1270
-  server: 193.108.119.87
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 60BAE9
@@ -167,12 +124,15 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | D27672
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | FBF92D
+  network: tcp
+  port: 1270
+  server: 193.108.119.87
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 00302A
@@ -186,23 +146,35 @@ proxies:
     headers:
       Host: 91.107.169.224
     path: /
-- alterId: 0
-  cipher: auto
-  name: DE德国(proxyqueen.top *王8月24节点分享...
+- cipher: aes-256-gcm
+  name: DE 🇩🇪 | @Raydikalx | D27672
+  password: XKFKl2rULjIp74
+  port: 8008
+  server: 185.226.172.8
+  type: ss
+- name: DE%E5%BE%B7%E5%9B%BD%28mibei77...
   network: ws
-  port: 8880
-  server: 185.16.110.212
-  sni: TG.WangCai2.s4.db-link02.top
-  tls: false
-  type: vmess
-  uuid: b209dfbf-6bb0-30b2-a77a-286e230466b5
+  password: zhs000666
+  port: 443
+  server: 164.92.228.56
+  sni: 666-4sd.pages.dev
+  type: trojan
   ws-opts:
     headers:
-      Host: TG.WangCai2.s4.db-link02.top
-    path: /dabai&Telegram🇨🇳@WangCai2/?ed=2560
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE_3|3.9MB/s
-  password: PhILhWBzyd28Q2ngasMt5E6l1Os4uCjv
-  port: 443
-  server: P1.shoppingturbo.com
+      Host: 666-4sd.pages.dev
+    path: /?ed=2560&proxyip=ts.hpc.tw
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | B8E86A
+  network: tcp
+  port: 1270
+  server: 185.177.229.95
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- cipher: aes-256-gcm
+  name: DE 🇩🇪 | @Raydikalx | C25D0E
+  password: itzvpn@321
+  port: 8388
+  server: 178.162.254.38
   type: ss

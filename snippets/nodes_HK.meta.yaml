@@ -1,17 +1,41 @@
 proxies:
+- name: HK%E9%A6%99%E6%B8%AF%28v2clash...
+  network: ws
+  password: b95ed9ae-517c-4905-b051-b8873c99a1b6
+  port: 443
+  server: 82.27.116.181
+  sni: jszzlanand.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: jszzlanand.pages.dev
+    path: /?ed=2048
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港2_1
+  name: 🇭🇰 香港
   network: tcp
-  port: 2053
+  port: 11103
   reality-opts:
-    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
-    short-id: '!!str 08a4b1f473932632'
-  server: 66.90.115.133
+    public-key: 5NNdXPMTBLP-xeDKFwcG-j6u-c4DhXIfnlHMqMJZ4n4
+    short-id: '!!str 9564e1a7a1cf8b3a'
+  server: 116.213.43.43
   tls: true
   type: vless
-  uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
+  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港2
+  network: tcp
+  port: 11107
+  reality-opts:
+    public-key: 6GRzkPbs12fKBdBBFzs5dmtmbSHCXMngUCBKLrXYm3U
+    short-id: '!!str e2ccd8eedcbee2ce'
+  server: 116.213.43.43
+  tls: true
+  type: vless
+  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -27,7 +51,20 @@ proxies:
   uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
 - client-fingerprint: chrome
   encryption: none
-  name: 🇭🇰 香港4
+  flow: xtls-rprx-vision
+  name: 🇭🇰 香港2_1
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+    short-id: '!!str 08a4b1f473932632'
+  server: 66.90.115.133
+  tls: true
+  type: vless
+  uuid: 3b8896fd-ba38-4da7-b365-d0f01f37aa40
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇭🇰 香港4_1
   network: ws
   port: 8443
   server: cdn-hk.skyvora.app
@@ -37,7 +74,7 @@ proxies:
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇭🇰 香港3_1
+  name: 🇭🇰 香港3_2
   network: tcp
   port: 2083
   reality-opts:
@@ -58,17 +95,54 @@ proxies:
   tls: true
   type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
-- name: HK%E9%A6%99%E6%B8%AF%28v2clash...
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_1|2.1MB/s
   network: ws
-  password: b95ed9ae-517c-4905-b051-b8873c99a1b6
-  port: 443
-  server: 82.27.116.181
-  sni: jszzlanand.pages.dev
-  type: trojan
+  port: 16632
+  server: pdmv4.xiaoyan.io
+  tls: false
+  type: vmess
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
   ws-opts:
     headers:
-      Host: jszzlanand.pages.dev
-    path: /?ed=2048
+      Host: pdmv4.xiaoyan.io
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK_2|3.1MB/s
+  network: ws
+  port: 16622
+  server: byr3a.xiaoyan.io
+  tls: false
+  type: vmess
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: byr3a.xiaoyan.io
+    path: /
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 香港_037F0B
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
+    short-id: '!!str 0bf55f64'
+  server: 8.217.1.203
+  tls: true
+  type: vless
+  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇭🇰[www.v2nodes.com] vless-HK
+  network: ws
+  port: 443
+  server: 45.133.73.167
+  tls: true
+  type: vless
+  uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
 - encryption: none
   name: 🇭🇰[www.v2nodes.com] vless-HK-4...
   network: ws
@@ -121,141 +195,79 @@ proxies:
     headers:
       Host: 156.239.224.107
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港2
-  network: tcp
-  port: 11107
-  reality-opts:
-    public-key: 6GRzkPbs12fKBdBBFzs5dmtmbSHCXMngUCBKLrXYm3U
-    short-id: '!!str e2ccd8eedcbee2ce'
-  server: 116.213.43.43
-  tls: true
-  type: vless
-  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港
-  network: tcp
-  port: 11103
-  reality-opts:
-    public-key: 5NNdXPMTBLP-xeDKFwcG-j6u-c4DhXIfnlHMqMJZ4n4
-    short-id: '!!str 9564e1a7a1cf8b3a'
-  server: 116.213.43.43
-  tls: true
-  type: vless
-  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
-- alterId: 0
-  cipher: auto
-  name: qilan.de | HK VMESS 1241598 | ...
-  network: ws
-  port: 44867
-  server: 47.244.120.197
-  tls: false
-  type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  ws-opts:
-    headers:
-      Host: 47.244.120.197
-    path: /arki?ed=2048
-- alterId: 0
-  cipher: auto
-  name: qilan.de | HK VMESS 1329088 | ...
-  network: ws
-  port: 35043
-  server: 156.245.232.239
-  sni: www.pubgmobile.com
-  tls: false
-  type: vmess
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  ws-opts:
-    headers:
-      Host: www.pubgmobile.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK_1|4.5MB/s
-  network: ws
-  port: 16632
-  server: pdmv4.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: pdmv4.xiaoyan.io
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰HK_2|4.6MB/s
-  network: ws
-  port: 16622
-  server: byr3a.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: byr3a.xiaoyan.io
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇭🇰[www.v2nodes.com] vless-HK
-  network: ws
-  port: 443
-  server: 45.133.73.167
-  tls: true
-  type: vless
-  uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
-- name: 🇭🇰 香港 | HKG 3
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: 64.118.130.152
-  skip-cert-verify: true
-  sni: nb1hk.hikigo.com
+- name: 'HK%E9%A6%99%E6%B8%AF%28v2clash... #1'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20103
+  server: sclass-00.catcat321.com
+  sni: hk.catxstar.com
   type: trojan
 - client-fingerprint: chrome
   encryption: none
-  flow: xtls-rprx-vision
-  name: 🇭🇰 香港 | HKG 6
-  network: tcp
-  port: 11106
-  reality-opts:
-    public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
-    short-id: '!!str da12e31124830d42'
-  server: 116.213.43.43
+  name: 🇭🇰 香港4
+  network: ws
+  port: 8443
+  server: 206.237.18.145
   tls: true
   type: vless
-  uuid: 2e7bd251-52be-4ffa-b79e-108e1fe07185
-- name: 🇭🇰 香港 | HKG 5
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: nb1hk.hikigo.com
-  skip-cert-verify: true
-  sni: nb1hk.hikigo.com
-  type: trojan
-- client-fingerprint: firefox
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇭🇰 香港3
+  network: ws
+  port: 8443
+  server: 151.158.0.83
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+- cipher: aes-256-gcm
+  name: 🇭🇰HK_1|1.5MB/s
+  password: vyrzxzt9yix5jocj
+  port: 26934
+  server: 121.54.188.7
+  type: ss
+- client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: HK 🇭🇰 | @Raydikalx | 715E3E
+  name: 🇭🇰HK_2|4.7MB/s
   network: tcp
-  port: 2096
-  server: 62.60.232.226
+  port: 10540
+  reality-opts:
+    public-key: pRZJDZgN_twRpO_4NJTiVp_IiSgU4-XLI9hoXfgUzXo
+  server: xjc02.clkhd.quest
   tls: true
   type: vless
-  uuid: 3d409814-b663-411e-8f54-a112ecba7ddd
+  uuid: d4797a42-9b2e-4a1e-b865-8d7877069ce4
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇭🇰HK_1|1.0MB/s
+  network: tcp
+  port: 10540
+  reality-opts:
+    public-key: pRZJDZgN_twRpO_4NJTiVp_IiSgU4-XLI9hoXfgUzXo
+  server: xjc02.clkhd.quest
+  tls: true
+  type: vless
+  uuid: d46c9fec-1416-4a5a-a181-84a59df421cf
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 683DC2
+  name: 🇭🇰 香港 | HKG 3
   network: ws
   port: 443
-  server: bYWXdhIRqKJj8XAZ.v.3dns.vip
+  server: 47.86.90.31
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
   ws-opts:
     headers:
-      Host: bYWXdhIRqKJj8XAZ.v.3dns.vip
+      Host: 47.86.90.31
     path: /
+- alterId: 0
+  cipher: auto
+  name: '[163663] - 🇭🇰 Hong Kong | @fre...'
+  network: tcp
+  port: 52080
+  server: 47.242.81.94
+  tls: false
+  type: vmess
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146

@@ -1,33 +1,16 @@
 proxies:
 - name: SG%E6%96%B0%E5%8A%A0%E5%9D%A1%...
   password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
+  sni: hk.catxstar.com
+  type: trojan
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
   port: 20027
   server: sclass-b1.catcat321.com
   sni: hk.catxstar.com
   type: trojan
-- alterId: 0
-  cipher: auto
-  name: qilan.de | SG VMESS 9878759 | ...
-  network: tcp
-  port: 10086
-  server: 195.133.135.238
-  tls: false
-  type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬_SG_新加坡
-  network: ws
-  port: 443
-  server: 128.199.128.117
-  sni: sg.dalxy.eu.org
-  tls: true
-  type: vmess
-  uuid: a88a71fa-ed7c-48d3-89e0-74a00d605d88
-  ws-opts:
-    headers:
-      Host: sg.dalxy.eu.org
-    path: /a88a71fa-ed7c-48d3-89e0-74a00d605d88-vm
 - cipher: aes-256-gcm
   name: 🇸🇬SG_3|338KB/s|M003-260806 [91...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -61,12 +44,48 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬_SG_新加坡_1
+  network: ws
+  port: 443
+  server: 128.199.128.117
+  sni: sg.dalxy.eu.org
+  tls: true
+  type: vmess
+  uuid: a88a71fa-ed7c-48d3-89e0-74a00d605d88
+  ws-opts:
+    headers:
+      Host: sg.dalxy.eu.org
+    path: /a88a71fa-ed7c-48d3-89e0-74a00d605d88-vm
+- alterId: 0
+  cipher: auto
+  name: qilan.de | SG VMESS 9878759 | ...
+  network: tcp
+  port: 10086
+  server: 195.133.135.238
+  tls: false
+  type: vmess
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
 - cipher: aes-256-gcm
   name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 15.235.164.133
+  server: 149.88.107.47
   type: ss
+- name: '🇸🇬 新加坡 | SGP #3'
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: bgsg1.hikigo.com
+  skip-cert-verify: true
+  sni: bgsg1.hikigo.com
+  type: trojan
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #2'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20028
+  server: sclass-b1.catcat321.com
+  sni: hk.catxstar.com
+  type: trojan
 - name: 🇸🇬 SG 16 → tg@nicevpn123
   password: yR7hP9aw5L
   port: 443
@@ -74,6 +93,12 @@ proxies:
   skip-cert-verify: true
   sni: aka.ms
   type: trojan
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 3 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 54.169.147.64
+  type: ss
 - name: 🇸🇬 SG 27 → tg@nicevpn123
   password: b3965d2d-3b82-45cc-927b-1336aca3f3fe
   port: 443
@@ -86,18 +111,6 @@ proxies:
   server: 139.162.39.206
   skip-cert-verify: true
   type: trojan
-- cipher: aes-256-cfb
-  name: 🇸🇬 SG 3 → tg@nicevpn123
-  password: amazonskr05
-  port: 443
-  server: 54.169.147.64
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇸🇬 SG 40 → tg@nicevpn123
-  password: amazonskr05
-  port: 443
-  server: 13.250.57.60
-  type: ss
 - alterId: 0
   cipher: auto
   name: 🇸🇬 SG 37 → tg@nicevpn123
@@ -111,6 +124,12 @@ proxies:
     headers:
       Host: 8.217.85.14
     path: /
+- cipher: aes-256-cfb
+  name: 🇸🇬 SG 40 → tg@nicevpn123
+  password: amazonskr05
+  port: 443
+  server: 13.250.57.60
+  type: ss
 - name: 🇸🇬 SG 7 → tg@nicevpn123
   password: I4bO2YDEgs
   port: 443
@@ -118,6 +137,12 @@ proxies:
   skip-cert-verify: true
   sni: aka.ms
   type: trojan
+- cipher: aes-256-gcm
+  name: SG 🇸🇬 | @Raydikalx | 1B824A
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 149.88.106.73
+  type: ss
 - alterId: 0
   cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 32C65E
@@ -127,12 +152,6 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- cipher: aes-256-gcm
-  name: SG 🇸🇬 | @Raydikalx | 1B824A
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.88.106.73
-  type: ss
 - alterId: 0
   cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 77AF8A
@@ -142,15 +161,46 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #1'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20103
-  server: sclass-01.catcat321.com
-  sni: hk.catxstar.com
+- name: 🇸🇬SG_9|243KB/s|M003-260806 [3e...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 15.235.184.127
+  sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
-- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #2'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20028
-  server: sclass-b1.catcat321.com
-  sni: hk.catxstar.com
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #3'
+  network: ws
+  password: zhs000666
+  port: 443
+  server: 167.71.215.36
+  sni: 666-4sd.pages.dev
   type: trojan
+  ws-opts:
+    headers:
+      Host: 666-4sd.pages.dev
+    path: /?ed=2560&proxyip=ts.hpc.tw
+- name: 'SG%E6%96%B0%E5%8A%A0%E5%9D%A1%... #4'
+  network: ws
+  password: zhs000666
+  port: 443
+  server: 159.65.1.74
+  sni: 666-4sd.pages.dev
+  type: trojan
+  ws-opts:
+    headers:
+      Host: 666-4sd.pages.dev
+    path: /?ed=2560&proxyip=ts.hpc.tw
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | CF0750
+  network: tcp
+  port: 59121
+  server: 129.226.157.220
+  tls: false
+  type: vmess
+  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
+- cipher: aes-256-gcm
+  name: SG 🇸🇬 | @Raydikalx | 61589D
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: leviko-sg2619.shopingggg.ir
+  type: ss

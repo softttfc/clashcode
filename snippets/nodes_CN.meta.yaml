@@ -1,16 +1,7 @@
 proxies:
-- alterId: 64
-  cipher: auto
-  name: 🇨🇳_CN_中国
-  network: tcp
-  port: 50002
-  server: 112.132.215.108
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: 🇨🇳_CN_中国_IPV4 (2)
+  name: 🇨🇳_CN_中国_IPV4
   network: ws
   port: 10086
   server: 39.108.113.127
@@ -21,19 +12,21 @@ proxies:
     headers:
       Host: 39.108.113.127
     path: /
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: 🇨🇳_CN_中国_IPV4
-  network: ws
-  port: 10086
-  server: 39.108.113.127
+  name: 🇨🇳_CN_中国
+  network: tcp
+  port: 50002
+  server: 112.132.215.108
   tls: false
   type: vmess
-  uuid: a625d148-e988-4008-b957-e9051a6371d2
-  ws-opts:
-    headers:
-      Host: 39.108.113.127
-    path: /
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- name: '%F0%9F%87%A8%F0%9F%87%B3_CN_%E...'
+  password: BxceQaOe
+  port: 443
+  server: 58.152.25.253
+  skip-cert-verify: true
+  type: trojan
 - cipher: aes-256-gcm
   name: 🇨🇳 CN 110 → tg@nicevpn123
   password: e6f8da28-345b-46aa-9ef8-edf27777a533
@@ -77,22 +70,3 @@ proxies:
   port: 48009
   server: k9.b99.buzz
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇳🇱_NL_荷兰->🇨🇳_CN_中国
-  network: ws
-  port: 80
-  server: 45.131.208.228
-  tls: false
-  type: vmess
-  uuid: f491cbe4-7548-446c-8d3e-64008e3b1325
-  ws-opts:
-    headers:
-      Host: 45.131.208.228
-    path: /
-- name: '%F0%9F%87%A8%F0%9F%87%B3_CN_%E...'
-  password: BxceQaOe
-  port: 443
-  server: 58.152.25.253
-  skip-cert-verify: true
-  type: trojan
