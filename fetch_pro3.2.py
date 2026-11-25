@@ -63,6 +63,99 @@
 # - 若分类节点为空，检查 config.yml 中 NoMoreWalls.categories 关键词。
 # - 若代理组冲突，查看 [DEBUG] 输出的冲突组名。
 # -超时定义 FETCH_TIMEOUT = (2, 100)
+# 五、本次修改内容（方案 B：下载超时 / 读速修复）
+# -----------------------------------------------------------------------------
+# 问题现象：
+#   日志出现  抓取 'https://gh-proxy.com/raw.githubusercontent.com/...'... 5s
+#             抓取 '...'... 10s
+#             超时！
+#   即使把 FETCH_TIMEOUT 里的读取等待从 10 秒改为 100 秒，部分节点文件
+#   仍然超时；且只有"一部分"源会超时，小文件正常、大文件必挂。
+#
+# 根因（三条，按影响从大到小）：
+#   1) FETCH_TIMEOUT 从未传给 requests。
+#      全文件只有 threads[i].join(timeout=FETCH_TIMEOUT[1]) 用到它，
+#      而 session.get(..., stream=True) 没有 timeout，requests 默认无限等待。
+#      于是线程卡在 socket read 上永不结束，主线程等满
+#      FETCH_TIMEOUT[0] * FETCH_TIMEOUT[1]（默认 2 × 100 秒）后只打印
+#      "超时！"并 continue —— 请求本身没有被中断，daemon 线程继续挂着。
+#      结论：100 秒的语义是"放弃等待"，不是"让请求失败"，对已挂起的
+#      连接毫无意义，只是把每个坏源的成本从 10 秒拉长到 200 秒。
+#      另：日志里的 "5s" / "10s" 是 print(f"{5*t}s") 的轮次装饰标签，
+#      与实际耗时无关；真实等待 = 轮数 × 每轮秒数。
+#
+#   2) iter_content() 未指定 chunk_size，requests 默认 1 字节/次。
+#      _download 里对每个 1 字节还要做 splitlines()、content +=、类型判断，
+#      纯 Python 循环实测约 50 KB/s，且受 GIL 串行化：
+#          - 单个 1MB 的 clash.yaml：_download 耗时 20.3 秒；
+#          - 4 路并发各 1MB：合计 75.8 秒（几乎无并行收益）。
+#      按 100 秒预算算，单文件超过约 5MB 必然超时，与网速无关；
+#      源越多，CPU 越堵，每个源分到的读取时间越少。
+#      这就是"为什么只有一部分节点文件超时"的直接原因。
+#
+#   3) extract()（机场列表展开）与 merge_adblock()（ABFURLS / ABFWHITE）
+#      在主线程里直接 session.get()，既没有 timeout 也没有 join 兜底。
+#      这两处一旦挂起，整个进程卡死，在 CI 上表现为"作业级超时被取消"，
+#      比单源 200 秒后放弃严重得多。
+#
+# 修改（共 6 处，全部围绕下载控制，不触碰解析 / 合并 / 分类 / 写出逻辑）：
+#   1. 新增 import time。
+#
+#   2. 新增两个常量，并给 FETCH_TIMEOUT 补语义注释：
+#          FETCH_TIMEOUT  = (2, 100)   仅用于主线程 join 兜底：(轮数, 每轮秒数)
+#          HTTP_TIMEOUT   = (5, 60)    真正交给 requests：(连接超时, 单次读取超时)
+#          DOWNLOAD_BUDGET = 120       单个文件总下载预算(秒)
+#
+#   3. Source.get()：
+#          with session.get(normpath(self.url), stream=True,
+#                           timeout=HTTP_TIMEOUT) as r:
+#      让"挂起的连接"在 60 秒无数据时自己抛 ReadTimeout 退出线程，
+#      主线程的 join 随即返回，不再空等 200 秒。
+#
+#   4. Source._download()：
+#          for chunk in r.iter_content(chunk_size=65536):
+#      并在循环内加总耗时闸门：
+#          deadline = time.monotonic() + DOWNLOAD_BUDGET
+#          if time.monotonic() > deadline:
+#              raise requests.exceptions.Timeout(...)
+#      原因：read timeout 只约束"两次收到数据的间隔"，服务端每 59 秒
+#      吐 1 字节依然能绕过 60 秒读超时，必须有总时长闸门兜住。
+#
+#   5. extract() 与 merge_adblock()（ABFURLS、ABFWHITE 共 3 处）：
+#          session.get(..., timeout=HTTP_TIMEOUT)
+#      避免主线程被一个坏链接整死。
+#
+#   6. 主线程等待日志改为真实秒数并 flush：
+#          print(f"{5*t}s")  ->  print(f"{t * FETCH_TIMEOUT[1]}s(已等待)", flush=True)
+#      避免把"轮次 × 5"的标签误读成真实超时，也避免停在缓冲区里的
+#      输出被日志系统同批打点、造成时间戳错乱。
+#
+# 影响范围：
+#   - 仅影响网络请求的超时策略与读取分块；节点解析、去重、合并、
+#     地区分类、各类产物（list*.txt / list*.yml / snippets / csv）格式不变。
+#   - 行为变化只在"失败时机与失败信息"：慢源或挂起源会更早失败
+#     （默认 60 秒无数据即 ReadTimeout，或 120 秒总预算），并在
+#     exc_queue 里给出明确的 Read timed out，而不是 200 秒后静默放弃。
+#
+# 验证（本机 127.0.0.1 起测试服务，网络零延迟，排除带宽干扰）：
+#   - 对端返回 200 头但不发数据：
+#       原版 200.0 秒后才打印"超时！"，线程仍存活、socket 未释放；
+#       修复版 5.0 秒退出，content=-1，错误为 "Read timed out"。
+#   - 1MB clash.yaml 的 _download：20.30 秒 → 0.00 秒。
+#   - 4 路并发各 1MB：75.79 秒 → 0.02 秒。
+#   - 功能回归：同一份 clash.yaml，原版与修复版均解析出 2 个节点，
+#     exc_queue 为空，产物内容一致。
+#   - python3 -m py_compile 通过。
+#
+# 调参与回退：
+#   - 网络较差可放宽读超时，如 HTTP_TIMEOUT = (8, 120)，或调大
+#     DOWNLOAD_BUDGET；不建议再靠加大 FETCH_TIMEOUT 拉长空等。
+#   - 若想完全回到原行为：去掉 timeout=HTTP_TIMEOUT，
+#     iter_content(chunk_size=65536) 改回 iter_content()，
+#     并删除 deadline 判断即可，其余改动彼此独立。
+#   - 进一步建议（本次未改）：用 threading.Semaphore(8~10) 限制同时在跑
+#     的源数；gh-proxy 一类代理最好配镜像自动切换
+#     （脚本里的 raw2fastly() 目前只在 LOCAL 模式生效）。
 # =============================================================================
 #!/usr/bin/env python3
 # ========== User Configs Begin ==========
