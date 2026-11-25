@@ -1,19 +1,19 @@
 proxies:
 - client-fingerprint: firefox
   encryption: none
-  name: 🇷🇺RU_2|1.2MB/s
+  name: 🇷🇺RU_1|2.0MB/s
   network: grpc
   port: 443
-  server: 201.24.116.192
+  server: 201.51.12.98
   tls: true
   type: vless
   uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
 - client-fingerprint: firefox
   encryption: none
-  name: 🇷🇺RU_1|2.0MB/s
+  name: 🇷🇺RU_2|1.2MB/s
   network: grpc
   port: 443
-  server: 201.51.12.98
+  server: 201.24.116.192
   tls: true
   type: vless
   uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
@@ -33,15 +33,21 @@ proxies:
   server: 90.156.203.62
   type: ss
 - cipher: aes-256-cfb
-  name: 🇷🇺 RU 13 → tg@nicevpn123
-  password: U6qnYRhfyDmn8sgn
-  port: 9041
-  server: 5.188.181.201
-  type: ss
-- cipher: aes-256-cfb
   name: 🇷🇺 RU 16 → tg@nicevpn123
   password: BwcAUZk8hUFAkDGN
   port: 9031
+  server: 5.188.181.201
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 23 → tg@nicevpn123
+  password: S7KwUu7yBy58S3Ga
+  port: 9042
+  server: 5.188.181.201
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 13 → tg@nicevpn123
+  password: U6qnYRhfyDmn8sgn
+  port: 9041
   server: 5.188.181.201
   type: ss
 - alterId: 0
@@ -57,18 +63,6 @@ proxies:
     headers:
       Host: 185.148.104.118
     path: /
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 23 → tg@nicevpn123
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 5.188.181.201
-  type: ss
-- cipher: aes-256-cfb
-  name: 🇷🇺 RU 30 → tg@nicevpn123
-  password: GeregetR8cvQHzYr
-  port: 9030
-  server: 5.188.181.201
-  type: ss
 - alterId: 0
   cipher: auto
   name: 🇷🇺 RU 32 → tg@nicevpn123
@@ -82,6 +76,12 @@ proxies:
     headers:
       Host: de1-vmess.greenssh.xyz
     path: /
+- cipher: aes-256-cfb
+  name: 🇷🇺 RU 30 → tg@nicevpn123
+  password: GeregetR8cvQHzYr
+  port: 9030
+  server: 5.188.181.201
+  type: ss
 - alterId: 0
   cipher: auto
   name: 🇷🇺 RU 31 → tg@nicevpn123
@@ -101,19 +101,6 @@ proxies:
   port: 9037
   server: 5.188.181.201
   type: ss
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: RU 🇷🇺 | @Raydikalx | A42451
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: _3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0
-    short-id: '!!str d05a120d3506d2cc'
-  server: 178.248.236.229
-  tls: true
-  type: vless
-  uuid: a71d6c6d-c95e-4ec1-a892-22e21733bf09
 - client-fingerprint: chrome
   encryption: none
   name: RU 🇷🇺 | @Raydikalx | F540D4
@@ -126,65 +113,207 @@ proxies:
   tls: true
   type: vless
   uuid: 7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe
-- alterId: 0
-  cipher: auto
-  name: 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
-  network: ws
-  port: 40045
-  server: 45.130.147.178
-  tls: false
-  type: vmess
-  uuid: 9265c002-22a5-4dbd-a9bb-292f1c47eb68
-  ws-opts:
-    headers:
-      Host: 45.130.147.178
-    path: /
+- client-fingerprint: firefox
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 3E9F59
+  network: grpc
+  port: 443
+  server: vellum.filnex.baby
+  tls: true
+  type: vless
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | D95EF6
+  network: tcp
+  port: 2053
+  server: 191.217.215.228
+  tls: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 0CE705
+  network: tcp
+  port: 443
+  server: 45.132.178.108
+  tls: true
+  type: vless
+  uuid: 244d4130-4e72-0001-b93f-c1296cba97d0
 - client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
-  name: RU 🇷🇺 | @Raydikalx | D8A9D8
+  name: RU 🇷🇺 | @Raydikalx | 37D01D
   network: tcp
   port: 443
-  server: 188.225.46.6
+  reality-opts:
+    public-key: fPvZxeP0GErdI22fbEAqbMaz-QMumNIDzBNgKZmRsWY
+    short-id: '!!str a7b12f3265f97f4a'
+  server: 84.54.44.117
   tls: true
   type: vless
-  uuid: a077dc9a-712f-48ea-b75c-d94af64011ec
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
 - client-fingerprint: firefox
   encryption: none
-  name: RU 🇷🇺 | @Raydikalx | BD33C7
-  network: grpc
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 2F51E0
+  network: tcp
   port: 443
   reality-opts:
-    public-key: 4JggwEKhrkrIjQjO8kRX6iGvHQJixIFkiDOnE7zd3xE
-    short-id: '!!str '
-  server: 188.225.57.185
+    public-key: RZPobWJXwesTvFGCPTeE40Oc0AWFj0fmv0UDeJFLIhY
+    short-id: '!!str bf83ed9220c59bc3'
+  server: 185.185.71.168
   tls: true
   type: vless
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
-- client-fingerprint: chrome
-  encryption: none
-  name: RU 🇷🇺 | @Raydikalx | FD7602
-  network: grpc
-  port: 443
-  server: honeycomb.merlano.monster
-  tls: true
-  type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
 - client-fingerprint: firefox
   encryption: none
-  name: RU 🇷🇺 | @Raydikalx | 229E39
-  network: ws
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | E2B938
+  network: tcp
+  port: 8443
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: '!!str 3cbc3d737fb9c4af'
+  server: 129.101.106.233
+  tls: true
+  type: vless
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | F82E71
+  network: grpc
   port: 443
-  server: ws3.falmero.store
+  server: 200.169.179.233
+  tls: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | E52AC2
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 2BnTTOS3HvvIbNDEHPrhwnpPBc1HB7gEHkmQfUATkCw
+    short-id: '!!str c0a60e2240745383'
+  server: 178.236.240.66
+  tls: true
+  type: vless
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
+- encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 17C568
+  network: tcp
+  port: 8443
+  server: 92.63.189.39
+  tls: true
+  type: vless
+  uuid: 7aa77858-f235-44d6-9434-7ab060848b17
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 4F26BE
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 2GYWewnpSKVqp2AXm1hEZ-av8iApLPa62V7rxpxt1SE
+    short-id: '!!str b9bb317e9c9e2627'
+  server: 45.150.37.169
+  tls: true
+  type: vless
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
+- encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | CE464B
+  network: tcp
+  port: 8443
+  server: 92.63.189.39
+  tls: true
+  type: vless
+  uuid: 7aa77858-f235-0003-9434-7ab060848b17
+- encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 8B9BF9
+  network: tcp
+  port: 8443
+  server: 92.63.189.39
+  tls: true
+  type: vless
+  uuid: 7aa77858-f235-0005-9434-7ab060848b17
+- client-fingerprint: firefox
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | FA0809
+  network: grpc
+  port: 443
+  server: 81.200.158.26
   tls: true
   type: vless
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
 - client-fingerprint: chrome
   encryption: none
-  name: RU 🇷🇺 | @Raydikalx | C58B4D
+  name: RU 🇷🇺 | @Raydikalx | CD6192
+  network: ws
+  port: 2096
+  server: 191.217.215.228
+  tls: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | AD2D8D
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk
+    short-id: '!!str '
+  server: 92.246.138.161
+  tls: true
+  type: vless
+  uuid: 42c83523-9f96-41b2-82d6-2edb71a4ac19
+- client-fingerprint: firefox
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | 0F67FF
   network: ws
   port: 443
-  server: paperclip.filnex.baby
+  server: 72.56.1.44
   tls: true
   type: vless
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+- client-fingerprint: chrome
+  encryption: none
+  name: RU 🇷🇺 | @Raydikalx | AEA647
+  network: ws
+  port: 443
+  server: cove.gerqix.online
+  tls: true
+  type: vless
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | 5B777A
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 90uNUU-i14MO0VEIipqtK_Pk3xMhtDDDWtfcv_Y1X2s
+    short-id: '!!str b0f28b824c4f18f5'
+  server: 94.228.167.18
+  tls: true
+  type: vless
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: RU 🇷🇺 | @Raydikalx | A7892F
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 3U3hb-HmOG5qptCzXIt8NQE3TE40eeTJsNpBV_B9hQA
+    short-id: '!!str 1dde6750d22c5634'
+  server: 84.54.47.216
+  tls: true
+  type: vless
+  uuid: 9df9ee1a-0671-4c6c-93c7-65598fb946f7

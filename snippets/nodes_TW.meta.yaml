@@ -12,6 +12,15 @@ proxies:
   tls: true
   type: vless
   uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇹🇼 台湾3
+  network: ws
+  port: 8443
+  server: 154.40.61.186
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
 - client-fingerprint: firefox
   encryption: none
   name: 🇹🇼 台湾|06|BGP
@@ -34,6 +43,15 @@ proxies:
   uuid: 26524cce-d514-4014-a426-365fb266a14d
 - alterId: 0
   cipher: auto
+  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
+  network: tcp
+  port: 2510
+  server: world.t.51guangtaobao.com
+  tls: false
+  type: vmess
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- alterId: 0
+  cipher: auto
   name: 🇹🇼TW_1|4.8MB/s
   network: ws
   port: 16616
@@ -45,28 +63,6 @@ proxies:
     headers:
       Host: d1eyz.xiaoyan.io
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW_1|4.0MB/s
-  network: ws
-  port: 16616
-  server: dp8yk.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: dp8yk.xiaoyan.io
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
-  network: tcp
-  port: 2510
-  server: world.t.51guangtaobao.com
-  tls: false
-  type: vmess
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
 - client-fingerprint: chrome
   encryption: none
   name: 🇹🇼[www.v2nodes.com] vless-TW-1...
@@ -82,12 +78,26 @@ proxies:
   server: 34.80.15.95
   sni: tw.ctt25.uk
   type: trojan
+- name: 🇹🇼TW_3|1.3MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 28478
+  server: ddrr1.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw2.cat.bilibili.com
+  type: trojan
+- name: 🇹🇼TW_2|2.9MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 59188
+  server: ddrr2.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw3.cat.bilibili.com
+  type: trojan
 - client-fingerprint: chrome
   encryption: none
-  name: 🇹🇼 台湾3
+  name: 🇹🇼TW_1|2.0MB/s
   network: ws
   port: 8443
-  server: 154.40.61.186
+  server: 83.147.14.62
   tls: true
   type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb

@@ -1,6 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
+  network: tcp
+  port: 2510
+  server: world.t.51guangtaobao.com
+  tls: false
+  type: vmess
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- alterId: 0
+  cipher: auto
   name: 🇹🇼TW_1|4.8MB/s
   network: ws
   port: 16616
@@ -12,31 +21,23 @@ proxies:
     headers:
       Host: d1eyz.xiaoyan.io
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW_1|4.0MB/s
-  network: ws
-  port: 16616
-  server: dp8yk.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: dp8yk.xiaoyan.io
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
-  network: tcp
-  port: 2510
-  server: world.t.51guangtaobao.com
-  tls: false
-  type: vmess
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
 - name: TW 🇹🇼 | @Raydikalx | 13A957
   password: '!!str 123456'
   port: 443
   server: 34.80.15.95
   sni: tw.ctt25.uk
+  type: trojan
+- name: 🇹🇼TW_3|1.3MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 28478
+  server: ddrr1.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw2.cat.bilibili.com
+  type: trojan
+- name: 🇹🇼TW_2|2.9MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 59188
+  server: ddrr2.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw3.cat.bilibili.com
   type: trojan

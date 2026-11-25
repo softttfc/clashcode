@@ -1,8 +1,34 @@
 proxies:
+- encryption: none
+  name: 🇰🇷KR韩國丨yoyapai.com
+  network: ws
+  port: 8880
+  server: 104.17.144.29
+  tls: false
+  type: vless
+  uuid: 81d55675-8570-4b40-9a77-3125339a0f86
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇰🇷 韩国
+  network: ws
+  port: 12101
+  server: 14.44.19.57
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇰🇷 韩国_1
+  network: ws
+  port: 8443
+  server: 131.186.22.95
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇰🇷 韩国_1
+  name: 🇰🇷 韩国_2
   network: tcp
   port: 443
   reality-opts:
@@ -35,13 +61,13 @@ proxies:
   type: vless
   uuid: 26524cce-d514-4014-a426-365fb266a14d
 - encryption: none
-  name: 🇰🇷KR韩國丨yoyapai.com
+  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
   network: ws
-  port: 8880
-  server: 104.17.144.29
+  port: 25555
+  server: 152.69.226.63
   tls: false
   type: vless
-  uuid: 81d55675-8570-4b40-9a77-3125339a0f86
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
 - alterId: 0
   cipher: auto
   name: qilan.de | KR VMESS 4075821 | ...
@@ -60,14 +86,6 @@ proxies:
   tls: false
   type: vmess
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-- encryption: none
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
 - cipher: aes-256-cfb
   name: 🇰🇷 KR 31 → tg@nicevpn123
   password: amazonskr05
@@ -87,34 +105,9 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇰🇷 韩国
-  network: ws
-  port: 8443
-  server: 131.186.22.95
-  tls: true
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇰🇷 韩国2
-  network: ws
-  port: 12101
-  server: 14.44.19.57
-  tls: true
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇰🇷 韩国 | KOR 2
-  network: tcp
-  port: 43118
-  reality-opts:
-    public-key: p0crO-ZNRjb07T_GGy9JdkXTjei3-D9f6s2ZzCo2gx8
-    short-id: '!!str 1a70fe8d4b05'
-  server: dddz-4-z.473221.xyz
-  tls: true
-  type: vless
-  uuid: 5807f1c4-b50e-4ec0-8d01-274045da0da5
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '!!str 12242'
+  port: 10099
+  server: 115.161.136.145
+  type: ss
