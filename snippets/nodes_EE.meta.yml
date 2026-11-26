@@ -27,7 +27,7 @@ proxies:
   udp: true
   username: ''
   x-toolall-mihomo: true
-- name: 🇪🇪EE_2|1.0MB/s|K001-260618
+- name: 🇪🇪EE_2|1.1MB/s|K001-260618 [96...
   password: None
   port: 9443
   server: 95.153.31.66
@@ -47,7 +47,7 @@ proxies:
   type: http
   udp: true
   username: ''
-- name: 🇪🇪EE_1|415KB/s|K001-260618
+- name: 🇪🇪EE_1|896KB/s|K001-260618 [ea...
   password: None
   port: 9443
   server: 192.159.101.174
@@ -104,26 +104,39 @@ proxies:
   type: vless
   udp: true
   uuid: e9958027-03be-4eb5-bcec-70415b2e4844
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇪🇪139885 | ⚡️Telegram = t.me/S... #1'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: NiCJO84l7l--GJ10ggvb6HcOS8qLR30pWTphwvWozhg
+  server: 46.22.216.31
+  servername: mail.protech-plus.ee
+  tls: true
+  type: vless
+  uuid: 4612258c-15e8-4459-a3b6-8b6571699c5f
+- client-fingerprint: chrome
+  flow: ''
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+  name: '🇪🇪25@exclavevpn #1'
+  network: grpc
+  port: 9881
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: 'aabb'
+  server: 168.113.252.30
+  servername: dl.google.com
+  tls: true
+  type: vless
+  uuid: e460e7b2-a146-4468-87ed-52510b2caae6
 - cipher: aes-256-cfb
   name: 🇪🇪EE-37.252.5.234-4904
   password: f8f7aCzcPKbsF8p3
   port: 989
   server: 37.252.5.234
   type: ss
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: NL 🇳🇱 | @Raydikalx | 2A97EE
-  network: tcp
-  port: 23576
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  server: 51.158.206.34
-  servername: fuck.rkn
-  tls: true
-  type: vless
-  udp: true
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: NL 🇳🇱 | @Raydikalx | 5455EE
@@ -133,6 +146,20 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   server: 51.158.206.29
+  servername: fuck.rkn
+  tls: true
+  type: vless
+  udp: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: NL 🇳🇱 | @Raydikalx | 2A97EE
+  network: tcp
+  port: 23576
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  server: 51.158.206.34
   servername: fuck.rkn
   tls: true
   type: vless
@@ -184,19 +211,13 @@ proxies:
   type: vless
   udp: true
   uuid: e89a2a0e-7803-447e-b050-3ba67962ed95
-- client-fingerprint: firefox
-  name: 🇪🇪 爱沙尼亚 | EST
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: NMS-P97L7IrYGl7mQv1j2K_EBX6G57fu6DvREZYl01U
-    short-id: '35a329a23bb50d2b'
-  server: 13.141.36.163
-  servername: 079b6et.ee5.h1clayd.shop
-  tls: true
-  type: vless
+- cipher: aes-256-gcm
+  name: IT 🇮🇹 | @Raydikalx | C5ECEE
+  password: itzvpn@321
+  port: 8388
+  server: 57.131.27.21
+  type: ss
   udp: true
-  uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇪🇪_爱沙尼亚
@@ -255,3 +276,16 @@ proxies:
   tls: true
   type: vless
   uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇪🇪
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: uqLRHVERHP974FJk39ltiV8pkcGAWYKJfOJ1nMALahU
+    short-id: '984f'
+  server: fr5.wizard.select
+  servername: fr5.wizard.select
+  tls: true
+  type: vless
+  uuid: 2acc3742-c568-11f1-9902-a337233c6cda

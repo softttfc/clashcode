@@ -43,7 +43,7 @@ proxies:
   type: anytls
   udp: true
 - client-fingerprint: chrome
-  name: '🇹🇼_TW_台湾_IPV4 #1'
+  name: 🇹🇼_TW_台湾_IPV4
   password: 0324fbc29561
   port: 443
   server: a54ge.df6h451rh.xin
@@ -494,6 +494,20 @@ proxies:
   sni: r.tw3.cat.bilibili.com
   type: trojan
 - client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '🇹🇼25@exclavevpn #1'
+  network: tcp
+  port: 51283
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: 'fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+- client-fingerprint: chrome
   name: '🇹🇼13 | ⚡Telegram = t.me/ex_pro... #1'
   network: tcp
   port: 8443
@@ -521,34 +535,6 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
-- down: ''
-  fingerprint: ''
-  name: 🇹🇼TW_1|191KB/s|A004-260618
-  obfs: ''
-  obfs-password: ''
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: google.com
-  sub_tag: A004-260618
-  type: hysteria2
-  udp: true
-  up: ''
-- down: ''
-  fingerprint: ''
-  name: 🇹🇼TW_2|91KB/s|A004-260618
-  obfs: ''
-  obfs-password: ''
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: vpn-tw-002.fastervpn.world
-  skip-cert-verify: true
-  sni: t.me
-  sub_tag: A004-260618
-  type: hysteria2
-  udp: true
-  up: ''
 - name: 🇹🇼 Taiwan Taichung | ⏱1509ms |...
   port: 443
   server: 36.235.60.105
@@ -561,6 +547,13 @@ proxies:
   tls: false
   type: vless
   uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+- name: '🇹🇼TW_1|1.3MB/s #2'
+  password: 2902c46c8493
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
 - name: '🇹🇼 🇨🇳 台湾 | TWN #2'
   password: 4029698d-89a9-4e90-9eac-9b8c7bf4b5b5
   port: 443
@@ -569,29 +562,19 @@ proxies:
   sni: theme.lovehk.xyz
   type: anytls
   udp: true
-- name: '🇹🇼TW_1|1.3MB/s #1'
-  password: 2902c46c8493
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN 4 #1'
+  network: tcp
+  packet-encoding: xudp
   port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-- name: ProxyPool | 🇹🇼 🇨🇳 台湾 | TWN
-  password: 0324fbc29561
-  port: 443
-  server: a54ge.df6h451rh.xin
-  skip-cert-verify: true
-  sni: docs.microsoft.com
-  type: anytls
-  udp: true
-- name: ProxyPool | 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: 0324fbc29561
-  port: 443
-  server: sdf65h46wr.df6h451rh.xin
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: '2da72ce6'
+  server: 166.0.198.53
+  servername: navi.bankrate.com
+  tls: true
+  type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
 - name: 🇹🇼_台湾
   network: ws
   port: 8443
@@ -710,19 +693,6 @@ proxies:
   sub-tag: R002-260618
   type: anytls
   udp: true
-- client-fingerprint: chrome
-  name: '🇹🇼 🇨🇳 台湾 | TWN 4 #1'
-  network: tcp
-  packet-encoding: xudp
-  port: 443
-  reality-opts:
-    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-    short-id: '2da72ce6'
-  server: 166.0.198.53
-  servername: navi.bankrate.com
-  tls: true
-  type: vless
-  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
 - alterId: 0
   cipher: auto
   name: TW
@@ -763,6 +733,19 @@ proxies:
     headers:
       host: dee2309db4944c248b6d4372c6641e25.oylfmxz.cn
     path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 'TW台湾 #3'
+  network: tcp
+  port: 51283
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: 'fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
 - name: 🇹🇼TW_31
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -799,6 +782,22 @@ proxies:
   sni: vk.com
   tls: false
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 'TW台湾 #5'
+  network: tcp
+  port: 47396
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: 'fa514b83'
+  server: free.fugui.lol
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  ws-opts:
+    headers:
+      Host: swdist.apple.com
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: TW_speednode_0026
