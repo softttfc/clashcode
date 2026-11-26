@@ -1,4 +1,10 @@
 proxies:
+- cipher: aes-256-gcm
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
 - alterId: 0
   cipher: auto
   name: 🇸🇪SE_1|400KB/s|B007-260618 [4f...
@@ -8,25 +14,12 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- cipher: aes-256-gcm
-  name: 🇸🇪SE_2|220KB/s|M003-260806 [ed...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 138.199.55.243
-  type: ss
-- alterId: 0
-  cipher: auto
-  name: SE 22 → tg@nicevpn123
-  network: ws
-  port: 443
-  server: 185.146.173.59
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-opts:
-    headers:
-      Host: 185.146.173.59
-    path: /
+- name: SE 12 → tg@nicevpn123
+  password: dGKXcHgs3P
+  port: 80
+  server: 185.146.173.66
+  skip-cert-verify: true
+  type: trojan
 - alterId: 64
   cipher: auto
   name: SE 17 → tg@nicevpn123
@@ -53,12 +46,19 @@ proxies:
     headers:
       Host: 185.146.173.129
     path: /
-- name: SE 12 → tg@nicevpn123
-  password: dGKXcHgs3P
-  port: 80
-  server: 185.146.173.66
-  skip-cert-verify: true
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: SE 22 → tg@nicevpn123
+  network: ws
+  port: 443
+  server: 185.146.173.59
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: 185.146.173.59
+    path: /
 - alterId: 0
   cipher: auto
   name: SE 🇸🇪 | @Raydikalx | B239B4
@@ -77,3 +77,17 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪_SE_瑞典
+  network: ws
+  port: 80
+  server: www.aetv.com
+  sni: amd.al
+  tls: false
+  type: vmess
+  uuid: 7dc78582-88a8-4b4c-9e3e-50831d672766
+  ws-opts:
+    headers:
+      Host: amd.al
+    path: /XESALISTHEBEST?ed=2048

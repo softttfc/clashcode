@@ -1,4 +1,22 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: qilan.de | KR VMESS 4075821 | ...
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: qilan.de | KR VMESS 7490992 | ...
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  tls: false
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - encryption: none
   name: 🇰🇷KR韩國丨yoyapai.com
   network: ws
@@ -38,54 +56,6 @@ proxies:
   tls: true
   type: vless
   uuid: 4ded3111-b418-475a-93de-0360932508b2
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR1@ripaojiedian
-  network: ws
-  port: 443
-  server: 109.61.127.247
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇰🇷 KR2@ripaojiedian
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- encryption: none
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-- alterId: 0
-  cipher: auto
-  name: qilan.de | KR VMESS 4075821 | ...
-  network: tcp
-  port: 443
-  server: 140.238.2.250
-  tls: false
-  type: vmess
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: qilan.de | KR VMESS 7490992 | ...
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - cipher: aes-256-cfb
   name: 🇰🇷 KR 31 → tg@nicevpn123
   password: amazonskr05
@@ -105,9 +75,41 @@ proxies:
     headers:
       Host: 52.78.50.117
     path: /
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  password: '!!str 12242'
-  port: 10099
-  server: 115.161.136.145
-  type: ss
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇰🇷 韩国 | KOR #4'
+  network: tcp
+  port: 443
+  server: ifdmbpb.kdns.fr
+  tls: true
+  type: vless
+  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇰🇷 韩国 | KOR
+  network: ws
+  port: 443
+  server: krd.80782636.xyz
+  tls: true
+  type: vless
+  uuid: db906786-8c49-4b17-9182-cea680ef954d
+- name: 🇰🇷KR_1|4.0MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 15345
+  server: vss.fireduocc.com
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: KR 🇰🇷 | @Raydikalx | A7BFCE
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 8hnBOcqsETW6u3TchfqlE0Y7wZ002v60fPlFM1qrww4
+    short-id: '!!str ad9e6079'
+  server: 8.220.198.29
+  tls: true
+  type: vless
+  uuid: 91d2a8f3-6eb0-4b6a-a8f7-0beabcf06fb7

@@ -1,4 +1,31 @@
 proxies:
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.241
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+  network: tcp
+  port: 30806
+  server: v6.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -13,6 +40,15 @@ proxies:
   tls: true
   type: vless
   uuid: 94d2d711-76e5-4d82-a3c9-4f06fd5558c8
+- encryption: none
+  name: 🇯🇵JP日本丨yoyapai.com (3)
+  network: ws
+  port: 11424
+  server: 38.47.96.220
+  sni: notls.lukongtou.eu.org
+  tls: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
@@ -27,31 +63,31 @@ proxies:
   tls: true
   type: vless
   uuid: 12e35bfe-1e79-4cf1-8a8e-22a242e97408
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_1|486KB/s|S004-260618 [13...
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: 168.138.43.75
-    path: /
 - client-fingerprint: chrome
   encryption: none
-  name: 🇯🇵 日本2
+  name: 🇯🇵JP_3|4.1MB/s
   network: ws
-  port: 443
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: '!!str c8559ca1'
-  server: 172.104.86.181
+  port: 8443
+  server: 166.88.14.71
   tls: true
   type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+- name: 🇯🇵JP_1|1.3MB/s_1
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: nu2rb.supertoolify.com
+  skip-cert-verify: true
+  sni: nu2rb.supertoolify.com
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇯🇵 日本5
+  network: ws
+  port: 8443
+  server: 45.32.57.15
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
 - client-fingerprint: chrome
   encryption: none
   name: 🇯🇵 日本3
@@ -66,33 +102,20 @@ proxies:
   uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
 - client-fingerprint: chrome
   encryption: none
-  name: 🇯🇵 日本5
+  name: 🇯🇵 日本2
   network: ws
-  port: 8443
-  server: 45.32.57.15
-  tls: true
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇯🇵 日本4
-  network: ws
-  port: 8443
-  server: 166.88.14.71
-  tls: true
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-- name: 🇯🇵 日本
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 443
-  server: nu2rb.supertoolify.com
-  skip-cert-verify: true
-  sni: nu2rb.supertoolify.com
-  type: trojan
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: '!!str c8559ca1'
+  server: 172.104.86.181
+  tls: true
+  type: vless
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇯🇵 日本_1
+  name: 🇯🇵 日本
   network: tcp
   port: 11101
   reality-opts:
@@ -102,6 +125,12 @@ proxies:
   tls: true
   type: vless
   uuid: ca69a29d-60ef-433a-91bc-27537be993c8
+- name: 🇯🇵 日本2_1
+  password: d050aca3-9df2-4461-90ec-92373c1d7636
+  port: 44184
+  server: v2jp.k1.ssnss.live
+  skip-cert-verify: true
+  type: trojan
 - client-fingerprint: chrome
   encryption: none
   name: 🇯🇵 日本3_1
@@ -116,10 +145,32 @@ proxies:
   uuid: 76f1ce49-bcea-4680-b9ef-16592269445b
 - client-fingerprint: chrome
   encryption: none
+  name: 🇯🇵 日本4
+  network: ws
+  port: 8443
+  server: cdn-jp.skyvora.app
+  tls: true
+  type: vless
+  uuid: 76825bbe-3ad2-4156-b9ed-a5bdfcc93bd3
+- client-fingerprint: chrome
+  encryption: none
   flow: xtls-rprx-vision
   name: 🇯🇵 日本3_2
   network: tcp
   port: 2083
+  reality-opts:
+    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
+    short-id: '!!str bb472a184677af64'
+  server: 50.7.44.27
+  tls: true
+  type: vless
+  uuid: 76825bbe-3ad2-4156-b9ed-a5bdfcc93bd3
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本_2
+  network: tcp
+  port: 443
   reality-opts:
     public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
     short-id: '!!str bb472a184677af64'
@@ -140,87 +191,6 @@ proxies:
   tls: true
   type: vless
   uuid: 76825bbe-3ad2-4156-b9ed-a5bdfcc93bd3
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇯🇵 日本_3
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-    short-id: '!!str bb472a184677af64'
-  server: 50.7.44.27
-  tls: true
-  type: vless
-  uuid: 76825bbe-3ad2-4156-b9ed-a5bdfcc93bd3
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇯🇵 日本4_1
-  network: ws
-  port: 8443
-  server: cdn-jp.skyvora.app
-  tls: true
-  type: vless
-  uuid: 76825bbe-3ad2-4156-b9ed-a5bdfcc93bd3
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  name: 🇯🇵 JP1@ripaojiedian
-  network: ws
-  port: 5002
-  server: 104.194.83.133
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-- alterId: 2
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-  network: tcp
-  port: 30806
-  server: v6.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_1|1.2MB/s
-  network: ws
-  port: 16617
-  server: d1eyz.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: d1eyz.xiaoyan.io
-    path: /
-- encryption: none
-  name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  network: ws
-  port: 80
-  server: 172.67.192.49
-  tls: false
-  type: vless
-  uuid: 4808e2ce-14f4-4f5e-b8f4-59fb92fffa09
-- cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-5141...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
 - alterId: 0
   cipher: auto
   name: 🇯🇵 JP 12 → tg@nicevpn123
@@ -266,15 +236,6 @@ proxies:
   uuid: daa811f7-7e7e-3089-9361-d2de712e59b6
 - alterId: 1
   cipher: auto
-  name: 🇯🇵 JP 70 → tg@nicevpn123
-  network: tcp
-  port: 448
-  server: cm5hi-g05.jp04-3771-vm0.entry.fr0307a.art
-  tls: false
-  type: vmess
-  uuid: 4b991d1c-f7a2-348e-b785-8daf386b6864
-- alterId: 1
-  cipher: auto
   name: 🇯🇵 JP 64 → tg@nicevpn123
   network: tcp
   port: 28783
@@ -282,6 +243,15 @@ proxies:
   tls: true
   type: vmess
   uuid: b52da429-91a0-3834-a4e0-0ed299ba8121
+- alterId: 1
+  cipher: auto
+  name: 🇯🇵 JP 70 → tg@nicevpn123
+  network: tcp
+  port: 448
+  server: cm5hi-g05.jp04-3771-vm0.entry.fr0307a.art
+  tls: false
+  type: vmess
+  uuid: 4b991d1c-f7a2-348e-b785-8daf386b6864
 - alterId: 1
   cipher: auto
   name: 🇯🇵 JP 72 → tg@nicevpn123
@@ -309,64 +279,145 @@ proxies:
   tls: false
   type: vmess
   uuid: 2278146c-8fb0-3683-8300-342238f8a9d0
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: JP 🇯🇵 | @Raydikalx | 9F5101
-  network: tcp
-  port: 23169
-  server: 155.248.175.201
-  tls: true
-  type: vless
-  uuid: 7318caa1-93d1-4a9d-c481-504599902700
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  name: JP 🇯🇵 | @Raydikalx | 21FD7C
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
-    short-id: '!!str 2c92d6'
-  server: jpg1api.jumpernode.site
-  tls: true
-  type: vless
-  uuid: d508df52-3acb-483f-85d2-3fd5f6a76808
 - cipher: aes-128-gcm
   name: JP 🇯🇵 | @Raydikalx | 66A632
   password: Bwlqh7GcFB
   port: 53758
   server: jpa.123069.xyz
   type: ss
-- name: 🇯🇵 日本2_1
-  password: d050aca3-9df2-4461-90ec-92373c1d7636
-  port: 44184
-  server: v2jp.k1.ssnss.live
-  skip-cert-verify: true
-  type: trojan
-- alterId: 2
-  cipher: auto
-  name: 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  network: tcp
-  port: 30845
-  server: v45.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇯🇵_JP_日本_IPV4
+  network: ws
+  port: 443
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: '!!str e535df57'
+  server: 149.28.29.156
+  sni: itunes.apple.com
+  tls: true
+  type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+- cipher: aes-128-gcm
+  name: 🇯🇵 日本 | JPN
+  password: 78f30e05-8bbb-4460-a7e1-df58039d4282
+  port: 36603
+  server: dlyqv8kg.jhm.qwer123.net
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵 日本 | JPN 2
+  password: 78f30e05-8bbb-4460-a7e1-df58039d4282
+  port: 36609
+  server: dlyqv8kg.jhm.qwer123.net
+  type: ss
 - client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: JP 🇯🇵 | @Raydikalx | 890048
+  name: 🇯🇵 日本 | JPN 3
+  network: tcp
+  port: 22509
+  reality-opts:
+    public-key: aCMX1OLSOnNbaZoo6IIW6K93jMjCWaJRyJu1gOw-ig8
+    short-id: '!!str 4654f9b4'
+  server: fanasdhj.fajksvle9.fandjlsadhlkadhlkqwdsadasjhas.com
+  tls: true
+  type: vless
+  uuid: 874c5e39-3a9d-44c4-bc3e-8425e798adc8
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇯🇵 日本 | JPN 4
+  network: tcp
+  port: 38105
+  reality-opts:
+    public-key: y0p1yI8OoWqcOE4XEv7ueudaSOOc5UIb5yFyA3SstD8
+    short-id: '!!str 7e7e8c23'
+  server: vl-x2.qz10086.top
+  tls: true
+  type: vless
+  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本 · proxy_p...
+  network: ws
+  port: 16617
+  server: planb.mojcn.com
+  tls: false
+  type: vmess
+  uuid: b49af8c9-0cf1-4212-8ed8-35b70d9f2cf4
+  ws-opts:
+    headers:
+      Host: 3416cbe57b7c52733721859d4e23be39.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: qilan.de | JP OpenRay 100 | 2....
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: 168.138.43.75
+    path: /cctv13.m3u8
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 尼日利亚(mibei77.com 米贝节点分享)
   network: tcp
   port: 443
   reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-    short-id: '!!str bd6f67b6b2152b45'
-  server: 31.76.91.98
+    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
+    short-id: '!!str 42426c882c5fcd41'
+  server: 196.196.149.81
+  sni: 7aa271t.es1.h1clayd.click
   tls: true
   type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-- client-fingerprint: chrome
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+- name: 🇯🇵JP_4|2.8MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 21494
+  server: vss.fireduocc.com
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  type: trojan
+- name: 🇯🇵JP_2|2.9MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 13493
+  server: vss.fireduocc.com
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  type: trojan
+- name: 🇯🇵JP_1|4.3MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 22505
+  server: 2xp.fireduocc.com
+  skip-cert-verify: true
+  sni: i1.hdslb.com
+  type: trojan
+- name: 🇯🇵JP_5|4.3MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 32441
+  server: vss.fireduocc.com
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 98A489
+  network: ws
+  port: 8880
+  server: 161.33.20.255
+  tls: false
+  type: vmess
+  uuid: e0856508-d693-450a-a099-455091dc4f25
+  ws-opts:
+    headers:
+      Host: 161.33.20.255
+    path: /
+- client-fingerprint: firefox
   encryption: none
   flow: xtls-rprx-vision
   name: JP 🇯🇵 | @Raydikalx | AA31A8
@@ -379,18 +430,3 @@ proxies:
   tls: true
   type: vless
   uuid: 66171cbe-0b4b-4b24-99f6-d5a822f4dc9a
-- cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 17E3DC
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- client-fingerprint: chrome
-  encryption: none
-  name: JP 🇯🇵 | @Raydikalx | 3C8099
-  network: ws
-  port: 443
-  server: 152.69.200.216
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
