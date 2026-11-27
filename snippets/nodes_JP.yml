@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_8|169KB/s|S004-260618 [89...
+  name: 🇯🇵JP_18|265KB/s|S004-260618 [8...
   network: ws
   packet-encoding: xudp
   port: 80
@@ -19,7 +19,7 @@ proxies:
     path: /cctv13.m3u8
   xudp: true
 - client-fingerprint: chrome
-  name: 🇯🇵JP_18|611KB/s|C002-260622 [1...
+  name: 🇯🇵JP_13|226KB/s|C002-260622 [1...
   network: tcp
   password: F3NzMNuYnG7akU2mSlBY
   port: 8443
@@ -29,30 +29,14 @@ proxies:
   sub_tag: C002-260622
   type: trojan
   udp: true
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_25|704KB/s|A001-260618 [4...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  sub_tag: A001-260618
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_28|754KB/s|A001-260618 [5...
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  sub_tag: A001-260618
-  type: ss
-  udp: true
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_22|334KB/s|S004-260618 [6...
+  name: 🇯🇵JP_15|526KB/s|S004-260618 [2...
   network: ws
   packet-encoding: xudp
   port: 80
   server: 168.138.43.75
-  servername: jp01.a0a.xyz
+  servername: 168.138.43.75
   skip-cert-verify: false
   sub_tag: S004-260618
   tls: false
@@ -61,11 +45,27 @@ proxies:
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
     headers:
-      Host: jp01.a0a.xyz
+      Host: 168.138.43.75
     path: /cctv13.m3u8
   xudp: true
 - cipher: aes-128-gcm
-  name: 🇯🇵JP_10|144KB/s|M003-260806 [b...
+  name: 🇯🇵JP_10|666KB/s|A001-260618 [4...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  sub_tag: A001-260618
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇯🇵JP_22|666KB/s|A001-260618 [5...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.241
+  sub_tag: A001-260618
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: 🇯🇵JP_17|678KB/s|M003-260806 [b...
   password: Bwlqh7GcFB
   port: 53758
   server: jpa.123069.xyz
@@ -73,20 +73,45 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: 🇯🇵JP_26|718KB/s|A001-260618 [f...
+  name: 🇯🇵JP_11|627KB/s|A001-260618 [f...
   password: shadowsocks
   port: 443
   server: 149.22.87.204
   sub_tag: A001-260618
   type: ss
   udp: true
-- cipher: aes-128-gcm
-  name: 🇯🇵JP_9|81KB/s|M003-260806 [ff8...
-  password: Bwlqh7GcFB
-  port: 53758
-  server: 168.138.205.100
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP_7|550KB/s|R002-260618 [7a...
+  network: ws
+  port: 8081
+  server: 168.110.63.247
+  sub_tag: R002-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  ws-opts:
+    path: /vless
+  x-toolall-mihomo: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_33|639KB/s|M003-260806 [9...
+  network: tcp
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: nu3rb.supertoolify.com
+  skip-cert-verify: true
+  sni: nu3rb.supertoolify.com
   sub_tag: M003-260806
-  type: ss
+  type: trojan
+  udp: true
+- name: 🇯🇵 日本
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: nu2rb.supertoolify.com
+  skip-cert-verify: true
+  sni: nu2rb.supertoolify.com
+  type: trojan
   udp: true
 - client-fingerprint: chrome
   name: 🇯🇵JP_37|623KB/s|K001-260618 [1...
@@ -109,20 +134,6 @@ proxies:
   sub_tag: P002-260618
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_12|622KB/s|R002-260618 [7...
-  network: ws
-  port: 8081
-  server: 168.110.63.247
-  sub_tag: R002-260618
-  tls: false
-  type: vmess
-  udp: true
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  ws-opts:
-    path: /vless
-  x-toolall-mihomo: true
 - client-fingerprint: chrome
   name: 🇯🇵JP_35|348KB/s|M003-260806 [b...
   network: tcp
@@ -134,13 +145,13 @@ proxies:
   sub_tag: M003-260806
   type: trojan
   udp: true
-- name: 🇯🇵 日本_2
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: nu2rb.supertoolify.com
-  skip-cert-verify: true
-  sni: nu2rb.supertoolify.com
-  type: trojan
+- cipher: aes-128-gcm
+  name: 🇯🇵JP_5|709KB/s|M003-260806 [ff...
+  password: Bwlqh7GcFB
+  port: 53758
+  server: 168.138.205.100
+  sub_tag: M003-260806
+  type: ss
   udp: true
 - name: 分享日记_311
   network: ws
@@ -440,7 +451,33 @@ proxies:
   uuid: 41a7089a-040b-4538-8b8d-010902405bde
 - alterId: 0
   cipher: auto
-  name: 未知50
+  name: 分享日记_4_2
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: 分享日记_5_2
+  network: ws
+  port: 80
+  server: 152.67.8.205
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 未知69 523.6KB/s
   network: ws
   port: 8443
   server: 104.17.77.77
@@ -1006,14 +1043,6 @@ proxies:
     headers:
       host: www.creationlong.org
     path: /assignment
-- name: 分享日记_535
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: powerful-squid.rooster465.autos
-  skip-cert-verify: false
-  type: trojan
-  udp: true
 - name: 分享日记_538
   network: ws
   password: humanity
@@ -1040,15 +1069,6 @@ proxies:
     headers:
       host: www.creationlong.org
     path: /assignment
-- name: 分享日记_540
-  network: tcp
-  password: NQ26071394
-  port: 443
-  server: 108.131.117.154
-  skip-cert-verify: false
-  sni: funky-opossum.rooster465.autos
-  type: trojan
-  udp: true
 - name: 分享日记_541
   network: tcp
   password: PD07395842
@@ -1623,25 +1643,771 @@ proxies:
     headers:
       host: www.gossipglove.com
     path: /assignment
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_15|526KB/s|S004-260618 [2...
-  network: ws
-  packet-encoding: xudp
-  port: 80
-  server: 168.138.43.75
-  servername: 168.138.43.75
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享)_3
+  password: '123456'
+  port: 5555
+  server: 8.209.236.2
   skip-cert-verify: false
-  sub_tag: S004-260618
   tls: false
-  type: vmess
+  type: ss
   udp: true
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: 168.138.43.75
-    path: /cctv13.m3u8
-  xudp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (2)_2
+  password: '123456'
+  port: 5555
+  server: 8.216.18.170
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (3)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.154
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (4)
+  password: '123456'
+  port: 5555
+  server: 8.209.249.205
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (5)
+  password: '123456'
+  port: 5555
+  server: 8.216.14.14
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (6)
+  password: '123456'
+  port: 5555
+  server: 8.209.221.90
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (7)
+  password: '123456'
+  port: 5555
+  server: 8.211.131.30
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (8)
+  password: '123456'
+  port: 5555
+  server: 8.209.253.213
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (9)
+  password: '123456'
+  port: 5555
+  server: 8.216.18.173
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (10)
+  password: '123456'
+  port: 5555
+  server: 8.209.236.164
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (11)
+  password: '123456'
+  port: 5555
+  server: 47.74.9.21
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (12)
+  password: '123456'
+  port: 5555
+  server: 47.74.27.11
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (13)
+  password: '123456'
+  port: 5555
+  server: 8.216.5.230
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (14)
+  password: '123456'
+  port: 5555
+  server: 8.209.199.75
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (15)
+  password: '123456'
+  port: 5555
+  server: 47.74.49.154
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (16)
+  password: '123456'
+  port: 5555
+  server: 8.216.11.25
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (17)
+  password: '123456'
+  port: 5555
+  server: 8.216.4.158
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (18)
+  password: '123456'
+  port: 5555
+  server: 8.216.16.102
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (19)
+  password: '123456'
+  port: 5555
+  server: 47.74.41.139
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (20)
+  password: '123456'
+  port: 5555
+  server: 47.91.16.50
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (21)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.142
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (22)
+  password: '123456'
+  port: 5555
+  server: 47.245.42.226
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (23)
+  password: '123456'
+  port: 5555
+  server: 47.91.18.202
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (24)
+  password: '123456'
+  port: 5555
+  server: 47.91.2.13
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (25)
+  password: '123456'
+  port: 5555
+  server: 8.216.15.30
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (26)
+  password: '123456'
+  port: 5555
+  server: 8.216.10.204
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (27)
+  password: '123456'
+  port: 5555
+  server: 8.209.196.11
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (28)
+  password: '123456'
+  port: 5555
+  server: 47.74.18.249
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (29)
+  password: '123456'
+  port: 5555
+  server: 47.245.40.193
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (30)
+  password: '123456'
+  port: 5555
+  server: 47.74.17.125
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (31)
+  password: '123456'
+  port: 5555
+  server: 47.74.40.243
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (32)
+  password: '123456'
+  port: 5555
+  server: 8.211.128.146
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (33)
+  password: '123456'
+  port: 5555
+  server: 8.216.5.89
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (34)
+  password: '123456'
+  port: 5555
+  server: 47.74.0.207
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (35)
+  password: '123456'
+  port: 5555
+  server: 8.209.222.150
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (36)
+  password: '123456'
+  port: 5555
+  server: 8.209.249.190
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (37)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.41
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (38)
+  password: '123456'
+  port: 5555
+  server: 8.209.198.176
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (39)
+  password: '123456'
+  port: 5555
+  server: 8.216.8.135
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (40)
+  password: '123456'
+  port: 5555
+  server: 8.216.8.84
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (41)
+  password: '123456'
+  port: 5555
+  server: 47.91.31.150
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (42)
+  password: '123456'
+  port: 5555
+  server: 8.216.17.189
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (44)
+  password: '123456'
+  port: 6666
+  server: 8.216.17.86
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (45)
+  password: '123456'
+  port: 5555
+  server: 8.211.132.94
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (46)
+  password: '123456'
+  port: 5555
+  server: 8.216.14.94
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (47)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.151
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (48)
+  password: '123456'
+  port: 5555
+  server: 47.74.24.29
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (49)
+  password: '123456'
+  port: 5555
+  server: 8.209.196.228
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (50)
+  password: '123456'
+  port: 5555
+  server: 8.216.3.160
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (51)
+  password: '123456'
+  port: 5555
+  server: 47.74.40.77
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (52)
+  password: '123456'
+  port: 5555
+  server: 8.216.17.52
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (53)
+  password: '123456'
+  port: 5555
+  server: 47.91.29.60
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (54)
+  password: '123456'
+  port: 5555
+  server: 47.245.54.15
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (55)
+  password: '123456'
+  port: 5555
+  server: 8.209.245.25
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (56)
+  password: '123456'
+  port: 5555
+  server: 8.216.6.19
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (57)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.190
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (58)
+  password: '123456'
+  port: 5555
+  server: 8.211.174.60
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (59)
+  password: '123456'
+  port: 5555
+  server: 8.216.15.46
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (60)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.42
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (61)
+  password: '123456'
+  port: 5555
+  server: 8.216.15.55
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (62)
+  password: '123456'
+  port: 5555
+  server: 8.216.18.139
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (63)
+  password: '123456'
+  port: 5555
+  server: 8.216.19.169
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (64)
+  password: '123456'
+  port: 5555
+  server: 47.245.32.129
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (65)
+  password: '123456'
+  port: 5555
+  server: 8.209.221.183
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (66)
+  password: '123456'
+  port: 5555
+  server: 8.211.174.191
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (67)
+  password: '123456'
+  port: 5555
+  server: 8.216.6.223
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (68)
+  password: '123456'
+  port: 5555
+  server: 8.211.129.80
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (69)
+  password: '123456'
+  port: 5555
+  server: 8.216.16.98
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (70)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.15
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (71)
+  password: '123456'
+  port: 5555
+  server: 8.216.8.0
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (72)
+  password: '123456'
+  port: 5555
+  server: 8.216.3.83
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (73)
+  password: '123456'
+  port: 5555
+  server: 8.216.17.19
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (74)
+  password: '123456'
+  port: 5555
+  server: 8.216.1.127
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (75)
+  password: '123456'
+  port: 5555
+  server: 8.216.18.167
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (76)
+  password: '123456'
+  port: 5555
+  server: 8.211.130.59
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (77)
+  password: '123456'
+  port: 5555
+  server: 8.216.18.189
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (78)
+  password: '123456'
+  port: 5555
+  server: 8.211.154.126
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (79)
+  password: '123456'
+  port: 5555
+  server: 8.216.0.168
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (80)
+  password: '123456'
+  port: 5555
+  server: 8.216.9.217
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (81)
+  password: '123456'
+  port: 5555
+  server: 47.91.15.111
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (82)
+  password: '123456'
+  port: 5555
+  server: 8.216.8.176
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (83)
+  password: '123456'
+  port: 5555
+  server: 8.209.197.190
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (84)
+  password: '123456'
+  port: 5555
+  server: 47.91.15.175
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (85)
+  password: '123456'
+  port: 5555
+  server: 8.216.8.185
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 日本(yudou99.com 玉豆分享) (86)
+  password: '123456'
+  port: 5555
+  server: 8.216.4.146
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
 - cipher: aes-256-cfb
   name: 🇯🇵 JP 1 → tg@nicevpn123
   password: amazonskr05
@@ -2626,21 +3392,7 @@ proxies:
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - alterId: 0
   cipher: auto
-  name: '日本 044 #1'
-  network: ws
-  port: 443
-  server: fullaccesstojapannetsubnode1.azurewebsites.net
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
-  ws-opts:
-    headers:
-      Host: fullaccesstojapannetsubnode1.azurewebsites.net
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: '日本 045 #1'
+  name: '日本 035 #1'
   network: ws
   port: 80
   server: 103.35.188.226
@@ -2651,9 +3403,27 @@ proxies:
     headers:
       Host: 103.35.188.226
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: '日本 036 #1'
+  network: tcp
+  port: 49499
+  server: 139.162.125.97
+  skip-cert-verify: true
+  type: vmess
+  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+- alterId: 0
+  cipher: auto
+  name: '日本 037 #1'
+  network: tcp
+  port: 14935
+  server: 167.179.111.237
+  skip-cert-verify: true
+  type: vmess
+  uuid: e961894f-8e90-472f-98d3-09402e4be453
 - alterId: 64
   cipher: auto
-  name: '日本 046 #1'
+  name: '日本 045 #1'
   network: ws
   port: 46666
   server: 103.72.5.227
@@ -2667,7 +3437,7 @@ proxies:
     path: /path/191019072927
 - alterId: 64
   cipher: auto
-  name: '日本 047 #1'
+  name: '日本 046 #1'
   network: ws
   port: 48885
   server: 134.122.184.88
@@ -2679,100 +3449,67 @@ proxies:
     headers:
       Host: www.13146165.xyz
     path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: '日本 048 #1'
-  network: ws
-  port: 443
-  server: 146.56.162.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: '日本 049 #1'
-  network: ws
-  port: 443
-  server: 172.105.223.136
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 050 #1'
-  network: ws
-  port: 443
-  server: 124.156.225.184
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7a010436-7b4a-4e65-ade4-844ba074ad58
-  ws-opts:
-    headers:
-      Host: azjp.pengui.xyz
-    path: /
-- alterId: 4
-  cipher: auto
-  name: '日本 051 #1'
-  network: ws
-  port: 443
-  server: 202.61.141.130
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: 202.61.141.130
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 052 #1'
-  network: ws
-  port: 12889
-  server: gtm1.ktmwan.net
-  skip-cert-verify: true
-  type: vmess
-  uuid: 4941aa8d-07d2-408c-be2c-117debecba30
-  ws-opts:
-    headers:
-      Host: gtm1.ktmwan.net
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '日本 053 #1'
-  network: tcp
-  port: 49499
-  server: 139.162.125.97
-  skip-cert-verify: true
-  type: vmess
-  uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
-- alterId: 0
-  cipher: auto
-  name: '日本 054 #1'
-  network: tcp
-  port: 14935
-  server: 167.179.111.237
-  skip-cert-verify: true
-  type: vmess
-  uuid: e961894f-8e90-472f-98d3-09402e4be453
 - cipher: aes-256-gcm
-  name: 🇯🇵 JP | 47.91.16.50
+  name: '🇯🇵231576 | ⚡️Telegram = t.me/L... #1'
   password: '123456'
   port: 5555
-  server: 47.91.16.50
+  server: 47.91.18.202
   type: ss
-- name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #4'
+- cipher: aes-256-gcm
+  name: '🇯🇵07 | ⚡Telegram = t.me/ex_pro... #4'
+  password: '123456'
+  port: 5555
+  server: 47.91.29.60
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵07 | ⚡Telegram = t.me/ex_pro... #5'
+  password: '123456'
+  port: 5555
+  server: 47.91.31.150
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵10 | ⚡Telegram = t.me/ex_pro... #1'
+  password: '123456'
+  port: 5555
+  server: 8.209.197.190
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵231601 | ⚡️Telegram = t.me/L... #1'
+  password: '123456'
+  port: 5555
+  server: 8.209.249.205
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵08 | ⚡Telegram = t.me/ex_pro... #2'
+  password: '123456'
+  port: 5555
+  server: 8.211.128.146
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵06 | ⚡Telegram = t.me/ex_pro... #4'
+  password: '123456'
+  port: 5555
+  server: 8.216.17.189
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵08 | ⚡Telegram = t.me/ex_pro... #3'
+  password: '123456'
+  port: 5555
+  server: 8.216.5.230
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵03 | ⚡Telegram = t.me/ex_pro... #2'
+  password: '123456'
+  port: 5555
+  server: 8.216.8.185
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵06 | ⚡Telegram = t.me/ex_pro... #5'
+  password: '123456'
+  port: 5555
+  server: 8.216.9.154
+  type: ss
+- name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #7'
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 34745
   server: win2loxfde0303.gggrelay.org
@@ -2788,7 +3525,21 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: '🇯🇵03 | ⚡Telegram = t.me/ex_pro... #1'
+  name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #11'
+  network: ws
+  port: 443
+  server: JP032010.ssgreen.org
+  servername: JP032010.ssgreen.org
+  tls: true
+  type: vmess
+  uuid: f9a1ee44-21b3-4d0e-81b6-265fa2f3ba57
+  ws-opts:
+    headers:
+      Host: JP032010.ssgreen.org
+    path: /wes
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵03 | ⚡Telegram = t.me/ex_pro... #3'
   network: tcp
   port: 21014
   server: dog-jp.kunlun01dns.com
@@ -2798,7 +3549,7 @@ proxies:
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
 - alterId: 0
   cipher: auto
-  name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #7'
+  name: '🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵 #13'
   network: tcp
   port: 21017
   server: dog-jp.kunlun01dns.com
@@ -2807,32 +3558,32 @@ proxies:
   type: vmess
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
 - cipher: aes-128-gcm
-  name: 🇯🇵JP_22
+  name: '🇯🇵JP_22 #1'
   password: shadowsocks
   port: 443
   server: 149.22.87.241
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP_6
+  name: 🇯🇵JP_10
   password: shadowsocks
   port: 443
   server: 149.22.87.240
   type: ss
 - cipher: aes-128-gcm
-  name: '@tootffarangi🍓 #1'
+  name: '@SylphNet | 1405-09-05 #97'
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP_13
+  name: '🇯🇵JP_13 #1'
   password: Bwlqh7GcFB
   port: 53758
   server: jpa.123069.xyz
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.110.63.247-5745
+  name: 🇯🇵JP-168.110.63.247-5303
   network: ws
   port: 8081
   server: 168.110.63.247
@@ -2844,7 +3595,7 @@ proxies:
     path: /vless
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.110.63.247-0211
+  name: 🇯🇵JP-168.110.63.247-0189
   network: ws
   port: 8081
   server: 168.110.63.247
@@ -2864,10 +3615,10 @@ proxies:
   type: trojan
   udp: true
 - cipher: aes-128-gcm
-  name: 🇯🇵 Japan/Tokyo [GH:barry-far/V...
+  name: JP 🇯🇵 | @Raydikalx | 2459E0
   password: shadowsocks
   port: 443
-  server: 149.22.87.241
+  server: 149.22.87.240
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -2878,10 +3629,17 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-128-gcm
-  name: JP 🇯🇵 | @Raydikalx | 2459E0
+  name: 🇯🇵 Japan/Tokyo [GH:barry-far/V...
   password: shadowsocks
   port: 443
-  server: 149.22.87.240
+  server: 149.22.87.241
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 5C8144
+  password: '123456'
+  port: 5555
+  server: 8.216.17.19
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -2892,24 +3650,52 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 2E5748
-  password: '123456'
-  port: 5555
-  server: 8.209.197.190
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 409BAE
-  password: '123456'
-  port: 5555
-  server: 8.209.222.150
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
   name: JP 🇯🇵 | @Raydikalx | 528814
   password: '123456'
   port: 5555
   server: 8.216.9.154
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 389011
+  password: '123456'
+  port: 5555
+  server: 8.216.9.41
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 1CD8CC
+  password: '123456'
+  port: 5555
+  server: 8.209.245.25
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 98A01D
+  password: '123456'
+  port: 5555
+  server: 8.216.17.189
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 24274E
+  password: '123456'
+  port: 5555
+  server: 8.216.9.151
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | BB4A82
+  password: '123456'
+  port: 5555
+  server: 8.216.18.139
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 21926D
+  password: '123456'
+  port: 5555
+  server: 8.216.9.42
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -2919,18 +3705,186 @@ proxies:
   server: jpa.123069.xyz
   type: ss
   udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 89A2A2
+  password: '123456'
+  port: 5555
+  server: 8.211.131.30
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 0640DA
+  password: '123456'
+  port: 5555
+  server: 8.216.17.52
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | E6FE7D
+  password: '123456'
+  port: 5555
+  server: 8.216.18.170
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 0A4EFE
+  password: '123456'
+  port: 5555
+  server: 8.216.9.15
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 43302E
+  password: '123456'
+  port: 5555
+  server: 8.216.18.189
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 6A3E30
+  password: '123456'
+  port: 5555
+  server: 8.216.8.0
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | A6BF46
+  password: '123456'
+  port: 5555
+  server: 8.209.198.176
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 4AAAE2
+  password: '123456'
+  port: 5555
+  server: 8.209.249.205
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 355116
+  password: '123456'
+  port: 5555
+  server: 8.209.253.213
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | B3A7A1
+  password: '123456'
+  port: 5555
+  server: 8.211.174.60
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 470CF8
+  password: '123456'
+  port: 5555
+  server: 47.91.15.111
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 2EC390
+  password: '123456'
+  port: 5555
+  server: 8.216.9.190
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 4A0C02
+  password: '123456'
+  port: 5555
+  server: 8.216.3.160
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | DD482C
+  password: '123456'
+  port: 5555
+  server: 47.91.31.150
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 7650AA
+  password: '123456'
+  port: 5555
+  server: 8.211.128.146
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 220E71
+  password: '123456'
+  port: 5555
+  server: 8.209.196.11
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 9B5C33
+  name: JP 🇯🇵 | @Raydikalx | A940D6
   network: ws
-  port: 8081
-  server: 168.110.63.247
+  port: 80
+  server: 168.138.43.75
+  servername: 168.138.43.75
   tls: false
   type: vmess
   udp: true
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
-    path: /vless
+    headers:
+      Host: 168.138.43.75
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 98A489
+  network: ws
+  port: 8880
+  server: 161.33.20.255
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e0856508-d693-450a-a099-455091dc4f25
+  ws-opts:
+    path: e0856508-d693-450a-a099-455091dc4f25-vm
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 75C7ED
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 69CF0D
+  network: ws
+  port: 80
+  server: 168.138.43.75
+  servername: jp01.a0a.xyz
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: jp01.a0a.xyz
+    path: /cctv13.m3u8
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 1C3C00
+  password: '123456'
+  port: 5555
+  server: 8.216.1.127
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | B5851B
+  password: '123456'
+  port: 5555
+  server: 8.216.18.167
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
   name: JP 🇯🇵 | @Raydikalx | CE63C1
@@ -2946,23 +3900,11 @@ proxies:
     headers:
       Host: 168.110.63.247
     path: /vless
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 98A489
-  network: ws
-  port: 8880
-  server: 161.33.20.255
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e0856508-d693-450a-a099-455091dc4f25
-  ws-opts:
-    path: e0856508-d693-450a-a099-455091dc4f25-vm
 - cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | D68081
+  name: JP 🇯🇵 | @Raydikalx | EC4CA8
   password: '123456'
   port: 5555
-  server: 47.91.2.13
+  server: 8.216.16.98
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -2973,66 +3915,171 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 98A01D
+  name: JP 🇯🇵 | @Raydikalx | 0ABA16
   password: '123456'
   port: 5555
-  server: 8.216.17.189
+  server: 47.245.42.226
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | D9A12C
+  name: JP 🇯🇵 | @Raydikalx | 4FE7ED
   password: '123456'
   port: 5555
-  server: 47.91.18.202
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: JP 🇯🇵 | @Raydikalx | 1CD8CC
-  password: '123456'
-  port: 5555
-  server: 8.209.245.25
+  server: 47.91.15.175
   type: ss
   udp: true
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-152.69.193.245-4852
+  name: JP 🇯🇵 | @Raydikalx | 9B5C33
+  network: ws
+  port: 8081
+  server: 168.110.63.247
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  ws-opts:
+    path: /vless
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 3BCB69
+  password: '123456'
+  port: 5555
+  server: 8.209.221.90
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】33
+  password: '123456'
+  port: 5555
+  server: 47.74.41.139
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 41974C
+  password: '123456'
+  port: 5555
+  server: 47.74.27.11
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 180A2A
+  password: '123456'
+  port: 5555
+  server: 8.216.8.84
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | DF6400
+  password: '123456'
+  port: 5555
+  server: 8.216.10.204
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | D68081
+  password: '123456'
+  port: 5555
+  server: 47.91.2.13
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 80E313
+  password: '123456'
+  port: 5555
+  server: 8.211.130.59
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 1E069E
+  password: '123456'
+  port: 5555
+  server: 8.216.16.102
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | EBC150
+  password: '123456'
+  port: 5555
+  server: 8.216.15.55
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | FA5B93
+  password: '123456'
+  port: 5555
+  server: 8.216.4.158
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 04EB8D
+  password: '123456'
+  port: 5555
+  server: 47.74.17.125
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 2E5748
+  password: '123456'
+  port: 5555
+  server: 8.209.197.190
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 41533A
+  password: '123456'
+  port: 5555
+  server: 47.74.0.207
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 87B79C
+  password: '123456'
+  port: 5555
+  server: 8.216.3.83
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 409BAE
+  password: '123456'
+  port: 5555
+  server: 8.209.222.150
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 1481BE
+  password: '123456'
+  port: 5555
+  server: 8.216.4.146
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 53FD8D
+  password: '123456'
+  port: 5555
+  server: 8.209.221.183
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP 🇯🇵 | @Raydikalx | 94E5C8
+  password: '123456'
+  port: 5555
+  server: 8.211.132.94
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-109.123.230.157-1094
   network: ws
   port: 80
-  server: 152.69.193.245
+  server: 109.123.230.157
   servername: ''
   tls: false
   type: vmess
-  uuid: 6697776b-d009-413b-8708-822ee2e02515
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
-  network: ws
-  port: 23462
-  server: 64.176.51.214
-  tls: false
-  type: vmess
-  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
+  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
   ws-opts:
     headers:
-      Host: 64.176.51.214
-    path: /a15206
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本 | JPN
-  network: ws
-  port: 443
-  server: JP032010.ssgreen.org
-  servername: JP032010.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f9a1ee44-21b3-4d0e-81b6-265fa2f3ba57
-  ws-opts:
-    headers:
-      Host: JP032010.ssgreen.org
-    path: /wes
+      Host: internet.life.com.by
+    path: /takeshi.wiki
 - cipher: aes-256-gcm
   name: 🇯🇵_日本 (2)
   password: '123456'
@@ -3807,6 +4854,18 @@ proxies:
   tls: false
   type: ss
   udp: true
+- cipher: aes-256-gcm
+  name: 🇯🇵 JP | 47.74.24.29
+  password: '123456'
+  port: 5555
+  server: 47.74.24.29
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇯🇵 JP | 8.216.8.84
+  password: '123456'
+  port: 5555
+  server: 8.216.8.84
+  type: ss
 - alterId: 0
   cipher: auto
   name: '[JP] Art.29'
@@ -3828,6 +4887,18 @@ proxies:
   server: 154.36.158.197
   type: ss
   udp: true
+- cipher: aes-256-gcm
+  name: 🇯🇵JP_9
+  password: 3eOFeNssde7PYYMv
+  port: 443
+  server: 84.247.155.196
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇯🇵JP_1
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
 - name: 🇯🇵JP_30
   network: tcp
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
@@ -3836,7 +4907,15 @@ proxies:
   skip-cert-verify: true
   sni: nu3rb.supertoolify.com
   type: trojan
-- name: 🇯🇵JP_33
+- name: '🇯🇵JP_10 #1'
+  network: tcp
+  password: F3NzMNuYnG7akU2mSlBY
+  port: 8443
+  server: 193.123.160.109
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  type: trojan
+- name: '🇯🇵JP_33 #1'
   network: tcp
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 443
@@ -3845,8 +4924,58 @@ proxies:
   sni: nu3rb.supertoolify.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇯🇵JP_9
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
+  name: JP【高速节点：https://vip.a3f.xyz】32
+  password: '123456'
+  port: 5555
+  server: 47.74.49.154
   type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】34
+  password: '123456'
+  port: 5555
+  server: 47.91.16.50
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】35
+  password: '123456'
+  port: 5555
+  server: 47.74.18.249
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】36
+  password: '123456'
+  port: 5555
+  server: 47.245.40.193
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】37
+  password: '123456'
+  port: 5555
+  server: 47.74.24.29
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】38
+  password: '123456'
+  port: 5555
+  server: 47.245.54.15
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】39
+  password: '123456'
+  port: 5555
+  server: 47.245.32.129
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: JP【高速节点：https://vip.a3f.xyz】40
+  password: '123456'
+  port: 5555
+  server: 8.211.129.80
+  type: ss
+  udp: true
