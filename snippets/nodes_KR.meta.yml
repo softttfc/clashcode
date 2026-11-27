@@ -13,7 +13,7 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
-- name: 🇰🇷KR_1|4.7MB/s
+- name: 🇰🇷KR_1|1.9MB/s
   port: 1080
   server: 59.11.209.162
   skip-cert-verify: true
@@ -978,6 +978,7 @@ proxies:
   network: ws
   port: 80
   server: 132.145.80.230
+  servername: ''
   tls: false
   type: vmess
   uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
@@ -1003,7 +1004,7 @@ proxies:
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-132.145.80.230-0972
+  name: '[OpenRay] 🇰🇷KR-54'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -1025,26 +1026,16 @@ proxies:
   type: vmess
   udp: true
   uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | E9F97A
-  network: tcp
-  port: 443
-  server: 140.238.2.250
+- name: KR 🇰🇷 | @Raydikalx | E820CB
+  network: ws
+  port: 25555
+  server: 152.69.226.63
   tls: false
-  type: vmess
+  type: vless
   udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 168118
-  network: tcp
-  port: 80
-  server: 217.142.138.61
-  tls: false
-  type: vmess
-  udp: true
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    path: /
 - name: KR 🇰🇷 | @Raydikalx | 52445E
   network: ws
   port: 25555
@@ -1058,32 +1049,22 @@ proxies:
     headers:
       Host: 152.69.226.63
     path: /
-- name: KR 🇰🇷 | @Raydikalx | 6913F7
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9F3BE6
   network: ws
-  port: 25555
-  server: 152.69.226.63
+  port: 80
+  server: 132.145.80.230
+  servername: 132.145.80.230
   tls: false
-  type: vless
+  type: vmess
   udp: true
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
-    path: /
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: KR 🇰🇷 | @Raydikalx | A7BFCE
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 8hnBOcqsETW6u3TchfqlE0Y7wZ002v60fPlFM1qrww4
-    short-id: 'ad9e6079'
-  server: 8.220.198.29
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 91d2a8f3-6eb0-4b6a-a8f7-0beabcf06fb7
-- client-fingerprint: chrome
-  name: KR 🇰🇷 | @Raydikalx | 5CE318
+    headers:
+      Host: 132.145.80.230
+    path: /cctv13.m3u8
+- name: KR 🇰🇷 | @Raydikalx | 5CE318
   network: ws
   port: 443
   server: krd.80782636.xyz
@@ -1096,36 +1077,655 @@ proxies:
     headers:
       Host: krd.80782636.xyz
     path: /kw7x2mq9
+- alterId: 64
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9F13DD
+  network: ws
+  port: 30002
+  server: 107.148.70.79
+  servername: www.91397592.xyz
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91397592.xyz
+    path: /path/351212081517
 - cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1624... #2'
   password: qpowi_vip_tunnel_2026_secure
   port: 8388
   server: 211.233.33.228
   type: ss
+- name: '[OpenRay] 🇰🇷KR-4'
+  password: 1671a252e2a97dc2bda4e515475931da
+  port: 50160
+  server: 132.226.226.189
+  skip-cert-verify: true
+  sni: 132.226.226.189
+  tls: false
+  type: hysteria2
+- name: 🇰🇷KR_6
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152.69.231.175
+  skip-cert-verify: true
+  sni: 152-69-231-175.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-5'
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  port: 50160
+  server: 152.69.231.175
+  sni: 127.0.0.1
+  tls: false
+  type: hysteria2
+- name: 🇰🇷KR_23
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: 152-67-200-82.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-71'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: css.rbxcdn.com
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-70'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: google.com
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-59'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: t.me
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-60'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: whatsapp.com
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-44'
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  port: 50160
+  server: 152.67.200.82
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-7'
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  port: 50160
+  server: 150.230.252.217
+  sni: 150-230-252-217.liao.kdns.fr
+  tls: false
+  type: hysteria2
+- name: 🇰🇷
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-kr-003.fastervpn.world
+  skip-cert-verify: true
+  sni: vpn-kr-003.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: '@SylphNet | 1405-09-06 #83'
+  password: c8aa4ba6a243ddfdeb67515aa849624b
+  port: 7788
+  server: 8.220.244.33
+  sni: www.ddsos.cc
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-11'
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: 152.70.237.123
+  tls: false
+  type: hysteria2
+- name: '🇰🇷KR_38 #1'
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: bing.comsocks5%3A%2F%2F152.70.237.238%3A3128
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-61'
+  password: maintell
+  port: 2053
+  server: 152.70.237.123
+  skip-cert-verify: true
+  sni: 'off'
+  tls: false
+  type: hysteria2
+- name: '[OpenRay] 🇰🇷KR-58'
+  port: 1090
+  server: 121.169.46.116
+  tls: false
+  type: socks5
+- name: '[OpenRay] 🇰🇷KR-32'
+  port: 1080
+  server: 218.52.200.62
+  tls: false
+  type: socks5
+- name: '[OpenRay] 🇰🇷KR-51'
+  port: 1080
+  server: 43.155.128.61
+  tls: false
+  type: socks5
+- name: '[OpenRay] 🇰🇷KR-22'
+  port: 1080
+  server: 59.11.209.162
+  tls: false
+  type: socks5
 - cipher: chacha20-ietf-poly1305
-  name: 'کره جنوبی 🇰🇷 | @GetXConfig | #...'
+  name: '[OpenRay] 🇰🇷KR-1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.36.92.106
+  server: 3.38.213.49
   type: ss
-- name: 🇰🇷 South Korea Seoul | ⏱1289ms...
-  port: 443
-  server: 8.220.198.29
+- cipher: chacha20-ietf-poly1305
+  name: '[OpenRay] 🇰🇷KR-13'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.201.46.216
+  type: ss
+- cipher: aes-256-cfb
+  name: '[OpenRay] 🇰🇷KR-8'
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.134
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇰🇷KR_3
+  password: qwerREWQ@@
+  port: 4652
+  server: 218.237.185.234
+  type: ss
+- cipher: aes-256-gcm
+  name: '[OpenRay] 🇰🇷 KR-3097'
+  password: ac9c0a7b
+  port: 49642
+  server: ce1fc2d8.krkt.hkssip.com
+  type: ss
+- name: '[OpenRay] 🇰🇷KR-18'
+  password: 463f7453753f4d47
+  port: 20045
+  server: 168.107.51.32
+  sni: ikr200.zxom.eu.org
+  type: trojan
+- name: 🇰🇷KR_44
+  network: tcp
+  password: 463f7453753f4d47
+  port: 20045
+  server: 168.107.51.32
+  sni: ikr200.zxom.eu.org
+  type: trojan
+- name: '[OpenRay] 🇰🇷KR-17 #1'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  type: trojan
+- name: '🇰🇷KR_14 #1'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sni: 154.90.62.70
+  type: trojan
+- name: '[OpenRay] 🇰🇷 KR-3144'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 13.124.124.46
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3143'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 13.125.190.159
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3141'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 13.125.87.206
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3142'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 3.36.121.228
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3130'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 3.38.183.214
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3136'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 43.203.196.210
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3133'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 43.203.248.21
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3139'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 52.78.78.32
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3137'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 52.79.81.12
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3123'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 54.180.133.104
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷 KR-3138'
+  network: tcp
+  port: 8686
+  reality-opts:
+    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
+    short-id: '628b3c90c98ead4f'
+  server: 54.180.201.182
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+- name: '[OpenRay] 🇰🇷KR-19'
+  network: ws
+  port: 25555
+  server: 152.69.226.63
   tls: false
   type: vless
-  uuid: 91d2a8f3-6eb0-4b6a-a8f7-0beabcf06fb7
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-🚀@VPNine1
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    headers:
+      Host: 152.69.226.63
+    path: /
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷KR-27'
   network: tcp
-  port: 19283
-  server: kr.075661.xyz
+  port: 2053
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: '3c4041d3'
+  server: 47.80.19.173
+  servername: gateway.icloud.com
   tls: true
-  type: vmess
-  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
+  type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷KR-43'
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms
+    short-id: '3c4041d3'
+  server: 47.80.19.173
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  uuid: 319d5ffb-57e8-4bbd-ac0c-5d55d0c253de
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇰🇷KR_40
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: vrFq4-k-eiTSyRF3T3e7Fqmlv4XSKmByKYsw55zeX3w
+    short-id: 'b79a86e2b1a586a0'
+  server: 43.108.109.112
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  uuid: 4ded3111-b418-475a-93de-0360932508b2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷 KR-3019'
+  network: raw
+  port: 443
+  reality-opts:
+    public-key: OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w
+    short-id: '71110d3f7ef57760'
+  server: 47.80.14.8
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  uuid: 581cb8c3-dadb-4e10-a18b-5e79bfe7bd93
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷KR-62'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
+    short-id: 'ca193e889d958f81'
+  server: 141.164.43.178
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 583cc910-b57c-4dd0-a4a7-cea51a30b032
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷 KR-2234'
+  network: tcp
+  port: 13672
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '48050fab'
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷 KR-2235'
+  network: tcp
+  port: 18967
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: '48050fab'
+  server: 3.39.4.109
+  servername: www.apple.com
+  tls: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇰🇷KR-46'
+  network: tcp
+  port: 443
+  server: 43.155.175.232
+  servername: ifdmbpb.kdns.fr
+  tls: true
+  type: vless
+  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
+- name: '[OpenRay] 🇰🇷 KR-3131'
+  network: ws
+  port: 2087
+  server: 158.247.253.111
+  servername: shephe.dpdns.org
+  tls: true
+  type: vless
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  ws-opts:
+    headers:
+      Host: shephe.dpdns.org
+    path: /fp=chrome
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷 KR-3134'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: aVGSSemhxqqDg75lUDBxCNZZXfuBb4QrU8yZYnJD6nk
+    short-id: 'f554f56d31'
+  server: kr1.miyazono-kaori.com
+  servername: www.coway.com
+  tls: true
+  type: vless
+  uuid: a266761e-a42a-4be2-b1af-804062e91ef7
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: '[OpenRay] 🇰🇷 KR-3135'
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 6pZxjabeHoyJlsc2cP3Q5YK7G0bIOQwzWFyiarbUQXc
+    short-id: 'c8af1462debbc1'
+  server: kr2.miyazono-kaori.com
+  servername: www.coway.com
+  tls: true
+  type: vless
+  uuid: a266761e-a42a-4be2-b1af-804062e91ef7
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇰🇷 KR-2998'
+  network: tcp
+  port: 2053
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+    short-id: '429499c03d4cc8a0'
+  server: 151.245.106.49
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+- client-fingerprint: firefox
+  name: 🇦🇪AE_3
+  network: xhttp
+  port: 25813
+  reality-opts:
+    public-key: G2aHDXAHF_UIGenxAT3IOqQh8yMKbyEiFt0b_iQtGUs
+    short-id: '1e5d194f7725abeb'
+  server: 91.186.200.112
+  servername: ae.jetstoreapp.ru
+  tls: true
+  type: vless
+  uuid: cb7ceae2-6f47-4059-8bf0-371b62a0f0ce
+  ws-opts:
+    headers:
+      Host: ae.jetstoreapp.ru
+    path: /4a65435f3a1b
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇰🇷KR-53'
+  network: xhttp
+  port: 25813
+  reality-opts:
+    public-key: G2aHDXAHF_UIGenxAT3IOqQh8yMKbyEiFt0b_iQtGUs
+    short-id: '1e5d194f7725abeb'
+  server: 91.186.200.112
+  servername: ae.jetstoreapp.ru
+  tls: true
+  type: vless
+  uuid: cb7ceae2-6f47-4059-8bf0-371b62a0f0ce
+  ws-opts:
+    headers:
+      Host: 91.186.200.112
+    path: /4a65435f3a1b
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇰🇷KR-26'
+  network: xhttp
+  port: 25813
+  reality-opts:
+    public-key: G2aHDXAHF_UIGenxAT3IOqQh8yMKbyEiFt0b_iQtGUs
+    short-id: '1e5d194f7725abeb'
+  server: 91.186.200.112
+  servername: ae.jetstoreapp.ru
+  tls: true
+  type: vless
+  uuid: cb7ceae2-6f47-4059-8bf0-371b62a0f0ce
+  ws-opts:
+    path: /4a65435f3a1b
+- client-fingerprint: ''
+  name: '[OpenRay] 🇰🇷 KR-2013'
+  network: tcp
+  port: 40701
+  reality-opts:
+    public-key: TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA
+    short-id: '7ef3a8ab2886'
+  server: 43.108.48.169
+  servername: amazon.com
+  tls: true
+  type: vless
+  uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
+- client-fingerprint: firefox
+  name: '[OpenRay] 🇰🇷KR-67'
+  network: tcp
+  port: 40701
+  reality-opts:
+    public-key: TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA
+    short-id: '7ef3a8ab2886'
+  server: 43.108.48.169
+  servername: amazon.com
+  tls: true
+  type: vless
+  uuid: cdb7d825-9892-4d6f-80b8-7add83159dac
 - alterId: 0
   cipher: auto
-  name: '@SylphNet | 1405-09-05 #69'
+  name: '@SylphNet | 1405-09-06 #117'
+  network: tcp
+  port: 800
+  server: 129.154.61.196
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-15'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-24'
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-37'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-57'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-48'
+  network: http
+  port: 80
+  server: 43.155.199.22
+  tls: false
+  type: vmess
+  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-28'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-52'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -1137,6 +1737,33 @@ proxies:
     headers:
       Host: 'null'
     path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '@SylphNet | 1405-09-06 #125'
+  network: raw
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-23 #1'
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-72'
+  network: http
+  port: 80
+  server: 217.142.138.61
+  tls: false
+  type: vmess
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - name: '🇰🇷KR-🚀@VPNine1 #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
@@ -1147,7 +1774,7 @@ proxies:
   type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1 #1'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
   server: 13.124.238.118
@@ -1155,88 +1782,63 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
-  network: ws
-  port: 443
-  server: krd.80782636.xyz
-  servername: krd.80782636.xyz
-  tls: true
-  type: vless
-  uuid: db906786-8c49-4b17-9182-cea680ef954d
-  ws-opts:
-    headers:
-      Host: krd.80782636.xyz
-    path: /kw7x2mq9
-- name: '🇰🇷KR_1|5.0MB/s #1'
+- name: 🇰🇷KR_1|4.7MB/s
   port: 1080
   server: 59.11.209.162
   skip-cert-verify: true
   type: socks5
-- client-fingerprint: chrome
+- cipher: aes-256-gcm
   name: 🇰🇷_韩国
-  network: ws
+  password: qpowi_vip_tunnel_2026_secure
+  port: 8388
+  server: 211.233.33.228
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 KR | 8.220.208.78
+  password: wenz@1997
+  port: 8388
+  server: 8.220.208.78
+  type: ss
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  name: 🇰🇷 韩国 | KOR
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: krd.80782636.xyz
-  servername: krd.80782636.xyz
+  server: 3.35.175.163
   skip-cert-verify: true
-  sni: krd.80782636.xyz
-  tls: true
-  type: vless
+  sni: www.bing.com
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 韩国 | KOR 2
+  password: aqfNMqGyxRTHwXOy
+  port: 35334
+  server: e.node001.download
+  type: ss
   udp: true
-  uuid: db906786-8c49-4b17-9182-cea680ef954d
-  ws-opts:
-    headers:
-      Host: krd.80782636.xyz
-    path: /kw7x2mq9
 - client-fingerprint: chrome
-  name: 🇰🇷_韩国 (2)
-  network: ws
-  port: 12101
-  server: 14.44.19.57
-  servername: senflarelink-node-nwz76h.pages.dev
-  skip-cert-verify: true
-  sni: senflarelink-node-nwz76h.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  ws-opts:
-    headers:
-      Host: senflarelink-node-nwz76h.pages.dev
-    path: /
-- client-fingerprint: chrome
-  name: 🇰🇷_韩国 (3)
-  network: ws
-  port: 12101
-  server: 14.44.19.57
-  servername: senflarelink-node-nwz76h.pages.dev
-  skip-cert-verify: true
-  sni: senflarelink-node-nwz76h.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  ws-opts:
-    headers:
-      Host: senflarelink-node-nwz76h.pages.dev
-    path: /flow=
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇰🇷_韩国 (4)
+  name: 🇰🇷 韩国 | KOR 3
+  network: tcp
+  packet-encoding: xudp
   port: 443
   reality-opts:
-    public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
-    short-id: 'e04a526b0b09c765'
-  server: 43.201.31.151
-  servername: api.moment-line.com
-  skip-cert-verify: true
-  sni: api.moment-line.com
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: '2da72ce6'
+  server: 130.94.30.242
+  servername: navi.bankrate.com
   tls: true
   type: vless
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 韩国 | KOR 4
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.35.175.163
+  type: ss
   udp: true
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-- name: 🇰🇷
+- name: '🇰🇷 #1'
   network: ws
   port: 8880
   server: 104.17.144.29
@@ -1271,29 +1873,8 @@ proxies:
   sni: 127.0.0.1
   tls: false
   type: hysteria2
-- name: 🇰🇷KR_6
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  port: 50160
-  server: 152.69.231.175
-  skip-cert-verify: true
-  sni: 152-69-231-175.liao.kdns.fr
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 🇰🇷KR_40
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: vrFq4-k-eiTSyRF3T3e7Fqmlv4XSKmByKYsw55zeX3w
-    short-id: 'b79a86e2b1a586a0'
-  server: 43.108.109.112
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  uuid: 4ded3111-b418-475a-93de-0360932508b2
-- client-fingerprint: chrome
-  name: '🇰🇷 #1'
+  name: '🇰🇷 #2'
   network: ws
   port: 25524
   server: 116.93.199.28
@@ -1306,28 +1887,6 @@ proxies:
     headers:
       Host: ylnhh.cc.cd
     path: /Telegram🇨🇳@WangCai2
-- name: 🇰🇷KR_42
-  network: tcp
-  password: 463f7453753f4d47
-  port: 20045
-  server: ikr200.zxom.eu.org
-  sni: ikr200.zxom.eu.org
-  type: trojan
-- name: 🇰🇷KR_44
-  network: tcp
-  password: 463f7453753f4d47
-  port: 20045
-  server: 168.107.51.32
-  sni: ikr200.zxom.eu.org
-  type: trojan
-- name: 🇰🇷KR_23
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: 152-67-200-82.liao.kdns.fr
-  tls: false
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 🇰🇷KR_47
@@ -1341,38 +1900,6 @@ proxies:
   tls: true
   type: vless
   uuid: 5807f1c4-b50e-4ec0-8d01-274045da0da5
-- name: '🇰🇷KR_38 #1'
-  password: maintell
-  port: 2053
-  server: 152.70.237.123
-  skip-cert-verify: true
-  sni: bing.comsocks5%3A%2F%2F152.70.237.238%3A3128
-  tls: false
-  type: hysteria2
-- name: 🇰🇷KR_7
-  network: ws
-  port: 25555
-  server: 152.69.226.63
-  servername: 152.69.226.63
-  tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  ws-opts:
-    path: /
-- name: '🇰🇷KR_14 #1'
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
-  skip-cert-verify: true
-  sni: 154.90.62.70
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_3
-  password: qwerREWQ@@
-  port: 4652
-  server: 218.237.185.234
-  type: ss
 - cipher: aes-256-gcm
   name: KR【高速节点：https://vip.a3f.xyz】18
   password: qpowi_vip_tunnel_2026_secure

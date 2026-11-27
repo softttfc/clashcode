@@ -779,6 +779,7 @@ proxies:
   network: ws
   port: 80
   server: 132.145.80.230
+  servername: ''
   tls: false
   type: vmess
   uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
@@ -804,7 +805,7 @@ proxies:
   type: ss
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-132.145.80.230-0972
+  name: '[OpenRay] 🇰🇷KR-54'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -828,24 +829,33 @@ proxies:
   uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | E9F97A
-  network: tcp
-  port: 443
-  server: 140.238.2.250
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 168118
-  network: tcp
+  name: KR 🇰🇷 | @Raydikalx | 9F3BE6
+  network: ws
   port: 80
-  server: 217.142.138.61
+  server: 132.145.80.230
+  servername: 132.145.80.230
   tls: false
   type: vmess
   udp: true
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: 132.145.80.230
+    path: /cctv13.m3u8
+- alterId: 64
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9F13DD
+  network: ws
+  port: 30002
+  server: 107.148.70.79
+  servername: www.91397592.xyz
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91397592.xyz
+    path: /path/351212081517
 - cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1624... #2'
   password: qpowi_vip_tunnel_2026_secure
@@ -853,23 +863,145 @@ proxies:
   server: 211.233.33.228
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 'کره جنوبی 🇰🇷 | @GetXConfig | #...'
+  name: '[OpenRay] 🇰🇷KR-1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.36.92.106
+  server: 3.38.213.49
   type: ss
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-🚀@VPNine1
+- cipher: chacha20-ietf-poly1305
+  name: '[OpenRay] 🇰🇷KR-13'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.201.46.216
+  type: ss
+- cipher: aes-256-cfb
+  name: '[OpenRay] 🇰🇷KR-8'
+  password: 1234!@#$
+  port: 1774
+  server: 49.254.204.134
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇰🇷KR_3
+  password: qwerREWQ@@
+  port: 4652
+  server: 218.237.185.234
+  type: ss
+- cipher: aes-256-gcm
+  name: '[OpenRay] 🇰🇷 KR-3097'
+  password: ac9c0a7b
+  port: 49642
+  server: ce1fc2d8.krkt.hkssip.com
+  type: ss
+- name: '[OpenRay] 🇰🇷KR-18'
+  password: 463f7453753f4d47
+  port: 20045
+  server: 168.107.51.32
+  sni: ikr200.zxom.eu.org
+  type: trojan
+- name: 🇰🇷KR_44
   network: tcp
-  port: 19283
-  server: kr.075661.xyz
-  tls: true
-  type: vmess
-  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
+  password: 463f7453753f4d47
+  port: 20045
+  server: 168.107.51.32
+  sni: ikr200.zxom.eu.org
+  type: trojan
+- name: '[OpenRay] 🇰🇷KR-17 #1'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  type: trojan
+- name: '🇰🇷KR_14 #1'
+  network: tcp
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  port: 56127
+  server: 154.90.62.70
+  skip-cert-verify: true
+  sni: 154.90.62.70
+  type: trojan
 - alterId: 0
   cipher: auto
-  name: '@SylphNet | 1405-09-05 #69'
+  name: '@SylphNet | 1405-09-06 #117'
+  network: tcp
+  port: 800
+  server: 129.154.61.196
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-15'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-24'
+  network: tcp
+  port: 443
+  server: 140.238.2.250
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-37'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-57'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-48'
+  network: http
+  port: 80
+  server: 43.155.199.22
+  tls: false
+  type: vmess
+  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-28'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-52'
   network: ws
   port: 80
   server: 132.145.80.230
@@ -881,34 +1013,62 @@ proxies:
     headers:
       Host: 'null'
     path: /cctv13.m3u8
-- name: 🇰🇷KR_42
+- alterId: 0
+  cipher: auto
+  name: '@SylphNet | 1405-09-06 #125'
+  network: raw
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-23 #1'
   network: tcp
-  password: 463f7453753f4d47
-  port: 20045
-  server: ikr200.zxom.eu.org
-  sni: ikr200.zxom.eu.org
-  type: trojan
-- name: 🇰🇷KR_44
-  network: tcp
-  password: 463f7453753f4d47
-  port: 20045
-  server: 168.107.51.32
-  sni: ikr200.zxom.eu.org
-  type: trojan
-- name: '🇰🇷KR_14 #1'
-  network: tcp
-  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
-  port: 56127
-  server: 154.90.62.70
+  port: 443
+  server: 140.238.2.250
+  tls: false
+  type: vmess
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+- alterId: 0
+  cipher: auto
+  name: '[OpenRay] 🇰🇷KR-72'
+  network: http
+  port: 80
+  server: 217.142.138.61
+  tls: false
+  type: vmess
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+- cipher: aes-256-gcm
+  name: 🇰🇷_韩国
+  password: qpowi_vip_tunnel_2026_secure
+  port: 8388
+  server: 211.233.33.228
   skip-cert-verify: true
-  sni: 154.90.62.70
-  type: trojan
-- cipher: aes-256-cfb
-  name: 🇰🇷KR_3
-  password: qwerREWQ@@
-  port: 4652
-  server: 218.237.185.234
+  tls: false
   type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 KR | 8.220.208.78
+  password: wenz@1997
+  port: 8388
+  server: 8.220.208.78
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 韩国 | KOR 2
+  password: aqfNMqGyxRTHwXOy
+  port: 35334
+  server: e.node001.download
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷 韩国 | KOR 4
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.35.175.163
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: KR【高速节点：https://vip.a3f.xyz】18
   password: qpowi_vip_tunnel_2026_secure
