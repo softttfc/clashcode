@@ -1,60 +1,6 @@
 proxies:
 - client-fingerprint: chrome
   encryption: none
-  name: 🇹🇼[www.v2nodes.com] vless-TW-1...
-  network: ws
-  port: 443
-  server: 60.248.219.53
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-- name: 🇹🇼[www.v2nodes.com] trojan-TW-...
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 28478
-  server: ddrr1.tube-cat.com
-  skip-cert-verify: true
-  sni: r.tw2.cat.bilibili.com
-  type: trojan
-- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 59188
-  server: ddrr2.tube-cat.com
-  skip-cert-verify: true
-  sni: r.tw3.cat.bilibili.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
-  network: tcp
-  port: 2510
-  server: world.t.51guangtaobao.com
-  tls: false
-  type: vmess
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇹🇼TW_1|2.0MB/s
-  network: ws
-  port: 8443
-  server: 83.147.14.62
-  tls: true
-  type: vless
-  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW_1|4.8MB/s
-  network: ws
-  port: 16616
-  server: d1eyz.xiaoyan.io
-  tls: false
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: d1eyz.xiaoyan.io
-    path: /
-- client-fingerprint: chrome
-  encryption: none
   flow: xtls-rprx-vision
   name: 🇹🇼 台湾
   network: tcp
@@ -66,6 +12,15 @@ proxies:
   tls: true
   type: vless
   uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇹🇼 台湾3
+  network: ws
+  port: 8443
+  server: 154.40.61.186
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
 - name: 🇹🇼TW_2|3.3MB/s
   password: 209e77f0-cfbc-4361-a34d-75bb13a79895
   port: 22508
@@ -80,13 +35,6 @@ proxies:
   skip-cert-verify: true
   sni: v1-dy.ixigua.com
   type: trojan
-- name: 🇹🇼TW_5|2.8MB/s
-  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
-  port: 16272
-  server: vss.fireduocc.com
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  type: trojan
 - name: 🇹🇼TW_4|3.6MB/s
   password: 209e77f0-cfbc-4361-a34d-75bb13a79895
   port: 22507
@@ -94,3 +42,131 @@ proxies:
   skip-cert-verify: true
   sni: i1.hdslb.com
   type: trojan
+- name: 🇹🇼TW_5|2.8MB/s
+  password: 209e77f0-cfbc-4361-a34d-75bb13a79895
+  port: 16272
+  server: vss.fireduocc.com
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  type: trojan
+- name: 🇹🇼TW_3|1.3MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 28478
+  server: ddrr1.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw2.cat.bilibili.com
+  type: trojan
+- name: 🇹🇼TW_2|2.9MB/s
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 59188
+  server: ddrr2.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw3.cat.bilibili.com
+  type: trojan
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇹🇼TW_1|2.0MB/s
+  network: ws
+  port: 8443
+  server: 83.147.14.62
+  tls: true
+  type: vless
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+- client-fingerprint: chrome
+  encryption: none
+  name: TW台湾(mibei77.com 米贝节点分享)
+  network: ws
+  port: 443
+  server: 162.159.198.1
+  sni: v6-95o.pages.dev
+  tls: true
+  type: vless
+  uuid: bf14dc50-e9f2-49fd-8642-620446edeafb
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: TW台湾(mibei77.com 米贝节点分享) (6)
+  network: tcp
+  port: 47396
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: '!!str fa514b83'
+  server: free.fugui.lol
+  sni: swdist.apple.com
+  tls: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰_HK_中国香港->🇹🇼_TW_中国台湾
+  network: tcp
+  port: 2510
+  server: world.t.51guangtaobao.com
+  tls: false
+  type: vmess
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+- encryption: none
+  name: TW台湾(mibei77.com 米贝节点分享) (2)
+  network: ws
+  port: 443
+  server: 104.20.63.254
+  sni: joeypg.ezbiz.dynv6.net
+  tls: true
+  type: vless
+  uuid: cd3d8e5c-794f-4c34-8222-59d3e99e35fe
+- name: '🇹🇼 🇨🇳 台湾 | TWN #1 [fc41cbe0f8d...'
+  password: 40a8a71b-91d3-4b63-9907-5e12ad2259c1
+  port: 20200
+  server: sclass-c2.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇹🇼_台湾 (19)
+  password: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  port: 443
+  server: zephyr-tw1.bpca2026.top
+  skip-cert-verify: true
+  sni: zephyr-tw1.bpca2026.top
+  type: trojan
+- name: 🇹🇼_台湾 (18)
+  password: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  port: 443
+  server: zephyr-tw2.bpca2026.top
+  skip-cert-verify: true
+  sni: zephyr-tw2.bpca2026.top
+  type: trojan
+- name: 🇹🇼_台湾 (20)
+  password: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  port: 443
+  server: zhilegelian2.bpca2026.top
+  skip-cert-verify: true
+  sni: zhilegelian2.bpca2026.top
+  type: trojan
+- name: 🇹🇼_台湾 (21)
+  password: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  port: 443
+  server: t2w2t2w2.bpca2026.top
+  skip-cert-verify: true
+  sni: t2w2t2w2.bpca2026.top
+  type: trojan
+- name: 🇹🇼_台湾 (22)
+  password: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  port: 443
+  server: zhilegelian3.bpca2026.top
+  skip-cert-verify: true
+  sni: zhilegelian3.bpca2026.top
+  type: trojan
+- client-fingerprint: ios
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇹🇼_台湾 (23)
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: ZApPToamQ8CuRx9RF5nQ_rrviDPAgw8-OVbyHtzQTgQ
+    short-id: '!!str 961cb9'
+  server: zhilegelian1.bpca2026.top
+  sni: www.visa.com.tw
+  tls: true
+  type: vless
+  uuid: 531d9e93-53be-4f05-a9c1-33490d4da2f3

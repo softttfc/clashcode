@@ -1,4 +1,54 @@
 proxies:
+- encryption: none
+  name: 🇸🇪SE_3|1.5MB/s|A004-260618 [19...
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  tls: false
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪SE_7|1.9MB/s|B007-260618 [4f...
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇸🇪SE_8|2.5MB/s|A001-260618 [76...
+  network: grpc
+  port: 48115
+  server: 138.124.86.230
+  tls: true
+  type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪SE_10|2.4MB/s|B007-260618 [8...
+  network: tcp
+  port: 1270
+  server: 62.93.166.184
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- cipher: aes-256-gcm
+  name: 🇸🇪SE_2|2.7MB/s|M003-260806 [ed...
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇪SE_14|3.1MB/s|S004-260618 [0...
+  network: grpc
+  port: 48115
+  server: leviko-se6979.shopingggg.ir
+  tls: true
+  type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
 - client-fingerprint: firefox
   encryption: none
   name: 🇸🇪[www.v2nodes.com] vless-SE-1...
@@ -8,75 +58,12 @@ proxies:
   tls: true
   type: vless
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-- encryption: none
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  tls: false
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1615...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 138.199.55.243
-  type: ss
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 瑞典(mibei77.com 米贝节点分享)
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
-    short-id: '!!str 2a67748b0d641e16'
-  server: 195.72.62.7
-  sni: fexzoo.net
-  tls: true
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-- client-fingerprint: firefox
-  encryption: none
-  name: 瑞典(mibei77.com 米贝节点分享) (2)
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: '!!str a7c92e4b10d6f835'
-  server: 88.216.60.73
-  sni: ns-api-gw.galioncc.com
-  tls: true
-  type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-- alterId: 0
-  cipher: auto
-  name: 🇸🇪SE_1|400KB/s|B007-260618 [4f...
-  network: tcp
-  port: 1270
-  server: 138.199.55.230
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - name: SE 12 → tg@nicevpn123
   password: dGKXcHgs3P
   port: 80
   server: 185.146.173.66
   skip-cert-verify: true
   type: trojan
-- alterId: 64
-  cipher: auto
-  name: SE 17 → tg@nicevpn123
-  network: ws
-  port: 443
-  server: 148.135.33.228
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: 148.135.33.228
-    path: /
 - alterId: 0
   cipher: auto
   name: SE 20 → tg@nicevpn123
@@ -103,52 +90,214 @@ proxies:
     headers:
       Host: 185.146.173.59
     path: /
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | B239B4
-  network: tcp
-  port: 1270
-  server: 62.93.166.184
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | A4FE74
-  network: tcp
-  port: 1270
-  server: leviko-se4660.shopingggg.ir
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇸🇪_SE_瑞典
+  name: SE 17 → tg@nicevpn123
   network: ws
-  port: 80
-  server: www.aetv.com
-  sni: amd.al
-  tls: false
+  port: 443
+  server: 148.135.33.228
+  tls: true
   type: vmess
-  uuid: 7dc78582-88a8-4b4c-9e3e-50831d672766
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
-      Host: amd.al
-    path: /XESALISTHEBEST?ed=2048
+      Host: 148.135.33.228
+    path: /
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_1|1.0MB/s
+  network: tcp
+  port: 443
+  server: sw6.yndx-game.com
+  tls: true
+  type: vless
+  uuid: eb83b44c-ad8c-4658-9923-313e59bb4d5e
 - client-fingerprint: chrome
   encryption: none
-  name: SE 🇸🇪 | @Raydikalx | 7C267E
+  name: 🇸🇪SE_14|2.5MB/s|M003-260806 [c...
   network: grpc
   port: 48115
-  server: leviko-se6979.shopingggg.ir
+  server: leviko-se4581.shopingggg.ir
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
 - encryption: none
-  name: SE 🇸🇪 | @Raydikalx | 96B1AB
+  name: 🇸🇪SE_13|944KB/s|M003-260806 [f...
   network: ws
   port: 443
-  server: me.spider1999.kdns.fr
+  server: sajed.kdns.fr
   tls: false
   type: vless
-  uuid: 98b60d84-abf7-4211-81b5-c77d980a8b9c
+  uuid: cffa0e31-7cce-4541-8a2e-4e115873090b
+- alterId: 64
+  cipher: auto
+  name: 瑞典 005 [3eecd1b54976f756]
+  network: ws
+  port: 443
+  server: 148.135.33.140
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: 148.135.33.140
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 瑞典 008 [658d9990cff2e362]
+  network: ws
+  port: 80
+  server: 185.146.173.25
+  tls: false
+  type: vmess
+  uuid: e3cb5c38-1168-46ad-aec4-62ffd3614690
+  ws-opts:
+    headers:
+      Host: 185.146.173.25
+    path: /
+- encryption: none
+  name: 瑞典 006 [fd38cc16550f9544]
+  network: ws
+  port: 80
+  server: 146.75.55.82
+  tls: true
+  type: vless
+  uuid: 83b3d135-0ab9-4898-8fbf-b0334681b8fb
+- client-fingerprint: chrome
+  encryption: none
+  name: 瑞典 001
+  network: ws
+  port: 443
+  server: ipfast.kingmna.com
+  tls: true
+  type: vless
+  uuid: c6b0a7f0-4a4e-47aa-975a-35988278ab85
+- encryption: none
+  name: 瑞典 010
+  network: ws
+  port: 80
+  server: 185.146.173.59
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- encryption: none
+  name: 瑞典 012
+  network: ws
+  port: 443
+  server: 146.75.59.186
+  tls: true
+  type: vless
+  uuid: 153900df-5824-4b55-98c4-418c5baea523
+- encryption: none
+  name: 瑞典 014
+  network: ws
+  port: 8080
+  server: 185.146.173.37
+  tls: true
+  type: vless
+  uuid: 4cac189c-5611-4cfa-9946-bf1b2b3d152c
+- encryption: none
+  name: 瑞典 016
+  network: ws
+  port: 443
+  server: 146.75.57.7
+  tls: true
+  type: vless
+  uuid: 8fdeb819-df0c-456d-9a1d-e3a9950ece4d
+- encryption: none
+  name: 瑞典 017
+  network: ws
+  port: 8080
+  server: 185.146.173.39
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- encryption: none
+  name: 瑞典 018
+  network: ws
+  port: 80
+  server: 185.146.173.20
+  tls: true
+  type: vless
+  uuid: a1acd85e-857f-4b89-9a5f-4ad83a35ef86
+- encryption: none
+  name: 瑞典 019
+  network: ws
+  port: 80
+  server: 185.146.173.237
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 瑞典_15C0EF
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
+    short-id: '!!str 2a67748b0d641e16'
+  server: 195.72.62.7
+  tls: true
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+- name: '%F0%9F%87%B8%F0%9F%87%AA_SE_%E...'
+  password: f91f38bb-72d5-4f3e-8311-1788986293f5
+  port: 443
+  server: 185.146.173.29
+  skip-cert-verify: true
+  sni: iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpn_iran_mehr_vpnc.iran-mehr14.ir
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇸🇪_SE_瑞典->🇫🇮_FI_芬兰
+  network: ws
+  port: 80
+  server: 185.146.173.25
+  sni: google.whatsapp.snapp.torob.basalam.sarzamiiinahang.ir.
+  tls: false
+  type: vmess
+  uuid: 27ee8047-5da9-4433-8c85-45f5feb1967f
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.sarzamiiinahang.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 03C877
+  network: tcp
+  port: 1270
+  server: leviko-se3307.shopingggg.ir
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | A67EA8
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: mg2MoLpb8B51aZiko_nW2SBRoaudv-O6HLHx8VYP7Do
+    short-id: '!!str '
+  server: 31.77.158.172
+  tls: true
+  type: vless
+  uuid: 7d63243c-983e-44db-a1b8-13dc3fd6f7a2
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  name: SE 🇸🇪 | @Raydikalx | DC48B5
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: mg2MoLpb8B51aZiko_nW2SBRoaudv-O6HLHx8VYP7Do
+    short-id: '!!str '
+  server: swe1.baterium.space
+  tls: true
+  type: vless
+  uuid: 7d63243c-983e-44db-a1b8-13dc3fd6f7a2
