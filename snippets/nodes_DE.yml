@@ -15,6 +15,26 @@ proxies:
     headers:
       HOST: node4.rtxconfigz.com
     path: /@Malinda6104
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪 机场推荐:dafei.de 德国 24
+  network: tcp
+  port: 28059
+  server: 194.110.210.41
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE德国
+  port: 52080
+  server: 23.165.200.150
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
 - name: DE德国(mibei77.com 米贝节点分享) (9)
   network: ws
   password: zhs000666
@@ -203,35 +223,6 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/68.0.3440.106 Safari/537.36
     path: /trojan-ws
-- client-fingerprint: chrome
-  name: 🇩🇪DE_153|2.4MB/s|M003-260806 [...
-  network: ws
-  password: 1vkFHbQX_gN1U8V8jVc
-  port: 443
-  server: 104.16.242.176
-  skip-cert-verify: false
-  sni: mhpanel.kigaping.com
-  sub_tag: M003-260806
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/41.0.2272.104 Safari/537.36
-    path: /trojan-ws
-- client-fingerprint: chrome
-  name: 🇩🇪_DE_德国_IPV4
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.80.111.7
-  servername: www.calmlunch.com
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  tls: true
-  type: trojan
-  ws-opts:
-    path: /assignment
 - cipher: chacha20-ietf-poly1305
   name: 🇩🇪 DE 1 → tg@nicevpn123
   password: 36ZCHeabUSfKjfQEvJ4HDV
@@ -658,21 +649,35 @@ proxies:
   server: 217.182.198.219
   type: ss
   udp: true
-- name: '德国 002 #1'
+- alterId: 0
+  cipher: auto
+  name: '德国 002 #1'
+  network: ws
+  port: 27154
+  server: 94.130.237.57
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  ws-opts:
+    headers:
+      Host: 94.130.237.57
+    path: /
+- name: '德国 004 #1'
   network: tcp
   password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
   port: 443
   server: 92.119.35.120
   skip-cert-verify: false
   type: trojan
-- name: '德国 003 #1'
+- name: '德国 005 #1'
   network: tcp
   password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
   port: 443
   server: 92.119.35.130
   skip-cert-verify: false
   type: trojan
-- name: '德国 004 #1'
+- name: '德国 006 #1'
   network: tcp
   password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
   port: 443
@@ -680,7 +685,7 @@ proxies:
   skip-cert-verify: false
   type: trojan
 - client-fingerprint: chrome
-  name: '德国 005 #1'
+  name: '德国 007 #1'
   network: tcp
   password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
   port: 9443
@@ -688,7 +693,7 @@ proxies:
   skip-cert-verify: false
   sni: de-1.hysteria.ltd
   type: trojan
-- name: '德国 006 #1'
+- name: '德国 008 #1'
   network: tcp
   password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
   port: 443
@@ -698,7 +703,7 @@ proxies:
 - alterId: 0
   cipher: aes-128-gcm
   client-fingerprint: chrome
-  name: '德国 007 #1'
+  name: '德国 009 #1'
   network: tcp
   port: 1234
   server: 141.95.65.9
@@ -710,7 +715,21 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: '德国 076 #1'
+  name: '德国 012 #1'
+  network: ws
+  port: 443
+  server: sgp.kapok.buzz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: c1bac6b8-934a-44e2-9cf2-ee0db1fc1c85
+  ws-opts:
+    headers:
+      Host: sgp.kapok.buzz
+    path: /4befdd8a6/
+- alterId: 0
+  cipher: auto
+  name: '德国 013 #1'
   network: ws
   port: 8880
   server: 185.16.110.212
@@ -723,52 +742,7 @@ proxies:
     path: /dabai
 - alterId: 0
   cipher: auto
-  name: '德国 077 #1'
-  network: tcp
-  port: 28011
-  server: 62.146.235.193
-  skip-cert-verify: true
-  type: vmess
-  uuid: cfc5a87f-3c13-4e25-b556-176cdd6b5c6a
-- alterId: 0
-  cipher: auto
-  name: '德国 078 #1'
-  network: tcp
-  port: 550
-  server: 62.146.235.12
-  skip-cert-verify: true
-  type: vmess
-  uuid: 48b986d8-7da2-47a2-85de-2306c9259953
-- alterId: 0
-  cipher: auto
-  name: '德国 079 #1'
-  network: tcp
-  port: 40878
-  server: 85.195.101.122
-  skip-cert-verify: true
-  type: vmess
-  uuid: f3d4167e-b15e-4e46-82e9-9286ef93fda7
-- alterId: 0
-  cipher: auto
-  name: '德国 080 #1'
-  network: tcp
-  port: 8081
-  server: 91.107.172.48
-  skip-cert-verify: true
-  type: vmess
-  uuid: 617bda44-08b7-4106-927b-e47c242b4942
-- alterId: 0
-  cipher: auto
-  name: '德国 081 #1'
-  network: tcp
-  port: 10534
-  server: 94.136.185.230
-  skip-cert-verify: true
-  type: vmess
-  uuid: b01c7ef9-33ec-41f6-bfbf-77ddc4d21649
-- alterId: 0
-  cipher: auto
-  name: '德国 082 #1'
+  name: '德国 014 #1'
   network: ws
   port: 443
   server: 141.94.155.224
@@ -782,7 +756,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: '德国 083 #1'
+  name: '德国 015 #1'
   network: ws
   port: 443
   server: 141.94.155.228
@@ -796,7 +770,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: '德国 084 #1'
+  name: '德国 016 #1'
   network: ws
   port: 443
   server: 141.94.155.229
@@ -810,7 +784,7 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: '德国 085 #1'
+  name: '德国 017 #1'
   network: ws
   port: 443
   server: 141.95.126.134
@@ -824,7 +798,7 @@ proxies:
     path: linkvws
 - alterId: 64
   cipher: auto
-  name: '德国 086 #1'
+  name: '德国 018 #1'
   network: ws
   port: 30001
   server: 89.163.247.25
@@ -838,7 +812,7 @@ proxies:
     path: /path/191019072927
 - alterId: 64
   cipher: auto
-  name: '德国 087 #1'
+  name: '德国 019 #1'
   network: ws
   port: 443
   server: 194.15.196.172
@@ -850,8 +824,236 @@ proxies:
     headers:
       Host: www.87416132.xyz
     path: /path/191019072927
+- alterId: 0
+  cipher: auto
+  name: '德国 020 #1'
+  network: ws
+  port: 8080
+  server: 138.68.90.231
+  skip-cert-verify: true
+  type: vmess
+  uuid: 294ffdc3-5942-45ae-a154-dc6c92eacf1d
+  ws-opts:
+    headers:
+      Host: 138.68.90.231
+    path: /cctv13/hd.m3u8
+- alterId: 0
+  cipher: auto
+  name: '德国 021 #1'
+  network: http
+  port: 40969
+  server: 5.161.106.72
+  skip-cert-verify: true
+  type: vmess
+  uuid: 2fb9f60e-d4dc-458b-e3b2-d9b44f9bbd9e
+- alterId: 0
+  cipher: auto
+  name: '德国 022 #1'
+  network: http
+  port: 50978
+  server: 5.161.106.72
+  skip-cert-verify: true
+  type: vmess
+  uuid: 89e6248b-0152-4317-a6ed-b6a0cf41f2cb
+- alterId: 0
+  cipher: auto
+  name: '德国 023 #1'
+  network: http
+  port: 443
+  server: 157.90.20.18
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 024 #1'
+  network: http
+  port: 443
+  server: 5.75.168.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 025 #1'
+  network: http
+  port: 443
+  server: 94.130.25.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 026 #1'
+  network: http
+  port: 443
+  server: 167.235.136.155
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 027 #1'
+  network: http
+  port: 443
+  server: 65.21.240.108
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 028 #1'
+  network: http
+  port: 443
+  server: 5.75.247.192
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 0
+  cipher: auto
+  name: '德国 029 #1'
+  network: http
+  port: 443
+  server: 88.198.104.211
+  skip-cert-verify: true
+  type: vmess
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: 4
+  cipher: auto
+  name: '德国 030 #1'
+  network: ws
+  port: 443
+  server: 146.0.42.87
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: germany-dusseldorf.mah3Hoet.com
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: '德国 031 #1'
+  network: tcp
+  port: 2053
+  server: 178.63.237.158
+  skip-cert-verify: true
+  type: vmess
+  uuid: 2d4dd672-180f-415c-9035-e2fc461dd95a
+- alterId: 64
+  cipher: auto
+  name: '德国 032 #1'
+  network: tcp
+  port: 31484
+  server: 168.119.107.162
+  skip-cert-verify: true
+  type: vmess
+  uuid: 943961b8-4e27-4bdf-a048-c2f724f542fb
+- alterId: 0
+  cipher: aes-128-gcm
+  name: '德国 033 #1'
+  network: tcp
+  port: 443
+  server: 46.183.187.73
+  skip-cert-verify: true
+  type: vmess
+  uuid: 92a048ec-a160-497e-8069-c2e902626d7a
+- alterId: 0
+  cipher: auto
+  name: '德国 034 #1'
+  network: ws
+  port: 443
+  server: 8.209.69.168
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '德国 035 #1'
+  network: ws
+  port: 443
+  server: 8.209.71.58
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '德国 036 #1'
+  network: ws
+  port: 443
+  server: 8.209.83.209
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '德国 037 #1'
+  network: ws
+  port: 443
+  server: 8.209.104.230
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: '德国 038 #1'
+  network: tcp
+  port: 2083
+  server: 91.107.149.64
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 90a8b839-feea-43a9-9554-9b4ad5ead3e2
+- alterId: 0
+  cipher: auto
+  name: '德国 039 #1'
+  network: tcp
+  port: 80
+  server: 128.140.109.232
+  skip-cert-verify: true
+  type: vmess
+  uuid: 05a178f9-e6ba-4006-93d7-3d980cdc3a76
+- alterId: 0
+  cipher: auto
+  name: '德国 040 #1'
+  network: tcp
+  port: 11674
+  server: 176.65.151.175
+  skip-cert-verify: true
+  type: vmess
+  uuid: a98a98cb-ae86-43ae-b695-cf0dbcad3fc2
+- alterId: 0
+  cipher: auto
+  name: '德国 041 #1'
+  network: tcp
+  port: 34029
+  server: 185.19.33.123
+  skip-cert-verify: true
+  type: vmess
+  uuid: 577c13ab-311a-432f-83e6-336f0e445fa7
 - cipher: chacha20-ietf-poly1305
-  name: 🇳🇱NL_49
+  name: '🇩🇪ConfigV2RayNG #1'
   password: 4a2rfixophdjffa8KVA4Aa
   port: 8080
   server: 193.29.139.234
@@ -863,7 +1065,7 @@ proxies:
   server: 51.38.127.93
   type: ss
 - cipher: aes-128-gcm
-  name: 🇨🇦CA_30
+  name: '🇩🇪AZARBAYJB 1 #1'
   password: shadowsocks
   port: 443
   server: 149.22.95.183
@@ -875,7 +1077,7 @@ proxies:
   server: leviko-de3729.shopingggg.ir
   type: ss
 - cipher: aes-256-gcm
-  name: 🇩🇪DE_61
+  name: 🇩🇪DE_12
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 185.176.204.18
@@ -894,51 +1096,14 @@ proxies:
   server: 193.108.119.134
   sni: api.iloverussia2026.com
   type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #2 #2'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.78
-  type: trojan
-- name: ❓Other_14
+- name: '🇩🇪All³ | @BigSmoke_Config #10'
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 216.152.147.85
   sni: cdn.connectingpeoplewithgreatjobs.com
   type: trojan
-- name: ' 🇩🇪@IRAN_V2PING #1'
-  network: tcp
-  password: 1814e548-140f-480d-bf35-9c947cd1a245
-  port: 443
-  server: girm.thugiping.com
-  skip-cert-verify: false
-  sni: girm.thugiping.com
-  type: trojan
-- name: '🇩🇪@IRAN_V2PING #11'
-  network: ws
-  password: 1814e548-140f-480d-bf35-9c947cd1a245
-  port: 443
-  server: gote.thugiping.com
-  skip-cert-verify: false
-  sni: gote.thugiping.com
-  type: trojan
-- name: '🇩🇪@IRAN_V2PING #12'
-  network: ws
-  password: 1814e548-140f-480d-bf35-9c947cd1a245
-  port: 443
-  server: thugicd.thugiping.com
-  skip-cert-verify: false
-  sni: thugiping.thugiping.com
-  type: trojan
-- name: '🇩🇪@IRAN_V2PING #13'
-  network: ws
-  password: 1814e548-140f-480d-bf35-9c947cd1a245
-  port: 443
-  server: trj.thugiping.com
-  skip-cert-verify: false
-  sni: grmtrj.thugiping.com
-  type: trojan
-- name: '🇩🇪@IRAN_V2PING #14'
+- name: '🇩🇪@IRAN_V2PING #7'
   network: tcp
   password: 98e4171c-15a5-4c6b-89c8-f19a4442651a
   port: 443
@@ -946,7 +1111,7 @@ proxies:
   skip-cert-verify: false
   sni: girm.thugiping.com
   type: trojan
-- name: '🇩🇪@IRAN_V2PING #15'
+- name: '🇩🇪@IRAN_V2PING #8'
   network: ws
   password: 98e4171c-15a5-4c6b-89c8-f19a4442651a
   port: 443
@@ -954,7 +1119,7 @@ proxies:
   skip-cert-verify: false
   sni: gote.thugiping.com
   type: trojan
-- name: '🇩🇪@IRAN_V2PING #16'
+- name: '🇩🇪@IRAN_V2PING #9'
   network: ws
   password: 98e4171c-15a5-4c6b-89c8-f19a4442651a
   port: 443
@@ -962,7 +1127,7 @@ proxies:
   skip-cert-verify: false
   sni: thugiping.thugiping.com
   type: trojan
-- name: '🇩🇪@IRAN_V2PING #17'
+- name: '🇩🇪@IRAN_V2PING #10'
   network: ws
   password: 98e4171c-15a5-4c6b-89c8-f19a4442651a
   port: 443
@@ -1054,6 +1219,49 @@ proxies:
     path: /?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048
 - alterId: 0
   cipher: auto
+  name: 'AmyraxVPN · 🇩🇪 Germany 3 #1'
+  network: httpupgrade
+  port: 27154
+  server: 94.130.237.57
+  tls: false
+  type: vmess
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+- alterId: 0
+  cipher: auto
+  name: 'AmyraxVPN · 🇩🇪 Germany 6 #1'
+  network: ws
+  port: 27154
+  server: 94.130.237.57
+  tls: false
+  type: vmess
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  ws-opts:
+    headers:
+      Host: 94.130.237.57
+    path: /Telegram=@AmyraxVPN
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: Telegram=@AmyraxVPN
+  name: 'AmyraxVPN · 🇩🇪 Germany 9 #1'
+  network: grpc
+  port: 27154
+  server: 94.130.237.57
+  tls: true
+  type: vmess
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+- alterId: 0
+  cipher: auto
+  name: '@B2Hub #145'
+  network: tcp
+  port: 28059
+  server: 194.110.210.41
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
+- alterId: 0
+  cipher: auto
   name: '🇩🇪139810 | ⚡️Telegram = t.me/S... #1'
   network: tcp
   port: 33506
@@ -1084,15 +1292,6 @@ proxies:
   uuid: 4d765598-33d4-4ef5-87d6-b3fa61918875
 - alterId: 0
   cipher: auto
-  name: '🇩🇪DE-🚀@VPNine1 #22'
-  network: tcp
-  port: 42188
-  server: x10.topspeedarash.com
-  tls: false
-  type: vmess
-  uuid: 1b57a9de-6311-471c-8d71-926ff57065cc
-- alterId: 0
-  cipher: auto
   name: '🇩🇪07 | ⚡Telegram = t.me/ex_pro... #1'
   network: tcp
   port: 44580
@@ -1103,90 +1302,61 @@ proxies:
   uuid: 45dc5086-f30d-4b34-aac4-612c074243c8
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪 #24'
+  name: '🇩🇪@NOFILTERING2 #2'
   network: ws
-  port: 25686
-  server: 140.83.51.161
+  port: 443
+  server: www.gptcloudai.com
   servername: ''
-  tls: false
-  type: vmess
-  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
-  ws-opts:
-    headers:
-      Host: jp02.a0a.xyz
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: '🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪 #25'
-  network: tcp
-  port: 1234
-  server: 162.19.204.71
-  servername: supervpn.super.com
   tls: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: '🇩🇪DE-🚀@VPNine1 #23'
-  network: tcp
-  port: 42188
-  server: x6.topspeedarash.com
-  tls: false
-  type: vmess
-  uuid: 1b57a9de-6311-471c-8d71-926ff57065cc
-- alterId: 0
-  cipher: auto
-  name: '🇩🇪DE-🚀@VPNine1 #24'
-  network: tcp
-  port: 42188
-  server: x9.topspeedarash.com
-  tls: false
-  type: vmess
-  uuid: 1b57a9de-6311-471c-8d71-926ff57065cc
+  uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
+  ws-opts:
+    path: /truth
 - cipher: aes-256-gcm
-  name: 🇩🇪DE_27
+  name: 🇩🇪DE-213.202.208.199-0279
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 213.202.208.199
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇩🇪DE_2
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 57.129.83.85
   type: ss
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 DE | 94.130.237.57 #1'
+  name: 🇩🇪DE-64.190.63.222-0068
   network: ws
-  port: 27154
-  server: 94.130.237.57
+  port: 8080
+  server: gg1.tanglu.xyz
   servername: ''
   tls: false
   type: vmess
-  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  uuid: a4d1d3dd-5097-4dd5-93fa-9b412233174f
   ws-opts:
     headers:
-      Host: 94.130.237.57
-    path: /Telegram=@AmyraxVPN
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_78
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 213.202.208.199
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇳🇱[www.v2nodes.com] ss-NL-1618... #2'
-  password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
-  port: 51628
-  server: 156.67.120.205
-  type: ss
+      Host: ssrsub.v03.asuka.buzz
+    path: /api/v3/download.getFile
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE-64.190.63.222-0066
+  network: ws
+  port: 8080
+  server: gg1.tanglu.xyz
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a4d1d3dd-5097-4dd5-93fa-9b412233174f
+  ws-opts:
+    headers:
+      Host: ssrsub.v01.asuka.buzz
+    path: /api/v3/download.getFile
 - cipher: aes-256-gcm
   name: DE 🇩🇪 | @Raydikalx | A76A05
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 185.176.204.18
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | 8C6947
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 57.129.76.233
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -1197,10 +1367,10 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | 09B68E
+  name: DE 🇩🇪 | @Raydikalx | 8C6947
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 57.129.83.85
+  server: 57.129.76.233
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
@@ -1210,22 +1380,33 @@ proxies:
   server: 82.38.31.182
   type: ss
   udp: true
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 637792
-  network: tcp
-  port: 43160
-  server: 91.107.153.158
-  tls: false
-  type: vmess
+- cipher: aes-128-gcm
+  name: NL 🇳🇱 | @Raydikalx | EDDEFB
+  password: shadowsocks
+  port: 443
+  server: leviko-nl1751.shopingggg.ir
+  type: ss
   udp: true
-  uuid: 90274ec6-5781-49db-8ae2-d011d5763b83
+- cipher: aes-256-gcm
+  name: DE 🇩🇪 | @Raydikalx | C25D0E
+  password: itzvpn@321
+  port: 8388
+  server: 178.162.254.38
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | 0E543D
+  password: NcAXc0UZI6yQJE1p8QmOv8
+  port: 8388
+  server: 57.129.113.16
+  type: ss
+  udp: true
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | F38378
+  name: DE 🇩🇪 | @Raydikalx | FBF92D
   network: tcp
   port: 1270
-  server: 185.177.229.95
+  server: 193.108.119.87
   servername: xmfhlpy.com
   tls: true
   type: vmess
@@ -1233,10 +1414,10 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | FBF92D
+  name: DE 🇩🇪 | @Raydikalx | F38378
   network: tcp
   port: 1270
-  server: 193.108.119.87
+  server: 185.177.229.95
   servername: xmfhlpy.com
   tls: true
   type: vmess
@@ -1253,6 +1434,29 @@ proxies:
   type: vmess
   udp: true
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- name: DE 🇩🇪 | @Raydikalx | 02AEC9
+  network: ws
+  password: d9d02f3e-c877-4a1f-990e-f2418777f745
+  port: 27154
+  server: 94.130.237.57
+  sni: 94.130.237.57
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 94.130.237.57
+    path: /Telegram=@AmyraxVPN
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- grpc-opts:
+    grpc-service-name: Telegram=@AmyraxVPN
+  name: DE 🇩🇪 | @Raydikalx | 135A1E
+  network: grpc
+  password: d9d02f3e-c877-4a1f-990e-f2418777f745
+  port: 27154
+  server: 94.130.237.57
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 00302A
@@ -1270,121 +1474,66 @@ proxies:
     path: /
     v2ray-http-upgrade: true
     v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | E6C098
+  network: ws
+  port: 27154
+  server: 94.130.237.57
+  servername: 94.130.237.57
+  tls: false
+  type: vmess
+  udp: true
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  ws-opts:
+    headers:
+      Host: 94.130.237.57
+    path: /Telegram=@AmyraxVPN
+    v2ray-http-upgrade: true
+    v2ray-http-upgrade-fast-open: true
+- alterId: 0
+  cipher: auto
+  grpc-opts:
+    grpc-service-name: Telegram=@AmyraxVPN
+  name: DE 🇩🇪 | @Raydikalx | BD7CDC
+  network: grpc
+  port: 27154
+  server: 94.130.237.57
+  servername: 94.130.237.57
+  tls: true
+  type: vmess
+  udp: true
+  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
 - cipher: chacha20-ietf-poly1305
-  name: DE 🇩🇪 | @Raydikalx | 7E0B2B
-  password: N8EmvDqpvSPOCi1eBayPdGJffGkP0b9e
-  port: 1080
-  server: yalandema.pet0er23mh21qq.com
+  name: DE 🇩🇪 | @Raydikalx | CF8239
+  password: R02KmzzSD7PeZ_DosF87xZ7zIn8jLtyP
+  port: 2089
+  server: S23.fusetea.ir
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: DE 🇩🇪 | @Raydikalx | C25D0E
-  password: itzvpn@321
-  port: 8388
-  server: 178.162.254.38
+- cipher: chacha20-ietf-poly1305
+  name: DE 🇩🇪 | @Raydikalx | DAC809
+  password: DVlt-OeAV4RiLMwT9e0T72nnFtMG2W3o
+  port: 2089
+  server: S23.fusetea.ir
   type: ss
   udp: true
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 9A2E99
-  network: ws
-  port: 16644
-  server: planb.mojcn.com.linuxlh.xin
-  tls: false
-  type: vmess
-  uuid: 94f95569-8fde-4e51-abb4-d472cf811c9c
-  ws-opts:
-    headers:
-      Host: 9aeff98c09b68b1ed6ca32e220b02e59.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 91CF46
-  network: httpupgrade
-  port: 5062
-  server: 169.40.32.48
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f54e93d1-cd8e-434f-8122-4887e62c97f5
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 40E29A
-  network: ws
-  port: 8080
-  server: octpus2.gsmonline.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 5169cd78-9e9b-4e44-9d1c-b4113d973f02
-  ws-opts:
-    headers:
-      Host: snapp.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 4143B3
+  name: DE 🇩🇪 | @Raydikalx | F00EF1
   network: tcp
-  port: 38555
-  server: 109.70.74.198
+  port: 110
+  server: 94.156.179.138
   servername: ''
   tls: false
   type: vmess
-  uuid: db8026b4-28d7-42ad-8cb2-80ce91a6ad4c
+  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
 - alterId: 0
   cipher: auto
-  name: '[168612] - 🇩🇪 Germany | @freen...'
-  network: tcp
-  port: 42188
-  server: x4.topspeedarash.com
-  tls: false
-  type: vmess
-  uuid: 83d6fcc7-bb82-49ce-a955-38757bab22e6
-- alterId: 0
-  cipher: auto
-  name: TR 🇹🇷 | @Raydikalx | DE6159
-  network: tcp
-  port: 40395
-  server: 206.1.100.161
-  tls: false
-  type: vmess
-  uuid: 3760895f-db1d-4a4d-9509-82fb67e2c26d
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D57AF3
-  network: tcp
-  port: 34204
-  server: english.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6cecaaad-fadc-4f1c-9a79-b5f7fa995076
-- alterId: 0
-  cipher: auto
-  name: '[168589] - 🇩🇪 Germany | @freen...'
-  network: tcp
-  port: 54738
-  server: 109.70.74.94
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c430cc57-5dfe-4406-8bc6-21be059b2cd8
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-167.235.136.155-3778
-  network: http
-  port: 443
-  server: 167.235.136.155
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | EC21A7
+  name: DE 🇩🇪 | @Raydikalx | 875613
   network: ws
   port: 443
-  server: 111.88.74.167
+  server: 94.159.105.148
   servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
@@ -1395,317 +1544,139 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: '[168648] - 🇩🇪 Germany | @freen...'
-  network: tcp
-  port: 28382
-  server: 109.70.74.201
-  tls: false
+  name: DE 🇩🇪 | @Raydikalx | DDEF48
+  network: ws
+  port: 443
+  server: 2.27.16.177
+  tls: true
   type: vmess
-  uuid: 60e16949-8396-4fa8-ad8f-cb34f5873d66
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | B2A576
+  name: 🇩🇪DE-57.129.24.130-1214
+  network: ws
+  port: 443
+  server: 57.129.24.130
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: serkat.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | D9A50D
+  network: tcp
+  port: 54588
+  server: 195.26.26.148
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5fa81b59-214d-4d6e-9397-e3914926ed21
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | C152FB
+  network: tcp
+  port: 54738
+  server: 109.70.74.94
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 436c87cd-0421-4088-a62f-dab629d3c5b0
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | D6ECB3
+  network: tcp
+  port: 2080
+  server: ovhpok.goalir.co.uk
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 8e675427-4595-45a5-bab3-8a34598d741a
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 9B851D
+  network: tcp
+  port: 57708
+  server: germany1.povrak.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 9371d6ef-97a4-47f3-bfa2-ce10bc50436a
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F3F55D
   network: tcp
   port: 19829
   server: 109.70.74.217
+  servername: ''
   tls: false
   type: vmess
-  uuid: 0c697fa2-bd36-484c-98b5-8bb9e2a7d33a
-- alterId: '0'
+  uuid: a83f3700-e75b-47c1-aff8-808ea793f23d
+- alterId: 0
   cipher: auto
-  name: 🇩🇪DE_8|4.4MB/s
+  name: DE 🇩🇪 | @Raydikalx | 3A9FAF
   network: ws
-  port: 27154
-  server: 94.130.237.57
-  skip-cert-verify: false
+  port: 16622
+  server: planb.mojcn.com.linuxlh.xin
+  servername: ''
   tls: false
   type: vmess
-  udp: true
-  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  uuid: 8ed52c4d-1fe1-4c08-b46f-ca8eb2729cb9
   ws-opts:
     headers:
-      Host: 94.130.237.57
-    path: /Telegram=@AmyraxVPN
-  xudp: true
-- cipher: chacha20-ietf-poly1305
-  name: '[OpenRay] 🇩🇪 DE-10070'
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '[OpenRay] 🇩🇪 DE-11823'
-  password: PWpjPo3tqhPN4yRZ
-  port: 20001
-  server: 8.209.74.72
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇩🇪DE_59 #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.108.116.98
-  type: ss
-- cipher: rc4-md5
-  name: '🇩🇪DE_25 #1'
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 146.70.20.147
-  type: ss
-- name: '[OpenRay] 🇩🇪DE-34'
+      Host: f406e32143bc023a8819a6335733f851.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 1F3FF4
   network: tcp
+  port: 50407
+  server: 2.31.43.159
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d7b9fe42-6116-466e-b0b5-bd83ff827a91
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 758BBF
+  network: tcp
+  port: 1003
+  server: 3.123.35.248
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4cd183f8-99e6-43e5-a778-e5989fa5ac27
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 87E2D5
+  network: tcp
+  port: 58804
+  server: 91.98.221.107
+  tls: false
+  type: vmess
+  uuid: cda5b8c3-0bf7-4d36-a7e3-b5e8244f953b
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 1E3DBC
+  network: tcp
+  port: 20402
+  server: 109.70.74.135
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: fb1e9d7c-f98b-4a57-ae49-aa3d1bdda237
+- name: '🏳[www.v2nodes.com] trojan- #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.78
-  skip-cert-verify: true
-  sni: 193.108.119.78
   type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: ajv
-  name: '[OpenRay] 🇩🇪 DE-24958'
-  network: grpc
-  password: MDYVt6HgSqB7d537GPQXjk6Rk0E4RxWo
-  port: 443
-  server: 31.77.168.21
-  sni: d3-de2.cloud-cdn.xyz
-  type: trojan
-- alpn:
-  - h2
-  grpc-opts:
-    grpc-service-name: ajv
-  name: '[OpenRay] 🇩🇪 DE-24959'
-  network: grpc
-  password: MDYVt6HgSqB7d537GPQXjk6Rk0E4RxWo
-  port: 443
-  server: 31.77.168.33
-  sni: d3-de2.cloud-cdn.xyz
-  type: trojan
-- name: '[OpenRay] 🇩🇪 DE-24883'
-  password: UX82473651
-  port: 443
-  server: alive-flea.rooster465.autos
-  type: trojan
-- name: '[OpenRay] 🇩🇪 DE-24887'
-  network: raw
-  password: UX82473651
-  port: 443
-  server: alive-flea.rooster465.autos
-  sni: alive-flea.rooster465.autos
-  type: trojan
-- name: '[OpenRay] 🇩🇪DE-260'
-  network: tcp
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20123
-  server: 217.217.222.230
-  skip-cert-verify: false
-  sni: hk.catxstar.com
-  type: trojan
-- name: '[OpenRay] 🇩🇪DE-315'
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20123
-  server: 217.217.222.230
-  skip-cert-verify: false
-  sni: hk.catxstar.com
-  type: trojan
-- name: '[OpenRay] 🇩🇪 DE-24010'
-  network: ws
-  password: humanity
-  port: 443
-  server: 78.47.146.151
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.pleadcourt.org
-    path: /assignment
-- name: '[OpenRay] 🇩🇪 DE-23452'
-  network: ws
-  password: humanity
-  port: 2053
-  server: 82.117.245.125
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '[OpenRay] 🇩🇪 DE-22208'
-  network: ws
-  password: humanity
-  port: 443
-  server: 88.99.189.60
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '[OpenRay] 🇩🇪DE-77'
-  network: tcp
-  password: kOKJ/EilQdNyvMgFhmLv2SqnF/vlwyx6LeQ6ql1saYM=
-  port: 12902
-  server: 91.107.153.158
-  type: trojan
-- name: '[OpenRay] 🇩🇪DE-226'
-  network: ws
-  password: pH[]S[Bh:_:D6T4k
-  port: 443
-  server: 185.158.133.107
-  sni: AZaDneT-692.PagEs.DEv
-  type: trojan
-  ws-opts:
-    path: /trsVu9Ualb1DOfGjpw
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24863'
-  network: tcp
-  port: 23326
-  server: 31.76.11.83
-  tls: false
-  type: vmess
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪DE-18'
-  network: tcp
-  port: 1270
-  server: 185.177.229.95
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪DE-270'
-  network: tcp
-  port: 1270
-  server: 193.108.117.61
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 49 - DE - VMess/HTTPUPGRADE...
-  network: httpupgrade
-  port: 80
-  server: 91.107.169.224
-  tls: false
-  type: vmess
-  uuid: 014f8bf6-9221-4f99-838f-4c16ca90334f
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪DE-228'
-  network: tcp
-  port: 43160
-  server: 91.107.153.158
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 90274ec6-5781-49db-8ae2-d011d5763b83
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24897'
-  network: tcp
-  port: 2052
-  server: 143.14.59.213
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 69ede0e7-63a2-4526-9815-1623aba63063
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24884'
-  network: ws
-  port: 443
-  server: 193.108.117.54
-  servername: aidrivercat.org
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aidrivercat.org
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24660'
-  network: ws
-  port: 443
-  server: 193.108.117.54
-  servername: null
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: aidrivercat.org
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪DE-81'
-  network: tcp
-  port: 1270
-  server: 193.108.119.87
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24452'
-  network: tcp
-  port: 22324
-  server: 216.106.187.60
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪DE-23'
-  network: tcp
-  port: 52080
-  server: 23.165.200.150
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24910'
-  network: ws
-  port: 20772
-  server: 31.59.58.232
-  tls: false
-  type: vmess
-  uuid: d69007f9-b038-4156-d27f-f81f18094ecf
-  ws-opts:
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: '[OpenRay] 🇩🇪 DE-24782'
-  network: tcp
-  port: 23226
-  server: 31.76.11.83
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 DE | 31.77.8.97
-  network: tcp
-  port: 110
-  server: 31.77.8.97
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
 - alterId: 0
   cipher: auto
   name: 🇩🇪_德国 (6)
@@ -1723,6 +1694,12 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪 DE | 51.38.127.93
+  password: 2bys77ppnat6w2yg
+  port: 8080
+  server: 51.38.127.93
+  type: ss
 - cipher: aes-256-gcm
   name: 🇩🇪 DE | 213.202.216.117
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
@@ -1738,16 +1715,14 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  grpc-opts:
-    grpc-service-name: Telegram=@AmyraxVPN
-  name: 🇩🇪 DE | 94.130.237.57
-  network: grpc
-  port: 27154
-  server: 94.130.237.57
+  name: 🇩🇪 DE | 31.77.8.97
+  network: tcp
+  port: 110
+  server: 31.77.8.97
   servername: ''
-  tls: true
+  tls: false
   type: vmess
-  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
 - alterId: 0
   cipher: auto
   name: 🇩🇪 DE | 49.13.7.146
@@ -1757,16 +1732,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 8924d18e-d8ff-4774-b511-75e0cbadaddf
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪 DE | 178.104.72.128
-  network: tcp
-  port: 29985
-  server: 178.104.72.128
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 99a41f08-5109-42a0-9fcd-e25cf1cb1be5
 - alterId: 0
   cipher: auto
   name: '🇩🇪 DE | VMESS | @khoneproxy #1...'
@@ -1801,12 +1766,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪 DE | SS | @outlinereleasedk...
-  password: SWBJ2eOCrLJk
-  port: 443
-  server: 136.176.66.193
-  type: ss
 - alterId: 0
   cipher: auto
   name: '🇩🇪 DE | VMESS | @khoneproxy #1... #1'
@@ -1829,9 +1788,21 @@ proxies:
   tls: false
   type: vmess
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+- alterId: '0'
+  cipher: auto
+  name: 🇩🇪DE_3|2.3MB/s
+  network: tcp
+  port: 2080
+  server: Ir.wbzo.ir
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
+  xudp: true
 - alterId: 0
   cipher: auto
-  name: 🇩🇪_德国 (6) - 97ms
+  name: 🇩🇪_德国 (6) - 143ms
   network: ws
   port: 443
   server: 13.140.28.46
@@ -1842,61 +1813,3 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- name: 🇩🇪DE_94
-  network: ws
-  password: 1vkFHbQX_gN1U8V8jVc
-  port: 443
-  server: 104.16.26.10
-  sni: mhpanel.kigaping.com
-  type: trojan
-  ws-opts:
-    path: /trojan-ws
-- name: 'DE德国 #1'
-  network: ws
-  password: zhs000666
-  port: 443
-  server: 164.92.228.56
-  sni: 666-4sd.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: 666-4sd.pages.dev
-    path: /?ed=2560&proxyip=ts.hpc.tw
-- cipher: aes-256-gcm
-  name: 🇩🇪DE_18
-  password: Y6R9pAtvxxzmGC
-  port: 5000
-  server: 213.202.208.199
-  type: ss
-- name: 🇩🇪DE_104
-  network: ws
-  password: 1vkFHbQX_gN1U8V8jVc
-  port: 443
-  server: 104.24.137.130
-  sni: mhpanel.kigaping.com
-  type: trojan
-  ws-opts:
-    path: /trojan-ws
-- cipher: rc4-md5
-  name: 🇩🇪DE_49
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 169.150.210.233
-  type: ss
-- name: '🇩🇪DE_95 #1'
-  network: ws
-  password: 1vkFHbQX_gN1U8V8jVc
-  port: 443
-  server: 172.64.150.28
-  sni: mhpanel.kigaping.com
-  type: trojan
-  ws-opts:
-    path: /trojan-ws
-- alterId: 0
-  cipher: auto
-  name: DE【高速节点：https://vip.a3f.xyz】41
-  port: 28059
-  server: 194.110.210.41
-  type: vmess
-  udp: true
-  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
